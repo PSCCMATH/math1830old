@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Load css file from shared location at pstcc.edu -->
+    <link rel="stylesheet" href="css/m1830.css" />
+
+
+    <!-- load current MathJax Library Tex as HTML -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!-- configure inline math in HTML use single "$" or "\(" within a sentence or use double "$$" or "\[" to put it centered on its own line.  You must escape single $ with a "\" if its in a regular sentence-->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
+    </script>
+
+    <!-- load javascript file for answer toggle buttons and functions to hide and show emphasis tags -->
+    <script src="js/mathscripts.js"></script>
+
+    <!-- load javascript file to populate graph data from Desmos API. -->
+    <script src="js/desmosgraphs.js"></script>
+</head>
+
+<body>
+
+    <div class="m1830-sidenav">
+
+
+        <nav class="w3-sidenav w3-white w3-animate-left" style="display:none;z-index:5" id="mySidenav">
+
+
+
+            <!-- <a class="w3-hover-green" href="#top" onclick="w3_close();">Top</a> -->
+            <a class="w3-cyan" href="#">Unit 1</a>
+            <a class="w3-hover-green" href="notesu1.html#u1toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="notesu1.html#u1toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 2</a>
+            <a class="w3-hover-green" href="notesu2.html#u2toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku2.html#u2toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 3</a>
+            <a class="w3-hover-green" href="notesu3.html#u3toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku3.html#u3toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 4</a>
+            <a class="w3-hover-green" href="notesu4.html#u4toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku4.html#u4toc" onclick="w3_close();">Homework</a>
+
+
+            <a class="w3-cyan" href="#">Toggle</a>
+            <a id="togglesolution" class="w3-hover-green w3-aqua" href="#" onclick="togglesolutions();return false;">Solutions</a>
+            <a id="toggleanswer" class="w3-hover-green w3-aqua" href="#" onclick="toggleanswers();return false;">Answers</a>
+
+
+        </nav>
+
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+        <span class="w3-opennav m1830-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+    </div>
+
+    <div class="m1830-body-container">
+        <h1 id="u4toc">MATH 1830 Notes</h1>
+        <p>Mary Monroe-Ellis</p>
+        <p>Susan Mosteller</p>
+          <h2>Unit 4: Integration</h2>
+
+
+        <div class="pagebreak"></div>
+
+        <div class="m1830-toc">
+
+
+
+
+
+
+                    <ul>
+
+                        <li><a href="notesu4.html#u4s1">4.1 Area by Sums</a></li>
+
+                        <li><a href="notesu4.html#u4s2">4.2 Fundamental Theorem of Calculus</a></li>
+
+                        <li><a href="notesu4.html#u4s3">4.3 Indefinite Integrals</a></li>
+
+                        <li><a href="notesu4.html#u4s4">4.4 Integration by Substitution</a></li>
+
+                        <li><a href="notesu4.html#u4s5">4.5 Area Between Curves</a></li>
+                    </ul>
+
+
+
+        </div>
+
+
+
+
+        <div id="u4" class="unit">
+
+
+
+
+
+
+            <div id="u4s1" class="section">
+                <h3>4.1 Area by Sums</h3>
+
+                <h4>Introduction</h4>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            The rate of change of the population (in thousands of people per year) of North Dakota between 1985 and 1996 can be modeled by
+
+                            <p>  $p(t)=
+                            \begin{cases}
+
+
+
+                                  -7.35  & 0\leq t\leq 6 \\
+                                  2.5  & 2 \lt t \leq 11\\
+
+
+                            \end{cases}
+
+                            $
+                        </p>
+
+
+                           <p>Where t represents the number of
+                            years since 1985.</p>
+                        <p><cite>(Source: Statistical Abstract, 1998)</cite></p>
+                        <ol>
+
+                            <li>Sketch a graph of the rate of change function.
+                                <p><img src="images/notes/u4s1p1i.png" alt="Blank Cartesian Plane">
+                                    <p class="m1830-solution"><img src="images/notes/u4s1p1ia.png" alt="Graph of Change in Population of North Dakota.  Two horizontal lines.  Graph of y=-7.35 from x=0 to x=6.  Graph of y=2.5 from x&gt;6 to x=11."></p>
+                            </li>
+
+                            <li>Find the area of the region between the graph of p and the horizontal axis from 0 to 6. Interpret your answer.
+                                <p class="m1830-solution">$A=lw$</p>
+                                <p class="m1830-solution">$A=7.356$</p>
+                                <p class="m1830-solution">$A=44.1$</p>
+                                <p class="m1830-answer">There was a 44.1 thousand person decrease in population between 1985 and 1991.</p>
+                            </li>
+
+                            <li>Find the area of the region between the graph of p and the horizontal axis from 6 to 11. Interpret your answer.
+                                <p class="m1830-solution">$A=lw$</p>
+                                <p class="m1830-solution">$A=2.5(5)$</p>
+                                <p class="m1830-solution">$A=12.5$</p>
+                                <p class="m1830-answer">There was a 12.5 thousand person increase in population between 1991 and 1996.</p>
+                            </li>
+
+                            <li>Was the population of North Dakota in 1996 greater or less than the population in 1985? By how much did the population change between 1985 and 1996?
+                                <p class="m1830-solution">$-44.1+12.5=-31.6$</p>
+                                <p class="m1830-answer">In 1996 the population of North Dakota was 31.6 thousand less than in 1985.</p>
+                            </li>
+
+                            <li>What information would you need to determine the population of North Dakota in 1996?
+                                <p class="m1830-answer">We need to know the population of North Dakota in 1985.</p>
+                            </li>
+
+                            <li>What is the relationship between the area of the regions and the population of North Dakota?
+                                <p class="m1830-answer">Each area represents the total change in population for the time periods.</p> </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            An office worker assembles advertising portfolios. As fatigue sets in, the number of portfolios he can assemble per hour decreases. Using regression, it is determined that he can assemble $f\left( t \right) = 20 - {t^2}$ portfolios per hours $t$ hours
+                            after he begins work.</p>
+                        <ol>
+
+                            <li>How many portfolios can he assemble in the third hour?
+                                <p class="m1830-solution">$f(3) = 20 - {\left( 3 \right)^2} = 20 - 9 = 11$</p>
+                                <p class="m1830-answer">The office worker assembles 11 portfolios in the third hour.</p>
+                            </li>
+
+                            <li>Graph the equation on the interval [0,3] on each of the three graphs below.</li>
+
+                            <li>Find the area under the curve using 3 left rectangles and then using 6 left rectangles and then 9 left rectangles.
+                                <img src="images/notes/u4s1p2i.png" alt="Blank first quadrant graph">
+                                <p class="m1830-solution">3 Left Rectangles (A = A1 + A2 + A3)</p>
+                                <p class="m1830-solution">$1[f(0)] + 1[f(1)] + 1[f(2)]$</p>
+                                <p class="m1830-solution">$1(20) + 1(19) + 1(16)$</p>
+                                <p class="m1830-solution">$20+19+16$</p>
+                                <p class="m1830-answer">$55\;units^2$</p>
+                                <p class="m1830-answer">The worker can assemble approximately 55 portfolios in 3 hours.</p>
+                                <img src="images/notes/u4s1p2i.png" alt="Blank first quadrant graph">
+                                <p class="m1830-solution">6 Left Rectangles (A = A1 + A2 + A3 + A4 + A5 + A6)</p>
+                                <p class="m1830-solution">$.5[f(0)] + .5[f(.5)] + .5[f(1)] + .5[f(1.5)] + .5[f(2)] + .5[f(2.5)]$</p>
+                                <p class="m1830-solution">$.5(20) + .5(19.75) + .5(19) + .5(17.75) + .5(16) + .5(13.75)$</p>
+                                <p class="m1830-solution">$10 + 9.875 + 9.5 + 8.875 + 8 + 6.875$</p>
+                                <p class="m1830-answer">$53.125\;units^2$ </p>
+                                <p class="m1830-answer">The worker can assemble approximately 53.125 portfolios in 3 hours.</p>
+                                <img src="images/notes/u4s1p2i.png" alt="Blank first quadrant graph">
+                                <p class="m1830-solution">9 Left Rectangles (A = A1 + A2 + A3 + A4 + A5 + A6 + A7 + A8 + A9)</p>
+                                <p class="m1830-solution">$\frac{1}{3}[f(0)] + \frac{1}{3}[f(\frac{1}{3})] + \frac{1}{3}[f(\frac{2}{3})] + \frac{1}{3}[f(1)] + \frac{1}{3}[f(\frac{4}{3})]+ \frac{1}{3}[f(\frac{5}{3})] + \frac{1}{3}[f(2)] + \frac{1}{3}[f(\frac{7}{3})] + \frac{1}{3}[f(\frac{8}{3})]$</p>
+                                <p class="m1830-solution">$\frac{1}{3}(20) + \frac{1}{3}(19.889) + \frac{1}{3}(19.556) + \frac{1}{3}(19) + \frac{1}{3}(18.222)+ \frac{1}{3}(17.222) + \frac{1}{3}(16) + \frac{1}{3}(14.556) + \frac{1}{3}(12.889)$</p>
+                                <p class="m1830-answer">$52.444\;units^2$ </p>
+                                <p class="m1830-answer">The worker can assemble approximately 52.444 portfolios in 3 hours.</p>
+                            </li>
+
+                            <li>Do you think using 3 or 6 or 9 rectangles is a more accurate measure of the area? What could you do to get an even better measure?
+
+                                <p class="m1830-answer">Using 9 rectangles is the more accurate measure of the area. We would get even an even better measure of the area if we used more rectangles.</p>
+                            </li>
+
+                            <li>What does the area under the curve represent?
+                                <p class="m1830-answer">The area under the curve represents the total number of portfolios the worker can assemble.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+                <hr>
+
+
+
+                <h4>Notes</h4>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Estimate the area under the curve $f(x) = {x^2}$ on the domain [0,4] by summing the areas of the four rectangles. Is your estimate is greater than the actual area or less than the actual area?</p>
+                        <p><img src="images/notes/u4s1p1a.png" alt="Graph of y=x squared on the interval from x=0 to x=4 with right-rectangles drawn">
+                            <p>Right Hand Rectangles</p>
+                            <p class="m1830-solution">$1(1)+1(4)+1(9)+1(16)$</p>
+                            <p class="m1830-solution">$1+4+9+16$</p>
+                            <p class="m1830-answer">$30\;units^2$</p>
+                            <p class="m1830-answer">This estimate is more than the actual area.</p>
+                            <p><img src="images/notes/u4s1p1b.png" alt="Graph of y=x squared on the interval from x=0 to x=4 with left-rectangles drawn">
+                                <p>Left Hand Rectangle</p>
+                                <p class="m1830-solution">$1(0)+1(1)+1(4)+1(9)$</p>
+                                <p class="m1830-solution">$0+1+4+9$</p>
+                                <p class="m1830-answer">$14\;units^2$</p>
+                                <p class="m1830-answer">This estimate is less than the actual area.</p>
+                                <img src="images/notes/u4s1p1c.png" alt="Graph of y=x squared on the interval from x=0 to x=4 with midpoint-rectangles drawn">
+                                <p>Mid-Point Rectangles</p>
+                                <p class="m1830-solution">$1(.25)+1(2.25)+1(6.25)+1(12.25)$</p>
+                                <p class="m1830-solution">$.25+2.25+6.25+12.25$</p>
+                                <p class="m1830-answer">$21\;units^2$</p>
+                                <p class="m1830-answer">This estimate is slightly less than the actual area.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Use Right Hand Rectangles to estimate the area under the curve $f(x) = 2x$ on the domain [1,4].</p>
+                        <img src="images/notes/u4s1p2.png" alt="Graph of y=2x on the interval from x=1 to x=4">
+                        <p class="m1830-solution">$1(4)+1(6)+1(8)$</p>
+                        <p class="m1830-solution">$4+6+8$</p>
+                        <p class="m1830-answer">$18\;units^2$</p>
+                        <p>Is this estimate less than the actual area or greater than the actual area?</p>
+                        <p class="m1830-answer">This estimate is more than the actual area.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Use Mid-Point Rectangles to estimate the area under the curve $f(x) = {x^3}$ on the domain [1,4].</p>
+                        <img src="images/notes/u4s1p3.png" alt="Graph of y=x cubed on the interval from x=1 to x=4">
+                        <p class="m1830-solution">$1{(1.5)^3} + 1{(2.5)^3} + 1{(3.5)^3}$</p>
+                        <p class="m1830-solution">$3.375 + 15.625 + 42.875$</p>
+                        <p class="m1830-answer">$61.875\;units^2$</p>
+                        <p>Is this estimate less than the actual area or greater than the actual area?</p>
+                        <p class="m1830-answer">This estimate is less than the actual area.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Use Left Hand Rectangles to estimate the area under the curve $f(x) = \frac{1}{x}$ on the domain [0.5, 2.0].</p>
+                        <img src="images/notes/u4s1p4.png" alt="Graph of y=1/x on the interval from x=0.5 to x=2.0">
+                        <p class="m1830-solution">$\frac{1}{2}\left( {\frac{1}{{.5}}} \right) + \frac{1}{2}\left( {\frac{1}{1}} \right) + \frac{1}{2}\left( {\frac{1}{{1.5}}} \right)$</p>
+                        <p class="m1830-solution">$\frac{1}{2}(2) + \frac{1}{2}(1) + \frac{1}{2}\left( {\frac{2}{3}} \right)$</p>
+                        <p class="m1830-solution">$1 + \frac{1}{2} + \frac{1}{3}$</p>
+                        <p class="m1830-answer">$1.83\;units^2$</p>
+                        <p>Is this estimate less than the actual area or greater than the actual area?</p>
+                        <p class="m1830-answer">This estimate is greater than the actual area.</p>
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+            <div id="u4s2" class="section">
+
+                <h3>4.2 Fundamental Theorem of Calculus</h3>
+
+                <h4>Introduction</h4>
+
+                <p>From 4.1 homework problem #2:</p>
+                <p>Given the function $f(x)=4-0.16{{x}^{2}}$ </p>
+                <p>Approximate the area under the curve on the interval [0, 6] using 6 right rectangles. </p>
+                <p><a href="http://webspace.ship.edu/msrenault/GeoGebraCalculus/integration_riemann_sum.html">http://webspace.ship.edu/msrenault/GeoGebraCalculus/integration_riemann_sum.html</a></p>
+                <hr>
+
+                <div class="pagebreak"></div>
+
+
+                <h4>Notes</h4>
+
+                <p><strong>THE FUNDAMENTAL THEOREM OF CALCULUS</strong> </p>
+                <p><strong>Evaluate the Definite Integral:  Compare your answer to the area you calculated in 4.1 notes.</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $S(x)=\begin{align}&amp;\int_0^4x^2dx\end{align}$</p>
+
+                        <p class="m1830-solution">$ = (\frac{{{x^3}}}{3} + C)│_0^4$</p>
+                        <p class="m1830-solution">$=[\frac{{{4^3}}}{3} + C] - [\frac{{{0^3}}}{3} + C]$</p>
+                        <p class="m1830-solution">$=21.33 + C - 0 - C$</p>
+                        <p class="m1830-answer">$21.33$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $S(x) =\begin{align}&amp;\int_1^4 {2xdx}\end{align}$</p>
+
+                        <p class="m1830-solution">$=(\frac{{2{x^2}}}{2} + C)│_1^4$</p>
+                        <p class="m1830-solution">$= ({x^2} + C)|_1^4$</p>
+                        <p class="m1830-solution">$=({4^2} + C) - ({1^2} + C)]$</p>
+                        <p class="m1830-solution">$=16 + C - 1 - C$</p>
+                        <p class="m1830-answer">$=15$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $S(x) = \begin{align}&amp;\int_1^4 {{x^3}} dx\end{align}$
+                            <p>
+
+                                <p class="m1830-solution">$=( \frac{{{x^4}}}{4} + C)│_1^4$</p>
+                                <p class="m1830-solution">$=(\frac{{{4^4}}}{4} + C) - (\frac{{{1^4}}}{4} + C)$</p>
+                                <p class="m1830-solution">$=64 + C - \frac{1}{4} - C$</p>
+                                <p class="m1830-answer">$=63.75$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $S(x) = \begin{align}&amp;\int_{0.5}^2 {\frac{1}{x}} \,dx\end{align} $
+                            <p>
+
+                                <p class="m1830-solution">$=(ln \left| x \right| + C)│_{0.5}^2$</p>
+                                <p class="m1830-solution">$= (\ln 2 + C) - (\ln 0.5 + C)$</p>
+                                <p class="m1830-solution">$= \ln 2 + C - \ln 0.5 - C$</p>
+                                <p class="m1830-solution">$= \ln 2 - \ln 0.5$</p>
+                                <p class="m1830-solution">$= \ln 2 - \ln 0.5$</p>
+                                <p class="m1830-solution">$\ln \frac{2}{{0.5}} = \ln 4\approx1.39$</p>
+                                <p class="m1830-solution">or</p>
+                                <p class="m1830-solution">$=.6931471806 - ( - .6931471806)$</p>
+                                <p class="m1830-answer">$\approx1.39$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_0^7 8x\;dx\end{align} $</p>
+
+                        <p class="m1830-solution">$= \frac{{8{x^2}}}{2}│_0^7$</p>
+                        <p class="m1830-solution">$= 4{x^2}│_0^7$</p>
+                        <p class="m1830-solution">$(4{\left( 7 \right)^2} + C) - (4{\left( 0 \right)^2} + C)$</p>
+                        <p class="m1830-solution">$= 196 + C - 0 - C$</p>
+                        <p class="m1830-answer">$= 196$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_2^3 4{x^3}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= (\frac{{4{x^4}}}{4} + C)│_2^3$</p>
+                        <p class="m1830-solution">$= {x^4} + C│_2^3$</p>
+                        <p class="m1830-solution">$= ({3^4} + C) - ({2^4} + C)$</p>
+                        <p class="m1830-solution">$= 81 + C - 16 - C$</p>
+                        <p class="m1830-answer">$= 65$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_0^3 5{e^x}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= 5{e^x}│_0^3$</p>
+                        <p class="m1830-solution">$= (5{e^3} + C) - (5{e^0} + C)$</p>
+                        <p class="m1830-solution">$= 5{e^3} + C - 5(1) - C$</p>
+                        <p class="m1830-solution">$= 5{e^3} - 5$</p>
+                        <p class="m1830-solution">$= 5({e^3} - 1)$</p>
+                        <p class="m1830-answer">$ \approx 95.43$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_1^{4\;} \frac{7}{x}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= (7\ln| x|)│_1^4$</p>
+                        <p class="m1830-solution">$= 7(\ln 4 + C) - 7(\ln 1 + C)$</p>
+                        <p class="m1830-solution">$= 7\ln 4 + C - 7\ln 1 - C$</p>
+                        <p class="m1830-solution">$= 7\ln 4 - 7\ln 1$</p>
+                        <p class="m1830-answer">$\approx 9.70$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_3^7 \;\left( {2 - 4{x^2}} \right)\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= (2x - \frac{{4{x^3}}}{3} + C)│_3^7$</p>
+                        <p class="m1830-solution">$= [2(7) - \frac{{4{{\left( 7 \right)}^3}}}{3} + C] - [2(3) - \frac{{4{{\left( 3 \right)}^3}}}{3} + C]$</p>
+                        <p class="m1830-solution">$= (14 - 457.33 + C) - (6 - 36 + C)$</p>
+                        <p class="m1830-solution">$= - 443.33 + 30$</p>
+                        <p class="m1830-answer">$= - 413.33$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_4^{25} \frac{5}{{\sqrt x }}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{4}^{25}{5{{x}^{1/2}}dx}\end{align}$</p>
+                        <p class="m1830-solution">$= \frac{{5{x^{1/2}}}}{{1/2}} + C│_4^{25}$</p>
+                        <p class="m1830-solution">$= 10{x^{1/2}}|_4^{25}$</p>
+                        <p class="m1830-solution">$= 10\sqrt {25} - 10\sqrt 4$</p>
+                        <p class="m1830-solution">$= 10(5) - 10(2)$</p>
+                        <p class="m1830-solution">$= 50 - 20$</p>
+                        <p class="m1830-answer">$= 30$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Cost: A company manufactures mountaineering 75-liter backpacks. The research department produced the marginal cost function $$C&#39;\left( x \right) = 400 - \;\frac{x}{5}\quad\quad 0\; \le x\; \le 1000$$ Where C’(x) is in dollars and x is the number of
+                            backpacks produced per week. Compute the increase in cost when production level increases from 0 backpacks per week to 600 backpacks per week. Set up a definite integral and evaluate it.</p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_0^{600} {400 - \frac{x}{5}dx}\end{align}$</p>
+                        <p class="m1830-solution">$= (400x - \frac{{{x^2}}}{{5 \cdot 2}} + C)│_0^{600}$</p>
+                        <p class="m1830-solution">$[400(600) - \frac{{{{600}^2}}}{{10}} + C] - [400(0) - \frac{{{0^2}}}{{10}} + C]$</p>
+                        <p class="m1830-solution">$= 240,000 - 36,000 + C - 0 - C$</p>
+                        <p class="m1830-solution">$= \$ 204,000$</p>
+                        <p class="m1830-answer">The cost increased by \$204,000 when production increased from 0 to 600 backpacks per week.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Costs of Upkeep of a Marina: Maintenance costs for a marina generally increase as the structures at the marina age. The rate of increase in maintenance costs (in dollars per year) for a particular marina is given approximately by $$M&#39;\left( x \right)
+                            = 30{x^2} + 2000$$ where x is the age of marina, in years, and M(x) is the total accumulated costs of maintenance for x years. Write a definite integral that will give the total maintenance costs from the third through the
+                            seventh year, and evaluate the integral.</p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_3^7 {30{x^2} + 2000dx}\end{align}$</p>
+                        <p class="m1830-solution">$=(\frac{{30{x^3}}}{3} + 2000x + C)│_3^7$</p>
+                        <p class="m1830-solution">$= 10{x^3} + 2000x + C│_3^7$</p>
+                        <p class="m1830-solution">$= [10{\left( 7 \right)^3} + 2000(7) + C] - [10{\left( 3 \right)^3} + 2000(3) + C]$</p>
+                        <p class="m1830-solution">$= 3430 + 14000 + C - 270 - 6000 - C$</p>
+                        <p class="m1830-solution">$= \$ 11,160$</p>
+                        <p class="m1830-answer">The total maintenance costs for the marina for years three through seven were \$11,160.</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+            <div id="u4s3" class="section">
+
+                <h3>4.3 Indefinite Integrals</h3>
+
+                <h4>Introduction</h4>
+
+                <p><strong>The marginal cost of producing  x units of a commodity is given by $C&#39;\left( x \right) = 3{x^2} + 2x.$</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find the cost function $C\left( x \right)$ for this commodity.</p>
+                        <p class="m1830-answer">$C(x) = {x^3} + {x^2} + C$</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            If the fixed costs are \$2000, find the cost of producing 20 units.</p>
+                        <p class="m1830-solution">$C(x) = {x^3} + {x^2} + 2000$</p>
+                        <p class="m1830-solution">$C(20) = {20^3} + {20^2} + 2000$</p>
+                        <p class="m1830-solution">$C(20) = 8000 + 400 + 2000$</p>
+                        <p class="m1830-solution">$C(20) = 10,400$</p>
+                        <p class="m1830-answer">The cost of producing 20 units is $10,400.</p>
+                    </li>
+                </ol>
+                <hr>
+
+                <div class="pagebreak"></div>
+
+
+                <h4>Notes</h4>
+                <p><strong>Find the indefinite integral.  Check by differentiating.</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {10\;dx}\end{align}$</p>
+
+                        <p class="m1830-answer">$=10x + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {15{x^2}\;\;dx}\end{align} $</p>
+
+                        <p class="m1830-solution">$=\frac{{15{x^3}}}{3} + C$</p>
+                        <p class="m1830-answer">$=5{x^3} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{x^{ - 4}}\;\;dx}\end{align} $</p>
+
+                        <p class="m1830-solution">$=\frac{{{x^{ - 3}}}}{{ - 3}} + C$</p>
+                        <p class="m1830-answer">$\frac{{ - {x^{ - 3}}}}{3} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {8\;{x^{1/3}}\;\;\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$= \frac{{8{x^{4/3}}}}{{4/3}} + C$</p>
+                        <p class="m1830-solution">$= \frac{3}{4}(8{x^{4/3}}) + C$</p>
+                        <p class="m1830-answer">$= 6{x^{4/3}} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{x^2}\;\left( {1 + {x^3}} \right)\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {{x^2} + {x^5}dx}\end{align}$</p>
+                        <p class="m1830-answer">$= \frac{{{x^3}}}{3} + \frac{{{x^6}}}{6} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\left( {4{x^3}\; + \;\;\frac{2}{{{x^3}}}} \right)\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {4{x^3} + 2{x^{ - 3}}dx}\end{align}$</p>
+                        <p class="m1830-solution">$= \frac{{4{x^4}}}{4} + \frac{{2{x^{ - 2}}}}{{ - 2}} + C$</p>
+                        <p class="m1830-solution">$= {x^4} - {x^{ - 2}} + C$</p>
+                        <p class="m1830-answer">$= {x^4} - \frac{1}{{{x^2}}} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{{1 - x{e^x}}}{x}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {\frac{1}{x}} - {e^x}dx\end{align}$</p>
+                        <p class="m1830-answer">$= \ln \left| x \right| - {e^x} + C$</p>
+
+                        <p><strong>Find the particular antiderivative of each derivative that satisfies the given condition.</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $R&#39;\left( x \right) = 600 - 0.6x$ when $R\left( 0 \right) = 0$</p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {(600 - 0.6x)} dx\end{align}$</p>
+                        <p class="m1830-solution">$R(x) = 600x - \frac{{0.6{x^2}}}{2} + C$</p>
+                        <p class="m1830-solution">$R(x) = 600x - 0.3{x^2} + C$</p>
+                        <p class="m1830-solution">$600(0) - 0.3({0^2}) + C = 0$</p>
+                        <p class="m1830-solution">$0 - 0 + C = 0$</p>
+                        <p class="m1830-answer">$R(x) = 600x - 0.3{x^2}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{{dR}}{{dt}}\; = \;\;\frac{{100}}{{{t^2}}}$ when $R\left( 1 \right) = 400$</p>
+
+                        <p class="m1830-solution">$\frac{{dR}}{{dt}}=100{t^{ - 2}}$</p>
+                        <p class="m1830-solution">$R(t) = \frac{{100{t^{ - 1}}}}{{ - 1}} + C$</p>
+                        <p class="m1830-solution">$R(t) = \frac{{ - 100}}{t} + C$</p>
+                        <p class="m1830-solution">$\frac{{ - 100}}{1} + C = 400$</p>
+                        <p class="m1830-solution">$ - 100 + C = 400$</p>
+                        <p class="m1830-solution">$C = 500$</p>
+                        <p class="m1830-answer">$R(t) = \frac{{ - 100}}{t} + 500$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{{dy}}{{dt}} = 5{e^t} - 4$ when $y(0)=- 1$</p>
+
+                        <p class="m1830-solution">$y = 5{e^t} - 4t + C$</p>
+                        <p class="m1830-solution">$5{e^0} - 4(0) + C = - 1$</p>
+                        <p class="m1830-solution">$5(1) - 0 + C = - 1$</p>
+                        <p class="m1830-solution">$5 - 0 + C = - 1$</p>
+                        <p class="m1830-solution">$5 + C = - 1$</p>
+                        <p class="m1830-solution">$C = - 6$</p>
+                        <p class="m1830-answer">$y = 5{e^t} - 4t - 6$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Renewable Energy: According to the Energy Research Institute, in 2012, US consumption of renewable energy was 8.45 quadrillion Btu (or 8.45 x 1015 Btu). Since the 1960’s, consumption has been growing at a rate (in quadrillion Btu per year) given by $$f&#39;(t)
+                            = 0.004t + 0.062$$ where t is in years after 1960. Find $f(t)$ and estimate US consumption of renewable energy in 2024.</p>
+                        <p><cite> Source: <a href="http://instituteforenergyresearch.org/topics/encyclopedia/renewable-energy/">http://instituteforenergyresearch.org/topics/encyclopedia/renewable-energy/</a> </cite></p>
+
+                        <p class="m1830-solution">$f(t) = \frac{{0.004{t^2}}}{2} + 0.062t + C$</p>
+                        <p class="m1830-solution">$f(t) = 0.002{t^2} + 0.062t + C$</p>
+                        <p class="m1830-solution">$0.002{\left( {52} \right)^2} + 0.062(52) + C = 8.45$</p>
+                        <p class="m1830-solution">$5.408 + 3.224 + C = 8.45$</p>
+                        <p class="m1830-solution">$8.632 + C = 8.45$</p>
+                        <p class="m1830-solution">$C = - 0.182$</p>
+                        <p class="m1830-solution">$f(t) = 0.002{t^2} + 0.062t - 0.182$</p>
+                        <p class="m1830-solution">$f(64) = 0.002{\left( {64} \right)^2} + 0.062(64) - 0.182$</p>
+                        <p class="m1830-solution">$f(64) = 8.192 + 3.968 - 0.182$</p>
+                        <p class="m1830-solution">$f(64) = 11.978$</p>
+                        <p class="m1830-answer">The estimated US consumption of renewable energy in 2024 will be 11.978 quadrillion BTU.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Sales Analysis: The rate of change of the monthly sales of a newly released video game is given by $$S&#39;(t) = 400{t^{1/3}}$$ $$S(0) = 0$$ where t is the number of months since the game was released and $S(t)$ is the number of games sold each month (in
+                            thousands). Find $S(t)$. When will monthly sales reach 20,000,000 games?</p>
+
+                        <p class="m1830-solution">$S(t)=\begin{align}&amp;\int400t^{1/3}\;dt\end{align}$</p>
+                        <p class="m1830-solution">$S(t) = \frac{{400{t^{4/3}}}}{{4/3}} + C$</p>
+                        <p class="m1830-solution">$S(t) = \frac{3}{4}(400t^{4/3}) + C$</p>
+                        <p class="m1830-solution">$S(t) = 300{t^{4/3}} + C$</p>
+                        <p class="m1830-solution">$300{\left( 0 \right)^{4/3}} + C = 0$</p>
+                        <p class="m1830-solution">$C = 0$</p>
+                        <p class="m1830-solution">$S(t) = 300{t^{4/3}}$</p>
+                        <p class="m1830-solution">$300{t^{4/3}} = 20000$</p>
+                        <p class="m1830-solution">${t^{4/3}} = \frac{{200}}{3}$</p>
+                        <p class="m1830-solution">${\left( {{t^{4/3}}} \right)^{3/4}}= {\left( {\frac{{200}}{3}} \right)^{3/4}}$</p>
+                        <p class="m1830-solution">$t = 23.33$</p>
+                        <p class="m1830-answer">The monthly sales will reach 20,000,000 games after 23.33 months</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Efficiency of a Machine Operator: The rate at which a machine operator’s efficiency Q (in percent) changes with respect to time on the floor without a break is modeled by the function $\frac{{dQ}}{{dt}} = 0.3t - 7\quad 0 \le t \le 16\,\,hrs$ where t is
+                            the number of house the operator has been working. Find $Q(t)$ given that the operator’s efficiency after working 2 hours is 82%.</p>
+
+                        <p class="m1830-solution">$Q(t)=\begin{align}&amp;\int {0.3t - 7dt}\end{align}$</p>
+                        <p class="m1830-solution">$Q(t) = \frac{{0.3{t^2}}}{2} - 7t + C$</p>
+                        <p class="m1830-solution">$Q(t) = 0.15{t^2} - 7t + C$</p>
+                        <p class="m1830-solution">$Q(2) = 0.15{\left( 2 \right)^2} - 7(2) + C = 8$</p>
+                        <p class="m1830-solution">$- 13.4 + C = 82$</p>
+                        <p class="m1830-solution">$C = 95.4$</p>
+                        <p class="m1830-answer">$Q(t) = 0.15{t^2} - 7t + 95.4$</p>
+
+                        <p><strong>Find the operators efficiency after 4 hours.  After 8 hours.</strong> </p>
+                        <p class="m1830-solution">$Q(4) = 0.15{\left( 4 \right)^2} - 7(4) + 95.4 = 69.8\%$</p>
+                        <p class="m1830-solution">$Q(8) = 0.15{\left( 8 \right)^2} - 7(8) + 95.4 = 49\%$</p>
+                        <p class="m1830-answer">The operator efficiency after 4 hours is 69.8%</p>
+                        <p class="m1830-answer">The operator efficiency after 8 hours is 49%</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+            <div id="u4s4" class="section">
+
+                <h3>4.4 Integration by Substitution</h3>
+
+                <h4>Introduction</h4>
+
+                <p><strong>Find the derivative.</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\left(3x^5+5x\right)^4$</p>
+
+                        <p class="m1830-solution">$f&#39;(x)=4\left(3x^5+5x\right)^3\left(15x^4+5\right)$</p>
+                        <p class="m1830-answer">$f&#39;(x)=\left(60x^4+20\right)\left(3x^5+5x\right)^3$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\sqrt[5]{\left(3x^2+7\right)^4}$</p>
+
+                        <p class="m1830-solution">$f(x)=\left(3x^2+7\right)^{4/5}$</p>
+                        <p class="m1830-solution">$f&#39;(x)=\frac45\left(3x^2+7\right)^{-1/5}\cdot\left(6x\right)$</p>
+                        <p class="m1830-answer">$f&#39;(x)=\frac{24x}{5\sqrt[5]{\left(3x^2+7\right)}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y=\ln\left(3x^2+5x\right)$</p>
+
+                        <p class="m1830-solution">$y&#39;=\frac1{3x^2+5x}\cdot\left(6x+5\right)$</p>
+                        <p class="m1830-answer">$y&#39;=\frac{6x+5}{3x^2+5x}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=e^{5x^3-6x+1}$</p>
+
+                        <p class="m1830-answer">$y&#39;=e^{5x^3-6x+1}\left(15x^2-6\right)$</p>
+                    </li>
+                </ol>
+                <hr>
+
+                <div class="pagebreak"></div>
+
+
+                <h4>Notes</h4>
+                <p><strong>General Indefinite Integral Formulas</strong></p>
+                <p>$\begin{align}&amp;\int E&#39;\left[I(x)\right]I&#39;(x)\;dx\end{align}=E\left[I(x)\right]+C$</p>
+                <p>$\begin{align}&amp;\int\left[f(x)\right]^nf(x)\;dx\end{align}=\frac{\left[f(x)\right]^{n+1}}{n+1}+C\;\;\;n\neq-1$</p>
+                <p>$\begin{align}&amp;\int e^{f(x)}\cdot f&#39;(x)\;dx\end{align}=e^{f(x)}+C$</p>
+                <p>$\begin{align}&amp;\int{\frac{1}{f\left( x \right)}~{f}&#39;\left( x \right)~dx~}\end{align}=~\ln \left[ f\left( x \right) \right]+C$</p>
+                <p>$\begin{align}&amp;\int u^n\;du\end{align}\;=\;\frac{u^{n+1}}{n+1}+C\;\;n\neq-1$</p>
+                <p>$\begin{align}&amp;\int e^u\;du\end{align}\;=\;e^u+C$</p>
+                <p>$\begin{align}&amp;\int\frac1u\;du\end{align}\;=\;\ln\left|u\right|+C$</p>
+
+                <p><strong>Find each indefinite integral and check the result by differentiating.</strong> </p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{{\left( {{x^9}\; + 1} \right)}^4}\;\left( {9{x^8}} \right)dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = {x^9} + 1$</p>
+                        <p class="m1830-solution m1830-step">$du = 9{x^8}\;dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {{u^4}\;du}\end{align}$</p>
+                        <p class="m1830-solution">=$\frac{u^5}{5} + C$</p>
+                        <p class="m1830-answer">$=\frac{( {{x^9} + 1})^5}{5} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{{\left( {6{x^3} - 7} \right)}^{ - 6}}\;\left( {18{x^2}} \right)\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 6{x^3} - 7$</p>
+                        <p class="m1830-solution m1830-step">$du = 18{x^2}\;dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {{u^{ - 6}}} du\end{align}$</p>
+                        <p class="m1830-solution">$\frac{u^{ - 5}}{ - 5} + C$</p>
+                        <p class="m1830-answer">$\frac{{{\left( 6{{x}^{3}}-7 \right)}^{-5}}}{-5}+C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{2}{{9x - 4}}\;\left( 9 \right)\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 9x - 4$</p>
+                        <p class="m1830-solution m1830-step">$du = 9\;dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {\frac{2}{u}\;du}\end{align}$</p>
+                        <p class="m1830-solution">$2\ln|u| + C$</p>
+                        <p class="m1830-answer">$2\ln| {9x - 4}| + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{{\left( {3t + 5} \right)}^4}\;dt}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 3t + 5$</p>
+                        <p class="m1830-solution m1830-step">$du = 3\;dt$</p>
+
+
+                        <p class="m1830-solution">$\frac{1}{3}\begin{align}&amp;\int {{{\left( {3t + 5} \right)}^4}3dt}\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{3}\begin{align}&amp;\int {{u^4}} du\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{3}\frac{{{u^5}}}{5} + C$</p>
+                        <p class="m1830-answer">$\frac{1}{15}\left(3t+5\right)^5+C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{e^{ - 2x}}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = - 2x$</p>
+                        <p class="m1830-solution m1830-step">$du = - 2\;dx$</p>
+
+
+                        <p class="m1830-solution">$ - \frac{1}{2}\begin{align}&amp;\int {{e^{ - 2x}}( - 2)dx}\end{align}$</p>
+                        <p class="m1830-solution">$- \frac{1}{2}\begin{align}&amp;\int {{e^u}du}\end{align}$</p>
+                        <p class="m1830-solution">$- \frac{1}{2}{e^u} + C$</p>
+                        <p class="m1830-answer">$ - \frac{1}{2}{e^{ - 2x}} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{x}{{5 + {x^2}}}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 5 + {x^2}$</p>
+                        <p class="m1830-solution m1830-step">$du = 2x\;dx$</p>
+
+
+                        <p class="m1830-solution">$\frac{1}{2}\begin{align}&amp;\int {\frac{1}{{5 + {x^2}}}} 2xdx\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{2}\int {\frac{1}{u}} du$</p>
+                        <p class="m1830-solution">$\frac{1}{2}\ln \left| u \right| + C$</p>
+                        <p class="m1830-answer">$\frac{1}{2}\ln| {5 + {x^2}}| + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{{{t^2}}}{{{{\left( {{t^3}\; - 1} \right)}^4}}}\;dt}\end{align} $</p>
+
+                        <p class="m1830-solution">$u = {t^3} - 1$</p>
+                        <p class="m1830-solution m1830-step">$du = 3{t^2}\;dt$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {\frac{1}{{{{\left( {{t^3} - 1} \right)}^4}}}{t^2}} dt\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{3}\begin{align}&amp;\int {\frac{1}{{{{\left( {{t^3} - 1} \right)}^4}}}} 3{t^2}dt\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{3}\begin{align}&amp;\int {\frac{1}{{{u^4}}}} du\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{3}\begin{align}&amp;\int {{u^{ - 4}}} du\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{3}\frac{{{u^{ - 3}}}}{{ - 3}} + C$</p>
+                        <p class="m1830-answer">$ - \frac{1}{{9{{\left( {{t^3} - 1} \right)}^3}}} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{{x\; - 1}}{{{x^2}\; - 2x + 5}}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = {x^2} - 2x + 5$</p>
+                        <p class="m1830-solution">$du = (2x - 2)dx$</p>
+                        <p class="m1830-solution m1830-step">$or = 2(x - 1)\;dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {\frac{1}{{{x^2} - 2x + 5}}} (x - 1)dx\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{2}\begin{align}&amp;\int {\frac{1}{{{x^2} - 2x + 5}}} 2(x - 1)dx\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{2}\begin{align}&amp;\int {\frac{1}{u}} du\end{align}$</p>
+                        <p class="m1830-solution">$\frac{1}{2}\ln \left| u \right| + C$</p>
+                        <p class="m1830-answer">$\frac{1}{2}\ln \left| {{x^2} - 2x + 5} \right| + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{1}{{x\ln x}}\;\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = \ln x$</p>
+                        <p class="m1830-solution m1830-step">$du = \frac{1}{x}\;dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {\frac{1}{{\ln x}}} \cdot \frac{1}{x}dx\end{align}$</p>
+                        <p class="m1830-solution">$\ln \left| u \right| + C$</p>
+                        <p class="m1830-answer">$\ln \left| {\ln x} \right| + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{x}{{\sqrt {x + 3} }}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">there is an extra x in the problems 10 and 11</p>
+                        <p class="m1830-solution">$u = x + 3$</p>
+                        <p class="m1830-solution">$x = u - 3$</p>
+                        <p class="m1830-solution m1830-step">$du = dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {\frac{{u - 3}}{{\sqrt u }}} du\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int\left(u-3\right)u^{1/2}\;du\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int{{{u}^{\frac{1}{2}}}}-3{{u}^{{}^{-1}/{}_{2}}}du\end{align}$</p>
+                        <p class="m1830-solution">$\frac{{{u}^{3/2}}}{3/2}-\frac{3{{u}^{1/2}}}{1/2}+C$</p>
+                        <p class="m1830-solution">$\frac{2}{3}{{u}^{3/2}}-6{{u}^{1/2}}+C$</p>
+                        <p class="m1830-answer">$\frac{2}{3}{{\left( x+3 \right)}^{3/2}}-6{{\left( x+3 \right)}^{1/2}}+C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {x{{\left( {x + 2} \right)}^5}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = x + 2$</p>
+                        <p class="m1830-solution">$x = u - 2$</p>
+                        <p class="m1830-solution m1830-step">$du = dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {(u - 2){u^5}du}\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int {{u^6} - 2{u^5}} du\end{align}$</p>
+                        <p class="m1830-solution">$\frac{{{u^7}}}{7} - \frac{{2{u^6}}}{6} + C$</p>
+                        <p class="m1830-answer">$\frac{{{{\left( {x + 2} \right)}^7}}}{7} - \frac{{{{\left( {x + 2} \right)}^6}}}{3} + C$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Continuous Money Flow: Suppose money is flowing continuously into a savings account at a rate of \$1000 per year at interest rate of 2%, compounded continuously. The amount that is paid over time, dt, is $A&#39;(t)=1000e^{.02t}.$ What is the accumulation
+                            of the amount over the first 5 years?</p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_0^5 {1000{e^{0.02t}}\;dt}\end{align}$</p>
+                        <p class="m1830-solution">$u = 0.02t$</p>
+                        <p class="m1830-solution m1830-step">$du = 0.02\;dt$</p>
+
+                        <p class="m1830-solution">$1000\frac{1}{{0.02}}\begin{align}&amp;\int_0^5 {{e^{0.02t}}0.02\;dt}\end{align}$</p>
+                        <p class="m1830-solution">$50000\begin{align}&amp;\int_0^5 {{e^u}\;du}\end{align}$</p>
+                        <p class="m1830-solution m1830-step">$50000{e^u}│{_0^5}$</p>
+
+                        <p class="m1830-solution">$50000{e^{0.02t}}\left| {_0^5} \right.$</p>
+                        <p class="m1830-solution">$50000({e^{0.02(5)}} - {e^{0.02(0)}})$</p>
+                        <p class="m1830-solution">$=5258.55$</p>
+                        <p class="m1830-answer">The accumulation in the savings account over the first 5 years is approximately \$5258.55.</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+            <div id="u4s5" class="section">
+
+                <h3>4.5 Area between Curves</h3>
+
+                <h4>Introduction</h4>
+                <p><strong>Before 1995, the U. S. Census Bureau used the model below to project the number (in thousands) of households in the United States, where $t$ is the number of years after 1990.  $${N_1} = 1.35{t^2} + 1078.4t + 92,323\quad$$ For the years 1995-2005, the actual number of households $N$ in the United States can be modeled by $${N_2} = 18.32{t^2} + 1178.3t + 92,099$$</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Graph ${N_1}$ on the interval $\;5 \le t \le 15$ and shade the area under the curve. What does this shaded area represent?</p>
+
+                        <p class="m1830-answer">This shaded area represents the projected number of households in the United States from 1995 to 2005.</p>
+
+                        <p><img src="images/notes/u4s5p1i.png" alt="x-axis from 5 to 16 counting by ones.  y-axis from 96,000 to 116,000 counting by 2000&#39;s"></p>
+
+                        <div class="pagebreak"></div>
+
+                        <p class="m1830-answer"><img src="images/notes/u4s5p1ia.png" alt="Graphs of N1=1.35t^2+1078.4t+92323 and N2=18.32t^2+1178.3t+92099 from 5&lt;=t&lt;=15"></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Now graph ${N_2}$on the interval $\;5 \le t \le 15$ on the same graph and shade the area under the curve. What does this shaded area represent? </p>
+
+                        <p class="m1830-answer">This shaded area represents the actual number of households in the United States from 1995 to 2005.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Did the projection model over-project or under-project the number of households?</p>
+
+                        <p class="m1830-answer">The projection model under-projected the number of households.
+                        </p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            How would you determine the difference in the number of households given by each model?</p>
+
+                        <p class="m1830-answer">Subtract the bottom equation from the top.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find the difference in the number of households for the two models.  </p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{5}^{15}{(18.32{{x}^{2}}+1178.3x+92,099)-(1.35{{x}^{2}}+1078.4x+92,323)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$=26,134.17$</p>
+                        <p class="m1830-answer">The difference in the number of households between the two models is $26,134.17.</p>
+                    </li>
+                </ol>
+                <hr>
+
+                <div class="pagebreak"></div>
+
+
+
+                <h4>Notes</h4>
+                <p>If $f$ and $g$ are continuous and $f\left( x \right)\; &gt; \;g\left( x \right)$ over the interval $\left[ {a,b} \right]$, then the area bounded by $y\; = \;f\left( x \right)$ and $y\; = \;g\left( x \right)$for $a\; \le x \le b$ is given
+                    exactly by $$A =\begin{align}&amp;\int\limits_a^b \left[ {f\left( x \right) - g\left( x \right)} \right]\;dx\end{align}$$</p>
+                <p><strong>Area Bounded by an Interval</strong></p>
+                <p>Find the area bounded by the graphs of the indicated equations over the given interval. Compute answers to three decimal places.</p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \; - x + 7$ and $y = 0$ on the interval $ - 3 \le x \le 3$</p>
+                        <img src="images/notes/u4s5p1.png" alt="Graphs of y=-x+7 and y=0 on the interval from -3 to 3">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-3}^{3}{(-x+7)-0\ dx}\end{align}$$</p>
+                        <p class="m1830-solution">$(-\frac{{{x}^{2}}}{2}+7x+C\left)│ _{-3}^{3} \right.$</p>
+                        <p class="m1830-solution">$(-\frac{9}{2}+21+C)-(-\frac{9}{2}-21+C)$</p>
+                        <p class="m1830-solution">$-\frac{9}{2}+21+C+\frac{9}{2}+21-C$</p>
+                        <p class="m1830-answer">$=42\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \; - \frac{1}{4}{x^3} + 2$ and $y = 0$ on the interval $ - 2 \le x \le 1$</p>
+                        <img src="images/notes/u4s5p2.png" alt="Graphs of y=(-1/4)x^3+2 and y=0 on the interval from -2 to 1">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2}^{1}{(-\frac{1}{4}}{{x}^{3}}+2)-0\ dx\end{align}$</p>
+                        <p class="m1830-solution">$(-\frac{1}{4}(\frac{{{x}^{4}}}{4})+2x+C\left)│ _{-2}^{1} \right.$</p>
+                        <p class="m1830-solution">$(-\frac{{{x}^{4}}}{16}+2x+C\left)│ _{-2}^{1} \right.$</p>
+                        <p class="m1830-solution">$(-\frac{1}{16}+2+C)-(-\frac{16}{16}-4+C)$</p>
+                        <p class="m1830-solution">$-\frac{1}{16}+2+1+4$</p>
+                        <p class="m1830-answer">$=6.9375\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \;x\left( {4 + x} \right)$ and $y = 0$ on the interval $\; - 3 \le x \le - 1$</p>
+                        <img src="images/notes/u4s5p3.png" alt="Graphs of y=x(4+x) and y=0 on the interval from -3 to -1">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-3}^{-1}{0-(4x+{{x}^{2}})\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-3}^{-1}{-4x-{{x}^{2}}}\;dx\end{align}$</p>
+                        <p class="m1830-solution">$(-\frac{4{{x}^{2}}}{2}-\frac{{{x}^{3}}}{3}+C\left)│ _{-3}^{-1} \right.$</p>
+                        <p class="m1830-solution">$(-2{{x}^{2}}-\frac{{{x}^{3}}}{3}+C\left)│ _{-3}^{-1} \right.$</p>
+                        <p class="m1830-solution">$(-2(1)-(-\frac{1}{3})+C)-(-2(9)-(-9)+C)$</p>
+                        <p class="m1830-solution">$-2+\frac{1}{3}+18-9$</p>
+                        <p class="m1830-answer">$=7.33\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \; - \frac{2}{x}$ and $y = 0$ on the interval $1 \le x \le e$</p>
+                        <img src="images/notes/u4s5p4.png" alt="Graphs of y=-2/x and y=0 on the interval from 1 to e">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{1}^{e}{0-(-\frac{2}{x})\; dx}\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{1}^{e}{\frac{2}{x}}\; dx\end{align}$</p>
+                        <p class="m1830-solution">$(2\ln \left| x \right|+C\left)│ _{1}^{e} \right.$</p>
+                        <p class="m1830-solution">$2\ln e-2\ln 1$</p>
+                        <p class="m1830-solution">$2(1)-2(0)$</p>
+                        <p class="m1830-answer">$2\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \; - x - 3$ and $y = 0$ on the interval $ - 7 \le x \le 2$</p>
+                        <p><img src="images/notes/u4s5p5.png" alt="graph of y=-x-3 and y=0 on the interval from -7 to 2"></p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-7}^{-3}\left(-x-3\right)-0\;dx\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{-3}^20-\left(-x-3\;\right)\;dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$\left(-\frac{x^2}2-3x+C\right)_{-7}^{-3}$</p>
+                        <p class="m1830-solution">$+\left(\frac{x^2}2+3x+C\right)_{-3}^2$</p>
+
+
+                        <p class="m1830-solution">$(4.5+3.5)+(8--4.5)$</p>
+                        <p class="m1830-solution">$8+12.5$</p>
+                        <p class="m1830-answer">$20.5\ unit{{s}^{2}}$</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \; - x + 7$ and $y = - 2$ on the interval $ - 3 \le x \le 3$</p>
+                        <p><img src="images/notes/u4s5p6.png" alt="Graphs of y=-x+7 and y=-2 on the interval from -3 to 3"></p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-3}^{3}{(-x+7)-(-2)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-3}^{3}{-x+7+2\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-3}^{3}{-x+9\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$(-\frac{{{x}^{2}}}{2}+9x+C\left)│ _{-3}^{3} \right.$</p>
+                        <p class="m1830-solution">$(-\frac{9}{2}+27+C)-(-\frac{9}{2}-27+C)$</p>
+                        <p class="m1830-solution">$-\frac{9}{2}+27+C+\frac{9}{2}+27-C$</p>
+                        <p class="m1830-answer">$54\ unit{{s}^{2}}$</p>
+                        <p>Compare your result in #6 to your result in #1</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \; - x - 3$ and $y = 1.5$ for the interval $ - 7 \le x \le 2$</p>
+                        <img src="images/notes/u4s5p7.png" alt="Graphs of y=-x-3 and y=1.5 on the interval from -7 to 2">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-7}^{-4.5}\left(-x-3\right)-1.5\;dx\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{-4.5}^21.5-\left(-x-3\;\right)\;dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-7}^{-4.5}-x-4.5\;dx\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{-4.5}^24.5+x\;dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$(\frac{-{{x}^{2}}}{2}-4.5x+C\left)│ _{-7}^{-4.5} \right.$</p>
+                        <p class="m1830-solution">$+(4.5x+\frac{{{x}^{2}}}{2}+C\left)│ _{-4.5}^{2} \right.$</p>
+
+
+                        <p class="m1830-solution">$(10.125-7)+(11--10.125)$</p>
+                        <p class="m1830-solution">$3.125+21.125$</p>
+                        <p class="m1830-answer">$24.25\ unit{{s}^{2}}$</p>
+                        <p>Compare your result in #7 to your result in #5</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \;\ln (x + e)$ and $y = {e^x} - 5$ on the interval $0 \le x \le 1$</p>
+                        <img src="images/notes/u4s5p8.png" alt="Graphs of y=ln(x+e) and y=e^x-5 on the interval from 0 to 1">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{0}^{1}{\ln (x+e)-({{e}^{x}}}-5)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{0}^{1}{\ln (x+e)-{{e}^{x}}}+5\; dx\end{align}$</p>
+                        <p class="m1830-solution">$u=x+e$</p>
+                        <p class="m1830-solution">$du=dx$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-4.5}^2(lnu)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{0}^{1}{(-{{e}^{x}}+5)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$u\ln \left| u \right|-u+c$</p>
+                        <p class="m1830-solution">$\left[\left(x+e\right)\ln\left|x+e\right|-\left(x+e\right)\right]_0^1$</p>
+                        <p class="m1830-solution">$+\left[-e^x+5x\right]_0^1$</p>
+                        <p class="m1830-solution">$((1+e)\ln \left| 1+e \right|-1-e-e+5)-((0+e)\ln \left| 0+e \right|-0-e-{{e}^{0}}+0)$</p>
+                        <p class="m1830-solution">$3.45-(e\ln e-e-1)$</p>
+                        <p class="m1830-solution">$3.45-(-1)=$</p>
+                        <p class="m1830-answer">$4.45\;units^2$</p>
+
+                        <p>Define the total area bounded by the two functions. How would you determine the interval, if you were asked to calculate the total area bounded between the two functions?</p>
+                        <p><strong>Area Not Bounded by an Interval</strong></p>
+                        <p><strong>Find the area bounded by the graphs of the indicated equations</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = {x^3} + 1$ and $y = x + 1$</p>
+                        <img src="images/notes/u4s5p9.png" alt="graphs of y=x^3+1 and y=x+1 on the interval from -2 to 2">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-1}^{0}{({{x}^{3}}+1)-(x+1)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{0}^{1}{(x+1)-({{x}^{3}}+1)\;dx}\end{align}$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-1}^{0}{({{x}^{3}}-x)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{0}^{1}{(x-{{x}^{3}})\;dx}\end{align}$</p>
+
+
+                        <p class="m1830-solution">$(\frac{{{x}^{4}}}{4}-\frac{{{x}^{2}}}{2}\left)| _{-1}^{0} \right.$</p>
+                        <p class="m1830-solution">$+(\frac{{{x}^{2}}}{2}-\frac{{{x}^{4}}}{4}\left)| _{0}^{1} \right.$</p>
+
+
+                        <p class="m1830-solution">$[(0-0)-(\frac{1}{4}-\frac{1}{2})]+[(\frac{1}{2}-\frac{1}{4})-(0-0)]$</p>
+                        <p class="m1830-solution">$\frac{1}{4}+\frac{1}{4}$</p>
+                        <p class="m1830-answer">$\frac{1}{2}\;units^2$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = - {x^3} - 2{x^2} + 1$ and $y = - x - 1$</p>
+                        <img src="images/notes/u4s5p10.png" alt="Graphs of y=-x^3-2x^2+1 and y=-x-1 on the interval from -3 to 3">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2}^{-1}{(-x-1)-(-{{x}^{3}}-2{{x}^{2}}+1)}\;dx\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{-1}^{1}{(-{{x}^{3}}-2{{x}^{2}}+1)-(-x-1)\;dx}\end{align}$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2}^{-1}{-x-1+{{x}^{3}}+2{{x}^{2}}-1}\;dx\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{-1}^1-x^3-2x^2+1+x+1\;dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2}^{-1}{{{x}^{3}}+2{{x}^{2}}-x-2\ dx}\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{-1}^{1}{-{{x}^{3}}-2{{x}^{2}}+x+2}\ dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$(\frac{{{x}^{4}}}{4}+\frac{2{{x}^{3}}}{3}-\frac{{{x}^{2}}}{2}-2x+C\left)| _{-2}^{-1} \right.$</p>
+                        <p class="m1830-solution">$+(\frac{-{{x}^{4}}}{4}-\frac{2{{x}^{3}}}{3}+\frac{{{x}^{2}}}{2}+2x+C\left)| _{-1}^{1} \right.$</p>
+
+
+                        <p class="m1830-solution">$(1.0833-0.667)+(1.5833--1.0833)$</p>
+                        <p class="m1830-solution">$0.4167+2.6667$</p>
+                        <p class="m1830-answer">$3.08\;units^2$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = - 3 + {x^2}$ and $y = - {e^{2x - 3}} + 2$</p>
+                        <img src="images/notes/u4s5p11.png" alt="Graph of y=-3+x^2 and y=-e^(2x-3)+2 on the interval from -3 to 3">
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2.24}^{1.79}{(-{{e}^{2x-3}}+2)-(-3+{{x}^{2}}})\;dx\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2.24}^{1.79}{-{{e}^{2x-3}}-{{x}^{2}}}+5\;dx\end{align}$</p>
+                        <p class="m1830-solution">$u=2x-3$</p>
+                        <p class="m1830-solution">$du=2dx$</p>
+                        <p class="m1830-solution">$\frac{1}{2}\begin{align}&amp;\int_{-2.24}^{1.76}{-{{e}^{u}}\;du}\end{align}$</p>
+                        <p class="m1830-solution">$+\begin{align}&amp;\int_{-2.24}^{1.76}{-{{x}^{2}}+5\; dx}\end{align}$</p>
+
+
+                        <p class="m1830-solution">$\frac{1}{2}(-{{e}^{u}})\left| _{-2.24}^{1.79} \right.$</p>
+                        <p class="m1830-solution">$+(\frac{-{{x}^{3}}}{3}+5x\left)| _{-2.24}^{1.79} \right.$</p>
+
+
+                        <p class="m1830-solution">$(\frac{-{{e}^{2x-3}}}{2}-\frac{{{x}^{3}}}{3}+5x\left)| _{-2.24}^{1.79} \right.$</p>
+                        <p class="m1830-solution">$6.15-(-7.45)$</p>
+                        <p class="m1830-answer">$13.6\;units^2$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            The useful life of a piece of rental equipment is the duration for which the equipment will be profitable to the rental business, and not how long the equipment will actually last. Many factors affect a piece of equipment’s useful life, including the
+                            frequency of use, the age when acquired and the repair policy and certain environmental conditions. The change in revenue for renting the equipment, over time, is modeled by $R&#39;\left( t \right) = 4t{e^{ - 0.2{t^2}}}$, in
+                            thousands of dollars per year. The change in cost for routine maintenance of the equipment is modeled by $C&#39;\left( t \right) = .5t$, also in thousands of dollars per year. Find the area between the graphs of C’ and R’ over
+                            the interval on the t axis from 0 to the useful life of the game and interpret the results.</p>
+                        <p><strong>Note:  Useful life is t where $C&#39;\left( t \right) = R&#39;(t)$</strong>
+                            <img src="images/notes/u4s5p12.png" alt="Graph of R&#39;(t)=4te^(-0.2t^2) and C&#39;(t)=0.5t on the interval from -6 to 5">
+                            <p class="m1830-solution">$\begin{align}&amp;\int_{0}^{3.22}{(4t{{e}^{-0.2{{t}^{2}}}}-0.5t})\;dt\end{align}$</p>
+                            <p class="m1830-solution">$u=-0.2{{t}^{2}}$</p>
+                            <p class="m1830-solution">$du=-0.4t\;dt$</p>
+
+                            <div class="step">
+                                <p class="m1830-solution">$\frac{4}{-0.4}\begin{align}&amp;\int_{0}^{3.22}{e^u}\;du\end{align}$</p>
+                                <p class="m1830-solution">$\begin{align}&amp;\int_{0}^{3.22}-0.4t\;dt\end{align}$</p>
+
+
+                                <p class="m1830-solution">$-10\begin{align}&amp;\int_{0}^{3.22}{{{e}^{u}}}\;du\end{align}$</p>
+                                <p class="m1830-solution">$+\begin{align}&amp;\int_0^{3.22}-0.5t\;dt\end{align}$</p>
+
+
+                                <p class="m1830-solution">$-10{{e}^{u}}\left| _{0}^{3.22} \right.$</p>
+                            </div>
+                            <p class="m1830-solution">$+\frac{-0.5{{t}^{2}}}{2}\left| _{0}^{3.22} \right.$</p>
+
+
+                            <p class="m1830-solution">$-10{{e}^{-0.2{{t}^{2}}}}-0.25{{t}^{2}}\left| _{0}^{3.22} \right.$</p>
+                            <p class="m1830-solution">$-3.85-(-10)$</p>
+                            <p class="m1830-solution">$6.15$</p>
+                            <p class="m1830-answer">The useful life of this piece of equipment is 6.15 years. </p>
+                    </li>
+                    <!-- ending of last problem -->
+                </ol>
+                <!-- ending of last ordered list -->
+            </div>
+            <!-- ending of last section -->
+        </div>
+        <!--ending of unit 4 div -->
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

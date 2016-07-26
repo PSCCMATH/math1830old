@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Load css file from shared location at pstcc.edu -->
+    <link rel="stylesheet" href="css/m1830.css" />
+
+
+    <!-- load current MathJax Library Tex as HTML -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!-- configure inline math in HTML use single "$" or "\(" within a sentence or use double "$$" or "\[" to put it centered on its own line.  You must escape single $ with a "\" if its in a regular sentence-->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
+    </script>
+
+    <!-- load javascript file for answer toggle buttons and functions to hide and show emphasis tags -->
+    <script src="js/mathscripts.js"></script>
+
+    <!-- load javascript file to populate graph data from Desmos API. -->
+    <script src="js/desmosgraphs.js"></script>
+</head>
+
+<body>
+
+    <div class="m1830-sidenav">
+
+
+        <nav class="w3-sidenav w3-white w3-animate-left" style="display:none;z-index:5" id="mySidenav">
+
+
+
+            <!-- <a class="w3-hover-green" href="#top" onclick="w3_close();">Top</a> -->
+            <a class="w3-cyan" href="#">Unit 1</a>
+            <a class="w3-hover-green" href="notesu1.html#u1toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku1.html#u1toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 2</a>
+            <a class="w3-hover-green" href="notesu2.html#u2toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku2.html#u2toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 3</a>
+            <a class="w3-hover-green" href="notesu3.html#u3toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku3.html#u3toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 4</a>
+            <a class="w3-hover-green" href="notesu4.html#u4toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku4.html#u4toc" onclick="w3_close();">Homework</a>
+
+
+            <a class="w3-cyan" href="#">Toggle</a>
+            <a id="togglesolution" class="w3-hover-green w3-aqua" href="#" onclick="togglesolutions();return false;">Solutions</a>
+            <a id="toggleanswer" class="w3-hover-green w3-aqua" href="#" onclick="toggleanswers();return false;">Answers</a>
+
+
+        </nav>
+
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+        <span class="w3-opennav m1830-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+    </div>
+
+    <div class="m1830-body-container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+        <p>Mary Monroe-Ellis</p>
+        <p>Susan Mosteller</p>
+        <h2 id="unit-3-applications-of-derivatives">Unit 3 Applications of Derivatives</h2>
+
+
+
+
+        <div class="m1830-toc">
+
+
+
+
+
+
+                    <ul>
+
+                        <li><a href="notesu3.html#u3s1">3.1 Analyzing and Interpreting Graphs</a></li>
+
+                        <li><a href="notesu3.html#u3s2">3.2 Analyzing and Interpreting Graphs Part 2</a></li>
+
+                        <li><a href="notesu3.html#u3s3">3.3 Curve Sketching</a></li>
+
+                        <li><a href="notesu3.html#u3s4">3.4 Introduction to Optimization</a></li>
+
+                        <li><a href="notesu3.html#u3s5">3.5 Modeling Optimization</a></li>
+
+                        <li><a href="notesu3.html#u3s6">3.6 Absolute Maximum and Absolute Minimum</a></li>
+
+                        <li><a href="notesu3.html#u3s7">3.7 Applications of Optimization</a></li>
+                    </ul>
+
+
+
+
+        </div>
+
+
+
+
+        <div id="u3" class="unit">
+
+
+
+
+
+            <div id="u3s1" class="section">
+                <h3 id="3-1-analyzing-and-interpreting-graphs">3.1 Analyzing and Interpreting Graphs</h3>
+
+                <h4>Introduction</h4>
+                <p>Discuss this graph with your group. Be prepared to share your observations with the class.</p>
+                <p><img src="images/notes/u3spp1i.png" alt="Ford Graph"></p>
+                <hr>
+
+                <div class="pagebreak"></div>
+
+
+                <h4>Notes</h4>
+                <p><strong>Curve Sketching</strong> </p>
+                <ol>
+
+                    <li>ANALYZE $f(x)$
+                        <ol>
+
+                            <li>Identify the Domain of $f(x)$: Commonly, $f(x)$is undefined for at any x value where:
+                                <ol>
+
+                                    <li>A denominator equals zero</li>
+
+                                    <li>There is an even root of a negative number</li>
+
+                                    <li>There is a log of a negative number or log of zero </li>
+                                </ol>
+                            </li>
+
+                            <li>Identify x-intercepts and y-intercept of $f(x)$
+                                <ol>
+
+                                    <li>x-intercepts: Set $y = 0$ and solve for x</li>
+
+                                    <li>y-intercepts: Set $x = 0$ and solve for y</li>
+                                </ol>
+                            </li>
+
+                            <li>Identify Vertical Asymptotes and Holes of $f(x)$
+                                <ol>
+
+                                    <li>$f\left( x \right) = \frac{n}{0}\,\,n \ne 0$ vertical asymptote at x</li>
+
+                                    <li>$f\left( x \right) = \frac{0}{0}$ hole at x</li>
+                                </ol>
+                            </li>
+
+                            <li>Identify Horizontal Asymptote of $f(x)$
+                                <ol>
+
+                                    <li>To find the horizontal asymptote, calculate $\mathop {\lim }\limits_{x \to \infty } f\left( x \right)$</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>ANALYZE $f&#39;(x)$
+                        <ol>
+
+                            <li>Graph the critical numbers on a number line and determine the sign for each interval. Separate the number line into intervals with breaks at:
+                                <ol>
+
+                                    <li>Values of $x$ where$f&#39;(x)=0$ </li>
+
+                                    <li>Values of x where $f&#39;(x)$ is undefined </li>
+
+                                    <li>Values of x where $f(x)$ is undefined </li>
+                                </ol>
+                            </li>
+
+                            <li>Determine the intervals on which $f(x)$ is increasing /decreasing
+                                <ol>
+
+                                    <li>Test one point contained in the interval (do not use end points of the interval).</li>
+
+                                    <li>$f&#39;(x)&lt;0$ means $f(x)$ is DECREASING on the interval</li>
+
+                                    <li>$f&#39;(x)&gt;0$ means is $f(x)$ is INCREASING on the interval</li>
+                                </ol>
+                            </li>
+
+                            <li>Identify local maxima and minima of f using first derivative test.
+                                <ol>
+
+                                    <li>Local Maximum: INCREASING → $f&#39;(x)=0$ → DECREASING</li>
+
+                                    <li>Local Minimum: DECREASING →$f&#39;(x)=0$ → INCREASING</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>ANALYZE f’’(x)
+                        <ol>
+
+                            <li>Graph the critical numbers on a number line and determine the sign for each interval. Separate the number line into intervals with breaks at:
+                                <ol>
+
+                                    <li>Values of $x$ where $f&quot;(x)=0$ </li>
+
+                                    <li>Values of$x$ where $f&quot;(x)$ is undefined </li>
+
+                                    <li>Values of $x$ where $f&quot;(x)$ is undefined </li>
+                                </ol>
+                            </li>
+
+                            <li>Determine the intervals on which f is concave up/concave down
+                                <ol>
+
+                                    <li>Test one point contained in the interval (do not use end points of the interval).</li>
+
+                                    <li>$f&quot;(x)&lt;0$ means $f(x)$ is CONCAVE DOWN on the interval</li>
+
+                                    <li>$f&quot;(x)&gt;0$ means $f(x)$ is CONCAVE UP on the interval</li>
+                                </ol>
+                            </li>
+
+                            <li>Identify inflection points of $f(x)$. A Point of Inflections occurs if one of the following sequences occurs in the intervals:
+                                <ol>
+
+                                    <li>CONCAVE UP → $f&quot;(x)=0$ → CONCAVE DOWN</li>
+
+                                    <li>CONCAVE DOWN → $f&quot;(x)=0$ → CONCAVE UP</li>
+                                </ol>
+                            </li>
+
+                        </ol>
+                    </li>
+
+                    <li> Graph the function $f(x)$</li>
+                </ol>
+
+
+
+                <p class="m1830-problem-text">
+                    The annual first quarter change in revenue for Apple, Inc. is given in the table below. </p>
+                <table>
+                    <tr>
+                        <th>Year</th>
+                        <th>% Revenue Growth</th>
+                    </tr>
+                    <tr>
+                        <td>1998</td>
+                        <td>-12.2</td>
+                    </tr>
+                    <tr>
+                        <td>2000</td>
+                        <td>27.1</td>
+                    </tr>
+                    <tr>
+                        <td>2002</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>2004</td>
+                        <td>29.4</td>
+                    </tr>
+                    <tr>
+                        <td>2006</td>
+                        <td>34.4</td>
+                    </tr>
+                    <tr>
+                        <td>2008</td>
+                        <td>42.7</td>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td>65.4</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>58.9</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>4.7</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>-12.8</td>
+                    </tr>
+                </table>
+
+                <p>The regression model for this data is: $$f(x)=-0.005x^4+0.113x^3-0.889x^2+7.946x-5.346$$</p>
+                <p class="m1830-problem-text"> Analyze and interpret the characteristics of the function identified below. Graph the function clearly marking each characteristic. (Use graphing paper and colored pencils. Each graph should cover an entire piece of graph paper.)</p>
+                <ol>
+
+                    <li> Analyze $f(x)$
+                        <ol>
+
+                            <li>
+                                <p>Domain</p>
+                                <p class="m1830-answer">[0,18] </p>
+                                <p class="m1830-answer">This model shows 1st Quarter change in revenue from 1998 to 2016.</p>
+                            </li>
+
+                            <li>
+                                <p>x-intercepts:</p>
+                                <p class="m1830-answer">(from calculator): $\left(0.727,0\right)$ and $\left(17.428,0\right)$</p>
+                                <p class="m1830-answer">In general this means the percent change in revenue was 0% when x=0.727 and x=17.428 years after 1998. Specifically for this data, the percent change in revenue was negative in 1998 and positive in 2000 and then was positive
+                                    in 2014 and negative in 2016.</p>
+                                <p>y-intercept:</p>
+                                <p class="m1830-answer">$\left(0,-5.346\right)$</p>
+                                <p class="m1830-answer">In 1998 percent change in revenue was approximately -5.346%, according to the model. The percent change in revenue was actually -12.2% in 1998.</p>
+                            </li>
+
+                            <li>
+                                <p>Asymptotes:</p>
+                                <p class="m1830-answer">No asymptotes. This is a polynomial function.</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li> Analyze $f&#39;(x)$
+                        <p class="m1830-answer">$f&#39;(x)=-0.02x^3+0.339x^2-1.778x+7.946$</p>
+                        <p><strong>Increasing and Decreasing</strong></p>
+                        <ol>
+
+
+
+
+
+                            <li>
+                                <p>Values of x where $f&#39;(x)=0$
+                                    <p class="m1830-answer">$f&#39;(x)=0$ at $x=12.358$</p>
+                                    <p>Values of x where $f&#39;(x)$ is undefined</p>
+                                    <p class="m1830-answer">There are no values of x where $f&#39;(x)$ is undefined.</p>
+                                    <p>Values of x where $f(x)$ is undefined</p>
+                                    <p class="m1830-answer">There are no values of x where $f(x)$ is undefined.</p>
+                                    <p class="m1830-answer"> <img src="images/notes/u3s1p1a.png" alt="graph of first derivative"></p>
+                                    <p class="m1830-answer">Sign graph of ${f}&#39;(x)$ reading left to right: positive, ${f}&#39;\left( 12.358 \right)=0$, negative</p>
+                                    Increasing:
+                                    <p class="m1830-answer">$[0,12.358)$</p>
+                                    <p class="m1830-answer">The percent change in revenue was increasing from 1998 into 2010.</p>
+                                    Decreasing:
+                                    <p class="m1830-answer">$(12.358,18]$</p>
+                                    <p class="m1830-answer">The percent change in revenue was decreasing in 2010 through 2016.</p>
+                            </li>
+
+                            <li> Local maximum
+                                <p class="m1830-answer">$(12.358, 53.732)$</p>
+                                <p class="m1830-answer">From the model, the maximum percent change in revenue occurs in 2010 (at x=12.358 years after 1998).</p>
+                                Local minimum
+                                <p class="m1830-answer">There are no local minima.</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>Analyze $f&quot;(x)$
+                        <p class="m1830-answer">$f&#39;&#39;(x)=-0.06x^2+0.678x-1.78$</p>
+
+                        <p><strong>Concave Up and Concave Down</strong></p>
+
+                        <ol>
+
+                            <li>
+                                <p>Values of x where $f&quot;(x)=0$
+                                    <p class="m1830-answer">$f&#39;&#39;(x)=0$ at $x= 4.137$ and $7.163$</p>
+                                    Values of x where $f&quot;(x)$ is undefined
+                                    <p class="m1830-answer">There are no values of x where $f&quot;(x)$ is undefined.</p>
+                                    Values of x where $f(x)$ is undefined
+                                    <p class="m1830-answer">There are no values of x where $f(x)$ is undefined.</p>
+                                    <p class="m1830-answer"><img src="images/notes/u3s1p1b.png" alt="graph of second derivative"></p>
+                                    <p class="m1830-answer">Sign graph of ${f}&quot;(x)$ reading left to right: negative, ${f}&#39;\left(4.137\right)=0,$ positive, ${f}&#39;\left(7.163\right)=0,$ negative</p>
+                                    Concave Up:
+                                    <p class="m1830-answer">$(4.137, 7.163)$</p>
+                                    <p class="m1830-answer">The percent change in revenue is increasing at an increasing rate from x=4.137 to x=7.163.</p>
+                                    Concave down:
+                                    <p class="m1830-answer">$\lbrack0,\;4.137)\;\cup\;(7.163,\;18\rbrack$</p>
+                                    <p class="m1830-answer">The percent change in revenue is increasing at a decreasing rate from x=0 to x=4.137.</p>
+                                    <p class="m1830-answer">The percent change in revenue is increasing at a decreasing rate from x=7.163 to x=12.358 (the maximum) and decreasing at a decreasing rate from x=12.358 to x=18.</p>
+                            </li>
+
+                            <li> Inflection points:
+                                <p class="m1830-answer">$(4.137, 18.848)$ and $(7.163, 34.325)$</p>
+                                <p class="m1830-answer">According to the model, the percent change in revenue is changing most rapidly at x=4.137 and x=7.163.</p>
+
+                            </li>
+                        </ol>
+
+                        <li> Graph $f(x)$
+                            <p class="m1830-answer"><img src="images/notes/u3s1p1c.png" alt="graph of revenue function"></p>
+                        </li>
+                </ol>
+
+
+            </div>
+
+            <div id="u3s2" class="section">
+                <h3 id="3-2-analyzing-and-interpreting-graphs-part-2">3.2 Analyzing and Interpreting Graphs Part 2</h3>
+                <p>See Homework Assignment for 3.2</p>
+
+
+
+            </div>
+
+            <div id="u3s3" class="section">
+                <h3 id="3-3-curve-sketching">3.3 Curve Sketching</h3>
+
+
+
+                <p class="m1830-problem-text">Analyze and interpret the characteristics of the function identified below. Graph the function clearly marking each characteristic. (Use graphing paper and colored pencils. Each graph should cover an entire piece of graph paper.)</p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text"> $f(x)=\frac{3x+4}{2x-5}$</p>
+                        <p>Domain:
+
+                            <p class="m1830-solution">Domain will not contain x values that cause the denominator to equal 0.</p>
+                            <p class="m1830-solution">$ 2x-5\ne 0 $</p>
+                            <p class="m1830-solution">$ x\ne \frac{5}{2}$</p>
+                            <p class="m1830-answer">Domain: $\left( -\infty ,\frac{5}{2} \right)\cup \left( \frac{5}{2},\infty \right)$</p>
+                            <p>x int(s):</p>
+                            <p class="m1830-solution">$0=\frac{3x+4}{2x-5}$</p>
+                            <p class="m1830-solution">$0=3x+4$</p>
+                            <p class="m1830-solution">$ x=-\frac{4}{3}$</p>
+                            <p class="m1830-answer">$\left( -\frac{4}{3},0 \right)$</p>
+                            <p>y int:</p>
+                            <p class="m1830-solution">$f\left( 0 \right)=\frac{3\left( 0 \right)+4}{2\left( 0 \right)-5}=-\frac{4}{5}$</p>
+                            <p class="m1830-answer">$\left( 0,-\frac{4}{5} \right)$</p>
+
+                            <p>Asymptotes:</p>
+                            <p>Vertical:
+                                <p>
+                                    <p class="m1830-solution">$f\left( \frac{5}{2} \right)=\frac{1}{0}$</p>
+                                    <p class="m1830-answer">$x=\frac{5}{2}$</p>
+                                    <p>Horizontal:
+                                        <p>
+                                            <p class="m1830-solution">$\underset{x\to \infty }{\mathop{\lim }}\,\frac{3x+4}{2x-5}=\underset{x\to \infty }{\mathop{\lim }}\,\frac{3x}{2x}=\underset{x\to \infty }{\mathop{\lim }}\,\frac{3}{2}=\frac{3}{2}$</p>
+                                            <p class="m1830-answer">$y=\frac{3}{2}$</p>
+                                            <p></p>
+                                            <p>Increasing and Decreasing</p>
+
+                                            <p class="m1830-solution">${f}&#39;\left( x \right)=\frac{3\left( 2x-5 \right)-2\left( 3x+4 \right)}{{{\left( 2x-5 \right)}^{2}}}=\frac{6x-15-6x-8}{{{\left( 2x-5 \right)}^{2}}}=\frac{-23}{{{\left( 2x-5 \right)}^{2}}}$</p>
+                                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$</p>
+                                            <p class="m1830-solution">There are no values of x where ${f}&#39;\left( x \right)=0.$</p>
+                                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)$ is undefined:</p>
+                                            <p class="m1830-solution">$2x-5=0$</p>
+                                            <p class="m1830-solution">$ x=\frac{5}{2}$</p>
+                                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                                            <p class="m1830-solution">$2x-5=0$</p>
+                                            <p class="m1830-solution">$x=\frac{5}{2}$</p>
+
+                                            <img src="images/notes/u3s3p1a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative.">
+                                            <p class="m1830-solution">Sign graph of ${f}&#39;(x)$ reading left to right: negative, ${f}&#39;\left( \frac{5}{2} \right)\text{= undefined}$, negative</p>
+                                            <p>Increasing: </p>
+                                            <p class="m1830-answer">There are no intervals where $f(x)$ is increasing.</p>
+
+                                            <p>Decreasing: </p>
+                                            <p class="m1830-answer">$\left( -\infty ,\frac{5}{2} \right)\cup \left( \frac{5}{2},\infty \right)$ The function is decreasing over the entire domain.</p>
+
+                                            <p>local max: </p>
+                                            <p class="m1830-answer">There are no local maxima.</p>
+
+                                            <p>local min:</p>
+                                            <p class="m1830-answer">There are no local minima.</p>
+
+                                            <p>Concave Up and Concave Down</p>
+                                            <p class="m1830-solution">${f}&#39;&#39;\left( x \right)=-23\left( -2 \right){{\left( 2x-5 \right)}^{-3}}\left( 2 \right)=\frac{92}{{{\left( 2x-5 \right)}^{3}}}$</p>
+
+
+                                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0$:</p>
+                                            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)=0$</p>
+                                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+                                            <p class="m1830-solution"> $ 2x-5=0$</p>
+                                            <p class="m1830-solution">$ x=\frac{5}{2}$</p>
+                                            <p class="m1830-solution">Values of x where $f\left( x \right)$is undefined:</p>
+                                            <p class="m1830-solution"> $2x-5=0$</p>
+                                            <p class="m1830-solution">$x=\frac{5}{2}$</p>
+
+                                            <img src="images/notes/u3s3p1b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative.">
+                                            <p class="m1830-solution">Sign chart for ${f}&#39;&#39;\left( x \right)$: negative, ${f}&#39;&#39;\left( \frac{5}{2} \right)=undefined$, positive</p>
+                                            <p>Concave up:</p>
+                                            <p class="m1830-answer">$\left( \frac{5}{2},\infty \right)$</p>
+
+                                            <p>Concave down:</p>
+                                            <p class="m1830-answer">$\left( -\infty ,\frac{5}{2} \right)$</p>
+
+                                            <p>Inflection Points:</p>
+                                            <p class="m1830-answer">There are no points of inflection because the function is undefined at $x=\frac{5}{2}.$</p>
+
+                                            <p class="m1830-answer"><img src="images/notes/u3s3p1c.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text"> $f(x)={{e}^{x}}(5x-7)$</p>
+                        <p>Domain:
+                            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+                            <p>x int(s):</p>
+                            <p class="m1830-solution">$0={{e}^{x}}(5x-7)$</p>
+                            <p class="m1830-solution">$5x-7=0$</p>
+                            <p class="m1830-solution">$x=\frac{7}{5}$</p>
+                            <p class="m1830-solution">${{e}^{x}}=0$</p>
+                            <p class="m1830-solution">no solution</p>
+                            <p class="m1830-answer">$\left( \frac{7}{5},0 \right)$</p>
+                            <p>y int:</p>
+                            <p class="m1830-solution">$f\left( 0 \right)={{e}^{0}}\left( 5\left( 0 \right)-7 \right)=-7$</p>
+                            <p class="m1830-answer">$\left( 0,-7 \right)$</p>
+
+                            <p>Asymptotes:</p>
+                            <p>Vertical: </p>
+                            <p class="m1830-answer">There are no vertical asymptotes. The function is continuous for all x.</p>
+
+                            <p>Horizontal:</p>
+                            <p class="m1830-solution">$\underset{x\to \infty }{\mathop{\lim }}\,\left( {{e}^{x}}(5x-7) \right)=\infty $</p>
+                            <p class="m1830-solution">$\underset{x\to -\infty }{\mathop{\lim }}\,\left( {{e}^{x}}(5x-7) \right)=0$</p>
+                            <p class="m1830-answer">$y=0$</p>
+
+                            <p>Increasing and Decreasing</p>
+                            <p class="m1830-solution">${f}&#39;\left( x \right)={{e}^{x}}\left( 5x-7 \right)+5{{e}^{x}} $</p>
+                            <p class="m1830-solution">$f’(x) ={{e}^{x}}\left( 5x-7+5 \right)={{e}^{x}}\left( 5x-2 \right)$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$</p>
+                            <p class="m1830-solution">${{e}^{x}}\left( 5x-2 \right)=0$</p>
+                            <p class="m1830-solution">$e^x \ne 0$</p>
+                            <p class="m1830-solution">$x=\frac{2}{5}$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)\;$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;\left( x \right)\;$ is undefined.</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)\;$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)\;$ is undefined.</p>
+                            <p class="m1830-solution"><img src="images/notes/u3s3p2a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative."></p>
+                            <p class="m1830-solution">Sign graph of ${f}&#39;(x)$ reading left to right: negative, ${f}&#39;\left( \frac{2}{5} \right)=0$, positive</p>
+                            <p>Increasing: </p>
+                            <p class="m1830-answer">$\left( \frac{2}{5},\infty \right)$</p>
+
+                            <p>Decreasing: </p>
+                            <p class="m1830-answer">$\left( -\infty ,\frac{2}{5} \right)$</p>
+
+                            <p>local max:</p>
+                            <p class="m1830-answer">There are no local maxima.</p>
+
+                            <p>local min:</p>
+                            <p class="m1830-solution">$f\left( \frac{2}{5} \right)={{e}^{2/5}}\left( 5\left( \frac{2}{5} \right)-7 \right)\approx -7.46$</p>
+                            <p class="m1830-answer">$\left( \frac{2}{5},-7.46 \right)$</p>
+                            <p>Concave Up and Concave Down</p>
+                            <p class="m1830-solution">${f}&#39;&#39;\left( x \right)={{e}^{x}}\left( 5x-2 \right)+{{e}^{x}}\left( 5 \right)={{e}^{x}}\left( 5x-2+5 \right)={{e}^{x}}\left( 5x+3 \right)$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0:$</p>
+                            <p class="m1830-solution">${{e}^{x}}\left( 5x+3 \right)=0$</p>
+                            <p class="m1830-solution">$x=-\frac{3}{5}$</p>
+                            <p class="m1830-solution">${{e}^{x}}\ne 0$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined.</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)\;$is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)\;$is undefined.</p>
+                            <p class="m1830-solution"><img src="images/notes/u3s3p2b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative."></p>
+                            <p class="m1830-solution">Sign chart for ${f}&#39;&#39;\left( x \right)$: negative, ${f}&#39;&#39;\left( -\frac{3}{5} \right)=0$, positive</p>
+                            <p>Concave up: </p>
+                            <p class="m1830-answer">$\left( -\frac{3}{5},\infty \right)$</p>
+
+                            <p>Concave down: </p>
+                            <p class="m1830-answer">$\left( -\infty ,-\frac{3}{5} \right)$</p>
+
+                            <p>Inflection Points:</p>
+                            <p class="m1830-solution">$f\left( -\frac{3}{5} \right)={{e}^{-3/5}}\left( 5\left( -\frac{3}{5} \right)-7 \right)\approx -5.488$</p>
+
+                            <p class="m1830-answer">$\left( -\frac{3}{5},-5.488 \right)$</p>
+                            <p class="m1830-answer"><img src="images/notes/u3s3p2c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text"> $f(x)=3{{x}^{2}}+5x-2$</p>
+                        <p>Domain:
+                            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+                            <p class="m1830-answer">Polynomial functions are always continuous.</p>
+                            <p>x int(s):</p>
+                            <p class="m1830-solution">$ 0=3{{x}^{2}}+5x-2 $</p>
+                            <p class="m1830-solution">$ 0=\left( 3x-1 \right)\left( x+2 \right) $</p>
+                            <p class="m1830-solution">$x=\frac{1}{3}\,\,,\,\,x=-2$</p>
+                            <p class="m1830-answer">$\left( \frac{1}{3},0 \right)\,\text{and}\,\left( -2,0 \right)$</p>
+                            <p>y int:</p>
+                            <p class="m1830-solution">$f\left( 0 \right)=0+0-2=-2$</p>
+                            <p class="m1830-answer">$\left( 0,-2 \right)$</p>
+
+
+                            <p>Asymptotes: </p>
+                            <p class="m1830-answer">There are no asymptotes. The function is a polynomial.</p>
+
+                            <p>Increasing and Decreasing</p>
+                            <p class="m1830-solution">${f}&#39;(x)=6x+5$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;(x)=0:$</p>
+                            <p class="m1830-solution">$0=6x+5$</p>
+                            <p class="m1830-solution">$x=-\frac{5}{6}$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined.</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)\;$is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)\;$is undefined.</p>
+                            <p class=solution><img src="images/notes/u3s3p3a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative."></p>
+                            <p class="m1830-solution">Sign graph of ${f}&#39;(x)$ reading left to right: negative, ${f}&#39;\left( -\frac{5}{6} \right)=0$ , positive</p>
+                            <p>Increasing:</p>
+                            <p class="m1830-answer">$\left( -\frac{5}{6},\infty \right)$</p>
+
+                            <p>Decreasing:</p>
+                            <p class="m1830-answer">$\left( -\infty ,-\frac{5}{6} \right)$</p>
+
+                            <p>local max: </p>
+                            <p class="m1830-answer">There are no local maxima.</p>
+
+                            <p>local min:</p>
+                            <p class="m1830-solution">$f\left( -\frac{5}{6} \right)=3{{\left( -\frac{5}{6} \right)}^{2}}+5\left( -\frac{5}{6} \right)-2\approx 4.08$</p>
+                            <p class="m1830-answer">$\left( -\frac{5}{6},-4.08 \right)$</p>
+
+
+                            <p>Concave Up and Concave Down</p>
+                            <p class="m1830-solution">${f}&#39;&#39;\left( x \right)=6$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0:$</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&quot;\left( x \right)=0.$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)$ is undefined.</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)$ is undefined.</p>
+                            <p class="m1830-solution">Because there are no x values that meet the requirements for a partition, $f(x)$ will maintain the same concavity across the entire domain.</p>
+                            <p class="m1830-solution"><img src="images/notes/u3s3p3b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative."></p>
+                            <p class="m1830-solution">Sign chart for ${f}&#39;&#39;\left( x \right)$: positive on domain</p>
+                            <p>Concave up:</p>
+                            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+
+                            <p>Concave down: </p>
+                            <p class="m1830-answer">There are no intervals where $f(x)$is concave down.</p>
+
+                            <p>Inflection Points: </p>
+                            <p class="m1830-answer">There are no points of inflection.</p>
+
+                            <p class="m1830-answer"><img src="images/notes/u3s3p3c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text"> $f(x)={{x}^{3}}+6{{x}^{2}}+9x$</p>
+                        <p>Domain:
+                            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+                            <p class="m1830-answer">Polynomial functions are always continuous.</p>
+                            <p>x int(s):</p>
+                            <p class="m1830-solution">$ 0={{x}^{3}}+6{{x}^{2}}+9x$</p>
+                            <p class="m1830-solution">$ 0=x\left( {{x}^{2}}+6x+9 \right) $</p>
+                            <p class="m1830-solution">$ 0=x{{\left( x+3 \right)}^{2}} $</p>
+                            <p class="m1830-solution">$x=0\,\,,\,\,x=-3$</p>
+                            <p class="m1830-answer">$\left( 0,0 \right)\,\text{and}\,\left( -3,0 \right)$</p>
+                            <p>y int:</p>
+                            <p class="m1830-solution">$f\left( 0 \right)={{\left( 0 \right)}^{3}}+6{{\left( 0 \right)}^{2}}+9\left( 0 \right)=0$</p>
+                            <p class="m1830-answer">$\left( 0,0 \right)$</p>
+                            <p>Asymptotes: </p>
+                            <p class="m1830-answer">There are no asymptotes. The function is a polynomial.</p>
+
+                            <p>Increasing and Decreasing</p>
+                            <p class="m1830-solution">${f}&#39;(x)=3{{x}^{2}}+12x+9$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;(x)=0:$</p>
+                            <p class="m1830-solution">$0=3{{x}^{2}}+12x+9=3\left( x+3 \right)\left( x+1 \right)$</p>
+                            <p class="m1830-solution">$x=-3$ and $x=-1$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;\left( x \right)$ is undefined.</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)$ is undefined.</p>
+                            <p class="m1830-solution"><img src="images/notes/u3s3p4a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative."></p>
+                            <p class="m1830-solution">Sign graph of ${f}&#39;(x)$ reading left to right: positive, ${f}&#39;\left( -3 \right)=0$, negative, ${f}&#39;\left( -1 \right)=0$, positive</p>
+                            <p>Increasing:</p>
+                            <p class="m1830-answer">$\left( -\infty ,-3 \right)\cup \left( -1,\infty \right)$</p>
+                            <p>Decreasing:</p>
+                            <p class="m1830-answer">$\left( -3,-1 \right)$</p>
+                            <p>local max:</p>
+                            <p class="m1830-solution">$f\left( -3 \right)={{\left( -3 \right)}^{3}}+6{{\left( -3 \right)}^{2}}+9\left( -3 \right)=0$</p>
+                            <p class="m1830-answer">$\left( -3,0 \right)$</p>
+                            <p>local min:</p>
+                            <p class="m1830-solution">$f\left( -1 \right)={{\left( -1 \right)}^{3}}+6{{\left( -1 \right)}^{2}}+9\left( -1 \right)=-4$</p>
+                            <p class="m1830-answer">$\left( -1,-4 \right)$</p>
+                            <p>Concave Up and Concave Down</p>
+                            <p class="m1830-solution">${f}&#39;&#39;(x)=6x+12$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0:$</p>
+                            <p class="m1830-solution">$0=6x+12$</p>
+                            <p class="m1830-solution">$x=-2$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)$ is undefined.</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)$ is undefined.</p>
+                            <p class="m1830-solution"><img src="images/notes/u3s3p4b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative."></p>
+                            <p class="m1830-solution">Sign chart for ${f}&#39;&#39;\left( x \right)$: negative, ${f}&#39;&#39;\left( -2 \right)=0$, positive</p>
+                            <p>Concave up:</p>
+                            <p class="m1830-answer">$\left( -2,\infty \right)$</p>
+
+                            <p>Concave down: </p>
+                            <p class="m1830-answer">$\left( -\infty ,-2 \right)$</p>
+
+                            <p>Inflection Points: </p>
+                            <p class="m1830-solution">$f\left( -2 \right)={{\left( -2 \right)}^{3}}+6{{\left( -2 \right)}^{2}}+9\left( -2 \right)=-2$</p>
+
+                            <p class="m1830-answer">$\left( -2,-2 \right)$</p>
+                            <p class="m1830-answer"><img src="images/notes/u3s3p4c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+                    </li>
+                </ol>
+
+
+            </div>
+
+            <div id="u3s4" class="section">
+                <h3>3.4 Introduction to Optimization</h3>
+
+                <h4>Introduction</h4>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Construct a 20 cm by 20 cm square on the white piece of paper.</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Draw four congruent squares in each corner of your original square (see diagram below), the size of the four squares you draw is your decision.</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Using the scissors and tape, cut out your square and its corners to create an open-topped box.</p>
+                        <p><img src="images/notes/u3s4p1i.png" alt="20 cm by 20 cm Square with small squares made with dotted lines in each corner"></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Complete the following questions:</p>
+                        <ol>
+
+                            <li>The width of our box is:</li>
+
+                            <li>The length of our box is:</li>
+
+                            <li>The height of our box is:</li>
+
+                            <li>Calculate the volume of your box.</li>
+                        </ol>
+                        <p>A summary of the data collected from the class is on the board. Copy this data into the chart below.</p>
+                        <table>
+                            <tr>
+                                <th>Height (cm)</th>
+                                <th>Volume (cubic cm)</th>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Using the graph paper, construct a graph of height vs volume by plotting the above ordered pairs. Join the points with a smooth curve. Answer the following questions based on your graph.</p>
+                        <p><img src="images/notes/u3s4p5i.png" alt="1st Quadrant Graph with height on the x-axis and volume on the y-axis"></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            What is the maximum volume? (According to your graph.)</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            What size of square cut out of the corner would result in the maximum volume?</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            What type of function models your graph?</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Could we write a mathematical function representing the graph?</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            How could our knowledge of derivatives be used to find the maximum volume?</p>
+                        <p> <img src="images/notes/u3s4p10i.png" alt="Blank 20 by 20 coordinate plane"> </p>
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+            <div id="u3s5" class="section">
+
+                <h3>3.5 Modeling Optimization</h3>
+
+                <h4>Notes</h4>
+                <p>Write a mathematical function for each of the following.</p>
+                <p>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find the formula for volume of an open-topped box created from a 20 cm square sheet of paper.</p>
+                        <img src="images/notes/u3s4p1i.png" alt="20 cm by 20 cm Square with small squares made with dotted lines in each corner">
+                        <p class="m1830-solution">$V=l\cdot w\cdot h$</p>
+                        <p class="m1830-solution">$V=\left( 20-2h \right)\left( 20-2h \right)h$</p>
+                        <p class="m1830-solution">$V=\left( 400-40h-40h+4{{h}^{2}} \right)h$</p>
+                        <p class="m1830-solution">$V=\left( 400-80h+4{{h}^{2}} \right)h$</p>
+                        <p class="m1830-answer">$V=400h-80{{h}^{2}}+4{{h}^{3}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Determine the formula for the distance from A to B through E.</p>
+                        <img src="images/notes/u3s5p2.png" alt="Line segment DEC on bottom of the picture. A right triangle DAE is on the left side of the picture.  The distance from D to A is verical and is 6 cm.  The distance from D to E is horizontal and is x cm. A right triangle CBE is on the right side of the picture.  The distance from C to B is verical and is 4 cm.  The distance from C to E is horizontal and is 10-x cm.">
+                        <p class="m1830-solution">$\left(m\overline{AE}\right)^2={{x}^{2}}+{{6}^{2}}$</p>
+                        <p class="m1830-solution">$m{\overline{AE}}=\sqrt{{{x}^{2}}+36}$</p>
+                        <p class="m1830-solution">$\left(m\overline{BE}\right)^2={{\left( 10-x \right)}^{2}}+{{4}^{2}}$</p>
+                        <p class="m1830-solution">$\left(m\overline{BE}\right)^2=\left( 100-20x+{{x}^{2}} \right)+16$</p>
+                        <p class="m1830-solution">$\left(m\overline{BE}\right)^2=116-20x+{{x}^{2}}$</p>
+                        <p class="m1830-solution">$m{\overline{BE}}=\sqrt{116-20x+{{x}^{2}}}$</p>
+                        <p class="m1830-answer">$m{\overline{AE}}+m{\overline{BE}}=\sqrt{{{x}^{2}}+36}+\sqrt{116-20x+{{x}^{2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            When a theater owner charges \$3 for admission, there is an average attendance of 100 people. For every \$0.10 increase in admission, there is a loss of 1 customer from the average number. Find the revenue formula.</p>
+
+                        <p class="m1830-solution">$R(x)=$(price per ticket)(number of tickets sold)</p>
+                        <p class="m1830-solution">$R(x)=(3+0.10x)(100-1x)$</p>
+                        <p class="m1830-solution">$R(x)=300-3x+10x-0.1{{x}^{2}}$</p>
+                        <p class="m1830-answer">$R(x)=300+7x-0.1{{x}^{2}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            A Norman window is a rectangle with a semi-circle on top. If the perimeter is 24 feet, express the area as a function of the radius (r).</p>
+                        <img src="images/notes/u3s5p4.png" alt="Diagram of a Norman window with a rectangle on the bottom and a half circle on the top.  The radius of the circle is r, the vertical sides of the rectangle each measure y and the bottom of the rectangle measures 2r.">
+                        <p class="m1830-solution">$P=2y+2r+\frac{1}{2}\left( 2\pi r \right)$</p>
+                        <p class="m1830-solution">$24=2y+2r+\frac{1}{2}(2\pi r)$</p>
+                        <p class="m1830-solution">$24=2y+2r+\pi r$</p>
+                        <p class="m1830-solution">$\frac{24-2r-\pi r}{2}=y$</p>
+                        <p class="m1830-solution">$A=l\cdot w+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$A=\left( \frac{24-2r-\pi r}{2} \right)2r+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$A=\left( 24-2r-\pi r \right)r+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$A=24r-2{{r}^{2}}-\pi {{r}^{2}}+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-answer">$A=24r-2{{r}^{2}}-\frac{1}{2}\pi {{r}^{2}}$</p>
+
+                        <p><cite> Norris, Ken. (1999). Optimization Problems. Retrieved from <a href="https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F">https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F</a> </cite></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            A lifeguard has 200 m of rope and some buoys with which she intends to enclose a rectangular area at a lake for swimming. The beach will form one side of the rectangle, with the rope forming the other three sides. Find the formula for the area of the
+                            enclosure.  </p>
+
+                        <p class="m1830-solution">$A=l\cdot w$</p>
+                        <p class="m1830-solution">$A=x(200-2x)$</p>
+                        <p class="m1830-answer">$A=200x-2{{x}^{2}}$</p>
+                    </li>
+                </ol>
+            </div>
+
+
+            <div id="u3s6" class="section">
+
+                <h3>3.6 Absolute Maximum and Minimum</h3>
+
+                <h4>Introduction</h4>
+
+                <p>On a sheet of paper, each member of the group is to draw 3 functions f(x) over an interval a &lt; x &lt; b.</p>
+                <p>Be creative! Try to draw as many different possibilities as you can.</p>
+                <p>I have drawn one for you as an example.</p>
+                <p><img src="images/notes/u3s6p1i.png" alt="Sample Graph with Endpoints. Graph of f(x) on the interval from x=a to x=b."></p>
+
+                <div class="pagebreak"></div>
+
+                <p>Label each of your graphs (ex: graph #1, graph #2, etc)</p>
+
+                <div class="w3-row">
+
+                    <div class=w3-third>
+                        <img src="images/notes/u3s6p1ib.png" alt="Blank 12 x 12 Coordinate Plane"></div>
+
+                    <div class=w3-third><img src="images/notes/u3s6p1ib.png" alt="Blank 12 x 12 Coordinate Plane"></div>
+
+                    <div class=w3-third><img src="images/notes/u3s6p1ib.png" alt="Blank 12 x 12 Coordinate Plane"></div>
+                </div>
+
+                <div class="pagebreak"></div>
+
+                <p>For each of your graphs, answer the following questions:</p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Where does f (x) have its maximum value? That is, where on your graph does y have the largest value?</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Where does f (x) have its minimum value?</p>
+                        <p><strong>Clearly indicate the answers to these two questions on each graph.</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Based on your answers above, can your group arrive at a conclusion?</p>
+                        <ol>
+
+                            <li>Could you make a general statement about how to determine the absolute maximum or minimum values of a function over a given interval?</li>
+
+                            <li>Can you think of any exceptions?</li>
+
+                            <li>How can our knowledge of derivatives assist us?</li>
+
+                            <li>Summarize your responses on this sheet. Be prepared to share your results to the rest of the class.</li>
+                        </ol>
+                    </li>
+                </ol>
+                <p><cite> Norris, Ken. (1999). Optimization Problems. Retrieved from <a href="https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F">https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F</a> </cite></p>
+                <hr>
+
+                <div class="pagebreak"></div>
+
+
+                <h4>Notes</h4>
+                <p><strong>Algorithm for determining Extreme Values</strong></p>
+                <p><strong>Suppose that $f(x)$  is a continuous function over a closed interval [a, b].</strong> </p>
+                <p><strong>To find the absolute maximum and minimum values of the function $f(x)$on [a, b]:</strong></p>
+                <ol>
+
+                    <li>Find $f&#39;(x)$ </li>
+
+                    <li>Determine the critical points of in [a, b]
+                        <p>(that is, find all points c for which or does not exist)</p>
+                    </li>
+
+                    <li>List the critical points of $f(x)$ and the endpoints of the interval [a &amp; b]</li>
+
+                    <li>Find the function values of critical points and the endpoints</li>
+
+                    <li>The largest of these values is the absolute maximum of on the interval [a, b]. </li>
+
+                    <li>The smallest of these is the absolute minimum of on the interval [a, b].</li>
+                </ol>
+                <p><strong>Find the absolute minimum and maximum values of the function, if they exist, over the given interval.</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)={{x}^{2}}-6x-3\quad \quad [-1,5]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=2x-6 $</p>
+                        <p class="m1830-solution">$ Criticals:f&#39;(x)=0 $</p>
+                        <p class="m1830-solution">$ 2x-6=0 $</p>
+                        <p class="m1830-solution">$ 2x=6 $</p>
+                        <p class="m1830-solution">$ x=3 $</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>x</th>
+
+                                <th>f(x)</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-1</td>
+
+                                <td>$ 4$</td>
+                            </tr>
+
+                            <tr>
+
+                                <td>3</td>
+
+                                <td>$ -12 $</td>
+                            </tr>
+
+                            <tr>
+
+                                <td>$5$</td>
+
+                                <td>$ -8 $</td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">Absolute Max: (-1, 4)</p>
+                        <p class="m1830-answer">Absolute Min: (3, -12)</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=2{{x}^{3}}-3{{x}^{2}}-36x+62\quad \quad [-3,4]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=6{{x}^{2}}-6x-36 $</p>
+                        <p class="m1830-solution">$ 6{{x}^{2}}-6x-36=0 $</p>
+                        <p class="m1830-solution">$ 6\left( {{x}^{2}}-x-6 \right)=0 $</p>
+                        <p class="m1830-solution">$ {{x}^{2}}-x-6=0 $</p>
+                        <p class="m1830-solution">$ (x+2)(x-3)=0 $</p>
+                        <p class="m1830-solution">$ x=-2,3 $</p>
+
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>x</th>
+
+                                <th>f(x)</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-3</td>
+
+                                <td>
+                                    <p class="m1830-solution">$ 89$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>-2</td>
+
+                                <td>
+                                    <p class="m1830-solution">$106 $</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>3</td>
+
+                                <td>
+                                    <p class="m1830-solution">$-19 $</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>4</td>
+
+                                <td>
+                                    <p class="m1830-solution">$-2$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">Absolute Max: (-2, 106)</p>
+                        <p class="m1830-answer">Absolute Min: (3, -19)</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=x+\frac{1}{x}\quad \quad [1,20]$</p>
+
+                        <p class="m1830-solution">$ f(x)=x+{{x}^{-1}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=1+(-1){{x}^{-2}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=1-\frac{1}{{{x}^{2}}} $</p>
+                        <p class="m1830-solution">$ 0=1-\frac{1}{{{x}^{2}}} $</p>
+                        <p class="m1830-solution">$ \frac{1}{{{x}^{2}}}=1 $</p>
+                        <p class="m1830-solution">$ {{x}^{2}}=1 $</p>
+                        <p class="m1830-solution">$ \sqrt{{{x}^{2}}}=1 $</p>
+                        <p class="m1830-solution">$ x=1\text{ and }x=-1 $</p>
+                        <p class="m1830-solution">x=-1 is not in interval.</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>x</th>
+
+                                <th>f(x)</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>1</td>
+
+                                <td>
+                                    <p class="m1830-solution">$2$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>20</td>
+
+                                <td>
+                                    <p class="m1830-solution">$20.05$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">Absolute Max: (20, 20.05)</p>
+                        <p class="m1830-answer">Absolute Min: (1, 2)</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\frac{{{x}^{2}}}{{{x}^{2}}+1}\quad \quad [-2,2]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{({{x}^{2}}+1)(2x)-{{x}^{2}}(2x)}{{{\left( {{x}^{2}}+1 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{2{{x}^{3}}+2x-2{{x}^{3}}}{{{\left( {{x}^{2}}+1 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{2x}{{{\left( {{x}^{2}}+1 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ \frac{2x}{{{\left( {{x}^{2}}+1 \right)}^{2}}}=\frac{0}{1} $</p>
+                        <p class="m1830-solution">$ 2x=0 $</p>
+                        <p class="m1830-solution">$ x=0 $</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>x</th>
+
+                                <th>f(x)</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-2</td>
+
+                                <td>
+                                    <p class="m1830-solution">$08$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>0</td>
+
+                                <td>
+                                    <p class="m1830-solution">$0$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>2</td>
+
+                                <td>
+                                    <p class="m1830-solution">$.8$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">Absolute Max: (2, 8) and (-2, 8)</p>
+                        <p class="m1830-answer">Absolute Min: (0, 0)</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\frac{x}{{{(x+9)}^{2}}}\quad \quad [-1,8]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{{{\left( x+9 \right)}^{2}}(1)-x(2)(x+9)(1)}{{{\left( x+9 \right)}^{4}}} $</p>
+                        <p class="m1830-solution">$f&#39;(x)=\frac{\left( x+9 \right)\left[ \left( x+9 \right)-2x \right]}{{{\left( x+9 \right)}^{4}}}$</p>
+                        <p class="m1830-solution">$ {{\left( x+9 \right)}^{4}} $</p>
+                        <p class="m1830-solution">$ =\frac{-x+9}{{{\left( x+9 \right)}^{3}}} $</p>
+                        <p class="m1830-solution">$ \frac{-x+9}{{{\left( x+9 \right)}^{3}}}=\frac{0}{1} $</p>
+                        <p class="m1830-solution">$ -x+9=0 $</p>
+                        <p class="m1830-solution">$ 9=x $</p>
+                        <p class="m1830-solution">9 is not in the interval</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>x</th>
+
+                                <th>f(x)</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-1</td>
+
+                                <td>
+                                    <p class="m1830-solution">$-.0156$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>8</td>
+
+                                <td>
+                                    <p class="m1830-solution">$.0227$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">Absolute Max: (8, .0277)</p>
+                        <p class="m1830-answer">Absolute Min: (-1, -.0156)</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=-3\quad \quad [-2,2]$</p>
+
+                        <p class="m1830-answer">$f&#39;(x)\ne 0$</p>
+                        <p class="m1830-answer">There are no maximum or minimum values becasue this is a constant function.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            An employee’s monthly production M, in number of units produced, is found to be a function of the number of year of service, t. For a certain product, a productivity function is being given by: $M(t)=-2{{t}^{2}}+100t+180,\quad 0\le t\le 40$</p>
+                        <p>Find the maximum productivity and the year in which it is achieved. </p>
+                        <p class="m1830-solution">$M&#39;(t)=-4t+100$</p>
+                        <p class="m1830-solution">$ 0=-4t+100$</p>
+                        <p class="m1830-solution">t=25</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>t</th>
+
+                                <th>M(t)</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>0</td>
+
+                                <td>
+                                    <p class="m1830-solution">$180$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>25</td>
+
+                                <td>
+                                    <p class="m1830-solution">$1430$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>40</td>
+
+                                <td>
+                                    <p class="m1830-solution">$980$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">The maximum monthly productivity is 1430 units per month in year 25 of service.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            A firm determines that its total profit in dollars from the production and sale of x thousand units of a product is given by: $P(x)=\frac{1500}{{{x}^{2}}-6x+10}\quad \quad x\ge 0$</p>
+                        <p>Find the number of units x for which the total profit is a maximum.</p>
+                        <p class="m1830-solution">$ P&#39;(x)=\frac{\left( 0 \right)\left( {{x}^{2}}-6x+10 \right)-1500\left( 2x-6 \right)}{{{\left( {{x}^{2}}-6x+10 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ P&#39;(x)=\frac{-3000x+9000}{{{\left( {{x}^{2}}-6x+10 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ \frac{-3000x+9000}{{{\left( {{x}^{2}}-6x+10 \right)}^{2}}}=\frac{0}{1} $</p>
+                        <p class="m1830-solution">$ -3000x+9000=0 $</p>
+                        <p class="m1830-solution">$ -3000x=-9000 $</p>
+                        <p class="m1830-solution">$ x=3 $</p>
+                        <p class="m1830-answer">The profit is maximized at $1500 when 3000 units are sold.</p>
+
+                    </li>
+                </ol>
+                <p><cite> Norris, Ken. (1999). Optimization Problems. Retrieved from <a href="https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F">https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F</a> </cite></p>
+            </div>
+
+
+
+
+            <div id="u3s7" class="section">
+
+                <h3>3.7 Applications of Optimization</h3>
+
+                <h4>Notes</h4>
+
+                <p>Write a mathematical function for each of the following and then find the requested information.</p>
+                <p>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find the maximum volume of an open-topped box created from a 20 cm square sheet of paper.</p>
+                        <img src="images/notes/u3s4p1i.png" alt="20 cm by 20 cm Square with small squares made with dotted lines in each corner">
+                        <p class="m1830-solution">$V=l\cdot w\cdot h$</p>
+                        <p class="m1830-solution">$V=\left( 20-2h \right)\left( 20-2h \right)h$</p>
+                        <p class="m1830-solution">$V=\left( 400-40h-40h+4{{h}^{2}} \right)h$</p>
+                        <p class="m1830-solution">$V=\left( 400-80h+4{{h}^{2}} \right)h$</p>
+                        <p class="m1830-solution">To maximize volume:</p>
+                        <p class="m1830-solution">1) take the derivative V’(h)</p>
+                        <p class="m1830-solution">2) set V’(h)=0 to find critical numbers</p>
+                        <p class="m1830-solution">3) locate max(check domain issues)</p>
+                        <p class="m1830-solution">$V&#39;(h) = 12{h^2} - 160h + 400$ </p>
+                        <p class="m1830-solution">$V’(h)=0$</p>
+                        <p class="m1830-solution">at h=3.3cm, h=10cm</p>
+                        <p class="m1830-solution">(note that $h \ne 10)$</p>
+                        <p class="m1830-solution">$V(3.33\bar 3 ) = 4{\left( {3.3333} \right)^3} - 80{\left( {3.3333} \right)^2} + 400\left( {3.3333} \right)$</p>
+                        <p class="m1830-solution">$V(3.33\bar 3 ) = 592.59c{m^3}$</p>
+                        <p class="m1830-answer">The max volume is approximately $592.59c{m^3}$ when h is approximately 3.33 cm.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Determine the shortest possible distance from A to B through E.</p>
+                        <img src="images/notes/u3s5p2.png" alt="Line segment DEC on bottom of the picture. A right triangle DAE is on the left side of the picture.  The distance from D to A is verical and is 6 cm.  The distance from D to E is horizontal and is x cm. A right triangle CBE is on the right side of the picture.  The distance from C to B is verical and is 4 cm.  The distance from C to E is horizontal and is 10-x cm.">
+                        <table>
+
+                            <tr>
+
+                                <th>x</th>
+
+                                <th>f(x)</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>0</td>
+
+                                <td>
+                                    <p class="m1830-solution">$16.77$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>1</td>
+
+                                <td>
+                                    <p class="m1830-solution">$15.9$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>2</td>
+
+                                <td>
+                                    <p class="m1830-solution">$15.2$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>3</td>
+
+                                <td>
+                                    <p class="m1830-solution">$14.8$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>4</td>
+
+                                <td>
+                                    <p class="m1830-solution">$14.4$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>5</td>
+
+                                <td>
+                                    <p class="m1830-solution">$14.2$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>6</td>
+
+                                <td>
+                                    <p class="m1830-solution">$14.1$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>7</td>
+
+                                <td>
+                                    <p class="m1830-solution">$14.4$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>8</td>
+
+                                <td>
+                                    <p class="m1830-solution">$14.5$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>9</td>
+
+                                <td>
+                                    <p class="m1830-solution">$14.9$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>10</td>
+
+                                <td>
+                                    <p class="m1830-solution">$15.7$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-solution">$D=m{\overline{AE}}+m{\overline{EB}}$</p>
+                        <p class="m1830-solution">$D={{\left( {{x}^{2}}+36 \right)}^{\frac{1}{2}}}+{{\left( {{x}^{2}}-20x+116 \right)}^{\frac{1}{2}}}$</p>
+                        <p class="m1830-solution">$D&#39;(x)=\frac{1}{2}{{\left( {{x}^{2}}+36 \right)}^{-\frac{1}{2}}}(2x)+\frac{1}{2}{{\left( {{x}^{2}}-20x+116 \right)}^{-\frac{1}{2}}}\left( 2x-20 \right)$</p>
+                        <p class="m1830-solution">$D&#39;(x)=\frac{x}{\sqrt{{{x}^{2}}+36}}+\frac{x-10}{\sqrt{{{x}^{2}}-20x+116}}$</p>
+                        <p class="m1830-solution">$ \text{Set }D&#39;(x)=0$</p>
+                        <p class="m1830-solution">$ \frac{x}{\sqrt{{{x}^{2}}+36}}+\frac{x-10}{\sqrt{{{x}^{2}}-20x+116}}=0$</p>
+                        <p class="m1830-solution">$ -\frac{x}{\sqrt{{{x}^{2}}+36}}=\frac{x-10}{\sqrt{{{x}^{2}}-20x+116}}$</p>
+                        <p class="m1830-solution">$ -x\sqrt{{{x}^{2}}-20x+116}=(x-10)\sqrt{{{x}^{2}}+36}$</p>
+                        <p class="m1830-solution">$ {{\left( -x\sqrt{{{x}^{2}}-20x+116} \right)}^{2}}={{\left( (x-10)\sqrt{{{x}^{2}}+36} \right)}^{2}}$</p>
+                        <p class="m1830-solution">$ {{x}^{2}}\left( {{x}^{2}}-20x+116 \right)={{\left( x-10 \right)}^{2}}\left( {{x}^{2}}+36 \right)$</p>
+                        <p class="m1830-solution">$ {{x}^{4}}-20{{x}^{3}}+116{{x}^{2}}=({{x}^{2}}-20x+100)({{x}^{2}}+36)$</p>
+                        <p class="m1830-solution">$ {{x}^{4}}-20{{x}^{3}}+116{{x}^{2}}={{x}^{4}}+36{{x}^{2}}-20{{x}^{3}}-720x+100{{x}^{2}}+3600$</p>
+                        <p class="m1830-solution">$ {{x}^{4}}-20{{x}^{3}}+116{{x}^{2}}={{x}^{4}}-20{{x}^{3}}+136{{x}^{2}}-720x+3600$</p>
+                        <p class="m1830-solution">$ 0=-116{{x}^{2}}+136{{x}^{2}}-720x+3600$</p>
+                        <p class="m1830-solution">$ 20{{x}^{2}}-720x+3600=0$</p>
+                        <p class="m1830-solution">$ {{x}^{2}}-36x+180=0$</p>
+                        <p class="m1830-solution">$ (x-30)(x-6)=0$</p>
+                        <p class="m1830-solution">$ x=30\text{ or }x=6$</p>
+                        <p class="m1830-solution">$x=30$ is outside the domain of x.</p>
+                        <p class="m1830-solution">Must test critical numbers and endpoints to find absolute minimum.</p>
+                        <p class="m1830-solution">$ D(0)=16.77$</p>
+                        <p class="m1830-solution">$ D(10)=15.66$</p>
+                        <p class="m1830-solution">$ D(6)=14.14$</p>
+                        <p class="m1830-answer">The absolute minimum is 14.14 cm when the distance from D to E is 6 cm.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            When a theater owner charges \$3 for admission, there is an average attendance of 100 people. For every \$0.10 increase in admission, there is a loss of 1 customer from the average number. How much should the theater owner charge to maximize revenue and
+                            what is the maximum revenue?</p>
+
+                        <p class="m1830-solution">x=number of .10 cent increases in admission costs</p>
+                        <p class="m1830-solution">$R(x)=$(price per ticket)(number of tickets sold)</p>
+                        <p class="m1830-solution">$R(x)=(3+0.10x)(100-1x)$</p>
+                        <p class="m1830-solution">$R(x)=300-3x+10x-0.1{{x}^{2}}$</p>
+                        <p class="m1830-solution">$R(x)=300+7x-0.1{{x}^{2}}$</p>
+                        <p class="m1830-solution">$R&#39;(x)=7-0.2x$</p>
+                        <p class="m1830-solution">$7-0.2x=0$</p>
+                        <p class="m1830-solution">$7=0.2x$</p>
+                        <p class="m1830-solution">$35=x$</p>
+                        <p class="m1830-solution">Ticket Price= $3+.1x=3+.1(35)=6.50$</p>
+                        <p class="m1830-solution">Revenue= $(3+.1(35))(100-35)=422.50$</p>
+                        <p class="m1830-answer">The theatre owner should charge \$6.50 per ticket to have the maximum revenue of $422.50.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            A Norman window is a rectangle with a semi-circle on top. Find the maximum area if the perimeter is 24 feet, express the area as a function of the radius (r).</p>
+                        <img src="images/notes/u3s5p4.png" alt="Diagram of a Norman window with a rectangle on the bottom and a half circle on the top.  The radius of the circle is r, the vertical sides of the rectangle each measure y and the bottom of the rectangle measures 2r.">
+                        <p class="m1830-solution">$P=2y+2r+\frac{1}{2}\left( 2\pi r \right)$</p>
+                        <p class="m1830-solution">$24=2y+2r+\frac{1}{2}(2\pi r)$</p>
+                        <p class="m1830-solution">$24=2y+2r+\pi r$</p>
+                        <p class="m1830-solution">$\frac{24-2r-\pi r}{2}=y$</p>
+                        <p class="m1830-solution">$A=l\cdot w+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$A=\left( \frac{24-2r-\pi r}{2} \right)2r+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$A=\left( 24-2r-\pi r \right)r+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$A=24r-2{{r}^{2}}-\pi {{r}^{2}}+\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$A=24r-2{{r}^{2}}-\frac{1}{2}\pi {{r}^{2}}$</p>
+                        <p class="m1830-solution">$ A&#39;(r)=24-4r-\pi r$</p>
+                        <p class="m1830-solution">$ 0=24-4r-\pi r$</p>
+                        <p class="m1830-solution">$ -24=-4r-\pi r$</p>
+                        <p class="m1830-solution">$ 24=4r+\pi r$</p>
+                        <p class="m1830-solution">$ r=\frac{24}{4+\pi }\approx 3.36ft$</p>
+                        <p class="m1830-answer">The area is maximized when r is 3.36 feet and y is 3.36 feet.</p>
+                        <p class="m1830-answer">The maximum area is 40.33 $ft^3.$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            A lifeguard has 200 m of rope and some buoys with which she intends to enclose a rectangular area at a lake for swimming. The beach will form one side of the rectangle, with the rope forming the other three sides. Find the dimensions that will produce
+                            the maximum area.  </p>
+
+                        <p class="m1830-solution">$A=lw$</p>
+                        <p class="m1830-solution">$A=x(200-2x)$</p>
+                        <p class="m1830-solution">$A=200x-2x^2$</p>
+                        <p class="m1830-solution">$ A&#39;(x)=-4x+200$</p>
+                        <p class="m1830-solution">$ 0=-4x+200$</p>
+                        <p class="m1830-solution">$ x=50$</p>
+                        <p class="m1830-solution">$ A(50)=-2{{\left( 50 \right)}^{2}}+200(50)=5000{{m}^{2}}$</p>
+                        <p class="m1830-answer">The maximum area possible is 5000 $m^2.$</p>
+                        <p class="m1830-answer">This can be achieved by building the swim area with the dimensions 50 m x 100 m.</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

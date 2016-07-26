@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Load css file from shared location at pstcc.edu -->
+    <link rel="stylesheet" href="css/m1830.css" />
+
+
+    <!-- load current MathJax Library Tex as HTML -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!-- configure inline math in HTML use single "$" or "\(" within a sentence or use double "$$" or "\[" to put it centered on its own line.  You must escape single $ with a "\" if its in a regular sentence-->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
+    </script>
+
+    <!-- load javascript file for answer toggle buttons and functions to hide and show emphasis tags -->
+    <script src="js/mathscripts.js"></script>
+
+    <!-- load javascript file to populate graph data from Desmos API. -->
+    <script src="js/desmosgraphs.js"></script>
+</head>
+
+<body>
+
+    <div class="m1830-sidenav">
+
+
+        <nav class="w3-sidenav w3-white w3-animate-left" style="display:none;z-index:5" id="mySidenav">
+
+
+
+            <!-- <a class="w3-hover-green" href="#top" onclick="w3_close();">Top</a> -->
+            <a class="w3-cyan" href="#">Unit 1</a>
+            <a class="w3-hover-green" href="notesu1.html#u1toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku1.html#u1toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 2</a>
+            <a class="w3-hover-green" href="notesu2.html#u2toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku2.html#u2toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 3</a>
+            <a class="w3-hover-green" href="notesu3.html#u3toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku3.html#u3toc" onclick="w3_close();">Homework</a>
+            <a class="w3-cyan" href="#">Unit 4</a>
+            <a class="w3-hover-green" href="notesu4.html#u4toc" onclick="w3_close();">Notes</a>
+            <a class="w3-hover-green" href="homeworku4.html#u4toc" onclick="w3_close();">Homework</a>
+
+
+            <a class="w3-cyan" href="#">Toggle</a>
+            <a id="togglesolution" class="w3-hover-green w3-aqua" href="#" onclick="togglesolutions();return false;">Solutions</a>
+            <a id="toggleanswer" class="w3-hover-green w3-aqua" href="#" onclick="toggleanswers();return false;">Answers</a>
+
+
+        </nav>
+
+        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+        <span class="w3-opennav m1830-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
+    </div>
+
+    <div class="m1830-body-container">
+        <h1 id="u2toc">MATH 1830 Notes</h1>
+        <p>Mary Monroe-Ellis</p>
+        <p>Susan Mosteller</p>
+
+          <h2 >Unit 2 Derivatives</h2>
+        <p>Mary Monroe-Ellis</p>
+        <p>Susan Mosteller</p>
+
+
+
+        <div class="m1830-toc">
+
+
+
+
+
+
+                    <ul>
+
+                        <li><a href="notesu2.html#u2sp">2.P Exponential and Logarithmic Equations</a></li>
+
+                        <li><a href="notesu2.html#u2s1">2.1 The Constant e and Natural Log Applications</a></li>
+
+                        <li><a href="notesu2.html#u2s2">2.2 Derivatives of Exponential and Logarithmic Functions</a></li>
+
+                        <li><a href="notesu2.html#u2s3">2.3 Product and Quotient Rules</a></li>
+
+                        <li><a href="notesu2.html#u2s4">2.4 The Chain Rule</a></li>
+                    </ul>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div id="u2" class="unit">
+
+
+            <div id="u2sp" class="section">
+                <h3>2.P Review of Exponential and Logarithmic Functions</h3>
+
+                <h4>Notes</h4>
+                <p><strong>Three Rules for Logarithms</strong></p>
+                <ul>
+
+                    <li>Product Rule: $\ln \left( x*y \right)=\ln \left( x \right)+\text{ln}\left( y \right)$
+                        <ul>
+
+                            <li>Example: $\ln \left( 3*5 \right)=\ln \left( 3 \right)+\text{ln}\left( 5 \right)$</li>
+                        </ul>
+                    </li>
+
+                    <li>Quotient Rule: $\ln \left( x/y \right)=\ln \left( x \right)-\text{ln}\left( y \right)$
+                        <ul>
+
+                            <li>Example: $\ln \left( 3/7 \right)=\ln \left( 3 \right)-\text{ln}\left( 7 \right)$</li>
+                        </ul>
+                    </li>
+
+                    <li>Power Rule: $\ln {{x}^{y}}~=y\ln x$
+                        <ul>
+
+                            <li>Example: $\ln {{2}^{8}}~=8\ln 2$</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Three Specific Logarithms to Remember</strong></p>
+                <ul>
+
+                    <li>When x&lt;0
+                        <ul>
+
+                            <li>$ln(x)$ is undefined</li>
+
+                            <li>${{\log }_{b}}(x)$ is undefined</li>
+
+                            <li>WHY?</li>
+                        </ul>
+                    </li>
+
+                    <li>When x=0
+                        <ul>
+
+                            <li>$ln(x)$ is undefined</li>
+
+                            <li>${{\log }_{b}}(x)$ is undefined</li>
+
+                            <li>WHY?</li>
+                        </ul>
+                    </li>
+
+                    <li>When x=1
+                        <ul>
+
+                            <li>$ln(x)=0$</li>
+
+                            <li>${{\log }_{b}}(x)=0$</li>
+
+                            <li>WHY?</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Logarithm and Exponential Forms</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Rewrite ${5^3} = 125$ in logarithm notation</p>
+                        <p class="m1830-answer">${\log _5}125 = 3$</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Rewrite ${\log _2}32 = 5$ in exponential notation</p>
+
+                        <p class="m1830-answer">${2^5} = 32$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Rewrite $\log 10000 = 4$ in exponential notation</p>
+
+                        <p class="m1830-answer">${10^4} = 10,000$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Rewrite $\ln 148.413159 \approx 5$ in exponential notation</p>
+
+                        <p class="m1830-answer">${e^5} = 148.413159$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Rewrite ${e^2} \approx 7.389$ in logarithm notation</p>
+
+                        <p class="m1830-answer">$\ln (7.389) = 2$</p>
+
+                        <p><strong>Review:</strong> Solve the variable to 2 decimal places</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $A = 4000{e^{0.06\left( 8 \right)}}$</p>
+
+                        <p class="m1830-answer">$A = 6464.30$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $34000 = P{e^{0.076\left( 5 \right)}}$</p>
+
+                        <p class="m1830-solution">$\frac{{3400}}{{{e^{0.076(5)}}}} = P$</p>
+                        <p class="m1830-answer">$P = 23,251.29$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $9500 = 1200{e^{0.041t}}$</p>
+
+                        <p class="m1830-solution">$\frac{{9500}}{{1200}} = {e^{0.041t}}$</p>
+                        <p class="m1830-solution">$\frac{{95}}{{12}} = {e^{0.041t}}$</p>
+                        <p class="m1830-solution">$\ln \frac{{95}}{{12}} = \ln {e^{0.041t}}$</p>
+                        <p class="m1830-solution">$\ln \frac{{95}}{{12}} = 0.041t$</p>
+                        <p class="m1830-solution">$\left( {\ln \frac{{95}}{{12}}} \right)/0.041 = t$</p>
+                        <p class="m1830-answer">$50.46 = t$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $4930 = 2250{e^{2.65r}}$</p>
+
+                        <p class="m1830-solution">$\frac{{4930}}{{2250}} = {e^{2.65r}}$</p>
+                        <p class="m1830-solution">$\frac{{493}}{{225}} = {e^{2.65r}}$</p>
+                        <p class="m1830-solution">$\ln \frac{{493}}{{225}} = \ln {e^{2.65r}}$</p>
+                        <p class="m1830-solution">$\ln \frac{{493}}{{225}} = 2.65r$</p>
+                        <p class="m1830-solution">$\left( {\ln \frac{{493}}{{225}}} \right)/2.65 = r$</p>
+                        <p class="m1830-answer">$.30 = r$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $3 = \;{e^{0.07t}}$</p>
+
+                        <p class="m1830-solution">$\ln 3 = \ln {e^{0.07t}}$</p>
+                        <p class="m1830-solution">$\ln 3 = 0.07t$</p>
+                        <p class="m1830-solution">$\frac{{\ln 3}}{{0.07}} = t$</p>
+                        <p class="m1830-answer">$15.69 = t$</p>
+
+                        <p><strong>Review:</strong> Solve for the variable without using a calculator. </p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \;\ln {e^5}$</p>
+
+                        <p class="m1830-answer">$y = 5$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            ${\log _5}x = \; - 3$</p>
+
+                        <p class="m1830-solution">${5^{ - 3}} = x$</p>
+                        <p class="m1830-solution">$\frac{1}{{{5^3}}} = x$</p>
+                        <p class="m1830-answer">$\frac{1}{{125}} = x$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\log_b5=\frac13$</p>
+
+                        <p class="m1830-solution">$b^\frac13=5$</p>
+                        <p class="m1830-solution">$\left(b^\frac13\right)^3=5^3$</p>
+                        <p class="m1830-answer">$b = 125$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $s = \;{\rm{ln}}\left( e \right)$
+                            <p>
+
+                                <p class="m1830-answer">$s = 1$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y = \;\ln \left( {\ln e} \right)$</p>
+
+                        <p class="m1830-solution">$y = \ln (1)$</p>
+                        <p class="m1830-answer">$y = 0$</p>
+
+                        <p><strong>Use the Properties of Logarithms to Completely Expand the Term</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x) = \ln \left( {x{y^2}} \right)$</p>
+
+                        <p class="m1830-solution">$f(x) = \ln x + \ln {y^2}$</p>
+                        <p class="m1830-answer">$f(x) = \ln x + 2\ln y$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $g(x) = {\log _5}\left( {\frac{{25{x^3}}}{{4{y^7}}}} \right)$</p>
+
+                        <p class="m1830-solution">$g(x) = {\log _5}(25{x^3}) - {\log _5}(4{y^7})$</p>
+                        <p class="m1830-solution">$g(x)= {\log _5}25 + {\log _5}{x^3} - {\log _5}4 - {\log _5}{y^7}$</p>
+                        <p class="m1830-answer">$g(x)= 2 + 3{\log _5}x - {\log _5}4 - 7{\log _5}y$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $h(x) = 5 + 7\ln \left( {\frac{2}{x}} \right)$</p>
+
+                        <p class="m1830-solution">$h(x) = 5 + 7(\ln 2 - \ln x)$</p>
+                        <p class="m1830-answer">$h(x)= 5 + 7\ln 2 - 7\ln x$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f(x) = x - \ln \left( {ex} \right)$</p>
+
+                        <p class="m1830-solution">$f(x) = x - (\ln e + \ln x)$</p>
+                        <p class="m1830-solution">$f(x)= x - \ln e - \ln x$</p>
+                        <p class="m1830-answer">$f(x)= x - 1 - \ln x$</p>
+
+
+
+                        <p><strong>Solve for x.  Check for Extraneous Solutions.</strong> </p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            ${\log _2}\left( { - 8 + 4x} \right) = 4$</p>
+
+                        <p class="m1830-solution">${2^4} = - 8 + 4x$</p>
+                        <p class="m1830-solution">$16 = - 8 + 4x$</p>
+                        <p class="m1830-solution">$24 = 4x$</p>
+                        <p class="m1830-answer">$6 = x$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\log \left( {{x^2} + 75} \right) = 2$</p>
+
+                        <p class="m1830-solution">${10^2} = {x^2} + 75$</p>
+                        <p class="m1830-solution">$100 = {x^2} + 75$</p>
+                        <p class="m1830-solution">$25 = {x^2}$</p>
+                        <p class="m1830-answer">$\pm 5=x$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\ln \left( {{x^2} - 35} \right) = \ln \left( {2x} \right)$</p>
+
+                        <p class="m1830-solution">${x^2} - 35 = 2x$</p>
+                        <p class="m1830-solution">${x^2} - 2x - 35 = 0$</p>
+                        <p class="m1830-solution">$(x - 7)(x + 5) = 0$</p>
+                        <p class="m1830-solution">$x = 7\quad \quad x = - 5$ extraneous root</p>
+                        <p class="m1830-answer">${\rm{x = 7}}$ is the only solution</p>
+
+                    </li>
+                </ol>
+            </div>
+
+            <div id="u2s1" class="section">
+                <h3 id="2-1-exponential-and-logarithmic-function-applications">2.1 Exponential and Logarithmic Function Applications</h3>
+
+                <h4>Introduction</h4>
+                <p>Exponential functions occur frequently in science and business but are commonly used in compound interest applications.</p>
+                <ul>
+
+                    <li>The value of a $1000 investment returning 8% interest compounded monthly after 12 years would be calculated using the formula , where A is the final amount in the account, P is the principal, r is the interest rate, n is the number
+                        of compounding periods per year, and t is the number of years.</li>
+
+                    <li>The compounding frequency has a significant impact on the final amount of money (either saved or owed).
+                        <img src="images/notes/u2s1p1i.png" alt="Graph of Amount of Money in an account when compounded at various compounding frequencies.  4 graphs--one each for compounding yearly, quarterly, monthly, and continuously"></li>
+                </ul>
+                <p>Our focus will be on continuous compounding: </p>
+                <ul>
+
+                    <li>What is e?</li>
+
+                    <li>Irrational number (similar to $\pi $ )</li>
+
+                    <li>2.718281828459…..</li>
+
+                    <li>Like $\pi $, e occurs frequently in natural phenomena
+                        <ul>
+
+                            <li>Growth of bacterial cultures</li>
+
+                            <li>Decay of a radioactive substance</li>
+                        </ul>
+                    </li>
+
+                    <li>Formal definition of e: $$e=~\underset{n\to \infty }{\mathop{\lim }}\,{{\left( 1+\frac{1}{n} \right)}^{n}}$$ $$\approx ~~2.718281829$$</li>
+                </ul>
+                <hr>
+
+                <div class="pagebreak"></div>
+
+
+
+
+                <h4>Notes</h4>
+                <p>Continuous Compounding Formula (appreciation and depreciation): $$A = P{e^{rt}}$$ </p>
+                <p><strong>CONTINUOUS COMPOUND INTEREST:</strong> Round all answers to two decimal places.</p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Hometown Bank offers a CD that earns 1.58% compounded continuously. If \$10,000 is invested in this CD, how much will it be worth in 3 years?</p>
+
+                        <p class="m1830-solution">$A = 10,000{e^{.0158(3)}}$</p>
+                        <p class="m1830-solution">$A = \$ 10,485.41$</p>
+                        <p class="m1830-answer">The account will be worth approximately \$$10,485.41$ in three years.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Hometown Bank offers a CD that earns 1.58% compounded continuously. If \$10,000 is invested in this CD, how long will it take the account to be worth $11,000?</p>
+
+                        <p class="m1830-solution">$11,000 = 10,000{e^{.0158t}}$</p>
+                        <p class="m1830-solution">$\frac{{11,000}}{{10,000}} = \frac{{10,000{e^{.0158t}}}}{{10,000}}$</p>
+                        <p class="m1830-solution">$\frac{{11}}{{10}} = {e^{.0158t}}$</p>
+                        <p class="m1830-solution">$\ln \frac{{11}}{{10}} = \ln {e^{.0158t}}$</p>
+                        <p class="m1830-solution">$\ln = \frac{{11}}{{10}} = .0158t$</p>
+                        <p class="m1830-solution">$\frac{{\ln \frac{{11}}{{10}}}}{{.0158}} = \frac{{.0158t}}{{.0158}}$</p>
+                        <p class="m1830-solution">$6.03 = t$</p>
+                        <p class="m1830-answer">It will take 6.03 years for the account to be worth \$ 11,000.</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Doubling Time: How long will it take money to double, if it is invested at 5% compounded continuously?</p>
+
+                        <p class="m1830-solution">$A = P{e^{rt}}$</p>
+                        <p class="m1830-solution">$2 = 1{e^{.05t}}$</p>
+                        <p class="m1830-solution">$2 = {e^{0.05t}}$</p>
+                        <p class="m1830-solution">$\ln 2 = \ln {e^{0.05t}}$</p>
+                        <p class="m1830-solution">$\ln 2 = 0.05t$</p>
+                        <p class="m1830-solution">$\frac{{\ln 2}}{{0.05}} = t$</p>
+                        <p class="m1830-solution">$t = 13.86$</p>
+                        <p class="m1830-answer">It will take approximately 13.86 years for the initial investment to double.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Doubling Rate: At what nominal rate compounded continuously must money be invested to double in 8 years?</p>
+
+                        <p class="m1830-solution">$A = P{e^{rt}}$</p>
+                        <p class="m1830-solution">$2 = 1{e^{r(8)}}$</p>
+                        <p class="m1830-solution">$2 = {e^{8r}}$</p>
+                        <p class="m1830-solution">$\ln 2 = \ln {e^{8r}}$</p>
+                        <p class="m1830-solution">$\ln 2 = 8r$</p>
+                        <p class="m1830-solution">$\frac{{\ln 2}}{8} = r$</p>
+                        <p class="m1830-solution">$.0866 = r$</p>
+                        <p class="m1830-answer">In order for the initial investment to double in 8 years, the money must be invested in an account with a nominal rate of 8.7% compounded continuously.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            How long will it take money to triple, if it is invested at 10.5% compounded continuously?</p>
+
+                        <p class="m1830-solution">$A = P{e^{rt}}$</p>
+                        <p class="m1830-solution">$3 = 1{e^{.105t}}$</p>
+                        <p class="m1830-solution">$\ln 3 = \ln {e^{.105t}}$</p>
+                        <p class="m1830-solution">$\ln 3 = .105t$</p>
+                        <p class="m1830-solution">$\frac{{\ln 3}}{{.105}} = t$</p>
+                        <p class="m1830-solution">$10.46=t$</p>
+                        <p class="m1830-answer">It will take approximately 10.46 years for the initial investment to triple.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Radioactive Decay: A mathematical model for the decay of radioactive substances is given by $$Q = {Q_0}\;{e^{rt}}.$$ The continuous compound rate of decay of carbon-14 per year is r = -0.0001238. How long will it take a certain amount of carbon-14 to
+                            decay to half the original amount?</p>
+
+                        <p class="m1830-solution">$\frac{1}{2} = 1{e^{ - 0.0001238t}}$</p>
+                        <p class="m1830-solution">$\ln .5 = \ln {e^{ - 0.0001238t}}$</p>
+                        <p class="m1830-solution">$\ln .5 = - 0.0001238t$</p>
+                        <p class="m1830-solution">$\frac{{\ln .5}}{{ - 0.000128}} = t$</p>
+                        <p class="m1830-solution">$t = 5598.93$</p>
+                        <p class="m1830-answer">It will take approximately $5598.93$ years for the carbon-14 to decay to half the original amount.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            The estimated resale value R (in dollars) of a company car after t years is given by: $$R(t) = 20000{(0.86)^t}.$$ What will be the resale value of the car after 2 years? How long will it take the car to depreciate to half the original value?</p>
+
+                        <p class="m1830-solution">$R(2) = 20,000{(0.86)^2} = \$ 14,792$</p>
+
+
+                        <p class="m1830-solution">$\frac{{10,000}}{{20,000}} = \frac{{20,000{{(0.86)}^t}}}{{20,000}}$</p>
+                        <p class="m1830-solution">$.5 = {0.86^t}$</p>
+                        <p class="m1830-solution">$\ln .5 = \ln {0.86^t}$</p>
+                        <p class="m1830-solution">$\ln .5 = t\ln 0.86$</p>
+                        <p class="m1830-solution">$\frac{{\ln .5}}{{\ln 0.86}} = \frac{{t\ln 0.86}}{{\ln 0.86}}$</p>
+                        <p class="m1830-solution">$\frac{{\ln .5}}{{\ln 0.86}} = t$</p>
+                        <p class="m1830-solution">$t = 4.5957$</p>
+                        <p class="m1830-answer">It will take approximately 4.6 years for the car to depreciate to half its original value.</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+            <div id="u2s2" class="section">
+
+                <h3>2.2 Derivatives of Exponential and Logarithmic Functions</h3>
+
+                <h4>Introduction</h4>
+                <p><img src="images/notes/u2s2p1i.png" alt="graph of e raised to the x power. x-axis:  0 to 3.5 and y-axis:  0.5 to 20"></p>
+                <table>
+                    <tr>
+                        <th>x</th>
+                        <th>f(x)=e^x</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2.7183</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>7.3891</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>20.086</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>54.598</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>148.41</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>403.43</td>
+                    </tr>
+                </table>
+
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Calculate the slope of the secant line for each of the following intervals for the function $f(x) = {e^x}$.</p>
+                        <ol>
+
+                            <li>[1, 3]
+                                <p class="m1830-solution">$\frac{{{e^{3}} - {e^1}}}{{3 - 1}} =$
+                                    <span class="m1830-answer">$8.68$</span></p>
+                            </li>
+
+                            <li>[1, 2]
+                                <p class="m1830-solution">$\frac{{{e^{2}} - {e^1}}}{{2 - 1}} =$
+                                    <span class="m1830-answer">$ 4.67$</span></p>
+                            </li>
+
+                            <li>[1, 1.5]
+                                <p class="m1830-solution">$\frac{{{e^{1.5}} - {e^1}}}{{1.5 - 1}} = $
+                                    <span class="m1830-answer">$3.53$</span></p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            What does the slope of the secant line represent?</p>
+
+                        <p class="m1830-answer">The slope of the secant line represents the average rate of change.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Draw a tangent line at the point on the graph corresponding to x = 1 and calculate the slope.</p>
+
+                        <p class="m1830-solution">(1, 1.00001)</p>
+                        <p class="m1830-solution">$\frac{{{e^{1.00001}} - {e^1}}}{{1.00001 - 1}} =$
+                            <span class="m1830-answer">$ 2.7182$</span></p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            What does the slope of the tangent line represent?</p>
+
+                        <p class="m1830-answer">The slope of the tangent line represents instantaneous rate of change.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Compare the values of $f(1)$and$f&#39;(1)$. What do you notice?</p>
+
+                        <p class="m1830-solution">$f(1) = {e^1} = 2.71828$</p>
+                        <p class="m1830-solution">$f&#39;(1) = 2.71828$</p>
+                        <p class="m1830-solution">$f(x) = {e^x}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = {e^x}$</p>
+                        <p class="m1830-answer">The function and the derivative are the same.</p>
+
+                        <div class="pagebreak"></div>
+
+                        <p><strong>Derivative of$\;f\left( x \right) = lnx$</strong> </p>
+                        <p><strong>Definition of the derivative:  $\underset{h\rightarrow0}{lim}\frac{f(x+h)-f(x)}h$</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Try to find the derivative of $f\left( x \right) = lnx$ using the definition of the derivative.</p>
+
+                        <p class="m1830-answer">$\underset{h\rightarrow0}{lim}\frac{ln(x+h)-ln(x)}h$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Complete the table below to try to find the derivative of $f\left( x \right) = lnx$.</p>
+                        <p>(Use your calculator and let h=0.00001 to represent h→0)</p>
+
+                        <table>
+                            <tr>
+                                <th>$$x$$</th>
+                                <th>$$\frac{\ln \left( x+h \right)-lnx}{h}$$</th>
+
+                                <th>$$\underset{h\to 0}{\mathop{\lim }}\,\frac{\ln \left( x+h \right)-lnx}{h}$$</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>$$\frac{\ln \left( 1+0.00001 \right)-ln1}{0.00001}$$</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td></td>
+                                <td>
+                                    <p class="m1830-answer">.5</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td></td>
+                                <td>
+                                    <p class="m1830-answer">.33</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td></td>
+                                <td>
+                                    <p class="m1830-answer">.25</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td></td>
+                                <td>
+                                    <p class="m1830-answer">.2</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Based on your results what do you think the rule for the derivative of $f\left( x \right) = lnx$ is?</p>
+
+                        <p class="m1830-solution">$f(x) = \ln x$</p>
+                        <p class="m1830-answer">$f&#39;(x) = \frac{1}{x}$</p>
+
+                        <hr>
+
+
+                        <h4>Notes</h4>
+                        <p><strong>Derivatives</strong></p>
+                    </li>
+                </ol>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f(x) = 3{x^3} + 4{x^2} - 5x + 8$</p>
+
+                        <p class="m1830-answer">$f&#39;(x) = 9{x^2} + 8x - 5$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;4\ln x\; - {x^3}\;\; + 2x$</p>
+
+                        <p class="m1830-answer">$f&#39;(x) = \frac{4}{x} - 3{x^2} + 2$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;\ln x + 5{e^x}\; - 7{x^2}$</p>
+
+                        <p class="m1830-answer">$f&#39;(x) = \frac{1}{x} + 5{e^x} - 14x$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;\ln {x^8}\; - 4\ln x\;$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = \frac{8}{x} - \frac{4}{x}$</p>
+                        <p class="m1830-answer">$f&#39;(x) = \frac{4}{x}$</p>
+
+                        <p><strong>Properties of Logarithms:</strong> </p>
+                        <p><strong>Use appropriate properties of logarithms to expand $f\left( x \right)$ and then find $f&#39;(x)$.</strong> </p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = 9 + 5\;\ln \frac{1}{x}$</p>
+
+                        <p class="m1830-solution">$9 + 5(\ln 1 - \ln x)$</p>
+                        <p class="m1830-solution">$9 + 5\ln 1 - 5\ln x$</p>
+                        <p class="m1830-solution">$f&#39;(x) = 0 + 0 - \frac{5}{x}$</p>
+                        <p class="m1830-answer">$f&#39;(x) = - \frac{5}{x}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = x - 2\;\ln 5x$</p>
+
+                        <p class="m1830-solution">$f(x) = x - 2(\ln 5 + \ln x)$</p>
+                        <p class="m1830-solution">$f(x) = x - 2\ln 5 - 2\ln x$</p>
+                        <p class="m1830-solution">$f&#39;(x) = 1 - 0 - \frac{2}{x}$</p>
+                        <p class="m1830-answer">$f&#39;(x) = 1 - \frac{2}{x}$</p>
+
+                        <p><strong>Tangent Lines:</strong> </p>
+                        <p><strong>Find the equation of the line tangent to the graph of $f$ at the indicated value of x.</strong></p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = {e^x}\; + 2$ at $x = 0$</p>
+
+                        <p class="m1830-solution">Point $\quad f(0) = {e^0} + 2 = 1 + 2 = 3$</p>
+                        <p class="m1830-answer m1830-step">$(0,3)$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = {e^x}$</p>
+                        <p class="m1830-solution">Slope $\quad {m_{tan}}=f&#39;(0) = {e^0} = 1$</p>
+                        <p class="m1830-answer m1830-step">${m_{tan}}=1$</p>
+
+
+
+                        <p class="m1830-solution">$y - 3 = 1(x - 0)$</p>
+                        <p class="m1830-solution">$y - 3 = 1x - 0$</p>
+                        <p class="m1830-solution">$y = 1x + 3$</p>
+                        <p class="m1830-answer">$y = x + 3$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = 1\; + \ln {x^6}$ at $x = e$</p>
+
+                        <p class="m1830-solution">Point $\quad f(e) = 1 + 6\ln e = = 1 + 6(1) = 7$</p>
+                        <p class="m1830-answer m1830-step">$(e,7)$</p>
+
+                        <p class="m1830-solution">$f(x) = 1 + 6\ln x$</p>
+                        <p class="m1830-solution">$f&#39;(x) = 0 + \frac{6}{x}$</p>
+                        <p class="m1830-solution">Slope $\quad {m_{tan}}=f&#39;(e) = \frac{6}{e}$</p>
+                        <p class="m1830-answer m1830-step">${m_{tan}}= \frac{6}{e}$</p>
+
+
+                        <p class="m1830-solution">$y - 7 = \frac{6}{e}(x - e)$</p>
+                        <p class="m1830-solution">$y - 7 = \frac{6}{e}x - 6$</p>
+                        <p class="m1830-answer">$y = \frac{6}{e}x + 1$</p>
+
+
+
+                        <p><strong>Applications:</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            The estimated resale value R (in dollars) of a company car after t years is given by $$R\left( t \right) = 24000{\left( {0.84} \right)^t}$$ What is the instantaneous rate of depreciation (in dollars per year) after: 1 year? 2 years? 3 years?</p>
+
+                        <p class="m1830-solution">$R&#39;(t) = 24,000{\left( {.84} \right)^t}\;(\ln .84)$</p>
+
+
+                        <p class="m1830-solution">$R&#39;(1) = 24,000{\left( {.84} \right)^1}\;(\ln .84) = - \$3514.96/yr$</p>
+                        <p class="m1830-answer">The instantaneous rate of depreciation after 1 year is \$3514.96 per year.</p>
+                        <p class="m1830-solution">$R&#39;(2) = 24,000{\left( {.84} \right)^2}(\ln .84) = - \$2952.57/yr$</p>
+                        <p class="m1830-answer">The instantaneous rate of depreciation after 2 years is \$2952.57 per year.</p>
+                        <p class="m1830-solution">$R&#39;(3) = 24,000{\left( {.84} \right)^3}(\ln .84) = - \$2480.16/yr$</p>
+                        <p class="m1830-answer">The instantaneous rate of depreciation after 3 years is \$2480.16 per year.</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+
+
+            <div id="u2s3" class="section">
+
+                <h3>2.3 Derivatives of Products and Quotients</h3>
+
+                <h4>Introduction</h4>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            The manager of a miniature golf course is planning to raise the ticket price per game. At the current price of \$6.50, an average of 81 rounds is played each day. The manager’s research suggests that for every \$0.50 increase in price, an average of four
+                            fewer games will be played each day. Based on this information, find the function the represents revenue from rounds of mini golf, where n represents the number of \$0.50 increases in price.</p>
+
+                        <p class="m1830-solution">$R(n) =$ (price)(number sold)</p>
+                        <p class="m1830-answer">$R(n) = (6.50 + .50n)(81 - 4n)$</p>
+
+                        <ol>
+
+                            <li>What must you do with this revenue function in order to find the rate of change?
+                                <p class="m1830-answer">Multiply it out and use the power rule to find the derivative.</p>
+                            </li>
+
+                            <li>Find the rate of change for this revenue function when the manager increases the price of a round of mini golf by \$1.50.
+                                <p class="m1830-solution">$R(n) = 526.50 + 14.5n - 2{n^2}$</p>
+                                <p class="m1830-solution">$R&#39;(n) = 14.5 - 4n$</p>
+                                <p class="m1830-solution">If the price is increased by \$$1.5$, then $n=3$.</p>
+                                <p class="m1830-solution">$R&#39;(3) = 2.5$</p>
+                                <p class="m1830-answer">When the manager increases the price per ticket by \$$1.50$, the number of rounds played each day decreases but the actual revenue increases by \$$2.50$ per day. This provides the owner with an increase in revenue even
+                                    though there is a decrease in the number of rounds played each day.</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find the rate of change for the function $y = ({x^2} + 1)({x^2} - 2x + 1)$</p>
+
+                        <p class="m1830-answer">This problem can be worked the same way but it is much harder to multiply out. We need an easier way to find the derivative when we have polynomial terms multiplied together.</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            The cost of manufacturing x MP3 players per day is represented by the function $$C(x) = 0.01{x^2} + 42x + 300\quad 0 \le x \le 300.$$</p>
+                        <ol>
+
+                            <li>Determine the average cost function.
+                                <p class="m1830-answer">$\bar C(x) = \frac{{0.01{x^2} + 42x + 300}}{x}$</p>
+                            </li>
+
+                            <li>Determine the marginal average cost function. What did you have to do to the average cost function in order to find the marginal average cost function?
+                                <p class="m1830-solution">Must rewrite the function to use the power rule.</p>
+                                <p class="m1830-solution">$\bar C(x) = 0.01x + 42 + \frac{{300}}{x}$</p>
+                                <p class="m1830-solution">$\bar C(x) = 0.01x + 42 + 300{x^{ - 1}}$</p>
+                                <p class="m1830-solution">$\bar C&#39;(x) = 0.01 - 300{x^{ - 2}}$</p>
+                                <p class="m1830-answer">$\bar C&#39;(x) = 0.01 - \frac{{300}}{{{x^2}}}$</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Suppose the function $V(t) = \frac{{50,000 + 6t}}{{1 + 0.4t}}$ represents the value, in dollars, of a new car t years after it is purchased. Determine the rate of change in the value of the car.</p>
+
+                        <p class="m1830-answer">Cannot rewrite to use the power rule as we did for #6. We need another new rule.</p>
+
+                        <hr>
+                    </li>
+                </ol>
+
+
+                <h4>Notes</h4>
+                <p><strong>Derivatives of Products and Quotients</strong></p>
+                <p><strong>Rewriting a Function as a Product or Quotient</strong></p>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Rewrite as a product: $f\left( x \right) = 5{e^x}\; + \;\;10{x^2}\;{e^x}\; + \;\;25{x^4}\;{e^x}$</p>
+
+                        <p class="m1830-answer">$f(x) = 5{e^x}(1 + 2x + 5{x^4})$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Rewrite as one quotient: $f\left( x \right) = 3{x^{ - 4}}\ln x$</p>
+
+                        <p class="m1830-answer">$f(x) = \frac{{3\ln x}}{{{x^4}}}$</p>
+
+                        <p><strong>The Product Rule</strong></p>
+                        <p>If $y=F\cdot S$, then $y&#39; = F&#39;\cdot S\; + \;\;F\cdot S&#39;$</p>
+                        <p><strong>The Quotient Rule</strong>
+                            <p>If $y = \;\frac{N}{D}$ , then $y&#39; = \;\frac{{N&#39;\;D\; - \;N\;D&#39;\;}}{{{D^2}}}$
+                                <p></p>
+                                <p><strong>Two Methods for Finding the Derivative:</strong></p>
+                                <p>Find the derivative two different ways.</p>
+                                <ol>
+
+                                    <li>Simplify first and use the power rule.</li>
+
+                                    <li>Use the product or quotient rule.</li>
+                                </ol>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $m\left( x \right) = 2{x^3}\;\left( {{x^5} - 2} \right)$</p>
+                        <ol>
+
+                            <li>
+                                <p class="m1830-solution">Simplifying and Using Power Rule</p>
+                                <p class="m1830-solution">$m(x) = 2{x^8} - 4{x^3}$</p>
+                                <p class="m1830-answer">${m&#39;}(x) = 16{x^7} - 12{x^2}$</p>
+                            </li>
+
+                            <li>
+                                <p class="m1830-solution">Using the Product Rule</p>
+
+                                <div class="w3-row">
+
+                                    <div class="w3-container w3-quarter">
+
+                                        <p class="m1830-solution">$f = 2{x^3}$</p>
+                                        <p class="m1830-solution">$f&#39; = 6{x^2}$</p>
+                                    </div>
+
+                                    <div class="w3-container w3-threequarter">
+
+                                        <p class="m1830-solution">$g = {x^5} - 2$</p>
+                                        <p class="m1830-solution">$g&#39; = 5{x^4}$</p>
+
+                                    </div>
+                                </div>
+
+
+                                <p class="m1830-solution">$m&#39;(x) = 6{x^2}({x^5} - 2) + 2{x^3}(5{x^4})$</p>
+                                <p class="m1830-solution">$m&#39;(x) = 6{x^7} - 12{x^2} + 10{x^7}$</p>
+                                <p class="m1830-answer">$m&#39;(x) = 16{x^7} - 12{x^2}$</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text"></p>
+                        <ol>
+
+                            <li>
+                                $r\left( x \right) = \;\frac{{{x^5}\; + 4}}{{{x^2}}}$
+
+                                <p class="m1830-solution">Simplifying and Using Power Rule</p>
+                                <p class="m1830-solution">$r(x) = \frac{{{x^5}}}{{{x^2}}} + \frac{4}{{{x^2}}}$</p>
+                                <p class="m1830-solution">$r(x) = {x^3} + 4{x^{ - 2}}$</p>
+                                <p class="m1830-solution">${r&#39;}(x) = 3{x^2} - 8{x^{ - 3}}$</p>
+                                <p class="m1830-answer">${r&#39;}(x) = 3{x^2} - \frac{8}{{{x^3}}}$</p>
+                            </li>
+
+                            <li>
+                                <p class="m1830-solution">Using Quotient Rule</p>
+
+                                <div class="w3-row">
+
+                                    <div class="w3-container w3-quarter">
+
+                                        <p class="m1830-solution">$f = {x^5} + 4$</p>
+                                        <p class="m1830-solution">$f&#39; = 5{x^4}$</p>
+                                    </div>
+
+                                    <div class="w3-container w3-threequarter">
+
+                                        <p class="m1830-solution">$g = {x^2}$</p>
+                                        <p class="m1830-solution m1830-step">$g&#39; = 2x$</p>
+                                    </div>
+                                </div>
+
+
+
+                                <p class="m1830-solution">$r&#39;(x) = \frac{{5{x^4}({^2}) - 2x({x^5} + 4)}}{{{x^4}}}$</p>
+                                <p class="m1830-solution">$r&#39;(x) = \frac{{5{x^6} - 2{x^6} - 8x}}{{{x^4}}}$</p>
+                                <p class="m1830-solution">$r&#39;(x) = \frac{{3{x^6} - 8x}}{{{x^4}}}$</p>
+                                <p class="m1830-solution">$r&#39;(x) = \frac{{x(3{x^5} - 8)}}{{{x^4}}}$</p>
+                                <p class="m1830-solution">$r&#39;(x) = \frac{{3{x^5} - 8}}{{{x^3}}}$</p>
+                                <p class="m1830-answer">$r&#39;(x) = 3{x^2} - \frac{8}{{{x^3}}}$</p>
+                                <p><strong>Product Rule:</strong> If $y=F\cdot S$, then $y&#39; = F&#39;\cdot S\; + \;\;F\cdot S&#39;$</p>
+                                <p><strong>Find $f&#39;(x)$ using the Product Rule.</strong> </p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $n(x)=7x^2\left(2x^3+5\right)$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = 7{x^2}$</p>
+                                <p class="m1830-solution">$f&#39; = 14x$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = 2{x^3} + 5$</p>
+                                <p class="m1830-solution">$g&#39; = 6{x^2}$</p>
+
+                            </div>
+                        </div>
+
+
+
+                        <p class="m1830-solution">$n&#39;(x) = 14x(2{x^3} + 5) + 7{x^2}(6{x^2})$</p>
+                        <p class="m1830-solution">$n&#39;(x) = 28{x^4} + 70x + 42{x^4}$</p>
+                        <p class="m1830-answer">$n&#39;(x) = 70{x^4} + 70x$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $h\left( x \right) = 4{x^3}\;{e^x}$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = 4{x^3}$</p>
+                                <p class="m1830-solution">$f&#39; = 12{x^2}$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = {e^x}$</p>
+                                <p class="m1830-solution">$g&#39; = {e^x}$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <p class="m1830-solution">$h&#39;(x) = 12{x^2}({e^x}) + 4{x^3}({e^x})$</p>
+                        <p class="m1830-solution">$h&#39;(x) = {e^x}(12{x^2} + 4{x^3})$</p>
+                        <p class="m1830-answer">$h&#39;(x) = 4{x^2}{e^x}(3 + x)$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $s\left( x \right) = 2{x^5}\ln x$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = 2{x^5}$</p>
+                                <p class="m1830-solution">$f&#39; = 10{x^4}$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$ g = \ln x$</p>
+                                <p class="m1830-solution">$g&#39; = \frac{1}{x}$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                        <p class="m1830-solution">$s&#39;(x) = 10{x^4}\ln x + 2{x^5}\left( {\frac{1}{x}} \right)$</p>
+                        <p class="m1830-solution">$s&#39;(x) = 10{x^4}\ln x + 2{x^4}$</p>
+                        <p class="m1830-answer">$s&#39;(x) = 2{x^4}(5\ln x + 1)$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $v\left( x \right) = \left( {8x + 1} \right)\left( {3{x^2}\; - 7} \right)$</p>
+
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = 8x + 1$</p>
+                                <p class="m1830-solution">$f&#39; = 8$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$ g = 3{x^2} - 7$</p>
+                                <p class="m1830-solution">$g&#39; = 6x$</p>
+
+                            </div>
+                        </div>
+
+
+
+                        <p class="m1830-solution">$v&#39;(x) = 8(3{x^2} - 7) + 6x(8x + 1)$</p>
+                        <p class="m1830-solution">$v&#39;(x) = 24{x^2} - 56 + 48{x^2} + 6x$</p>
+                        <p class="m1830-answer">$v&#39;(x) = 72{x^2} + 6x - 56$</p>
+
+
+
+                        <p><strong>Quotient Rule:</strong> If $y = \;\frac{N}{D}$ , then $y&#39; = \;\frac{{N&#39;\;D\; - \;N\;D&#39;\;}}{{{D^2}}}$</p>
+                        <p><strong>Find $f&#39;(x)$ using the Quotient Rule.</strong></p>
+
+
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $b\left( x \right) = \;\frac{{4x}}{{3x + 8}}$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = 4x$</p>
+                                <p class="m1830-solution">$f&#39; = 4$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$ g = 3x+8$</p>
+                                <p class="m1830-solution">$g&#39; = 3$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <p class="m1830-solution">$b&#39;(x) = \frac{{4(3x + 8) - 3(4x)}}{{{{\left( {3x + 8} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$b&#39;(x) = \frac{{12x + 32 - 12x}}{{{{\left( {3x + 8} \right)}^2}}}$</p>
+                        <p class="m1830-answer">$b&#39;(x) = \frac{{32}}{{{{\left( {3x + 8} \right)}^2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $c\left( x \right) = \;\frac{{{x^2}\; - 9}}{{{x^2}\; + 1}}$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = {x^2} - 9$</p>
+                                <p class="m1830-solution">$f&#39; = 2x$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = {x^2} + 1$</p>
+                                <p class="m1830-solution">$g&#39; = 2x$</p>
+
+                            </div>
+                        </div>
+
+
+
+                        <p class="m1830-solution">$c&#39;(x) = \frac{{2x({x^2} + 1) - 2x({x^2} - 9)}}{{{{\left( {{x^2} + 1} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$c&#39;(x) = \frac{{2{x^3} + 2x - 2{x^3} + 18x}}{{{{\left( {{x^2} + 1} \right)}^2}}}$</p>
+                        <p class="m1830-answer">$c&#39;(x) = \frac{{20x}}{{{{\left( {{x^2} + 1} \right)}^2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $h\left( x \right) = \;\frac{{1 + {e^x}}}{{1 - {e^x}}}$</p>
+
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = 1 + {e^x}$</p>
+                                <p class="m1830-solution">$f&#39; = {e^x}$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = 1 - {e^x}$</p>
+                                <p class="m1830-solution">$g&#39; = - {e^x}$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <p class="m1830-solution">$h&#39;(x) = \frac{{{e^x}(1 - {e^x}) - \left( { - {e^x}} \right)(1 + {e^x})}}{{{{\left( {1 - {e^x}} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$h&#39;(x) = \frac{{{e^x}(1 - {e^x}) + {e^x}(1 + {e^x})}}{{{{\left( {1 - {e^x}} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$h&#39;(x) = \frac{{{e^x} - {e^{2x}} + {e^x} + {e^{2x}}}}{{{{\left( {1 - {e^x}} \right)}^2}}}$</p>
+                        <p class="m1830-answer">$h&#39;(x) = \frac{{2{e^x}}}{{{{\left( {1 - {e^x}} \right)}^2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $j\left( x \right) = \;\frac{{3x}}{{4 + \ln x}}$</p>
+
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f =3x$</p>
+                                <p class="m1830-solution">$f&#39; = 3$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = 4 + \ln x$</p>
+                                <p class="m1830-solution">$g&#39; =\frac{1}{x}$</p>
+
+                            </div>
+                        </div>
+
+
+
+                        <p class="m1830-solution">$j&#39;(x) = \frac{{3(4 + \ln x) - \frac{1}{x}(3x)}}{{{{\left( {4 + \ln x} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$j&#39;(x) = \frac{{12 + 3\ln x - 3}}{{{{\left( {4 + \ln x} \right)}^2}}}$</p>
+                        <p class="m1830-answer">$j&#39;(x) = \frac{{9 + 3\ln x}}{{{{\left( {4 + \ln x} \right)}^2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find $\frac{{dy}}{{dw}}$ for $y = \;\frac{{2{w^4}\; - \;{w^3}}}{{6w - 1}}$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+                                <p class="m1830-solution">$f = 2{w^4} - {w^3}$</p>
+                                <p class="m1830-solution">$f&#39; = 8{w^3} - 3{w^2}$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = 6w - 1$</p>
+                                <p class="m1830-solution">$g&#39; =6$</p>
+
+                            </div>
+                        </div>
+
+
+
+                        <p class="m1830-solution">$\frac{{dy}}{{dw}} = \frac{{(8{w^3} - 3{w^2})(6w - 1) - 6(2{w^4} - {w^3})}}{{{{\left( {6w - 1} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$\frac{{dy}}{{dw}} = \frac{{48{w^4} - 8{w^3} - 18{w^3} + 3{w^2} - 12{w^4} + 6{w^3}}}{{{{\left( {6w - 1} \right)}^2}}}$</p>
+                        <p class="m1830-answer">$\frac{{dy}}{{dw}} = \frac{{36{w^4} - 20{w^3} + 3{w^2}}}{{{{\left( {6w - 1} \right)}^2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Explain how $f&#39;(x)$ can be found without using the quotient rule: $f\left( x \right) = \;\frac{3}{{{x^3}}}$</p>
+
+                        <p class="m1830-solution">$f(x) = 3{x^{ - 3}}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = - 9{x^{ - 4}}$</p>
+                        <p class="m1830-answer">$f&#39;(x) = \frac{{ - 9}}{{{x^4}}}$</p>
+
+
+
+                        <p><strong>Tangent Lines</strong> </p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $r\left( x \right) = \left( {5 - 4x} \right)\left( {1 + 3x} \right)$</p>
+                        <ol>
+
+                            <li>Find $r&#39;\left( x \right)$
+
+                                <div class="w3-row">
+
+                                    <div class="w3-container w3-quarter">
+
+                                        <p class="m1830-solution">$f = 5 - 4x$</p>
+                                        <p class="m1830-solution">$f&#39; = - 4$</p>
+                                    </div>
+
+                                    <div class="w3-container w3-threequarter">
+
+                                        <p class="m1830-solution">$g = 1 + 3x$</p>
+                                        <p class="m1830-solution">$g&#39; =3$</p>
+
+                                    </div>
+                                </div>
+
+
+                                <p class="m1830-solution">$r&#39;(x) = - 4(1 + 3x) + 3(5 - 4x)$</p>
+                                <p class="m1830-solution">$r&#39;(x) = - 4 - 12x + 15 - 12x$</p>
+                                <p class="m1830-answer">$r&#39;(x) = - 24x + 11$</p>
+
+                            </li>
+
+                            <li>Find the equation of the line tangent to the graph of $r$ at $x\; = \;2$.
+
+                                <p class="m1830-solution">Point $\quad r(2) = (5 - 4\cdot2)(1 + 3\cdot2) = ( - 3)(7) = -21$</p>
+                                <p class="m1830-answer m1830-step">$(2, - 21)$</p>
+
+                                <p class="m1830-solution">Slope $\quad {m_{tan}}= {r&#39;}(2) = - 24(2) + 11-48+11=$</p>
+                                <p class="m1830-answer m1830-step">${m_{tan}}=-37$</p>
+
+                                <p class="m1830-solution">$y + 21 = - 37(x - 2)$</p>
+                                <p class="m1830-solution">$y + 21 = - 37x + 74$</p>
+                                <p class="m1830-answer">$y = - 37x + 53$</p>
+                            </li>
+
+                            <li>Find the values of $x$ where $r’(x) = 0$
+                                <p class="m1830-solution">$ - 24x + 11 = 0$</p>
+                                <p class="m1830-solution">$ - 24x = - 11$</p>
+                                <p class="m1830-answer">$x = \frac{{11}}{{24}}$</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $h\left( x \right) = \;\frac{{3x - 7}}{{2x - 1}}$</p>
+                        <ol>
+
+                            <li>Find $h&#39;\left( x \right)$
+
+                                <div class="w3-row">
+
+                                    <div class="w3-container w3-quarter">
+
+                                        <p class="m1830-solution">$f = 3x - 7$</p>
+                                        <p class="m1830-solution">$f&#39; = 3$</p>
+                                    </div>
+
+                                    <div class="w3-container w3-threequarter">
+
+                                        <p class="m1830-solution">$g = 2x - 1$</p>
+                                        <p class="m1830-solution">$g&#39; =2$</p>
+
+                                    </div>
+                                </div>
+
+
+
+                                <p class="m1830-solution">$h&#39;(x) = \frac{{3(2x - 1) - 2(3x - 7)}}{{{{\left( {2x - 1} \right)}^2}}}$</p>
+                                <p class="m1830-solution">$h&#39;(x) = \frac{{6x - 3 - 6x + 14}}{{{{\left( {2x - 1} \right)}^2}}}$</p>
+                                <p class="m1830-answer">$h&#39;(x) = \frac{{11}}{{{{\left( {2x - 1} \right)}^2}}}$</p>
+
+                            </li>
+
+                            <li>Find the equation of the line tangent to the graph of $h$ at $x\; = \;2$.
+
+                                <p class="m1830-solution">Point $\quad h(2) = \frac{{3\cdot2 - 7}}{{2\cdot2 - 1}} = \frac{{ - 1}}{3}$</p>
+                                <p class="m1830-answer m1830-step">$(2, - \frac{1}{3})$</p>
+                                <p class="m1830-solution">Slope $\quad {m_{tan}} = f&#39;(2) = \frac{{11}}{{{{\left( {2\cdot2 - 1} \right)}^2}}} = \frac{{11}}{{{3^2}}} = \frac{{11}}{9}$</p>
+                                <p class="m1830-answer m1830-step">${m_{tan}} = \frac{{11}}{9}$</p>
+
+                                <p class="m1830-solution">$y + \frac{1}{3} = \frac{{11}}{9}(x - 2)$</p>
+                                <p class="m1830-solution">$y + \frac{1}{3} = \frac{{11}}{9}x - \frac{{22}}{9}$</p>
+                                <p class="m1830-answer">$y = \frac{{11}}{9}x - \frac{{25}}{9}$</p>
+                            </li>
+
+                            <li>Find the values of x where h’(x) = 0
+                                <p class="m1830-solution">$\frac{{11}}{{{{(2x - 1)}^2}}} = 0$</p>
+                                <p class="m1830-solution">$\frac{{11}}{{{{(2x - 1)}^2}}} = \frac{0}{1}$</p>
+                                <p class="m1830-solution">Cross Multiply</p>
+                                <p class="m1830-answer">$0 \ne 11$ There is no value of x where $f&#39;(x) =0$</p>
+                            </li>
+                        </ol>
+                        <p><strong>Derivatives with Radicals</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find y’ for $y = \;\frac{{6\sqrt[3]{x}}}{{2{x^2}\; - 5x + 1}}$</p>
+                        <p class="m1830-solution">$f(x)=\frac{{6{x^{1/3}}}}{{2{x^2} - 5x + 1}}$</p>
+
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+
+                                <p class="m1830-solution">$f = 6{x^{1/3}}$</p>
+                                <p class="m1830-solution">$f&#39; = \frac{1}{3}\cdot 6{x^{ - 2/3}}$</p>
+                                <p class="m1830-solution m1830-step">$f&#39; = 2{x^{ - 2/3}}$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = 2{x^2} - 5x + 1$</p>
+                                <p class="m1830-solution">$g&#39; =4x - 5$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                        <p class="m1830-solution">$y&#39; = \frac{{2{x^{ - 2/3}}(2{x^2} - 5x + 1) - (4x - 5)(6{x^{1/3}})}}{{{{\left( {2{x^2} - 5x + 1} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$y&#39; = \frac{{4{x^{4/3}} - 10{x^{1/3}} + 2{x^{ - 2/3}} - 24{x^{4/3}} + 30{x^{1/3}}}}{{{{\left( {2{x^2} - 5x + 1} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$y&#39; = \frac{{ - 20{x^{4/3}} + 20{x^{1/3}} + 2{x^{ - 2/3}}}}{{{{\left( {2{x^2} - 5x + 1} \right)}^2}}}$</p>
+                        <p class="m1830-solution">Multiply every term by ${{x}^{2/3}}$</p>
+                        <p class="m1830-answer">$y&#39; = \frac{{ - 20{x^2} + 20x + 2}}{{\sqrt[3]{{{x^2}}}{{(2{x^2} - 5x + 1)}^2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Find $\frac{{dy}}{{dx}}$ for $y = \;\frac{{\;2{x^2}\; - 2x + 3\;}}{{\sqrt[4]{x}}}$</p>
+
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+
+                                <p class="m1830-solution">$f = 2{x^2} - 2x + 3$</p>
+                                <p class="m1830-solution m1830-step">$f&#39; = 4x - 2$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = {x^{1/4}}$</p>
+                                <p class="m1830-solution">$g&#39; =\frac{1}{4}{x^{ - 3/4}}$</p>
+
+                            </div>
+                        </div>
+
+
+                        <p class="m1830-solution">$\frac{{dy}}{{dx}} = \frac{{(4x - 2)({x^{1/4}}) - \frac{1}{4}{x^{ - 3/4}}(2{x^2} - 2x + 3)}}{{{{\left( {{x^{1/4}}} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$\frac{{dy}}{{dx}} = \frac{{4{x^{5/4}} - 2{x^{1/4}} - \frac{1}{2}{x^{5/4}} + \frac{1}{2}{x^{1/4}} - \frac{3}{4}{x^{ - 3/4}}}}{{{x^{1/2}}}}$</p>
+                        <p class="m1830-solution">$\frac{{dy}}{{dx}} = \frac{{\left( {\frac{7}{2}{x^{5/4}} - \frac{3}{2}{x^{1/4}} - \frac{3}{4}{x^{ - 3/4}}} \right)\cdot 4}}{{({x^{1/2}})\cdot 4}}$</p>
+                        <p class="m1830-solution">$\frac{{dy}}{{dx}} = \frac{{14{x^{5/4}} - 6{x^{1/4}} - 3{x^{ - 3/4}}}}{{(4{x^{1/2}})}}$</p>
+                        <p class="m1830-solution">$\frac{dy}{dx}=\frac{14{{x}^{5/4}}-6{{x}^{1/4}}-\frac{3}{{{x}^{{}^{3}/{}_{4}}}}}{4{{x}^{1/2}}}$</p>
+                        <p class="m1830-solution">Multiply every term by ${{x}^{3/4}}$</p>
+                        <p class="m1830-solution">$\frac{dy}{dx}=\frac{14{{x}^{8/4}}-6{{x}^{4/4}}-3}{(4{{x}^{1/2}}){{x}^{3/4}}}$</p>
+                        <p class="m1830-answer">$\frac{dy}{dx}=\frac{14{{x}^{2}}-6x-3}{4{{x}^{5/4}}}$</p>
+
+                        <p><strong>Applications</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            A cable company has installed a new television system in a city. The total number N (in thousands) of subscribers t months after the installation of the system is given by $N\left( t \right) = \;\frac{{178t}}{{t + 5}}$</p>
+                        <ol>
+
+                            <li>Find $N&#39;(t)$
+
+                                <div class="w3-row">
+
+                                    <div class="w3-container w3-quarter">
+
+
+                                        <p class="m1830-solution">$f = 178t$</p>
+                                        <p class="m1830-solution m1830-step">$f&#39; = 178$</p>
+                                    </div>
+
+                                    <div class="w3-container w3-threequarter">
+
+                                        <p class="m1830-solution">$g =t + 548$</p>
+                                        <p class="m1830-solution">$g&#39; =1$</p>
+
+                                    </div>
+                                </div>
+
+
+                                <p class="m1830-solution">$N&#39;(t) = \frac{{178(t + 5) - 1(178t)}}{{{{\left( {t + 5} \right)}^2}}}$</p>
+                                <p class="m1830-solution">$N&#39;(t) = \frac{{178t + 890 - 178t}}{{{{\left( {t + 5} \right)}^2}}}$</p>
+                                <p class="m1830-answer">$N&#39;(t) = \frac{{890}}{{{{\left( {t + 5} \right)}^2}}}$</p>
+                            </li>
+
+                            <li>Find $N\left( {12} \right)$ and $N&#39;\left( {12} \right)$. Write a brief interpretation of these results.
+                                <p class="m1830-solution">$N(12) = \frac{{178(12)}}{{12 + 5}} = \frac{{2136}}{{17}} = 125.647$</p>
+                                <p class="m1830-solution">$N&#39;(12) = \frac{{890}}{{{{\left( {12 + 5} \right)}^2}}} = \frac{{890}}{{{{17}^2}}} = \frac{{890}}{{289}} = 3.0796$</p>
+                                <p class="m1830-answer">At 12 months the cable company has 125,647 subscribers and that number is increasing at a rate of 3080 subscribers per month.</p>
+                            </li>
+
+                            <li>Use the results above to estimate the total number of subscribers after 13 months,
+                                <p class="m1830-solution">125,647 + 3080 = 128,727</p>
+                                <p class="m1830-answer">There will be approximately 128,727 subscribers after 13 months.</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            According to economic theory, the supply x of a quantity in a free market increases as the price p increases. Suppose the number x of baseball gloves a retail chain is willing to sell per week at a price of \$p is given by $$x = \;\frac{{100p}}{{0.1p
+                            + 1}} \quad\ 30.00 \le p \le 190.00$$</p>
+                        <ol>
+
+                            <li>Find $\frac{{dx}}{{dp}}$
+
+
+                                <div class="w3-row">
+
+                                    <div class="w3-container w3-quarter">
+
+
+                                        <p class="m1830-solution">$f = 100p$</p>
+                                        <p class="m1830-solution m1830-step">$f&#39; = 100$</p>
+                                    </div>
+
+                                    <div class="w3-container w3-threequarter">
+
+                                        <p class="m1830-solution">$g =0.1p + 1$</p>
+                                        <p class="m1830-solution">$g&#39; =0.1$</p>
+
+                                    </div>
+                                </div>
+
+
+
+                                <p class="m1830-solution">$\frac{{dx}}{{dp}} = \frac{{100(0.1p + 1) - 0.1(100p)}}{{{{\left( {0.1p + 1} \right)}^2}}}$</p>
+                                <p class="m1830-solution">$\frac{{dx}}{{dp}} = \frac{{10p + 100 - 10p}}{{{{\left( {0.1p + 1} \right)}^2}}}$</p>
+                                <p class="m1830-answer">$\frac{{dx}}{{dp}} = \frac{{100}}{{{{\left( {0.1p + 1} \right)}^2}}}$</p>
+                            </li>
+
+                            <li>Find the supply and the instantaneous rate of change (IRC) of supply with respect to price when the price is \$40. Write a brief verbal interpretation of these results.
+                                <p class="m1830-solution">Supply when $p=\$40\quad\quad\quad x = \frac{{100(40)}}{{0.1(40) + 1}} = \frac{{4000}}{5} = 800\;gloves$</p>
+                                <p class="m1830-solution">IRC when $p=\$40\quad\quad\quad \frac{{dx}}{{dp}}=\frac{{100}}{{{{\left({0.1\cdot40+1}\right)}^2}}} = \frac{{100}}{{25}} = 4\;gloves$</p>
+                                <p class="m1830-answer">When the price of the baseball gloves is \$40, the retail chain can sell 800 gloves per week, and the number of gloves sold is increasing at a rate of 4 gloves per week.</p>
+                            </li>
+
+                            <li>Use the results above to estimate the supply if the price is increased to \$41.
+                                <p class="m1830-solution">800+4=804</p>
+                                <p class="m1830-answer">If the price increased to \$41, 804 gloves would be sold each week.</p>
+                            </li>
+
+                        </ol>
+                </ol>
+            </div>
+
+
+            <div id="u2s4" class="section">
+                <h3 id="2-4-the-chain-rule">2.4 The Chain Rule</h3>
+
+
+
+                <h4>Introduction</h4>
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            The gas tank of a parked pickup truck develops a leak. The amount of gas, in liters, remaining in the tank after t hours is represented by the function $V(t) = 90{\left( {1 - \frac{t}{{18}}} \right)^2}\quad 0 \le t \le 18$. How fast is the gas leaking
+                            from the tank after 12 hours?</p>
+
+                        <p class="m1830-solution">$f(x) = 90 - 10t + \frac{5}{{18}}{t^2}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = - 10 + \frac{5}{9}t$</p>
+                        <p class="m1830-solution">$f&#39;(12) = - 3.33$</p>
+                        <p class="m1830-answer">The gas is leaking from the tank at a rate of -3.33 liters per hour after 12 hours.</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            Andrew and David are both training to run a marathon. They both go on a run on Sunday mornings at precisely 7 A.M. Andrew’s house is 22 km south of David’s. One Sunday morning, Andrew leaves his house and runs west at 7 km/hr. The distance between the
+                            two runners can be modeled by the function $s(t) = \sqrt {130{t^2} - 396t + 484} $, where s is in kilometers and t is in hours. Determine the rate at which the distance between the two runners is changing.</p>
+
+                        <p class="m1830-solution">$f(x)={{\left( 130{{t}^{2}}-396t+484 \right)}^{{}^{1}/{}_{2}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x)=\frac{1}{2}{{\left( 130{{t}^{2}}-396t+484 \right)}^{{}^{-1}/{}_{2}}}(260t-396)$</p>
+                        <p class="m1830-answer">$f&#39;(x)=\frac{260t-396}{2\sqrt{130{{t}^{2}}-396t+484}}$</p>
+
+                        <hr>
+                    </li>
+                </ol>
+
+
+                <h4>Notes</h4>
+                <p>Fill in the blank with an expression that will make the indicated equation valid. Then simplify.</p>
+
+
+                <ol>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{d}{{dx}}\;{\left( {3 - 7x} \right)^6} = 6{\left( {3 - 7x} \right)^5}\;$______
+
+                            <span class="m1830-answer">$( - 7)$</span>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{d}{{dx}}\;{e^{5x - 3}} = \;{e^{5x - 3}}$_______
+
+                            <span class="m1830-answer">$(5)$</span>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{d}{{dx\;}}\;ln\left( {{x^2} - {x^4}} \right) = \;\frac{1}{{{x^2} - {x^4}}}$______
+                            <span class="m1830-answer">$(2x - 4{x^3})$</span>
+
+                            <p><strong>Find $f&#39;\left( x \right)$ and simplify.</strong> </p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = \;{\left( {8{x^2}\; - 7} \right)^5}$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = 5{\left( {8{x^2} - 7} \right)^4}(16x)$</p>
+                        <p class="m1830-answer">$f&#39;(x) = 80x{\left( {8{x^2} - 7} \right)^4}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = \;{e^{3{x^2}\; + 2x + 5}}$</p>
+
+                        <p class="m1830-answer">$f&#39;(x) = {e^{3{x^2} + 2x + 5}}(6x + 2)$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = 2\ln \left( {9{x^2}\; - 5x + 21} \right)$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = \frac{2}{{9{x^2} - 5x + 21}}\cdot(18x - 5)$</p>
+                        <p class="m1830-answer">$f&#39;(x) = \frac{{36x - 10}}{{9{x^2} - 5x + 21}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = \;{\left( {4x - 5\;lnx} \right)^7}$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = 7{\left( {4x - 5\ln x} \right)^6}(4 - \frac{5}{x})$</p>
+                        <p class="m1830-answer">$f&#39;(x) = 7(4 - \frac{5}{x}){\left( {4x - 5\ln x} \right)^6}$</p>
+
+                        <p><strong>REVIEW: DERIVATIVES, SLOPES OF TANGENT LINES, AND EQUATIONS OF TANGENT LINES</strong></p>
+                        <ul>
+
+                            <li>
+                                <p><strong>Steps for Finding the Equation of the Tangent Line to the Graph of $f(x)$ at $x=a$</strong></p>
+                                <p> 1) Find the y value by plugging $x=a$ into the original function. $\left(x_{1,}\;y_1\right)$</p>
+                                <p> 2) Find the slope of the tangent line by plugging into x the the derivative. ${m_{tan}}=f&#39;(x_1)$</p>
+                                <p> 3) Equation of the tangent line: $y-\;y_1=m\left(x=x_1\right)$</p>
+                            </li>
+
+                            <li>
+                                <p><strong>Steps for Finding the Value(s) where the Tangent Line is Horizontal</strong></p>
+                                <p> 1) Set $f&#39;(x)=0$</p>
+                                <p> 2) Solve for $x$</p>
+                                <p> 3) Verify that each $x$ is in the domain of $f(x)$ and $f&#39;(x)$</p>
+                            </li>
+                        </ul>
+                        <p><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = \;{\left( {3x + 13} \right)^{1/2}}\quad \quad x = 4$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = \frac{1}{2}{\left( {3x + 13} \right)^{ - 1/2}}(3)$</p>
+                        <p class="m1830-answer m1830-step">$f&#39;(x) = \frac{3}{{2\sqrt {3x + 13} }}$</p>
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(4) = \frac{3}{{2\sqrt {3\cdot4 + 13} }}$</p>
+                        <p class="m1830-solution">$\quad\quad{m_{tan}} = \frac{3}{{2\sqrt {12 + 13} }}$</p>
+                        <p class="m1830-solution">$\quad\quad{m_{tan}} = \frac{3}{{2\sqrt {25} }}$</p>
+                        <p class="m1830-solution m1830-step">$\quad\quad{m_{tan}} = \frac{3}{{2.5}} = \frac{3}{{10}}$</p>
+                        <p class="m1830-solution">Point: $f(4) = {\left( {3\cdot 4 + 13} \right)^{1/2}}$</p>
+                        <p class="m1830-solution">$\quad\quad f(4) = {\left( {12 + 13} \right)^{1/2}}$</p>
+                        <p class="m1830-solution">$\quad\quad f(4) = \sqrt {25} = 5$</p>
+                        <p class="m1830-solution m1830-step">$\quad\quad (4,5)$</p>
+                        <p class="m1830-solution">$y - 5 = \frac{3}{{10}}(x - 4)$</p>
+                        <p class="m1830-solution">$y - 5 = \frac{3}{{10}}x - \frac{{12}}{{10}}$</p>
+                        <p class="m1830-solution">$y = \frac{3}{{10}}x - \frac{{12}}{{10}} + 5$</p>
+                        <p class="m1830-answer">$y = \frac{3}{{10}}x + \frac{{19}}{5}$</p>
+
+                        <p>Horizontal Tangent </p>
+                        <p class="m1830-solution">Horizontal Tangents are found where $f&#39;(x) = 0$</p>
+                        <p class="m1830-solution">$\frac{3}{{2\sqrt {3x + 13} }} = 0$</p>
+                        <p class="m1830-solution">$\frac{3}{{2\sqrt {3x + 13} }} = \frac{0}{1}$</p>
+                        <p class="m1830-solution">Cross Multiply</p>
+                        <p class="m1830-solution">$3 \ne 0$</p>
+                        <p class="m1830-answer">No Horizontal Tangents: There are no values of x where $f&#39;(x) = 0$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = \;3{e^{2{x^2}\; + 5x - 4}}\quad \quad x = 0$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = 3{e^{2{x^2} + 5x - 4}}(4x + 5)$</p>
+                        <p class="m1830-answer m1830-step">$f&#39;(x) = 3(4x + 5){e^{2{x^2} + 5x - 4}}$</p>
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(0) = 3(4\cdot0 + 5){e^{2\cdot0 + 5\cdot0 - 4}}$</p>
+                        <p class="m1830-solution">$\quad{m_{tan}} = 3(5){e^{ - 4}}$</p>
+                        <p class="m1830-solution">$\quad{m_{tan}} = 15{e^{ - 4}}$</p>
+                        <p class="m1830-solution">$\quad{m_{tan}} = 3{e^{2\cdot0 + 5\cdot0 - 4}}$</p>
+                        <p class="m1830-solution">Point: $\quad f(0) = 3{e^{ - 4}}$</p>
+                        <p class="m1830-solution m1830-step">$\quad(0,3{e^{ - 4}})$</p>
+                        <p class="m1830-solution">$y - 3{e^{ - 4}} = 15{e^{ - 4}}(x - 0)$</p>
+                        <p class="m1830-solution">$y - 3{e^{ - 4}} = 15{e^{ - 4}}x$</p>
+                        <p class="m1830-solution">$y = 15{e^{ - 4}}x + 3{e^{ - 4}}$</p>
+                        <p class="m1830-answer">$y = \frac{{15x}}{{{e^4}}} + \frac{3}{{{e^4}}}$</p>
+
+                        <p>Horizontal Tangent: </p>
+                        <p class="m1830-solution">$3(4x + 5){e^{2{x^2} + 5x - 4}} = 0$</p>
+                        <p class="m1830-solution"> Set each factor equal to zero.</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+                                <p class="m1830-solution">$3 = 0$</p>
+                                <p class="m1830-solution">$3 \ne 0$</p>
+                                <p class="m1830-solution">no solution</p>
+                            </div>
+
+                            <div class="w3-container w3-quarter">
+                                <p class="m1830-solution">$4x + 5 = 0$</p>
+                                <p class="m1830-solution">$4x = - 5$</p>
+                                <p class="m1830-solution">$x = - \frac{5}{4}$</p>
+                            </div>
+
+                            <div class="w3-container w3-half">
+                                <p class="m1830-solution">${e^{2{x^2} + 5x - 4}} = 0$</p>
+                                <p class="m1830-solution">$\ln {e^{2{x^2} + 5x - 4}} = \ln 0$</p>
+                                <p class="m1830-solution">$ln (0)$ is undefined</p>
+                            </div>
+                        </div>
+
+                        <p class="m1830-answer">Horizontal Tangent at $x=-\frac{5}{4}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = \ln \left( {1 - {x^2} + 2{x^4}} \right)$ $x = 1$</p>
+
+                        <p class="m1830-solution">$f&#39;(x) = \frac{1}{{1 - {x^2} + 2{x^4}}}\cdot( - 2x + 8{x^3})$</p>
+                        <p class="m1830-answer m1830-step">$f&#39;(x) = \frac{{ - 2x + 8{x^3}}}{{1 - {x^2} + 2{x^4}}}$</p>
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(1) = \frac{{ - 2(1) + 8{{(1)}^3}}}{{1 - {{(1)}^2} + 2{{(1)}^4}}}$</p>
+                        <p class="m1830-solution">$\quad{m_{tan}} = \frac{{ - 2 + 8}}{{1 - 1 + 2}} = \frac{6}{2} = 3$</p>
+                        <p class="m1830-solution m1830-step">$\quad{m_{tan}} = \ln (1 - {1^2} + 2{\left( 1 \right)^4})$</p>
+                        <p class="m1830-solution">Point: $\quad f(1)= \ln (1 - 1 + 2)= \ln 2$</p>
+                        <p class="m1830-solution m1830-step">$\quad(1,\ln 2)$</p>
+
+
+                        <p class="m1830-solution">$y - \ln 2 = 3(x - 1)$</p>
+                        <p class="m1830-solution">$y - \ln 2 = 3x - 3$</p>
+                        <p class="m1830-answer">$y = 3x - 3 + \ln 2$</p>
+
+                        <p>Horizontal Tangent</p>
+                        <p class="m1830-solution">Horizontal Tangents are found where $f&#39;(x) = 0$</p>
+                        <p class="m1830-solution">$\frac{{ - 2x + 8{x^3}}}{{1 - {x^2} + 2{x^4}}} = 0$</p>
+                        <p class="m1830-solution">$\frac{{ - 2x + 8{x^3}}}{{1 - {x^2} + 2{x^4}}} = \frac{0}{1}$</p>
+                        <p class="m1830-solution">Cross Multiply</p>
+                        <p class="m1830-solution">$- 2x + 8{x^3} = 0$</p>
+                        <p class="m1830-solution">$- 2x(1 + 4{x^2}) = 0$</p>
+                        <p> Set each factor equal to zero.</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+
+                                <p class="m1830-solution">$-2x=0$</p>
+                                <p class="m1830-solution m1830-step">$x=0$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$1 - 4{x^2} = 0$</p>
+                                <p class="m1830-solution">$x=\pm \frac{1}{2}$</p>
+
+                            </div>
+                        </div>
+
+
+                        <p class="m1830-answer">Horizontal Tangents at $x=0\;\;$ and $\;\;x=\pm \frac{1}{2}$</p>
+
+                        <p><strong>Find the indicated derivative and simplify.</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{d}{{dt}}\;3{\left( {2{t^4}\; + {t^2}\;} \right)^{ - 5}}$</p>
+
+                        <p class="m1830-solution">$\frac{d}{{dt}} = - 15{\left( {2{t^4} + {t^2}} \right)^{ - 6}}(8{t^3} + 2t)$</p>
+                        <p class="m1830-answer">$ \frac{d}{{dt}} =\frac{{ - 120{t^3} - 30t}}{{{{\left( {2{t^4} + {t^2}} \right)}^6}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{{dh}}{{dw\;}}\quad $ if $\quad h\left( w \right) = \;\sqrt[5]{{8w - 1}}$</p>
+
+                        <p class="m1830-solution">$ h(w)= {\left( {8w - 1} \right)^{1/5}}$</p>
+                        <p class="m1830-solution">$\frac{{dh}}{{dw}} = \frac{1}{5}{\left( {8w - 1} \right)^{ - 4/5}}(8) $</p>
+                        <p class="m1830-answer">$ \frac{{dh}}{{dw}} =\frac{8}{{5\,\,\sqrt[5]{{{{\left( {8w - 1} \right)}^4}}}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $h&#39;\left( x \right)\quad $ if $\quad h\left( x \right) = \;\frac{{{e^{4x}}}}{{{x^3}\; + 9x}}$</p>
+
+                        <p class="m1830-solution">$f = {e^{4x}}\quad \quad g = {x^3} + 9x$</p>
+                        <p class="m1830-solution m1830-step">$f&#39; = 4{e^{4x}}\quad g&#39; = 3{x^2} + 9$</p>
+
+
+                        <p class="m1830-solution">$h&#39;(x) = \frac{{4{e^{4x}}({x^3} + 9x) - {e^{4x}}(3{x^2} + 9)}}{{{{\left( {{x^3} + 9x} \right)}^2}}}$</p>
+                        <p class="m1830-solution">$h&#39;(x) = \frac{{{e^{4x}}(4{x^3} + 36x - 3{x^2} - 9)}}{{{{\left( {{x^3} + 9x} \right)}^2}}}$</p>
+                        <p class="m1830-answer">$h&#39;(x) = \frac{{{e^{4x}}(4{x^3} - 3{x^2} + 36x - 9)}}{{{{\left( {{x^3} + 9x} \right)}^2}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{d}{{dx}}\;\left[ {{x^5}\;\;ln\left( {3 + {x^5}\;} \right)} \right]$</p>
+
+                        <p class="m1830-solution">$f = {x^5}\quad \quad g = \ln (3 + {x^5})$</p>
+                        <p class="m1830-solution m1830-step">$f&#39; = 5{x^4}\quad g&#39; = \frac{1}{{3 + {x^5}}}\cdot5{x^4} = \frac{{5{x^4}}}{{3 + {x^5}}}$</p>
+
+
+                        <p class="m1830-solution">$\frac{d}{{dx}} = 5{x^4}(\ln (3 + {x^5})) + \frac{{5{x^4}}}{{3 + {x^5}}}({x^5})$</p>
+                        <p class="m1830-answer">$\frac{d}{{dx}} = 5{x^4}\ln (3 + {x^5}) + \frac{{5{x^9}}}{{3 + {x^5}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $G&#39;\left( t \right)$ if $G\left( t \right) = \;{\left( {t - {e^{9t}}} \right)^2}$</p>
+
+                        <p class="m1830-solution">$G&#39;(t) = 2{\left( {t - {e^{9t}}} \right)^1}(1 - 9{e^{9t}})$</p>
+                        <p class="m1830-answer">$ G&#39;(t) = 2(t - {e^{9t}})(1 - 9{e^{9t}})$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $y&#39;\quad $ if $\quad y = \;{\left[ {ln\left( {{x^2}\; + 7} \right)} \right]^{4/5}}$</p>
+
+                        <p class="m1830-solution">$y&#39; = \frac{4}{5}{\left[ {\ln ({x^2} + 7)} \right]^{ - 1/5}}(\frac{1}{{{x^2} + 7}})(2x)$</p>
+                        <p class="m1830-answer">$y&#39; = \frac{{8x}}{{5({x^2} + 7){{\left( {\ln ({x^2} + 7)} \right)}^{1/5}}}}$</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $\frac{d}{{dw}}\;\frac{1}{{{{\left( {{w^2}\; - 5} \right)}^3}}}$</p>
+
+                        <p class="m1830-solution">$\frac{d}{{dw}} = - 3{\left( {{w^2} - 5} \right)^{ - 4}}(2w)$</p>
+                        <p class="m1830-answer">$\frac{d}{{dw}} = \frac{{ - 6w}}{{{{\left( {{w^2} - 5} \right)}^4}}}$</p>
+
+                        <p><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = {x^2}\;{\left( {3 - 2x} \right)^4}$ $x = 1$</p>
+
+                        <p class="m1830-solution">Point: $\quad f(1) = {1^2}{\left( {3 - 2\cdot 1} \right)^4}= {1^2}{\left( 1 \right)^4} = 1$</p>
+                        <p class="m1830-answer m1830-step">$(1,1)$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+
+                                <p class="m1830-solution">$h = {x^2}$</p>
+                                <p class="m1830-solution m1830-step">$h&#39; = 2x$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g = {\left( {3 - 2x} \right)^4}$</p>
+                                <p class="m1830-solution">$g&#39; = 4{\left( {3 - 2x} \right)^3}( - 2)=- 8{\left( {3 - 2x} \right)^3}$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <p class="m1830-solution">$f&#39;(x) = 2x{\left( {3 - 2x} \right)^4} + x{}^2( - 8{\left( {3 - 2x} \right)^3})$</p>
+                        <p class="m1830-solution">$f&#39;(x) = {\left( {3 - 2x} \right)^3}\left[ {2x(3 - 2x) - 8{x^2}} \right]$</p>
+                        <p class="m1830-solution">$f&#39;(x) = {\left( {3 - 2x} \right)^3}\left[ {6x - 4{x^2} - 8{x^2}} \right]$</p>
+                        <p class="m1830-solution">$f&#39;(x) = {\left( {3 - 2x} \right)^3}( - 12{x^2} + 6x)$</p>
+
+
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(1) = {\left( {3 - 2\cdot1} \right)^3}( - 12\cdot{1^2} + 6\cdot1)$</p>
+                        <p class="m1830-solution">${m_{tan}} = ({1^3})( - 12 + 6) = 1( - 6) =$</p>
+                        <p class="m1830-answer m1830-step">${m_{tan}} = - 6$</p>
+
+
+                        <p class="m1830-solution">$y - 1 = - 6(x - 1)$</p>
+                        <p class="m1830-solution">$y - 1 = - 6x + 6$</p>
+                        <p class="m1830-answer">$y = - 6x + 7$</p>
+
+                        <p>Horizontal Tangent</p>
+                        <p class="m1830-solution">${\left( {3 - 2x} \right)^3}( - 12{x^2} + 6x) = 0$</p>
+                        <p class="m1830-solution">${\left( {3 - 2x} \right)^3}(6x)( - 2x + 1) = 0$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+                                <p class="m1830-solution">$3-2x = 0$</p>
+                                <p class="m1830-solution">$x = \frac{3}{2}$</p>
+
+                            </div>
+
+                            <div class="w3-container w3-quarter">
+                                <p class="m1830-solution">$6x = 0$</p>
+                                <p class="m1830-solution">$x=0$</p>
+
+                            </div>
+
+                            <div class="w3-container w3-half">
+                                <p class="m1830-solution">$-2x+1= 0$</p>
+                                <p class="m1830-solution">$x = \frac{1}{2}$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <p class="m1830-answer">Horizontal Tangents at $x=\frac{3}{2}\;\;$ and $\;x = 0\;$ and $\;x=\frac{1}{2}$</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right) = \;\frac{{{x^4}}}{{{{\left( {2x - 5} \right)}^2}}}\quad \quad \quad x = 2$</p>
+                        <p class="m1830-solution">Point: $\quad f(2) = \frac{{{2^4}}}{{{{\left( {2\cdot2 - 5} \right)}^2}}} = \frac{{16}}{{{{\left( { - 1} \right)}^2}}} = 16$</p>
+                        <p class="m1830-answer m1830-step">$(2,16)$</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+
+                                <p class="m1830-solution">$h = {x^4}$</p>
+                                <p class="m1830-solution m1830-step">$h&#39; = 4{x^3}$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$g ={\left( {2x - 5} \right)^2}$</p>
+                                <p class="m1830-solution">$g&#39; =2{\left( {2x - 5} \right)^1}(2)=4(2x - 5)$</p>
+
+                            </div>
+                        </div>
+
+
+
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{4{x^3}{{\left( {2x - 5} \right)}^2} - {x^4}\cdot4(2x - 5)}}{{{{\left[ {{{\left( {2x - 5} \right)}^2}} \right]}^2}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{4{x^3}{{\left( {2x - 5} \right)}^2} - 4{x^4}(2x - 5)}}{{{{\left( {2x - 5} \right)}^4}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{4{x^3}(2x - 5) - 4{x^4}}}{{{{\left( {2x - 5} \right)}^3}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{8{x^4} - 20{x^3} - 4{x^4}}}{{{{\left( {2x - 5} \right)}^3}}}$</p>
+                        <p class="m1830-solution m1830-step">$f&#39;(x) = \frac{{4{x^4} - 20{x^3}}}{{{{\left( {2x - 5} \right)}^3}}}$</p>
+
+
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(2) = \frac{{4{{(2)}^4} - 20{{(2)}^3}}}{{{{\left( {2\cdot2 - 5} \right)}^3}}}$</p>
+                        <p class="m1830-solution">${m_{tan}} = \frac{{64 - 160}}{{{{\left( { - 1} \right)}^3}}} = \frac{{ - 96}}{{ - 1}}$</p>
+                        <p class="m1830-answer m1830-step">${m_{tan}} = 96$</p>
+
+
+                        <p class="m1830-solution">$y - 16 = 96(x - 2)$</p>
+                        <p class="m1830-solution">$y - 16 = 96x - 192$</p>
+                        <p class="m1830-answer">$y = 96x - 176$</p>
+
+                        <p>Horizontal Tangent</p>
+                        <p class="m1830-solution">$\frac{{4{x^4} - 20{x^3}}}{{{{\left( {2x - 5} \right)}^3}}} = \frac{0}{1}$</p>
+                        <p class="m1830-solution">$4{x^4} - 20{x^3} = 0$</p>
+                        <p class="m1830-solution">$4{x^3}(x - 5) = 0$</p>
+                        <p class="m1830-solution">Set each factor equal to zero.</p>
+
+                        <div class="w3-row">
+
+                            <div class="w3-container w3-quarter">
+
+
+                                <p class="m1830-solution">$4{x^3} = 0$</p>
+                                <p class="m1830-solution m1830-step">$x = 0$</p>
+                            </div>
+
+                            <div class="w3-container w3-threequarter">
+
+                                <p class="m1830-solution">$x - 5 = 0$</p>
+                                <p class="m1830-solution">$ x = 5$</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <p class="m1830-answer">Horizontal Tangents at $x=0\;\;$ and $\;x = 5$</p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right)={{e}^{\sqrt{x}}}$</p>
+
+
+
+
+                        <p class="m1830-solution">Point: $\quad f(1) = {e^{\sqrt 1 }} = {e^1} = e$</p>
+                        <p class="m1830-answer m1830-step">$(1,e)$</p>
+
+                        <p class="m1830-solution">$f&#39;(x)={{e}^{{{x}^{{}^{1}/{}_{2}}}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = {e^{{x^{1/2}}}}\cdot\frac{1}{2}{x^{ - 1/2}}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = {e^{\sqrt x }}\cdot\frac{1}{{2\sqrt x }}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{{e^{\sqrt x }}}}{{2\sqrt x }}$</p>
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(1) = \frac{{{e^{\sqrt 1 }}}}{{2\sqrt 1 }} $</p>
+                        <p class="m1830-answer m1830-step">${m_{tan}}= \frac{e}{2}$</p>
+
+
+                        <p class="m1830-solution">$y - e = \frac{e}{2}(x - 1)$</p>
+                        <p class="m1830-solution">$y - e = \frac{e}{2}x - \frac{e}{2}$</p>
+                        <p class="m1830-solution">$y = \frac{e}{2}x - \frac{e}{2} + e$</p>
+                        <p class="m1830-answer m1830-step">$y = \frac{e}{2}x + \frac{e}{2}$</p>
+
+                        <p>Horizontal tangent</p>
+                        <p class="m1830-solution">$\frac{{{e^{\sqrt x }}}}{{2\sqrt x }} = \frac{0}{1}$</p>
+                        <p class="m1830-solution">${e^{\sqrt x }} \ne 0$</p>
+                        <p class="m1830-answer">There are no horizontal tangents</p>
+
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            $f\left( x \right)=~\sqrt{{{x}^{2}}~+4x+5}={{\left( {{x}^{2}}+4x+5 \right)}^{{}^{1}/{}_{2}}}\quad \quad \quad x = 0$</p>
+
+                        <p class="m1830-solution">Point: $\quad f(0) = \sqrt {{0^2} + 4\cdot0 + 5} = \sqrt 5$</p>
+                        <p class="m1830-solution m1830-step">$(0,\sqrt 5 )$</p>
+
+
+                        <p class="m1830-solution">$f&#39;(x) = \frac{1}{2}{\left( {{x^2} + 4x + 5} \right)^{ - 1/2}}(2x + 4)$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{2x + 4}}{{2\sqrt {{x^2} + 4x + 5} }}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{2(x + 2)}}{{2\sqrt {{x^2} + 4x + 5} }} = \frac{{x + 2}}{{\sqrt {{x^2} + 4x + 5} }}$</p>
+                        <p class="m1830-solution">Slope: $\quad {m_{tan}}= f&#39;(0) = \frac{{0 + 2}}{{\sqrt {0 + 0 + 5} }} =$</p>
+                        <p class="m1830-answer m1830-step">$ {m_{tan}}=\frac{2}{{\sqrt 5 }}$</p>
+
+
+                        <p class="m1830-solution">$y - \sqrt 5 = \frac{2}{{\sqrt 5 }}(x - 0)$</p>
+                        <p class="m1830-solution">$y - \sqrt 5 = \frac{{2x}}{{\sqrt 5 }}$</p>
+                        <p class="m1830-answer m1830-step">$y = \frac{{2x}}{{\sqrt 5 }} + \sqrt 5$</p>
+
+                        <p>Horizontal tangent </p>
+                        <p class="m1830-solution">$\frac{{x + 2}}{{\sqrt {{x^2} + 4x + 5} }} = \frac{0}{1}$</p>
+                        <p class="m1830-solution">$x + 2 = 0$</p>
+                        <p class="m1830-answer">One horizontal tangent at $\; x = - 2$</p>
+
+                        <p><strong>Applications</strong></p>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            COST FUNCTION: The total cost (in hundreds of dollars) of producing x pairs of sandals per week is:$C\left( x \right) = 6 + \;{\sqrt {3x + 25} ^{1/2}}$ $0\; \le x\; \le 30$</p>
+                        <ol>
+
+                            <li>Find $C&#39;(x)$
+                                <p class="m1830-solution">$C(x)=6+{{\left( 3x+25 \right)}^{{1}/{2}\;}}$</p>
+                                <p class="m1830-solution">$C&#39;(x)=0+\frac{1}{2}{{\left( 3x+25 \right)}^{-1/2}}(3)$</p>
+                                <p class="m1830-answer">$C&#39;(x)=\frac{3}{2\sqrt{3x+25}}$</p>
+                            </li>
+
+                            <li>Find $C&#39;\left( {17} \right)$ and $C&#39;\left( {26} \right)$. Interpret the results.
+                                <p class="m1830-solution">$C&#39;(17) = \frac{3}{{2\sqrt {3\cdot17 + 25} }} = .172$</p>
+                                <p class="m1830-solution">$C&#39;(26) = \frac{3}{{\sqrt {3\cdot26 + 25} }} = .148$</p>
+                                <p class="m1830-answer">At production level of 17 pairs per week, marginal cost is increasing by \$17.20 per pair.</p>
+                                <p class="m1830-answer">At production level of 26 pairs per week, marginal cost is increasing by \$14.80 per pair.</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            PRICE DEMAND EQUATION: The number x of large pumpkin spice drinks people are willing to buy per week from a local coffee shop at a price of \$p is given by: $x = 1000 - 60{(p + 25)^{1/2}}$ $3.50\; \le p\; \le 6.25$</p>
+                        <ol>
+
+                            <li>Find $dx/dp$
+                                <p class="m1830-solution">$x=1000-60{{\left( p+25 \right)}^{{}^{1}/{}_{2}}}$</p>
+                                <p class="m1830-solution">$\frac{dx}{dp}=0-60(\frac{1}{2}{{\left( p+25 \right)}^{-1/2}})(1)$</p>
+                                <p class="m1830-answer">$\frac{dx}{dp}=\frac{-30}{\sqrt{p+25}}$</p>
+                            </li>
+
+                            <li>Find the demand and the instantaneous rate of change of demand with respect to price when the price is \$4.50. Write a brief interpretation of these results.
+                                <p class="m1830-solution">$x = 1000 - 60\sqrt {4.50 + 25} = 674.12$</p>
+                                <p class="m1830-solution">$\frac{{dx}}{{dp}} = \frac{{ - 30}}{{\sqrt {4.50 + 25} }} = - 5.52$</p>
+                                <p class="m1830-answer">At \$4.50 the demand is approximately 674 drinks per week. The demand is decreasing by approximately 5 drinks per week.</p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li class="problem">
+                        <p class="m1830-problem-text">
+                            BIOLOGY A yeast culture at room temperature (68°F) is placed in a refrigerator set at a constant temperature of 38°F. After t hours, the temperature, T, of the culture is given approximately by $$T = 25{e^{ - 0.62t}} + 40$ $t\; \ge 0$$ What is the rate
+                            of change of temperature of the culture at the end of 1 hour? At the end of 5 hours?</p>
+
+                        <p class="m1830-solution">$T&#39; = 25{e^{ - 0.62t}}( - 0.62)$</p>
+                        <p class="m1830-solution">$T&#39; = - 15.5{e^{ - 0.62t}}$</p>
+                        <p class="m1830-solution">$T&#39;(1) = 15.5{e^{ - 0.62(1)}} = - {8.338^ \circ }\;per\;hour$</p>
+                        <p class="m1830-solution">At the end of one hour, the temperature of the culture is decreasing at a rate of 8.338 degrees per hour.</p>
+                        <p class="m1830-solution">$T&#39;(5) = - 15.5{e^{( - 0.62(5))}} = - {0.698^ \circ }\;per\;hour$</p>
+                        <p class="m1830-answer">At the end of five hours, the temperature of the culture is decreasing at at rate of 0.698 degrees per hour.</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>
