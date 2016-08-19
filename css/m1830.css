@@ -304,13 +304,13 @@ text-align: left;
 @media print {
     body {
         background: none;
-    font-size: 18px;
+    font-size: 16px;
         /*padding: 1in 1in 1in 1in;*/
     }
     a {
         text-decoration: none;
     }
-    .m1830-answer, m1830-solution{
+    .m1830-answer, .m1830-solution{
 visibility: hidden;
 }
 
