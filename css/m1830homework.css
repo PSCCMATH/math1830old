@@ -181,7 +181,7 @@ td {
     vertical-align: middle;
     text-align: center;
     width: 50%;
-  /*max-width:10px;*/
+    /*max-width:10px;*/
 }
 
 th {
@@ -191,6 +191,7 @@ th {
     text-align: center;
 }
 
+
 /*th.m1830-blue {
     background: #99c2ff;
 }*/
@@ -198,6 +199,7 @@ th {
 th.m1830-morespace {
     padding: 2em;
 }
+
 
 /*table.blue th {
     background: #99c2ff;
@@ -271,7 +273,6 @@ cite.cc {
 }
 
 .m1830-problem-text {
-
     font-style: normal;
     line-height: 2em;
     margin: .5em;
@@ -291,29 +292,30 @@ cite.cc {
 .m1830-step {
     margin: 0em 0 2em 0;
 }
-.m1830-table-wide{
-  width: 90%;
-  max-width: 90%;
+
+.m1830-table-wide {
+    width: 90%;
+    max-width: 90%;
 }
 
-.m1830-table-wide td{
-text-align: left;
+.m1830-table-wide td {
+    text-align: left;
 }
+
 .m1830-unit {}
 
 @media print {
     body {
         background: none;
-    font-size: 16px;
+        font-size: 16px;
         /*padding: 1in 1in 1in 1in;*/
     }
     a {
         text-decoration: none;
     }
-    .m1830-answer, .m1830-solution{
-visibility: hidden;
-}
-
+    .m1830-answer, .m1830-solution {
+        display: none;
+    }
     .w3-opennav {
         display: none;
     }
