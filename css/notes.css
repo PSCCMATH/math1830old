@@ -1,0 +1,46 @@
+@import url("m18302.css");
+@media print {
+    body {
+        background: none;
+        font-size: 16px;
+        /*padding: 1in 1in 1in 1in;*/
+    }
+    a {
+        text-decoration: none;
+        content: none;
+    }
+    a[href]:after {
+        content: none;
+    }
+    .m1830-answer, .m1830-solution {
+        visibility: hidden;
+    }
+    /*.w3-opennav {
+        display: none;
+    }*/
+    .m1830-section {
+        page-break-before: always;
+    }
+    .m1830-problem {
+        page-break-inside: avoid;
+    }
+    .m1830-unit {
+        page-break-before: always;
+    }
+    iframe {
+        display: none;
+    }
+    img {
+        display: block;
+        page-break-inside: avoid;
+    }
+    /*p img {
+        display: block;
+        page-break-inside: avoid;*/
+    /*.no-print {
+        display: none
+    }*/
+    video {
+        display: none;
+    }
+}
