@@ -1,4 +1,5 @@
 /*@import url("w3.css");*/
+@import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css");
 
 
 body {
@@ -49,6 +50,7 @@ cite {
     margin: .5em;
     padding-bottom: 0;
 }*/
+
 
 h1 {
     font-variant: small-caps;
@@ -283,23 +285,20 @@ cite.cc {
 .m1830-table-wide td{
 text-align: left;
 }
-/*.m1830-unit {}*/
 
 @media print {
     body {
         background: none;
-        /*padding: 1in 1in 1in 1in;*/
+        font-size: 16px;
     }
     a {
         text-decoration: none;
-content: none;
+        content: none;
     }
     a[href]:after {
-         content: none;
+        content: none;
     }
-    /*.w3-opennav {
-        display: none;
-    }*/
+
     .m1830-section {
         page-break-before: always;
     }
@@ -313,16 +312,9 @@ content: none;
         display: none;
     }
     img {
-        /*display: block;*/
+        display: block;
         page-break-inside: avoid;
     }
-    p img {
-        /*display: block;*/
-        page-break-inside: avoid;
-    }
-    /*.no-print {
-        display: none
-    }*/
     video {
         display: none;
     }

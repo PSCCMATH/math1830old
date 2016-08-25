@@ -2,6 +2,6 @@
 @import url("printing.css");
 @media print {
     .m1830-answer, .m1830-solution {
-        visibility: hidden;
+        display: none;
     }
 }

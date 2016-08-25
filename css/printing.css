@@ -1,0 +1,32 @@
+@media print {
+    body {
+        background: none;
+        font-size: 16px;
+    }
+    a {
+        text-decoration: none;
+        content: none;
+    }
+    a[href]:after {
+        content: none;
+    }
+    .m1830-section {
+        page-break-before: always;
+    }
+    .m1830-problem {
+        page-break-inside: avoid;
+    }
+    .m1830-unit {
+        page-break-before: always;
+    }
+    iframe {
+        display: none;
+    }
+    img {
+        display: block;
+        page-break-inside: avoid;
+    }
+    video {
+        display: none;
+    }
+}
