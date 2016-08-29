@@ -19,6 +19,9 @@
     .m1830-unit {
         page-break-before: always;
     }
+    strong {
+      page-break-before: always;
+    }
     iframe {
         display: none;
     }
