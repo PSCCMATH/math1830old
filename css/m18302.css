@@ -295,6 +295,10 @@ cite.cc {
 text-align: left;
 }
 
+var.fontnormal{
+    font-variant: normal;
+}
+
 @media print {
     body {
         background: none;
