@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <!-- Load css file from shared location at pstcc.edu -->
-    <link rel="stylesheet" href="css/m1830.css" />
+    <link rel="stylesheet" href="css/notes.css" />
 
 
     <!-- load current MathJax Library Tex as HTML -->
@@ -70,7 +70,7 @@
         <span class="w3-opennav m1830-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
     </div>
 
-    <div class="m1830-body-container">
+    <div class="container">
         <h1 id="u2toc">MATH 1830 Notes</h1>
         <p>Mary Monroe-Ellis</p>
         <p>Susan Mosteller</p>
@@ -408,8 +408,12 @@
                 <p>Exponential functions occur frequently in science and business but are commonly used in compound interest applications.</p>
                 <ul>
 
-                    <li>The value of a $1000 investment returning 8% interest compounded monthly after 12 years would be calculated using the formula , where A is the final amount in the account, P is the principal, r is the interest rate, n is the number
-                        of compounding periods per year, and t is the number of years.</li>
+                    <li>The value of a \$1000 investment returning 8% interest compounded monthly after 12 years would be calculated using the formula $$A=P\left(1+\frac rn\right)^{nt},$$
+                    <p> where A is the final amount in the account</p>
+                    <p> P is the principal </p>
+                    <p>r is the interest rate</p>
+                    <p> n is the number of compounding periods per year</p>
+                    <p>and t is the number of years.<p></li>
 
                     <li>The compounding frequency has a significant impact on the final amount of money (either saved or owed).
                         <img src="images/notes/u2s1p1i.png" alt="Graph of Amount of Money in an account when compounded at various compounding frequencies.  4 graphs--one each for compounding yearly, quarterly, monthly, and continuously"></li>
@@ -464,7 +468,7 @@
                         <p class="m1830-solution">$\frac{{11,000}}{{10,000}} = \frac{{10,000{e^{.0158t}}}}{{10,000}}$</p>
                         <p class="m1830-solution">$\frac{{11}}{{10}} = {e^{.0158t}}$</p>
                         <p class="m1830-solution">$\ln \frac{{11}}{{10}} = \ln {e^{.0158t}}$</p>
-                        <p class="m1830-solution">$\ln = \frac{{11}}{{10}} = .0158t$</p>
+                        <p class="m1830-solution">$\ln  \frac{{11}}{{10}} = .0158t$</p>
                         <p class="m1830-solution">$\frac{{\ln \frac{{11}}{{10}}}}{{.0158}} = \frac{{.0158t}}{{.0158}}$</p>
                         <p class="m1830-solution">$6.03 = t$</p>
                         <p class="m1830-answer">It will take 6.03 years for the account to be worth \$ 11,000.</p>
@@ -495,7 +499,7 @@
                         <p class="m1830-solution">$\ln 2 = \ln {e^{8r}}$</p>
                         <p class="m1830-solution">$\ln 2 = 8r$</p>
                         <p class="m1830-solution">$\frac{{\ln 2}}{8} = r$</p>
-                        <p class="m1830-solution">$.0866 = r$</p>
+                        <p class="m1830-solution">$0.0866 = r$</p>
                         <p class="m1830-answer">In order for the initial investment to double in 8 years, the money must be invested in an account with a nominal rate of 8.7% compounded continuously.</p>
 
                     </li>
@@ -533,7 +537,7 @@
                             The estimated resale value R (in dollars) of a company car after t years is given by: $$R(t) = 20000{(0.86)^t}.$$ What will be the resale value of the car after 2 years? How long will it take the car to depreciate to half the original value?</p>
 
                         <p class="m1830-solution">$R(2) = 20,000{(0.86)^2} = \$ 14,792$</p>
-
+<p class="m1830-answer">The resale value of the car after two years will be \$14.792.</p>
 
                         <p class="m1830-solution">$\frac{{10,000}}{{20,000}} = \frac{{20,000{{(0.86)}^t}}}{{20,000}}$</p>
                         <p class="m1830-solution">$.5 = {0.86^t}$</p>
@@ -726,9 +730,16 @@
 
 
                         <h4>Notes</h4>
-                        <p><strong>Derivatives</strong></p>
+                        <p><strong>Derivatives of Exponentials and Logarithms  </strong></p>
+
                     </li>
                 </ol>
+              <p>  $\quad \quad \frac d{dx}e^x=e^x$ </p>
+              <p>   $\quad \quad \frac d{dx}b^x=b^x\ln b\;\quad \quad (b>0,\;b\neq1)$</p>
+
+              <p>   $\quad \quad \frac d{dx}\ln x=\frac1x\;\quad \quad (x>0)$</p>
+              <p>   $\quad \quad \frac d{dx}\log_bx=\left(\frac1{\ln b}\right)\left(\frac1x\right)\;\quad \quad (x>0,\;b>0,\;b\neq1)$</p>
+
                 <ol>
 
                     <li class="m1830-problem">
@@ -771,8 +782,8 @@
                         <p class="m1830-problem-text">
                             $f\left( x \right) = 9 + 5\;\ln \frac{1}{x}$</p>
 
-                        <p class="m1830-solution">$9 + 5(\ln 1 - \ln x)$</p>
-                        <p class="m1830-solution">$9 + 5\ln 1 - 5\ln x$</p>
+                        <p class="m1830-solution">$f(x)9 + 5(\ln 1 - \ln x)$</p>
+                        <p class="m1830-solution">$f(x)9 + 5\ln 1 - 5\ln x$</p>
                         <p class="m1830-solution">$f&#39;(x) = 0 + 0 - \frac{5}{x}$</p>
                         <p class="m1830-answer">$f&#39;(x) = - \frac{5}{x}$</p>
 
@@ -816,7 +827,7 @@
                         <p class="m1830-problem-text">
                             $f\left( x \right) = 1\; + \ln {x^6}$ at $x = e$</p>
 
-                        <p class="m1830-solution">Point $\quad f(e) = 1 + 6\ln e = = 1 + 6(1) = 7$</p>
+                        <p class="m1830-solution">Point $\quad f(e) = 1 + 6\ln e  = 1 + 6(1) = 7$</p>
                         <p class="m1830-answer m1830-step">$(e,7)$</p>
 
                         <p class="m1830-solution">$f(x) = 1 + 6\ln x$</p>
@@ -867,7 +878,7 @@
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
                             The manager of a miniature golf course is planning to raise the ticket price per game. At the current price of \$6.50, an average of 81 rounds is played each day. The manager’s research suggests that for every \$0.50 increase in price, an average of four
-                            fewer games will be played each day. Based on this information, find the function the represents revenue from rounds of mini golf, where n represents the number of \$0.50 increases in price.</p>
+                            fewer games will be played each day. Based on this information, find the function that represents revenue from rounds of mini golf, where n represents the number of \$0.50 increases in price.</p>
 
                         <p class="m1830-solution">$R(n) =$ (price)(number sold)</p>
                         <p class="m1830-answer">$R(n) = (6.50 + .50n)(81 - 4n)$</p>
@@ -881,7 +892,7 @@
                             <li>Find the rate of change for this revenue function when the manager increases the price of a round of mini golf by \$1.50.
                                 <p class="m1830-solution">$R(n) = 526.50 + 14.5n - 2{n^2}$</p>
                                 <p class="m1830-solution">$R&#39;(n) = 14.5 - 4n$</p>
-                                <p class="m1830-solution">If the price is increased by \$$1.5$, then $n=3$.</p>
+                                <p class="m1830-solution">If the price is increased by \$1.50, then there have been 3 fifty cent increases, so $n=3$.</p>
                                 <p class="m1830-solution">$R&#39;(3) = 2.5$</p>
                                 <p class="m1830-answer">When the manager increases the price per ticket by \$$1.50$, the number of rounds played each day decreases but the actual revenue increases by \$$2.50$ per day. This provides the owner with an increase in revenue even
                                     though there is a decrease in the number of rounds played each day.</p>
@@ -906,6 +917,7 @@
                             </li>
 
                             <li>Determine the marginal average cost function. What did you have to do to the average cost function in order to find the marginal average cost function?
+                              <p class="m1830-answer">The marginal average cost is the derivative of the average cost.</p>
                                 <p class="m1830-solution">Must rewrite the function to use the power rule.</p>
                                 <p class="m1830-solution">$\bar C(x) = 0.01x + 42 + \frac{{300}}{x}$</p>
                                 <p class="m1830-solution">$\bar C(x) = 0.01x + 42 + 300{x^{ - 1}}$</p>
@@ -975,21 +987,20 @@
                             <li>
                                 <p class="m1830-solution">Using the Product Rule</p>
 
-                                <div class="w3-row">
 
-                                    <div class="w3-container w3-quarter">
 
-                                        <p class="m1830-solution">$f = 2{x^3}$</p>
-                                        <p class="m1830-solution">$f&#39; = 6{x^2}$</p>
+                                  <div class="row">
+                                    <div class="col-sm-6 bg-color1" >
+                                      <p class="m1830-solution">$f = 2{x^3}$</p>
+                                      <p class="m1830-solution">$f&#39; = 6{x^2}$</p></div>
+                                    <div class="col-sm-6 bg-color2" >
+                                      <p class="m1830-solution">$g = {x^5} - 2$</p>
+                                      <p class="m1830-solution">$g&#39; = 5{x^4}$</p>
                                     </div>
+                                  </div>
 
-                                    <div class="w3-container w3-threequarter">
 
-                                        <p class="m1830-solution">$g = {x^5} - 2$</p>
-                                        <p class="m1830-solution">$g&#39; = 5{x^4}$</p>
 
-                                    </div>
-                                </div>
 
 
                                 <p class="m1830-solution">$m&#39;(x) = 6{x^2}({x^5} - 2) + 2{x^3}(5{x^4})$</p>
@@ -1004,7 +1015,7 @@
                         <ol>
 
                             <li>
-                                $r\left( x \right) = \;\frac{{{x^5}\; + 4}}{{{x^2}}}$
+                                $r\left( x \right) = \;\frac{{{x^5}+4}}{{{x^2}}}$
 
                                 <p class="m1830-solution">Simplifying and Using Power Rule</p>
                                 <p class="m1830-solution">$r(x) = \frac{{{x^5}}}{{{x^2}}} + \frac{4}{{{x^2}}}$</p>
@@ -1033,7 +1044,7 @@
 
 
 
-                                <p class="m1830-solution">$r&#39;(x) = \frac{{5{x^4}({^2}) - 2x({x^5} + 4)}}{{{x^4}}}$</p>
+                                <p class="m1830-solution">$r&#39;(x) = \frac{{5{x^4}({x^2}) - 2x({x^5} + 4)}}{{({x^2})^2}}$</p>
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{5{x^6} - 2{x^6} - 8x}}{{{x^4}}}$</p>
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{3{x^6} - 8x}}{{{x^4}}}$</p>
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{x(3{x^5} - 8)}}{{{x^4}}}$</p>
@@ -1361,7 +1372,7 @@
                                 <p class="m1830-solution">Point $\quad r(2) = (5 - 4\cdot2)(1 + 3\cdot2) = ( - 3)(7) = -21$</p>
                                 <p class="m1830-answer m1830-step">$(2, - 21)$</p>
 
-                                <p class="m1830-solution">Slope $\quad {m_{tan}}= {r&#39;}(2) = - 24(2) + 11-48+11=$</p>
+                                <p class="m1830-solution">Slope $\quad {m_{tan}}= {r&#39;}(2) = - 24(2) + 11=-48+11=-37$</p>
                                 <p class="m1830-answer m1830-step">${m_{tan}}=-37$</p>
 
                                 <p class="m1830-solution">$y + 21 = - 37(x - 2)$</p>
@@ -1519,7 +1530,7 @@
 
                                     <div class="w3-container w3-threequarter">
 
-                                        <p class="m1830-solution">$g =t + 548$</p>
+                                        <p class="m1830-solution">$g =t + 5$</p>
                                         <p class="m1830-solution">$g&#39; =1$</p>
 
                                     </div>
@@ -1609,18 +1620,18 @@
                         <p class="m1830-solution">$f(x) = 90 - 10t + \frac{5}{{18}}{t^2}$</p>
                         <p class="m1830-solution">$f&#39;(x) = - 10 + \frac{5}{9}t$</p>
                         <p class="m1830-solution">$f&#39;(12) = - 3.33$</p>
-                        <p class="m1830-answer">The gas is leaking from the tank at a rate of -3.33 liters per hour after 12 hours.</p>
+                        <p class="m1830-answer">The gas is leaking from the tank at a rate of 3.33 liters per hour after 12 hours.</p>
 
                     </li>
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            Andrew and David are both training to run a marathon. They both go on a run on Sunday mornings at precisely 7 A.M. Andrew’s house is 22 km south of David’s. One Sunday morning, Andrew leaves his house and runs west at 7 km/hr. The distance between the
-                            two runners can be modeled by the function $s(t) = \sqrt {130{t^2} - 396t + 484} $, where s is in kilometers and t is in hours. Determine the rate at which the distance between the two runners is changing.</p>
+                            Andrew and David are training to run a marathon. They both go on a run on Sunday mornings at precisely 7 A.M. Andrew’s house is 22 km south of David’s. One Sunday morning, Andrew leaves his house and runs west at 7 km/hr. The distance between the
+                            two runners can be modeled by the function $$s(t) = \sqrt {130{t^2} - 396t + 484},$$ where s is in kilometers and t is in hours. Determine the rate at which the distance between the two runners is changing.</p>
 
-                        <p class="m1830-solution">$f(x)={{\left( 130{{t}^{2}}-396t+484 \right)}^{{}^{1}/{}_{2}}}$</p>
-                        <p class="m1830-solution">$f&#39;(x)=\frac{1}{2}{{\left( 130{{t}^{2}}-396t+484 \right)}^{{}^{-1}/{}_{2}}}(260t-396)$</p>
-                        <p class="m1830-answer">$f&#39;(x)=\frac{260t-396}{2\sqrt{130{{t}^{2}}-396t+484}}$</p>
+                        <p class="m1830-solution">$s(t)={{\left( 130{{t}^{2}}-396t+484 \right)}^{{}^{1}/{}_{2}}}$</p>
+                        <p class="m1830-solution">$s&#39;(t)=\frac{1}{2}{{\left( 130{{t}^{2}}-396t+484 \right)}^{{}^{-1}/{}_{2}}}(260t-396)$</p>
+                        <p class="m1830-answer">$s&#39;(t)=\frac{260t-396}{2\sqrt{130{{t}^{2}}-396t+484}}$</p>
 
                         <hr>
                     </li>
@@ -1628,7 +1639,25 @@
 
 
                 <h4>Notes</h4>
+
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">General Derivative Rules Using the Chain Rule</h3>
+                  </div>
+                  <div class="panel-body">
+                  <p>$  \frac d{dx}\left[f(x)\right]^n=n\left[f(x)\right]^{n-1}\cdot f'(x)$</p>
+                  <p>$\frac d{dx}\ln\left[f(x)\right]=\frac1{f(x)}\cdot f'(x)$</p>
+                <p>  $\frac d{dx}e^{f(x)}=e^{f(x)}\cdot f'\left(x\right)​$</p>
+                  </div>
+                </div>
+
+
                 <p>Fill in the blank with an expression that will make the indicated equation valid. Then simplify.</p>
+
+
+
+
+
 
 
                 <ol>
@@ -1695,9 +1724,11 @@
 
                             <li>
                                 <p><strong>Steps for Finding the Equation of the Tangent Line to the Graph of $f(x)$ at $x=a$</strong></p>
-                                <p> 1) Find the y value by plugging $x=a$ into the original function. $\left(x_{1,}\;y_1\right)$</p>
-                                <p> 2) Find the slope of the tangent line by plugging into x the the derivative. ${m_{tan}}=f&#39;(x_1)$</p>
-                                <p> 3) Equation of the tangent line: $y-\;y_1=m\left(x=x_1\right)$</p>
+                                <p> 1) Find the y value by calculating $f(a)$ </p>
+                                <p> $\left(a, f(a)\right)$</p>
+                                <p> 2) Find the slope of the tangent line by calculating $f'(a)$ </p>
+                                <p>${m_{tan}}=f&#39;(a)$</p>
+                                <p> 3) Equation of the tangent line:</p> <p>$y-f(a)=f'(a)\left(x-a\right)$</p>
                             </li>
 
                             <li>
@@ -1712,21 +1743,21 @@
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            $f\left( x \right) = \;{\left( {3x + 13} \right)^{1/2}}\quad \quad x = 4$</p>
+                            $f\left( x \right) = \;{\left( {3x + 13} \right)^{1/2}}\quad \quad$  at $x = 4$</p>
 
                         <p class="m1830-solution">$f&#39;(x) = \frac{1}{2}{\left( {3x + 13} \right)^{ - 1/2}}(3)$</p>
                         <p class="m1830-answer m1830-step">$f&#39;(x) = \frac{3}{{2\sqrt {3x + 13} }}$</p>
                         <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(4) = \frac{3}{{2\sqrt {3\cdot4 + 13} }}$</p>
                         <p class="m1830-solution">$\quad\quad{m_{tan}} = \frac{3}{{2\sqrt {12 + 13} }}$</p>
                         <p class="m1830-solution">$\quad\quad{m_{tan}} = \frac{3}{{2\sqrt {25} }}$</p>
-                        <p class="m1830-solution m1830-step">$\quad\quad{m_{tan}} = \frac{3}{{2.5}} = \frac{3}{{10}}$</p>
+                        <p class="m1830-solution m1830-step">$\quad\quad{m_{tan}} = \frac{3}{{2\cdot5}} = \frac{3}{{10}}$</p>
                         <p class="m1830-solution">Point: $f(4) = {\left( {3\cdot 4 + 13} \right)^{1/2}}$</p>
                         <p class="m1830-solution">$\quad\quad f(4) = {\left( {12 + 13} \right)^{1/2}}$</p>
                         <p class="m1830-solution">$\quad\quad f(4) = \sqrt {25} = 5$</p>
                         <p class="m1830-solution m1830-step">$\quad\quad (4,5)$</p>
                         <p class="m1830-solution">$y - 5 = \frac{3}{{10}}(x - 4)$</p>
                         <p class="m1830-solution">$y - 5 = \frac{3}{{10}}x - \frac{{12}}{{10}}$</p>
-                        <p class="m1830-solution">$y = \frac{3}{{10}}x - \frac{{12}}{{10}} + 5$</p>
+                        <p class="m1830-solution">$y = \frac{3}{{10}}x - \frac{{6}}{{5}} + 5$</p>
                         <p class="m1830-answer">$y = \frac{3}{{10}}x + \frac{{19}}{5}$</p>
 
                         <p>Horizontal Tangent </p>
@@ -1735,7 +1766,7 @@
                         <p class="m1830-solution">$\frac{3}{{2\sqrt {3x + 13} }} = \frac{0}{1}$</p>
                         <p class="m1830-solution">Cross Multiply</p>
                         <p class="m1830-solution">$3 \ne 0$</p>
-                        <p class="m1830-answer">No Horizontal Tangents: There are no values of x where $f&#39;(x) = 0$</p>
+                        <p class="m1830-answer">No Horizontal Tangents: There are no values of x where $f&#39;(x) = 0.$</p>
 
                     </li>
 
@@ -1748,8 +1779,8 @@
                         <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(0) = 3(4\cdot0 + 5){e^{2\cdot0 + 5\cdot0 - 4}}$</p>
                         <p class="m1830-solution">$\quad{m_{tan}} = 3(5){e^{ - 4}}$</p>
                         <p class="m1830-solution">$\quad{m_{tan}} = 15{e^{ - 4}}$</p>
-                        <p class="m1830-solution">$\quad{m_{tan}} = 3{e^{2\cdot0 + 5\cdot0 - 4}}$</p>
-                        <p class="m1830-solution">Point: $\quad f(0) = 3{e^{ - 4}}$</p>
+
+                        <p class="m1830-solution">Point: $\quad f(0)=3{e^{2\cdot0 + 5\cdot0 - 4}} = 3{e^{ - 4}}$</p>
                         <p class="m1830-solution m1830-step">$\quad(0,3{e^{ - 4}})$</p>
                         <p class="m1830-solution">$y - 3{e^{ - 4}} = 15{e^{ - 4}}(x - 0)$</p>
                         <p class="m1830-solution">$y - 3{e^{ - 4}} = 15{e^{ - 4}}x$</p>
@@ -1781,20 +1812,20 @@
                             </div>
                         </div>
 
-                        <p class="m1830-answer">Horizontal Tangent at $x=-\frac{5}{4}$</p>
+                        <p class="m1830-answer">Horizontal Tangent at $x=-\frac{5}{4}.$</p>
 
                     </li>
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            $f\left( x \right) = \ln \left( {1 - {x^2} + 2{x^4}} \right)$ $x = 1$</p>
+                            $f\left( x \right) = \ln \left( {1 - {x^2} + 2{x^4}} \right)$ at  $x = 1$</p>
 
                         <p class="m1830-solution">$f&#39;(x) = \frac{1}{{1 - {x^2} + 2{x^4}}}\cdot( - 2x + 8{x^3})$</p>
                         <p class="m1830-answer m1830-step">$f&#39;(x) = \frac{{ - 2x + 8{x^3}}}{{1 - {x^2} + 2{x^4}}}$</p>
                         <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(1) = \frac{{ - 2(1) + 8{{(1)}^3}}}{{1 - {{(1)}^2} + 2{{(1)}^4}}}$</p>
                         <p class="m1830-solution">$\quad{m_{tan}} = \frac{{ - 2 + 8}}{{1 - 1 + 2}} = \frac{6}{2} = 3$</p>
-                        <p class="m1830-solution m1830-step">$\quad{m_{tan}} = \ln (1 - {1^2} + 2{\left( 1 \right)^4})$</p>
-                        <p class="m1830-solution">Point: $\quad f(1)= \ln (1 - 1 + 2)= \ln 2$</p>
+                        <p class="m1830-solution m1830-step">$\quad{m_{tan}} = 3$</p>
+                        <p class="m1830-solution">Point: $\quad f(1)=\ln(1 - {1^2} + 2{\left( 1 \right)^4}) =\ln (1 - 1 + 2)= \ln 2$</p>
                         <p class="m1830-solution m1830-step">$\quad(1,\ln 2)$</p>
 
 
@@ -1901,6 +1932,7 @@
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
                             $\frac{d}{{dw}}\;\frac{1}{{{{\left( {{w^2}\; - 5} \right)}^3}}}$</p>
+                            <p class="m1830-solution">$\frac{d}{{dw}} = \left(w^2-5\right)^{-3} $</p>
 
                         <p class="m1830-solution">$\frac{d}{{dw}} = - 3{\left( {{w^2} - 5} \right)^{ - 4}}(2w)$</p>
                         <p class="m1830-answer">$\frac{d}{{dw}} = \frac{{ - 6w}}{{{{\left( {{w^2} - 5} \right)}^4}}}$</p>
@@ -1942,7 +1974,7 @@
 
 
                         <p class="m1830-solution">Slope: $\quad {m_{tan}} = f&#39;(1) = {\left( {3 - 2\cdot1} \right)^3}( - 12\cdot{1^2} + 6\cdot1)$</p>
-                        <p class="m1830-solution">${m_{tan}} = ({1^3})( - 12 + 6) = 1( - 6) =$</p>
+                        <p class="m1830-solution">${m_{tan}} = ({1^3})( - 12 + 6) = 1( - 6)=-6$</p>
                         <p class="m1830-answer m1830-step">${m_{tan}} = - 6$</p>
 
 
@@ -1978,7 +2010,7 @@
 
 
 
-                        <p class="m1830-answer">Horizontal Tangents at $x=\frac{3}{2}\;\;$ and $\;x = 0\;$ and $\;x=\frac{1}{2}$</p>
+                        <p class="m1830-answer">Horizontal Tangents at $x=\frac{3}{2}\;\;$ and $\;x = 0\;$ and $\;x=\frac{1}{2}.$</p>
                     </li>
 
                     <li class="m1830-problem">
@@ -2006,7 +2038,7 @@
 
 
 
-                        <p class="m1830-solution">$f&#39;(x) = \frac{{4{x^3}{{\left( {2x - 5} \right)}^2} - {x^4}\cdot4(2x - 5)}}{{{{\left[ {{{\left( {2x - 5} \right)}^2}} \right]}^2}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{{4{x^3}{{\left( {2x - 5} \right)}^2} - {x^4}\cdot{4(2x - 5)}}}{{{{\left[ {{{\left( {2x - 5} \right)}^2}} \right]}^2}}}$</p>
                         <p class="m1830-solution">$f&#39;(x) = \frac{{4{x^3}{{\left( {2x - 5} \right)}^2} - 4{x^4}(2x - 5)}}{{{{\left( {2x - 5} \right)}^4}}}$</p>
                         <p class="m1830-solution">$f&#39;(x) = \frac{{4{x^3}(2x - 5) - 4{x^4}}}{{{{\left( {2x - 5} \right)}^3}}}$</p>
                         <p class="m1830-solution">$f&#39;(x) = \frac{{8{x^4} - 20{x^3} - 4{x^4}}}{{{{\left( {2x - 5} \right)}^3}}}$</p>
@@ -2048,7 +2080,7 @@
 
 
 
-                        <p class="m1830-answer">Horizontal Tangents at $x=0\;\;$ and $\;x = 5$</p>
+                        <p class="m1830-answer">Horizontal Tangents at $x=0\;\;$ and $\;x = 5.$</p>
                     </li>
 
                     <li class="m1830-problem">
@@ -2077,13 +2109,14 @@
                         <p>Horizontal tangent</p>
                         <p class="m1830-solution">$\frac{{{e^{\sqrt x }}}}{{2\sqrt x }} = \frac{0}{1}$</p>
                         <p class="m1830-solution">${e^{\sqrt x }} \ne 0$</p>
-                        <p class="m1830-answer">There are no horizontal tangents</p>
+                        <p class="m1830-answer">There are no horizontal tangents.</p>
 
                     </li>
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            $f\left( x \right)=~\sqrt{{{x}^{2}}~+4x+5}={{\left( {{x}^{2}}+4x+5 \right)}^{{}^{1}/{}_{2}}}\quad \quad \quad x = 0$</p>
+                            $f\left( x \right)=~\sqrt{{{x}^{2}}~+4x+5}$ at $x = 0$</p>
+                          <p class="m1830-solution">  $f(x)={{\left( {{x}^{2}}+4x+5 \right)}^{{}^{1}/{}_{2}}}$</p>
 
                         <p class="m1830-solution">Point: $\quad f(0) = \sqrt {{0^2} + 4\cdot0 + 5} = \sqrt 5$</p>
                         <p class="m1830-solution m1830-step">$(0,\sqrt 5 )$</p>
@@ -2110,7 +2143,7 @@
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            COST FUNCTION: The total cost (in hundreds of dollars) of producing x pairs of sandals per week is:$C\left( x \right) = 6 + \;{\sqrt {3x + 25} ^{1/2}}$ $0\; \le x\; \le 30$</p>
+                            COST FUNCTION: The total cost (in hundreds of dollars) of producing x pairs of sandals per week is: $C\left( x \right) = 6 + \sqrt {3x + 25}$ when $0\; \le x\; \le 30$</p>
                         <ol>
 
                             <li>Find $C&#39;(x)$
@@ -2130,10 +2163,11 @@
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            PRICE DEMAND EQUATION: The number x of large pumpkin spice drinks people are willing to buy per week from a local coffee shop at a price of \$p is given by: $x = 1000 - 60{(p + 25)^{1/2}}$ $3.50\; \le p\; \le 6.25$</p>
+                            PRICE DEMAND EQUATION: The number of large pumpkin spice drinks $(x)$ people are willing to buy per week from a local coffee shop at a price of p (in dollars) is given by: </p>
+                            <p> $x = 1000 - 60{(p + 25)^{1/2}}$ when $3.50\; \le p\; \le 6.25$ </p>
                         <ol>
 
-                            <li>Find $dx/dp$
+                            <li>Find $\frac{dx}{dp}$
                                 <p class="m1830-solution">$x=1000-60{{\left( p+25 \right)}^{{}^{1}/{}_{2}}}$</p>
                                 <p class="m1830-solution">$\frac{dx}{dp}=0-60(\frac{1}{2}{{\left( p+25 \right)}^{-1/2}})(1)$</p>
                                 <p class="m1830-answer">$\frac{dx}{dp}=\frac{-30}{\sqrt{p+25}}$</p>
@@ -2149,13 +2183,15 @@
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            BIOLOGY A yeast culture at room temperature (68°F) is placed in a refrigerator set at a constant temperature of 38°F. After t hours, the temperature, T, of the culture is given approximately by $$T = 25{e^{ - 0.62t}} + 40$ $t\; \ge 0$$ What is the rate
+                            BIOLOGY: A yeast culture at room temperature (68°F) is placed in a refrigerator set at a constant temperature of 38°F. After t hours, the temperature, T, of the culture is given approximately by </p>
+                            <p>$T = 25{e^{ - 0.62t}} + 40$ when $t\; \ge 0.$</p>
+                            <p> What is the rate
                             of change of temperature of the culture at the end of 1 hour? At the end of 5 hours?</p>
 
                         <p class="m1830-solution">$T&#39; = 25{e^{ - 0.62t}}( - 0.62)$</p>
                         <p class="m1830-solution">$T&#39; = - 15.5{e^{ - 0.62t}}$</p>
                         <p class="m1830-solution">$T&#39;(1) = 15.5{e^{ - 0.62(1)}} = - {8.338^ \circ }\;per\;hour$</p>
-                        <p class="m1830-solution">At the end of one hour, the temperature of the culture is decreasing at a rate of 8.338 degrees per hour.</p>
+                        <p class="m1830-answer">At the end of one hour, the temperature of the culture is decreasing at a rate of 8.338 degrees per hour.</p>
                         <p class="m1830-solution">$T&#39;(5) = - 15.5{e^{( - 0.62(5))}} = - {0.698^ \circ }\;per\;hour$</p>
                         <p class="m1830-answer">At the end of five hours, the temperature of the culture is decreasing at at rate of 0.698 degrees per hour.</p>
 
