@@ -16,12 +16,12 @@
     .m1830-problem {
         page-break-inside: avoid;
     }
-    /*.m1830-unit {
+    .m1830-unit {
         page-break-before: always;
-    }*/
-    /*strong {
+    }
+    strong {
       page-break-before: always;
-    }*/
+    }
     iframe {
         display: none;
     }

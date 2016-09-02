@@ -50,18 +50,16 @@ cite {
     margin: .5em;
     padding-bottom: 0;
 }*/
-h1, h2, h3{
-font-variant: small-caps;
-}
+
 
 h1 {
-    /*font-variant: small-caps;*/
+    font-variant: small-caps;
     line-height: 3.5em;
 }
 
 h2 {
     /*font-size: 2em;*/
-    /*font-variant: small-caps;*/
+    font-variant: small-caps;
     font-weight: bold;
     line-height: 2.2em;
     /*margin: 1.2em 0 1.3em;*/
@@ -70,7 +68,7 @@ h2 {
 
 h3 {
     /*font-size: 1.4em;*/
-    /*font-variant: small-caps;*/
+    font-variant: small-caps;
     font-weight: bold;
     /*line-height: 1.8em;*/
     margin-bottom: 1.1em;
@@ -297,7 +295,11 @@ cite.cc {
 text-align: left;
 }
 
-/*@media print {
+var.fontnormal{
+    font-variant: normal;
+}
+
+@media print {
     body {
         background: none;
         font-size: 16px;
@@ -329,4 +331,4 @@ text-align: left;
     video {
         display: none;
     }
-}*/
+}
