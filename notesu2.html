@@ -5,6 +5,12 @@
     <title>MATH 1830 Notes</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+    <!-- josh testing bootstrap stuff -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     <!-- Load css file from shared location at pstcc.edu -->
     <link rel="stylesheet" href="css/notes.css" />
 
@@ -37,38 +43,78 @@
 
 <body>
 
-    <div class="m1830-sidenav">
+  <nav class="navbar navbar-default navbar-fixed-top">
+     <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="https://psccmath.github.io/math1830">MATH 1830</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav">
+
+              <!--         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+  <li><a href="#">Link</a></li> -->
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 1<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li><a href="notesu1.html">Notes</a></li>
+                    <li><a href="homeworku1.html">Homework</a></li>
 
 
-        <nav class="w3-sidenav w3-white w3-animate-left" style="display:none;z-index:5" id="mySidenav">
+                 </ul>
+              </li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 2<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li><a href="notesu2.html">Notes</a></li>
+                    <li><a href="homeworku2.html">Homework</a></li>
+
+
+                 </ul>
+              </li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 3<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li><a href="notesu3.html">Notes</a></li>
+                    <li><a href="homeworku3.html">Homework</a></li>
+
+
+                 </ul>
+              </li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 4<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li><a href="notesu4.html">Notes</a></li>
+                    <li><a href="homeworku4.html">Homework</a></li>
+
+
+                 </ul>
+              </li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Toggle<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li><a href="#" onclick="togglesolutions();return false;">Solutions</a></li>
+                    <li><a href="#" onclick="toggleanswers();return false;">Answers</a></li>
 
 
 
-            <!-- <a class="w3-hover-green" href="#top" onclick="w3_close();">Top</a> -->
-            <a class="w3-cyan" href="#">Unit 1</a>
-            <a class="w3-hover-green" href="notesu1.html#u1toc" onclick="w3_close();">Notes</a>
-            <a class="w3-hover-green" href="homeworku1.html#u1toc" onclick="w3_close();">Homework</a>
-            <a class="w3-cyan" href="#">Unit 2</a>
-            <a class="w3-hover-green" href="notesu2.html#u2toc" onclick="w3_close();">Notes</a>
-            <a class="w3-hover-green" href="homeworku2.html#u2toc" onclick="w3_close();">Homework</a>
-            <a class="w3-cyan" href="#">Unit 3</a>
-            <a class="w3-hover-green" href="notesu3.html#u3toc" onclick="w3_close();">Notes</a>
-            <a class="w3-hover-green" href="homeworku3.html#u3toc" onclick="w3_close();">Homework</a>
-            <a class="w3-cyan" href="#">Unit 4</a>
-            <a class="w3-hover-green" href="notesu4.html#u4toc" onclick="w3_close();">Notes</a>
-            <a class="w3-hover-green" href="homeworku4.html#u4toc" onclick="w3_close();">Homework</a>
+                 </ul>
+              </li>
+           </ul>
 
-
-            <a class="w3-cyan" href="#">Toggle</a>
-            <a id="togglesolution" class="w3-hover-green w3-aqua" href="#" onclick="togglesolutions();return false;">Solutions</a>
-            <a id="toggleanswer" class="w3-hover-green w3-aqua" href="#" onclick="toggleanswers();return false;">Answers</a>
-
-
-        </nav>
-
-        <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-        <span class="w3-opennav m1830-opennav w3-xxlarge" onclick="w3_open()">&#9776;</span>
-    </div>
+        </div>
+        <!-- /.navbar-collapse -->
+     </div>
+     <!-- /.container-fluid -->
+  </nav>
 
     <div class="container">
         <h1 id="u2toc">MATH 1830 Notes</h1>
@@ -238,7 +284,8 @@
 
                         <p class="m1830-answer">$\ln (7.389) = 2$</p>
 
-                        <p><strong>Review:</strong> Solve the variable to 2 decimal places</p>
+                        <p><strong>Review:</strong></p>
+                        <p> Solve the variable to 2 decimal places</p>
                     </li>
 
                     <li class="m1830-problem">
@@ -293,7 +340,8 @@
                         <p class="m1830-solution">$\frac{{\ln 3}}{{0.07}} = t$</p>
                         <p class="m1830-answer">$15.69 = t$</p>
 
-                        <p><strong>Review:</strong> Solve for the variable without using a calculator. </p>
+                        <p><strong>Review:</strong></p>
+                        <p>Solve for the variable without using a calculator. </p>
                     </li>
 
                     <li class="m1830-problem">
@@ -340,9 +388,9 @@
                         <p class="m1830-solution">$y = \ln (1)$</p>
                         <p class="m1830-answer">$y = 0$</p>
 
-                        <p><strong>Use the Properties of Logarithms to Completely Expand the Term</strong></p>
-                    </li>
+                    <p><strong>Use the Properties of Logarithms to Completely Expand the Term</strong></p>
 
+</li>
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
                             $f(x) = \ln \left( {x{y^2}} \right)$</p>
@@ -381,7 +429,7 @@
 
 
 
-                        <p><strong>Solve for x.  Check for Extraneous Solutions.</strong> </p>
+                        <p><strong>Solve for x.  Check for Extraneous Solutions.</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -464,7 +512,7 @@
 
 
 
-                <h4>Notes</h4>
+                <h4 class="break">Notes</h4>
                 <p>Continuous Compounding Formula (appreciation and depreciation): $$A = P{e^{rt}}$$ </p>
                 <p><strong>CONTINUOUS COMPOUND INTEREST:</strong> Round all answers to two decimal places.</p>
                 <ol>
@@ -675,9 +723,9 @@
                         <p class="m1830-solution">$f&#39;(x) = {e^x}$</p>
                         <p class="m1830-answer">The function and the derivative are the same.</p>
 
-                        <div class="pagebreak"></div>
 
-                        <p><strong>Derivative of$\;f\left( x \right) = lnx$</strong> </p>
+
+                        <p><strong>Derivative of$\;f\left( x \right) = lnx$</strong></p>
                         <p><strong>Definition of the derivative:  $\underset{h\rightarrow0}{lim}\frac{f(x+h)-f(x)}h$</strong></p>
                     </li>
 
@@ -747,7 +795,7 @@
   </li>
 </ol>
 
-                        <h4>Notes</h4>
+                        <h4 class="break">Notes</h4>
 
 
                         <div class="panel panel-primary">
@@ -804,7 +852,7 @@
                         <p class="m1830-solution">$f&#39;(x) = \frac{8}{x} - \frac{4}{x}$</p>
                         <p class="m1830-answer">$f&#39;(x) = \frac{4}{x}$</p>
 
-                        <p><strong>Properties of Logarithms:</strong> </p>
+                        <p><strong>Properties of Logarithms:</strong></p>
                         <p><strong>Use appropriate properties of logarithms to expand $f\left( x \right)$ and then find $f&#39;(x)$.</strong> </p>
 
                     </li>
@@ -829,7 +877,7 @@
                         <p class="m1830-solution">$f&#39;(x) = 1 - 0 - \frac{2}{x}$</p>
                         <p class="m1830-answer">$f&#39;(x) = 1 - \frac{2}{x}$</p>
 
-                        <p><strong>Tangent Lines:</strong> </p>
+                        <p><strong>Tangent Lines:</strong></p>
                         <p><strong>Find the equation of the line tangent to the graph of $f$ at the indicated value of x.</strong></p>
 
                     </li>
@@ -969,7 +1017,7 @@
                 </ol>
 
 
-                <h4>Notes</h4>
+                <h4 class="break">Notes</h4>
                 <p><strong>Derivatives of Products and Quotients</strong></p>
                 <p><strong>Rewriting a Function as a Product or Quotient</strong></p>
                 <ol>
@@ -1109,8 +1157,9 @@
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{x(3{x^5} - 8)}}{{{x^4}}}$</p>
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{3{x^5} - 8}}{{{x^3}}}$</p>
                                 <p class="m1830-answer">$r&#39;(x) = 3{x^2} - \frac{8}{{{x^3}}}$</p>
-                                <p><strong>Product Rule:     If $y=f(x)\cdot g(x)$, then $y&#39; = f&#39;(x)\cdot g(x)\; + \;\;f(x)\cdot g&#39;(x)$</strong></p>
-                                <p><em>Find $f&#39;(x)$ using the Product Rule.</em></p>
+                                <p><strong>Product Rule:</strong></p>
+                                          <p>If $y=f(x)\cdot g(x)$,</p> <p>then $y&#39; = f&#39;(x)\cdot g(x)\; + \;\;f(x)\cdot g&#39;(x)$</p>
+                                <p><strong>Find $f&#39;(x)$ using the Product Rule.</strong></p>
                             </li>
                         </ol>
                     </li>
@@ -1213,9 +1262,10 @@
 
 
 
-                        <p><strong>Quotient Rule: If $y = \;\frac{f(x)}{g(x)},$ then $y&#39; = \;\frac{{f&#39;(x)\;g(x)\; - \;f(x)\;g&#39;(x)\;}}{{[{g(x)}}]^2}$
-                            </strong></p>
-                              <p><em>Find $f&#39;(x)$ using the Quotient Rule.</em></p>
+                        <p><strong>Quotient Rule:</strong></p>
+                        <p> If $y = \;\frac{f(x)}{g(x)},$ then $y&#39; = \;\frac{{f&#39;(x)\;g(x)\; - \;f(x)\;g&#39;(x)\;}}{{[{g(x)}}]^2}$</p>
+
+                              <p><strong>Find $f&#39;(x)$ using the Quotient Rule.</strong></p>
 
 
 
@@ -1364,7 +1414,7 @@
 
 
 
-                        <p><strong>Tangent Lines</strong> </p>
+                        <p><strong>Tangent Lines</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1656,7 +1706,7 @@
                 </ol>
 
 
-                <h4>Notes</h4>
+                <h4 class="break">Notes</h4>
 
                 <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -1701,7 +1751,7 @@
                             $\frac{d}{{dx\;}}\;ln\left( {{x^2} - {x^4}} \right) = \;\frac{1}{{{x^2} - {x^4}}}$______
                             <span class="m1830-answer">$(2x - 4{x^3})$</span>
 
-                            <p><strong>Find $f&#39;\left( x \right)$ and simplify.</strong> </p>
+                            <p><strong>Find $f&#39;\left( x \right)$ and simplify.</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1737,7 +1787,7 @@
                         <p class="m1830-solution">$f&#39;(x) = 7{\left( {4x - 5\ln x} \right)^6}(4 - \frac{5}{x})$</p>
                         <p class="m1830-answer">$f&#39;(x) = 7(4 - \frac{5}{x}){\left( {4x - 5\ln x} \right)^6}$</p>
 
-                        <p><strong>REVIEW: DERIVATIVES, SLOPES OF TANGENT LINES, AND EQUATIONS OF TANGENT LINES</strong></p>
+                        <p><strong>Review: Derivative, Slopes of Tangent Lines, and Equations of Tangent Lines</strong></p>
                         <ul>
 
                             <li>
@@ -1756,6 +1806,7 @@
                                 <p> 3) Verify that each $x$ is in the domain of $f(x)$ and $f&#39;(x)$</p>
                             </li>
                         </ul>
+                        <p><strong>Horizontal Tangents</strong></p>
                           <p><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
                     </li>
 
@@ -1970,7 +2021,7 @@
 
                         <p class="m1830-solution">$\frac{d}{{dw}} = - 3{\left( {{w^2} - 5} \right)^{ - 4}}(2w)$</p>
                         <p class="m1830-answer">$\frac{d}{{dw}} = \frac{{ - 6w}}{{{{\left( {{w^2} - 5} \right)}^4}}}$</p>
-
+<p><strong>Horizontal Tangents</strong></p>
                         <p><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
                     </li>
 
