@@ -16,6 +16,9 @@
     .m1830-problem {
         page-break-inside: avoid;
     }
+    ol li p strong {
+  page-break-before: always;
+    }
     /*.m1830-unit {
         page-break-before: always;
     }*/

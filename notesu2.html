@@ -627,6 +627,7 @@
                 <h3>2.2 Derivatives of Exponential and Logarithmic Functions</h3>
 
                 <h4>Introduction</h4>
+                <p> <strong> Finding the derivative of $f(x) = {e^x}$ </strong></p>
                 <p><img src="images/notes/u2s2p1i.png" alt="graph of e raised to the x power. x-axis:  0 to 3.5 and y-axis:  0.5 to 20"></p>
                 <table>
                     <tr>
@@ -725,16 +726,16 @@
 
 
 
-                        <p><strong>Derivative of$\;f\left( x \right) = lnx$</strong></p>
-                        <p><strong>Definition of the derivative:  $\underset{h\rightarrow0}{lim}\frac{f(x+h)-f(x)}h$</strong></p>
+                        <p><strong>Finding the derivative of$\;f\left( x \right) = lnx$</strong></p>
+
                     </li>
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            Try to find the derivative of $f\left( x \right) = lnx$ using the definition of the derivative.</p>
+                            Try to find the derivative of $f\left( x \right) = lnx$ using the limit definition of the derivative, $\underset{h\rightarrow0}{lim}\frac{f(x+h)-f(x)}h$.</p>
 
                         <p class="m1830-answer">$\underset{h\rightarrow0}{lim}\frac{ln(x+h)-ln(x)}h$</p>
-
+                        <p class="m1830-answer">This is impossible for us to do algebraically.  Let's try a table.</p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1157,8 +1158,7 @@
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{x(3{x^5} - 8)}}{{{x^4}}}$</p>
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{3{x^5} - 8}}{{{x^3}}}$</p>
                                 <p class="m1830-answer">$r&#39;(x) = 3{x^2} - \frac{8}{{{x^3}}}$</p>
-                                <p><strong>Product Rule:</strong></p>
-                                          <p>If $y=f(x)\cdot g(x)$,</p> <p>then $y&#39; = f&#39;(x)\cdot g(x)\; + \;\;f(x)\cdot g&#39;(x)$</p>
+
                                 <p><strong>Find $f&#39;(x)$ using the Product Rule.</strong></p>
                             </li>
                         </ol>
@@ -1262,8 +1262,7 @@
 
 
 
-                        <p><strong>Quotient Rule:</strong></p>
-                        <p> If $y = \;\frac{f(x)}{g(x)},$ then $y&#39; = \;\frac{{f&#39;(x)\;g(x)\; - \;f(x)\;g&#39;(x)\;}}{{[{g(x)}}]^2}$</p>
+
 
                               <p><strong>Find $f&#39;(x)$ using the Quotient Rule.</strong></p>
 
@@ -1787,26 +1786,43 @@
                         <p class="m1830-solution">$f&#39;(x) = 7{\left( {4x - 5\ln x} \right)^6}(4 - \frac{5}{x})$</p>
                         <p class="m1830-answer">$f&#39;(x) = 7(4 - \frac{5}{x}){\left( {4x - 5\ln x} \right)^6}$</p>
 
-                        <p><strong>Review: Derivative, Slopes of Tangent Lines, and Equations of Tangent Lines</strong></p>
-                        <ul>
+    <p><strong>Horizontal Tangents</strong></p>
 
-                            <li>
-                                <p><em>Steps for Finding the Equation of the Tangent Line to the Graph of $f(x)$ at $x=a$</em></p>
-                                <p> 1) Find the y value by calculating $f(a)$ </p>
-                                <p> $\left(a, f(a)\right)$</p>
-                                <p> 2) Find the slope of the tangent line by calculating $f'(a)$ </p>
-                                <p>${m_{tan}}=f&#39;(a)$</p>
-                                <p> 3) Equation of the tangent line:</p> <p>$y-f(a)=f'(a)\left(x-a\right)$</p>
-                            </li>
 
-                            <li>
-                                <p><em>Steps for Finding the Value(s) where the Tangent Line is Horizontal</em></p>
-                                <p> 1) Set $f&#39;(x)=0$</p>
-                                <p> 2) Solve for $x$</p>
-                                <p> 3) Verify that each $x$ is in the domain of $f(x)$ and $f&#39;(x)$</p>
-                            </li>
-                        </ul>
-                        <p><strong>Horizontal Tangents</strong></p>
+
+                          <div class="panel-group">
+                            <div class="panel panel-primary">
+                              <div class="panel-heading">Finding the Equation of the Tangent Line</div>
+                              <div class="panel-body">
+                                <ol>
+                                  <li>Find the y value by calculating $f(a)$: $\left(a, f(a)\right)$ </li>
+
+                                  <li>Find the slope of the tangent line by calculating $f'(a)$: ${m_{tan}}=f&#39;(a)$</li>
+                                  <li> Equation of the tangent line: $y-f(a)=f'(a)\left(x-a\right)$</li>
+</ol>
+                                </div>
+                            </div>
+                            <div class="panel panel-primary">
+                              <div class="panel-heading">Finding the Value(s) where the Tangent Line is Horizontal</div>
+                              <div class="panel-body">
+                                <ol>
+                                  <li>Set $f&#39;(x)=0$</li>
+                              <li>Solve for $x$</li>
+                              <li> 3) Verify that each $x$ is in the domain of $f(x)$ and $f&#39;(x)$</li></ol>
+                            </div>
+                            </div>
+                          </div>
+
+
+
+
+
+
+
+
+
+
+
                           <p><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
                     </li>
 
