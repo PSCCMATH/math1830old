@@ -1,6 +1,6 @@
 @import url("m18302.css");
 @import url("printing.css");
-.m1830-answer, .m1830-solution {
+.m1830-solution {
     display: none;
 }
 @media print {
