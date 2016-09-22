@@ -1,4 +1,4 @@
-console.log("entered javascript file");
+console.log("entered toggle buttons javascript file");
 //solutions are visible by default if changed in the css file then set below to false
 var solutionsVisible = true;
 //answers are visible by default if changed in the css file then set below to false

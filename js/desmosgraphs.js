@@ -1,4 +1,4 @@
-var elt = document.getElementById('desu1sp');
+var elt = document.getElementById('desu1s1');
 
 var calculator = Desmos.Calculator(elt, {
   zoomButtons: false,
