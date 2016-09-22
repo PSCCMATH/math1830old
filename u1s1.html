@@ -4,15 +4,30 @@
 <head>
     <title>MATH 1830 Notes</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- josh testing bootstrap stuff -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/notes.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/togglebuttons.js"></script>
-    <script src="js/loadmathjax.js"></script>
-    <script src="js/googlestats.js"></script>
-    <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-    <script src="js/desmosunit1.js"></script>
+
+    <!-- Load css file from shared location at pstcc.edu something changed-->
+    <link rel="stylesheet" href="css/notes.css" />
+
+
+    <!-- load current MathJax Library Tex as HTML -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!-- configure inline math in HTML use single "$" or "\(" within a sentence or use double "$$" or "\[" to put it centered on its own line.  You must escape single $ with a "\" if its in a regular sentence-->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
+    </script>
+
+    <!-- load javascript file for answer toggle buttons and functions to hide and show emphasis tags -->
+    <script src="js/mathscripts.js"></script>
+
+    <!-- load javascript file to populate graph data from Desmos API. -->
+    <script src="js/desmosgraphs.js"></script>
 </head>
 
 <body>
