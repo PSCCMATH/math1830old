@@ -176,9 +176,9 @@
                         <li>Identify x-intercepts and y-intercept of $f(x)$
                             <ol>
 
-                                <li>x-intercepts: Set $y = 0$ and solve for x</li>
+                                <li>x-intercepts: Set $y = 0$ and solve for $x$</li>
 
-                                <li>y-intercepts: Set $x = 0$ and solve for y</li>
+                                <li>y-intercepts: Set $x = 0$ and solve for $y$</li>
                             </ol>
                         </li>
 
@@ -236,9 +236,9 @@
                         <li>Identify local maxima and minima of $f(x)$ using the First Derivative Test.
                             <ol>
 
-                                <li>A Local Maximum occurs at $x=a$ when $f&#39;(a)=0$ and $f&#39;(x)$ changes from increasing to decreasing across $a$.</li>
+                                <li>On the interval $(a,c)$, a local maximum occurs at $f(b)$ when $f(x)$ is increasing for all $x$ in the interval $(a,b]$ and $f(x)$ is decreasing for all $x$ in the interval $[b,c)$.</li>
 
-                                <li>A Local Minimum occurs at $x=a$ when $f&#39;(a)=0$ and $f&#39;(x)$ changes from decreasing to increasing across $a$.</li>
+                                <li>On the interval $(a,c)$, a local minimum occurs at $f(b)$ when $f(x)$ is decreasing for all $x$ in the interval $(a,b]$ and $f(x)$ is increasing for all $x$ in the interval $[b,c)$.</li>
                             </ol>
                         </li>
                     </ol>
@@ -261,7 +261,7 @@
 
       <li>Values of $x$ where $f&#39;&#39;(x)=0$ are critical numbers.</li>
 
-      <li>Values of $x$ where $f&#39;&#39;(x)=0$ is undefined are partitions. </li>
+      <li>Values of $x$ where $f&#39;&#39;(x)$ is undefined are partitions. </li>
 
       <li>Values of $x$ where $f(x)$ is undefined are partitions.</li>
   </ol>
@@ -468,6 +468,7 @@
                         </ol>
 <p class="m1830-pagebreak"></p>
                         <li> Graph $f(x)$
+                          <img src="images/notes/u1spp3i.png" alt="blank coordinate plane" />
                             <p class="m1830-answer"><img src="images/notes/u3s1p1c.png" alt="graph of revenue function"></p>
                         </li>
                 </ol>
@@ -573,7 +574,7 @@
 
                                             <p>Inflection Points:</p>
                                             <p class="m1830-answer">Even though the function changes from concave down to concave up at $x=\frac{5}{2}$, there are no points of inflection because the function is undefined at $x=\frac{5}{2}.$</p>
-
+<img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
                                             <p class="m1830-answer"><img src="images/notes/u3s3p1c.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
                     </li>
 
@@ -653,6 +654,7 @@
                             <p class="m1830-solution">$f\left( -\frac{3}{5} \right)={{e}^{-3/5}}\left( 5\left( -\frac{3}{5} \right)-7 \right)\approx -5.488$</p>
 
                             <p class="m1830-answer">There is a point of inflection at $\left( -\frac{3}{5},-5.488 \right)$</p>
+                        <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
                             <p class="m1830-answer"><img src="images/notes/u3s3p2c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
                     </li>
 
@@ -720,7 +722,7 @@
 
                             <p>Inflection Points: </p>
                             <p class="m1830-answer">There are no points of inflection.</p>
-
+<img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
                             <p class="m1830-answer"><img src="images/notes/u3s3p3c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
                     </li>
 
@@ -788,6 +790,7 @@
                             <p class="m1830-solution">$f\left( -2 \right)={{\left( -2 \right)}^{3}}+6{{\left( -2 \right)}^{2}}+9\left( -2 \right)=-2$</p>
 
                             <p class="m1830-answer">The graph of $f(x)$ has a point of inflection at $\left( -2,-2 \right)$</p>
+                            <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
                             <p class="m1830-answer"><img src="images/notes/u3s3p4c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
                     </li>
                 </ol>
@@ -1063,25 +1066,32 @@
 <p class="m1830-pagebreak"></p>
 
                 <h4>Notes</h4>
-                <p><strong>Algorithm for Determining Extreme Values</strong></p>
-                <p><strong>Suppose that $f(x)$  is a continuous function over a closed interval [a, b].</strong> </p>
-                <p><strong>To find the absolute maximum and minimum values of the function $f(x)$on [a, b]:</strong></p>
-                <ol>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Algorithm for Determining Extreme Values </h3>
+                  </div>
+                  <div class="panel-body">
+                    <p><strong>Suppose that $f(x)$  is a continuous function over a closed interval [a, b].</strong> </p>
+                    <p><strong>To find the absolute maximum and minimum values of the function $f(x)$ on [a, b]:</strong></p>
+                    <ol>
 
-                    <li>Find $f&#39;(x)$ </li>
+                        <li>Find $f&#39;(x)$ </li>
 
-                    <li>Determine the critical points of $f&#39;(x)$ in [a, b]
-                        <p>(that is, find all x values for which $f&#39;(x)=0$, $f&#39;(x)$ does not exist, or $f(x)$ does not exist).</p>
-                    </li>
+                        <li>Determine the critical points of $f&#39;(x)$ in [a, b]
+                            <p>(that is, find all x values for which $f&#39;(x)=0$, $f&#39;(x)$ does not exist, or $f(x)$ does not exist).</p>
+                        </li>
 
-                    <li>List the critical points of $f(x)$ and the endpoints of the interval [a &amp; b]</li>
+                        <li>List the critical points of $f(x)$ and the endpoints of the interval [a &amp; b]</li>
 
-                    <li>Find the function values of critical points and the endpoints</li>
+                        <li>Find the function values of critical points and the endpoints</li>
 
-                    <li>The largest of these values is the absolute maximum of on the interval [a, b]. </li>
+                        <li>The largest of these values is the absolute maximum of on the interval [a, b]. </li>
 
-                    <li>The smallest of these is the absolute minimum of on the interval [a, b].</li>
-                </ol>
+                        <li>The smallest of these is the absolute minimum of on the interval [a, b].</li>
+                    </ol>
+
+                  </div>
+                </div>
 
                 <p class="m1830-pagebreak"></p></p>
                 <p><strong>Find the absolute minimum and maximum values of the function, if they exist, over the given interval.</strong></p>
@@ -1357,8 +1367,8 @@
                         <p class="m1830-answer">The Absolute Minimum on the interval is: $(-1, -.0156)$</p>
 
                     </li>
-
-                    <li class="m1830-problem">
+    <p class="m1830-pagebreak"> </p>
+                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
                             $f(x)=-3\quad \quad [-2,2]$</p>
 
@@ -1366,7 +1376,7 @@
                         <p class="m1830-answer">There are no maximum or minimum values becasue this is a constant function.</p>
 
                     </li>
-
+  <p class="m1830-pagebreak"> </p>
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
                             An employee’s monthly production $M$, in number of units produced, is found to be a function of the number of year of service, $t$. For a certain product, a productivity function is being given by: $M(t)=-2{{t}^{2}}+100t+180,\quad 0\le t\le 40$</p>
@@ -1499,8 +1509,8 @@
                         <p class="m1830-solution">$V=\left( 400-40h-40h+4{{h}^{2}} \right)h$</p>
                         <p class="m1830-solution">$V=\left( 400-80h+4{{h}^{2}} \right)h$</p>
                         <p class="m1830-solution">To maximize volume:</p>
-                        <p class="m1830-solution">1) take the derivative $V&#39(h)$</p>
-                        <p class="m1830-solution">2) set $V&#39(h)=0$ to find critical numbers</p>
+                        <p class="m1830-solution">1) take the derivative $V&#39;(h)$</p>
+                        <p class="m1830-solution">2) set $V&#39;(h)=0$ to find critical numbers</p>
                         <p class="m1830-solution">3) locate max(check domain issues)</p>
                         <p class="m1830-solution">$V&#39;(h) = 12{h^2} - 160h + 400$ </p>
                         <p class="m1830-solution">$V’(h)=0$</p>
