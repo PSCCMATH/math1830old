@@ -1,279 +1,271 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
+    <!-- Needs a Title -->
     <title>MATH 1830</title>
+    <!-- Mobile Friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Internal bootstrap themed CSS. Reference: https://bootswatch.com/flatly/#typography-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT" crossorigin="anonymous">
+    <!-- External CSS - un-comment out the line below and create a main.css in a styles folder -->
+    <!-- <link rel="stylesheet" href="styles/main.css"/> -->
+    <!-- For menus and common javascript things that use jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- For Math Formulas - Basic Configuration -->
+<script type="text/javascript" src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Ready-to-go icons - check out this site for a reference http://fontawesome.io/icons/ -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Google analytics -->
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-82640741-1', 'auto');
+      ga('send', 'pageview');
 
-  ga('create', 'UA-82640741-1', 'auto');
-  ga('send', 'pageview');
+    </script>
 
-</script>
 
   </head>
+
   <body>
-  <!-- <h1>  MATH 1830</h1>
-<h2>  Basic Calculus and Modeling</h2>
-<p>Mary Monroe-Ellis</p>
-  <p>Susan Mosteller</p>
-a change
-   -->
+    <!-- Keep the DIV container to add the margins and make it scalable for mobile -->
+    <nav class="navbar navbar-default">
+
+      <div class="container-fluid">
+
+        <!-- <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> <a class="navbar-brand" href="#">Brand</a> </div> -->
+
+        <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="jumbotron">
+
+        <div class="row">
+
+          <div class="col-md-8">
+            <h1>PSCC Math</h1>
+
+            <p><a href="https://psccmath.github.io/math1830" class="btn btn-primary btn-lg">MATH 1830</a></p>
+          </div>
+
+          <div class="col-md-4"> <img src="images/bluecurves.jpg" alt="Decorative abstract curves" class="img-rounded" width="275" height="183"> </div>
+        </div>
+      </div>
+      <!-- begin row 1 -->
+
+      <div class="row">
+
+        <div class="col-md-3">
+
+          <div class="panel panel-primary">
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Unit 1 Limits</h3> </div>
+
+            <div class="panel-body">
+              <p> <strong> </strong> </p>
+<p> <strong>Limits </strong> </p>
+<p> <strong>Continuity </strong> </p>
+<p> <strong>The Definition of Derivatives </strong> </p>
+<p> <strong>The Power Rule</strong> </p>
+<p> <strong>Marginal Analysis </strong> </p>
+
+              <div class="btn-toolbar pull-right"> <a class="btn btn-default" role="button" href="notesu1.html" target="_blank">Notes</a> <a class="btn btn-default" role="button" href="homeworku1.html" target="_blank">Homework</a>
+                <!-- ending of btn toolbar -->
+              </div>
+              <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">StackEdit Template Code</h4>
+                      </div>
+                      <div class="modal-body">
+                        <input class="form-control" type="text" id="foo" value="&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;!-- Needs a Title --&gt; &lt;title&gt;&lt;%= documentTitle %&gt;&lt;/title&gt; &lt;!-- Mobile Friendly --&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; &lt;!-- Internal bootstrap themed CSS. Reference: https://bootswatch.com/flatly/#typography--&gt; &lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT&quot; crossorigin=&quot;anonymous&quot;&gt; &lt;!-- External CSS - un-comment out the line below and create a main.css in a styles folder --&gt; &lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/main.css&quot;/&gt; --&gt; &lt;!-- Ready-to-go icons - check out this site for a reference http://fontawesome.io/icons/ --&gt; &lt;link href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;!-- For menus and common javascript things that use jquery --&gt; &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;&gt;&lt;/script&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;!-- For Math Formulas - Basic Configuration --&gt; &lt;script type=&quot;text/x-mathjax-config&quot;&gt; MathJax.Hub.Config({ extensions: [&quot;tex2jax.js&quot;], jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;], tex2jax: { inlineMath: [ ['$','$'], [&quot;\\(&quot;,&quot;\\)&quot;] ], displayMath: [ ['$$','$$'], [&quot;\\[&quot;,&quot;\\]&quot;] ], processEscapes: true }, &quot;HTML-CSS&quot;: { availableFonts: [&quot;TeX&quot;] } }); &lt;/script&gt; &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;&lt;/script&gt; &lt;/head&gt; &lt;body&gt; &lt;!-- Keep the DIV container to add the margins and make it scalable for mobile --&gt; &lt;div class=&quot;container&quot;&gt; &lt;%= documentHTML %&gt; &lt;!-- Ending for DIV Container --&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;">
+
+<!-- Trigger -->
+<br><button class="btn center-block" data-clipboard-target="#foo">
+    Copy
+</button>
+<p style="color: green;	display: none;" class="text-center copied">Copied!</p>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+<!-- ending of panel -->
+            </div>
+          </div>
+          <!-- ending of panel 1 of row-->
+        </div>
+
+        <div class="col-md-3">
+
+          <div class="panel panel-primary">
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Unit 2 Derivatives</h3> </div>
+
+            <div class="panel-body">
+              <p><strong>Exponentials and Logarithms</strong></p>
+            <p><strong>Natural Log Applications </strong></p>
+            <p><strong>Exponential and Logarithmic Derivatives</strong></p>
+            <p><strong>The Product and Quotient Rules </strong></p>
+            <p><strong>The Chain Rule </strong></p>
 
 
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-   <link rel="stylesheet" href="css/w3.css">
-   <!-- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css"> -->
-   <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> -->
+            <div class="btn-toolbar pull-right"> <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a> <a class="btn btn-default" role="button" href="homeworku2.html" target="_blank">Homework</a>
+              <!-- ending of btn toolbar -->
+            </div>
 
+             </div>
+          </div>
+          <!-- ending of panel 2 of row-->
+        </div>
 
-   <!-- Side Navigation on click -->
-   <!--<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none;z-index:2" id="mySidenav">
-     <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-teal">Close
-       <i class="fa fa-remove"></i>
-     </a>
-     <a href="#">Link 1</a>
-     <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    <a href="#">Link 4</a>
-    <a href="#)">Link 5</a>
-  </nav>-->
+        <div class="col-md-3">
 
-   <!-- Navbar -->
-   <div class="w3-top">
-    <ul class="w3-navbar w3-black w3-left-align w3-large">
-     <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-       <a class="w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-     </li>
-     <li><a href="#" class="w3-teal"><i class="fa fa-home w3-margin-right"></i>PSCC</a></li>
-     <!--<li class="w3-hide-small"><a href="#" class="w3-hover-white">Mary Monroe-Ellis</a></li>
-     <li class="w3-hide-small"><a href="#" class="w3-hover-white">Susan Mosteller</a></li>-->
-  <!--   <li class="w3-hide-small w3-dropdown-hover">
-    <a href="#" class="w3-hover-white" title="Notifications">Mary Monroe-Ellis<i class="fa fa-caret-down"></i></a>
-       <div class="w3-dropdown-content w3-white w3-card-4">
-         <a href="mmecoursepoliciesf2016.html">Course Policies</a>
-         <a href="mmecontactinfo.html">Contact Information</a>
-         <a href="mmefall2016schedule.html">Instructor Schedule</a>
-          <a href="mmecalendarfall2016.html">Weekly Calendar Fall 2016</a>
-       </div>
-     </li>
-     <li class="w3-hide-small w3-dropdown-hover">
-    <a href="#" class="w3-hover-white" title="Notifications">Susan Mosteller<i class="fa fa-caret-down"></i></a>
-       <div class="w3-dropdown-content w3-white w3-card-4">
-         <a href="#">Course Policies</a>
-         <a href="#">Contact Information</a>
-         <a href="#">Instructor Schedule</a>
-           <a href="#">Weekly Calendar Fall 2016</a>
-       </div>
-     </li>-->
-     <li class="w3-hide-small w3-right"><a href="#" class="w3-hover-teal" title="Search"><i class="fa fa-search"></i></a></li>
-    </ul>
-   </div>
+          <div class="panel panel-primary">
 
-   <!-- Navbar on small screens -->
-   <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:43px;">
-     <ul class="w3-navbar w3-left-align w3-large w3-theme">
-       <li><a href="#">Mary Monroe-Ellis</a></li>
-       <li><a href="#">Susan Mosteller</a></li>
-       <!--<li><a href="#">Link 3</a></li>-->
-     </ul>
-   </div>
+            <div class="panel-heading">
+              <h3 class="panel-title">Unit 3 Applications of Derivatives</h3> </div>
 
-   <div class="w3-display-container w3-animate-opacity">
-     <img class="testimg" src="images/bluecurves.jpg" alt="Decorative abstract curves" style="width:100%;min-height:350px;max-height:600px;">
-     <div class="w3-container w3-display-bottomleft w3-margin-bottom">
-       <button  class="w3-btn w3-xlarge w3-theme" title="Go To W3.CSS">MATH 1830</button>
-     </div>
-   </div>
+            <div class="panel-body">
+              <p><strong>Analyzing and Interpreting Graphs</strong></p>
+              <p><strong>Curve Sketching</strong></p>
+              <p><strong>Optimization</strong></p>
+              <p><strong>Absolute Maximum and Minimum</strong></p>
+              <p><strong>Applications of Optimization</strong></p>
 
-   <!-- Modal -->
-   <!-- <div id="id01" class="w3-modal">
-       <div class="w3-modal-content w3-card-8 w3-animate-top">
-         <header class="w3-container w3-teal">
-           <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn"><i class="fa fa-remove"></i></span>
-           <h4>Oh snap! We just showed you a modal..</h4>
-           <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-         </header>
-         <div class="w3-container">
-           <p>Cool huh? Ok, enough teasing around..</p>
-           <p>Go to our <a class="w3-btn" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-         </div>
-         <footer class="w3-container w3-teal">
-           <p>Modal footer</p>
-         </footer>
-       </div>
-   </div> -->
-
-   <!-- Container -->
-   <div class="w3-container w3-padding-64 w3-center">
-   <h2>UNITS</h2>
-   <h3> Course Materials</h3>
-
-   <div class="w3-row"><br>
-
-   <div class="w3-quarter">
-     <img src="images/notes/u1s2p2.png" alt="Limit Graph" style="width:45%" class="w3-circle">
-    <h2> Limits </h2>
-   <p><a href="notesu1.html">Unit 1 Notes</a></p>
-
-   <p><a href="homeworku1.html">Unit 1 Homework</a></p>
-   </div>
-
-   <div class="w3-quarter">
-     <img src="images/hw/u3s1p1c.png" alt="Image of Quartic Function" style="width:45%" class="w3-circle">
-    <h2> Derivatives </h2>
-   <p><a href="notesu2.html">Unit 2 Notes</a></p>
-   <p><a href="homeworku2.html">Unit 2 Homework</a></p>
-   </div>
-
-   <div class="w3-quarter">
-     <img src="images/notes/u3s6p1i.png" alt="Boss" style="width:45%" class="w3-circle">
-    <h2> Applications of Derivatives</h2>
-   <p><a href="notesu3.html">Unit 3 Notes</a></p>
-   <p><a href="homeworku3.html">Unit 3 Homework</a></p>
-   </div>
-
-   <div class="w3-quarter">
-     <img src="images/notes/u4s5p1ia.png" alt="Integral Graph Image" style="width:45%" class="w3-circle">
-    <h2> Integrals </h2>
-   <p><a href="notesu4.html">Unit 4 Notes</a></p>
-   <p><a href="homeworku4.html">Unit 4 Homework</a></p>
-   </div>
-
-   </div>
-   </div>
-
-   <!-- Row -->
-<!--<div class="w3-row-padding w3-padding-64 w3-theme-l1">
-
-   <div class="w3-quarter">
-   <h2>Our Portfolio</h2>
-   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-   </div>
-
-   <div class="w3-quarter">
-   <div class="w3-card-2 w3-white">
-     <img src="img_fjords.jpg" alt="Vernazza" style="width:100%">
-     <div class="w3-container">
-     <h3>Customer 1</h3>
-     <h4>Trade</h4>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     </div>
-     </div>
-   </div>
-
-   <div class="w3-quarter">
-   <div class="w3-card-2 w3-white">
-     <img src="img_lights.jpg" alt="Cinque Terre" style="width:100%">
-     <div class="w3-container">
-     <h3>Customer 2</h3>
-     <h4>Trade</h4>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     </div>
-     </div>
-   </div>
-
-   <div class="w3-quarter">
-   <div class="w3-card-2 w3-white">
-     <img src="img_mountains.jpg" alt="Monterosso" style="width:100%">
-     <div class="w3-container">
-     <h3>Customer 3</h3>
-     <h4>Trade</h4>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     <p>Blablabla</p>
-     </div>
-     </div>
-   </div>
-
- </div>-->
-
-   <!-- Container -->
-  <!-- <div class="w3-container" style="position:relative">
-     <a onclick="w3_open()" class="w3-btn-floating-large w3-teal" style="position:absolute;top:-28px;right:24px;z-index:0;">
-     <i class="fa fa-plus"></i></a>
-   </div>-->
-
-   <div class="w3-row-padding w3-center w3-padding-64">
-       <h2>Helpful Links</h2>
-
-       <div class="w3-third w3-margin-bottom">
-         <ul class="w3-ul w3-border w3-hover-shadow">
-           <li class="w3-teal" >
-             <p class="w3-xlarge"><a href="https://www.desmos.com/calculator"  target="_blank">Desmos Graphing Calculator</a></p>
-           </li>
-
-
-         </ul>
-       </div>
-
-       <div class="w3-third w3-margin-bottom">
-         <ul class="w3-ul w3-border w3-hover-shadow">
-           <li class="w3-teal">
-               <p class="w3-xlarge"><a href="http://www.pstcc.edu/math/help.php"  target="_blank">Pellissippi State Math Help Page</a></p>
-           </li>
-
-         </ul>
-       </div>
-
-       <div class="w3-third w3-margin-bottom">
-         <ul class="w3-ul w3-border w3-hover-shadow">
-           <li class="w3-teal">
-
-            <p class="w3-xlarge"><a href="http://www.calculus.org/"  target="_blank">Online Calculus Resources</a>
-
-          </p>
-           </li>
-
-         </ul>
-       </div>
-   </div>
+              <div class="btn-toolbar pull-right"> <a class="btn btn-default" role="button" href="notesu3.html" target="_blank">Notes</a> <a class="btn btn-default" role="button" href="homeworku3.html" target="_blank">Homework</a>
+                <!-- ending of btn toolbar -->
+              </div>
+          </div>
+          <!-- ending of panel 3 of row-->
+        </div>
+        <!-- ending of first row -->
+      </div>
+      <!-- begin 2nd row -->
 
 
 
+        <div class="col-md-3">
 
-<footer>
-     <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-       <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
-       <a class="w3-btn w3-theme" href="#myPage"><span class="w3-xlarge">
-       <i class="fa fa-chevron-circle-up"></i></span></a>
-     </div>
-   </footer>
+          <div class="panel panel-primary">
 
-   <!-- Script For Side Navigation -->
-   <script>
-   function w3_open() {
-       var x = document.getElementById("mySidenav");
-       x.style.width = "300px";
-       x.style.textAlign = "center";
-       x.style.fontSize = "40px";
-       x.style.paddingTop = "10%";
-       x.style.display = "block";
-   }
-   function w3_close() {
-       document.getElementById("mySidenav").style.display = "none";
-   }
+            <div class="panel-heading">
+              <h3 class="panel-title">Unit 4 Integrals </h3> </div>
 
-   // Used to toggle the menu on smaller screens when clicking on the menu button
-   function openNav() {
-       var x = document.getElementById("navDemo");
-       if (x.className.indexOf("w3-show") == -1) {
-           x.className += " w3-show";
-       } else {
-           x.className = x.className.replace(" w3-show", "");
-       }
-   }
-   </script>
+            <div class="panel-body">
+              <p> <strong>Area by Sums</strong> </p>
+              <p> <strong>The Fundamental Theorem of Calculus</strong> </p>
+              <p> <strong>Indefinite Integrals</strong> </p>
+              <p> <strong>Integration by Substitution</strong> </p>
+              <p> <strong>The Area Between Curves</strong> </p>
 
-   </body>
-   </html>
+              <div class="btn-toolbar pull-right"> <a class="btn btn-default" role="button" href="notesu4.html" target="_blank">Notes</a> <a class="btn btn-default" role="button" href="homeworku4.html" target="_blank">Homework</a>
+                <!-- ending of btn toolbar -->
+              </div>
+             </div>
+          </div>
+          <!-- ending of panel 1 of row 2-->
+        </div>
+
+    </div>
+
+        <div class="col-md-12">
+
+          <div class="panel panel-primary">
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Additional Resources</h3> </div>
+
+            <div class="panel-body">
+              <div class="btn-toolbar pull-right">
+                <a class="btn btn-default" role="button" href="https://www.desmos.com/calculator"  target="_blank">Desmos Graphing Calculator</a>
+                <a class="btn btn-default" role="button" href="http://www.pstcc.edu/math/help.php"  target="_blank">Pellissippi State Math Help Page</a>
+                <a class="btn btn-default" role="button" href="http://www.calculus.org/"  target="_blank">Online Calculus Resources</a>
+                <!-- ending of btn toolbar -->
+              </div>
+            </div>
+          </div>
+          <!-- ending of panel 2 of row 2-->
+        </div>
+
+        <div class="col-md-3">
+          <!-- <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">panel title goes here</h3>
+        </div>
+        <div class="panel-body">
+        <p>
+          stuff goes here
+        </p>
+        </div>
+      </div> -->
+          <!-- ending of panel 3 of row 2-->
+        </div>
+        <!-- ending of first row -->
+
+      <!-- Ending for DIV Container -->
+    </div>
+
+    <script>
+    var clip = new Clipboard('.btn');
+
+    clip.on('success', function(e) {
+      $('.copied').show();
+      $('.copied').fadeOut(1000);
+    });
+    </script>
+
+  </body>
+
+</html>
