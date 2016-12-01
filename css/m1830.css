@@ -3,9 +3,9 @@
 
 
 body {
-    background: #f2f2f2;
+    background: rgb(252,252,252);
     color: black;
-    font-family: Georgia, Palatino, serif;
+    /*font-family: Georgia, Palatino, serif;*/
     font-size: 20px;
     /*line-height: 1em;*/
 }
