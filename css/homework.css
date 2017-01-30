@@ -5,6 +5,6 @@
 }
 @media print {
     .m1830-answer, .m1830-solution {
-        display: none;
+        visibility: hidden;
     }
 }

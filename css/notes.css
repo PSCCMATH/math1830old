@@ -1,8 +1,8 @@
 @import url("m1830.css");
 @import url("printing.css");
-/*@media print {
+@media print {
     .m1830-answer, .m1830-solution {
         visibility: hidden;
-    }*/
+    }
 
 }
