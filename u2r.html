@@ -49,13 +49,32 @@
         .btn-video, .btn-explore, .btn-read {
             background: #1a6503;
             color: white;
+            margin-bottom: .5em;
+            margin-top: .5em;
         }
 
         .btn-assignment, .btn-quiz {
             background: #CE0000;
             color: white;
         }
+
+
+
+
     </style>
+
+
+        <!-- load current MathJax Library Tex as HTML -->
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+        <!-- configure inline math in HTML use single "$" or "\(" within a sentence or use double "$$" or "\[" to put it centered on its own line.  You must escape single $ with a "\" if its in a regular sentence-->
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
+        </script>
+
+
+
+
 
 </head>
 
@@ -107,7 +126,7 @@
 
             <div class="btn-toolbar pull-right">
                 <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                <a class="btn btn-print" role="button" href="TODO" target="_blank"> Print Notes</a>
+                <a class="btn btn-print" role="button" href="u2notes.pdf" target="_blank">Notes</a>
                 <!-- ending of btn toolbar -->
             </div>
 
@@ -140,7 +159,7 @@
 
 
 
-                                        <div class="btn-toolbar pull-right">
+                                        <div class="pull-right">
                                             <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
                                             <a class="btn btn-notes" role="button" href="notesu2.html" target="_blank">Notes</a>
                                             <!-- ending of btn toolbar -->
@@ -149,217 +168,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="panel panel-primary">
 
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Read It</h3> </div>
-
-                                    <div class="panel-body">
-
-
-
-                                        <div class="btn-toolbar pull-right">
-                                            <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                            <a class="btn btn-read" role="button" href="TODO" target="_blank">Openstax Calculus</a>
-                                            <!-- ending of btn toolbar -->
-                                        </div>
-
-                                    </div>
-                                </div>
-                           </div>
-                           <div class="col-md-3">
-                               <div class="panel panel-primary">
-
-                                   <div class="panel-heading">
-                                       <h3 class="panel-title">Watch It</h3> </div>
-
-                                   <div class="panel-body">
-
-
-
-                                       <div class="btn-toolbar pull-right">
-                                           <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                           <a class="btn btn-video" role="button" href="TODO" target="_blank">Video</a>
-                                           <!-- ending of btn toolbar -->
-                                       </div>
-
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col-md-3">
-                               <div class="panel panel-primary">
-
-                                   <div class="panel-heading">
-                                       <h3 class="panel-title">Explore It</h3> </div>
-
-                                   <div class="panel-body">
-
-
-
-                                       <div class="btn-toolbar pull-right">
-                                           <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                           <a class="btn btn-explore" role="button" href="TODO" target="_blank">Explore</a>
-                                           <!-- ending of btn toolbar -->
-                                       </div>
-
-                                   </div>
-                               </div>
-                           </div>
-                        </div>
-                        <!-- end of row -->
-
-
-
-<br>
-
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="panel panel-primary">
-
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Practice with Solutions</h3> </div>
-
-                                <div class="panel-body">
-
-
-
-                                    <div class="btn-toolbar pull-right">
-                                        <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                        <a class="btn btn-practice" role="button" href="homeworku2.html" target="_blank">Additional Practice</a>
-                                        <!-- ending of btn toolbar -->
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3"></div>
-                        <div class="col-md-6">
-                            <div class="panel panel-primary">
-
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">ASSIGNMENTS</h3> </div>
-
-                                <div class="panel-body">
-
-
-
-                                    <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.1 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.1 Homework Quiz</a>
-                                        <!-- ending of btn toolbar -->
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-
-                      <!-- end of row -->
-
-</div>
-<!-- end of collapsing panel -->
-</div>
-<!-- end of panel primary -->
-
-                </div>
-            <!-- end of panel group -->
-
-            <div class="panel-group">
-
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h2 class="panel-title">
-                          <a data-toggle="collapse" aria-expanded="false" href="#collapse2">2.2 Derivatives of Exponential and Logarithmic Functions</a>
-                        </h2>
-                      </div>
-
-                      <!-- end of panel heading -->
-                        <div id="collapse2" class="panel-collapse collapse">
-                            <br>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="panel panel-primary">
-
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Notes with Solutions</h3> </div>
-
-                                        <div class="panel-body">
-
-
-
-                                            <div class="btn-toolbar pull-right">
-                                                <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                <a class="btn btn-notes" role="button" href="notesu2.html" target="_blank">Notes</a>
-                                                <!-- ending of btn toolbar -->
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-primary">
-
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Read It</h3> </div>
-
-                                        <div class="panel-body">
-
-
-
-                                            <div class="btn-toolbar pull-right">
-                                                <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                <a class="btn btn-read" role="button" href="TODO" target="_blank">Openstax Calculus</a>
-                                                <!-- ending of btn toolbar -->
-                                            </div>
-
-                                        </div>
-                                    </div>
-                               </div>
-                               <div class="col-md-3">
-                                   <div class="panel panel-primary">
-
-                                       <div class="panel-heading">
-                                           <h3 class="panel-title">Watch It</h3> </div>
-
-                                       <div class="panel-body">
-
-
-
-                                           <div class="btn-toolbar pull-right">
-                                               <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                               <a class="btn btn-video" role="button" href="TODO" target="_blank">Video</a>
-                                               <!-- ending of btn toolbar -->
-                                           </div>
-
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-3">
-                                   <div class="panel panel-primary">
-
-                                       <div class="panel-heading">
-                                           <h3 class="panel-title">Explore It</h3> </div>
-
-                                       <div class="panel-body">
-
-
-
-                                           <div class="btn-toolbar pull-right">
-                                               <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                               <a class="btn btn-explore" role="button" href="TODO" target="_blank">Explore</a>
-                                               <!-- ending of btn toolbar -->
-                                           </div>
-
-                                       </div>
-                                   </div>
-                               </div>
-                            </div>
-                            <!-- end of row -->
-
-
-
-    <br>
-
-                        <div class="row">
                             <div class="col-md-3">
                                 <div class="panel panel-primary">
 
@@ -379,7 +188,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3"></div>
+
                             <div class="col-md-6">
                                 <div class="panel panel-primary">
 
@@ -390,182 +199,317 @@
 
 
 
-                                        <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.2 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.2 Homework Quiz</a>
+                                        <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.1 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.1 Homework Quiz</a>
                                             <!-- ending of btn toolbar -->
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-                          </div>
-
-                          <!-- end of row -->
-
-    </div>
-    <!-- end of collapsing panel -->
-    </div>
-    <!-- end of panel primary -->
-
-                    </div>
-                <!-- end of panel group -->
-                <div class="panel-group">
-
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h2 class="panel-title">
-                              <a data-toggle="collapse" aria-expanded="false" href="#collapse3">2.3 Product and Quotient Rules</a>
-                            </h2>
-                          </div>
-
-                          <!-- end of panel heading -->
-                            <div id="collapse3" class="panel-collapse collapse">
-                                <br>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="panel panel-primary">
-
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Notes with Solutions</h3> </div>
-
-                                            <div class="panel-body">
 
 
-
-                                                <div class="btn-toolbar pull-right">
-                                                    <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                    <a class="btn btn-notes" role="button" href="notesu2.html" target="_blank">Notes</a>
-                                                    <!-- ending of btn toolbar -->
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="panel panel-primary">
-
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Read It</h3> </div>
-
-                                            <div class="panel-body">
-
-
-
-                                                <div class="btn-toolbar pull-right">
-                                                    <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                    <a class="btn btn-read" role="button" href="TODO" target="_blank">Openstax Calculus</a>
-                                                    <!-- ending of btn toolbar -->
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="panel panel-primary">
-
-                                           <div class="panel-heading">
-                                               <h3 class="panel-title">Watch It</h3> </div>
-
-                                           <div class="panel-body">
-
-
-
-                                               <div class="btn-toolbar pull-right">
-                                                   <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                   <a class="btn btn-video" role="button" href="TODO" target="_blank">Video</a>
-                                                   <!-- ending of btn toolbar -->
-                                               </div>
-
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="panel panel-primary">
-
-                                           <div class="panel-heading">
-                                               <h3 class="panel-title">Explore It</h3> </div>
-
-                                           <div class="panel-body">
-
-
-
-                                               <div class="btn-toolbar pull-right">
-                                                   <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                   <a class="btn btn-explore" role="button" href="TODO" target="_blank">Explore</a>
-                                                   <!-- ending of btn toolbar -->
-                                               </div>
-
-                                           </div>
-                                       </div>
-                                   </div>
-                                </div>
-                                <!-- end of row -->
-
-
-
-        <br>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="panel panel-primary">
-
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Practice with Solutions</h3> </div>
-
-                                        <div class="panel-body">
-
-
-
-                                            <div class="btn-toolbar pull-right">
-                                                <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                <a class="btn btn-practice" role="button" href="homeworku2.html" target="_blank">Additional Practice</a>
-                                                <!-- ending of btn toolbar -->
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6">
-                                    <div class="panel panel-primary">
-
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">ASSIGNMENTS</h3> </div>
-
-                                        <div class="panel-body">
-
-
-
-                                            <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.3 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.3 Homework Quiz</a>
-                                                <!-- ending of btn toolbar -->
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-
-                              <!-- end of row -->
-
-        </div>
-        <!-- end of collapsing panel -->
-        </div>
-        <!-- end of panel primary -->
 
                         </div>
-                    <!-- end of panel group -->
+                        <!-- end of row -->
+
+
+
+<br>
+
+                    <div class="row">
+
+                      <div class="col-md-3">
+                          <div class="panel panel-primary">
+
+                              <div class="panel-heading">
+                                  <h3 class="panel-title">Read It</h3> </div>
+
+                              <div class="panel-body">
+
+                  <p>OpenStax Calculus Vol. 1</p>
+
+
+
+                                  <div class="btn-group-vertical pull-right">
+                                      <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                      <a class="btn btn-read" role="button" href="https://cnx.org/contents/i4nRcikn@2.39:TjgBKRr3@4/Exponential-and-Logarithmic-Fu" target="_blank">Exponential and Log Functions</a>
+
+
+                                      <!-- ending of btn toolbar -->
+                                  </div>
+
+                              </div>
+                          </div>
+                     </div>
+
+
+                     <div class="col-md-3">
+                         <div class="panel panel-primary">
+
+                             <div class="panel-heading">
+                                 <h3 class="panel-title">Explore It</h3> </div>
+
+                             <div class="panel-body">
+
+
+
+                                 <div class="btn-group-vertical pull-right">
+                                     <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+
+
+   <a class="btn btn-explore" role="button" href="https://www.geogebra.org/m/neA2Ajja" target="_blank">Exponential and Log Functions</a>
+
+
+                                     <!-- ending of btn toolbar -->
+                                 </div>
+
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="col-md-6">
+                         <div class="panel panel-primary">
+
+                             <div class="panel-heading">
+                                 <h3 class="panel-title">Watch It</h3> </div>
+
+                             <div class="panel-body">
+
+
+      <p>Khan Academy Videos</p>
+
+
+
+
+      <div class="btn-group-vertical pull-right">
+          <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+          <a class="btn btn-read" role="button" href="https://www.khanacademy.org/math/algebra-home/alg-exp-and-log/alg-exponential-growth-intro/v/exponential-growth-functions" target="_blank">Solving Basic Exponential Models</a>
+
+            <a class="btn btn-read" role="button" href="https://www.khanacademy.org/math/algebra-home/alg-exp-and-log/alg-solving-basic-exponential-models/v/word-problem-solving-exponential-growth-and-decay" target="_blank">Solving Exponential Growth and Decay Problems</a>
+
+<a class="btn btn-read" role="button" href="https://www.khanacademy.org/math/algebra-home/alg-exp-and-log/alg-solving-exponential-models/v/solving-exponential-model-word-problems-1" target="_blank">Solving Exponential Models</a>
+
+
+          <!-- ending of btn toolbar -->
+      </div>
+                                 </div>
+
+                             </div>
+                         </div>
+                     </div>
+
+
+                      </div>
+
+                      <!-- end of row -->
+
+</div>
+<!-- end of collapsing panel -->
+</div>
+<!-- end of panel primary -->
+
+
+
+
+
+
+<div class="panel-group">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">
+              <a data-toggle="collapse" aria-expanded="false" href="#collapse2">2.2 Derivatives of Exponential and Logarithmic Functions</a>
+            </h2>
+          </div>
+
+          <!-- end of panel heading -->
+            <div id="collapse2" class="panel-collapse collapse">
+                <br>
+                <div class="row p-3 m-3" >
+                    <div class="col-md-3">
+                        <div class="panel panel-primary">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Notes with Solutions</h3> </div>
+
+                            <div class="panel-body">
+
+
+
+                                <div class="pull-right">
+                                    <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                    <a class="btn btn-notes" role="button" href="notesu2.html" target="_blank">Notes</a>
+                                    <!-- ending of btn toolbar -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="panel panel-primary">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Practice with Solutions</h3> </div>
+
+                            <div class="panel-body">
+
+
+
+                                <div class="btn-toolbar pull-right">
+                                    <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                    <a class="btn btn-practice" role="button" href="homeworku2.html" target="_blank">Additional Practice</a>
+                                    <!-- ending of btn toolbar -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">ASSIGNMENTS</h3> </div>
+
+                            <div class="panel-body">
+
+
+
+                                <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.2 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.2 Homework Quiz</a>
+                                    <!-- ending of btn toolbar -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- end of row -->
+
+
+
+<br>
+
+            <div class="row">
+
+              <div class="col-md-3">
+                  <div class="panel panel-primary">
+
+                      <div class="panel-heading">
+                          <h3 class="panel-title">Read It</h3> </div>
+
+                      <div class="panel-body">
+
+          <p>OpenStax Calculus Vol. 1</p>
+
+
+
+                          <div class="btn-group-vertical pull-right">
+                              <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                              <a class="btn btn-read" role="button" href="https://cnx.org/contents/i4nRcikn@2.39:QP7ySueQ@3/Derivatives-of-Exponential-and" target="_blank">Exponential and Log Derivatives</a>
+
+
+                              <!-- ending of btn toolbar -->
+                          </div>
+
+                      </div>
+                  </div>
+             </div>
+
+
+             <div class="col-md-3">
+                 <div class="panel panel-primary">
+
+                     <div class="panel-heading">
+                         <h3 class="panel-title">Explore It</h3> </div>
+
+                     <div class="panel-body">
+
+
+
+                         <div class="btn-group-vertical pull-right">
+                             <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                             <a class="btn btn-explore" role="button" href="http://webspace.ship.edu/msrenault/GeoGebraCalculus/derivative_exponential_functions.html" target="_blank">Derivatives of Exponentials</a>
+                             <!-- ending of btn toolbar -->
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+
+             <div class="col-md-6">
+                 <div class="panel panel-primary">
+
+                     <div class="panel-heading">
+                         <h3 class="panel-title">Watch It</h3> </div>
+
+                     <div class="panel-body">
+
+
+<p>Khan Academy Videos</p>
+
+
+
+
+<div class="btn-group-vertical pull-right">
+  <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+
+  <a class="btn btn-read" role="button" href="https://www.khanacademy.org/math/differential-calculus/basic-differentiation-dc/ex-and-lnx-derivatives-dc/v/derivatives-of-sin-x-cos-x-tan-x-e-x-and-ln-x" target="_blank">Derivatives of $e^x$ and $lnx$ (start at 1:05)</a>
+
+
+
+
+
+  <!-- ending of btn toolbar -->
+</div>
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+
+
+
+              <!-- end of row -->
+
+</div>
+<!-- end of collapsing panel -->
+</div>
+<!-- end of panel primary -->
+
+
+
+
+
+
+
+
+
+
+                </div>
+            <!-- end of panel group -->
+
+
+
+
+
+
                     <div class="panel-group">
 
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <h2 class="panel-title">
-                                  <a data-toggle="collapse" aria-expanded="false" href="#collapse4">2.4 The Chain Rule</a>
+                                  <a data-toggle="collapse" aria-expanded="false" href="#collapse3">2.3 Product and Quotient Rules</a>
                                 </h2>
                               </div>
 
                               <!-- end of panel heading -->
-                                <div id="collapse4" class="panel-collapse collapse">
+                                <div id="collapse3" class="panel-collapse collapse">
                                     <br>
-                                    <div class="row">
+                                    <div class="row p-3 m-3" >
                                         <div class="col-md-3">
                                             <div class="panel panel-primary">
 
@@ -576,7 +520,7 @@
 
 
 
-                                                    <div class="btn-toolbar pull-right">
+                                                    <div class="pull-right">
                                                         <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
                                                         <a class="btn btn-notes" role="button" href="notesu2.html" target="_blank">Notes</a>
                                                         <!-- ending of btn toolbar -->
@@ -585,11 +529,12 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="col-md-3">
                                             <div class="panel panel-primary">
 
                                                 <div class="panel-heading">
-                                                    <h3 class="panel-title">Read It</h3> </div>
+                                                    <h3 class="panel-title">Practice with Solutions</h3> </div>
 
                                                 <div class="panel-body">
 
@@ -597,51 +542,34 @@
 
                                                     <div class="btn-toolbar pull-right">
                                                         <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                        <a class="btn btn-read" role="button" href="TODO" target="_blank">Openstax Calculus</a>
+                                                        <a class="btn btn-practice" role="button" href="homeworku2.html" target="_blank">Additional Practice</a>
                                                         <!-- ending of btn toolbar -->
                                                     </div>
 
                                                 </div>
                                             </div>
-                                       </div>
-                                       <div class="col-md-3">
-                                           <div class="panel panel-primary">
+                                        </div>
 
-                                               <div class="panel-heading">
-                                                   <h3 class="panel-title">Watch It</h3> </div>
+                                        <div class="col-md-6">
+                                            <div class="panel panel-primary">
 
-                                               <div class="panel-body">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">ASSIGNMENTS</h3> </div>
 
-
-
-                                                   <div class="btn-toolbar pull-right">
-                                                       <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                       <a class="btn btn-video" role="button" href="TODO" target="_blank">Video</a>
-                                                       <!-- ending of btn toolbar -->
-                                                   </div>
-
-                                               </div>
-                                           </div>
-                                       </div>
-                                       <div class="col-md-3">
-                                           <div class="panel panel-primary">
-
-                                               <div class="panel-heading">
-                                                   <h3 class="panel-title">Explore It</h3> </div>
-
-                                               <div class="panel-body">
+                                                <div class="panel-body">
 
 
 
-                                                   <div class="btn-toolbar pull-right">
-                                                       <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                       <a class="btn btn-explore" role="button" href="TODO" target="_blank">Explore</a>
-                                                       <!-- ending of btn toolbar -->
-                                                   </div>
+                                                    <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.3 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.3 Homework Quiz</a>
+                                                        <!-- ending of btn toolbar -->
+                                                    </div>
 
-                                               </div>
-                                           </div>
-                                       </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
                                     </div>
                                     <!-- end of row -->
 
@@ -650,43 +578,84 @@
             <br>
 
                                 <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="panel panel-primary">
 
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Practice with Solutions</h3> </div>
+                                  <div class="col-md-3">
+                                      <div class="panel panel-primary">
 
-                                            <div class="panel-body">
+                                          <div class="panel-heading">
+                                              <h3 class="panel-title">Read It</h3> </div>
 
+                                          <div class="panel-body">
 
-
-                                                <div class="btn-toolbar pull-right">
-                                                    <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
-                                                    <a class="btn btn-practice" role="button" href="homeworku2.html" target="_blank">Additional Practice</a>
-                                                    <!-- ending of btn toolbar -->
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                    <div class="col-md-6">
-                                        <div class="panel panel-primary">
-
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">ASSIGNMENTS</h3> </div>
-
-                                            <div class="panel-body">
+                              <p>OpenStax Calculus Vol. 1</p>
 
 
 
-                                                <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.4 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.4 Homework Quiz</a>
-                                                    <!-- ending of btn toolbar -->
-                                                </div>
+                                              <div class="btn-group-vertical pull-right">
+                                                  <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                                  <a class="btn btn-read" role="button" href="https://cnx.org/contents/i4nRcikn@2.39:8aJUEzry@3/Differentiation-Rules" target="_blank">Differentiation Rules</a>
 
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                                  <!-- ending of btn toolbar -->
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                 </div>
+
+
+                                 <div class="col-md-3">
+                                     <div class="panel panel-primary">
+
+                                         <div class="panel-heading">
+                                             <h3 class="panel-title">Explore It</h3> </div>
+
+                                         <div class="panel-body">
+
+
+
+                                             <div class="btn-group-vertical pull-right">
+                                                 <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                                 <a class="btn btn-explore" role="button" href="https://www.geogebra.org/m/RK8vnfGW" target="_blank">Product/Quotient Rule</a>
+                                                 <!-- ending of btn toolbar -->
+                                             </div>
+
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="col-md-6">
+                                     <div class="panel panel-primary">
+
+                                         <div class="panel-heading">
+                                             <h3 class="panel-title">Watch It</h3> </div>
+
+                                         <div class="panel-body">
+
+
+                  <p>Khan Academy Videos</p>
+
+
+
+
+                  <div class="btn-group-vertical pull-right">
+                      <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                      <a class="btn btn-read" role="button" href="https://www.khanacademy.org/math/differential-calculus/product-quotient-chain-rules-dc/product-rule-dc/v/applying-the-product-rule-for-derivatives" target="_blank">Product Rule</a>
+
+                      <a class="btn btn-read" role="button" href="https://www.khanacademy.org/math/differential-calculus/product-quotient-chain-rules-dc/quotient-rule-dc/v/quotient-rule-from-product-rule" target="_blank">Quotient Rule</a>
+
+
+
+
+                      <!-- ending of btn toolbar -->
+                  </div>
+                                             </div>
+
+                                         </div>
+                                     </div>
+                                 </div>
+
+
                                   </div>
 
                                   <!-- end of row -->
@@ -696,11 +665,184 @@
             </div>
             <!-- end of panel primary -->
 
-                            </div>
-                        <!-- end of panel group -->
 
 
-              </div>
+                                <div class="panel-group">
+
+                                        <div class="panel panel-primary">
+                                            <div class="panel-heading">
+                                                <h2 class="panel-title">
+                                              <a data-toggle="collapse" aria-expanded="false" href="#collapse4">2.4 The Chain Rule</a>
+                                            </h2>
+                                          </div>
+
+                                          <!-- end of panel heading -->
+                                            <div id="collapse4" class="panel-collapse collapse">
+                                                <br>
+                                                <div class="row p-3 m-3" >
+                                                    <div class="col-md-3">
+                                                        <div class="panel panel-primary">
+
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title">Notes with Solutions</h3> </div>
+
+                                                            <div class="panel-body">
+
+
+
+                                                                <div class="pull-right">
+                                                                    <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                                                    <a class="btn btn-notes" role="button" href="notesu2.html" target="_blank">Notes</a>
+                                                                    <!-- ending of btn toolbar -->
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="panel panel-primary">
+
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title">Practice with Solutions</h3> </div>
+
+                                                            <div class="panel-body">
+
+
+
+                                                                <div class="btn-toolbar pull-right">
+                                                                    <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                                                    <a class="btn btn-practice" role="button" href="homeworku2.html" target="_blank">Additional Practice</a>
+                                                                    <!-- ending of btn toolbar -->
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="panel panel-primary">
+
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title">ASSIGNMENTS</h3> </div>
+
+                                                            <div class="panel-body">
+
+
+
+                                                                <div class="btn-toolbar pull-right"> <a class="btn btn-assignment" role="button" href="https://www.myopenmath.com/" target="_blank">2.4 Homework</a> <a class="btn btn-quiz" role="button" href="https://www.myopenmath.com/" target="_blank">2.4 Homework Quiz</a>
+                                                                    <!-- ending of btn toolbar -->
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <!-- end of row -->
+
+
+
+                        <br>
+
+                                            <div class="row">
+
+                                              <div class="col-md-3">
+                                                  <div class="panel panel-primary">
+
+                                                      <div class="panel-heading">
+                                                          <h3 class="panel-title">Read It</h3> </div>
+
+                                                      <div class="panel-body">
+
+                                          <p>OpenStax Calculus Vol. 1</p>
+
+
+
+                                                          <div class="btn-group-vertical pull-right">
+                                                              <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                                              <a class="btn btn-read" role="button" href="https://cnx.org/contents/i4nRcikn@2.39:7Ge5cmgd@3/The-Chain-Rule" target="_blank">The Chain Rule</a>
+
+
+                                                              <!-- ending of btn toolbar -->
+                                                          </div>
+
+                                                      </div>
+                                                  </div>
+                                             </div>
+
+
+                                             <div class="col-md-3">
+                                                 <div class="panel panel-primary">
+
+                                                     <div class="panel-heading">
+                                                         <h3 class="panel-title">Explore It</h3> </div>
+
+                                                     <div class="panel-body">
+
+
+
+                                                         <div class="btn-group-vertical pull-right">
+                                                             <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                                             <a class="btn btn-explore" role="button" href="http://webspace.ship.edu/msrenault/GeoGebraCalculus/derivative_intuitive_chain_rule.html" target="_blank">Intuitive Notion of Chain Rule</a>
+
+                                                             <!-- ending of btn toolbar -->
+                                                         </div>
+
+                                                     </div>
+                                                 </div>
+                                             </div>
+
+                                             <div class="col-md-6">
+                                                 <div class="panel panel-primary">
+
+                                                     <div class="panel-heading">
+                                                         <h3 class="panel-title">Watch It</h3> </div>
+
+                                                     <div class="panel-body">
+
+
+                              <p>Khan Academy Videos</p>
+
+
+
+
+                              <div class="btn-group-vertical pull-right">
+                                  <!-- <a class="btn btn-default" role="button" href="notesu2.html" target="_blank">Notes</a>  -->
+                                  <a class="btn btn-read" role="button" href="https://www.khanacademy.org/math/differential-calculus/product-quotient-chain-rules-dc/chain-rule-dc/v/chain-rule-introduction" target="_blank">The Chain Rule</a>
+
+
+
+
+                                  <!-- ending of btn toolbar -->
+                              </div>
+                                                         </div>
+
+                                                     </div>
+                                                 </div>
+                                             </div>
+
+
+                                              </div>
+
+                                              <!-- end of row -->
+
+                        </div>
+                        <!-- end of collapsing panel -->
+                        </div>
+                        <!-- end of panel primary -->
+
+
+
+
+
+
+
+
+</div>
+
     <!-- end of container -->
 
 
