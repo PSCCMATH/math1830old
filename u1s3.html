@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>MATH 1830 Notes</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/notes.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/togglebuttons.js"></script>
+      <script src="js/loadmathjax.js"></script>
+      <script src="js/googlestats.js"></script>
+      <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+      <script src="js/desmosgraphs.js"></script>
+      <script>
+        unit1();
+      </script>
+
+   </head>
+
+   <body>
+
+
+
+      <div class="container">
+         <h1 id="u1toc">MATH 1830 Notes</h1>
+         <p>Mary Monroe-Ellis</p>
+         <p>Susan Mosteller</p>
+         <h2>Unit 1 Limits</h2>
+
+         <div class="m1830-toc">
+            <ul>
+
+               <li><a href="notesu1.html#u1sp">1.P Writing Equations of Lines</a></li>
+
+               <li><a href="notesu1.html#u1s1">1.1 Limits Graphically and Algebraically</a></li>
+
+               <li><a href="notesu1.html#u1s2">1.2 Infinite Limits and Asymptotes</a></li>
+
+               <li><a href="notesu1.html#u1s3">1.3 Continuity</a></li>
+
+               <li><a href="notesu1.html#u1s4">1.4 Definition of Derivatives</a></li>
+
+               <li><a href="notesu1.html#u1s5">1.5 Derivatives: The Power Rule</a></li>
+
+               <li><a href="notesu1.html#u1s6">1.6 Marginal Analysis</a></li>
+            </ul>
+
+         </div>
+
+         <div id="u1" class="m1830-unit">
+
+
+
+
+
+            <div id="u1s3" class="m1830-section">
+               <h3>1.3 Infinite Limits and Asymptotes</h3>
+
+               <h4>Introduction</h4>
+               <p>Discuss this graph with your group.</p>
+               <p>Write down everything you observe.</p>
+               <p>Be prepared to share with the class.</p>
+               <img src="images/notes/u1s2p1i.png" alt="Graph of f of x equals x-squared divided by x-squared minus 1. Coordinate plane is from -6 to +6 on the x-axis and -5 to 5 on the y-axis. There is an horizontal asymptote at y = 1. There are vertical asymptotes at x=-1 and x=1.">
+               <hr>
+
+               <div class="pagebreak"></div>
+
+
+               <h4>Notes</h4>
+               <p><strong>Infinite Limits, Vertical Asymptotes, and Holes:</strong></p>
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Describe the behavior of $f(x)$ at each zero of the denominator</p>
+                     <p>$f\left( x \right) = \;\frac{{{x^2}\; + 3x + 2}}{{{x^2} + 5x + 4}}$
+                        <p><img src="images/notes/u1s2p1.png" alt="Graph of f(x).  Decreasing on interval x&lt;-4.  Approaches y=1 on left and curves up toward positive infinity as x approaches -4.  Increasing on interval x&gt;-4.  Close to x=-4 on the right, graph approaches negative infinity.  As x gets larger and approaches positive infinity, f(x) increases and gets closer and closer to y=1."></p>
+                        <ol>
+
+                           <li>$x = - 4$
+                              <p class="m1830-answer">Vertical Asymptote at x=-4</p>
+                           </li>
+
+                           <li>$x = - 1$
+                              <p class="m1830-answer">Hole at x=-1</p>
+                           </li>
+                        </ol>
+
+                        <div class="pagebreak"></div>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        How would you determine whether the graph has holes and/or vertical asymptotes if you don’t have a graph?</p>
+                     <ol>
+
+                        <li>With Limits:
+                           <p class="m1830-solution">$\mathop {\lim }\limits_{x \to - 4} \frac{{{x^2} + 3x + 2}}{{{x^2} + 5x + 4}} =$</p>
+                           <p class="m1830-answer">$ \frac{6}{0}$ </p>
+                           <p class="m1830-answer">Vertical asymptote at $x=-4$</p>
+                           <br>
+                           <p class="m1830-solution">$\mathop {\lim }\limits_{x \to - 1} \frac{{{x^2} + 3x + 2}}{{{x^2} + 5x + 4}} = \frac{0}{0}$ Indeterminate form</p>
+                           <p class="m1830-solution">$\mathop {\lim }\limits_{x \to - 1} \frac{{\left( {x + 2} \right)\left( {x + 1} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}} =$</p>
+                           <p class="m1830-solution">$\mathop {\lim }\limits_{x \to - 1} \frac{{x + 2}}{{x + 4}} =\frac{{ - 1 + 2}}{{ - 1 + 4}} =$</p>
+                           <p class="m1830-answer">$\frac{1}{3}$ </p>
+                           <p class="m1830-answer">Hole at $x=-1$</p>
+                        </li>
+
+                        <li>Algebraically:
+                           <p class="m1830-solution">Approaching $x=-4$ from the left and the right:</p>
+                           <p class="m1830-solution">$f( - 4.00001) = 2 \times {10^5}\quad\quad\quad\mathop {\lim }\limits_{x \to - {4^ - }} = \infty $</p>
+                           <p class="m1830-solution">$f( - 3.99999) = - 2 \times {10^5}\quad\quad\quad\mathop {\lim }\limits_{x \to - {4^ + }} = - \infty $</p>
+                           <p class="m1830-answer">$\mathop {\lim }\limits_{x \to - 4} $ Does Not Exist. Vertical Asymptote at $x=-4$</p>
+                           <p class="m1830-solution">Approaching $x=-1$ from the left and the right:</p>
+                           <p class="m1830-solution">$f( - 1.00001) = .33333\quad\quad\quad\mathop {\lim }\limits_{x \to - {1^ - }} = \frac{1}{3}$</p>
+                           <p class="m1830-solution">$f( - 0.99999) = .333333\quad\quad\quad\mathop {\lim }\limits_{x \to - {1^ + }} = \frac{1}{3}$</p>
+                           <p class="m1830-answer">$\mathop {\lim }\limits_{x \to - 1}= \frac{1}{3}$ HOle at $x=-1$</p>
+                        </li>
+                     </ol>
+                  </li>
+
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Describe the behavior of $f(x)$ at each zero of the denominator $f\left( x \right) = \;\frac{{{x^2}\; + 10}}{{4{{\left( {x - 3} \right)}^2}}}$</p>
+                     <p class="m1830-answer"> Zero of the demominator at $x=3.$ The limit approaches infinity from the left and from the right.</p>
+                     <!-- TODO Need solution -->
+
+                     <P> <strong>Limits at Infinity:  Polynomials and Rational Expressions</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Briefly describe the behavior of the two individual functions as x approaches positive infinity.</p>
+                     <img src="images/notes/u1s2p3a.png" alt="First quadrant graph of y equals x squared. The function approaches infinity as x gets large. ">
+                     <p class="m1830-answer">y approaches positive infinity as x approaches positive infinity.</p>
+
+                     <img src="images/notes/u1s2p3b.png" alt="First quadrant graph of  y equals one divided by x squared.  The graph decreases and gets closer and closer to the x axis as x gets very large.">
+                     <p class="m1830-answer">y approaches 0 as x approaches positive infinity.</p>
+
+                     <p><strong>End Behavior of Polynomials</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Let $p\left( x \right) = 3{x^3}\; - 4{x^2}\; - 2x + 5,$</p>
+                     <p>Find the limit of $p\left( x \right)$ as $x \to \;\infty $ and as $x \to \; - \infty $ </p>
+                     <p class="m1830-solution">From calculator table or graph</p>
+                     <p class="m1830-answer">$\underset{x\rightarrow\infty}{lim}p(x)=\infty$</p>
+                     <p class="m1830-answer">$\underset{x\rightarrow-\infty}{lim}p(x)=-\infty$</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Let $p\left( x \right) = - 6{x^4} + 3{x^2} + 5$ ,</p>
+                     <p>Find the limit of $p\left( x \right)$ as $x \to \;\infty $ and as $x \to \; - \infty $</p>
+                     <p class="m1830-solution">From calculator table or graph</p>
+                     <p class="m1830-answer">$\underset{x\rightarrow\infty}{lim}p(x)=-\infty$</p>
+                     <p class="m1830-answer">$\underset{x\rightarrow-\infty}{lim}p(x)=-\infty$</p>
+
+                     <p><strong>Horizontal Asymptotes:  End Behavior and Rational Expressions</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Let $f\left( x \right) = \frac{{3{x^2}\; - 5x + 9}}{{2{x^2} + 7}}$ , find the limit of $f\left( x \right)$ as $x \to \;\infty $ and as $x \to \; - \infty $</p>
+
+                     <p class="m1830-solution">From calculator table or graph</p>
+                     <p class="m1830-answer">$\underset{x\rightarrow\infty}{lim}f(x)=1.5$</p>
+                     <p class="m1830-answer">$\underset{x\rightarrow-\infty}{lim}f(x)=1.5$</p>
+
+                     <p><strong>Identify the horizontal asymptotes of the following rational expression (if the horizontal asymptote exists)</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $\underset{x\rightarrow\infty}{lim} \;\frac{{7{x^3}\; - {x^2}\; + 1}}{{5{x^3}\; + 6x\; - 7}} =$</p>
+
+                     <p class="m1830-solution">$\underset{x\rightarrow\infty}{lim} \;\frac{{7{x^3}\;}}{{5{x^3}\;}} = \mathop {\lim }\limits_{x \to \infty } \;\frac{{7\;}}{{5\;}} = \frac{7}{5}$</p>
+                     <p class="m1830-answer">Horizontal Asymptote at $y=\frac{7}{5}$</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $\underset{x\rightarrow\infty}{lim} \;\frac{{6{x^4}\;-{x^2}\; + 1}}{{2{x^6}\;\; - 8x}} =$</p>
+
+                     <p class="m1830-solution">$\underset{x\rightarrow\infty}{lim} \;\frac{{6{x^4}\;}}{{2{x^6}}} = \underset{x\rightarrow\infty}{lim} \;\frac{{3\;}}{{{x^2}}} = 0$</p>
+                     <p class="m1830-answer">Horizontal Asymptote at $y=0$</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $\underset{x\rightarrow\infty}{lim} \;\frac{{4{x^5}\;-\;9{x^3} - \;1}}{{5{x^3}\; + 3{x^2}\; - 7}} =$</p>
+
+                     <p class="m1830-solution">$\underset{x\rightarrow\infty}{lim}\;\frac{{4{x^5}\;}}{{5{x^3}\;}} = \underset{x\rightarrow\infty}{lim} \;\frac{{4{x^2}\;}}{{5\;}} = \infty $</p>
+                     <p class="m1830-answer">No Horizontal Asymptote</p>
+
+                     <div class="pagebreak"></div>
+
+                     <p><strong>Vertical and Horizontal Asymptotes:  A summary</strong></p>
+                     <p><strong>Find all vertical asymptotes, horizontal asymptotes, and holes of the function, showing all your work:</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $f\left( x \right) = \;\frac{{2{x^2}\;\; - \;\;32}}{{{x^2}\; + \;5x\; + \;4}}$</p>
+
+                     <p class="m1830-solution">$f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}$</p>
+                     <p class="m1830-answer">Vertical Asymptote: x=-1</p>
+                     <p class="m1830-answer"> Hole: x=-4</p>
+                     <p class="m1830-answer"> Horizontal Asymptote: y=2</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $f\left( x \right)\; = \frac{{{x^2}\;\; - \;\;9}}{{{x^2}\;\; - \;\;4}}$</p>
+
+                     <p class="m1830-solution">$f\left( x \right) = \;\frac{{\left( {x + 3} \right)\left( {x - 3} \right)}}{{\left( {x + 2} \right)\left( {x - 2} \right)}}$</p>
+                     <p class="m1830-answer">Vertical Asymptote: x=2 and x=-2</p>
+                     <p class="m1830-answer"> Hole: none</p>
+                     <p class="m1830-answer">Horizontal Asymptote: y=1</p>
+
+                     <p><strong>Find all vertical asymptotes, horizontal asymptotes, and holes of the function by a quick analysis:</strong> </p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $f\left( x \right)\; = \frac{{x\;\; + 2}}{{{x^2}\; + \;3}}$</p>
+
+                     <p class="m1830-answer">Vertical Asymptote: none</p>
+                     <p class="m1830-answer">Hole: none</p>
+                     <p class="m1830-answer">Horizontal Asymptote: y=0</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $f\left( x \right)\; = \frac{{{x^2}\; - 3x - \;10}}{{{x^2}\; - \;4x - 5}}$</p>
+
+                     <p class="m1830-solution">$f(x) = \frac{{\left( {x - 5} \right)\left( {x + 2} \right)}}{{\left( {x - 5} \right)\left( {x + 1} \right)}}$</p>
+                     <p class="m1830-answer">Vertical Asymptote: x=-1</p>
+                     <p class="m1830-answer">Hole: x=5</p>
+                     <p class="m1830-answer">Horizontal Asymptote: y=1</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $f(x) = \frac{{{x^2} + 5x - 14}}{{x - 2}}$</p>
+
+                     <p class="m1830-answer">Vertical Asymptote: none</p>
+                     <p class="m1830-answer">Hole: x=2</p>
+                     <p class="m1830-answer">Horizontal Asymptote: none</p>
+
+
+                  </li>
+               </ol>
+            </div>
+
+
+
+            <div id="u1s1b" class="m1830-section">
+
+
+            <div id="u1s2a" class="m1830-section">
+               <h3>1.3A Infinite Limits and Asymptotes</h3>
+               <h4>Homework</h4>
+               <strong>Complete the 10 problems at the following link.</strong>
+               <p><cite>  Source:<a href="http://archives.math.utk.edu/visual.calculus/1/vertical.1/">http://archives.math.utk.edu/visual.calculus/1/vertical.1/</a> </cite></p>
+               <p> Record your observations below:</p>
+
+            </div>
+
+            <div id="u1s2b" class="m1830-section">
+               <h3>1.3B Infinite Limits and Asymptotes</h3>
+
+               <h4>Homework</h4>
+               <strong>Find all vertical asymptotes, horizontal asymptotes, and holes of the function.</strong>
+               <strong>Show your work on two of the five problems.</strong>
+
+               <!-- Begin section problem list  -->
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{2x-7}{x-4}\ $</p>
+                     <p class="m1830-hw-answer">VA: $x=4$</p>
+                     <p class="m1830-hw-answer">HA: $y=2$</p>
+                     <p class="m1830-hw-answer">Holes: none</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\ \frac{{{x}^{2}}-5}{{{x}^{3}}+{{x}^{2}}+1}\ $</p>
+                     <p class="m1830-hw-answer">VA: $x=-1.47$</p>
+                     <p class="m1830-hw-answer">HA: $y=0$</p>
+                     <p class="m1830-hw-answer">Holes: none</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{{{x}^{3}}+6{{x}^{2}}+8x}{{{x}^{2}}-16}\ $</p>
+                     <p class="m1830-hw-answer">VA: $x=4$</p>
+                     <p class="m1830-hw-answer">HA: none</p>
+                     <p class="m1830-hw-answer">Holes: $x=-4$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{x-5}{\sqrt{4{{x}^{2}}+8}}\ $</p>
+                     <p class="m1830-hw-answer">VA: none</p>
+                     <p class="m1830-hw-answer">HA: $y=0.5$</p>
+                     <p class="m1830-hw-answer">Holes: none</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\ \frac{{{x}^{2}}-1}{{{x}^{2}}-x-2}$.</p>
+                     <p class="m1830-hw-answer">VA: $x=2$</p>
+                     <p class="m1830-hw-answer">HA: $y=1$</p>
+                     <p class="m1830-hw-answer">Holes: $x=-1$</p>
+                  </li>
+               </ol>
+               <!-- End section problem list  -->
+            </div>
+
+            <div id="u1s2c" class="m1830-section">
+               <h3>1.3C Infinite Limits and Asymptotes</h3>
+               <p><strong>Group Review</strong></p>
+               <p><strong>Find the limits.</strong></p>
+               <p><img src="images/hw/u1s2cp1.png" alt="Coordinate Plane:  -10 to 10 on x- and y-axes.  Vertical Asymptotes at x =-4 and x=2.  Three curves graphed on the plane.  Left curve begins at top left of graph, crosses the x-axis at approximately -7.75, continues down until approximately (-6,-4), is horizontal until x=-4.5, then increases very close to the vertical asymptote at x=-4. The middle curve rises from the bottom of the graph along the vertical asymptote at x=-4 until the point (-2,-1).  The curve then decreases until its endpoint at (2,-3).  This endpoint is a solid dot.  The curve on the right third of the graph is decreasing from the top of the coordinate plane along the right side of the vertical asymptote at x=2.  It crosses the x-axis at approximately x=2.25 and continues decreasing.  This curve decreases more slowly (level out) beginning at x=3 to almost a horizontal line at y=-5."></p>
+               <!-- Begin section problem list  -->
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-4^{-}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$\infty $</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-4^{+}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$-\infty $</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-4}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">Does Not Exist</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(-4)=$
+                        <span class="m1830-hw-answer">undefined</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow2^{-}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$-3$</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow2^{+}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$\infty $</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow2}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">Does Not Exist</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(2)=$
+                        <span class="m1830-hw-answer">$-3$</span></p>
+                     <p><strong>Find the limit.</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow1}{lim}\,\frac{10x}{x-1}=$</p>
+                     <p class="m1830-hw-solution">$\frac{10(1)}{1-1}=\frac{10}{0}$</p>
+                     <p class="m1830-hw-answer">Does Not Exist</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-12}{lim}\,\frac{{{x}^{2}}+11x-12}{x+12}=$</p>
+                     <p class="m1830-hw-solution">$\underset{x\rightarrow-12}{lim}\,\frac{(x+12)(x-1)}{(x+12)}=\underset{x\rightarrow-12}{lim}\,(x-1)=$</p>
+                     <p class="m1830-hw-answer">$-13$</p>
+                     <p><strong>Find the vertical and horizontal asymptotes and holes, if they exist.</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{9x}{x+7}$</p>
+                     <p class="m1830-hw-answer">VA: $x=-7$</p>
+                     <p class="m1830-hw-answer">HA: $y=9$</p>
+                     <p class="m1830-hw-answer">Holes: none</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=9{{x}^{8}}+7{{x}^{6}}+21$</p>
+                     <p class="m1830-hw-answer">VA: none</p>
+                     <p class="m1830-hw-answer">HA: none</p>
+                     <p class="m1830-hw-answer">Holes: none</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{10{{x}^{2}}+49}{{{x}^{2}}-49}$</p>
+                     <p class="m1830-hw-answer">VA: $x=7$ and $x=-7$</p>
+                     <p class="m1830-hw-answer">HA: $y=10$</p>
+                     <p class="m1830-hw-answer">Holes: none</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{6x+7}{7{{x}^{2}}+4}$</p>
+                     <p class="m1830-hw-answer">VA: none</p>
+                     <p class="m1830-hw-answer">HA: $y=0$</p>
+                     <p class="m1830-hw-answer">Holes: none</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{2{{x}^{2}}-7x-15}{{{x}^{2}}+3x-40}$</p>
+                     <p class="m1830-hw-solution">$f(x)=\frac{(2x+3)(x-5)}{(x+8)(x-5)}$</p>
+                     <p class="m1830-hw-answer">VA: $x=-8$</p>
+                     <p class="m1830-hw-answer">HA: $y=2$</p>
+                     <p class="m1830-hw-answer">Hole: $x=5$</p>
+                  </li>
+               </ol>
+               <!-- End section problem list  -->
+            </div>
+
+
+</div>
+
+
+         </div>
+
+
+
+      </div>
+      <!-- ending of body container -->
+
+   </body>
+
+</html>
