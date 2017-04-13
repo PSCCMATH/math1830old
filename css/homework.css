@@ -1,10 +1,11 @@
 @import url("m1830.css");
 @import url("printing.css");
 .m1830-solution {
-    display: none;
+    /*display: none;*/
 }
 @media print {
     .m1830-answer, .m1830-solution {
-        visibility: hidden;
+        /*visibility: hidden;*/
+        display: none;
     }
 }

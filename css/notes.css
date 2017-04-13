@@ -4,5 +4,7 @@
     .m1830-answer, .m1830-solution {
         visibility: hidden;
     }
-
+.m1830-answer img, .m1830-solution img {
+  display:none;
+}
 }
