@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+    <script src="js/googlestats.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+<nav></nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+
+        <h2 id="unit-3-applications-of-derivatives">Unit 3 Applications of Derivatives</h2>
+
+
+
+
+
+
+<article class="notes">
+
+<h3 id="3-3-curve-sketching">3.1 Analyzing Graphs Algebraically</h3>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Preliminary Algebraic Analysis of the Function </h3>
+  </div>
+  <div class="panel-body">
+    <p> Use Algebra and Limits to Identify All Basic Components in the Graph of $f(x)$</p>
+    <ol>
+
+        <li>Identify the Domain of $f(x)$: Commonly, $f(x)$is undefined for at any x value where:
+            <ol>
+
+                <li> The denominator equals zero</li>
+
+                <li>There is an even root of a negative number</li>
+
+                <li>There is a logarithm of a negative number or log of zero </li>
+            </ol>
+        </li>
+
+        <li>Identify x-intercepts and y-intercept of $f(x)$
+            <ol>
+
+                <li>x-intercepts: Set $y = 0$ and solve for $x$</li>
+
+                <li>y-intercept: Set $x = 0$ and solve for $y$</li>
+            </ol>
+        </li>
+
+        <li>Identify Vertical Asymptotes and Holes of $f(x)$
+            <ol>
+
+                <li>Vertical asymptote at $a$ when $\mathop {\lim }\limits_{x \to a }f\left( x \right) = \frac{n}{0}$ if $n \ne 0$ </li>
+
+                <li>Hole at $a$ when $\mathop {\lim }\limits_{x \to a }f\left( x \right) = \frac{0}{0}$ and then, after factoring and reducing, $\mathop {\lim }\limits_{x \to a }f\left( x \right) = \frac{n}{0}$ if $n \ne 0$</li>
+            </ol>
+        </li>
+
+        <li>Identify Horizontal Asymptote of $f(x)$:  calculate $\mathop {\lim }\limits_{x \to \infty } f\left( x \right)$</li>
+
+
+
+            </ol>
+  </div>
+</div>
+<p class="m1830-pagebreak"></p>
+
+<p class="m1830-problem-text"><strong>Use Algebra and Limits to Identify all the Basic Components of the Graph.</strong> </p>
+<ol>
+
+
+
+
+
+    <li class="m1830-problem">
+        <p class="m1830-problem-text"> $f(x)=3{{x}^{2}}+5x-2$</p>
+        <p>Domain:</p>
+            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+            <p class="m1830-answer">Polynomial functions are always continuous.</p>
+            <p>x int(s):</p>
+            <p class="m1830-solution">$ 0=3{{x}^{2}}+5x-2 $</p>
+            <p class="m1830-solution">$ 0=\left( 3x-1 \right)\left( x+2 \right) $</p>
+            <p class="m1830-solution">$x=\frac{1}{3}\,\,,\,\,x=-2$</p>
+            <p class="m1830-answer">$\left( \frac{1}{3},0 \right)\,\text{and}\,\left( -2,0 \right)$</p>
+            <p>y int:</p>
+            <p class="m1830-solution">$f\left( 0 \right)=0+0-2=-2$</p>
+            <p class="m1830-answer">$\left( 0,-2 \right)$</p>
+
+
+            <p>Asymptotes: </p>
+            <p class="m1830-answer">There are no asymptotes. The function is a polynomial.</p>
+
+
+    </li>
+
+    <li class="m1830-problem">
+        <p class="m1830-problem-text"> $f(x)={{x}^{3}}+6{{x}^{2}}+9x$</p>
+        <p>Domain:
+            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+            <p class="m1830-answer">Polynomial functions are always continuous.</p>
+            <p>x int(s):</p>
+            <p class="m1830-solution">${{x}^{3}}+6{{x}^{2}}+9x=0$</p>
+            <p class="m1830-solution">$x\left( {{x}^{2}}+6x+9 \right)=0 $</p>
+            <p class="m1830-solution">$x{\left( x+3 \right)}{\left( x+3 \right)}=0 $</p>
+            <p class="m1830-solution">$x=0\,\,,\,\,x=-3$</p>
+            <p class="m1830-answer">$\left( 0,0 \right)\,\text{and}\,\left( -3,0 \right)$</p>
+            <p>y int:</p>
+            <p class="m1830-solution">$f\left( 0 \right)={{\left( 0 \right)}^{3}}+6{{\left( 0 \right)}^{2}}+9\left( 0 \right)=0$</p>
+            <p class="m1830-answer">$\left( 0,0 \right)$</p>
+            <p>Asymptotes: </p>
+            <p class="m1830-answer">There are no asymptotes. The function is a polynomial.</p>
+
+
+
+
+
+    <li class="m1830-problem">
+        <p class="m1830-problem-text"> $f(x)=\frac{3x+4}{2x-5}$</p>
+
+        <p>Domain:
+
+            <p class="m1830-solution">The domain will not contain x values where the denominator is equal to zero.</p>
+            <p class="m1830-solution">$ 2x-5\ne 0 $</p>
+            <p class="m1830-solution">$ x\ne \frac{5}{2}$</p>
+            <p class="m1830-answer">Domain: $\left( -\infty ,\frac{5}{2} \right)\cup \left( \frac{5}{2},\infty \right)$</p>
+            <p>x int(s):</p>
+            <!-- <p class="m1830-solution">$0=\frac{3x+4}{2x-5}$</p> -->
+            <p class="m1830-solution">$\frac{0}{1}=\frac{3x+4}{2x-5}$</p>
+            <p class="m1830-solution">$0=3x+4$</p>
+            <p class="m1830-solution">$ x=-\frac{4}{3}$</p>
+            <p class="m1830-answer">$\left( -\frac{4}{3},0 \right)$</p>
+            <p>y int:</p>
+            <p class="m1830-solution">$f\left( 0 \right)=\frac{3\left( 0 \right)+4}{2\left( 0 \right)-5}=-\frac{4}{5}$</p>
+            <p class="m1830-answer">$\left( 0,-\frac{4}{5} \right)$</p>
+
+            <p>Asymptotes:</p>
+            <p>Vertical:
+                <p>
+                    <p class="m1830-solution">$\mathop {\lim }\limits_{x \to \frac{5}{2}}f\left( x \right)=\frac{11.5}{0}$</p>
+                    <p class="m1830-answer">There is a vertical asymptote at $x=\frac{5}{2}$.</p>
+                    <p>Horizontal:
+                        <p>
+                            <p class="m1830-solution">$\mathop {\lim }\limits_{x \to \infty }\frac{3x+4}{2x+5}=\mathop {\lim }\limits_{x \to \infty}\frac{3x}{2x}=                                              \mathop {\lim }\limits_{x \to \infty}\frac{3}{2}=\frac{3}{2}$</p>
+                            <p class="m1830-answer">There is a horizontal asymptote at $y=\frac{3}{2}$.</p>
+                            <p></p>
+                            
+    </li>
+
+
+
+
+
+</ol>
+
+
+
+</article>
+
+<article class="hw">
+
+</article>
+
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>
