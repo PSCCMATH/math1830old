@@ -217,6 +217,16 @@ tr:hover {
     margin: .5em;*/
 }
 
+.m1830-hw-answer {
+    color: #b30000;
+    /*font-style: normal;
+    line-height: 2em;
+    margin: .5em;*/
+}
+
+
+
+
 
 .bg-color1 {
   background-color: #d1c4e9
@@ -297,6 +307,18 @@ img.desmosicon {
     line-height: 2em;
     margin: .5em;*/
 }
+
+
+.m1830-hw-solution {
+    color: blue;
+    /*font-style: normal;
+    line-height: 2em;
+    margin: .5em;*/
+}
+
+
+
+
 
 .m1830-step {
     margin: 0em 0 2em 0;
