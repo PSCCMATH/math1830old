@@ -9,7 +9,7 @@ $(document).ready(function() {
     if (txtValue == u1s1) {
       $(".m1830-answer").show();
       $(".m1830-solution").show();
-    //   $("#input").val(u1s1);
+    // $(".Deposit").css('visibility', 'visible');  sample code
     }
   });
 });
