@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+    <script src="js/googlestats.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+<nav></nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+
+        <h2 id="unit-3-applications-of-derivatives">Unit 3 Applications of Derivatives</h2>
+
+
+
+
+
+
+<article class="notes">
+
+
+                    <div id="u3s5" class="m1830-section">
+
+                <h3>3.5 Absolute Extrema</h3>
+
+                <h4>Introduction</h4>
+
+                <p>On a sheet of paper, each member of the group is to draw 3 functions f(x) over an interval a &lt; x &lt; b.</p>
+                <p>Be creative! Try to draw as many different possibilities as you can.</p>
+                <p>I have drawn one for you as an example.</p>
+                <p><img src="images/notes/u3s6p1i.png" alt="Sample Graph with Endpoints. Graph of f(x) on the interval from x=a to x=b."></p>
+
+
+
+                <p>Label each of your graphs (ex: graph #1, graph #2, etc)</p>
+<p class="m1830-pagebreak"></p>
+                <div class="w3-row">
+
+                    <div class=w3-third>
+                        <img src="images/notes/u3s6p1ib.png" alt="Blank 12 x 12 Coordinate Plane"></div>
+
+                    <div class=w3-third><img src="images/notes/u3s6p1ib.png" alt="Blank 12 x 12 Coordinate Plane"></div>
+
+                    <div class=w3-third><img src="images/notes/u3s6p1ib.png" alt="Blank 12 x 12 Coordinate Plane"></div>
+                </div>
+<p class="m1830-pagebreak"></p>
+
+                <p>For each of your graphs, answer the following questions:</p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Where does f (x) have its maximum value? That is, where on your graph does y have the largest value?</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Where does f (x) have its minimum value?</p>
+                        <p><strong>Clearly indicate the answers to these two questions on each graph.</strong></p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Based on your answers above, can your group arrive at a conclusion?</p>
+                        <ol>
+
+                            <li>Could you make a general statement about how to determine the absolute maximum or minimum values of a function over a given interval?</li>
+
+                            <li>Can you think of any exceptions?</li>
+
+                            <li>How can our knowledge of derivatives assist us?</li>
+
+                            <li>Summarize your responses on this sheet. Be prepared to share your results to the rest of the class.</li>
+                        </ol>
+                    </li>
+                </ol>
+                <p><cite> Norris, Ken. (1999). Optimization Problems. Retrieved from <a href="https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F">https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F</a> </cite></p>
+                <hr>
+
+
+<p class="m1830-pagebreak"></p>
+
+                <h4>Notes</h4>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Algorithm for Determining Extreme Values </h3>
+                  </div>
+                  <div class="panel-body">
+                    <p><strong>Suppose that $f(x)$  is a continuous function over a closed interval [a, b].</strong> </p>
+                    <p><strong>To find the absolute maximum and minimum values of the function $f(x)$ on [a, b]:</strong></p>
+                    <ol>
+
+                        <li>Find $f&#39;(x)$. </li>
+
+                        <li>Determine the critical points of $f&#39;(x)$ in [a, b]
+                            <p>(that is, find all x values for which $f&#39;(x)=0$, $f&#39;(x)$ does not exist, or $f(x)$ does not exist).</p>
+                        </li>
+
+                        <li>List the critical points of $f(x)$ and the endpoints of the interval [a &amp; b].</li>
+
+                        <li>Find the function values of critical points and the endpoints.
+
+                      <ol><li>  The largest of these values is the absolute maximum of on the interval [a, b]. </li>
+
+                        <li>The smallest of these is the absolute minimum of on the interval [a, b]. </li></ol>
+                    </ol>
+
+                  </div>
+                </div>
+
+
+                <p class="m1830-pagebreak"><strong>Find the absolute minimum and maximum values of the function, if they exist, over the given interval.</strong></p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)={{x}^{2}}-6x-3\quad \quad [-1,5]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=2x-6 $</p>
+                        <p class="m1830-solution">Criticals: $f&#39;(x)=0 $</p>
+                        <p class="m1830-solution">$ 2x-6=0 $</p>
+                        <p class="m1830-solution">$ 2x=6 $</p>
+                        <p class="m1830-solution">$ x=3 $</p>
+                        <p class="m1830-solution">Calculate $f(x)$ for the interval endpoints: ($x=-1, 5$), and critical values: ($x=3$).</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>$x$</th>
+
+                                <th>$f(x)$</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-1</td>
+
+                                <td>$ 4$</td>
+                            </tr>
+
+                            <tr>
+
+                                <td>3</td>
+
+                                <td>$ -12 $</td>
+                            </tr>
+
+                            <tr>
+
+                                <td>$5$</td>
+
+                                <td>$ -8 $</td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">The Absolute Maximum on the interval is: $(-1, 4)$.</p>
+                        <p class="m1830-answer">The Absolute Minimun on the interval is: $(3, -12)$.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=2{{x}^{3}}-3{{x}^{2}}-36x+62\quad \quad [-3,4]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=6{{x}^{2}}-6x-36 $</p>
+                        <p class="m1830-solution">$ 6{{x}^{2}}-6x-36=0 $</p>
+                        <p class="m1830-solution">$ 6\left( {{x}^{2}}-x-6 \right)=0 $</p>
+
+                        <p class="m1830-solution">$ 6(x+2)(x-3)=0 $</p>
+                        <p class="m1830-solution">$ x=-2$, and $x=3$ </p>
+                        <p class="m1830-solution">Calculate $f(x)$ for the interval endpoints: ($x=-3$ and $x= 4$), and critical values: ($x=-2$ and $x=3$).</p>
+
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>$x$</th>
+
+                                <th>$f(x)$</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-3</td>
+
+                                <td>
+                                    <p class="m1830-solution">$ 89$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>-2</td>
+
+                                <td>
+                                    <p class="m1830-solution">$106 $</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>3</td>
+
+                                <td>
+                                    <p class="m1830-solution">$-19 $</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>4</td>
+
+                                <td>
+                                    <p class="m1830-solution">$-2$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">The Absolute Maximum on the interval is: $(-2, 106)$.</p>
+                        <p class="m1830-answer">The Absolute Minimum on the interval is: $(3, -19)$.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=x+\frac{1}{x}\quad \quad [1,20]$</p>
+
+                        <p class="m1830-solution">$ f(x)=x+{{x}^{-1}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=1+(-1){{x}^{-2}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=1-\frac{1}{{{x}^{2}}} $</p>
+                        <p class="m1830-solution">$ 0=1-\frac{1}{{{x}^{2}}} $</p>
+                        <p class="m1830-solution">$ \frac{1}{{{x}^{2}}}=1 $</p>
+                        <p class="m1830-solution">$ {{x}^{2}}=1 $</p>
+                        <p class="m1830-solution">$ \sqrt{{{x}^{2}}}=1 $</p>
+                        <p class="m1830-solution">$ x=1\text{ and }x=-1 $</p>
+                        <p class="m1830-solution">Calculate $f(x)$ for the interval endpoints: ($x=1$ and $x20$), and critical values: ($x=20$).</p>
+
+                        <p class="m1830-solution">Do not include the critical value $x=-1$ because it is not in interval.</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>$x$</th>
+
+                                <th>$f(x)$</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>1</td>
+
+                                <td>
+                                    <p class="m1830-solution">$2$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>20</td>
+
+                                <td>
+                                    <p class="m1830-solution">$20.05$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">The Absolute Maximum on the interval is: $(20, 20.05)$.</p>
+                        <p class="m1830-answer">The Absolute Minimum on the interval is: $(1, 2)$.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\frac{{{x}^{2}}}{{{x}^{2}}+1}\quad \quad [-2,2]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{({{x}^{2}}+1)(2x)-{{x}^{2}}(2x)}{{{\left( {{x}^{2}}+1 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{2{{x}^{3}}+2x-2{{x}^{3}}}{{{\left( {{x}^{2}}+1 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{2x}{{{\left( {{x}^{2}}+1 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ \frac{2x}{{{\left( {{x}^{2}}+1 \right)}^{2}}}=\frac{0}{1} $</p>
+                        <p class="m1830-solution">$ 2x=0 $</p>
+                        <p class="m1830-solution">$ x=0 $</p>
+                        <p class="m1830-solution">Calculate $f(x)$ for the interval endpoints: ($x=-2$ and $x=2$), and critical values: ($x=0$).</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>$x$</th>
+
+                                <th>$f(x)$</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-2</td>
+
+                                <td>
+                                    <p class="m1830-solution">$0.8$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>0</td>
+
+                                <td>
+                                    <p class="m1830-solution">$0$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>2</td>
+
+                                <td>
+                                    <p class="m1830-solution">$0.8$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">The Absolute Maxima on the interval are: $(2, 0.8)$ and $(-2, 0.8)$.</p>
+                        <p class="m1830-answer">The Absolute Minimum on the interval is: $(0, 0)$.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\frac{x}{{{(x+9)}^{2}}}\quad \quad [-1,8]$</p>
+
+                        <p class="m1830-solution">$ f&#39;(x)=\frac{{{\left( x+9 \right)}^{2}}(1)-x(2)(x+9)(1)}{{{\left( x+9 \right)}^{4}}} $</p>
+                        <p class="m1830-solution">$f&#39;(x)=\frac{\left( x+9 \right)\left[ \left( x+9 \right)-2x \right]}{{{\left( x+9 \right)}^{4}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x)=\frac{\left( x+9 \right)-2x}{{{\left( x+9 \right)}^{3}}}$</p>
+                        <p class="m1830-solution">$f&#39;(x)=\frac{-x+9}{{{\left( x+9 \right)}^{3}}} $</p>
+                        <p class="m1830-solution">$ \frac{-x+9}{{{\left( x+9 \right)}^{3}}}=\frac{0}{1} $</p>
+                        <p class="m1830-solution">$ -x+9=0 $</p>
+                        <p class="m1830-solution">$ 9=x $</p>
+                        <p class="m1830-solution">Calculate $f(x)$ for the interval endpoints: ($x=-1$ and $x=8$).</p>
+                        <p class="m1830-solution">Do not include the critical value $x=9$ because it is not in the interval.</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>$x$</th>
+
+                                <th>$f(x)$</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>-1</td>
+
+                                <td>
+                                    <p class="m1830-solution">$-.0156$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>8</td>
+
+                                <td>
+                                    <p class="m1830-solution">$.0227$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">The Absolute Maximum on the interval is: $(8, .0277)$.</p>
+                        <p class="m1830-answer">The Absolute Minimum on the interval is: $(-1, -.0156)$.</p>
+
+                    </li>
+
+                     <li class="m1830-problem m1830-pagebreak">
+                        <p class="m1830-problem-text">
+                            $f(x)=-3\quad \quad [-2,2]$</p>
+
+                        <p class="m1830-answer">$f&#39;(x)= 0$</p>
+                        <p class="m1830-answer">There are no maximum or minimum values becasue this is a constant function.</p>
+
+                    </li>
+
+                    <li class="m1830-problem m1830-pagebreak">
+                        <p class="m1830-problem-text">
+                            An employee’s monthly production $M$, in number of units produced, is found to be a function of the number of year of service, $t$. For a certain product, a productivity function is being given by: $M(t)=-2{{t}^{2}}+100t+180,\quad 0\le t\le 40$</p>
+                        <p>Find the maximum productivity and the year in which it is achieved. </p>
+                        <p class="m1830-solution">$M&#39;(t)=-4t+100$</p>
+                        <p class="m1830-solution">$ -4t+100=0$</p>
+                        <p class="m1830-solution">$t=25$</p>
+                        <p class="m1830-solution">Calculate $M(t)$ for the interval endpoints: ($t=0, 40$), and critical values: ($t=25$).</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>$t$</th>
+
+                                <th>$M(t)$</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>0</td>
+
+                                <td>
+                                    <p class="m1830-solution">$180$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>25</td>
+
+                                <td>
+                                    <p class="m1830-solution">$1430$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>40</td>
+
+                                <td>
+                                    <p class="m1830-solution">$980$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+
+
+                        <p class="m1830-answer">The maximum monthly productivity is 1430 units per month in year 25 of service.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            A firm determines that its total profit in dollars from the production and sale of x thousand units of a product is given by: $$P(x)=\frac{1500}{{{x}^{2}}-6x+10}\quad \quad x\ge 0$$</p>
+                        <p>Find the number of units x for which the total profit is a maximum.</p>
+                        <p class="m1830-solution">$ P&#39;(x)=\frac{\left( 0 \right)\left( {{x}^{2}}-6x+10 \right)-1500\left( 2x-6 \right)}{{{\left( {{x}^{2}}-6x+10 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ P&#39;(x)=\frac{-3000x+9000}{{{\left( {{x}^{2}}-6x+10 \right)}^{2}}} $</p>
+                        <p class="m1830-solution">$ \frac{-3000x+9000}{{{\left( {{x}^{2}}-6x+10 \right)}^{2}}}=\frac{0}{1} $</p>
+                        <p class="m1830-solution">$ -3000x+9000=0 therefore$ x=3 $</p>
+                        <p class="m1830-solution">Calculate $P(x)$ for the interval endpoint: ($x=0$), and critical value: ($x=3$).  Note, we were not given an upper interval endpoint.  Test one point beyond $x=3$ to identify the behavior of $P(x)$ for values of $x$ greater than the critical value of $x=3$.  We will use $x=5$.  Your answer will not include both a maximum and a minimum because the interval is open on one end.</p>
+
+                        <table class="m1830-solution">
+
+                            <tr>
+
+                                <th>$x$</th>
+
+                                <th>$P(x)$</th>
+                            </tr>
+
+                            <tr>
+
+                                <td>$0$</td>
+
+                                <td>
+                                    <p class="m1830-solution">$150$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>$3$</td>
+
+                                <td>
+                                    <p class="m1830-solution">$1500$</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+
+                                <td>$5$</td>
+
+                                <td>
+                                    <p class="m1830-solution">$300$</p>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <p class="m1830-answer">Because the graph is decreasing for $x$ values greater than $3$, we have an Absolute Maximum at $(3,1500)$ but no Absolute Minimum.</p>
+
+                        <p class="m1830-answer">The profit is maximized at $1500 when 3000 units are sold.</p>
+
+                    </li>
+                </ol>
+                <p><cite> Norris, Ken. (1999). Optimization Problems. Retrieved from <a href="https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F">https://www.stf.sk.ca/portal.jsp?Sy3uQUnbK9L2RmSZs02CjV/Lfyjbyjsxsd+sU7CJwaIY=F</a> </cite></p>
+            </div>
+
+          </article>
+
+          <article class="hw">
+
+
+
+
+
+
+
+
+          </article>
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>
