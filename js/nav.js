@@ -37,6 +37,40 @@
               "url": "u2s3.html"
             }
           ]
+        },
+        {
+          "title": "Unit 3",
+          "nav": [
+            {
+              "urlText": "section 3.1",
+              "url": "u2s1.html"
+            },
+            {
+              "urlText": "section 2.2",
+              "url": "u2s2.html"
+            },
+            {
+              "urlText": "section 2.3",
+              "url": "u2s3.html"
+            }
+          ]
+        },
+        {
+          "title": "Unit 4",
+          "nav": [
+            {
+              "urlText": "section 2.1",
+              "url": "u2s1.html"
+            },
+            {
+              "urlText": "section 2.2",
+              "url": "u2s2.html"
+            },
+            {
+              "urlText": "section 2.3",
+              "url": "u2s3.html"
+            }
+          ]
         }
       ]
     }
