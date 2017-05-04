@@ -26,10 +26,10 @@
 
 
       <!-- load javascript file for answer toggle buttons and functions to hide and show emphasis tags -->
-      <script src="js/mathscripts.js"></script>
+      <script src="js/togglebuttons.js"></script>
 
       <!-- load javascript file to populate graph data from Desmos API. -->
-      <script src="js/desmosgraphs.js"></script>
+      <!-- <script src="js/desmosgraphs.js"></script> -->
       <script>
          (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -47,7 +47,23 @@
          ga('send', 'pageview');
 
       </script>
+<style>
+#u1sp .m1830-solution { display: block;}
 
+#u1s1a .m1830-solution {display: block;}
+#u1s1b .m1830-solution {display: block;}
+#u1s2a .m1830-solution {display: block;}
+#u1s2b .m1830-solution {display: block;}
+#u1s2c .m1830-solution {display: block;}
+#u1s3 .m1830-solution {display: block;}
+#u1s4a .m1830-solution {display: block;}
+#u1s4b .m1830-solution {display: block;}
+#u1s5a .m1830-solution {display: block;}
+#u1s5b .m1830-solution {display: block;}
+#u1s6 .m1830-solution {display: block;}
+
+
+</style>
    </head>
 
    <body>
@@ -62,7 +78,7 @@
                  <span class="icon-bar"></span>
                  <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="https://psccmath.github.io/math1830">MATH 1830</a>
+              <a class="navbar-brand" href="https://psccmath.github.io/math1830/">MATH 1830</a>
            </div>
 
            <!-- Collect the nav links, forms, and other content for toggling -->
@@ -107,7 +123,7 @@
 
                     </ul>
                  </li>
-                 <li class="dropdown">
+                 <!-- <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Toggle<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                        <li><a href="#" onclick="togglesolutions();return false;">Solutions</a></li>
@@ -116,7 +132,7 @@
 
 
                     </ul>
-                 </li>
+                 </li>-->
               </ul>
 
            </div>
@@ -384,7 +400,7 @@
                   <li class="m1830-problem">
                      <p class="m1830-problem-text"> $f(2) = $
                         <span class="m1830-answer">$7$</span></p>
-                     <p><cite> Problems from <a href="http://www.whitman.edu/mathematics/california_calculus/calculus.pdf">http://www.whitman.edu/mathematics/california_calculus/calculus.pdf</a> </cite></p>
+                     <p><cite> Problems from <a href="https://www.whitman.edu/mathematics/california_calculus/calculus.pdf">https://www.whitman.edu/mathematics/california_calculus/calculus.pdf</a> </cite></p>
                   </li>
                </ol>
                <!-- End section problem list  -->
@@ -907,7 +923,7 @@
 
                   <li class="m1830-problem">
                      <p class="m1830-problem-text"> $p(a)=3{{a}^{4}}-2{{a}^{3}}+7{{a}^{2}}-a+12$</p>
-                     <p class="m1830-answer">${p}&#39;(a)=15{{a}^{3}}-6{{a}^{2}}+14a-1$</p>
+                     <p class="m1830-answer">${p}&#39;(a)=12{{a}^{3}}-6{{a}^{2}}+14a-1$</p>
                   </li>
 
                   <li class="m1830-problem">
@@ -919,12 +935,15 @@
 
                   <li class="m1830-problem">
                      <p class="m1830-problem-text"> $q(x)=\frac{{{x}^{3}}-x+2}{x}$</p>
+                     <p class="m1830-solution">$q(x)=\frac{x^3}{x}-\frac{x}{x}+\frac{2}{x}$</p>
+                     <p class="m1830-solution">$q(x)=x^2-1+2{x^{-1}}$</p>
                      <p class="m1830-solution">${q}&#39;(x)=2x-2{{x}^{-2}}$</p>
                      <p class="m1830-answer">${q}&#39;(x)=2x-\frac{2}{{{x}^{2}}}$</p>
                   </li>
 
                   <li class="m1830-problem">
                      <p class="m1830-problem-text"> $f(x)=\frac{2{{x}^{5}}-3{{x}^{3}}+x}{{{x}^{2}}}$</p>
+                     <p class="m1830-solution"> $f(x)=\frac{2{{x}^{5}}}{{x}^{2}}-\frac{3{{x}^{3}}}{{x}^{2}}+\frac{x}{{{x}^{2}}}$</p>
                      <p class="m1830-solution">$f(x)=2{{x}^{3}}-3x+\frac{1}{x}$</p>
                      <p class="m1830-solution">$f(x)=2{{x}^{3}}-3x+{{x}^{-1}}$</p>
                      <p class="m1830-solution">${f}&#39;(x)=6{{x}^{2}}-3-1{{x}^{-2}}$</p>
@@ -960,15 +979,15 @@
                <ol>
 
                   <li class="m1830-problem">
-                     <p class="m1830-problem-text"> $f(x)=\sqrt[7]{{{x}^{4}}}$</p>
-                     <p class="m1830-solution">${f}&#39;(x)=\frac{4}{7}{{x}^{-3/7}}=\frac{4}{7\sqrt[7]{{{x}^{3}}}}$</p>
+                     <p class="m1830-problem-text"> $f(x)=\sqrt[7]{{{x}^{4}}}$<span class="m1830-solution">$={x}^{4/7}$</span></p>
+
                      <p class="m1830-answer">${f}&#39;(x)=\frac{4}{7}{{x}^{-3/7}}=\frac{4}{7\sqrt[7]{{{x}^{3}}}}$</p>
                   </li>
 
                   <li class="m1830-problem">
-                     <p class="m1830-problem-text"> $h(z)=\frac{5}{\sqrt{x}}$</p>
-                     <p class="m1830-solution">${f}&#39;(x)=\frac{-5}{2}{{x}^{-3/2}}=\frac{-5}{2\sqrt{{{x}^{3}}}}$</p>
-                     <p class="m1830-answer"> ${f}&#39;(x)=\frac{-5}{2x\sqrt{x}}$</p>
+                     <p class="m1830-problem-text"> $h(z)=\frac{5}{\sqrt{x}}$<span class="m1830-solution">$=5{x}^{-1/2}$</span></p>
+                     <p class="m1830-solution">${h}&#39;(x)=\frac{-5}{2}{{x}^{-3/2}}=\frac{-5}{2\sqrt{{{x}^{3}}}}$</p>
+                     <p class="m1830-answer"> ${h}&#39;(x)=\frac{-5}{2x\sqrt{x}}$</p>
                   </li>
 
                   <li class="m1830-problem">

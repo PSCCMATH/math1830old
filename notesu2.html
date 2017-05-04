@@ -4,40 +4,18 @@
 <head>
     <title>MATH 1830 Notes</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <!-- josh testing bootstrap stuff -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/notes.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- Load css file from shared location at pstcc.edu -->
-    <link rel="stylesheet" href="css/notes.css" />
-
-
-    <!-- load current MathJax Library Tex as HTML -->
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
-    <!-- configure inline math in HTML use single "$" or "\(" within a sentence or use double "$$" or "\[" to put it centered on its own line.  You must escape single $ with a "\" if its in a regular sentence-->
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
-    </script>
-
-    <!-- load javascript file for answer toggle buttons and functions to hide and show emphasis tags -->
-    <script src="js/mathscripts.js"></script>
-
-    <!-- load javascript file to populate graph data from Desmos API. -->
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+    <script src="js/googlestats.js"></script>
+    <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <script src="js/desmosgraphs.js"></script>
-   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-82640741-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    <script>
+      unit1();
+    </script>
 
 </head>
 
@@ -53,7 +31,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
            </button>
-           <a class="navbar-brand" href="https://psccmath.github.io/math1830">MATH 1830</a>
+           <a class="navbar-brand" href="https://psccmath.github.io/math1830/">MATH 1830</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -245,7 +223,7 @@
 
 
 
-                <p><strong>Logarithm and Exponential Forms</strong></p>
+                <p class="m1830-pagebreak"><strong>Logarithm and Exponential Forms</strong></p>
                 <ol>
 
                     <li class="m1830-problem">
@@ -282,13 +260,13 @@
                         <p class="m1830-problem-text">
                             Rewrite ${e^2} \approx 7.389$ in logarithm notation</p>
 
-                        <p class="m1830-answer">$\ln (7.389) = 2$</p>
+                        <p class="m1830-answer">$\ln (7.389) \approx 2$</p>
 
-                        <p><strong>Review:</strong></p>
+      <p ><strong>Review:</strong></p>
                         <p> Solve the variable to 2 decimal places</p>
-                    </li>
+</li>
 
-                    <li class="m1830-problem">
+              <li class="m1830-problem">
                         <p class="m1830-problem-text">
                             $A = 4000{e^{0.06\left( 8 \right)}}$</p>
 
@@ -313,7 +291,7 @@
                         <p class="m1830-solution">$\frac{{95}}{{12}} = {e^{0.041t}}$</p>
                         <p class="m1830-solution">$\ln \frac{{95}}{{12}} = \ln {e^{0.041t}}$</p>
                         <p class="m1830-solution">$\ln \frac{{95}}{{12}} = 0.041t$</p>
-                        <p class="m1830-solution">$\left( {\ln \frac{{95}}{{12}}} \right)/0.041 = t$</p>
+                        <p class="m1830-solution">$\frac{\left( {\ln \frac{{95}}{{12}}} \right)}{0.041} = t$</p>
                         <p class="m1830-answer">$50.46 = t$</p>
 
                     </li>
@@ -326,7 +304,7 @@
                         <p class="m1830-solution">$\frac{{493}}{{225}} = {e^{2.65r}}$</p>
                         <p class="m1830-solution">$\ln \frac{{493}}{{225}} = \ln {e^{2.65r}}$</p>
                         <p class="m1830-solution">$\ln \frac{{493}}{{225}} = 2.65r$</p>
-                        <p class="m1830-solution">$\left( {\ln \frac{{493}}{{225}}} \right)/2.65 = r$</p>
+                        <p class="m1830-solution">$\frac{\left( {\ln \frac{{493}}{{225}}} \right)}{2.65} = r$</p>
                         <p class="m1830-answer">$.30 = r$</p>
 
                     </li>
@@ -340,7 +318,7 @@
                         <p class="m1830-solution">$\frac{{\ln 3}}{{0.07}} = t$</p>
                         <p class="m1830-answer">$15.69 = t$</p>
 
-                        <p><strong>Review:</strong></p>
+                        <p class="m1830-pagebreak"><strong>Review:</strong></p>
                         <p>Solve for the variable without using a calculator. </p>
                     </li>
 
@@ -388,7 +366,7 @@
                         <p class="m1830-solution">$y = \ln (1)$</p>
                         <p class="m1830-answer">$y = 0$</p>
 
-                    <p><strong>Use the Properties of Logarithms to Completely Expand the Term</strong></p>
+                    <p class="m1830-pagebreak"><strong>Use the Properties of Logarithms to Completely Expand the Term</strong></p>
 
 </li>
                     <li class="m1830-problem">
@@ -429,7 +407,7 @@
 
 
 
-                        <p><strong>Solve for x.  Check for Extraneous Solutions.</strong></p>
+                        <p class="m1830-pagebreak"><strong>Solve for x.  Check for Extraneous Solutions.</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -507,12 +485,12 @@
                 </ul>
                 <hr>
 
-                <div class="pagebreak"></div>
 
 
 
 
-                <h4 class="break">Notes</h4>
+
+                <h4 class="m1830-pagebreak">Notes</h4>
                 <p>Continuous Compounding Formula (appreciation and depreciation): $$A = P{e^{rt}}$$ </p>
                 <p><strong>CONTINUOUS COMPOUND INTEREST:</strong> Round all answers to two decimal places.</p>
                 <ol>
@@ -726,7 +704,7 @@
 
 
 
-                        <p><strong>Finding the derivative of$\;f\left( x \right) = lnx$</strong></p>
+                        <p class="m1830-pagebreak"><strong>Finding the derivative of$\;f\left( x \right) = lnx$</strong></p>
 
                     </li>
 
@@ -796,7 +774,7 @@
   </li>
 </ol>
 
-                        <h4 class="break">Notes</h4>
+                        <h4 class="m1830-pagebreak">Notes</h4>
 
 
                         <div class="panel panel-primary">
@@ -848,12 +826,12 @@
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;\ln {x^8}\; - 4\ln x\;$</p>
+                            Find $f&#39;\left( x \right)$ when $f\left( x \right)\; = \;\;\ln {x^8}\; - 3\ln x\;$</p>
 
-                        <p class="m1830-solution">$f&#39;(x) = \frac{8}{x} - \frac{4}{x}$</p>
-                        <p class="m1830-answer">$f&#39;(x) = \frac{4}{x}$</p>
+                        <p class="m1830-solution">$f&#39;(x) = \frac{8}{x} - \frac{3}{x}$</p>
+                        <p class="m1830-answer">$f&#39;(x) = \frac{5}{x}$</p>
 
-                        <p><strong>Properties of Logarithms:</strong></p>
+                        <p class="m1830-pagebreak"><strong>Properties of Logarithms:</strong></p>
                         <p><strong>Use appropriate properties of logarithms to expand $f\left( x \right)$ and then find $f&#39;(x)$.</strong> </p>
 
                     </li>
@@ -878,7 +856,7 @@
                         <p class="m1830-solution">$f&#39;(x) = 1 - 0 - \frac{2}{x}$</p>
                         <p class="m1830-answer">$f&#39;(x) = 1 - \frac{2}{x}$</p>
 
-                        <p><strong>Tangent Lines:</strong></p>
+                        <p class="m1830-pagebreak"><strong>Tangent Lines:</strong></p>
                         <p><strong>Find the equation of the line tangent to the graph of $f$ at the indicated value of x.</strong></p>
 
                     </li>
@@ -922,7 +900,7 @@
 
 
 
-                        <p><strong>Applications:</strong></p>
+                        <p class="m1830-pagebreak"><strong>Applications:</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1018,7 +996,7 @@
                 </ol>
 
 
-                <h4 class="break">Notes</h4>
+                <h4 class="m1830-pagebreak">Notes</h4>
                 <p><strong>Derivatives of Products and Quotients</strong></p>
                 <p><strong>Rewriting a Function as a Product or Quotient</strong></p>
                 <ol>
@@ -1027,7 +1005,7 @@
                         <p class="m1830-problem-text">
                             Rewrite as a product: $f\left( x \right) = 5{e^x}\; + \;\;10{x^2}\;{e^x}\; + \;\;25{x^4}\;{e^x}$</p>
 
-                        <p class="m1830-answer">$f(x) = 5{e^x}(1 + 2x + 5{x^4})$</p>
+                        <p class="m1830-answer">$f(x) = 5{e^x}(1 + 2{x^2} + 5{x^4})$</p>
 
                     </li>
 
@@ -1069,7 +1047,7 @@
 
 
 
-                                <p><strong>Two Methods for Finding the Derivative:</strong></p>
+                                <p class="m1830-pagebreak"><strong>Two Methods for Finding the Derivative:</strong></p>
                                 <p>Find the derivative two different ways.</p>
                                 <ol>
 
@@ -1079,7 +1057,8 @@
                                 </ol>
 
                     </li>
-
+<br>
+<br>
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
                             $m\left( x \right) = 2{x^3}\;\left( {{x^5} - 2} \right)$</p>
@@ -1118,11 +1097,11 @@
                     </li>
 
                     <li class="m1830-problem">
-                        <p class="m1830-problem-text"></p>
+                        <p class="m1830-problem-text"> $r\left( x \right) = \;\frac{{{x^5}+4}}{{{x^2}}}$ </p>
                         <ol>
 
                             <li>
-                                $r\left( x \right) = \;\frac{{{x^5}+4}}{{{x^2}}}$
+
 
                                 <p class="m1830-solution">Simplifying and Using Power Rule</p>
                                 <p class="m1830-solution">$r(x) = \frac{{{x^5}}}{{{x^2}}} + \frac{4}{{{x^2}}}$</p>
@@ -1159,7 +1138,7 @@
                                 <p class="m1830-solution">$r&#39;(x) = \frac{{3{x^5} - 8}}{{{x^3}}}$</p>
                                 <p class="m1830-answer">$r&#39;(x) = 3{x^2} - \frac{8}{{{x^3}}}$</p>
 
-                                <p><strong>Find $f&#39;(x)$ using the Product Rule.</strong></p>
+                                <p class="m1830-pagebreak"><strong>Find $f&#39;(x)$ using the Product Rule.</strong></p>
                             </li>
                         </ol>
                     </li>
@@ -1264,7 +1243,7 @@
 
 
 
-                              <p><strong>Find $f&#39;(x)$ using the Quotient Rule.</strong></p>
+                              <p class="m1830-pagebreak"><strong>Find $f&#39;(x)$ using the Quotient Rule.</strong></p>
 
 
 
@@ -1413,7 +1392,7 @@
 
 
 
-                        <p><strong>Tangent Lines</strong></p>
+                        <p class="m1830-pagebreak"><strong>Tangent Lines</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1515,7 +1494,7 @@
                                 <p class="m1830-answer">$0 \ne 11$ There is no value of x where $f&#39;(x) =0$</p>
                             </li>
                         </ol>
-                        <p><strong>Derivatives with Radicals</strong></p>
+                        <p class="m1830-pagebreak"><strong>Derivatives with Radicals</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1582,7 +1561,7 @@
                         <p class="m1830-solution">$\frac{dy}{dx}=\frac{14{{x}^{8/4}}-6{{x}^{4/4}}-3}{(4{{x}^{1/2}}){{x}^{3/4}}}$</p>
                         <p class="m1830-answer">$\frac{dy}{dx}=\frac{14{{x}^{2}}-6x-3}{4{{x}^{5/4}}}$</p>
 
-                        <p><strong>Applications</strong></p>
+                        <p class="m1830-pagebreak"><strong>Applications</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1619,7 +1598,7 @@
                                 <p class="m1830-answer">At 12 months the cable company has 125,647 subscribers and that number is increasing at a rate of 3080 subscribers per month.</p>
                             </li>
 
-                            <li>Use the results above to estimate the total number of subscribers after 13 months,
+                            <li>Use the results above to estimate the total number of subscribers after 13 months.
                                 <p class="m1830-solution">125,647 + 3080 = 128,727</p>
                                 <p class="m1830-answer">There will be approximately 128,727 subscribers after 13 months.</p>
                             </li>
@@ -1705,7 +1684,7 @@
                 </ol>
 
 
-                <h4 class="break">Notes</h4>
+                <h4 class="m1830-pagebreak">Notes</h4>
 
                 <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -1750,7 +1729,7 @@
                             $\frac{d}{{dx\;}}\;ln\left( {{x^2} - {x^4}} \right) = \;\frac{1}{{{x^2} - {x^4}}}$______
                             <span class="m1830-answer">$(2x - 4{x^3})$</span>
 
-                            <p><strong>Find $f&#39;\left( x \right)$ and simplify.</strong></p>
+                            <p class="m1830-pagebreak"><strong>Find $f&#39;\left( x \right)$ and simplify.</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1786,7 +1765,7 @@
                         <p class="m1830-solution">$f&#39;(x) = 7{\left( {4x - 5\ln x} \right)^6}(4 - \frac{5}{x})$</p>
                         <p class="m1830-answer">$f&#39;(x) = 7(4 - \frac{5}{x}){\left( {4x - 5\ln x} \right)^6}$</p>
 
-    <p><strong>Horizontal Tangents</strong></p>
+    <p class="m1830-pagebreak"><strong>Horizontal Tangents</strong></p>
 
 
 
@@ -1808,7 +1787,7 @@
                                 <ol>
                                   <li>Set $f&#39;(x)=0$</li>
                               <li>Solve for $x$</li>
-                              <li> 3) Verify that each $x$ is in the domain of $f(x)$ and $f&#39;(x)$</li></ol>
+                              <li> Verify that each $x$ is in the domain of $f(x)$ and $f&#39;(x)$</li></ol>
                             </div>
                             </div>
                           </div>
@@ -1823,7 +1802,7 @@
 
 
 
-                          <p><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
+                          <p class="m1830-pagebreak"><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -1941,7 +1920,7 @@
 
                         <p class="m1830-answer">Horizontal Tangents at $x=0\;\;$ and $\;\;x=\pm \frac{1}{2}$</p>
 
-                        <p><strong>Find the indicated derivative and simplify.</strong></p>
+                        <p class="m1830-pagebreak"><strong>Find the indicated derivative and simplify.</strong></p>
                     </li>
 
                     <li class="m1830-problem">
@@ -2037,13 +2016,13 @@
 
                         <p class="m1830-solution">$\frac{d}{{dw}} = - 3{\left( {{w^2} - 5} \right)^{ - 4}}(2w)$</p>
                         <p class="m1830-answer">$\frac{d}{{dw}} = \frac{{ - 6w}}{{{{\left( {{w^2} - 5} \right)}^4}}}$</p>
-<p><strong>Horizontal Tangents</strong></p>
+<p class="m1830-pagebreak"><strong>Horizontal Tangents</strong></p>
                         <p><strong>Find $f&#39;(x)$ and simplify.  Then find the equation of the tangent line to the graph of $f(x)$ at the given value of $x$.  Find the values of $x$ where the tangent line is horizontal.</strong></p>
                     </li>
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            $f\left( x \right) = {x^2}\;{\left( {3 - 2x} \right)^4}$ $x = 1$</p>
+                            $f\left( x \right) = {x^2}\;{\left( {3 - 2x} \right)^4}\quad\quad x = 1$</p>
 
                         <p class="m1830-solution">Point: $\quad f(1) = {1^2}{\left( {3 - 2\cdot 1} \right)^4}= {1^2}{\left( 1 \right)^4} = 1$</p>
                         <p class="m1830-answer m1830-step">$(1,1)$</p>
@@ -2186,7 +2165,7 @@
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            $f\left( x \right)={{e}^{\sqrt{x}}}$</p>
+                            $f\left( x \right)={{e}^{\sqrt{x}}}\quad\quad$ when $x=1$</p>
 
 
 
@@ -2239,7 +2218,7 @@
                         <p class="m1830-solution">$x + 2 = 0$</p>
                         <p class="m1830-answer">One horizontal tangent at $\; x = - 2$</p>
 
-                        <p><strong>Applications</strong></p>
+                        <p class="m1830-pagebreak"><strong>Applications</strong></p>
                     </li>
 
                     <li class="m1830-problem">
