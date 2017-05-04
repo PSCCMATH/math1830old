@@ -10,6 +10,11 @@
     a[href]:after {
         content: none;
     }
+   
+    article{
+         page-break-inside: avoid;
+        
+    }
     .m1830-section {
         page-break-before: always;
     }
@@ -35,6 +40,8 @@
     img {
         display: block;
         page-break-inside: avoid;
+        max-width: 400px !important;
+        margin-left: 0;
     }
     video {
         display: none;
