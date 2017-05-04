@@ -1,76 +1,123 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+  var app = angular.module("myApp", []);
+  app.controller("myCtrl", function ($scope) {
+    $scope.nav = {
+      "title": "Math 1830",
+      "titleUrl": "https://psccmath.github.io/math1830/",
+      "unit": [
+        {
+          "title": "Unit 1",
+          "nav": [
+            {
+              "urlText": "1.1 Limits Graphically and Algebraically",
+              "url": "u1s1.html"
+            },
+            {
+              "urlText": "1.2 Infinite Limits and Asymptotes",
+              "url": "u1s2.html"
+            },
+            {
+              "urlText": "1.3 Continuity",
+              "url": "u1s3.html"
+            }
+          ]
+        },
+        {
+          "title": "Unit 2",
+          "nav": [
+            {
+              "urlText": "section 2.1",
+              "url": "u2s1.html"
+            },
+            {
+              "urlText": "section 2.2",
+              "url": "u2s2.html"
+            },
+            {
+              "urlText": "section 2.3",
+              "url": "u2s3.html"
+            }
+          ]
+        }
+      ]
+    }
+  });
+
+</script>
 <div ng-app="myApp" ng-controller="myCtrl">
-<nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
 
-  <div class="container-fluid">
+    <div class="container-fluid">
 
-    <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-        aria-expanded="false">
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
              <span class="sr-only">Toggle navigation</span>
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
           </button> <a class="navbar-brand" ng-href="nav.Url">{{nav.title}}</a> </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+              title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
 
-           
-          </ul>
-        </li>
-        
-      </ul>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </div>
 
 <script>
-var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-  $scope.nav = {
-  "title": "Math 1830",
-  "titleUrl": "https://psccmath.github.io/math1830/",
-  "unit": [
-    {
-      "title": "Unit 1",
-      "nav": [
+  var app = angular.module("myApp", []);
+  app.controller("myCtrl", function ($scope) {
+    $scope.nav = {
+      "title": "Math 1830",
+      "titleUrl": "https://psccmath.github.io/math1830/",
+      "unit": [
         {
-          "urlText": "1.1 Limits Graphically and Algebraically",
-          "url": "u1s1.html"
+          "title": "Unit 1",
+          "nav": [
+            {
+              "urlText": "1.1 Limits Graphically and Algebraically",
+              "url": "u1s1.html"
+            },
+            {
+              "urlText": "1.2 Infinite Limits and Asymptotes",
+              "url": "u1s2.html"
+            },
+            {
+              "urlText": "1.3 Continuity",
+              "url": "u1s3.html"
+            }
+          ]
         },
         {
-          "urlText": "1.2 Infinite Limits and Asymptotes",
-          "url": "u1s2.html"
-        },
-        {
-          "urlText": "1.3 Continuity",
-          "url": "u1s3.html"
-        }
-      ]
-    },
-    {
-      "title": "Unit 2",
-      "nav": [
-        {
-          "urlText": "section 2.1",
-          "url": "u2s1.html"
-        },
-        {
-          "urlText": "section 2.2",
-          "url": "u2s2.html"
-        },
-        {
-          "urlText": "section 2.3",
-          "url": "u2s3.html"
+          "title": "Unit 2",
+          "nav": [
+            {
+              "urlText": "section 2.1",
+              "url": "u2s1.html"
+            },
+            {
+              "urlText": "section 2.2",
+              "url": "u2s2.html"
+            },
+            {
+              "urlText": "section 2.3",
+              "url": "u2s3.html"
+            }
+          ]
         }
       ]
     }
-  ]
-}
-});
+  });
 
 </script>
