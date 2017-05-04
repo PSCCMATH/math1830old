@@ -11,13 +11,13 @@
         content: none;
     }
    
-    article{
-         page-break-inside: avoid;
+    article.hw{
+        page-break-before: always;
         
     }
-    .m1830-section {
+    /*.m1830-section {
         page-break-before: always;
-    }
+    }*/
     .m1830-problem {
         page-break-inside: avoid;
     }
@@ -28,12 +28,6 @@
     .m1830-pagebreak {
       page-break-before: always;
     }
-    /*.m1830-unit {
-        page-break-before: always;
-    }*/
-    /*strong {
-      page-break-before: always;
-    }*/
     iframe {
         display: none;
     }
@@ -46,4 +40,19 @@
     video {
         display: none;
     }
+}
+
+ .m1830-answer, .m1830-solution {
+        visibility: hidden;
+    }
+
+.m1830-hw-answer, .m1830-hw-solution {
+  display: none;
+}
+
+
+
+
+.m1830-answer img, .m1830-solution img {
+  display:none;
 }
