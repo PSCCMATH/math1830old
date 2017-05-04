@@ -14,13 +14,38 @@
     <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
       <script src="js/desmosgraphs.js"></script> -->
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
+<script src="js/nav.js"></script>
 </head>
 
 <body>
-<div  ng-app>
-<div ng-include="'nav.html'"></div>
-</div>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container-fluid">
+
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button> <a class="navbar-brand" ng-href="nav.Url">{{nav.title}}</a> </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+              title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
     <!--<nav></nav>-->
 
     <div class="container">
