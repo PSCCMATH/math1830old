@@ -41,10 +41,12 @@
         display: none;
     }
     .m1830-answer, .m1830-solution {
-        visibility: hidden;
+        display: block;
+         visibility: hidden;
     }
 
     .m1830-hw-answer, .m1830-hw-solution {
+     
      display: none;
     }
 
