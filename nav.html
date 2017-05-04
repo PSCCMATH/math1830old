@@ -10,7 +10,7 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
-          </button> <a class="navbar-brand" href="https://psccmath.github.io/math1830/">{{nav.title}}</a> </div>
+          </button> <a class="navbar-brand" ng-href="nav.Url">{{nav.title}}</a> </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -24,9 +24,7 @@
         
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-fluid -->
 </nav>
 </div>
 
@@ -35,6 +33,7 @@ var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
   $scope.nav = {
   "title": "Math 1830",
+  "titleUrl": "https://psccmath.github.io/math1830/",
   "unit": [
     {
       "title": "Unit 1",
