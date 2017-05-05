@@ -16,9 +16,11 @@ function validatePin(txtValue, unitSectionText) {
 }
 function revealSolution() {
   $(".m1830-solution").show();
+  console.log("solutions revealed");
 }
 function revealAnswer() {
   $(".m1830-answer").show();
+  console.log("answers revealed");
 }
 function getUnitSectionText() {
   var h3Str = $("h3:first").text();
