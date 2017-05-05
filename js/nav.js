@@ -95,16 +95,24 @@
           "title": "Unit 4",
           "nav": [
             {
-              "urlText": "section 2.1",
-              "url": "u2s1.html"
+              "urlText": "4.1 Area by Sums",
+              "url": "u4s1.html"
             },
             {
-              "urlText": "section 2.2",
-              "url": "u2s2.html"
+              "urlText": "4.2 The Fundamental Theorem of Calculus",
+              "url": "u4s2.html"
             },
             {
-              "urlText": "section 2.3",
-              "url": "u2s3.html"
+              "urlText": "4.3 Indefinite Integrals",
+              "url": "u4s3.html"
+            },
+            {
+              "urlText": "4.4 Integration by Substitution",
+              "url": "u4s4.html"
+            },
+            {
+              "urlText": "4.5 The Area Between Curves",
+              "url": "u4s5.html"
             }
           ]
         }
