@@ -18,6 +18,18 @@
             {
               "urlText": "1.3 Continuity",
               "url": "u1s3.html"
+            },
+            {
+              "urlText": "1.4 Definition of Derivatives",
+              "url": "u1s4.html"
+            },
+            {
+              "urlText": "1.5 Derivatives: The Power Rule",
+              "url": "u1s5.html"
+            },
+            {
+              "urlText": "1.6 Marginal Analysis",
+              "url": "u1s6.html"
             }
           ]
         },
@@ -25,16 +37,20 @@
           "title": "Unit 2",
           "nav": [
             {
-              "urlText": "section 2.1",
+              "urlText": "2.1 The Constant e and Natural Log Applications",
               "url": "u2s1.html"
             },
             {
-              "urlText": "section 2.2",
+              "urlText": "2.2 Derivatives of Exponential and Logarithmic Functions",
               "url": "u2s2.html"
             },
             {
-              "urlText": "section 2.3",
+              "urlText": "2.3 Product and Quotient Rules",
               "url": "u2s3.html"
+            },
+            {
+              "urlText": "2.4 The Chain Rule",
+              "url": "u2s4.html"
             }
           ]
         },
@@ -42,16 +58,36 @@
           "title": "Unit 3",
           "nav": [
             {
-              "urlText": "section 3.1",
-              "url": "u2s1.html"
+              "urlText": "I don't know",
+              "url": "u3s1.html"
             },
             {
-              "urlText": "section 2.2",
-              "url": "u2s2.html"
+              "urlText": "but the links work",
+              "url": "u3s2.html"
             },
             {
-              "urlText": "section 2.3",
-              "url": "u2s3.html"
+              "urlText": "but the links work",
+              "url": "u3s3.html"
+            },
+            {
+              "urlText": "but the links work",
+              "url": "u3s4.html"
+            },
+            {
+              "urlText": "but the links work",
+              "url": "u3s5.html"
+            },
+            {
+              "urlText": "but the links work",
+              "url": "u3s6.html"
+            },
+            {
+              "urlText": "but the links work",
+              "url": "u3s7.html"
+            },
+            {
+              "urlText": "but the links work",
+              "url": "u3s8.html"
             }
           ]
         },
