@@ -11,7 +11,7 @@
         content: none;
     }
    
-    article.hw{
+    article.hw article.nearpod{
         page-break-before: always;
         
     }
@@ -36,6 +36,9 @@
         page-break-inside: avoid;
         max-width: 400px !important;
         margin-left: 0;
+    }
+    input, textarea {
+        border-bottom: 1px solid black!important;
     }
     video {
         display: none;
