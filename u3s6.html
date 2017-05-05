@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+
+        <h2 id="unit-3-applications-of-derivatives">Unit 3 Applications of Derivatives</h2>
+
+
+
+
+
+
+<article class="notes">
+
+
+
+
+
+            <div id="u3s6" class="m1830-section">
+                <h3>3.6 Introduction to Optimization</h3>
+
+                <h4>Introduction</h4>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Construct a 20 cm by 20 cm square on the white piece of paper.</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Draw four congruent squares in each corner of your original square (see diagram below), the size of the four squares you draw will be assigned for your group.</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Using the scissors and tape, cut out your square and its corners to create an open-topped box.</p>
+                        <p><img src="images/notes/u3s4p1i.png" alt="20 cm by 20 cm Square with small squares made with dotted lines in each corner"></p>
+                    </li>
+
+                    <li class="m1830-problem m1830-pagebreak">
+                        <p class="m1830-problem-text">
+                            Complete the following questions:</p>
+                        <ol>
+
+                            <li>The width of our box is:</li>
+
+                            <li>The length of our box is:</li>
+
+                            <li>The height of our box is:</li>
+
+                            <li>Calculate the volume of your box.</li>
+                        </ol>
+                        <p>A summary of the data collected from the class is on the board. Copy this data into the chart below.</p>
+                        <table>
+                            <tr>
+                                <th>Height (cm)</th>
+                                <th>Volume (cubic cm)</th>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+
+                    </li>
+
+                    <li class="m1830-problem m1830pagebreak">
+                        <p class="m1830-problem-text">
+                            Using the graph paper, construct a graph of height vs volume by plotting the above ordered pairs. Join the points with a smooth curve. Answer the following questions based on your graph.</p>
+                        <p><img src="images/notes/u3s4p5i.png" alt="1st Quadrant Graph with height on the x-axis and volume on the y-axis"></p>
+                        <p> <img src="images/notes/u3s4p10i.png" alt="Blank 20 by 20 coordinate plane"> </p>
+                    </li>
+
+                    <li class="m1830-problem m1830-pagebreak">
+                        <p class="m1830-problem-text">
+                            What is the maximum volume? (According to your graph.)</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            What size of square cut out of the corner would result in the maximum volume?</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            What type of function models your graph?</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Could we write a mathematical function representing the graph?</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            How could our knowledge of derivatives be used to find the maximum volume?</p>
+
+
+
+
+                    </li>
+                </ol>
+            </div>
+
+
+
+
+
+
+</article>
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>
