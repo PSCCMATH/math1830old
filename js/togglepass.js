@@ -36,8 +36,10 @@ function getTextValue() {
 }
 
 var pincode = {
+  //unit 1
   unit: [
     {
+      //section 1
       section: [
         {
           pin: "d7t4"
@@ -51,6 +53,38 @@ var pincode = {
       ]
     },
     {
+      //section 2
+      section: [
+        {
+          pin: "a4k9"
+        },
+        {
+          pin: "z9d5"
+        },
+        {
+          pin: "r2m8"
+        }
+      ]
+    }
+  ],
+  //unit 2
+   unit: [
+    {
+      //section 1
+      section: [
+        {
+          pin: "d7t4"
+        },
+        {
+          pin: "m9m8"
+        },
+        {
+          pin: "q1q1"
+        }
+      ]
+    },
+    {
+      //section 2
       section: [
         {
           pin: "a4k9"
