@@ -10,14 +10,14 @@
     a[href]:after {
         content: none;
     }
-   
+
     article.hw{
         page-break-before: always;
-        
+
     }
-    /*.m1830-section {
+    .m1830-section {
         page-break-before: always;
-    }*/
+    }
     .m1830-problem {
         page-break-inside: avoid;
     }
@@ -46,7 +46,7 @@
     }
 
     .m1830-hw-answer, .m1830-hw-solution {
-     
+
      display: none;
     }
 
@@ -54,5 +54,3 @@
     display:none;
     }
 }
-
- 

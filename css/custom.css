@@ -1,3 +1,8 @@
+article.nearpod input{
+  display: inline-block;
+  width: 120px;
+}
+
 th.m1830-morespace {
     padding: 2em;
 }
