@@ -16,7 +16,7 @@ window.onload = function()
         head.appendChild(script);
         script = document.createElement("script");
         script.type = "text/javascript";
-        script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
         head.appendChild(script);
     }, 2000)
 }
