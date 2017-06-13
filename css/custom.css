@@ -34,15 +34,15 @@ img.desmosicon {
 }
 
 .m1830-answer {
-    color: #b30000!important;
+    color: #b30000 !important;
 }
 
-.m1830-hw-answer {
-    color: #b30000!important;
+.m1830-hw-answer, .m1830-hw-answer .mathjax {
+    color: #b30000 !important;
 }
 
 .m1830-solution, .m1830-hw-solution {
-    color: blue!important;
+    color: blue !important;
 }
 .m1830-step {
     margin: 0em 0 2em 0;

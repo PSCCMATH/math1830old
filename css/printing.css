@@ -1,7 +1,7 @@
 @media print {
     body {
         background: none;
-        font-size: 16px;
+        /*font-size: 16px;*/
     }
     a {
         text-decoration: none;
@@ -40,17 +40,30 @@
     video {
         display: none;
     }
-    .m1830-answer, .m1830-solution {
-        display: block;
-         /*visibility: hidden;*/
+
+    /*.m1830-answer *, .m1830-answer *:before, .m1830-answer *:after {
+        color: #b30000 !important;
     }
 
-    .m1830-hw-answer, .m1830-hw-solution {
+    .m1830-hw-answer *, .m1830-hw-answer *:before, .m1830-hw-answer *:after{
+        color: #b30000 !important;
+    }
+
+    .m1830-solution *, .m1830-hw-solution * {
+        color: blue !important;
+    }*/
+
+    /*.m1830-answer, .m1830-solution {
+        display: block;*/
+         /*visibility: hidden;*/
+    /*}*/
+
+    /*.m1830-hw-answer, .m1830-hw-solution {*/
 
      /*display: none;*/
-    }
+    /*}*/
 
-    .m1830-answer img, .m1830-solution img {
+    /*.m1830-answer img, .m1830-solution img {*/
     /*display:none;*/
-    }
+    /*}*/
 }
