@@ -88,7 +88,7 @@
                </table>
 
 
-               <p>This function can be approximated by the equation $y = 0.16{x^3} + 0.0003{x^2} - 0.007x + 0.0161$ (graphed below)
+               <p>This function can be approximated by the equation $f(x) = 0.16{x^3} + 0.0003{x^2} - 0.007x + 0.0161$ (graphed below)
                   <img src="images/notes/u1s4p1i.png" alt="First Quadrant Graph.x-axis:  -3 to 33  measuring time in seconds ; y-axis:  0 to 4000  measuring volume in cubic centimeters. Cubic curve increasing up and to the right.">
                   <ol>
 
@@ -125,7 +125,7 @@
                         <p class="m1830-problem-text">
                            What does the slope of the secant line represent?</p>
 
-                        <p class="m1830-answer">The slope of the secant represents the average rate of change in the volume helium in the balloon over the time interval.</p>
+                        <p class="m1830-answer">The slope of the secant represents the average rate of change in the volume of helium in the balloon over the time interval.</p>
 
                      </li>
 
@@ -149,17 +149,19 @@
                         <p class="m1830-problem-text">
                            Compare the secant slopes to the slope of the tangent line. What do you notice?</p>
 
-                        <p class="m1830-answer">As the interval becomes smaller, the slope of the secant line gets closer in value to the slope of the tangent line.</p>
+                        <p class="m1830-answer">As the time interval becomes smaller between 21 sec and the end of the interval, the slope of the secant line gets closer in value to the slope of the tangent line, which is the rate of change at exactly 21 seconds.</p>
                      </li>
                   </ol>
                   <p><cite> Source <a href="http://mysite.science.uottawa.ca/iabde083/ch01.pdf">http://mysite.science.uottawa.ca/iabde083/ch01.pdf</a> </cite></p>
                   <hr>
 
-                  <div class="pagebreak"></div>
+                  <div class="m1830-pagebreak"></div>
 
 
                   <h4>Notes</h4>
                   <strong>Limit Definition of the Derivative of a Function: 4 Step Process</strong>
+                  <p> Given $f(x)$,</p>
+                  <p> $f'(x)=\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}$</p>
                   <p>Step 1 Find $f\left( {x + h} \right)$</p>
                   <p>Step 2 Find $f\left( {x + h} \right) - f\left( x \right)$</p>
                   <p>Step 3 Find $\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}$</p>
@@ -183,7 +185,7 @@
                         <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 2x + h - 3$</p>
                         <p class="m1830-solution">Step 4</p>
                         <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} 2x + h - 3 = 2x + (0) - 3 = 2x - 3$</p>
-                        <p class="m1830-answer">$f&#39;(x) = 2x - 3$</p>
+                        <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is $f&#39;(x) = 2x - 3.$</p>
 
                      </li>
 
@@ -203,8 +205,8 @@
                         <p class="m1830-solution">$ \frac{{f(x + h) - f(x)}}{h} = \frac{{10xh}}{h} + \frac{{5{h^2}}}{h} + \frac{{2h}}{h}$</p>
                         <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 10x + 5h + 2$</p>
                         <p class="m1830-solution">Step 4</p>
-                        <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} 10x + 5h + 2 = 10x + 5(0) + 2 = 10x + 2$</p>
-                        <p class="m1830-answer">$f&#39;(x) = 10x + 2$</p>
+                        <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} (10x + 5h + 2) = 10x + 5(0) + 2 = 10x + 2$</p>
+                        <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is $f&#39;(x) = 10x + 2.$</p>
 
                         <strong>Write the equation of the tangent line at x=2.</strong>
                         <p class="m1830-answer">Point $\quad f(2)=16\quad \quad (2,16)$ </p>
@@ -212,9 +214,9 @@
 
 
                         <p class="m1830-solution">$y-y_1=m\left(x-x_1\right)\\ $</p>
-                        <p class="m1830-solution">y - 16 = 22(x - 2)</p>
-                        <p class="m1830-solution">y - 16 = 22x - 44</p>
-                        <p class="m1830-answer">y = 22x - 28</p>
+                        <p class="m1830-solution">$y - 16 = 22(x - 2)$</p>
+                        <p class="m1830-solution">$y - 16 = 22x - 44$</p>
+                        <p class="m1830-answer">$y = 22x - 28$</p>
 
                      </li>
 
@@ -233,20 +235,20 @@
                         <p class="m1830-solution">$\frac{f(x+h)-f(x)}{h}=\frac{-8xh}{h}-\frac{4{{h}^{2}}}{h}+\frac{h}{h}$</p>
                         <p class="m1830-answer">$\frac{f(x+h)-f(x)}{h}=-8x-4h+1$</p>
                         <p class="m1830-solution">Step 4</p>
-                        <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} -8x-4h+1=-8x-4(0)+1=-8x+1$</p>
-                        <p class="m1830-answer">${f}&#39;(x)=-8x+1$ </p>
+                        <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} (-8x-4h+1)=-8x-4(0)+1=-8x+1$</p>
+                        <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is ${f}&#39;(x)=-8x+1.$ </p>
                         <p><strong>Write the equation of the tangent line at x = 1</strong></p>
                         <p class="m1830-answer">Point $\quad f(1)=-1\quad \quad (1, - 1)$</p>
                         <p class="m1830-answer">Slope $\quad {m_{\tan}}= f&#39;(1) =- 8(1) + 1 = - 8 + 1 = - 7$</p>
                         <p class="m1830-solution">$y-y_1=m\left(x-x_1\right)\\ $</p>
-                        <p class="m1830-solution">y +1 = -7(x - 1)</p>
-                        <p class="m1830-solution">y +1 = -7x +7</p>
-                        <p class="m1830-answer">y = -7x +6</p>
+                        <p class="m1830-solution">$y +1 = -7(x - 1)$</p>
+                        <p class="m1830-solution">$y +1 = -7x +7$</p>
+                        <p class="m1830-answer">$y = -7x +6$</p>
                      </li>
 
                      <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                           Use the limit definition of the derivative to find $f&#39;\left( x \right)$, given $f\left( x \right) = \;\frac{6}{x}\;\,\, - \,\,2$</p>
+                           Use the limit definition of the derivative to find $f&#39;\left( x \right)$, given $f\left( x \right) = \;\frac{6}{x} - 2$</p>
 
                         <p class="m1830-solution">Step 1</p>
                         <p class="m1830-answer">$f(x + h) = \frac{6}{{x + h}} - 2$</p>
@@ -260,7 +262,7 @@
                         <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = \frac{-6h}{x(x+h)}\cdot\frac1h = \frac{{ - 6}}{{x(x + h)}}$</p>
                         <p class="m1830-solution">Step 4</p>
                         <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} \frac{{ - 6}}{{x(x + h)}} = \frac{{ - 6}}{{x(x + 0)}} = \frac{{ - 6}}{{x(x)}} = \frac{{ - 6}}{{{x^2}}}$</p>
-                        <p class="m1830-answer">$f&#39;\left( x \right) = -\frac{{ 6}}{{{x^2}}}$</p>
+                        <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is $f&#39;\left( x \right) = -\frac{{ 6}}{{{x^2}}}.$</p>
 
                         <strong>Find the equation of the tangent line at $x = 3$</strong>
                         <p class="m1830-answer">Point $\quad f(3)=0\quad (3,0)$</p>
@@ -275,13 +277,13 @@
 
                      <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                           Friedman Academy is a charter school in South Texas. The school is not at capacity, and enrollment increases monthly. The charter school’s enrollment is modeled by $$y = f\left( x \right) = {x^2}\; + x + 100$$ Where y is in students and x is in years
+                           Friedman Academy is a charter school in South Texas. The school is not at capacity, and enrollment increases monthly. The charter school’s enrollment is modeled by $$f\left( x \right) = {x^2}\; + x + 100$$ Where y is in students and x is in years
                            since 2008.</p>
                         <ol>
 
                            <li>Estimate the average change in enrollment (the average rate of change of y with respect to x) from the year 2010 to the year 2012.
                               <p class="m1830-solution">Use points $(2,106)$ and $(4,120)$</p>
-                              <p class="m1830-solution">Avg change: $\frac{120-106}{4-2}=\frac{14}{2}=$ </p>
+                              <p class="m1830-solution">Avg change: $\frac{120-106}{4-2}=\frac{14}{2}=7$ </p>
                               <p class="m1830-answer">Enrollment increases by 7 students per year.</p>
                            </li>
 
@@ -298,23 +300,23 @@
                               <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 2x + h + 1$</p>
                               <p class="m1830-solution">Step 4</p>
                               <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0}\,\left( 2x+h+1 \right)=2x+(0)+1=2x+1$</p>
-                              <p class="m1830-answer">${f}&#39;(x)=2x+1$</p>
+                              <p class="m1830-answer">Therefore, the function for the instanteous rate of change for any year is${f}&#39;(x)=2x+1.$</p>
                            </li>
 
                            <li>Use the equation to calculate the instantaneous change in enrollment in 2010, 2011, and 2012.
-                              <p class="m1830-solution">$f&#39;(2) = 2(2) + 1 = 4 + 1 = 5$</p>
-                              <p class="m1830-answer">In 2010, enrollment is increasing by 5 students per year.</p>
-                              <p class="m1830-solution">$f&#39;(3) = 2(3) + 1 = 6 + 1 = 7$</p>
-                              <p class="m1830-answer">In 2011, enrollment is increasing by 7 students per year.</p>
-                              <p class="m1830-solution">$f&#39;(4) = 2(4) + 1 = 8 + 1 = 9$</p>
-                              <p class="m1830-answer">In 2012, enrollment is increasing by 9 students per year.</p>
+                              <p class="m1830-solution">$f&#39;(2) = 2(2) + 1 = 4 + 1 = 5$
+                              <span class="m1830-answer">In 2010, enrollment is increasing by 5 students per year.</span></p>
+                              <p class="m1830-solution">$f&#39;(3) = 2(3) + 1 = 6 + 1 = 7$
+                              <span class="m1830-answer">In 2011, enrollment is increasing by 7 students per year.</span></p>
+                              <p class="m1830-solution">$f&#39;(4) = 2(4) + 1 = 8 + 1 = 9$
+                              <span class="m1830-answer">In 2012, enrollment is increasing by 9 students per year.</span></p>
                            </li>
                         </ol>
                      </li>
 
                      <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                           Suppose an object moves along the y axis so that its location is $y=f\left( x \right)=2{{x}^{2}}~+3x$ at time x. y is in meters and x is in seconds</p>
+                           Suppose an object moves along the y axis so that its location is $f\left( x \right)=2{{x}^{2}}~+3x$ at time x. $f(x)$ is in meters and x is in seconds</p>
                         <ol>
 
                            <li>Find the average velocity (the average rate of change of y with respect to x) for x changing from 2 to 4 sec.
@@ -337,16 +339,16 @@
                               <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 4x + 2h + 3$</p>
                               <p class="m1830-solution">Step 4</p>
                               <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} \left( {4x + 2h + 3} \right) = 4x + 2\left( 0 \right) + 3 = 4x + 3$</p>
-                              <p class="m1830-answer">$f&#39;(x) = 4x + 3$</p>
+                              <p class="m1830-answer">Therefore, the instantaneous velocity at a given $x$ is $f&#39;(x) = 4x + 3.$</p>
                            </li>
 
                            <li>The instantaneous velocity at x = 2 seconds, 3 seconds, and 4 seconds.
-                              <p class="m1830-solution">$f&#39;(2) = 4(2) + 3 = 8 + 3 = $
-                                 <span class="m1830-answer">$11\;m/s$</span></p>
-                              <p class="m1830-solution">$f&#39;(3) = 4(3) + 3 = 12 + 3 = $
-                                 <span class="m1830-answer">$15\;m/s$</span></p>
-                              <p class="m1830-solution">$f&#39;(4) = 4(4) + 3 = 16 + 3 = $
-                                 <span class="m1830-answer">$19\;m/s$</span></p>
+                              <p class="m1830-solution">$f&#39;(2) = 4(2) + 3 = 8 + 3 = 11 $
+                                 <span class="m1830-answer">The instantaneous velocity at 2 seconds is $11\;m/s$</span></p>
+                              <p class="m1830-solution">$f&#39;(3) = 4(3) + 3 = 12 + 3 = 15 $
+                                  <span class="m1830-answer">The instantaneous velocity at 3 seconds is $15\;m/s$</span></p>
+                              <p class="m1830-solution">$f&#39;(4) = 4(4) + 3 = 16 + 3 = 19 $
+                                 <span class="m1830-answer">The instantaneous velocity at 4 seconds is $19\;m/s$</span></p>
                            </li>
                         </ol>
 
@@ -358,7 +360,7 @@
 
 </article>
 
-
+        <div class="m1830-pagebreak"></div>
 <article class="hw">
 
                <h3>1.4A Definition of the Derivative</h3>
@@ -454,13 +456,13 @@
 
                   <li class="m1830-problem">
                      <p class="m1830-problem-text"> Compare the secant slopes to the slope of the tangent line. What do you notice?</p>
-                     <p class="m1830-hw-answer">As the time intervals get smaller (close to 0 years), the slopes of the secant lines get closer to the slope of the tangent line.</p>
+                     <p class="m1830-hw-answer">As the time intervals between 2 years and the end of the interval get smaller, the average depreciation rate (secant) gets closer to the depreciation rate at exactly 2 years (tangent).</p>
                   </li>
                </ol>
                <!-- End section problem list  -->
 
 
-
+<div class="m1830-pagebreak"></div>
                <h3>1.4B Definition of the Derivative</h3>
 
                <h4>Homework</h4>
@@ -504,6 +506,31 @@
                      <p class="m1830-hw-solution m1830-step">$=4{{x}^{3}}$</p>
                      <p class="m1830-hw-answer">${f}&#39;(x)=4{{x}^{3}}$</p>
                   </li>
+<li class="m1830-problem">
+ <p class="m1830-problem-text"> Complete the table.</p>
+
+<p class="m1830-problem-text"> <table>
+  <tr>
+    <th>$f(x)$</th>
+    <th>$f'(x)$</th>
+  </tr>
+  <tr>
+    <td>$x^2$</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>$x^3$</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>$x^4$</td>
+    <td></td>
+  </tr>
+</table>
+</p>
+</li>
+
+
 
                   <li class="m1830-problem">
                      <p class="m1830-problem-text"> Based on your work in (a), (b), and (c), what do you conjecture is the derivative of $f(x)={{x}^{5}}\quad$? of $f(x)={{x}^{13}}$?</p>
