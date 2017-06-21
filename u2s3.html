@@ -41,7 +41,7 @@
                 <li class="m1830-problem">
                     <p class="m1830-problem-text">
                         The manager of a miniature golf course is planning to raise the ticket price per game. At the current price of \$6.50, an average of 81 rounds is played each day. The manager’s research suggests that for every \$0.50 increase in price, an average of four
-                        fewer games will be played each day. Based on this information, find the function that represents revenue from rounds of mini golf, where n represents the number of \$0.50 increases in price.</p>
+                        fewer games will be played each day. Based on this information, find the function that represents revenue from rounds of mini golf, where n represents the number of \$0.50 increases in ticket price.</p>
 
                     <p class="m1830-solution">$R(n) =$ (price)(number sold)</p>
                     <p class="m1830-answer">$R(n) = (6.50 + .50n)(81 - 4n)$</p>
@@ -67,7 +67,7 @@
                     <p class="m1830-problem-text">
                         Find the rate of change for the function $y = ({x^2} + 1)({x^2} - 2x + 1)$</p>
 
-                    <p class="m1830-answer">This problem can be worked the same way but it is much harder to multiply out. We need an easier way to find the derivative when we have polynomial terms multiplied together.</p>
+                    <p class="m1830-answer">This problem can be worked the same way but it is more difficult to multiply out. We need an easier way to find the derivative when we have polynomial terms multiplied together.</p>
                 </li>
 
 
@@ -77,14 +77,14 @@
 
             <h4 class="m1830-pagebreak">Notes</h4>
             <p><strong>Derivatives of Products</strong></p>
-            <p><strong>Rewriting a Function as a Product</strong></p>
+            <!-- <p><strong>Rewriting a Function as a Product</strong></p>
             <ol>
 
                 <li class="m1830-problem">
                     <p class="m1830-problem-text">
-                        Rewrite as a product: $f\left( x \right) = 5{e^x}\; + \;\;10{x^2}\;{e^x}\; + \;\;25{x^4}\;{e^x}$</p>
-
-                    <p class="m1830-answer">$f(x) = 5{e^x}(1 + 2{x^2} + 5{x^4})$</p>
+                        Rewrite as a product: $f\left( x \right) = 5{e^x} + 10{x^2}\;{e^x}+ 25{x^4}{e^x}$</p>
+<p class="m1830-solution"> Factor out $5e^x$ from each term </p>
+                    <p class="m1830-answer">$f(x) = 5{e^x}(1 + 2{x^2} + 5{x^4})$</p> -->
 
 
 
@@ -113,16 +113,14 @@
 
                     <p ><strong>Two Methods for Finding the Derivative:</strong></p>
                     <p>Find the derivative two different ways.</p>
-                    <ol>
 
+<ul>
                         <li>Simplify first and use the power rule.</li>
 
                         <li>Use the product rule.</li>
-                    </ol>
 
-                </li>
-                <br>
-                <br>
+</ul>
+            <ol>
                 <li class="m1830-problem">
                     <p class="m1830-problem-text">
                         $m\left( x \right) = 2{x^3}\;\left( {{x^5} - 2} \right)$</p>
@@ -159,6 +157,7 @@
                             <p class="m1830-answer">$m&#39;(x) = 16{x^7} - 12{x^2}$</p>
                         </li>
                     </ol>
+                    <p class="m1830-pagebreak"> <strong> Find the derivative using the Product Rule </strong></p>
                 </li>
 
 
@@ -307,14 +306,14 @@
 
                         </li>
 
-                        <li>Find the equation of the line tangent to the graph of $r$ at $x\; = \;2$.
+                        <li>Find the equation of the line tangent to the graph of $r$ at $x=2$.
 
                             <p class="m1830-solution">Point $\quad r(2) = (5 - 4\cdot2)(1 + 3\cdot2) = ( - 3)(7) = -21$</p>
                             <p class="m1830-answer m1830-step">$(2, - 21)$</p>
 
                             <p class="m1830-solution">Slope $\quad {m_{tan}}= {r&#39;}(2) = - 24(2) + 11=-48+11=-37$</p>
                             <p class="m1830-answer m1830-step">${m_{tan}}=-37$</p>
-
+<p class="m1830-solution"> Equation of the tangent line: </p>
                             <p class="m1830-solution">$y + 21 = - 37(x - 2)$</p>
                             <p class="m1830-solution">$y + 21 = - 37x + 74$</p>
                             <p class="m1830-answer">$y = - 37x + 53$</p>
@@ -345,9 +344,9 @@
                         </div>
                         <div class="col-sm-6 bg-color2">
                             <p class="m1830-solution">$g = x^2 +3x -1$</p>
-                            <br>
+
                             <p class="m1830-solution">$g&#39; = 2x+3$</p>
-                            <br>
+
                         </div>
                     </div>
 
@@ -367,7 +366,7 @@
                 <li class="m1830-problem">
                     <p class="m1830-problem-text">
                         Find $\frac{{dy}}{{dx}}$ for $y = \sqrt[3]x\left(x^6+x^3\right)$</p>
-
+<p class="m1830-solution">$y=x^\frac13(x^6+x^3)$</p>
 
                     <div class="row">
                         <div class="col-sm-6 bg-color1">
@@ -406,7 +405,7 @@
                             <div class="row">
                                 <div class="col-sm-6 bg-color1">
                                     <p class="m1830-solution">$f = 100-5d$</p>
-                                    <p class="m1830-solution">$f&#39; = - 5d$</p>
+                                    <p class="m1830-solution">$f&#39; = - 5$</p>
                                 </div>
                                 <div class="col-sm-6 bg-color2">
                                     <p class="m1830-solution">$g = 300+30d$</p>
@@ -426,12 +425,13 @@
                         <li>Find $R\left( {3} \right)$ and $R&#39;\left( {3} \right)$. Write a brief interpretation of these results.
                             <p class="m1830-solution">$R(3) = (100-5(3))(300+30(3))=(85)(390) = 33150$</p>
                             <p class="m1830-solution">$R&#39;(3) = 1500-300(3)=600$</p>
-                            <p class="m1830-answer">At three \$5 reductions in price, the revenue is \$33,150.  At that point the revenue is increasing at a rate of \$600 per \$5 decrease in price.</p>
+                            <p class="m1830-answer">At three \$5 reductions in price, the revenue is \$33,150.  At that point the revenue is increasing at a rate of \$600 per $5 decrease in price.</p>
                         </li>
 
                         <li>Use the results above to estimate the total revenue after four $5 reductions in price.
+                          <p class="m1830-solution">$R(4)\approx R(3)+R'(3)$</p>
                             <p class="m1830-solution">33150 + 600 = 33750</p>
-                            <p class="m1830-answer">The revenue will be approximately \$33,750 after four \$5 price reductions.</p>
+                            <p class="m1830-answer">The revenue will be approximately \$33,750 after four $5 price reductions.</p>
                         </li>
                     </ol>
                 </li>
@@ -605,12 +605,12 @@
 
                     <div class="row">
                         <div class="col-sm-6 bg-color1">
-                            <p class="m1830-hw-solution">$f = 2{t^2}$</p>
-                            <p class="m1830-hw-solution">$f&#39; = 4t$</p>
+                            <p class="m1830-hw-solution">$f = 2x-5$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 2$</p>
                         </div>
                         <div class="col-sm-6 bg-color2">
-                            <p class="m1830-hw-solution">$g = {t^3} + 4t$</p>
-                            <p class="m1830-hw-solution">$g&#39; = 3{t^2} + 4$</p>
+                            <p class="m1830-hw-solution">$g = x^2+1$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 2x$</p>
                         </div>
                     </div>​
 
@@ -676,7 +676,7 @@
 
 
                     <p class="m1830-hw-solution">$p&#39;(t)=\frac{1}{2}{{t}^{-1/2}}({{t}^{2}}+5t-2)+{{t}^{1/2}}(2t+5)$</p>
-                    <p class="m1830-hw-solution">$p&#39;(t)=\frac{1}{2}{{t}^{3/2}}+\frac{5}{2}{{t}^{{}^{1}/{}_{2}}}-{{t}^{-1/2}}+2{{t}^{3/2}}+5{{t}^{1/2}}$</p>
+                    <p class="m1830-hw-solution">$p&#39;(t)=\frac{1}{2}{{t}^{3/2}}+\frac{5}{2}{{t}^{1/2}}-{{t}^{-1/2}}+2{{t}^{3/2}}+5{{t}^{1/2}}$</p>
                     <p class="m1830-hw-answer"> $p&#39;(t)=\frac{5}{2}{{t}^{3/2}}+\frac{15}{2}{{t}^{1/2}}-{{t}^{-1/2}}$</p>
                     <p class="m1830-hw-answer"> $p&#39;(t)=\frac{5}{2}{{t}^{3/2}}+\frac{15}{2}{{t}^{1/2}}-{\frac{1}{{t}^{1/2}}}$</p>
                 </li>
@@ -765,9 +765,9 @@
                 </li>
                 <li class="m1830-problem">
                     <p class="m1830-problem-text"> If $z(x) = x^2(x^3+1)$, find the slope of that tangent line at $x=1.$</p>
-                    <p class="m1830-hw-solution"> $z(1)=(1)^2(1^3+1)=(1)(1+1)=1(2)=2$</p>
+                    <p class="m1830-hw-solution"> Point: $z(1)=(1)^2(1^3+1)=(1)(1+1)=1(2)=2$</p>
                     <p class="m1830-hw-solution"> $(1,2)$</p>
-
+  <p class="m1830-hw-solution"> Slope:</p>
                     <div class="row">
 
                         <div class="col-sm-6 bg-color1">
@@ -785,11 +785,12 @@
                         </div>
                     </div>​
 
-                    <p class="m1830-hw-solution">$y&#39; = 2x(x^3+1)+3x^2(x^2)$</p>
-                    <p class="m1830-hw-solution">$y&#39; = 2x^4+2x+3x^4$</p>
-                    <p class="m1830-hw-solution">$y&#39; = 5x^4+2x$</p>
-                    <p class="m1830-hw-solution">$y&#39;(1); = 5(1)^4+2(1)=7$</p>
+                    <p class="m1830-hw-solution">$z&#39; = 2x(x^3+1)+3x^2(x^2)$</p>
+                    <p class="m1830-hw-solution">$z&#39; = 2x^4+2x+3x^4$</p>
+                    <p class="m1830-hw-solution">$z&#39; = 5x^4+2x$</p>
+                    <p class="m1830-hw-solution">$z&#39;(1); = 5(1)^4+2(1)=7$</p>
                     <p class="m1830-hw-solution">$m_{tan}=7$</p>
+                    <p class="m1830-hw-solution">Equation of the Tangent Line at $x=1$</p>
                     <p class="m1830-hw-solution"> $y-y_1=m(x-x_1)$</p>
                     <p class="m1830-hw-solution"> $y-2=7(x-1)$</p>
                     <p class="m1830-hw-solution"> $y-2=7x-7$</p>
@@ -797,9 +798,9 @@
 </li>
 
                     <li class="m1830-problem">
-                        <p class="m1830-problem-text"> In 2012, the population of a city was 939,200, and the population was increasing at roughly 9500 per year.  The average annual income was \$35,450 per capita, and this average was increasing at about $1400 per year.  The function below models the total personal income for the city.</p>
+                        <p class="m1830-problem-text"> In 2012, the population of a city was 939,200, and the population was increasing at roughly 9500 per year.  The average annual income was \$35,450 per capita, and this average was increasing at about $1400 per year.  The function below models the total personal income for the population of the city.</p>
                         <p>$I(x)=(939,200+9500x)(35,450+1400x)$</p>
-                        <p> Estimate the rate at which total personal income will be rising in the area in 2020.</p>
+                        <p> Estimate the rate at which total personal income of the city's population  will be rising in the year 2020.</p>
 
                         <div class="row">
 
@@ -819,10 +820,10 @@
                         </div>​
 
                         <p class="m1830-hw-solution">$I(x)&#39; = 9500(35450+1400x)+1400(939200+9500x)$</p>
-                        <p class="m1830-hw-solution">$I(x)&#39; =336,775,000+13,300,000x+13,148,800,00+13,300,000x$</p>
+                        <p class="m1830-hw-solution">$I(x)&#39; =336,775,000+13,300,000x+1,314,880,000+13,300,000x$</p>
                         <p class="m1830-hw-solution">$I(x)&#39; = 26,600,000x+1,651,655,000$</p>
-                        <p class="m1830-hw-solution">$I(x)&#39;(8); = 26,600,000(8)+1,651,655,000=1,864,455,000$</p>
-                              <p class="m1830-hw-answer">In 2020 the total personal income for the area is rising at a rate of \$1,864,445,000 per year.</p>
+                        <p class="m1830-hw-solution">$I&#39;(8); = 26,600,000(8)+1,651,655,000=1,864,455,000$</p>
+                              <p class="m1830-hw-answer">In 2020 the total personal income for the area is rising at a rate of $1,864,445,000 per year.</p>
                     </li>
 
 

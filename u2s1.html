@@ -36,7 +36,7 @@
                 <h3 id="2-1-exponential-and-logarithmic-function-applications">2.1 Exponential and Logarithmic Function Applications</h3>
 
                 <h4>Introduction</h4>
-                <p>Exponential functions occur frequently in science and business but are commonly used in compound interest applications.</p>
+                <p>Exponential functions occur frequently in science and business and are commonly used in compound interest applications.</p>
                 <ul>
 
                     <li>The value of a \$1000 investment returning 8% interest compounded monthly after 12 years would be calculated using the formula $$A=P\left(1+\frac rn\right)^{nt},$$
@@ -49,6 +49,21 @@
                     <li>The compounding frequency has a significant impact on the final amount of money (either saved or owed).
                         <img src="images/notes/u2s1p1i.png" alt="Graph of Amount of Money in an account when compounded at various compounding frequencies.  4 graphs--one each for compounding yearly, quarterly, monthly, and continuously"></li>
                 </ul>
+      <p class="m1830-pagebreak">Notes</p>
+<p><strong> Compounding Frequency</strong></p>
+
+                <ul>
+                  <li> Yearly:  $A=1000(1+\frac{.08}1)^1=1080$
+                  </li>
+                  <li> Quarterly:  $A=1000(1+\frac{.08}4)^4=1082.43$
+                  </li>
+                  <li> Monthly:  $A=1000(1+\frac{.08}{12})^{12}=1083$
+                  </li>
+                  <li> Daily:  $A=1000(1+\frac{.08}{365})^{365}=1083.28$
+                  </li>
+                  <li> Continuously (at every instant): $A=1000\cdot[\mathop\lim_{n\rightarrow\infty}\left(1+\frac{.08}n\right)^n] =1083.29$
+                  </li>
+</ul>
                 <p>Our focus will be on continuous compounding: </p>
                 <ul>
 
@@ -102,7 +117,7 @@
                         <p class="m1830-solution">$\ln  \frac{{11}}{{10}} = .0158t$</p>
                         <p class="m1830-solution">$\frac{{\ln \frac{{11}}{{10}}}}{{.0158}} = \frac{{.0158t}}{{.0158}}$</p>
                         <p class="m1830-solution">$6.03 = t$</p>
-                        <p class="m1830-answer">It will take 6.03 years for the account to be worth \$ 11,000.</p>
+                        <p class="m1830-answer">It will take approximately 6.03 years for the account to be worth $11,000.</p>
                     </li>
 
                     <li class="m1830-problem">
@@ -131,7 +146,7 @@
                         <p class="m1830-solution">$\ln 2 = 8r$</p>
                         <p class="m1830-solution">$\frac{{\ln 2}}{8} = r$</p>
                         <p class="m1830-solution">$0.0866 = r$</p>
-                        <p class="m1830-answer">In order for the initial investment to double in 8 years, the money must be invested in an account with a nominal rate of 8.7% compounded continuously.</p>
+                        <p class="m1830-answer">In order for the initial investment to double in 8 years, the money must be invested in an account with a nominal rate of approximately 8.7% compounded continuously.</p>
 
                     </li>
 
@@ -151,7 +166,7 @@
 
                     <li class="m1830-problem">
                         <p class="m1830-problem-text">
-                            Radioactive Decay: A mathematical model for the decay of radioactive substances is given by $$Q = {Q_0}\;{e^{rt}}.$$ The continuous compound rate of decay of carbon-14 per year is r = -0.0001238. How long will it take a certain amount of carbon-14 to
+                            Radioactive Decay: A mathematical model for the decay of radioactive substances is given by $$Q = {Q_0}\;{e^{rt}}.$$ The continuous compound rate of decay of carbon-14 per year is $r = -0.0001238.$ How long will it take a certain amount of carbon-14 to
                             decay to half the original amount?</p>
 
                         <p class="m1830-solution">$\frac{1}{2} = 1{e^{ - 0.0001238t}}$</p>
@@ -159,7 +174,7 @@
                         <p class="m1830-solution">$\ln .5 = - 0.0001238t$</p>
                         <p class="m1830-solution">$\frac{{\ln .5}}{{ - 0.000128}} = t$</p>
                         <p class="m1830-solution">$t = 5598.93$</p>
-                        <p class="m1830-answer">It will take approximately $5598.93$ years for the carbon-14 to decay to half the original amount.</p>
+                        <p class="m1830-answer">It will take approximately 5598.93 years for the carbon-14 to decay to half the original amount.</p>
 
                     </li>
 
@@ -168,7 +183,7 @@
                             The estimated resale value R (in dollars) of a company car after t years is given by: $$R(t) = 20000{(0.86)^t}.$$ What will be the resale value of the car after 2 years? How long will it take the car to depreciate to half the original value?</p>
 
                         <p class="m1830-solution">$R(2) = 20,000{(0.86)^2} = \$ 14,792$</p>
-<p class="m1830-answer">The resale value of the car after two years will be \$14.792.</p>
+<p class="m1830-answer">The resale value of the car after two years will be $14.792.</p>
 
                         <p class="m1830-solution">$\frac{{10,000}}{{20,000}} = \frac{{20,000{{(0.86)}^t}}}{{20,000}}$</p>
                         <p class="m1830-solution">$.5 = {0.86^t}$</p>
@@ -188,7 +203,7 @@
           </article>
 
       <article class="hw">
-    
+
             <h3>2.1 The Constant <var class="fontnormal">e</var> and Natural Log Applications</h3>
 
             <h4>Homework</h4>
@@ -203,22 +218,22 @@
 
                         <li>1 year
                             <p class="m1830-hw-solution">$A = 1000{e^{.02(1)}} = 1020.20$</p>
-                            <p class="m1830-hw-answer">At the end of one year, there will be \$1020.20 in the account.</p>
+                            <p class="m1830-hw-answer">At the end of one year, there will be $1020.20 in the account.</p>
                         </li>
 
                         <li>10 years
                             <p class="m1830-hw-solution">$A = 1000{e^{.02(10)}} = 1221.40$</p>
-                            <p class="m1830-hw-answer">At the end of ten years, there will be \$1221.40 in the account.</p>
+                            <p class="m1830-hw-answer">At the end of ten years, there will be $1221.40 in the account.</p>
                         </li>
 
                         <li>20 years
                             <p class="m1830-hw-solution">$A = 1000{e^{.02(20)}} = 1491.82$</p>
-                            <p class="m1830-hw-answer">At the end of twenty years, there will be \$1491.82 in the account.</p>
+                            <p class="m1830-hw-answer">At the end of twenty years, there will be $1491.82 in the account.</p>
                         </li>
 
                         <li>50 years
                             <p class="m1830-hw-solution">$A = 1000{e^{.02(50)}} = 2718.28$</p>
-                            <p class="m1830-hw-answer">At the end of fifty years, there will be \$2718.28 in the account.</p>
+                            <p class="m1830-hw-answer">At the end of fifty years, there will be $2718.28 in the account.</p>
                         </li>
                     </ol>
                 </li>
@@ -234,7 +249,7 @@
                             <p class="m1830-hw-solution">$\ln 2 = 0.12t$</p>
                             <p class="m1830-hw-solution">$\frac{{\ln 2}}{{0.12}} = t$</p>
                             <p class="m1830-hw-solution">$t = 5.78$</p>
-                            <p class="m1830-hw-answer">The investment will double in 5.78 years.</p>
+                            <p class="m1830-hw-answer">The investment will double in approximately 5.78 years.</p>
                         </li>
 
                         <li>Triple
@@ -244,7 +259,7 @@
                             <p class="m1830-hw-solution">$\ln 3 = 0.12t$</p>
                             <p class="m1830-hw-solution">$\frac{{\ln 3}}{{0.12}} = t$</p>
                             <p class="m1830-hw-solution">$t = 9.16$</p>
-                            <p class="m1830-hw-answer">The investment will triple in 9.16 years.</p>
+                            <p class="m1830-hw-answer">The investment will triple in approximately 9.16 years.</p>
                         </li>
                     </ol>
                 </li>
@@ -259,16 +274,16 @@
 
                         <li>Determine how much is in the account after 5 years, 10 years, 30 years, and 35 years.
                             <p class="m1830-hw-solution">$A(5) = 500{e^{.0075(5)}}=519.11$</p>
-                            <p class="m1830-hw-answer">After 5 years, \$519.11 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 5 years, $519.11 will be in the account.</p>
 
                             <p class="m1830-hw-solution">$A(10) = 500{e^{.0075(10)}}=538.94$</p>
-                            <p class="m1830-hw-answer">After 10 years, \$538.94 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 10 years, $538.94 will be in the account.</p>
 
                             <p class="m1830-hw-solution">$A(30) = 500{e^{.0075(30)}}=626.16$</p>
-                            <p class="m1830-hw-answer">After 30 years, \$626.16 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 30 years, $626.16 will be in the account.</p>
 
                             <p class="m1830-hw-solution">$A(35) = 500{e^{.0075(35)}}=650.09$</p>
-                            <p class="m1830-hw-answer">After 35 years, \$650.09 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 35 years, $650.09 will be in the account.</p>
                         </li>
 
                         <li>Determine how long it will take for the initial investment to double.
@@ -277,7 +292,7 @@
                             <p class="m1830-hw-solution">$\ln 2 = \ln {e^{.0075t}}$</p>
                             <p class="m1830-hw-solution">$\ln 2 = .0075t$</p>
                             <p class="m1830-hw-solution">$\frac{{\ln 2}}{{.0075}} = t$</p>
-                            <p class="m1830-hw-answer">It will take 92.42 years for the initial investment to double.</p>
+                            <p class="m1830-hw-answer">It will take approximately 92.42 years for the initial investment to double.</p>
                         </li>
 
                         <li>Find and interpret the average rate of change of the amount in the account from the end of the fourth year (t=4) to the end of the fifth year (t=5).
@@ -299,13 +314,13 @@
 
                         <li>Determine how much is in the account after 5 years, 10 years, 30 years, and 35 years.
                             <p class="m1830-hw-solution">$A(5) = 5000{e^{.02125(5)}} = 5560.50$ </p>
-                            <p class="m1830-hw-answer">After 5 years, \$5560.50 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 5 years, $5560.50 will be in the account.</p>
                             <p class="m1830-hw-solution">$A(10) = 5000{e^{.02125(10)}} = 6183.83$</p>
-                            <p class="m1830-hw-answer">After 10 years, \$6183.83 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 10 years, $6183.83 will be in the account.</p>
                             <p class="m1830-hw-solution">$A(30) = 5000{e^{.02125(30)}} = 9458.73$</p>
-                            <p class="m1830-hw-answer">After 30 years, \$9458.73 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 30 years, $9458.73 will be in the account.</p>
                             <p class="m1830-hw-solution">$A(35) = 5000{e^{.02125(35)}} =10519.05$</p>
-                            <p class="m1830-hw-answer">After 35 years, \$10519.05 will be in the account.</p>
+                            <p class="m1830-hw-answer">After 35 years, $10519.05 will be in the account.</p>
                         </li>
 
                         <li>Determine how long it will take for the initial investment to double.
@@ -314,7 +329,7 @@
                             <p class="m1830-hw-solution">$\ln 2 = \ln {e^{.02125t}}$</p>
                             <p class="m1830-hw-solution">$\ln 2 = .02125t$</p>
                             <p class="m1830-hw-solution">$\frac{{\ln 2}}{{.02125}} = t$</p>
-                            <p class="m1830-hw-answer">It will take 32.62 years for the initial investment to double</p>
+                            <p class="m1830-hw-answer">It will take approximately 32.62 years for the initial investment to double</p>
                         </li>
 
                         <li>Find and interpret the average rate of change of the amount in the account from the end of the fourth year (t=4) to the end of the fifth year (t=5).
@@ -325,7 +340,7 @@
 
                             <p class="m1830-hw-solution">$A(5) = 5000{e^{.02125(5)}}$</p>
                             <p class="m1830-hw-solution m1830-step">$A(5) = \$ 5560.50$</p>
-                            <p class="m1830-hw-solution">$A(5)-A(4) = 5560.50-5443.59=116.91$</p>
+                            <p class="m1830-hw-solution">$\frac{A(5)-A(4)}{5-4}=\frac{\displaystyle5560.50-5443.59}{5-4}=\frac{\displaystyle116.91}1=116.91$</p>
                             <p class="m1830-hw-answer">The balance in the account is increasing by an average of $116.91 per year.</p>
                         </li>
                     </ol>
@@ -353,7 +368,7 @@
                         <li>Find the value of the car when it is four years old.
                             <p class="m1830-hw-solution">$A = 32,000{\left( {.85} \right)^4}$</p>
                             <p class="m1830-hw-solution">$A = 16,704.20$</p>
-                            <p class="m1830-hw-answer">The car is worth \$ 16,704.20 when it is 4 years old.</p>
+                            <p class="m1830-hw-answer">The car is worth approximately $16,704.20 when it is 4 years old.</p>
                         </li>
                     </ol>
                 </li>
@@ -370,7 +385,7 @@
                         <li>Find the value of the ATV when it is ten years old.
                             <p class="m1830-hw-solution">$A = 7200{\left( {.82} \right)^{10}}$</p>
                             <p class="m1830-hw-solution">$A = 989.63$</p>
-                            <p class="m1830-hw-answer">The value of the ATV when it is 10 years old will be \$989.63.</p>
+                            <p class="m1830-hw-answer">The value of the ATV when it is 10 years old will be $989.63.</p>
                         </li>
                     </ol>
                 </li>
