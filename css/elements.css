@@ -21,6 +21,16 @@ cite {
     font-style: normal;
 }
 
+figcaption {
+font-size: 15px;
+/*margin: 1.5em;*/
+
+}
+
+figure {
+margin: 0em 0em 1.5em 0em;
+
+}
 h1, h2, h3{
  font-variant: small-caps;
  }
@@ -100,4 +110,3 @@ tr:nth-child(even) {
 tr:hover {
     background: #ffffb3;
 }
-
