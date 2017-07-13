@@ -28,6 +28,9 @@
     .m1830-pagebreak {
       page-break-before: always;
     }
+    .m-buttons {
+        display: none;
+    }
     iframe {
         display: none;
     }
