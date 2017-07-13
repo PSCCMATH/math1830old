@@ -58,35 +58,35 @@
           "title": "Unit 3",
           "nav": [
             {
-              "urlText": "I don't know123",
+              "urlText": "3.1 Analyzing Graphs Algebraically",
               "url": "u3s1.html"
             },
             {
-              "urlText": "but the links work",
+              "urlText": "3.2 The First Derivative Test",
               "url": "u3s2.html"
             },
             {
-              "urlText": "but the links work",
+              "urlText": "3.3 The Second Deriative Test",
               "url": "u3s3.html"
             },
             {
-              "urlText": "but the links work",
+              "urlText": "3.4 Summary of Curve Sketching: NearPod Activity",
               "url": "u3s4.html"
             },
             {
-              "urlText": "but the links work",
+              "urlText": "3.5 Absolute Extrema",
               "url": "u3s5.html"
             },
             {
-              "urlText": "but the links work",
+              "urlText": "3.6 Introduction to Optimization",
               "url": "u3s6.html"
             },
             {
-              "urlText": "but the links work",
+              "urlText": "3.7 Optimization in Packaging: Boxes",
               "url": "u3s7.html"
             },
             {
-              "urlText": "but the links work",
+              "urlText": "3 8 Optimization in Packaging: Cans",
               "url": "u3s8.html"
             }
           ]
