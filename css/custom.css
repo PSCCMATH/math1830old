@@ -3,6 +3,11 @@ article.nearpod input{
   width: 120px;
 }
 
+#ar ul{
+
+list-style: none;
+}
+
 th.m1830-morespace {
     padding: 2em;
 }
