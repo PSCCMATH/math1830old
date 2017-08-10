@@ -2,190 +2,255 @@
 <html lang="en">
 
 <head>
-    <title>MATH 1830 Notes</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/notes.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/togglebuttons.js"></script>
-    <script src="js/loadmathjax.js"></script>
-   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
-    <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-    <script src="js/desmosgraphs.js"></script>
-    <script>
-      unit1();
-    </script>
-
+  <title>MATH 1830 Notes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/notes.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/togglebuttons.js"></script>
+  <script src="js/loadmathjax.js"></script>
+  <script src="js/googlestats.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/togglepass.js"></script>
 </head>
 
 <body>
 
-
-
-    <div class="container">
-        <h1 id="u3toc">MATH 1830</h1>
-  <h2 >Unit 3 Applications of Derivatives</h2>
-<h3>3.4 A Summary of Curve Sketching: NearPod Activity</h3>
-
-  <article class="nearpod">
-
-<h4> NearPod: Derivative Rules</h4>
-    <ol>
-     <li> Which rule would you use to find the rate of change for the function  $f(x)=x^3\left(2x^2+3x-7\right)$
-<ul>
-    <li>Power Rule</li>
-    <li> e Rule</li>
-    <li>ln Rule</li>
-    <li> Product Rule</li>
-    <li> Quotient Rule</li>
-      <li>Chain Rule</li>
-    </ul>
-  </li>
-<li>Which rule would you use to find the derivative of the function $f(x)=\left(2x+7\right)^2$
-  <ul>
-      <li>Power Rule</li>
-      <li> e Rule</li>
-      <li>ln Rule</li>
-      <li> Product Rule</li>
-      <li> Quotient Rule</li>
-        <li>Chain Rule</li>
-      </ul>
-  </li>
-<li>
-    Which rule would you use to find the rate of change for the function $f(x)=4e^x$
-    <ul>
-        <li>Power Rule</li>
-        <li> e Rule</li>
-        <li>ln Rule</li>
-        <li> Product Rule</li>
-        <li> Quotient Rule</li>
-          <li>Chain Rule</li>
+  <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button>        <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>
+      <div class="collapse navbar-collapse"
+        id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+              title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+            </ul>
+          </li>
         </ul>
-  </li>
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group"> <input id="input" type="password" class="form-control" placeholder="pin-code"> </div> <button id="submit" type="submit"
+              class="btn btn-default">Show Solutions</button> </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<li class="m1830-pagebreak"> Which rule would you use to find the derivative of the function  $y=\frac{x^2+3x-7}{x}$
-  <ul>
-      <li>Power Rule</li>
-      <li> e Rule</li>
-      <li>ln Rule</li>
-      <li> Product Rule</li>
-      <li> Quotient Rule</li>
-        <li>Chain Rule</li>
-      </ul>
-  </li>
-<li>Which rule would you use to find the rate of change for the function  $g(x)=\frac{x^3}{\left(x+1\right)\left(x-3\right)}$
-  <ul>
-      <li>Power Rule</li>
-      <li> e Rule</li>
-      <li>ln Rule</li>
-      <li> Product Rule</li>
-      <li> Quotient Rule</li>
-        <li>Chain Rule</li>
-      </ul>
-  </li>
-<li> Which rule would you use to find the derivative of the function  $y=e^x \sqrt x$
-  <ul>
-      <li>Power Rule</li>
-      <li> e Rule</li>
-      <li>ln Rule</li>
-      <li> Product Rule</li>
-      <li> Quotient Rule</li>
-        <li>Chain Rule</li>
-      </ul>
-</li>
-</ol>
-  </article>
+  <div class="container">
+    <h1 id="u3toc">MATH 1830</h1>
+    <h2>Unit 3 Applications of Derivatives</h2>
+    <h3>3.4 A Summary of Curve Sketching: NearPod Activity</h3>
+
+    <h4> Pre-Class:</h4>
+    <ul>
+      <li>Complete 3.3 Homework assignment: check and correct. </li>
 
 
+      <li>Print Handouts for 3.4 In-Class NearPod Activity</li>
 
-<article class="nearpod">
-    <h3 class="m1830-pagebreak">Nearpod Activity: First Derivative Test</h3>
+    </ul>
+    <div class="row text-center m-buttons">
+
+
+      <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u3s3.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>3.3 HW</p>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="col-sm-2">
+        <a onclick="window.print()" href=#>
+          <div class="box " tabindex="0">
+            <i class="fa fa-print fa-3x "></i>
+            <p>Print</p>
+          </div>
+        </a>
+      </div>
+
+
+
+
+
+    </div>
+
+
+    <article class="nearpod">
+
+      <h4> NearPod: Derivative Rules</h4>
+      <ol>
+        <li> Which rule would you use to find the rate of change for the function $f(x)=x^3\left(2x^2+3x-7\right)$
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li>Which rule would you use to find the derivative of the function $f(x)=\left(2x+7\right)^2$
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li>
+          Which rule would you use to find the rate of change for the function $f(x)=4e^x$
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+
+        <li class="m1830-pagebreak"> Which rule would you use to find the derivative of the function $y=\frac{x^2+3x-7}{x}$
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li>Which rule would you use to find the rate of change for the function $g(x)=\frac{x^3}{\left(x+1\right)\left(x-3\right)}$
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li> Which rule would you use to find the derivative of the function $y=e^x \sqrt x$
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+      </ol>
+    </article>
+
+
+
+    <article class="nearpod">
+      <h3 class="m1830-pagebreak">Nearpod Activity: First Derivative Test</h3>
       <p><img src="images/notes/u3s4npfdt1.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5."></p>
-<ol>
-  <li>    <p> Draw and label 3 lines tangent to the function.  </p>
-        <ol>
-          <li> a tangent line with a positive slope </li>
-              <li>  tangent line with a negative slope </li>
-                  <li> a tangent line with a slope of zero </li>
-                </ol>
-              </li>
+      <ol>
+        <li>
+          <p> Draw and label 3 lines tangent to the function. </p>
+          <ol>
+            <li> a tangent line with a positive slope </li>
+            <li> tangent line with a negative slope </li>
+            <li> a tangent line with a slope of zero </li>
+          </ol>
+        </li>
 
-    <img src="images/notes/u3s4npfdt2.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5 with points marked at (-1.656, -4.248), (0, 1), and (0.906, -0.045).">
-              <li> Use different colors to mark the intervals where the function is increasing and decreasing.  Include a color legend. </li>
-              <li> State the intervals where the function is:
-                <ol>
-                  <li> Increasing</li>
-                  <li> Decreasing </li>
-                </ol>
-              </li>
-            </ol>
-</article>
-
-
-<article class="nearpod">
-    <h3 class="m1830-pagebreak">Nearpod Activity: Second Derivative Test</h3>
-
-  <img src="images/notes/u3s4npsdt1.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5 with points marked at (-1, -2), and (0.5, 0.438).">
+        <img src="images/notes/u3s4npfdt2.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5 with points marked at (-1.656, -4.248), (0, 1), and (0.906, -0.045).">
+        <li> Use different colors to mark the intervals where the function is increasing and decreasing. Include a color legend.
+          </li>
+        <li> State the intervals where the function is:
+          <ol>
+            <li> Increasing</li>
+            <li> Decreasing </li>
+          </ol>
+        </li>
+      </ol>
+    </article>
 
 
-<ol>
-<li> Use different colors to mark the intervals where the function is concave up and concave down.  Include a color legend.</li>
-<li> State the intervals where the function is:
-  <ol>
-    <li> Concave Up</li>
-    <li> Concave Down</li>
-  </ol>
-</li>
-<img src="images/notes/u3s4npsdt2.png" alt="Verixon Wireless connections in millions versus revenue in billions of dollars for the years 2006-2011.  Will require a tactile graph.  Please see your instructor.">
-<li>
-  <ol>
-    <li>Describe what is happening to the revenue from 2006 until mid-2008.</li>
-    <li> Describe what is happening to the revenue from mid-2008 until 2011.</li>
-  </ol>
-</li>
-</ol>
+    <article class="nearpod">
+      <h3 class="m1830-pagebreak">Nearpod Activity: Second Derivative Test</h3>
+
+      <img src="images/notes/u3s4npsdt1.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5 with points marked at (-1, -2), and (0.5, 0.438).">
 
 
-
-
-
-</article>
+      <ol>
+        <li> Use different colors to mark the intervals where the function is concave up and concave down. Include a color legend.</li>
+        <li> State the intervals where the function is:
+          <ol>
+            <li> Concave Up</li>
+            <li> Concave Down</li>
+          </ol>
+        </li>
+        <img src="images/notes/u3s4npsdt2.png" alt="Verixon Wireless connections in millions versus revenue in billions of dollars for the years 2006-2011.  Will require a tactile graph.  Please see your instructor.">
+        <li>
+          <ol>
+            <li>Describe what is happening to the revenue from 2006 until mid-2008.</li>
+            <li> Describe what is happening to the revenue from mid-2008 until 2011.</li>
+          </ol>
+        </li>
+      </ol>
 
 
 
-  <article class="nearpod">
-    <h3 class="m1830-pagebreak">Nearpod Activity: Derivative Analysis</h3>
-    <p><img src="images/notes/u3s4npda.png" alt="graph of f(x) = -2x^5+6x^4+x^3-10x^2+6 with marked points A-E.  Point A is at x=-1.014.  Point B is at x=1.151.  Point C is at x=0.  Point D is at x=1.65.  Point E is at x=2.28."></p>
-    <h4 id="first-derivative-test-">FIRST DERIVATIVE TEST:</h4>
-    <p>In the first blank of each statement, choose one:  <strong>positive</strong>, <strong>negative</strong>, <strong>equal to zero</strong></p>
-  <p>  In the second blank of each statement, choose one:   <strong>increasing</strong>, <strong>decreasing</strong>, <strong>has a horizontal tangent</strong></p>
-    <ol>
-    <li>At Point A,   $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)     <strong><input type="text" class="form-control"></strong>. </li>
-    <li>At Point B,   $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <strong><input type="text" class="form-control"></strong>.</li>
-    <li>At Point B,   $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <strong><input type="text" class="form-control"></strong>. </li>
-    <li>At Point D,   $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <strong><input type="text" class="form-control"></strong>. </li>
-    <li>At Point E,   $f&#39;(x)$ is    <input type="text" class="form-control">, therefore the graph (is)  <strong><input type="text" class="form-control"></strong>.</li>
-    </ol>
+
+
+    </article>
+
+
+
+    <article class="nearpod">
+      <h3 class="m1830-pagebreak">Nearpod Activity: Derivative Analysis</h3>
+      <p><img src="images/notes/u3s4npda.png" alt="graph of f(x) = -2x^5+6x^4+x^3-10x^2+6 with marked points A-E.  Point A is at x=-1.014.  Point B is at x=1.151.  Point C is at x=0.  Point D is at x=1.65.  Point E is at x=2.28."></p>
+      <h4 id="first-derivative-test-">FIRST DERIVATIVE TEST:</h4>
+      <p>In the first blank of each statement, choose one: <strong>positive</strong>, <strong>negative</strong>, <strong>equal to zero</strong></p>
+      <p> In the second blank of each statement, choose one: <strong>increasing</strong>, <strong>decreasing</strong>, <strong>has a horizontal tangent</strong></p>
+      <ol>
+        <li>At Point A, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.
+          </li>
+        <li>At Point B, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.</li>
+        <li>At Point B, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.
+          </li>
+        <li>At Point D, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.
+          </li>
+        <li>At Point E, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.</li>
+      </ol>
       <p class="m1830-pagebreak"><img src="images/notes/u3s4npda.png" alt="graph of f(x) = -2x^5+6x^4+x^3-10x^2+6 with marked points A-E.  Point A is at x=-1.014.  Point B is at x=1.151.  Point C is at x=0.  Point D is at x=1.65.  Point E is at x=2.28."></p>
-    <h4 >SECOND DERIVATIVE TEST:</h4>
-    <p>In the first blank of each statement, choose one:  <strong>positive</strong>, <strong>negative</strong>, <strong>equal to zero</strong></p>
-    <p>In the second blank of each statement, choose one:   <strong>concave up</strong>, <strong>concave down</strong>, <strong>has a possible point of inflection</strong></p>
-    <ol>
-    <li>At Point A,  $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <input type="text" class="form-control">.</li>
-    <li>At Point B,   $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <input type="text" class="form-control">.</li>
-    <li>At Point C,   $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <input type="text" class="form-control">.</li>
-    <li>At Point D,   $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <input type="text" class="form-control">.</li>
-    <li>At Point E,   $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is)  <input type="text" class="form-control">.</li>
-    </ol>
-  </article>
+      <h4>SECOND DERIVATIVE TEST:</h4>
+      <p>In the first blank of each statement, choose one: <strong>positive</strong>, <strong>negative</strong>, <strong>equal to zero</strong></p>
+      <p>In the second blank of each statement, choose one: <strong>concave up</strong>, <strong>concave down</strong>, <strong>has a possible point of inflection</strong></p>
+      <ol>
+        <li>At Point A, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point B, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point C, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point D, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point E, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+      </ol>
+    </article>
 
 
 
 
 
-        </div>
-    <!-- ending of body container -->
+  </div>
+  <!-- ending of body container -->
 </body>
 
 </html>
