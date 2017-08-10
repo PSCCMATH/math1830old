@@ -8,11 +8,11 @@
           "title": "Unit 1",
           "nav": [
             {
-              "urlText": "1.1 Limits Graphically and Algebraically",
+              "urlText": "1.1 Finding Limits Graphically",
               "url": "u1s1.html"
             },
             {
-              "urlText": "1.2 Infinite Limits and Asymptotes",
+              "urlText": "1.2 Finding Limits Algebraically/Infinite Limits",
               "url": "u1s2.html"
             },
             {
@@ -28,7 +28,7 @@
               "url": "u1s5.html"
             },
             {
-              "urlText": "1.6 Marginal Analysis",
+              "urlText": "1.6 Marginal Analysis in Business and Economics",
               "url": "u1s6.html"
             }
           ]
@@ -37,7 +37,7 @@
           "title": "Unit 2",
           "nav": [
             {
-              "urlText": "2.1 The Constant e and Natural Log Applications",
+              "urlText": "2.1 Exponential and Logarithmic Function Applications",
               "url": "u2s1.html"
             },
             {
@@ -45,12 +45,16 @@
               "url": "u2s2.html"
             },
             {
-              "urlText": "2.3 Product and Quotient Rules",
+              "urlText": "2.3 Derivatives of Products",
               "url": "u2s3.html"
             },
-            {
-              "urlText": "2.4 The Chain Rule",
+                {
+              "urlText": "2.4 Derivatives of Quotients",
               "url": "u2s4.html"
+            },
+            {
+              "urlText": "2.5 The Chain Rule",
+              "url": "u2s5.html"
             }
           ]
         },
@@ -66,7 +70,7 @@
               "url": "u3s2.html"
             },
             {
-              "urlText": "3.3 The Second Deriative Test",
+              "urlText": "3.3 The Second Derivative Test",
               "url": "u3s3.html"
             },
             {
