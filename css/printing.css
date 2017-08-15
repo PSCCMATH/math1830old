@@ -59,9 +59,8 @@
         color: blue !important;
     }
 
-     /* comment out this area to print everything */
-
-    /* .m1830-answer, .m1830-solution {
+      /* comment out this area to print everything  */
+      .m1830-answer, .m1830-solution {
         display: block;
          visibility: hidden;
     }
@@ -69,8 +68,8 @@
     .m1830-hw-answer, .m1830-hw-solution, .m1830-answer img, .m1830-solution img {
 
      display: none;
-    } */
+    }    
+ 
+ /* until here  */
 
-/* until here */
-
-}
+} 
