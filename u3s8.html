@@ -21,18 +21,18 @@
     <div class="container">
         <h1 id="u3toc">MATH 1830</h1>
 
-        <h2 id="unit-3-applications-of-derivatives">Unit 3 Applications of Derivatives</h2>
+        <h2>Unit 3 Applications of Derivatives</h2>
 
 <article class="notes">
 
-                <h3>3.8 Optimization in Packaging: Cans and Other Right Cylinders</h3>
+                <h3>3.8 Optimization in Packaging: Boxes and Other Right Rectangular Prisms</h3>
 
                 <h4> Pre-Class:</h4>
 <ul>
              <li>Complete 3.7 Homework assignment: check and correct. </li>
 
               <li> Take notes on the videos and readings (use the space below). </li>
-              <!-- <li>Work and check problem #1 in the 2.4 NOTES section. </li> -->
+              
               <li> Complete the 3.8 Pre-Class Quiz.</li>
               </ul>
               <div class="row text-center m-buttons">
@@ -47,8 +47,8 @@
         </a>
        </div>
 
-
-       <!-- <div class="col-sm-2">
+<!-- 
+       <div class="col-sm-2">
          <a onclick="window.print()" href=#>
            <div class="box " tabindex="0">
              <i class="fa fa-print fa-3x "></i>
@@ -67,7 +67,7 @@
 
 
   <div class="col-sm-2">
-  <a href="http://www.youtube.com/watch?v=gL3HxBQyeg0" target="_blank">
+  <a href="http://www.youtube.com/watch?v=vmxnfYXADXY" target="_blank">
   <div class="box " tabindex="0">
     <i class="fa fa-play fa-3x "></i>
     <p>Watch</p>
@@ -95,95 +95,96 @@
 
   </div>
 
-<h4 class="m1830-pagebreak">Write a mathematical function for each of the following and then find the requested information.</h4>
-                <p><Strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
 
+                <h4 class="m1830-pagebreak">Write a mathematical function for each of the following and then find the requested information.</h4>
+                
+                <p><strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
 <ol>
-                  <li class="m1830-problem">
-                      <p class="m1830-problem-text"> A cylindrical soup can has a volume of 355 $cm^3.$ Find the dimensions (radius and height) that minimize the surface area of the can.</p>
 
-                      <p class="m1830-solution">$ V=355$ $c{{m}^{3}} $</p>
-                      <p class="m1830-solution">$ V=355=\pi {{r}^{2}}h $</p>
-                      <p class="m1830-solution m1830-step">$ h=\frac{355}{\pi {{r}^{2}}} $</p>
-                      <p class="m1830-solution">$ SA=2\pi {{r}^{2}}+2\pi rh$</p>
-                      <p class="m1830-solution">$ SA=2\pi {{r}^{2}}+2\pi r\left( \frac{355}{\pi {{r}^{2}}} \right)$</p>
-                      <p class="m1830-solution">$ SA=2\pi {{r}^{2}}+\frac{710}{r}$</p>
-                      <p class="m1830-solution m1830-step">$ SA=2\pi {{r}^{2}}+710{{r}^{-1}}$</p>
-                        <p class="m1830-solution m1830-step">$SA&#39;=4\pi r-710r^{-2}$</p>
-                      <p class="m1830-solution m1830-step">$SA&#39;=4\pi r-\frac{710}{{{r}^{2}}}$</p>
-                      <p class="m1830-solution m1830-pagebreak">Set $SA&#39;=0.$</p>
-                      <p class="m1830-solution">$4\pi r-\frac{710}{{{r}^{2}}}=0$</p>
-                      <p class="m1830-solution">$4\pi r=\frac{710}{{{r}^{2}}}$</p>
-                      <p class="m1830-solution">$\frac{4\pi r}{1}=\frac{710}{{{r}^{2}}}$</p>
-                      <p class="m1830-solution">$4\pi {{r}^{3}}=710$</p>
-                      <p class="m1830-solution">${{r}^{3}}=\frac{710}{4\pi }$</p>
-                      <p class="m1830-solution">${{r}^{3}}=56.5$</p>
-                      <p class="m1830-solution m1830-step">$r=3.84$</p>
-                      <p class="m1830-solution">$h=\frac{355}{\pi {{\left( 3.84 \right)}^{2}}}=7.66$</p>
-                      <p class="m1830-answer">The surface area of the can will be minimized when the radius is 3.84 cm and the height is 7.66 cm.</p>
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text"> A rectangular package to be sent by a postal service can have a maximum combined length and girth (distance around the package) of 108 inches.  Find the dimensions of the package that contains a maximum volume.  Assume that the package has square ends.</p>
+
+                      <p class="m1830-solution">$Girth + Length = 108$</p>
+                      <p class="m1830-solution">$4x+l=108$</p>
+                      <p class="m1830-solution m1830-step">$l=108-4x$</p>
+                      <p class="m1830-solution">$V=lwh$</p>
+                      <p class="m1830-solution">$V=l*x*x$</p>
+                      <p class="m1830-solution">$V=(108-4x)(x^2)$</p>
+                      <p class="m1830-solution m1830-step">$V=108x^2-4x^3$</p>
+                      <p class="m1830-solution m1830-step">$V&#39;=216x-12x^2$</p>
+                      <p class="m1830-solution m1830-pagebreak">Set $V&#39;=0.$</p>
+                      <p class="m1830-solution">$216x-12x^2=0$</p>
+                      <p class="m1830-solution">$12x(18-x)=0$</p>
+                      <p class="m1830-solution">$12x=0$ and $18-x=0$</p>
+                      <p class="m1830-solution m1830-step">$x=0$ and $x=18$</p>
+                      <p class="m1830-solution">Use $x=18$ to solve for $l.$</p>
+                      <p class="m1830-solution">$ l=108-4x$</p>
+                      <p class="m1830-solution">$ l=108-4*18$</p>
+                      <p class="m1830-solution">$ l=36$</p>
+                      <p class="m1830-answer">The dimensions of the box with the maximum volume are 18 in x 18 in x 36 in.</p>
 
                   </li>
                   <li class="m1830-problem">
-                      <p class="m1830-problem-text"> You have 320 $cm^2$ of aluminum to make a cylinder shaped coke can.  Find the dimensions that would produce a maximum volume.</p>
+                      <p class="m1830-problem-text"> Your iron works company has been contracted to build a $500 ft^3$ holding tank for a paper company.  The square-based, open-top tank is to be made by welding thin stainless steel plates together along their edges.  As the production engineer, your job is to find dimensions for the base and height that will make the tank weigh as little as possible.  What dimensions do you tell the shop to use?</p>
 
-                      <p class="m1830-solution">$ SA=2πr+2πrh$</p>
-                      <p class="m1830-solution">$ 320=2πr+2πrh$</p>
-                      <p class="m1830-solution m1830-step">$ 320-2πr=2πrh$</p>
-                      <p class="m1830-solution">$ \frac{320-2πr}{2πr}=h$</p>
-                      <p class="m1830-solution">$ V=πr^2h$</p>
-                      <p class="m1830-solution">$ V=πr^2(\frac{320-2πr}{2πr})$</p>
-                      <p class="m1830-solution m1830-step">$ V=r(\frac{320-2πr}{2})$</p>
-                      <p class="m1830-solution m1830-step">$V=160r-πr^3$</p>
-                      <p class="m1830-solution">$V&#39;=160-3πr^2$</p>
-                      <p class="m1830-solution">Set $V&#39;=0.$</p>
-                      <p class="m1830-solution">$160-3πr^2=0$</p>
-                      <p class="m1830-solution">$160=3πr^2$</p>
-                      <p class="m1830-solution">$r^2=\frac{160}{3π}$</p>
-                      <p class="m1830-solution">$r=\sqrt{\frac{160}{3π}}$</p>
-                      <p class="m1830-solution">$r=\pm4.12$</p>
-
-                      <p class="m1830-solution">$h= \frac{320-2πr}{2πr}$</p>
-                        <p class="m1830-solution">$h= \frac{320-2π(4.12)}{2π(4.12)}$</p>
-                          <p class="m1830-solution">$h= 11.36$</p>
-                      <p class="m1830-answer">The volume of the can will be maximized when the radius is 4.12 cm and the height is 11.36 cm.</p>
-
-                  </li>
-
-                  <li class="m1830-problem">
-                      <p class="m1830-problem-text"> What are the dimensions of the lightest open-top right cylindrical container that can hold a volume of 1000 $cm^3$?</p>
-
-                      <p class="m1830-solution">$ V=1000$ $c{{m}^{3}} $</p>
-                      <p class="m1830-solution">$ V=1000=\pi {{r}^{2}}h $</p>
-                      <p class="m1830-solution">$ h=\frac{1000}{\pi {{r}^{2}}} $</p>
-                      <p class="m1830-solution">$ SA=\pi {{r}^{2}}+2\pi rh$</p>
-                      <p class="m1830-solution">$ SA=\pi {{r}^{2}}+2\pi r(\frac{1000}{\pi {{r}^{2}}} )$</p>
-                      <p class="m1830-solution">$ SA=\pi {{r}^{2}}+\frac{2000}{r}$</p>
-                      <p class="m1830-solution m1830-step">$ SA=\pi {{r}^{2}}+2000{{r}^{-1}}$</p>
-                      <p class="m1830-solution m1830-step">$SA&#39;=2\pi r-{2000}{{{r}^{-2}}}$</p>
-                      <p class="m1830-solution m1830-step">$SA&#39;=2\pi r-\frac{2000}{{{r}^{2}}}$</p>
+                      <p class="m1830-solution">$V=lwh$</p>
+                      <p class="m1830-solution">$V=x*x*h$</p>
+                      <p class="m1830-solution m1830-step">$500=x^2h$</p>
+                      <p class="m1830-solution">$\frac{500}{x^2}=h$</p>
+                      <p class="m1830-solution">$SA=lw+2lh+2wh$</p>
+                      <p class="m1830-solution">$SA=x^2+2xh+2xh$</p>
+                      <p class="m1830-solution">$SA=x^2+4xh$</p>
+                      <p class="m1830-solution">$SA=x^2+4x(\frac{500}{x^2})$</p>
+                      <p class="m1830-solution">$SA=x^2+\frac{2000x}{x^2}$</p>
+                      <p class="m1830-solution">$SA=x^2+\frac{2000}{x}$</p>
+                      <p class="m1830-solution">$SA=x^2+2000x^{-1}$</p>
+                      <p class="m1830-solution">$SA&#39;=2x-2000x^{-2}$</p>
                       <p class="m1830-solution">Set $SA&#39;=0.$</p>
-                      <p class="m1830-solution">$2\pi r-\frac{2000}{{{r}^{2}}}=0$</p>
-                      <p class="m1830-solution">$2\pi r=\frac{2000}{{{r}^{2}}}$</p>
-                      <p class="m1830-solution">$\frac{2\pi r}{1}=\frac{2000}{{{r}^{2}}}$</p>
-                      <p class="m1830-solution">$2\pi {{r}^{3}}=2000$</p>
-                      <p class="m1830-solution">${{r}^{3}}=\frac{2000}{2\pi }$</p>
-                      <p class="m1830-solution">${{r}^{3}}=\frac{1000}{\pi }$</p>
-                      <p class="m1830-solution">$\sqrt[3]{\frac{1000}{\pi}}$</p>
-                      <p class="m1830-solution m1830-step">$r=6.83$</p>
-                      <p class="m1830-solution">$h=\frac{1000}{\pi (6.83)^{2}} =6.82$</p>
-                      <p class="m1830-answer">The surface area of the can will be minimized when the radius is 6.83 cm and the height is 6.82 cm.</p>
+                      <p class="m1830-solution">$2x-2000x^{-2}=0$</p>
+                      <p class="m1830-solution">$2x-\frac{2000}{x^2}=0$</p>
+                        <p class="m1830-solution">$\frac{\displaystyle2x}1=\frac{2000}{x^2}$</p>
+                      <p class="m1830-solution">$2x^3=2000$</p>
+                        <p class="m1830-solution">$x^3=1000$</p>
+                      <p class="m1830-solution m1830-step">$x=10$</p>
+                      <p class="m1830-solution">Use $x=10$ to solve for $h.$</p>
+                      <p class="m1830-solution">$ \frac{500}{x^2}=h$</p>
+                      <p class="m1830-solution">$ \frac{500}{10^2}=h$</p>
+                      <p class="m1830-solution">$ \frac{500}{100}=h$</p>
+                      <p class="m1830-solution">$ h=5$</p>
+                      <p class="m1830-answer">The dimensions of the box with the minimum surface area are 10 ft x 10 ft x 5 ft.</p>
 
                   </li>
 
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text">A manufacturer wants to design an open box having a square base and a surface area of 108 $in^2.$  What dimensions will produces a box with a maximum volume?</p>
 
+                      <p class="m1830-solution">$SA=lw+2lh+2wh$</p>
+                      <p class="m1830-solution">$108=x^2+2xh+2xh$</p>
+                        <p class="m1830-solution">$108=x^2+4xh$</p>
+                      <p class="m1830-solution m1830-step">$108-x^2=4xh$</p>
+                      <p class="m1830-solution">$\frac{108-x^2}{4x}=h$</p>
+                      <p class="m1830-solution">$V=lwh$</p>
+                      <p class="m1830-solution">$V=x*x*h$</p>
+                      <p class="m1830-solution">$V=x^2(\frac{108-x^2}{4x})$</p>
+                        <p class="m1830-solution">$V=x(\frac{108-x^2}{4})$</p>
+                          <p class="m1830-solution">$V=(\frac{108x-x^3}{4})$</p>
+                      <p class="m1830-solution m1830-step">$V=\frac14(108x-x^3)$</p>
+                        <p class="m1830-solution m1830-step">$V=27x-\frac14x^3$</p>
+                      <p class="m1830-solution m1830-step">$V&#39;=27-\frac34x^2$</p>
+                      <p class="m1830-solution">Set $V&#39;=0.$</p>
+                      <p class="m1830-solution">$27-\frac34x^2=0$</p>
+                      <p class="m1830-solution">$\frac{27}{1}=\frac{3x^2}4$</p>
+                          <p class="m1830-solution">$3x^2=108$</p>
+                              <p class="m1830-solution">$x^2=36$</p>
 
-
-
-
-
-
+                      <p class="m1830-solution">$x=6$ and $x=-6$</p>
+                      <p class="m1830-solution">Use $x=6$ to solve for $h.$</p>
+                      <p class="m1830-solution">$ h=\frac{108-x^2}{4x}$</p>
+                      <p class="m1830-solution">$ h=\frac{108-(6^2)}{4*6}$</p>
+                      <p class="m1830-solution">$ h=\frac{72}{24}=3$</p>
+                      <p class="m1830-answer">The dimensions of the box with the maximum volume are 6 in x 6 in x 3 in.</p>
+                      </li>
 </ol>
-
 
 
 </article>
@@ -191,76 +192,65 @@
 
 <article class="hw">
 
-    <h3>3.8 Optimization in Packaging: Cans and Other Right Cylinders Homework</h3>
+      <h3>3.8 Optimization in Packaging: Boxes and Other Right Rectangular Prisms Homework</h3>
+
   <p><strong>Write a mathematical function for each of the following and then find the requested information.</strong></p>
-  <p><Strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
+  <p><strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
 
 <ol>
-
-
   <li class="m1830-problem">
-      <p class="m1830-problem-text"> A cylinderical container is to be made with 3000 $cm^2$ of sheet metal.  What dimensions would result in the maximum volume?  Assume a lid.</p>
+      <p class="m1830-problem-text"> A container company is designing an open-top, square-based, rectangular box that will have a volume of 62.5 $cm^3$. Find the dimensions of the box that will minimize the surface area.</p>
 
-      <p class="m1830-hw-solution">$SA=2πr^2+2πrh$</p>
-      <p class="m1830-hw-solution">$3000=2πr^2+2πrh$</p>
-      <p class="m1830-hw-solution m1830-step">$ 3000-2πr^2=2πrh$</p>
-      <p class="m1830-hw-solution">$ \frac{3000-2\mathrm{πr}^2}{2πr}=h$</p>
-      <p class="m1830-hw-solution">$ V=πr^2h$</p>
-      <p class="m1830-hw-solution">$ V=πr^2(\frac{3000-2\mathrm{πr}^2}{2πr})$</p>
-      <p class="m1830-hw-solution">$ V=r(\frac{3000-2\mathrm{πr}^2}{2})$</p>
-          <p class="m1830-hw-solution">$ V=1500r-πr^3$</p>
-      <p class="m1830-hw-solution">$ V&#39;=1500-3πr^2$</p>
-      <p class="m1830-hw-solution">$ 0=1500-3πr^2$</p>
-      <p class="m1830-hw-solution">$ 1500=3πr^2$</p>
-      <p class="m1830-hw-solution">$ 500=πr^2$</p>
-      <p class="m1830-hw-solution">$ \frac{500}π=r^2$</p>
-      <p class="m1830-hw-solution">$ \sqrt{\frac{500}{π}}=r$</p>
-      <p class="m1830-hw-solution">$ r=\pm12.62$</p>
-      <p class="m1830-hw-solution">$ h=\frac{3000-2π(12.62)^2}{2π(12.62)}=25.21$</p>
-
-      <p class="m1830-hw-answer">The maximum volume occurs when the radius is 12.62 cm and the height is 25.21 cm.</p>
-
+      <p class="m1830-hw-solution">$V=lwh={{w}^{2}}h$</p>
+      <p class="m1830-hw-solution">$62.5={{w}^{2}}h$</p>
+      <p class="m1830-hw-solution m1830-step">$h=\frac{62.5}{{{w}^{2}}}$</p>
+      <p class="m1830-hw-solution">$SA={{w}^{2}}+2wh+2wh$</p>
+      <p class="m1830-hw-solution">$SA={{w}^{2}}+4wh$</p>
+      <p class="m1830-hw-solution">$S(w)={{w}^{2}}+4w\left( \frac{62.5}{{{w}^{2}}} \right)$</p>
+      <p class="m1830-hw-solution m1830-step">$S(w)={{w}^{2}}+\frac{250}{w}$</p>
+        <p class="m1830-hw-solution m1830-step">$S(w)={{w}^{2}}+250w^{-1}$</p>
+      <p class="m1830-hw-solution m1830-step">$S&#39;(w)=2w-\frac{250}{{{w}^{2}}}$</p>
+      <p class="m1830-hw-solution">Set $S&#39;(w)=0.$</p>
+      <p class="m1830-hw-solution">$0=2w-\frac{250}{{{w}^{2}}}$</p>
+          <p class="m1830-hw-solution">$\frac{250}{{{w}^{2}}}=\frac{2w}1$</p>
+      <p class="m1830-hw-solution">$2{{w}^{3}}=250$</p>
+      <p class="m1830-hw-solution">${{w}^{3}}=125$</p>
+      <p class="m1830-hw-solution m1830-step">$w=5$</p>
+      <p class="m1830-hw-solution">Use $w$ to solve for $h.$</p>
+      <p class="m1830-hw-solution">$ 62.5={{5}^{2}}h$</p>
+      <p class="m1830-hw-solution">$ 62.5=25h$</p>
+      <p class="m1830-hw-solution">$ h=2.5$</p>
+      <p class="m1830-hw-answer">The dimensions of the box with the minimum surface area are 5 cm x 5 cm x 2.5 cm.</p>
 
   </li>
 
-
-
-
-
-
-
-
   <li class="m1830-problem">
-      <p class="m1830-problem-text"> A cylindrical can has a volume of 900 cm³. The metal costs $15.50/cm². What dimensions produce a can with minimized cost? What is the cost of making the can?</p>
+      <p class="m1830-problem-text">Find the maximum volume of a box with a square base that has a surface area of 96 $cm^2$.</p>
 
-      <p class="m1830-hw-solution">$V=\pi {{r}^{2}}h$</p>
-      <p class="m1830-hw-solution">$ 900=\pi {{r}^{2}}h$</p>
-      <p class="m1830-hw-solution m1830-step">$ h=\frac{900}{\pi {{r}^{2}}}$</p>
-      <p class="m1830-hw-solution">$ SA=2\pi {{r}^{2}}+2\pi rh$</p>
-      <p class="m1830-hw-solution">$ S(r)=2\pi {{r}^{2}}+2\pi r\left( \frac{900}{\pi {{r}^{2}}} \right)$</p>
-      <p class="m1830-hw-solution">$ S(r)=2\pi {{r}^{2}}+\frac{1800}{r}$</p>
-      <p class="m1830-hw-solution m1830-step">$ S(r)=2\pi {{r}^{2}}+1800{{r}^{-1}}$</p>
-      <p class="m1830-hw-solution">$ S&#39;(r)=4\pi r-\frac{1800}{{{r}^{2}}}$</p>
-      <p class="m1830-hw-solution">$ 0=4\pi r-\frac{1800}{{{r}^{2}}}$</p>
-      <p class="m1830-hw-solution">$ \frac{1800}{{{r}^{2}}}=4\pi r$</p>
-      <p class="m1830-hw-solution">$ 4\pi {{r}^{3}}=1800$</p>
-      <p class="m1830-hw-solution">$ {{r}^{3}}=\frac{1800}{4\pi }$</p>
-      <p class="m1830-hw-solution">$ {{r}^{3}} \approx 143.239448$</p>
-      <p class="m1830-hw-solution">$ r\approx 5.23\text{ cm}$</p>
-      <p class="m1830-hw-solution m1830-step">$ h=\frac{900}{\pi {{(5.23)}^{2}}}=10.47\text{ cm}$</p>
-      <p class="m1830-hw-solution">Minimum Surface Area</p>
-      <p class="m1830-hw-solution">$ SA=2\pi {{r}^{2}}+2\pi rh$</p>
-      <p class="m1830-hw-solution">$ SA=2\pi {{\left( 5.23 \right)}^{2}}+2\pi \left( 5.23 \right)\left( 10.47 \right)$</p>
-      <p class="m1830-hw-solution m1830-step">$ SA=515.92\text{ }c{{m}^{2}}$</p>
-      <p class="m1830-hw-solution">Cost of the can</p>
-      <p class="m1830-hw-solution">$ =\$15.50(SA)$</p>
-      <p class="m1830-hw-solution">$=\$15.50(515.92)$</p>
-      <p class="m1830-hw-solution">$=7996.76$</p>
-      <p class="m1830-hw-answer">The minimum surface area occurs when the radius is 5.23 cm and the height is 10.47 cm.</p>
-      <p class="m1830-hw-answer">The cost of making the can is \$7996.76.</p>
+      <p class="m1830-hw-solution">Assume a lid.</p>
+      <p class="m1830-hw-solution">$SA=2lw+2lh+2wh$</p>
+      <p class="m1830-hw-solution">$ SA=2({{x}^{2}}+xh+xh) $</p>
+      <p class="m1830-hw-solution">$ 96=2({{x}^{2}}+2xh) $</p>
+      <p class="m1830-hw-solution">$ 48={{x}^{2}}+2xh $</p>
+      <p class="m1830-hw-solution">$ 48-{{x}^{2}}=2xh $</p>
+      <p class="m1830-hw-solution m1830-step">$ \frac{48-{{x}^{2}}}{2x}=h $</p>
+      <p class="m1830-hw-solution">$V=l\cdot w\cdot h$</p>
+      <p class="m1830-hw-solution">$ V(x)=x(x)\left( \frac{48-{{x}^{2}}}{2x} \right) $</p>
+      <p class="m1830-hw-solution">$ V(x)=\frac{x(48-{{x}^{2}})}{2} $</p>
+      <p class="m1830-hw-solution">$ V(x)=\frac{48x-{{x}^{3}}}{2}$</p>
+      <p class="m1830-hw-solution">$ V(x)=\frac{48x}{2}-\frac{{{x}^{3}}}{2} $</p>
+      <p class="m1830-hw-solution m1830-step">$V(x)=24x-0.5{{x}^{3}}$</p>
+      <p class="m1830-hw-solution ">$V&#39;(x)=24-1.5{{x}^{2}}$</p>
+      <p class="m1830-hw-solution">$0=24-1.5{{x}^{2}}$</p>
+      <p class="m1830-hw-solution">$1.5{{x}^{2}}=24$</p>
+      <p class="m1830-hw-solution">${{x}^{2}}=\frac{24}{1.5}$</p>
+      <p class="m1830-hw-solution">${{x}^{2}}=16$</p>
+      <p class="m1830-hw-solution">$x=4$</p>
+      <p class="m1830-hw-solution">$h=\frac{48-16}{2(4)}=4$</p>
+      <p class="m1830-hw-answer">The dimensions of the box that maximize the volume are 4 cm x 4 cm x 4 cm.</p>
+      <p class="m1830-hw-answer">The maximum volume is 64 $cm^3$</p>
 
   </li>
-
 
 
 </ol>
@@ -277,13 +267,23 @@
 </li> -->
 
 <li>
-          <a href="http://www.youtube.com/watch?v=hUhisi2FBuw" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> The Ingenious Design of the Aluminum Beverage Can</a>  (11:39)
+          <a href="http://www.youtube.com/watch?v=8i3riKvCYkM" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> How It's Made: Cardboard Boxes</a>  (5:00)
         </li>
 
+        <li>
+          <a href="http://www.youtube.com/watch?v=MC0tq6fNRwU" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Optimizing Box Volume Graphically</a>  (9:49)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=cRboY08YG8g" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Optimizing Box Volume Analytically</a>  (8:58)
+        </li>
 
 </ul>
 
         </div> 
+
+
+
 
 
     </div>
