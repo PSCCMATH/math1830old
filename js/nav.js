@@ -74,7 +74,7 @@
               "url": "u3s3.html"
             },
             {
-              "urlText": "3.4 Summary of Curve Sketching: NearPod Activity",
+              "urlText": "3.4 Summary of Curve Sketching",
               "url": "u3s4.html"
             },
             {
@@ -86,11 +86,11 @@
               "url": "u3s6.html"
             },
             {
-              "urlText": "3.7 Optimization in Packaging: Boxes",
+              "urlText": "3.7 Optimization in Packaging: Cans",
               "url": "u3s7.html"
             },
             {
-              "urlText": "3 8 Optimization in Packaging: Cans",
+              "urlText": "3 8 Optimization in Packaging: Boxes",
               "url": "u3s8.html"
             }
           ]
