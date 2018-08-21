@@ -1,8 +1,16 @@
 @media print {
     body {
         background: none;
-          /* font-size: 18px;   */
+          font-size: 16px;  
+        
     }
+
+    /* adding space to the right */
+/* 
+    .container{
+        padding-right: 3.in;
+    } */
+
     a {
         text-decoration: none;
         content: none;
@@ -43,10 +51,6 @@
     video {
         display: none;
     }
-
-
-   
-
     .m1830-answer *, .m1830-answer *:before, .m1830-answer *:after {
         color: #b30000 !important;
     }
@@ -58,6 +62,8 @@
     .m1830-solution *, .m1830-hw-solution * {
         color: blue !important;
     }
+
+
 
       /* comment out this area to print everything  */
          .m1830-answer, .m1830-solution {
