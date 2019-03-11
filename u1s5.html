@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MATH 1830 Notes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/notes.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/togglebuttons.js"></script>
+  <script src="js/loadmathjax.js"></script>
+  <script src="js/googlestats.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/togglepass.js"></script>
+  <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+      <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+
+  <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button>        <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+              title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group"> <input id="input" type="password" class="form-control" placeholder="pin-code"> </div> <button id="submit" type="submit"
+              class="btn btn-default">Show Solutions</button> </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 id="u1toc">MATH 1830</h1>
+
+    <h2>Unit 1 Limits</h2>
+
+
+
+
+    <article class="notes">
+
+      <h3>1.5 Derivatives: The Power Rule</h3>
+      <h4> Pre-Class 1.5A:</h4>
+      <ul>
+        <li>Complete 1.4 homework assignment: check and correct. </li>
+
+        <li> Take notes on the videos and readings (use the space below). </li>
+        <li> Work and check problems #1-4 in the 1.5 NOTES section. </li>
+
+        <li> Complete the 1.5A Pre-Class Quiz</li>
+      </ul>
+      <div class="row text-center m-buttons">
+        <!--  Begin Row 1.5A -->
+
+
+        <div class="col-sm-2">
+          <a href="https://psccmath.github.io/math1830/u1s4.html" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-check fa-3x "></i>
+              <p>1.4 HW</p>
+            </div>
+          </a>
+        </div>
+
+
+        <!-- <div class="col-sm-2">
+          <a onclick="window.print()" href=#>
+            <div class="box " tabindex="0">
+              <i class="fa fa-print fa-3x "></i>
+              <p>Print</p>
+            </div>
+          </a>
+        </div> -->
+        <div class="col-sm-2">
+          <a href="https://cnx.org/contents/i4nRcikn@2.50:8aJUEzry@3/Differentiation-Rules" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-book fa-3x "></i>
+              <p>Read</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-sm-2">
+          <a href="http://www.youtube.com/watch?v=mzOBlH32qdk" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-play fa-3x "></i>
+              <p>Watch</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-2">
+          <a href="https://www.myopenmath.com/" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-line-chart fa-3x "></i>
+              <p>1.5A Quiz</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-2">
+          <a href="#ar" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-pencil-square fa-3x "></i>
+              <p>Resources</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <!--  End Row 1.5A -->
+
+      <h4> Pre-Class 1.5B:</h4>
+      <ul>
+        <li>Complete 1.5A Homework assignment: check and correct. </li>
+
+        <li> Take notes on the videos and readings (use the space below). </li>
+
+        <li>1.5B Work and check problems #9-10 in the 1.5 NOTES section. </li>
+        <li> Complete 1.5B Pre-Class Quiz</li>
+      </ul>
+
+      <div class="row text-center m-buttons">
+        <!--  Begin Row 1.5B -->
+
+        <div class="col-sm-2">
+          <a href="https://psccmath.github.io/math1830/u1s5.html" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-check fa-3x "></i>
+              <p>1.5A HW</p>
+            </div>
+          </a>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-2">
+          <a href="http://www.youtube.com/watch?v=HWFtcIRhr5c" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-play fa-3x "></i>
+              <p>Watch</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-2">
+          <a href="https://www.myopenmath.com/" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-line-chart fa-3x "></i>
+              <p>1.5B Quiz</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-2">
+          <a href="#ar" target="_blank">
+            <div class="box " tabindex="0">
+              <i class="fa fa-pencil-square fa-3x "></i>
+              <p>Resources</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--  End Row 1.5B -->
+      <h4 class="m1830-pagebreak">Notes</h4>
+
+      <p><strong>Basic Differentiation Properties</strong></p>
+      <strong>Three Equivalent Terms:</strong>
+      <p> If $y\; = \;\;f\left( x \right),\;$ you can use any of these to represent the derivative $y&#39; = f&#39;\left( x \right)
+        = \frac{{dy}}{{dx}}$</p>
+
+      <p><strong>THE POWER RULE:</strong> If $f\left( x \right) = {x^n}$ then $f&#39;\left( x \right) = n{x^{n - 1}}$</p>
+      <p><strong>Using the Power Rule, find the indicated derivative:</strong></p>
+      <ol>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $g\left( x \right) = {x^4}$</p>
+          <p class="m1830-answer">$g&#39;\left( x \right) = 4{x^3}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $y = 2{x^3}$</p>
+          <p class="m1830-solution">$y&#39; = 2\cdot3{x^{ 2}}$</p>
+          <p class="m1830-answer">$y&#39; = 6{x^{ 2}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $\frac{d}{{dx}}\left( 5 \right)$</p>
+          <p class="m1830-solution">$\frac{d}{{dx}}\left( 5 \right) = \frac{d}{{dx}}\left( {5{x^0}} \right) = 5\left( 0 \right){x^{ - 1}} =$</p>
+          <p class="m1830-answer">$0$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $y = \;\frac{1}{{{x^7}}} = {x^{ - 7}}$</p>
+          <p class="m1830-answer">$y&#39; = - 7{x^{ - 8}} = \frac{{ - 7}}{{{x^8}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $y = \;\frac{{{x^4}}}{{16}}$</p>
+          <p class="m1830-answer">$\frac{{dy}}{{dx}} = \frac{{4{x^3}}}{{16}} = \frac{{{x^3}}}{4}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $y\; = 8 + 3t - 5{t^3}$</p>
+          <p class="m1830-answer">$\frac{{dy}}{{dt}} = 0 + 3 - 15{t^2} = 3 - 15{t^2}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $g\left( x \right) = 6{x^{ - 5}} - \;\;5{x^{ - 4}}$</p>
+          <p class="m1830-solution">$g&#39;\left( x \right) = - 30{x^{ - 6}} + 20{x^{ - 5}} =$</p>
+          <p class="m1830-answer">$ \frac{{ - 30}}{{{x^6}}} + \frac{{20}}{{{x^5}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $\frac{d}{{dx}}\left( {\frac{{4{x^3}}}{{10}}\; - \;\;\frac{2}{{3{x^4}}}} \right)$</p>
+          <p class="m1830-solution">$\frac{d}{{dx}}\left( {\frac{4}{{10}}{x^3} - \frac{2}{3}{x^{ - 4}}} \right)$</p>
+          <p class="m1830-solution">$\frac{d}{{dx}} = \frac{{12}}{{10}}{x^2} + \frac{8}{3}{x^{ - 5}} = $</p>
+          <p class="m1830-answer">$\frac{{6{x^2}}}{5} + \frac{8}{{3{x^5}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $H&#39;\left( w \right)$ if $H\left( w \right) = \;\frac{5}{{{w^6}}}\; - \;\;7\sqrt w$</p>
+          <p class="m1830-solution">$H(w)= 5{w^{ - 6}} - 7{w^{1/2}}$</p>
+          <p class="m1830-solution">$H&#39;(w) = - 30{w^{ - 7}} - \frac{7}{2}{w^{ - 1/2}} =$</p>
+          <p class="m1830-answer">$ \frac{{ - 30}}{{{w^7}}} - \frac{7}{{2\sqrt w }}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            $\frac{d}{{du}}\left( {7{u^{2/3}}\;\; + \;\;\;4{u^{ - 3/5}}} \right)$</p>
+          <p class="m1830-answer">$\frac{d}{{du}} = \frac{{14}}{3}{u^{ - 1/3}} - \frac{{12}}{5}{u^{ - 8/5}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            Find and approximate the value(s) of$\;x$ where the graph of$\;f\;$has a horizontal tangent line. Use a graphing calculator
+            to verify. $f\left( x \right) = 2{x^2}\; - 5x$</p>
+          <p class="m1830-solution">$f&#39;(x) = 4x - 5$</p>
+          <p class="m1830-solution">The graph of f has a horizontal tangent where $f&#39;(x) = 0.$</p>
+          <p class="m1830-solution">$4x - 5 = 0$</p>
+          <p class="m1830-solution">$4x = 5$</p>
+          <p class="m1830-solution">$x = \frac{5}{4}$</p>
+          <p class="m1830-answer">The graph of $f(x)$ has a horizontal tangent at $x=\frac54.$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            A company’s total sales (in millions of dollars) t months from now are given by $S\left( t \right) = 0.032{t^4}\;\; + 0.5{t^3}\;
+            + 2.8{t^2}\; + 9t - 4.$</p>
+          <ol>
+
+            <li>Find $S&#39;\left( t \right).$
+              <p class="m1830-answer">$S&#39;\left( t \right) = 0.128{t^3} + 1.5{t^2} + 5.6t + 9$</p>
+            </li>
+
+            <li>Find $S\left( 4 \right)$ and $S&#39;\left( 4 \right).$ Write a brief verbal interpretation of these results.
+              <p class="m1830-solution">$S(4) = 0.032{(4)^4} + 0.5{(4)^3} + 2.8{(4)^2} + 9(4) - 4 = 116.99$</p>
+              <p class="m1830-solution">$S&#39;(4) = 0.128{(4)^3} + 1.5{(4)^2} + 5.6(4) + 9 = 63.59$</p>
+              <p class="m1830-answer">Total sales after 4 months are \$116.99 million. After 4 months, the sales are increasing at a rate of $63.59
+                million per month.</p>
+            </li>
+
+            <li>Find $S\left( 8 \right)$ and $S&#39;\left( 8 \right).$ Write a brief verbal interpretation of these results.
+              <p class="m1830-solution">$S(8) = 0.032{(8)^4} + 0.5{(8)^3} + 2.8{(8)^2} + 9(8) - 4 = 634.27$</p>
+              <p class="m1830-solution">$S&#39;(8) = 0.128{(8)^3} + 1.5{(8)^2} + 5.6(8) + 9 = 215.34$</p>
+              <p class="m1830-answer">Total sales after 8 months are \$634.27 million. After 8 months, the sales are increasing at a rate of $215.34
+                million per month.</p>
+            </li>
+          </ol>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text">
+            A company decides to develop a cost equation based on the quantity of the product produced in a day. They collected the following
+            data:
+          </p>
+          <table>
+
+            <tr>
+
+              <th>Quantity</th>
+
+              <td>20</td>
+
+              <td>35</td>
+
+              <td>50</td>
+
+              <td>65</td>
+
+              <td>80</td>
+
+              <td>95</td>
+
+              <td>110</td>
+            </tr>
+
+            <tr>
+
+              <th>Cost</th>
+
+              <td>642.35</td>
+
+              <td>766.48</td>
+
+              <td>858.82</td>
+
+              <td>928.83</td>
+
+              <td>1005.32</td>
+
+              <td>1078.82</td>
+
+              <td>1140.79</td>
+            </tr>
+
+          </table>
+
+          <ol>
+
+            <li>Enter the data in a graphing calculator and find a cubic regression equation for the data.
+              <p>Let $x$ represent the quantity produced in a day.</p>
+              <p>Let $y$ represent the daily cost for production.</p>
+              <p class="m1830-solution">$C(x) = y = 3.26E-4*{x^3} - 0.084298{x^2} + 11.710778x + 441.4657$
+              <p class="m1830-answer">$C(x) = y = 0.000326{x^3} - 0.084298{x^2} + 11.710778x + 441.4657$</p>
+            </li>
+
+            <li>If $C\left( x \right)$ denotes the regression equation found in part A, find $C\left( {70} \right)$ and $C&#39;\left(
+              {70} \right).$
+              <p class="m1830-solution">$C&#39;(x) = 0.0009777{x^2} - 0.168596x + 11.71$</p>
+              <p class="m1830-answer">$C(70) = 959.9$</p>
+              <p class="m1830-answer">$C&#39;(70) = 4.699$</p>
+            </li>
+
+            <li>Write a brief verbal interpretation of these results.
+              <p class="m1830-answer">The total cost to produce 70 items is \$959.90. At a production rate of 70 items per day, the cost is increasing
+                by $4.70 for the next item.</p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+
+    </article>
+
+
+    <article class="hw">
+
+      <h3>1.5A Derivatives: The Power Rule</h3>
+
+      <h4>Homework</h4>
+      <p><strong>Determine the derivative of each of the following functions.</strong> State your answer using full and proper
+        notation, labeling the derivative with its name. For example, if you are given a function $h(z),$ you should write
+        $h&#39;(z)\ $or $\frac{dh}{dz}$ as part of your response.</p>
+
+      <!-- Begin section problem list  -->
+      <ol>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $f(x)={{x}^{7}}$</p>
+          <p class="m1830-hw-answer">${f}&#39;(x)=7{{x}^{6}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $h(z)=\pi $</p>
+          <p class="m1830-hw-answer">${h}&#39;(z)=0$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $y=\frac{1}{{{x}^{9}}}$</p>
+          <p class="m1830-hw-solution">$y=x^{-9}$</p>
+          <p class="m1830-hw-answer">${y}&#39;=-9{{x}^{-10}}=\frac{-9}{{{x}^{10}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $\frac{d}{dx}\left( \frac{{{x}^{6}}}{36} \right)$</p>
+          <p class="m1830-hw-answer">$\frac{d}{dx}=\frac{6{{x}^{5}}}{36}=\frac{{{x}^{5}}}{6}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $p(a)=3{{a}^{4}}-2{{a}^{3}}+7{{a}^{2}}-a+12$</p>
+          <p class="m1830-hw-answer">${p}&#39;(a)=12{{a}^{3}}-6{{a}^{2}}+14a-1$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $\frac{d}{dx}\left( -5{{x}^{4}}-6{{x}^{2}}-\frac{2}{{{x}^{3}}} \right)$</p>
+          <p class="m1830-hw-solution">$\frac{d}{dx}(-5{{x}^{4}}-6{{x}^{2}}-2{{x}^{-3}})$</p>
+          <p class="m1830-hw-solution">$\frac{d}{dx}=-20{{x}^{3}}-12x+6{{x}^{-4}}$</p>
+          <p class="m1830-hw-answer">$\frac{d}{dx}=-20{{x}^{3}}-12x+\frac{6}{{{x}^{4}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $q(x)=\frac{{{x}^{3}}-x+2}{x}$</p>
+          <p class="m1830-hw-solution">$q(x)=\frac{x^3}{x}-\frac{x}{x}+\frac{2}{x}$</p>
+          <p class="m1830-hw-solution">$q(x)=x^2-1+2{x^{-1}}$</p>
+          <p class="m1830-hw-solution">${q}&#39;(x)=2x-2{{x}^{-2}}$</p>
+          <p class="m1830-hw-answer">${q}&#39;(x)=2x-\frac{2}{{{x}^{2}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $f(x)=\frac{2{{x}^{5}}-3{{x}^{3}}+x}{{{x}^{2}}}$</p>
+          <p class="m1830-hw-solution"> $f(x)=\frac{2{{x}^{5}}}{{x}^{2}}-\frac{3{{x}^{3}}}{{x}^{2}}+\frac{x}{{{x}^{2}}}$</p>
+          <p class="m1830-hw-solution">$f(x)=2{{x}^{3}}-3x+\frac{1}{x}$</p>
+          <p class="m1830-hw-solution">$f(x)=2{{x}^{3}}-3x+{{x}^{-1}}$</p>
+          <p class="m1830-hw-solution">${f}&#39;(x)=6{{x}^{2}}-3-1{{x}^{-2}}$</p>
+          <p class="m1830-hw-answer">${f}&#39;(x)=6{{x}^{2}}-3-\frac{1}{{{x}^{2}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> Find the slope of the tangent line to the curve $p(x)=3{{x}^{4}}-2{{x}^{3}}+7{{x}^{2}}-x+12$  at the point where
+            $x=-1$.
+          </p>
+          <p class="m1830-hw-solution">${p}&#39;(x)=12{{x}^{3}}-6{{x}^{2}}+14x-1$</p>
+          <p class="m1830-hw-solution">${m_{\tan }}={p}&#39;\left( -1 \right)=12{{(-1)}^{3}}-6{{(-1)}^{2}}+14(-1)-1=-33$</p>
+          <p class="m1830-hw-answer"> At $x=-1, {m_{\tan }}=-33$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> Find the equation of the tangent line at $x=-1$ for the function $p(x)$ in problem 9.</p>
+          <p class="m1830-hw-solution">$(-1,25)$</p>
+          <p class="m1830-hw-solution">$y-25=-33(x+1)$</p>
+          <p class="m1830-hw-solution">$y-25=-33x-33$</p>
+          <p class="m1830-hw-answer">$y=-33x-8$</p>
+          <p><cite class="cc"> Active Calculus by Matthew Boelkins is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.  Based on a work at <a href="http://scholarworks.gvsu.edu/books/10/">http://scholarworks.gvsu.edu/books/10/</a>. </cite></p>
+        </li>
+      </ol>
+      <!-- End section problem list  -->
+
+
+      <div class="m1830-pagebreak"></div>
+
+      <h3>1.5B Derivatives: The Power Rule</h3>
+
+      <h4>Homework</h4>
+      <strong>Determine the derivative of each of the following functions.</strong> State your answer using full and proper
+      notation, labeling the derivative with its name. For example, if you are given a function $h(z),$ you should write
+      $h&#39;(z)\ $or $\frac{dh}{dz}$ as part of your response.
+      <!-- Begin section problem list  -->
+      <ol>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $f(x)=\sqrt[7]{{{x}^{4}}}$<span class="m1830-hw-solution">$={x}^{4/7}$</span></p>
+
+          <p class="m1830-hw-answer">${f}&#39;(x)=\frac{4}{7}{{x}^{-3/7}}=\frac{4}{7\sqrt[7]{{{x}^{3}}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $h(z)=\frac{5}{\sqrt{x}}$<span class="m1830-hw-solution">$=5{x}^{-1/2}$</span></p>
+          <p class="m1830-hw-solution">${h}&#39;(x)=\frac{-5}{2}{{x}^{-3/2}}=\frac{-5}{2\sqrt{{{x}^{3}}}}$</p>
+        
+          <p class="m1830-hw-answer"> ${h}&#39;(x)=\frac{-5}{2x\sqrt{x}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $y=\frac{{{x}^{6}}}{12}-3\,\sqrt[3]{x}$</p>
+            <p class="m1830-hw-solution">$y=\frac{{{x}^{6}}}{12}-3{{x}^{1/3}}$</p>
+          <p class="m1830-hw-solution">${y}&#39;=\frac{6{{x}^{5}}}{12}-3(\frac{1}{3}){{x}^{-2/3}}$</p>
+          <p class="m1830-hw-solution"> ${y}&#39;=\frac{{{x}^{5}}}{2}-{{x}^{-2/3}}$</p>
+          <p class="m1830-hw-answer"> ${y}&#39;=\frac{{{x}^{5}}}{2}-\frac{1}{\sqrt[3]{{{x}^{2}}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $\frac{d}{dx}\left( -\frac{1}{{{x}^{4}}}\ +\ 9{{x}^{5}} \right)$</p>
+          <p class="m1830-hw-solution">$\frac{d}{dx}(-{{x}^{-4}}+9{{x}^{5}})$</p>
+          <p class="m1830-hw-solution">$\frac{d}{dx}=4{{x}^{-5}}+45{{x}^{4}}$</p>
+          <p class="m1830-hw-answer">$\frac{d}{dx}=\frac{4}{{{x}^{5}}}+45{{x}^{4}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $p(a)=-3{{a}^{-5}}+{{a}^{-3}}+7a-\sqrt{a}+12$</p>
+          <p class="m1830-hw-solution">$p(a)=-3{{a}^{-5}}+{{a}^{-3}}+7a-{{a}^{1/2}}+12$</p>
+          <p class="m1830-hw-solution">${p}&#39;(a)=15{{a}^{-6}}-3{{a}^{-4}}+7-\frac{1}{2}{{a}^{-1/2}}$</p>
+          <p class="m1830-hw-answer"> ${p}&#39;(a)=\frac{15}{{{a}^{6}}}-\frac{3}{{{a}^{4}}}+7-\frac{1}{2\sqrt{a}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $\frac{d}{dx}\left( -5\sqrt[4]{{{x}^{3}}}-6\sqrt[3]{{{x}^{2}}}-\frac{2}{{{x}^{3}}} \right)$</p>
+          <p class="m1830-hw-solution">$\frac{d}{dx}\left( -5{{x}^{3/4}}-6{{x}^{2/3}}-2{{x}^{-3}} \right)$</p>
+          <p class="m1830-hw-solution">$\frac{d}{dx}=-5(\frac{3}{4}){{x}^{-1/4}}-6(\frac{2}{3}){{x}^{-1/3}}+6{{x}^{-4}}$</p>
+          <p class="m1830-hw-solution">$\frac{d}{dx}=\frac{-15}{4}{{x}^{-1/4}}-4{{x}^{-1/3}}+6{{x}^{-4}}$</p>
+          <p class="m1830-hw-answer"> $\frac{d}{dx}=\frac{-15}{4\sqrt[4]{x}}-\frac{4}{\sqrt[3]{x}}+\frac{6}{{{x}^{4}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> $q(x)=\frac{-8{{x}^{3}}+5x-6}{{{x}^{4}}}$</p>
+          <p class="m1830-hw-solution">$q(x)=-8{{x}^{-1}}+5{{x}^{-3}}-6{{x}^{-4}}$</p>
+          <p class="m1830-hw-solution">${q}&#39;(x)=8{{x}^{-2}}-15{{x}^{-4}}+24{{x}^{-5}}$</p>
+          <p class="m1830-hw-answer"> ${q}&#39;(x)=\frac{8}{{{x}^{2}}}-\frac{15}{{{x}^{4}}}+\frac{24}{{{x}^{5}}}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> Find the equation of the tangent line to the graph of $g(x)=-\frac{5}{\sqrt{x}}$ at the point $x=4$.</p>
+          <p class="m1830-hw-solution">$g(4)=\frac{-5}{\sqrt4}$</p>
+          <p class="m1830-hw-solution">$g(4)=\frac{-5}2$</p>
+          <p class="m1830-hw-solution m1830-step">Use point $(4,\frac{-5}2)$</p>
+          <p class="m1830-hw-solution">$g(x)=-5x^{-1/2}$</p>
+          <p class="m1830-hw-solution">${g}&#39;\left( x \right)=\frac{5}{2}{{x}^{-3/2}}$</p>
+          <p class="m1830-hw-solution m1830-step">${m_{\tan }}={g}&#39;\left( 4 \right)=\frac{5}{2}{{\left( 4 \right)}^{-3/2}}=\frac{5}{16}$</p>
+          <p class="m1830-hw-solution">$y+\frac{5}{2}=\frac{5}{16}\left( x-4 \right)$</p>
+          <p class="m1830-hw-solution">$y+\frac{5}{2}=\frac{5}{16}x-\frac54$</p>
+          <p class="m1830-hw-answer"> $y=\frac{5}{16}x-\frac{15}{4}$</p>
+        </li>
+
+        <li class="m1830-problem">
+          <p class="m1830-problem-text"> The population of a bacteria colony is modeled by the function $p(t)=200+20t-{{t}^{2}}$, where t is time in hours,
+            $t\ge 0$, and p is the number of bacteria, in thousands.</p>
+          <p class="m1830-hw-answer"> ${p}&#39;(t)=20-2t$</p>
+          <ol>
+
+            <li>Determine the growth rate of the bacteria population at each of the following times.
+              <ol>
+
+                <li>3 hours
+                  <p class="m1830-hw-solution">${p}&#39;(3)=20-2(3)=20-6=14$ </p>
+                  <p class="m1830-hw-answer"> At 3 hours, the bacteria population is increasing at a rate of 14 thousand bacteria per hour.</p>
+                </li>
+
+                <li>8 hours
+                  <p class="m1830-hw-solution">${p}&#39;(8)=20-2(8)=20-16=4$</p>
+                  <p class="m1830-hw-answer"> At 8 hours, the bacteria population is increasing at a rate of 4 thousand bacteria per hour.</p>
+                </li>
+
+                <li>13 hours
+                  <p class="m1830-hw-solution">${p}&#39;(13)=20-2(13)=20-26=-6$</p>
+                  <p class="m1830-hw-answer"> At 13 hours, the bacteria population is decreasing at a rate of 6 thousand bacteria per hour.</p>
+                </li>
+
+                <li>18 hours
+                  <p class="m1830-hw-solution">${p}&#39;(18)=20-2(18)=20-36=-16$</p>
+                  <p class="m1830-hw-answer"> At 18 hours, the bacteria population is decreasing at a rate of 16 thousand bacteria per hour.</p>
+                </li>
+              </ol>
+            </li>
+
+            <li>What are the implications of the growth rates in part a?
+              <p class="m1830-hw-answer">As time increases, growth rate slows and eventually the bacteria start to die.</p>
+            </li>
+
+            <li>Determine the equation of the tangent to p(t) at the point t=8.
+              <p class="m1830-hw-solution">$(8,296)$</p>
+              <p class="m1830-hw-solution">${m_{\tan }}=4$ from problem a part ii above</p>
+              <p class="m1830-hw-solution">$y-296=4(x-8)$</p>
+              <p class="m1830-hw-solution">$y-296=4x-32$</p>
+              <p class="m1830-hw-answer">$y=4x+264$</p>
+            </li>
+          </ol>
+
+
+
+          <ol>
+
+            <li>When does the bacteria population stop growing? What is the population at this time?
+              <p class="m1830-hw-solution">The population stops growing when ${p}&#39;(t)=0$</p>
+              <p class="m1830-hw-solution">$20-2t=0$</p>
+              <p class="m1830-hw-solution">$10=t$</p>
+              <p class="m1830-hw-answer">The population stops growing at 10 hours.</p>
+            </li>
+          </ol>
+
+        </li>
+      </ol>
+      <!-- End section problem list  -->
+
+
+
+    </article>
+
+
+    <div id="ar" class="add-resources">
+      <h4> Additional Resources</h4>
+      <ul>
+        <li>
+          <a href="http://www.youtube.com/watch?v=OsPNBYmqxLo" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> The Derivative of a Constant is Zero</a>          (2:26)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=bRZmfc1YFsQ" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> The Power Rule</a>          (3:53)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=W233qRK6HPs" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Derivatives with Negative Exponents</a>          (4:48)
+        </li>
+
+<li>
+  <a href="pdfs/u1powerrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Power Rule Worksheet</a> 
+</li>
+
+
+      </ul>
+
+    </div>
+
+  </div>
+  <!-- ending of body container -->
+
+</body>
+
+</html>

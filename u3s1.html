@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+
+        <h2 id="unit-3-applications-of-derivatives">Unit 3 Applications of Derivatives</h2>
+
+
+
+
+
+
+<article class="notes">
+
+<h3>3.1 Analyzing Graphs Algebraically</h3>
+
+<h4> Pre-Class:</h4>
+<ul>
+              
+
+               <li> Take notes on the videos and readings (use the space below). </li> 
+                
+               <li> Complete the 3.1 Pre-Class Quiz.</li>
+               </ul>
+               <div class="row text-center m-buttons">
+
+
+           
+
+
+        <div class="col-sm-2">
+         <a href="./pdfs/unit3.pdf">
+            <div class="box " tabindex="0">
+              <i class="fa fa-print fa-3x "></i>
+              <p>Print</p>
+            </div>
+          </a>
+        </div>
+
+       <div class="col-sm-2">
+     <a href="https://cnx.org/contents/MZp9AnQy@4/Limits-at-Infinity-and-Asympto" target="_blank">
+       <div class="box " tabindex="0">
+         <i class="fa fa-book fa-3x "></i>
+         <p>Read</p>
+       </div>
+     </a>
+   </div>
+
+<div class="col-sm-2">
+   <a href="https://www.youtube.com/watch?v=xGmef7lFc5w" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-play fa-3x "></i>
+     <p>Watch</p>
+   </div>
+   </a>
+   </div>
+   
+<div class="col-sm-2">
+   <a href="https://www.youtube.com/watch?v=P0ZgqB44Do4​" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-play fa-3x "></i>
+     <p>Watch</p>
+   </div>
+   </a>
+   </div>
+
+   <div class="col-sm-2">
+   <a href="https://www.myopenmath.com/" target="_blank">
+   <div class="box " tabindex="0">
+   <i class="fa fa-line-chart fa-3x "></i>
+   <p>3.1 Quiz</p>
+   </div>
+   </a>
+   </div>
+
+<div class="col-sm-2">
+   <a href="#ar" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-pencil-square fa-3x "></i>
+     <p>Resources</p>
+   </div>
+   </a>
+   </div>
+   </div>
+             
+
+    <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Preliminary Algebraic Analysis of the Function </h3>
+  </div>
+  <div class="panel-body">
+    <p> Use Algebra and Limits to Identify All Basic Components in the Graph of $f(x).$</p>
+    <ol>
+
+        <li>Identify the Domain of $f(x)$: Commonly, $f(x)$is undefined for at any x value where:
+            <ol>
+
+                <li> The denominator equals zero.</li>
+
+                <li>There is an even root of a negative number.</li>
+
+                <li>There is a logarithm of a negative number or log of zero. </li>
+            </ol>
+        </li>
+
+        <li>Identify x-intercepts and y-intercept of $f(x).$
+            <ol>
+
+                <li>x-intercepts: Set $y = 0$ and solve for $x.$</li>
+
+                <li>y-intercept: Set $x = 0$ and solve for $y.$</li>
+            </ol>
+        </li>
+
+        <li>Identify Vertical Asymptotes and Holes of $f(x).$
+            <ol>
+
+                <li>Vertical asymptote at $a$ when $\mathop {\lim }\limits_{x \to a }f\left( x \right) = \frac{n}{0}$ if $n \ne 0.$ </li>
+
+                <li>Hole at $a$ when $\mathop {\lim }\limits_{x \to a }f\left( x \right) = \frac{0}{0}$ and then, after factoring and reducing, $\mathop {\lim }\limits_{x \to a }f\left( x \right) = \frac{n}{c}$ if $n \ne 0$ and $c$ is any real number.</li>
+            </ol>
+        </li>
+
+        <li>Identify Horizontal Asymptote of $f(x)$:  calculate $\mathop {\lim }\limits_{x \to \infty } f\left( x \right).$</li>
+
+
+
+            </ol>
+  </div>
+</div>
+ <h4 class="m1830-pagebreak">Notes</h4>
+
+<p class="m1830-problem-text"><strong>Use Algebra and Limits to Identify all the Basic Components of the Graph.</strong> </p>
+<ol>
+
+
+
+
+
+
+    <li class="m1830-problem">
+        <p class="m1830-problem-text"> $f(x)={{x}^{3}}+6{{x}^{2}}+9x$</p>
+<ol>
+      <li>  <p>Domain: </p>
+            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+            <p class="m1830-answer">Polynomial functions are always continuous.</p>
+          </li>
+        <li>    <p>x int(s):</p>
+            <p class="m1830-solution">${{x}^{3}}+6{{x}^{2}}+9x=0$</p>
+            <p class="m1830-solution">$x\left( {{x}^{2}}+6x+9 \right)=0 $</p>
+            <p class="m1830-solution">$x{\left( x+3 \right)}{\left( x+3 \right)}=0 $</p>
+            <p class="m1830-solution">$x=0\,\,,\,\,x=-3$</p>
+            <p class="m1830-answer">$\left( 0,0 \right)\,\text{and}\,\left( -3,0 \right)$</p>
+          </li>
+          <li>   <p>y int:</p>
+            <p class="m1830-solution">$f\left( 0 \right)={{\left( 0 \right)}^{3}}+6{{\left( 0 \right)}^{2}}+9\left( 0 \right)=0$</p>
+            <p class="m1830-answer">$\left( 0,0 \right)$</p>
+          </li>
+          <li>  <p>Asymptotes: </p>
+            <p class="m1830-answer">There are no asymptotes. The function is a polynomial.</p>
+</li>
+</ol>
+</li>
+
+
+    <li class="m1830-problem">
+        <p class="m1830-problem-text"> $f(x)=\frac{3x+4}{2x-5}$</p>
+
+<ol>
+      <li>  <p>Domain: </p>
+
+            <p class="m1830-solution">The domain will not contain x values where the denominator is equal to zero.</p>
+            <p class="m1830-solution">$ 2x-5\ne 0 $</p>
+            <p class="m1830-solution">$ x\ne \frac{5}{2}$</p>
+            <p class="m1830-answer">Domain: $\left( -\infty ,\frac{5}{2} \right)\cup \left( \frac{5}{2},\infty \right)$</p>
+          </li>
+        <li>    <p>x int(s):</p>
+            <p class="m1830-solution">$0=\frac{3x+4}{2x-5}$</p>
+            <p class="m1830-solution">$\frac{0}{1}=\frac{3x+4}{2x-5}$</p>
+            <p class="m1830-solution">$0=3x+4$</p>
+            <p class="m1830-solution">$ x=-\frac{4}{3}$</p>
+            <p class="m1830-answer">$\left( -\frac{4}{3},0 \right)$</p>
+          </li>
+          <li>  <p>y int:</p>
+            <p class="m1830-solution">$f\left( 0 \right)=\frac{3\left( 0 \right)+4}{2\left( 0 \right)-5}=-\frac{4}{5}$</p>
+            <p class="m1830-answer">$\left( 0,-\frac{4}{5} \right)$</p>
+</li>
+        <li>    <p>Asymptotes:</p>
+            <p>Vertical:</p>
+                
+                    <p class="m1830-solution">$\mathop {\lim }\limits_{x \to \frac{5}{2}}f\left( x \right)=\frac{11.5}{0}$</p>
+                    <p class="m1830-answer">There is a vertical asymptote at $x=\frac{5}{2}$.</p>
+                    <p>Horizontal:
+                        </p>
+                            <p class="m1830-solution">$\mathop {\lim }\limits_{x \to \infty }\frac{3x+4}{2x+5}=\mathop {\lim }\limits_{x \to \infty}\frac{3x}{2x}=                                              \mathop {\lim }\limits_{x \to \infty}\frac{3}{2}=\frac{3}{2}$</p>
+                            <p class="m1830-answer">There is a horizontal asymptote at $y=\frac{3}{2}$.</p>
+                            <p></p>
+</li>
+</ol>
+    </li>
+<li>
+
+                    <p class="m1830-problem-text"><strong>
+                        The annual first quarter change in revenue for Apple, Inc. is given in the table below. </strong> </p>
+                    <table>
+                        <tr>
+                            <th>Year</th>
+                            <th>% Revenue Growth</th>
+                        </tr>
+                        <tr>
+                            <td>1998</td>
+                            <td>-12.2</td>
+                        </tr>
+                        <tr>
+                            <td>2000</td>
+                            <td>27.1</td>
+                        </tr>
+                        <tr>
+                            <td>2002</td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td>2004</td>
+                            <td>29.4</td>
+                        </tr>
+                        <tr>
+                            <td>2006</td>
+                            <td>34.4</td>
+                        </tr>
+                        <tr>
+                            <td>2008</td>
+                            <td>42.7</td>
+                        </tr>
+                        <tr>
+                            <td>2010</td>
+                            <td>65.4</td>
+                        </tr>
+                        <tr>
+                            <td>2012</td>
+                            <td>58.9</td>
+                        </tr>
+                        <tr>
+                            <td>2014</td>
+                            <td>4.7</td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>-12.8</td>
+                        </tr>
+                    </table>
+
+                    <p>The regression model for this data is: $$f(x)=-0.005x^4+0.113x^3-0.889x^2+7.946x-5.346$$ where x is Years Since 1998.</p>
+
+                    <p class="m1830-problem-text" > <strong> Use Algebra and Limits to Identify All Basic Components in the Graph of $f(x)$: </strong> </p>
+                    </li>
+                            <ol>
+
+                                <li>
+                                    <p>Identify the domain of $f(x)$:</p>
+                                    <p class="m1830-answer">[0,18] </p>
+                                    <p class="m1830-answer">This model shows 1st Quarter change in revenue from 1998 to 2016.</p>
+                                </li>
+
+                                <li>
+                                    <p>Identify all x-intercepts in the domain:</p>
+                                    <p class="m1830-answer">(from calculator): $\left(0.727,0\right)$ and $\left(17.428,0\right)$</p>
+                                    <p class="m1830-answer">In general this means the percent change in revenue was 0% when x=0.727 and x=17.428 years after 1998. Specifically for this data, the percent change in revenue was negative in 1998 and positive in 2000 and then was positive
+                                        in 2014 and negative in 2016.</p></li>
+                                    <li><p>Identify the y-intercept, if $x=0$ is in the domain:</p>
+                                    <p class="m1830-answer">$\left(0,-5.346\right)$</p>
+                                    <p class="m1830-answer">In 1998 percent change in revenue was approximately -5.346%, according to the model. The percent change in revenue was actually -12.2% in 1998.</p>
+                                </li>
+
+                                <li>
+                                    <p>Identify all Asymptotes:</p>
+                                    <p class="m1830-answer">There are no vertical or horizontal asymptotes. This is a polynomial function.</p>
+                                </li>
+                            </ol>
+
+
+<li>
+                            <p class="m1830-problem-text">Using data from the Federal Reserve, the Dow S&amp;P 500 annual percent return on investments for the years 2008-2014 can be modeled by the following equation: $$A(t) = - 1.64{t^4} + 20.85{t^3} - 86.05{t^2} + 127.87t - 36.24$$ where t
+                                is in years since 2008 and A(t) is in percent.</p>
+                            <p><cite> Source: <a href="http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html">http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html</a> </cite></p>
+
+
+                            <p><strong> Analyze and interpret the characteristics of the function. </strong></p>
+                                    <ol>
+
+                                        <li>
+                                            <p>Identify the domain of $A(t).$</p>
+                                            <p class="m1830-hw-answer">Domain: The interval $\left[ {0,6} \right]$</p>
+                                            <p class="m1830-hw-answer">The variable t is in years since 2008. The model was developed for the years 2008-2014.</p>
+                                        </li>
+
+                                        <li>
+                                            <p> Identify x-intercepts and y-intercepts of $A(t).$</p>
+
+                                            <p>Evaluate and interpret any x-intercepts of $A(t).$</p>
+                                            <p class="m1830-hw-solution">$0 = - 1.64{t^4} + 20.85{t^3} - 86.05{t^2} + 127.87t - 36.24$</p>
+                                            <p class="m1830-hw-solution">Using a graphing calculator, identify any zeros in the domain.</p>
+                                            <p class="m1830-hw-solution">One x intercept identified in the domain.</p>
+                                            <p class="m1830-hw-answer">$(0.3656,0)$</p>
+                                            <p class="m1830-hw-answer m1830-step">Sometime in the year 2008, returns reached 0%.</p>
+
+
+                                            <p>Evaluate and interpret the y intercept of $A(t)$.</p>
+                                            <p class="m1830-hw-solution">$A\left( 0 \right) = - 1.64{\left( 0 \right)^4} + 20.85{\left( 0 \right)^3} - 86.05{\left( 0 \right)^2} + 127.87\left( 0 \right) - 36.24 = - 36.24$</p>
+                                            <p class="m1830-hw-answer">$(0,-36.24)$</p>
+                                            <p class="m1830-hw-answer">The annual percent return on investments in 2008 was -36.24.%</p>
+                                        </li>
+
+                                        <li>
+                                            <p> Identify any vertical asymptotes and holes in $A(t).$ </p>
+
+                                            <p class="m1830-hw-answer">There are no vertical asymptotes or holes. The function is a polynomial.</p>
+                                        </li>
+
+                                        <li>
+                                            <p> Identify any horizontal asymptotes in $A(t).$</p>
+                                            <p class="m1830-hw-answer">There are no horizontal asymptotes. The function is a polynomial.</p>
+                                        </li>
+                                    </ol>
+
+
+</li>
+
+
+
+
+</ol>
+
+
+
+</article>
+
+<article class="hw">
+
+<h3>3.1 Analyzing Graphs Algebraically Homework </h3>
+      <p><strong> Use Algebra and Limits to Identify All Basic Components in the Graph of $f(x).$ </strong></p>
+      <ol>
+      <li class="m1830-problem">
+          <p class="m1830-problem-text"> $f(x)=3{{x}^{2}}+5x-2$</p>
+          <ol>
+          <li><p>Domain:</p>
+              <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+              <p class="m1830-answer">Polynomial functions are always continuous.</p>
+            </li>
+            <li>  <p>x int(s):</p>
+              <p class="m1830-solution">$ 0=3{{x}^{2}}+5x-2 $</p>
+              <p class="m1830-solution">$ 0=\left( 3x-1 \right)\left( x+2 \right) $</p>
+              <p class="m1830-solution">$x=\frac{1}{3}\,\,,\,\,x=-2$</p>
+              <p class="m1830-answer">$\left( \frac{1}{3},0 \right)\,\text{and}\,\left( -2,0 \right)$</p>
+            </li>
+            <li>  <p>y int:</p>
+              <p class="m1830-solution">$f\left( 0 \right)=0+0-2=-2$</p>
+              <p class="m1830-answer">$\left( 0,-2 \right)$</p>
+</li>
+
+            <li>  <p>Asymptotes: </p>
+              <p class="m1830-answer">There are no asymptotes. The function is a polynomial.</p>
+</li>
+</ol>
+
+      </li>
+
+      <li class="m1830-problem">
+          <p class="m1830-problem-text"> $f(x)=\frac{4x-7}{5x+1}$</p>
+
+  <ol>
+        <li>  <p>Domain:</p>
+
+              <p class="m1830-solution">The domain will not contain x values where the denominator is equal to zero.</p>
+              <p class="m1830-solution">$ 5x+1\ne 0 $</p>
+              <p class="m1830-solution">$ x\ne -\frac{1}{5}$</p>
+              <p class="m1830-answer">Domain: $\left( -\infty ,-\frac{1}{5} \right)\cup \left( -\frac{1}{5},\infty \right)$</p>
+            </li>
+          <li>    <p>x int(s):</p>
+               <p class="m1830-solution">$0=\frac{3x+4}{2x-5}$</p>
+              <p class="m1830-solution">$\frac{0}{1}=\frac{4x-7}{5x+1}$</p>
+              <p class="m1830-solution">$0=4x-7$</p>
+              <p class="m1830-solution">$ x=\frac{7}{4}$</p>
+              <p class="m1830-answer">$\left( \frac{7}{4},0 \right)$</p>
+            </li>
+            <li>  <p>y int:</p>
+              <p class="m1830-solution">$f\left( 0 \right)=\frac{4\left( 0 \right)-7}{5\left( 0 \right)+1}=-7$</p>
+              <p class="m1830-answer">$( 0,-7)$</p>
+  </li>
+          <li>    <p>Asymptotes:</p>
+              <p>Vertical:
+                  </p>
+                      <p class="m1830-solution">$\mathop {\lim }\limits_{x \to -\frac{1}{5}}f\left( x \right)=-\frac{7.8}{0}$</p>
+                      <p class="m1830-answer">There is a vertical asymptote at $x=-\frac15$.</p>
+                      <p>Horizontal:
+                          </p>
+                              <p class="m1830-solution">$\mathop {\lim }\limits_{x \to \infty }\frac{4x-7}{5x+1}=\mathop {\lim }\limits_{x \to \infty}\frac{4x}{5x}=\mathop {\lim }\limits_{x \to \infty}\frac{4}{5}$</p>
+                              <p class="m1830-answer">There is a horizontal asymptote at $y=\frac{4}{5}$.</p>
+                              <p></p>
+  </li>
+  </ol>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li>  <p class="m1830-problem-text">Analyze the following function.</p>
+          <p class="m1830-problem-text">Using data from Statista, the total annual amount spent on the purchase of golf equipment in the United States for the years 2008-2014 can be modeled by the following equation:</p>
+          <p>$$A(t)=-31.94{{t}^{3}}+301.16{{t}^{2}}-665.61t+3454.63$$ where t is in years since 2008 and A(t) is in millions of dollars.</p>
+          <p><cite> Source: <a href="https://www.statista.com/statistics/201038/purchases-of-golf-equipment-in-the-us-since-2007/">http://www.statista.com/statistics/201038/purchases-of-golf-equipment-in-the-us-since-2007/</a> </cite></p>
+
+
+            <p> <strong> Analyze and interpret the characteristics of the function. </strong></p>
+                  <ol>
+
+                      <li>
+                          <p>Identify the domain of $A(t).$</p>
+                          <p class="m1830-hw-answer">Domain: The interval $\left[ 0,6 \right]$</p>
+                          <p class="m1830-hw-answer">The variable t is defined as years since 2008. This model was developed for the years 2008-2014.</p>
+
+                      </li>
+
+                      <li>
+                          <p> Identify x-intercepts and y-intercepts of $A(t).$</p>
+                          <p>Evaluate and interpret any x-intercepts of $A(t).$</p>
+                          <p class="m1830-hw-solution">$0=-31.94{{t}^{3}}+301.16{{t}^{2}}-665.61t+3454.63$</p>
+                          <p class="m1830-hw-solution">Using a graphing calculator, identify any x-intercepts in the domain.</p>
+                          <p class="m1830-hw-answer">There are no x-intercepts identified in the domain.</p>
+                          <p class="m1830-hw-answer">The total amount spent in the US on the purchase of golf equipment never fell to $0.</p>
+
+
+                          <p>Evaluate and interpret the y intercept of $A(t)$.</p>
+                          <p class="m1830-hw-solution">$A\left( 0 \right)=-31.94{{\left( 0 \right)}^{3}}+301.16{{\left( 0 \right)}^{2}}-665.61\left( 0 \right)+3454.63=3454.63$</p>
+                          <p class="m1830-hw-answer">$(0,3454.63)$</p>
+                          <p class="m1830-hw-answer">In 2008, the total amount spent on golf equipment in the United States was approximately \$3454.63 million dollars.</p>
+                      </li>
+
+                      <li>
+                          <p> Identify any vertical asymptotes and holes in $A(t).$ </p>
+
+                          <p class="m1830-hw-answer">There are no vertical asymptotes or holes. The function is a polynomial.</p>
+                      </li>
+
+                      <li>
+                          <p> Identify any horizontal asymptotes in $A(t).$</p>
+                          <p class="m1830-hw-answer">There are no horizontal asymptotes. The function is a polynomial.</p>
+                      </li>
+                  </ol>
+
+</li>
+
+
+
+</ol>
+
+
+</article>
+
+ <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<!-- <li>
+  <a href="pdfs/u2chainrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Chain Rule Worksheet</a> 
+</li> -->
+
+<li>
+          <a href="http://www.youtube.com/watch?v=xks4cETlN58" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Infinite Limits of Rational Functions</a>  (5:13)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=KcqO1fX9b_I" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> More Limits at Infinity</a>  (4:32)
+        </li>
+
+</ul>
+
+        </div> 
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

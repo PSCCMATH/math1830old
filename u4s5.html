@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u4toc">MATH 1830</h1>
+
+          <h2>Unit 4: Integration</h2>
+
+
+        <div class="pagebreak"></div>
+
+
+
+<article class="notes">
+
+
+                <h3>4.5 Area between Curves</h3>
+
+
+
+                 <h4> Pre-Class 4.5A:</h4>
+<ul>
+             <li>Complete 4.4B Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+              <li>Work and check problem #1 in the 4.5 NOTES section. </li>
+              <li> Complete the 4.5A Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u4s4.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>4.4B HW</p>
+          </div>
+        </a>
+       </div>
+
+
+       <!-- <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:DSFrV7ZX@2/Areas-between-Curves" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=4bZyfvKazzQ" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>4.5A Quiz</p>
+  </div>
+  </a>
+  </div>
+<!-- <div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div> -->
+
+
+  </div>
+          
+
+                <h4> Pre-Class 4.5B:</h4>
+<ul>
+             <li>Complete 4.5A Homework assignment: check and correct. </li>
+
+         
+              <li>Work and check problems #9 in the 4.5 NOTES section. </li>
+              <li> Complete the 4.5B Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u4s5.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>4.5A HW</p>
+          </div>
+        </a>
+       </div>
+
+
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>4.4B Quiz</p>
+  </div>
+  </a>
+  </div>
+<!-- <div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div> -->
+
+
+  </div>
+
+     <h4 class="m1830-pagebreak">Introduction</h4>
+
+
+                <p><strong>Before 1995, the U. S. Census Bureau used the model below to project the number (in thousands) of households in the United States, where $t$ is the number of years after 1990.  $${N_1} = 1.35{t^2} + 1078.4t + 92,323\quad$$ For the years 1995-2005, the actual number of households $N$ in the United States can be modeled by $${N_2} = 18.32{t^2} + 1178.3t + 92,099$$</strong></p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Graph ${N_1}$ on the interval $\;5 \le t \le 15$ and shade the area under the curve. What does this shaded area represent?</p>
+
+                        <p class="m1830-answer">This shaded area represents the projected number of households in the United States from 1995 to 2005.</p>
+                        <p><img src="images/notes/u4s5p1i.png" alt="x-axis from 5 to 16 counting by ones.  y-axis from 96,000 to 116,000 counting by 2000&#39;s"></p>
+
+
+                        <div class="m1830-pagebreak"></div>
+
+                        <p class="m1830-answer"><img src="images/notes/u4s5p1ia.png" alt="Graphs of N1=1.35t^2+1078.4t+92323 and N2=18.32t^2+1178.3t+92099 from 5&lt;=t&lt;=15"></p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Now graph ${N_2}$ on the interval $\;5 \le t \le 15$ on the same graph and shade the area under the curve. What does this shaded area represent? </p>
+
+                        <p class="m1830-answer">This shaded area represents the actual number of households in the United States from 1995 to 2005.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Did the projection model over-project or under-project the number of households?</p>
+
+                        <p class="m1830-answer">The projection model under-projected the number of households.
+                        </p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            How would you determine the difference in the number of households given by each model?</p>
+
+                        <p class="m1830-answer">Subtract the bottom equation from the top.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Find the difference in the number of households for the two models.  </p>
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{5}^{15}{\left((18.32{{x}^{2}}+1178.3x+92,099)-(1.35{{x}^{2}}+1078.4x+92,323)\right)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$=26,134.17$</p>
+                        <p class="m1830-answer">The difference between the two models is 26,134 households.</p>
+                    </li>
+                </ol>
+                <hr>
+
+
+
+
+
+                 <p class="m1830-pagebreak"> <h4>Notes</h4> </p>
+                <div class="panel panel-primary">
+                        <div class="panel-heading">
+            <h3 class="panel-title">Area Between Curves </h3>
+                                                            </div>
+              <div class="panel-body">
+                <p><strong>Area Between Curves</strong></p>
+                <p>If $f$ and $g$ are continuous and $f\left( x \right)\; &gt; \;g\left( x \right)$ over the interval $\left[ {a,b} \right]$, then the area bounded by $y\; = \;f\left( x \right)$ and $y\; = \;g\left( x \right)$for $a\; \le x \le b$ is given
+                    exactly by $$A =\begin{align}&amp;\int\limits_a^b \left[ {f\left( x \right) - g\left( x \right)} \right]\;dx\end{align}.$$</p>
+
+
+                  </div>
+                </div>
+                <p><strong>Area Bounded by an Interval</strong></p>
+                <p>Find the area bounded by the graphs of the indicated equations over the given interval. Compute answers to three decimal places.</p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \; - x + 7$ and $y_2 = 0$ on the interval $ - 3 \le x \le 3$</p>
+                        <img src="images/notes/u4s5p1.png" alt="Graphs of y=-x+7 and y=0 on the interval from -3 to 3">
+<p class="m1830-solution">$Area=\begin{align}&amp;\int_{-3}^{3}{\left(y_1-y_2 \right) dx}\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-3}^{3}{\left((-x+7)-0 \right) dx}\end{align}$</p>
+                        <p class="m1830-solution">$=\left(-\frac{{{x}^{2}}}{2}+7x+C\right)│ _{-3}^{3} $</p>
+                        <p class="m1830-solution">$=(-\frac{9}{2}+21+C)-(-\frac{9}{2}-21+C)$</p>
+                        <p class="m1830-solution">$=-\frac{9}{2}+21+C+\frac{9}{2}+21-C$</p>
+                        <p class="m1830-answer">$=42\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \; - \frac{1}{4}{x^3} + 2 \quad$ and $\quad y_2 = 0 \quad$ on the interval $ - 2 \le x \le 1$</p>
+                        <img src="images/notes/u4s5p2.png" alt="Graphs of y=(-1/4)x^3+2 and y=0 on the interval from -2 to 1">
+
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{-2}^{1}{\left(y_1-y_2 \right) dx}\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-2}^{1}{\left(\left(-\frac{1}{4}{{x}^{3}}+2\right)-0 \right) dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$=\left(-\frac{1}{4}\left(\frac{{{x}^{4}}}{4}\right)+2x+C \right)\left)│ _{-2}^{1} \right.$</p>
+                        <p class="m1830-solution">$=(-\frac{{{x}^{4}}}{16}+2x+C\left)│ _{-2}^{1} \right.$</p>
+                        <p class="m1830-solution">$=(-\frac{1}{16}+2+C)-(-\frac{16}{16}-4+C)$</p>
+                        <p class="m1830-solution">$=-\frac{1}{16}+2+1+4$</p>
+                        <p class="m1830-answer">$=6.9375\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \;x\left( {4 + x} \right)\quad $ and $\quad y_2 = 0 \quad$ on the interval $\; - 3 \le x \le - 1$</p>
+                        <img src="images/notes/u4s5p3.png" alt="Graphs of y=x(4+x) and y=0 on the interval from -3 to -1">
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{-3}^{-1}{\left(y_2-y_1 \right) dx }\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-3}^{-1}{\left(0-(4x+{{x}^{2}})\right)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-3}^{-1}{\left(-4x-{{x}^{2}} \right)}\;dx\end{align}$</p>
+                        <p class="m1830-solution">$=(-\frac{4{{x}^{2}}}{2}-\frac{{{x}^{3}}}{3}+C\left)│ _{-3}^{-1} \right.$</p>
+                        <p class="m1830-solution">$=(-2{{x}^{2}}-\frac{{{x}^{3}}}{3}+C\left)│ _{-3}^{-1} \right.$</p>
+                        <p class="m1830-solution">$=(-2(1)-(-\frac{1}{3})+C)-(-2(9)-(-9)+C)$</p>
+                        <p class="m1830-solution">$=-2+\frac{1}{3}+18-9$</p>
+                        <p class="m1830-answer">$=7.33\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \; - \frac{2}{x}\quad$ and $\quad y_2 = 0 \quad$ on the interval $1 \le x \le e$</p>
+                        <img src="images/notes/u4s5p4.png" alt="Graphs of y=-2/x and y=0 on the interval from 1 to e">
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{1}^{e}{\left(y_2-y_1 \right) dx }\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{1}^{e}{\left(0-(-\frac{2}{x})\right)\; dx}\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{1}^{e}{\frac{2}{x}}\; dx\end{align}$</p>
+                        <p class="m1830-solution">$=(2\ln \left| x \right|+C\left)│ _{1}^{e} \right.$</p>
+                        <p class="m1830-solution">$=2\ln e-2\ln 1$</p>
+                        <p class="m1830-solution">$=2(1)-2(0)$</p>
+                        <p class="m1830-answer">$=2\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \; - x - 3\quad$ and $\quad y_2 = 0\quad$ on the interval $ - 7 \le x \le 2$</p>
+                        <p><img src="images/notes/u4s5p5.png" alt="graph of y=-x-3 and y=0 on the interval from -7 to 2"></p>
+
+<p class="m1830-solution">$Area=\begin{align}&amp;\int_{-7}^{-3}\left(y_1-y_2\right)\;dx\end{align}$$+\begin{align}&amp;\int_{-3}^{2}\left(y_2-y_1\right)\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-7}^{-3}\left(\left(-x-3\right)-0\right)\;dx\end{align}$$+\begin{align}&amp;\int_{-3}^{2}\left(0-\left(-x-3\;\right)\right)\;dx\end{align}$</p>
+
+
+
+                        <p class="m1830-solution">$=\left(-\frac{x^2}2-3x+C\right)|_{-7}^{-3}+\left(\frac{x^2}2+3x+C\right)|_{-3}^2$</p>
+
+
+
+                        <p class="m1830-solution">$=(4.5--3.5)+(8--4.5)$</p>
+                        <p class="m1830-solution">$=8+12.5$</p>
+                        <p class="m1830-answer">$=20.5\ unit{{s}^{2}}$</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \; - x + 7\quad$ and $\quad y_2 = - 2\quad$ on the interval $ - 3 \le x \le 3$</p>
+                        <p><img src="images/notes/u4s5p6.png" alt="Graphs of y=-x+7 and y=-2 on the interval from -3 to 3"></p>
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{-3}^{3}{(y_1-y_2)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-3}^{3}{\left((-x+7)-(-2)\right)\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-3}^{3}{\left(-x+7+2\right)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-3}^{3}{\left(-x+9\right)\;dx}\end{align}$</p>
+                        <p class="m1830-solution">$=(-\frac{{{x}^{2}}}{2}+9x+C\left)│ _{-3}^{3} \right.$</p>
+                        <p class="m1830-solution">$=(-\frac{9}{2}+27+C)-(-\frac{9}{2}-27+C)$</p>
+                        <p class="m1830-solution">$=-\frac{9}{2}+27+C+\frac{9}{2}+27-C$</p>
+                        <p class="m1830-answer">$=54\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \; - x - 3 \quad$ and $\quad y_2 = 1.5\quad$ for the interval $ - 7 \le x \le 2$</p>
+                        <img src="images/notes/u4s5p7.png" alt="Graphs of y=-x-3 and y=1.5 on the interval from -7 to 2">
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{-7}^{-4.5}\left(y_1-y_2\right)\;dx\end{align}$$+\begin{align}&amp;\int_{-4.5}^{2}\left(y_2-y_1\right)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-7}^{-4.5}\left(\left(-x-3\right)-1.5\right)\;dx\end{align}$$+\begin{align}&amp;\int_{-4.5}^{2}\left(1.5-\left(-x-3\;\right)\right)\;dx\end{align}$</p>
+
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-7}^{-4.5}\left(-x-4.5\right)\;dx\end{align}$$+\begin{align}&amp;\int_{-4.5}^{2}\left(4.5+x\right)\;dx\end{align}$</p>
+
+
+
+                        <p class="m1830-solution">$(\frac{-{{x}^{2}}}{2}-4.5x+C\left)│ _{-7}^{-4.5} \right.$</p>
+                        <p class="m1830-solution">$+(4.5x+\frac{{{x}^{2}}}{2}+C\left)│ _{-4.5}^{2} \right.$</p>
+
+
+                        <p class="m1830-solution">$(10.125-7)+(11--10.125)$</p>
+                        <p class="m1830-solution">$3.125+21.125$</p>
+                        <p class="m1830-answer">$24.25\ unit{{s}^{2}}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = \;\ln (x + e) \quad$ and $\quad y_2 = {e^x} - 5\quad$ on the interval $0 \le x \le 1$</p>
+                        <img src="images/notes/u4s5p8.png" alt="Graphs of y=ln(x+e) and y=e^x-5 on the interval from 0 to 1">
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{0}^{1}\left(y_1-y_2\right)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{0}^{1}\left(\ln (x+e)-({{e}^{x}}-5)\right)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{0}^{1}\left(\ln (x+e)-{{e}^{x}}+5\right)\; dx\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{0}^{1}\ln (x+e)\; dx\end{align}$$+\begin{align}&amp;\int_{0}^{1}\left(-{{e}^{x}}+5\right)\; dx\end{align}$</p>
+                        <p class="m1830-solution">$u=x+e$</p>
+                        <p class="m1830-solution">$du=dx$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{x=0}^{x=1}ln u\;du
+                          +\int_{0}^{1}(-{{e}^{x}}+5)\;dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$=\left(u\ln\left|u\right|-u+C\right)\vert_{x=0}^{x=1}+\left(-e^x+5x\right)|_0^1$</p>
+                        <p class="m1830-solution">$=\left[\left(x+e\right)\ln\left|x+e\right|-\left(x+e\right)+-e^x+5x\right]|_0^1$</p>
+
+                        <p class="m1830-solution">$=((1+e)\ln \left| 1+e \right|-1-e-e+5)-((0+e)\ln \left| 0+e \right|-0-e-{{e}^{0}}+0)$</p>
+                        <p class="m1830-solution">=$3.45-(e\ln e-e-1)$</p>
+                        <p class="m1830-solution">=$3.45-(-1)$</p>
+                        <p class="m1830-answer">=$4.45\;units^2$</p>
+
+
+                        <p>Define the total area bounded by the two functions. How would you determine the interval, if you were asked to calculate the total area bounded between the two functions?</p>
+                        <p class="m1830-pagebreak"><strong>Area Not Bounded by an Interval</strong></p>
+                        <p><strong>Find the area bounded by the graphs of the indicated equations.</strong></p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = {x^3} + 1 \quad$ and $\quad y_2 = x + 1$</p>
+                        <img src="images/notes/u4s5p9.png" alt="graphs of y=x^3+1 and y=x+1 on the interval from -2 to 2">
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{-1}^{0}\left(y_1-y_2\right)\;dx\end{align}$$+\begin{align}&amp;\int_{0}^{1}\left(y_2-y_1\right)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-1}^{0}\left(({{x}^{3}}+1)-(x+1)\right)\;dx\end{align}$$+\begin{align}&amp;\int_{0}^{1}\left((x+1)-({{x}^{3}}+1)\right)\;dx\end{align}$</p>
+
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-1}^{0}{({{x}^{3}}-x)\;dx}\end{align}$$+\begin{align}&amp;\int_{0}^{1}{(x-{{x}^{3}})\;dx}\end{align}$</p>
+
+
+
+                        <p class="m1830-solution">$(\frac{{x}^{4}}{4}-\frac{{x}^{2}}{2})|_{-1}^{0}+(\frac{{x}^{2}}{2}-\frac{{x}^{4}}{4})|_{0}^{1}$</p>
+
+
+
+                        <p class="m1830-solution">$[(0-0)-(\frac{1}{4}-\frac{1}{2})]+[(\frac{1}{2}-\frac{1}{4})-(0-0)]$</p>
+                        <p class="m1830-solution">$\frac{1}{4}+\frac{1}{4}$</p>
+                        <p class="m1830-answer">$\frac{1}{2}\;units^2$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = - {x^3} - 2{x^2} + 1\quad$ and $\quad y_2 = - x - 1$</p>
+                        <img src="images/notes/u4s5p10.png" alt="Graphs of y=-x^3-2x^2+1 and y=-x-1 on the interval from -3 to 3">
+                        <p class="m1830-solution">$Area=\begin{align}&amp;\int_{-2}^{-1}\left(y_2-y_1\right)\;dx\end{align}$$+\begin{align}&amp;\int_{-1}^{1}\left(y_1-y_2\right)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2}^{-1}\left((-x-1)-(-{{x}^{3}}-2{{x}^{2}}+1)\right)\;dx\end{align}$$+\begin{align}&amp;\int_{-1}^{1}\left((-{{x}^{3}}-2{{x}^{2}}+1)-(-x-1)\right)\;dx\end{align}$</p>
+
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2}^{-1}\left(-x-1+x^3+2x^2-1\right)\;dx+\int_{-1}^1\left(-x^3-2x^2+1+x+1\right)\;dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int_{-2}^{-1}\left(x^3+2x^2-x-2\right)\;dx+\int_{-1}^{1}\left(-x^3-2x^2+x+2\right)\ dx\end{align}$</p>
+
+
+                        <p class="m1830-solution">$(\frac{{{x}^{4}}}{4}+\frac{2{{x}^{3}}}{3}-\frac{{{x}^{2}}}{2}-2x+C\left)| _{-2}^{-1} \right.+(\frac{-{{x}^{4}}}{4}-\frac{2{{x}^{3}}}{3}+\frac{{{x}^{2}}}{2}+2x+C\left)| _{-1}^{1} \right.$</p>
+
+
+                        <p class="m1830-solution">$(1.0833-0.667)+(1.5833--1.0833)$</p>
+                        <p class="m1830-solution">$0.4167+2.6667$</p>
+                        <p class="m1830-answer">$3.08\;units^2$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y_1 = - 3 + {x^2}$ and $y_2 = - {e^{2x - 3}} + 2$</p>
+                        <img src="images/notes/u4s5p11.png" alt="Graph of y=-3+x^2 and y=-e^(2x-3)+2 on the interval from -3 to 3">
+                          <p class="m1830-solution">The functions intersect at $x=1.79$ and $x=-2.24$, therefore the area is bound in the interval [-2.24, 1.79].</p>
+                            <p class="m1830-solution">Area=$\begin{align}&amp;\int_{-2.24}^{1.79}(y_2-y_1)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-2.24}^{1.79}{(-{{e}^{2x-3}}+2)-(-3+{{x}^{2}}})\;dx\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{-2.24}^{1.79}\left(-e^{2x-3}-x^2+5\right)\;dx\end{align}$</p>
+                        <p class="m1830-solution">$u=2x-3$</p>
+                        <p class="m1830-solution">$du=2dx$</p>
+                        <p class="m1830-solution">$=\frac{1}{2}\begin{align}&amp;\int_{x=-2.24}^{x=1.76}{-{{e}^{u}}\;du}+\int_{-2.24}^{1.76}{-{{x}^{2}}+5\; dx}\end{align}$</p>
+
+
+                        <p class="m1830-solution">$=\frac{1}{2}(-{{e}^{u}})\left| _{x=-2.24}^{x=1.79} \right.+(\frac{-{{x}^{3}}}{3}+5x\left)| _{-2.24}^{1.79} \right.$</p>
+
+
+                        <p class="m1830-solution">$=(\frac{-{{e}^{2x-3}}}{2}-\frac{{{x}^{3}}}{3}+5x\left)| _{-2.24}^{1.79} \right.$</p>
+                        <p class="m1830-solution">$=6.15-(-7.45)$</p>
+                        <p class="m1830-answer">$=13.6\;units^2$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            The useful life of a piece of rental equipment is the duration for which the equipment will be profitable to the rental business, and not how long the equipment will actually last. Many factors affect a piece of equipment’s useful life, including the
+                            frequency of use, the age when acquired and the repair policy and certain environmental conditions. The change in revenue for renting the equipment, over time, is modeled by $$R&#39;\left( t \right) = 4t{e^{ - 0.2{t^2}}},$$ in
+                            thousands of dollars per year. The change in cost for routine maintenance of the equipment is modeled by $$C&#39;\left( t \right) = .5t,$$ also in thousands of dollars per year. Find the area between the graphs of $C'$ and $R'$ over
+                            the interval from the time the equipment is purchased until the equipment reaches the end of its useful life. Interpret the results.</p>
+                        <p>Note:  The end of the useful life is t where $C&#39;\left( t \right) = R&#39;(t)$.</p>
+                            <img src="images/notes/u4s5p12.png" alt="Graph of R&#39;(t)=4te^(-0.2t^2) and C&#39;(t)=0.5t on the interval from -6 to 5">
+<p class="m1830-solution">Area =$\begin{align}&amp;\int_{0}^{3.22}R'(t)-C'(t)\;dt\end{align}$</p>
+
+                            <p class="m1830-solution">$=\begin{align}&amp;\int_{0}^{3.22}{(4t{{e}^{-0.2{{t}^{2}}}}-0.5t})\;dt\end{align}$</p>
+                            <p class="m1830-solution">$u=-0.2{{t}^{2}}$</p>
+                            <p class="m1830-solution">$du=-0.4t\;dt$</p>
+
+
+                                <p class="m1830-solution">$=\frac{4}{-0.4}\begin{align}&amp;\int_{t=0}^{t=3.22}{e^u}\;du+\int_{0}^{3.22}-0.5t\;dt\end{align}$</p>
+
+
+                                <p class="m1830-solution">$=-10\begin{align}&amp;\int_{t=0}^{t=3.22}{{{e}^{u}}}\;du +\int_0^{3.22}-0.5t\;dt\end{align}$</p>
+
+
+                                <p class="m1830-solution">$=-10{{e}^{u}}\left| _{t=0}^{t=3.22} \right.+\frac{-0.5{{t}^{2}}}{2}\left| _{0}^{3.22} \right.$</p>
+
+
+                            <p class="m1830-solution">$=-10{{e}^{-0.2{{t}^{2}}}}-0.25{{t}^{2}}\left| _{0}^{3.22} \right.$</p>
+                            <p class="m1830-solution">$=-3.85-(-10)$</p>
+                            <p class="m1830-solution">$=6.15$</p>
+                            <p class="m1830-answer">The useful life of this piece of equipment is 6.15 years. </p>
+                    </li>
+                    <!-- ending of last problem -->
+                </ol>
+                <!-- ending of last ordered list -->
+      </article>
+
+
+      <article class="hw">
+
+            <h3>4.5A Area Between Curves</h3>
+
+            <h4>Homework</h4>
+            <p><strong>Find the area bounded by the graphs of the given equations over the given interval.</strong>
+                <strong>Compute answers to 3 decimal places.</strong></p>
+
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y_1 = x + 2$ and $y_2 = 0$ on the interval $- 1\le{x}\le 5$</p>
+                    <img src="images/hw/u4s5p1a.png" alt="Graphs of y=x+2 and y=0 on the interval from -1 to 5">
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-1}^5\left(\left(x+2\right)-0\right)\operatorname dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{x^2}2+2x\right)│_{-1}^{5}$</p>
+                    <p class="m1830-hw-solution">$(\frac{25}{2}+10)-(\frac{1}{2}-2)$</p>
+                    <p class="m1830-hw-solution">$22.5+1.5$</p>
+                    <p class="m1830-hw-answer">$24\ unit{{s}^{2}}$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y_1 = {x^2} + 2x - 1$ and $y_2 = 0$ on the interval $ - 2 \le x \le 0$</p>
+                    <img src="images/hw/u4s5p2a.png" alt="Graphs of y=x^2+2x-1 and y=0 on the interval from -2 to 0">
+                  <p class="m1830-hw-solution">$\begin{align}&amp;  \int_{-2}^0\left(y_2-y_1\right)\operatorname dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-2}^{0}{0-({{x}^{2}}+2x-1)dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-2}^{0}{-{{x}^{2}}-2x+1\ dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{-x^3}3-\frac{2x^2}2+x\right)│_{-2}^{0}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{-x^3}3-x^2+x\right)│_{-2}^{0}$</p>
+                    <p class="m1830-hw-solution">$0-(\frac{8}{3}-4-2)$</p>
+                    <p class="m1830-hw-answer">$\frac{10}{3}\ unit{{s}^{2}}$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y_1 = - {x^2} + 4x + 2$ and $y_2 = x$ on the interval $\frac{1}{2} \le x \le 3$</p>
+                    <img src="images/hw/u4s5p3a.png" alt="Graphs of y=-x^2+4x+2 and y=x on the interval from 0.5 to 3">
+                      <p class="m1830-hw-solution">$\begin{align}&amp;  \int_\frac12^3\left(y_2-y_1\right)\operatorname dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_\frac12^3(-{{x}^{2}}+4x+2)-x\ dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_\frac12^3\left(-{{x}^{2}}+3x+2\right)\ dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{-x^3}3+\frac{3x^2}2+2x\right)│_\frac12^3$</p>
+                    <p class="m1830-hw-solution">$(-9+\frac{27}{2}+6)-(\frac{-1}{24}+\frac{3}{8}+1)$</p>
+                    <p class="m1830-hw-solution">$10.5-\frac{4}{3}$</p>
+                    <p class="m1830-hw-answer">$9.17\ unit{{s}^{2}}$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y_1 = \frac{1}{x}$ and $y_2 = {e^x}$ on the interval $1 \le x \le 2$</p>
+                    <img src="images/hw/u4s5p4a.png" alt="Graphs of y=1/x and y=e^2 on the interval from 1 to 2">
+                    <p class="m1830-hw-solution">$\begin{align}&amp;  \int_1^2\left(y_2-y_1\right)\operatorname dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{1}^{2}{{{e}^{x}}-\frac{1}{x}\ }dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$({{e}^{x}}-\ln \left| x \right|)│_{1}^{2}$</p>
+                    <p class="m1830-hw-solution">$({{e}^{2}}-\ln 2)-({{e}^{1}}-\ln 1)$</p>
+                    <p class="m1830-hw-solution">$6.6959-2.71828$</p>
+                    <p class="m1830-hw-answer">$3.98\ unit{{s}^{2}}$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y_1 = {x^3} - 3x$ and $y_2 = x$</p>
+                    <img src="images/hw/u4s5p5a.png" alt="Graphs of y=x^3-3x and y=x on the interval from -4 to 3">
+                    <p class="m1830-hw-solution">$\begin{align}&amp;  \int_{-2}^0\left(y_1-y_2\right)\operatorname dx +  \int_0^2\left(y_2-y_1\right)\operatorname dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-2}^0\left(\left(x^3-3x\right)-x\right)\ dx+\int_0^2\left(x-\left(x^3-3x\right)\right)\ dx\end{align}$</p>
+
+
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-2}^0\left(x^3-4x\right)\ dx+\int_0^2\left(-x^3+4x\right)\ dx\end{align}$</p>
+
+
+                    <p class="m1830-hw-solution">$\left(\frac{x^4}4-2x^2\right)│_{-2}^{0}+\left(\frac{-x^4}4+2x^2\right)│_{0}^{2}$</p>
+
+
+                    <p class="m1830-hw-solution">$(0-0)-(4-8)+(-4+8)-(0+0)$</p>
+                    <p class="m1830-hw-solution">$4+4$</p>
+                    <p class="m1830-hw-answer">$8\ unit{{s}^{2}}$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> The revenue from a manufacturing process is projected to follow the model $R'(x) = 150$ million per year for 10 years. The cost is projected to follow the model $C'(x) = 80 + 0.25{x^2}$ millions of dollars per year over the same
+                        period of time, where x is time in years.</p>
+                    <p>Approximate the profit over the 10-year period.</p>
+                    <img src="images/hw/u4s5p6a.png" alt="Graph of R(x)=150 and C(x)=80+0.25x^2 on the interval from -1 to 11">
+                  <p class="m1830-hw-solution">  $\begin{align}&amp;P(x)=\int\left[R'(x)-C'(x)\right]\;dx\end{align} $</p>
+                    <p class="m1830-hw-solution">$P(x)=\begin{align}&amp;\int_{0}^{10}{150-(80+0.25{{x}^{2}}})dx\end{align} $</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int_{0}^{10}{70-0.25{{x}^{2}}dx}\end{align} $</p>
+                    <p class="m1830-hw-solution">$=\left(70x-\frac{0.25x^3}3\right)│ _{0}^{10}$</p>
+                    <p class="m1830-hw-solution">$=(70\cdot10-\frac{0.25{{\left( 10 \right)}^{3}}}{3})-(0-0) $</p>
+                    <p class="m1830-hw-answer">The total profit will be $\$616.6$ million over the 10-year period.</p>
+
+
+
+
+                </li>
+            </ol>
+            <!-- End section problem list  -->
+
+
+
+            <h3>4.5B Area Between Curves</h3>
+
+            <h4>Homework</h4>
+
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> Consider the functions given by $f(x) = - {x^2} + 2x + 4$ and $g(x) = 4 - x.$</p>
+                    <ol>
+
+                        <li>Use algebra to find the points where the graphs of f and g intersect.</li>
+
+                        <li>Sketch an accurate graph of f and g on the axes provided, labeling the curves by name and the intersection points with ordered pairs.</li>
+
+                        <li>What is the exact area between f and g between their intersection points?</li>
+                    </ol>
+                    <img src="images/hw/u4s5p1b.png" alt="Blank first quadrant graph">
+                    <p class="m1830-hw-answer"> <img src="images/hw/u4s5p1bsol.png" alt="Graph of the shaded region between the function y= - x squared plus 2 times x plus 4 and the function y= four minus x.  The intersection points of (0,4) and (3,1) are marked.">  </p>
+      <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^3\left[f(x)-g(x)\right]\operatorname dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^3\left[\left(-x^2+2x+4\right)-\left(4-x\right)\right]dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^3\left(-x^2+2x+4-4+x\right)\ dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^3\left(-x^2+3x\right)\ dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{-x^3}3+\frac{3x^2}2\right)│_0^3 $</p>
+                    <p class="m1830-hw-solution">$4.5-0 $</p>
+                    <p class="m1830-hw-answer">$4.5\ unit{{s}^{2}} $</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> Find the area of the region bounded by $y_1 = \sqrt x $ and $y_2 = \frac{1}{4}x$ .</p>
+      <p class="m1830-hw-answer"> <img src="images/hw/u4s5p2bsol.png" alt="Graph of the shaded region between the function y=square root of x and the function y=one-fourth x.  The intersection points of (0,0) and (16,4) are marked.">  </p>
+                    <p class="m1830-hw-solution">$y_1=\sqrt{x}$</p>
+                    <p class="m1830-hw-solution">$y_2=\frac{1}{4}x$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^{16}\left(y_1-y_2\right)\operatorname dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^{16}\left(\sqrt{x}-\frac14x\right)\ dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{0}^{16}\left(x^\frac12-\frac14x\right)\ dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{x^{\frac32}}{\frac32}-\frac14\cdot\frac{x^2}2\right)\vert_0^{16}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac23x^\frac32-\frac18x^2\right)│_0^{16}$</p>
+                    <p class="m1830-hw-solution">$(\frac{2}{3}\cdot{{16}^{\frac{3}{2}}}-\frac{1}{8}\cdot{{16}^{2}})-(0-0)$</p>
+                    <p class="m1830-hw-answer">$10.67\ unit{{s}^{{2}}}$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> Find the area of the region bounded by $y_1 = 12 - 2{x^2}$ and $y_2 = {x^2} - 8$ .</p>
+      <p class="m1830-hw-answer"> <img src="images/hw/u4s5p3bsol.png" alt="Graph of the shaded region between the function y=12-2 times x squared and the function y=x squared minus 8.  The intersection points of (-2.582,-1.333) and (2.582,-1.333) are marked.">  </p>
+                    <p class="m1830-hw-solution">$y_1=12-2{{x}^{2}}$</p>
+                    <p class="m1830-hw-solution">$y_2={{x}^{2}}-8$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-2.58}^{2.58}\left[(12-2{{x}^{2}})-({{x}^{2}}-8)\right]dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-2.58}^{2.58}\left(12-2{{x}^{2}}-{{x}^{2}}+8\right) dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-2.58}^{2.58}\left(-3{{x}^{2}}+20\right)dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{-3x^3}3+20x\right)│_{-2.58}^{2.58}$</p>
+                    <p class="m1830-hw-solution">$(-x^3+20x)│_{-2.58}^{2.58}$</p>
+                    <p class="m1830-hw-solution">$34.426-(-34.426)$</p>
+                    <p class="m1830-hw-answer">$68.85\ unit{{s}^{2}}$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> Find the area of the region bounded by the curves $y_1 = {x^3} - x$ and $y_2 = {x^2}.$</p>
+      <p class="m1830-hw-answer"> <img src="images/hw/u4s5p4bsol.png" alt="Graph of the shaded region between the function y= x to the third minus x and the function y=x squared.  The intersection points of (-0.618,0.382), (0,0), and (1.618,2.618) are marked. From the values x=-0.618 to x=0, the cubic function is above the quadratic function.  From the values of x=0 to x=1.618, the quadratic function is above the cubic function.">  </p>
+                    <p class="m1830-hw-solution">$y_1={{x}^{3}}-x$</p>
+                    <p class="m1830-hw-solution">$y_2={{x}^{2}}$</p>
+
+                    <p class="m1830-hw-solution">  $y_1$ and $y_2$ intersect at $x=-0.62$ and $x=1.62.$
+                    </p>
+      <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-0.62}^0\left(y_1-y_2\right)\operatorname dx\;+\int_0^{1.62}\left(y_2-y_1\right)\operatorname dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-0.62}^{0}\left[\left(x^3-x\right)-x^2\right]dx+\int_{0}^{1.62}\left[x^2-\left(x^3-x\right)\right]dx\end{align}$</p>
+
+
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{-0.62}^0\left(x^3-x^2-x\right)\;dx+\int_0^{1.62}\left(-x^3+x^2+x\right)\;dx\end{align}$</p>
+
+
+                    <p class="m1830-hw-solution">$\left(\frac{x^4}4-\frac{x^3}3-\frac{x^2}2\right)│_{-0.62}^0 +\left(-\frac{x^4}4+\frac{x^3}3+\frac{x^2}2\right)│_0^{1.62}$</p>
+
+
+                    <p class="m1830-hw-solution">$(0-(-0.0758))+(1.0075-0)$</p>
+                    <p class="m1830-hw-solution">$0.0758+1.0075$</p>
+                    <p class="m1830-hw-answer">$1.0833\ unit{{s}^{2}}$</p>
+
+                    <p><cite class="cc">Source: Active Calculus by Matthew Boelkins is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.  Based on a work at <a href="http://scholarworks.gvsu.edu/books/10/">http://scholarworks.gvsu.edu/books/10/</a>. </cite></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> The rate of change of the value of goods exported from the United States between 2000 and 2014 can be modeled as $$E&#39;(t) = - 2688.96x{}^2 + 43524x - 35103.48$$ billion dollars per year $t$ years after the end of 2000.The rate
+                        of change of the value of goods imported into the United States between 2000 and 2014 can be modeled as $$I&#39;(t) = 4485.04x + 144,264.16$$ billion dollars per year $t$ years after the end of 2000.</p>
+                    <p><cite>Source: U.S. Census Bureau, Economic Indicator Division</cite></p>
+                    <p><strong>Find the difference in the accumulated value of imports and exports from 2000-2014.</strong></p>
+      <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^{14}\left[I'\left(t\right)-E'\left(t\right)\right]\;\operatorname dt\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{0}^{14}{(4485.04x+144264.16)-(-2688.96{{x}^{2}}+43524x-35103.48)dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{0}^{14}{4485.04x+144264.16+2688.96{{x}^{2}}-43524x+35103.48 dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int_{0}^{14}{2688.96{{x}^{2}}-39038.96x+179367.64 dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$\left(\frac{2688.96x^3}3-\frac{39038.96x^2}2+179367.64x\right)│_0^{14}$</p>
+                    <p class="m1830-hw-solution">$(896.32x^3-19519.48x^2+179367.64x)│_0^{14}$</p>
+                    <p class="m1830-hw-solution">$1144830.96-0$</p>
+                    <p class="m1830-hw-solution">$1144830.99$</p>
+                    <p class="m1830-hw-answer">The imports exceeded exports by $\$1,144,830.96$ billion between 2000 and 2014.</p>
+
+                </li>
+            </ol>
+            <!-- End section problem list  -->
+
+
+      </article>
+
+<!-- <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<li>
+  <a href="http://www.youtube.com/watch?v=YWv5v8PppzU" target="_blank"><i class="fa fa-play"></i> First Fundamental Theorem of Calculus</a>  (29:10)
+</li>
+
+
+
+
+
+</ul>
+
+        </div> -->
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

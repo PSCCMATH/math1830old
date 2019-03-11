@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+     <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u2toc">MATH 1830</h1>
+
+
+        <h2>Unit 2 Derivatives</h2>
+
+
+
+
+
+        <article class="notes">
+
+            <h3>2.3 Derivatives of Products</h3>
+
+              <h4> Pre-Class:</h4>
+<ul>
+             <li>Complete 2.2 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+              <li>Work and check problems #1-2 in the 2.3 NOTES section. </li>
+              <li> Complete the 2.3 Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u2s2.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>2.2 HW</p>
+          </div>
+        </a>
+       </div>
+
+
+       <!-- <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:8aJUEzry@3/Differentiation-Rules" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=79ngr0Bur38" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>2.3 Quiz</p>
+  </div>
+  </a>
+  </div>
+ <div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div> 
+
+
+  </div>
+          
+
+                     <h4 class="m1830-pagebreak">Introduction</h4>
+
+           
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        The manager of a miniature golf course is planning to raise the ticket price per game. At the current price of \$6.50, an average of 81 rounds is played each day. The manager’s research suggests that for every \$0.50 increase in price, an average of four
+                        fewer games will be played each day. Based on this information, find the function that represents revenue from rounds of mini golf, where n represents the number of \$0.50 increases in ticket price.</p>
+
+                    <p class="m1830-solution">$R(n) =$ (price)(number sold)</p>
+                    <p class="m1830-answer">$R(n) = (6.50 + .50n)(81 - 4n)$</p>
+
+                    <ol>
+
+                        <li>What must you do with this revenue function in order to find the rate of change?
+                            <p class="m1830-answer">Multiply it out and use the power rule to find the derivative.</p>
+                        </li>
+
+                        <li>Find the rate of change for this revenue function when the manager increases the price of a round of mini golf by \$1.50.
+                            <p class="m1830-solution">$R(n) = 526.50 + 14.5n - 2{n^2}$</p>
+                            <p class="m1830-solution">$R&#39;(n) = 14.5 - 4n$</p>
+                            <p class="m1830-solution">If the price is increased by \$1.50, then there have been 3 fifty cent increases, so $n=3$.</p>
+                            <p class="m1830-solution">$R&#39;(3) = 2.5$</p>
+                            <p class="m1830-answer">When the manager increases the price per ticket by \$$1.50$, the number of rounds played each day decreases but the actual revenue increases by \$$2.50$ per day. This provides the owner with an increase in revenue even though
+                                there is a decrease in the number of rounds played each day.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        Find the rate of change for the function $y = ({x^2} + 1)({x^2} - 2x + 1).$</p>
+
+                    <p class="m1830-answer">This problem can be worked the same way but it is more difficult to multiply out. We need an easier way to find the derivative when we have polynomial terms multiplied together.</p>
+                </li>
+
+
+
+            </ol>
+
+
+            <h4 class="m1830-pagebreak">Notes</h4>
+            <p><strong>Derivatives of Products</strong></p>
+            <!-- <p><strong>Rewriting a Function as a Product</strong></p>
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        Rewrite as a product: $f\left( x \right) = 5{e^x} + 10{x^2}\;{e^x}+ 25{x^4}{e^x}$</p>
+<p class="m1830-solution"> Factor out $5e^x$ from each term </p>
+                    <p class="m1830-answer">$f(x) = 5{e^x}(1 + 2{x^2} + 5{x^4})$</p> -->
+
+
+
+
+
+
+
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">The Product Rule </h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <p>If $y=f(x)\cdot g(x)$,</p>
+                            <p>then $y&#39; = f&#39;(x)\cdot g(x)\; + \;\;f(x)\cdot g&#39;(x).$</p>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <p ><strong>Two Methods for Finding the Derivative:</strong></p>
+                    <p>Find the derivative two different ways.</p>
+
+<ul>
+                        <li>Simplify first and use the power rule.</li>
+
+                        <li>Use the product rule.</li>
+
+</ul>
+            <ol>
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $m\left( x \right) = 2{x^3}\;\left( {{x^5} - 2} \right)$</p>
+                    <ol>
+
+                        <li>
+                            <p class="m1830-solution">Simplifying and Using Power Rule</p>
+                            <p class="m1830-solution">$m(x) = 2{x^8} - 4{x^3}$</p>
+                            <p class="m1830-answer">${m&#39;}(x) = 16{x^7} - 12{x^2}$</p>
+                        </li>
+
+                        <li>
+                            <p class="m1830-solution">Using the Product Rule</p>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-6 bg-color1">
+                                    <p class="m1830-solution">$f = 2{x^3}$</p>
+                                    <p class="m1830-solution">$f&#39; = 6{x^2}$</p>
+                                </div>
+                                <div class="col-sm-6 bg-color2">
+                                    <p class="m1830-solution">$g = {x^5} - 2$</p>
+                                    <p class="m1830-solution">$g&#39; = 5{x^4}$</p>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <p class="m1830-solution">$m&#39;(x) = 6{x^2}({x^5} - 2) + 2{x^3}(5{x^4})$</p>
+                            <p class="m1830-solution">$m&#39;(x) = 6{x^7} - 12{x^2} + 10{x^7}$</p>
+                            <p class="m1830-answer">$m&#39;(x) = 16{x^7} - 12{x^2}$</p>
+                        </li>
+                    </ol>
+                    <p class="m1830-pagebreak"> <strong> Find the derivative using the Product Rule. </strong></p>
+                </li>
+
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $n(x)=7x^2\left(2x^3+5\right)$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-solution">$f = 7{x^2}$</p>
+                            <p class="m1830-solution">$f&#39; = 14x$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-solution">$g = 2{x^3} + 5$</p>
+                            <p class="m1830-solution">$g&#39; = 6{x^2}$</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <p class="m1830-solution">$n&#39;(x) = 14x(2{x^3} + 5) + 7{x^2}(6{x^2})$</p>
+                    <p class="m1830-solution">$n&#39;(x) = 28{x^4} + 70x + 42{x^4}$</p>
+                    <p class="m1830-answer">$n&#39;(x) = 70{x^4} + 70x$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $h\left( x \right) = 4{x^3}\;{e^x}$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-solution">$f = 4{x^3}$</p>
+                            <p class="m1830-solution">$f&#39; =12{x^2}$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-solution">$g = {e^x}$</p>
+                            <p class="m1830-solution">$g&#39; = {e^x}$</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <p class="m1830-solution">$h&#39;(x) = 12{x^2}({e^x}) + 4{x^3}({e^x})$</p>
+                    <p class="m1830-solution">$h&#39;(x) = {e^x}(12{x^2} + 4{x^3})$</p>
+                    <p class="m1830-answer">$h&#39;(x) = 4{x^2}{e^x}(3 + x)$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $s\left( x \right) = 2{x^5}\ln x$</p>
+
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-solution">$f = 2{x^5}$</p>
+                            <p class="m1830-solution">$f&#39; =10{x^4}$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-solution">$g = \ln x$</p>
+                            <p class="m1830-solution">$g&#39; = \frac{1}{x}$</p>
+                        </div>
+                    </div>
+
+
+                    <p class="m1830-solution">$s&#39;(x) = 10{x^4}\ln x + 2{x^5}\left( {\frac{1}{x}} \right)$</p>
+                    <p class="m1830-solution">$s&#39;(x) = 10{x^4}\ln x + 2{x^4}$</p>
+                    <p class="m1830-answer">$s&#39;(x) = 2{x^4}(5\ln x + 1)$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $v\left( x \right) = \left( {8x + 1} \right)\left( {3{x^2}\; - 7} \right)$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-solution">$f = 8x + 1$</p>
+                            <p class="m1830-solution">$f&#39; =8$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-solution">$g = 3{x^2} - 7$</p>
+                            <p class="m1830-solution">$g&#39; = 6x$</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <p class="m1830-solution">$v&#39;(x) = 8(3{x^2} - 7) + 6x(8x + 1)$</p>
+                    <p class="m1830-solution">$v&#39;(x) = 24{x^2} - 56 + 48{x^2} + 6x$</p>
+                    <p class="m1830-answer">$v&#39;(x) = 72{x^2} + 6x - 56$</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p class="m1830-pagebreak"><strong>Tangent Lines</strong></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $r\left( x \right) = \left( {5 - 4x} \right)\left( {1 + 3x} \right)$</p>
+                    <ol>
+
+                        <li>Find $r&#39;\left( x \right).$
+
+                            <div class="row">
+                                <div class="col-sm-6 bg-color1">
+                                    <p class="m1830-solution">$f = 5 - 4x$</p>
+                                    <p class="m1830-solution">$f&#39; = - 4$</p>
+                                </div>
+                                <div class="col-sm-6 bg-color2">
+                                    <p class="m1830-solution">$g = 1 + 3x$</p>
+                                    <p class="m1830-solution">$g&#39; = 3$</p>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <p class="m1830-solution">$r&#39;(x) = - 4(1 + 3x) + 3(5 - 4x)$</p>
+                            <p class="m1830-solution">$r&#39;(x) = - 4 - 12x + 15 - 12x$</p>
+                            <p class="m1830-answer">$r&#39;(x) = - 24x + 11$</p>
+
+                        </li>
+
+                        <li>Find the equation of the line tangent to the graph of $r$ at $x=2$.
+
+                            <p class="m1830-solution">Point $\quad r(2) = (5 - 4\cdot2)(1 + 3\cdot2) = ( - 3)(7) = -21$</p>
+                            <p class="m1830-answer m1830-step">$(2, - 21)$</p>
+
+                            <p class="m1830-solution">Slope $\quad {m_{tan}}= {r&#39;}(2) = - 24(2) + 11=-48+11=-37$</p>
+                            <p class="m1830-answer m1830-step">${m_{tan}}=-37$</p>
+<p class="m1830-solution"> Equation of the tangent line: </p>
+                            <p class="m1830-solution">$y + 21 = - 37(x - 2)$</p>
+                            <p class="m1830-solution">$y + 21 = - 37x + 74$</p>
+                            <p class="m1830-answer">$y = - 37x + 53$</p>
+                        </li>
+
+                        <li>Find the values of $x$ where $r’(x) = 0.$
+                            <p class="m1830-solution">$ - 24x + 11 = 0$</p>
+                            <p class="m1830-solution">$ - 24x = - 11$</p>
+                            <p class="m1830-answer">$x = \frac{{11}}{{24}}$</p>
+                        </li>
+                    </ol>
+
+
+                    <p class="m1830-pagebreak"><strong>Derivatives with Radicals</strong></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        Find y’ for $y = \sqrt x\left(x^2+3x-1\right).$</p>
+                    <p class="m1830-solution">$y=x^\frac12\left(x^2+3x-1\right)$</p>
+
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-solution">$f =x^\frac12$</p>
+                            <p class="m1830-solution">$f&#39; =\frac12x^\frac{-1}2$</p>
+
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-solution">$g = x^2 +3x -1$</p>
+
+                            <p class="m1830-solution">$g&#39; = 2x+3$</p>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <p class="m1830-solution">$y&#39; = \frac12x^\frac{-1}2\left(x^2+3x-1\right)+x^\frac12\left(2x+3\right)$</p>
+                    <p class="m1830-solution">$y&#39; = \frac12x^\frac32+\frac32x^\frac12-\frac12x^\frac{-1}2+2x^\frac32+3x^\frac12$</p>
+                    <p class="m1830-answer">$y&#39; = \frac52x^\frac32+\frac92x^\frac12-\frac12x^\frac{-1}2$</p>
+
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        Find $\frac{{dy}}{{dx}}$ for $y = \sqrt[3]x\left(x^6+x^3\right).$</p>
+<p class="m1830-solution">$y=x^\frac13(x^6+x^3)$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-solution">$f =x^\frac13$</p>
+                            <p class="m1830-solution">$f&#39; = \frac13x^{-\frac23}$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-solution">$g = x^6+x^3$</p>
+                            <p class="m1830-solution">$g&#39; = 6x^5+3x^2$</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <p class="m1830-solution">$\frac{{dy}}{{dx}} = \frac13x^{-\frac23}\left(x^6+x^3\right)+x^\frac13\left(6x^5+3x^2\right)$</p>
+                    <p class="m1830-solution">$\frac{{dy}}{{dx}} = \frac13x^\frac{16}3+\frac13x^\frac73+6x^\frac{16}3+3x^\frac73$</p>
+
+                    <p class="m1830-answer">$\frac{dy}{dx}=\frac{19}3x^\frac{16}3+\frac{10}3x^\frac73$</p>
+
+                    <p class="m1830-pagebreak"><strong>Applications</strong></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                       Calculators are sold to students for 100 dollars each. Three hundred students are willing to buy them at that price. For every 5 dollar decrease in price, there are 30 more students willing to buy the calculator. The revenue function is given by the formula   $ R(d)=(100-5d)(300+30d) $.
+                          </p>
+
+                        <ol>
+                          <li>  <p class="m1830-problem-text"> Find $R'(d).$</p>
+
+    <p class="m1830-hw-solution">
+                            <div class="row">
+                                <div class="col-sm-6 bg-color1">
+                                    <p class="m1830-solution">$f = 100-5d$</p>
+                                    <p class="m1830-solution">$f&#39; = - 5$</p>
+                                </div>
+                                <div class="col-sm-6 bg-color2">
+                                    <p class="m1830-solution">$g = 300+30d$</p>
+                                    <p class="m1830-solution">$g&#39; = 30$</p>
+                                </div>
+                            </div>
+                          <p class="m1830-hw-solution">$ R&#39;(d)=-5(300+30d)+30(100-5d) $</p>
+                          <p class="m1830-hw-solution">$ R&#39;(d)=-1500-150d+3000-150d$</p>
+                          <p class="m1830-hw-answer">$ R&#39;(d)=1500-300d$</p>
+
+
+                      </li>
+
+
+
+
+                        <li>Find $R\left( {3} \right)$ and $R&#39;\left( {3} \right)$. Write a brief interpretation of these results.
+                            <p class="m1830-solution">$R(3) = (100-5(3))(300+30(3))=(85)(390) = 33150$</p>
+                            <p class="m1830-solution">$R&#39;(3) = 1500-300(3)=600$</p>
+                            <p class="m1830-answer">At three \$5 reductions in price, the revenue is \$33,150.  At that point the revenue is increasing at a rate of \$600 per $5 decrease in price.</p>
+                        </li>
+
+                        <li>Use the results above to estimate the total revenue after four $5 reductions in price.
+                          <p class="m1830-solution">$R(4)\approx R(3)+R'(3)$</p>
+                            <p class="m1830-solution">33150 + 600 = 33750</p>
+                            <p class="m1830-answer">The revenue will be approximately \$33,750 after four $5 price reductions.</p>
+                        </li>
+                    </ol>
+                </li>
+
+
+
+            </ol>
+
+        </article>
+
+        <article class="hw">
+
+
+            <h3>2.3 Derivatives of Products</h3>
+
+            <h4>Homework</h4>
+            <p><strong>Find the derivative of each of the following.</strong></p>
+
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $p(x) = (6x-1)(5x+2)$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-hw-solution">$f = 6x-1$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 6$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-hw-solution">$g = 5x+2$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 5$</p>
+                        </div>
+                    </div>​
+
+
+
+                    <p class="m1830-hw-solution">$p&#39;(x) = 6(5x+2)+5(6x-1)$</p>
+                    <p class="m1830-hw-solution">$p&#39;(x) = 30x+12+30x-5$</p>
+                    <p class="m1830-hw-answer">$p&#39;(x) = 60x+7$</p>
+                </li>
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $p(t) = 2{t^2}({t^3} + 4t)$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-hw-solution">$f = 2{t^2}$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 4t$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-hw-solution">$g = {t^3} + 4t$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 3{t^2} + 4$</p>
+                        </div>
+                    </div>​
+
+
+
+                    <p class="m1830-hw-solution">$p&#39;(t) = 4t({t^3} + 4t) + 2{t^2}(3{t^2} + 4)$</p>
+                    <p class="m1830-hw-solution">$p&#39;(t) = 4{t^4} + 16{t^2} + 6{t^4} + 8{t^2}$</p>
+                    <p class="m1830-hw-answer">$p&#39;(t) = 10t{}^4 + 24{t^2}$</p>
+                </li>
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $h(z) = 3z^2e^z$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-hw-solution">$f = 3z^2$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 6z$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-hw-solution">$g = e^z$</p>
+                            <p class="m1830-hw-solution">$g&#39; = e^z$</p>
+                        </div>
+                    </div>​
+
+
+
+                    <p class="m1830-hw-solution">$h&#39;(z) = 6z(e^z)+e^z(3z^2)$</p>
+                    <p class="m1830-hw-solution">$h&#39;(z) = 6ze^z+3z^2e^z$</p>
+                    <p class="m1830-hw-answer">$h&#39;(z) = 3ze^z(2+z)$</p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $p(x) = 2{e^x}({x^2} - 3x + 5)$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = 2{e^x}$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 2{e^x}$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = {x^2} - 3x + 5$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 2x - 3$</p>
+
+                        </div>
+                    </div>​
+
+
+                    <p class="m1830-hw-solution">$p&#39;(x) = 2{e^x}({x^2} - 3x + 5) + 2{e^x}(2x - 3)$</p>
+                    <p class="m1830-hw-solution">$p&#39;(x) = 2{e^x}({x^2} - 3x + 5 + 2x - 3)$</p>
+                    <p class="m1830-hw-answer">$p&#39;(x) = 2{e^x}({x^2} - x + 2)$</p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y = -x^2\ln x$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = -x^2$</p>
+                            <p class="m1830-hw-solution">$f&#39; = -2x$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = lnx$</p>
+                            <p class="m1830-hw-solution">$g&#39; = \frac1x$</p>
+
+                        </div>
+                    </div>​
+
+
+                    <p class="m1830-hw-solution">$y&#39;(x) = -2xlnx+(\frac1x)(-x^2)$</p>
+                    <p class="m1830-hw-solution">$y&#39;(x) = -2xlnx+\frac{-x^2}x$</p>
+                    <p class="m1830-hw-answer">$y&#39;(x) = -2xlnx-x$</p>
+                </li>
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $r(x) = (x^3+x)\ln x$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = x^3+x$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 3x^2+1$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = lnx$</p>
+                            <p class="m1830-hw-solution">$g&#39; = \frac1x$</p>
+
+                        </div>
+                    </div>​
+
+
+                    <p class="m1830-hw-solution">$r&#39;(x) = (3x^2+1)lnx+(\frac1x)(x^3+x)$</p>
+                    <p class="m1830-hw-solution">$r&#39;(x) = (3x^2+1)lnx+\frac{x^3+x}x$</p>
+                    <p class="m1830-hw-answer">$r&#39;(x) = (3x^2+1)lnx+x^2+1$</p>
+                </li>
+
+
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $k(x) = (2x - 5)({x^2} + 1)$</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 bg-color1">
+                            <p class="m1830-hw-solution">$f = 2x-5$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 2$</p>
+                        </div>
+                        <div class="col-sm-6 bg-color2">
+                            <p class="m1830-hw-solution">$g = x^2+1$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 2x$</p>
+                        </div>
+                    </div>​
+
+
+
+
+
+
+                    <p class="m1830-hw-solution">$k&#39;(x) = 2({x^2} + 1) + 2x(2x - 5)$</p>
+                    <p class="m1830-hw-solution">$k&#39;(x) = 2{x^2} + 2 + 4{x^2} - 10x$</p>
+                    <p class="m1830-hw-answer">$k&#39;(x) = 6{x^2} - 10x + 2$</p>
+                </li>
+
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $p(a) = ({a^2} - 2a + 7)(2{a^2} - a + 1)$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = {a^2} - 2a + 7$</p>
+                            <p class="m1830-hw-solution">$f&#39; = 2a - 2$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = 2{a^2} - a + 1$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 4a - 1$</p>
+
+                        </div>
+                    </div>​
+
+                    <p class="m1830-hw-solution">$p&#39;(a) = (2a - 2)(2{a^2} - a + 1) + (4a - 1)({a^2} - 2a + 7)$</p>
+                    <p class="m1830-hw-solution">$p&#39;(a) = 4{a^3} - 2{a^2} + 2a - 4{a^2} + 2a - 2 + 4{a^3} - 8{a^2} + 28a - {a^2} + 2a - 7$</p>
+                    <p class="m1830-hw-answer">$p&#39;(a) = 8{a^3} - 15{a^2} + 34a - 9$</p>
+                </li>
+
+
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $p(t) = \sqrt t \;({t^2} + 5t - 2)$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = {t^{1/2}}$</p>
+                            <p class="m1830-hw-solution">$f&#39; = \frac{1}{2}{t^{ - 1/2}}$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = {t^2} + 5t - 2$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 2t + 5$</p>
+
+                        </div>
+                    </div>​
+
+
+                    <p class="m1830-hw-solution">$p&#39;(t)=\frac{1}{2}{{t}^{-1/2}}({{t}^{2}}+5t-2)+{{t}^{1/2}}(2t+5)$</p>
+                    <p class="m1830-hw-solution">$p&#39;(t)=\frac{1}{2}{{t}^{3/2}}+\frac{5}{2}{{t}^{1/2}}-{{t}^{-1/2}}+2{{t}^{3/2}}+5{{t}^{1/2}}$</p>
+                    <p class="m1830-hw-answer"> $p&#39;(t)=\frac{5}{2}{{t}^{3/2}}+\frac{15}{2}{{t}^{1/2}}-{{t}^{-1/2}}$</p>
+                    <p class="m1830-hw-answer"> $p&#39;(t)=\frac{5}{2}{{t}^{3/2}}+\frac{15}{2}{{t}^{1/2}}-{\frac{1}{{t}^{1/2}}}$</p>
+                </li>
+
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $q(x) = (\sqrt x+1)(\sqrt x-3)$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = x^{1/2}+1$</p>
+                            <p class="m1830-hw-solution">$f&#39; = \frac{1}{2}{x^{ - 1/2}}$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = x^{1/2}-3$</p>
+                            <p class="m1830-hw-solution">$g&#39; = \frac{1}{2}{x^{ - 1/2}}$</p>
+
+                        </div>
+                    </div>​
+
+
+                    <p class="m1830-hw-solution">$q&#39;(x)=\frac12x^\frac{-1}2\left(x^\frac12-3\right)+\frac12x^\frac{-1}2\left(x^\frac12+1\right)$</p>
+                    <p class="m1830-hw-solution">$q&#39;(x)=\frac12-\frac32x^\frac{-1}2+\frac12+\frac12x^\frac{-1}2$</p>
+                    <p class="m1830-hw-answer"> $q&#39;(x)=1-1x^\frac{-1}2$</p>
+                    <p class="m1830-hw-answer"> $q&#39;(x)=1-\frac1{\sqrt x}$</p>
+                </li>
+
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y = x^{-4}(x^2-7x+1)$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = x^{-4}$</p>
+                            <p class="m1830-hw-solution">$f&#39; = -4x^{-5}$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = x^2-7x+1$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 2x-7$</p>
+
+                        </div>
+                    </div>​
+
+                    <p class="m1830-hw-solution">$y&#39; = -4x^{-5}(x^2-7x+1)+(2x-7)(x^{-4})$</p>
+                    <p class="m1830-hw-solution">$y&#39; = -4x^{-3}+28x^{-4}-4x^{-5}+2x^{-3}-7x^{-4}$</p>
+                    <p class="m1830-hw-solution">$y&#39; = -2x^{-3}+21x^{-4}-4x^{-5}$</p>
+                    <p class="m1830-hw-answer">$y&#39; = x^{-3}(-2+21x^{-1}-4x^{-2})$</p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $y = \frac2{x^2}\left(3x^4-6x+2\right)$</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f = 2x^{-2}$</p>
+                            <p class="m1830-hw-solution">$f&#39; =-4x^{-3}$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = 3x^4-6x+2$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 12x^3-6$</p>
+
+                        </div>
+                    </div>​
+
+                    <p class="m1830-hw-solution">$y&#39; = -4x^{-3}(3x^4-6x+2)+2x^{-2}(12x^3-6)$</p>
+                    <p class="m1830-hw-solution">$y&#39; = -12x+24x^{-2}-8x^{-3}+24x-12x^{-2}$</p>
+                    <p class="m1830-hw-answer">$y&#39; = -8x^{-3}+12x^{-2}+12x$</p>
+
+                </li>
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> If $z(x) = x^2(x^3+1)$, find the slope of that tangent line at $x=1.$</p>
+                    <p class="m1830-hw-solution"> Point: $z(1)=(1)^2(1^3+1)=(1)(1+1)=1(2)=2$</p>
+                    <p class="m1830-hw-solution"> $(1,2)$</p>
+  <p class="m1830-hw-solution"> Slope:</p>
+                    <div class="row">
+
+                        <div class="col-sm-6 bg-color1">
+
+
+                            <p class="m1830-hw-solution">$f =x^2$</p>
+                            <p class="m1830-hw-solution">$f&#39; =2x$</p>
+                        </div>
+
+                        <div class="col-sm-6 bg-color2">
+
+                            <p class="m1830-hw-solution">$g = x^3+1$</p>
+                            <p class="m1830-hw-solution">$g&#39; = 3x^2$</p>
+
+                        </div>
+                    </div>​
+
+                    <p class="m1830-hw-solution">$z&#39; = 2x(x^3+1)+3x^2(x^2)$</p>
+                    <p class="m1830-hw-solution">$z&#39; = 2x^4+2x+3x^4$</p>
+                    <p class="m1830-hw-solution">$z&#39; = 5x^4+2x$</p>
+                    <p class="m1830-hw-solution">$z&#39;(1); = 5(1)^4+2(1)=7$</p>
+                    <p class="m1830-hw-solution">$m_{tan}=7$</p>
+                    <p class="m1830-hw-solution">Equation of the Tangent Line at $x=1$</p>
+                    <p class="m1830-hw-solution"> $y-y_1=m(x-x_1)$</p>
+                    <p class="m1830-hw-solution"> $y-2=7(x-1)$</p>
+                    <p class="m1830-hw-solution"> $y-2=7x-7$</p>
+                    <p class="m1830-hw-answer"> $y=7x-5$</p>
+</li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text"> In 2012, the population of a city was 939,200, and the population was increasing at roughly 9500 per year.  The average annual income was \$35,450 per capita, and this average was increasing at about $1400 per year.  The function below models the total personal income for the population of the city.</p>
+                        <p>$I(x)=(939,200+9500x)(35,450+1400x)$</p>
+                        <p> Estimate the rate at which total personal income of the city's population  will be rising in the year 2020.</p>
+
+                        <div class="row">
+
+                            <div class="col-sm-6 bg-color1">
+
+
+                                <p class="m1830-hw-solution">$f =939200+9500x$</p>
+                                <p class="m1830-hw-solution">$f&#39; =9500$</p>
+                            </div>
+
+                            <div class="col-sm-6 bg-color2">
+
+                                <p class="m1830-hw-solution">$g = 35450+1400x$</p>
+                                <p class="m1830-hw-solution">$g&#39; = 1400$</p>
+
+                            </div>
+                        </div>​
+
+                        <p class="m1830-hw-solution">$I(x)&#39; = 9500(35450+1400x)+1400(939200+9500x)$</p>
+                        <p class="m1830-hw-solution">$I(x)&#39; =336,775,000+13,300,000x+1,314,880,000+13,300,000x$</p>
+                        <p class="m1830-hw-solution">$I(x)&#39; = 26,600,000x+1,651,655,000$</p>
+                        <p class="m1830-hw-solution">$I&#39;(8); = 26,600,000(8)+1,651,655,000=1,864,455,000$</p>
+                              <p class="m1830-hw-answer">In 2020 the total personal income for the area is rising at a rate of $1,864,445,000 per year.</p>
+                    </li>
+
+
+
+
+
+
+
+            </ol>
+            <!-- End section problem list  -->
+
+</article>
+    <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+
+<li>
+  <a href="pdfs/u2productrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Product Rule Worksheet</a> 
+</li>
+
+</ul>
+
+        </div> 
+
+
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

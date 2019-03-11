@@ -1,0 +1,66 @@
+article.nearpod input{
+  display: inline-block;
+  width: 120px;
+}
+
+#ar ul{
+
+list-style: none;
+}
+
+th.m1830-morespace {
+    padding: 2em;
+}
+.bg-color1 {
+  background-color: #d1c4e9
+}
+/*TODO consolodate*/
+.bg-color2 {
+  background-color: #d1c4e9
+}
+
+cite.cc {
+    background: url(cc-logo.jpg) no-repeat;
+    background-size: contain;
+    padding-left: 1.6em;
+}
+.graph {
+  width: 95%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.desmosicon {
+  width: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m1830-answer {
+    color: #b30000 !important;
+}
+
+.m1830-hw-answer, .m1830-hw-answer .mathjax {
+    color: #b30000 !important;
+}
+
+.m1830-solution, .m1830-hw-solution {
+    color: blue !important;
+}
+.m1830-step {
+    margin: 0em 0 2em 0;
+}
+.m1830-table-wide{
+  width: 90%;
+  max-width: 90%;
+}
+
+.m1830-table-wide td{
+text-align: left;
+}
+
+var.fontnormal{
+    font-variant: normal;
+}

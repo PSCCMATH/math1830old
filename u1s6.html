@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>MATH 1830</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/notes.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/togglebuttons.js"></script>
+      <script src="js/loadmathjax.js"></script>
+     <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+      <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+      <script src="js/desmosgraphs.js"></script> -->
+
+
+   </head>
+
+   <body>
+
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+      <div class="container">
+         <h1 id="u1toc">MATH 1830</h1>
+
+         <h2>Unit 1 Limits</h2>
+
+
+
+         <div id="u1" class="m1830-unit">
+
+
+<article class="notes">
+
+
+               <h3>1.6 Marginal Analysis in Business and Economics</h3>
+<h4> Pre-Class:</h4>
+<ul>
+              <li>Complete 1.5B Homework assignment: check and correct. </li>
+
+               <li> Take notes on the videos and readings (use the space below). </li> 
+               <li>Work and check problems #1-7, 11-16 in the 1.6 INTRO section. </li> 
+               <li> Complete the 1.6 Pre-Class Quiz.</li>
+               </ul>
+               <div class="row text-center m-buttons">
+
+
+           <div class="col-sm-2">
+         <a href="https://psccmath.github.io/math1830/u1s6.html" target="_blank">
+           <div class="box " tabindex="0">
+             <i class="fa fa-check fa-3x "></i>
+             <p>1.5B HW</p>
+           </div>
+         </a>
+        </div>
+
+<!-- 
+        <div class="col-sm-2">
+          <a onclick="window.print()" href=#>
+            <div class="box " tabindex="0">
+              <i class="fa fa-print fa-3x "></i>
+              <p>Print</p>
+            </div>
+          </a>
+        </div> -->
+       <div class="col-sm-2">
+     <a href="https://cnx.org/contents/i4nRcikn@2.50:YQrOMCcP@4/Derivatives-as-Rates-of-Change" target="_blank">
+       <div class="box " tabindex="0">
+         <i class="fa fa-book fa-3x "></i>
+         <p>Read</p>
+       </div>
+     </a>
+   </div>
+
+
+   
+
+   <div class="col-sm-2">
+   <a href="https://www.myopenmath.com/" target="_blank">
+   <div class="box " tabindex="0">
+   <i class="fa fa-line-chart fa-3x "></i>
+   <p>1.6 Quiz</p>
+   </div>
+   </a>
+   </div>
+
+<div class="col-sm-2">
+   <a href="#ar" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-pencil-square fa-3x "></i>
+     <p>Resources</p>
+   </div>
+   </a>
+   </div>
+   </div>
+             
+                <h4 class="m1830-pagebreak">Introduction</h4>
+               
+               <p>The cost, in dollars, of producing $x$ frozen fruit yogurt bars per day can be modeled by the function $$C(x) = 3450 + 1.5x - 0.0001{x^2}\quad when\quad 0 \le \,\,x\, \le 5000.$$</p>
+               <p>The revenue from selling $x$ yogurt bars is</p> $$R(x) = 3.25x.$$
+
+               <p> <strong>Cost, Revenue, &amp; Profit</strong></p>
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        What does 3450 represent in the cost function?</p>
+                     <p class="m1830-answer">3450 is the initial cost (machine, etc) and any static daily costs. This is the cost to the company even if zero bars are produced.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        What does 3.25 represent in the revenue function?</p>
+                     <p class="m1830-answer">A good assumption would be the bars are selling at \$3.25 each.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        What is the cost of producing 0 yogurt bars? What is the revenue generated from selling this many bars? What is the profit for selling 0 bars?</p>
+
+                     <p class="m1830-solution">$C\left( 0 \right) = 3450$</p>
+                     <p class="m1830-answer">The cost for producing 0 bars is \$3450, the initial cost.</p>
+                     <p class="m1830-solution">$R\left( 0 \right) = 0$</p>
+                     <p class="m1830-answer">When 0 bars are produced, the revenue is $0.</p>
+                     <p class="m1830-solution">$P\left( x \right) = R\left( x \right) - C\left( x \right)$</p>
+                     <p class="m1830-solution">$P\left( 0 \right) = 0 - 3450 = - 3450$</p>
+                     <p class="m1830-answer">Profit is -\$3450 if no yogurt bars are made and sold.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        What is the cost of producing 1000 yogurt bars? What is the revenue generated from selling this many bars? What is the profit for selling 1000 bars?
+                        <p>
+                           <p class="m1830-solution">$C\left( {1000} \right) = 4850$</p>
+                           <p class="m1830-answer">The cost for producing 1000 bars is $4850.</p>
+                           <p class="m1830-solution">$R\left( {1000} \right) = 3250$</p>
+                           <p class="m1830-answer">The revenue for producing and selling 1000 bars is $3250.</p>
+                           <p class="m1830-solution">$P\left( {1000} \right) = 3250 - 4850 = - 1600$</p>
+                           <p class="m1830-answer">If 1000 yogurt bars are made and sold, the profit loss is - \$1600.  </p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        What is the cost of producing 5000 yogurt bars? What is the revenue generated from selling this many bars? What is the profit for selling 5000 bars?</p>
+                     <p class="m1830-solution">$C\left( {5000} \right) = 8450$</p>
+                     <p class="m1830-answer">The cost for producing 5000 bars is $8450.</p>
+                     <p class="m1830-solution">$R\left( {5000} \right) = 16250$</p>
+                     <p class="m1830-answer">The revenue for producing and selling 5000 bars is $16,250.</p>
+                     <p class="m1830-solution">$P\left( {5000} \right) = 16250 - 8450 = 7800$</p>
+                     <p class="m1830-answer">Profit is $7800 if 5000 yogurt bars are made and sold.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Find the model for the profit function, $P\left( x \right)$.</p>
+                     <p class="m1830-solution">$P\left( x \right) = R\left( x \right) - C\left( x \right) = \left( {3.25x} \right) - \left( {3450 + 1.5x - 0.0001{x^2}} \right)$</p>
+                     <p class="m1830-answer">$P(x)= 0.0001{x^2} + 1.75x - 3450$</p>
+                     <p class="m1830-answer"><img src="images/notes/u1s6p6i.png" alt="Graph of Profit Function indicating a zero at 1780 yogurt bars. P(x) is negative when 0 to 1780 bars are produced. P(x) is positive then 1780 to 5000 bars are produced."></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Answer the following questions about the model:</p>
+                     <p>When is the profit function positive?</p>
+                     <p class="m1830-answer">When production is greater than 1788.6 yogurt bars.  For our example, when production is greater than or equal to 1788 yogurt bars.</p>
+                     <p>When is it negative?</p>
+                     <p class="m1830-answer">When production is less than 1788.6 yogurt bars.  For our example, when production is less than 1789 yogurt bars.</p>
+                     <p>What important information does this provide the business owner? </p>
+                     <p class="m1830-answer">The owner needs to produce and sell at least 1789 bars to break even and/or to make a profit.</p>
+
+
+                            <div class="m1830-pagebreak"></div>
+                     <p><strong>Average Cost, Revenue, &amp; Profit</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        It is clear from 3, 4, &amp; 5 that the cost, revenue, and profit change based on the number of yogurt bars produced/sold. How would you determine the AVERAGE cost, revenue, and profit?</p>
+                     <p>Use the following equations that were identified earlier in this introduction: </p>
+                     <p>$C(x) = 3450 + 1.5x - 0.0001{x^2}\quad when\quad 0 \le \,\,x\, \le 5000$</p>
+                     <p>$R(x) = 3.25x$</p>
+                     <p>$P(x) = 0.0001{x^2} + 1.75x - 3450$</p>
+
+                     <ol>
+
+                        <li>
+                           <p class="m1830-solution">$\bar C\left( x \right)\, = \frac{{C\left( x \right)}}{x} = \frac{{3450 + 1.5x - 0.0001{x^2}}}{x}=$</p>
+                           <p class="m1830-answer">$\bar C(x)=\frac{{3450}}{x} + 1.5 - 0.0001x$</p>
+                        </li>
+
+                        <li>
+                           <p class="m1830-solution">$\bar R\left( x \right)\, = \frac{{R\left( x \right)}}{x} = \frac{{3.25x}}{x} = $</p>
+                           <p class="m1830-answer">$\bar R=3.25$</p>
+                        </li>
+
+                        <li>
+
+                           <p class="m1830-solution">$\bar P\left( x \right)\, = \frac{{P\left( x \right)}}{x} = \frac{{0.0001{x^2} + 1.75x - 3450}}{x} =$</p>
+                           <p class="m1830-answer">$\bar P= 0.0001x + 1.75 - \frac{{3450}}{x}$</p>
+                        </li>
+                     </ol>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> Find the average cost and explain the result:</p>
+                     <ol>
+
+                        <li>
+                           <p>$\bar C(0)\, =$</p>
+                           <p class="m1830-answer"> undefined (Can&#39;t divide by zero.)</p>
+
+                        </li>
+
+                        <li>$\bar C(1000)\, =$
+                           <p class="m1830-solution">$4.85$</p>
+                           <p class="m1830-answer">At a production level of 1000 bars, the average cost to produce one bar is $4.85.</p>
+                        </li>
+
+                        <li>$\bar C(5000)\,$ =
+                           <p class="m1830-solution">$1.69$</p>
+                           <p class="m1830-answer">At a production level of 5000 bars, the average cost to produce one bar is $1.69.</p>
+                        </li>
+                     </ol>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Is there a difference in the average cost when the number of bars produced changes? Why or why not?</p>
+
+                     <p class="m1830-answer">Yes. Average cost decreases as the production level increases. The initial costs are divided by a larger number thus decreasing the amount per bar.</p>
+
+
+       <div class="m1830-pagebreak"></div>
+                     <p><strong>Marginal Cost, Revenue, &amp; Profit</strong></p>
+                     <p>Use these equations generated earlier:</p>
+                     <p>$C(x) = 3450 + 1.5x - 0.0001{x^2}\quad when\quad 0 \le \,\,x\, \le 5000$</p>
+                     <p>$R(x) = 3.25x$</p>
+                     <p>$P(x) = 0.0001{x^2} + 1.75x - 3450$</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Determine $C&#39;\left( x \right)$. What does this represent?</p>
+
+                     <p class="m1830-answer">$C&#39;\left( x \right) = 1.5 - 0.0002x$</p>
+                     <p class="m1830-answer">$C&#39;\left( x \right)$ represents the estimated cost to produce one more bar, at a production level of x bars.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Determine $C&#39;\left( {1000} \right)$. Interpret this result.
+                        <p>
+
+                           <p class="m1830-solution">$C&#39;\left( {1000} \right) = 1.5 - 0.0002\left( {1000} \right) = 1.3$</p>
+                           <p class="m1830-answer">At a production rate of 1000 bars, the cost to produce the 1001th bar is estimated to be $1.30.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        When is $C&#39;\left( x \right) = 0$? Explain your answer.</p>
+
+                     <p class="m1830-solution">$1.5 - 0.0002x = 0$</p>
+                     <p class="m1830-solution">$1.5 = 0.0002x$</p>
+                     <p class="m1830-solution">$7500 = x$</p>
+                     <p class="m1830-answer"> Within our domain, $C&#39;\left( x \right)$ will never equal 0. 7500 yogurt bars is outside the domain of the function.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Determine $R&#39;\left( x \right)$. What does this represent?</p>
+
+                     <p class="m1830-answer">$R&#39;\left( x \right) = 3.25$</p>
+                     <p class="m1830-answer">$R&#39;\left( x \right)$ represents the estimated revenue to produce one more bar, at a production level of x bars. </p>
+                     <p class="m1830-answer">$R&#39;\left( x \right)$ is a constant function, therefore the revenue for one more bar will be \$3.25 at any level of production.  We assumed earlier they were sold at a fixed price of \$3.25 each.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Determine $P&#39;\left( x \right)$. What does this represent?</p>
+
+                     <p class="m1830-answer">$P&#39;\left( x \right) = 0.0002x + 1.75$</p>
+                     <p class="m1830-answer">$P&#39;\left( x \right)$ represents the estimated profit that will be earned if the company produces one more bar, at a production level of x bars.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        How do marginal cost, revenue, &amp; profit relate to our discussions about average rate of change and instantaneous rate of change?</p>
+
+                     <p class="m1830-answer">These marginal functions calculate the instantaneous rate of change at any production level.</p>
+
+
+               </ol>
+
+               <div class="m1830-pagebreak"></div>
+
+
+               <h4>Notes</h4>
+               <p><strong>Cost and Marginal Cost</strong> </p>
+
+
+
+
+
+                     <p><strong>Marginal Cost, Revenue and Profit</strong> </p>
+
+   <ol>
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        A company’s market research department recommends the manufacture and marketing of a new 3 meter lightening-to-USB power cord. After suitable test marketing, the research department presents the following price demand equation: $$p = 12 - 0.001x$$ where
+                        x is demand at price p. The financial department provides the cost function that includes a fixed cost of \$5600 (tooling and overhead) and variable costs of \$1.80 per power cord (materials, labor, marketing, transportation, storage):
+                        $$C\left( x \right) = 5600 + 1.80x$$</p>
+                     <ol>
+
+                        <li><strong>Marginal Cost Function: Find and interpret the Marginal Cost Function</strong>
+                           <p class="m1830-solution">$C&#39;(x) = 1.80$</p>
+                           <p class="m1830-answer">At any production level, the cost to produce one more power cord is \$1.80.</p>
+                        </li>
+
+                        <li><strong>Revenue Function: Find the Revenue Function as a function of x.</strong>
+                           <p class="m1830-solution">Revenue is price multiplied by production level</p>
+                           <p class="m1830-solution">$R(x) = px = \left( {12 - 0.001x} \right)x$</p>
+                           <p class="m1830-answer">$R(x)=12x - 0.001{x^2}$</p>
+                        </li>
+
+                        <li><strong>Marginal Revenue Function: Find the Marginal Revenue function and find the marginal revenue at x = 2000,  x = 5000, and x = 7000.  Interpret the results.</strong>
+                           <p class="m1830-solution">$R&#39;\left( x \right) = 12 - 0.002x$</p>
+                           <p class="m1830-solution">$R&#39;\left( {2000} \right) = 12 - 0.002\left( {2000} \right) = 8$ </p>
+                           <p class="m1830-answer">Revenue increases by \$8 for the 2001st cord produced and sold.</p>
+                           <p class="m1830-solution">$R&#39;\left( {5000} \right) = 2$ </p>
+                           <p class="m1830-answer">Revenue increases by \$2 for the 5001st cord produced and sold.</p>
+                           <p class="m1830-solution">$R&#39;\left( {7000} \right) = - 2$ </p>
+                           <p class="m1830-answer"> Revenue decreases by \$2 for the 7001st cord produced and sold.</p>
+                        </li>
+
+                        <li><strong>Cost and Revenue Functions: Graph the cost function and the revenue function in the same coordinate system.   Find the intersection points of these two graphs and interpret the results.</strong>
+                           <p class="m1830-answer"><img src="images/notes/u1s6p2.png" alt="x-axis:  0 to 12,000 in intervals of 2000, y-axis:  0 to 40,000 in intervals for 10,000. Linear cost function starts at the point (0, 5600) and rises to the right with a slope of 1.8.  Quadratic revenue function has x-intercepts at (0,0) and (12000,0) with the vertex at (6000, 36000)"></p>
+                           <p class="m1830-answer">At any production level between 0 and 582 power cords, revenue is less than cost. Therefore profit is negative.</p>
+                           <p class="m1830-answer">At any production level between 582 and 9618 power cords, revenue is greater than cost. Therefore profit is positive.</p>
+                           <p class="m1830-answer">At any production level great than 9618 power cords, revenue is less than cost. Therefore profit is negative.</p>
+                        </li>
+
+                        <li><strong>Profit Function: Find the profit function.  Sketch the graph.</strong>
+                           <p class="m1830-answer"><img src="images/notes/u1s6p2b.png" alt="Quadratic profit function -0.001x^2+10.2x-5600.  x-axis:  0 to 10000 in intervals of 2000.  y-axis:  0 to 20000 in intervals of 10000"></p>
+                           <p class="m1830-solution">$P(x) = R(x) - C(x) = (12x - 0.001{x^2}) - (5600 + 1.8x) = $</p>
+                           <p class="m1830-answer">$P(x)=- 0.001{x^2} + 10.2x - 5600$</p>
+                        </li>
+
+                        <li><strong>Marginal Profit Function: Find the marginal profit function and evaluate the marginal profit at x = 1000,  x = 4000,  and x = 6000.  Interpret the results.</strong>
+                           <p class="m1830-answer">$P&#39;\left( x \right) = - 0.002x + 10.2$</p>
+                           <p class="m1830-solution">$P&#39;(1000) = - 0.002(1000) + 10.2 = 8.2$</p>
+                           <p class="m1830-answer"> Profit increases by \$8.20 for the 1001st cord.</p>
+                           <p class="m1830-solution">$P&#39;(4000) = - 0.002(4000) + 10.2 = 2.2$</p>
+                           <p class="m1830-answer"> Profit increases by \$2.20 for 4001st cord.</p>
+                           <p class="m1830-solution">$P&#39;(6000) = - 0.002(6000) + 10.2 = - 1.8$</p>
+                           <p class="m1830-answer"> Profit decreases by \$1.80 for 6001st cord.</p>
+                        </li>
+                     </ol>
+
+                     <strong>Marginal and  Average Cost, Revenue, and Profit:</strong>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        A shop manufactures performance bikes. The manager estimates that the total cost (in dollars) of producing b bikes is: $$C\left( b \right) = 1200 + 25b - 0.14{b^2}$$</p>
+                     <ol>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                    <li><strong>Average Cost: Find the average cost function, $\bar C\left( b \right)$.  Calculate $\bar C\left( 7 \right)$ and interpret the results.</strong>
+                           <p class="m1830-solution">$\bar C\left( b \right)\, = \frac{{1200 + 25b - 0.14{b^2}}}{b}$</p>
+                           <p class="m1830-solution">$\bar C\left( b \right)\, =  \frac{{1200}}{b} + 25 - 0.14b$</p>
+                           <p class="m1830-solution">$\bar C\left( 7 \right)\, = \frac{{1200}}{7} + 25 - 0.14(7) = 195.45$</p>
+                           <p class="m1830-answer">The average cost of producing 7 bikes is \$195.45.</p>
+                        </li>
+
+                        <li><strong>Marginal Cost: Find the Marginal Cost Function,$ C&#39;\left( b \right)$.  Calculate $ {C&#39;} \left( 7 \right)$ and interpret the results.</strong>
+                           <p class="m1830-solution">$ C\left( b \right)\, = 1200 + 25b - 0.14{b^2}$</p>
+                           <p class="m1830-solution">${C ^\prime }\left( b \right) = 25-0.28b$</p>
+                           <p class="m1830-solution">${ C ^\prime }\left( 7 \right) =  23.04$</p>
+                           <p class="m1830-answer">When the 8th bike is produced, the average cost per bike decreases by \$24.63.</p>
+                        </li>
+
+                        <li><strong>Explain the difference between parts a and b.</strong>
+
+                           <p class="m1830-answer">On average, the cost to produce each of the 7 bikes is \$195.45.  The cost to produce the 8th bike is approximately \$23.04. </p>
+                        </li>
+                     </ol>
+                  </li>
+               </ol>
+
+          </article>
+
+<article class="hw">
+
+             <h3>1.6 Marginal Analysis</h3>
+
+             <h4>Homework</h4>
+             <!-- Begin section problem list  -->
+             <ol>
+
+                <li class="m1830-problem">
+                   <p class="m1830-problem-text"> You are the manager of Sassy Surf Creations, a new trend-setting clothing manufacturer. The cost function for your very exclusive Tai Kwon Do Dragon T-shirts is $$C\left( x \right)=0.02{{x}^{2}}+7.5x+600$$ in dollars, and you sell the
+                      shirts for $\$20.00$ each. Determine the following.</p>
+                   <ol>
+
+                      <li>The revenue function
+                         <p class="m1830-hw-answer">$R(x)=20.00x$</p>
+                      </li>
+
+                      <li>The marginal revenue function
+                         <p class="m1830-hw-answer">${R}&#39;\left( x \right)=20.00$</p>
+                      </li>
+
+                      <li>The profit function
+                         <p class="m1830-hw-solution">$P(x)=R(x)-C(x)$</p>
+                         <p class="m1830-hw-solution">$P(x)=20.00x-\left( 0.02{{x}^{2}}+7.50x+600 \right)$</p>
+                         <p class="m1830-hw-solution">$P(x)=20.00x-0.02{{x}^{2}}-7.50x-600$</p>
+                         <p class="m1830-hw-answer">$P(x)=-0.02{{x}^{2}}+12.50x-600$</p>
+                      </li>
+
+                      <li>The marginal profit function
+                         <p class="m1830-hw-answer">$P&#39;\left( x \right)=-0.04x+12.50$</p>
+                      </li>
+
+                      <li>The marginal revenue and marginal profit for the sale of 300 T-shirts
+                         <p class="m1830-hw-answer">${R}&#39;\left( 300 \right)=\$20.00$</p>
+                         <p class="m1830-hw-answer">${P}&#39;\left(300\right)=-0.04\left(300\right)+12.50=\$0.50$</p>
+                      </li>
+
+                      <li>Explain what marginal revenue and profit mean, in general.
+                         <p class="m1830-hw-answer">At a specific production level, the revenue and profit generated if one more is produced and sold.</p>
+                      </li>
+
+                      <li>Explain what the marginal revenue and marginal profit mean for the sale of 300 T-shirts.
+                         <p class="m1830-hw-answer">The revenue for the 301st T-shirt is \$$20.00$. The profit for the 301st T-shirt is \$$0.50.$</p>
+                      </li>
+                   </ol>
+                </li>
+
+                <li class="m1830-problem">
+                   <p class="m1830-problem-text"> The total cost, in dollars, of operating a factory that produces gourmet gas ranges is $$C(x)=0.5{{x}^{2}}+40x+8000,$$ where x is the number of gas ranges produced.</p>
+                   <ol>
+
+                      <li>Determine the marginal cost of producing 5000 gas ranges and compare this with the actual cost of producing the 5001st gas range.
+                         <p class="m1830-hw-solution">${C}&#39;\left( x \right)=x+40$</p>
+                         <p class="m1830-hw-solution">${C}&#39;\left( 5000 \right)=5000+40=\$5040$ Estimated cost to produce 5001st gas range</p>
+                         <p class="m1830-hw-solution">The actual cost to produce the 5001st gas range is $C\left( 5001 \right)-C\left( 5000 \right).$</p>
+                         <p class="m1830-hw-solution">$C(5001)=\$12,713,040.50$</p>
+                         <p class="m1830-hw-solution">$C(5000)=\$12,708,000.00$</p>
+                         <p class="m1830-hw-solution">$C\left( 5001 \right)-C\left( 5000 \right)=5040.50$</p>
+                         <p class="m1830-hw-answer">Actual cost to produce 5001st gas range is \$$5040.50.$</p>
+                      </li>
+
+                      <li>Determine the average cost of producing 5000 gas ranges. Compare this value to those in part a. What do you notice?
+                         <p class="m1830-hw-solution">$\overline{C}(x)=\frac{0.5{{x}^{2}}+40x+8000}{x}=0.5x+40+\frac{8000}{x}$</p>
+                         <p class="m1830-hw-solution">$\overline{C}(5000)=0.5(5000)+40+\frac{8000}{5000}=\$2541.60$</p>
+                         <p class="m1830-hw-answer">The average cost is significantly less than the cost of producing the 5001st gas range.</p>
+                      </li>
+                   </ol>
+                </li>
+
+                <li class="m1830-problem">
+                   <p class="m1830-problem-text"> The cost, in dollars, of producing x hot tubs is modeled by $C(x)=3450x-1.02{{x}^{2}},$ when the company produces up to 1500 hot tubs.</p>
+                   <p class="m1830-hw-answer">${C}&#39;\left( x \right)=3450-2.04x$</p>
+                   <ol>
+
+                      <li>Determine the marginal cost when 750 hot tubs are made. What does this mean to the manufacturer?
+                         <p class="m1830-hw-solution">${C}&#39;(750)=3450-2.04(750)=\$1920$</p>
+                         <p class="m1830-hw-answer">The estimated cost to produce the 751st hot tub is \$1920.</p>
+                      </li>
+
+                      <li>Find the cost of producing the 751st hot tub.
+                         <p class="m1830-hw-solution">$C(751)-C(750)=2015668.98-2013750 =\$1918.98$</p>
+                         <p class="m1830-hw-answer">The actual cost to produce the 751st hot tub is \$1918.98.</p>
+                      </li>
+
+                      <li>Compare and comment on the values in parts a and b.
+                         <p class="m1830-hw-answer">Marginal cost (a) is an approximation for the cost of the next item. The actual cost (b) is the exact cost according to the model (not an approximation).</p>
+                      </li>
+
+                      <li>Each hot tub is sold for $9200. Write a revenue function for the sale of x hot tubs.
+                         <p class="m1830-hw-answer">$R(x)=9200x$</p>
+                      </li>
+
+                      <li>Determine the rate of change of the profit for the sale of 750 hot tubs.
+                         <p class="m1830-hw-solution">$P(x)=R(x)-C(x)=9200x-(3450x-1.02{{x}^{2}})$</p>
+                         <p class="m1830-hw-solution">$P(x) =1.02{{x}^{2}}+5750x$</p>
+                         <p class="m1830-hw-solution">$P&#39;(x)=2.04x+5750$</p>
+                         <p class="m1830-hw-solution">$P&#39;(750)=2.04(750)+5750=\$7280$</p>
+                         <p class="m1830-hw-answer">Profit is increasing by \$7280 for each hot tub, when 750 are produced.</p>
+                      </li>
+                   </ol>
+                </li>
+
+                <li class="m1830-problem">
+                   <p class="m1830-problem-text"> The National Honor Society at a local high school sells T-shirts for its yearly fundraiser. The cost of producing the x shirts is $$C(x)=-0.0005{{x}^{2}}+7.5x+200,$$ and each shirt sells for \$$15.00$.</p>
+                   <ol>
+
+                      <li>Determine the revenue function.
+                         <p class="m1830-hw-answer">$R(x)=15x$</p>
+
+                      </li>
+
+                      <li>Determine the marginal cost function.
+                         <p class="m1830-hw-answer">$C&#39;(x)=-0.0010x+7.5$</p>
+                      </li>
+
+                      <li>Determine the marginal revenue function.
+                         <p class="m1830-hw-answer">$R&#39;(x)=\$15$</p>
+                            <p class="m1830-hw-answer">Revenue increases by \$15 for each T-shirt sold.</p>
+                      </li>
+
+                      <li>Determine the marginal cost AND the marginal revenue when 1500 shirts are sold.
+                         <p class="m1830-hw-solution">$C&#39;(1500)=-0.0010\left( 1500 \right)+7.5=\$6$</p>
+                         <p class="m1830-hw-answer">The cost to produce the 1501st shirt is \$6.</p>
+                         <p class="m1830-hw-solution">${R}&#39;\left(1500\right)=\$15$</p>
+                         <p class="m1830-hw-answer">The revenue for the 1501st shirt is \$15.</p>
+                      </li>
+
+                      <li>Determine the ACTUAL cost of producing the 1501st shirt, according to the model.
+                         <p class="m1830-hw-solution">$C( 1501)-C( 1500)$</p>
+                         <p class="m1830-hw-solution">$=\left( -0.0005{{(1501)}^{2}}+7.5(1501)+200 \right)-\left( -0.0005{{(1500)}^{2}}+7.5(1500)+200 \right)$</p>
+                         <p class="m1830-hw-solution">$= 10330.995-10325=10330.995-10325=5.995$</p>
+                         <p class="m1830-hw-answer">The actual cost to produce the 1501st shirt is $\$5.995.$</p>
+                      </li>
+
+                      <li>Determine the profit and the marginal profit from the sale of 1500 shirts.
+                         <p class="m1830-hw-solution">$P(x)=R(x)-C(x)=15x-\left( -0.005{{x}^{2}}+7.5x+200 \right)$</p>
+                         <p class="m1830-hw-solution">$P(x)=0.0005{{x}^{2}}+7.5x-200$</p>
+                        <p class="m1830-hw-solution"> ${P}&#39;(x)=0.001x+7.5$</p>
+                         <p class="m1830-hw-solution">$P\left( 1500 \right)=\$12,175$</p>
+                         <p class="m1830-hw-solution">${P}&#39;\left( 1500 \right)=\$9$</p>
+                         <p class="m1830-hw-answer">The profit from the sale of 1500 shirts is \$12,175. The profit would be increased by \$9.00 if one more shirt is sold (1501 shirts sold).</p>
+                      </li>
+                   </ol>
+                </li>
+             </ol>
+             <!-- End section problem list  -->
+
+
+</article>
+
+         </div>
+<div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<li>
+  <a href="http://www.youtube.com/watch?v=WbyODj_OiZU" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Modeling a Forgetting Curve:</a>  An application of the derivative.
+</li>
+
+
+
+
+
+</ul>
+
+        </div>
+
+
+      </div>
+      <!-- ending of body container -->
+
+   </body>
+
+</html>

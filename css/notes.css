@@ -1,10 +1,5 @@
-@import url("m1830.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css");
+@import url("elements.css");
+@import url("custom.css");
 @import url("printing.css");
-@media print {
-    .m1830-answer, .m1830-solution {
-        visibility: hidden;
-    }
-.m1830-answer img, .m1830-solution img {
-  display:none;
-}
-}
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");

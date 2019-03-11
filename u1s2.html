@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>MATH 1830</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/notes.css" />
+      <link rel="stylesheet" href="css/printing.css" />
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/togglebuttons.js"></script>
+      <script src="js/loadmathjax.js"></script>
+     <script src="js/googlestats.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/togglepass.js"></script>
+
+    <!--todo move this to css files this is just for testing-->
+    <!--<style>
+        .m1830-answer,
+        .m1830-solution {
+            display: none;
+            /*visibility: hidden;*/
+        }
+        @media print {
+            .m1830-answer,
+            .m1830-solution {
+                display: block;
+                /*visibility: hidden;*/
+            }
+        }
+    </style>-->
+
+   </head>
+
+   <body>
+
+<nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                            title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input id="input" type="text" class="form-control" placeholder="pin-code">
+                        </div>
+                        <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>
+                    </form>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+      <div class="container">
+<h1>MATH 1830</h1>
+
+
+ <h2>Unit 1 Limits</h2>
+
+         
+
+         
+
+
+<article class="notes">
+
+               <h3>1.2 Finding Limits Algebraically/Infinte Limits</h3>
+
+               <h4> Pre-Class:</h4>
+<ul>
+              <li>Complete 1.1 Homework assignment: check and correct. </li>
+
+               <li> Take notes on the videos and readings (use the space below). </li> 
+               <li>Work and check problems #1-#3b in the 1.2 NOTES section. </li> 
+               <li> Complete the 1.2 Pre-Class Quiz.</li>
+               </ul>
+               <div class="row text-center m-buttons">
+
+
+           <div class="col-sm-2">
+         <a href="https://psccmath.github.io/math1830/u1s1.html" target="_blank">
+           <div class="box " tabindex="0">
+             <i class="fa fa-check fa-3x "></i>
+             <p>1.1 HW</p>
+           </div>
+         </a>
+        </div>
+
+
+        <!-- <div class="col-sm-2">
+          <a onclick="window.print()" href=#>
+            <div class="box " tabindex="0">
+              <i class="fa fa-print fa-3x "></i>
+              <p>Print</p>
+            </div>
+          </a>
+        </div> -->
+       <div class="col-sm-2">
+     <a href="https://cnx.org/contents/MZp9AnQy@4/Limits-at-Infinity-and-Asympto" target="_blank">
+       <div class="box " tabindex="0">
+         <i class="fa fa-book fa-3x "></i>
+         <p>Read</p>
+       </div>
+     </a>
+   </div>
+
+
+   <div class="col-sm-2">
+   <a href="http://www.youtube.com/watch?v=cfOcOgr0E7U" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-play fa-3x "></i>
+     <p>Watch</p>
+   </div>
+   </a>
+   </div>
+
+   <div class="col-sm-2">
+   <a href="https://www.myopenmath.com/" target="_blank">
+   <div class="box " tabindex="0">
+   <i class="fa fa-line-chart fa-3x "></i>
+   <p>1.2 Quiz</p>
+   </div>
+   </a>
+   </div>
+
+<div class="col-sm-2">
+   <a href="#ar" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-pencil-square fa-3x "></i>
+     <p>Resources</p>
+   </div>
+   </a>
+   </div>
+   </div>
+            
+
+                      <h4 class="m1830-pagebreak">Introduction</h4>
+
+                     <p>Discuss this graph with your group.</p>
+                     <p>Write down everything you observe.</p>
+                     <p>Be prepared to share with the class.</p>
+                     <img src="images/notes/u1s2p1i.png" alt="Graph of f of x equals x-squared divided by x-squared minus 1. Coordinate plane is from -6 to +6 on the x-axis and -5 to 5 on the y-axis. There is an horizontal asymptote at y = 1. There are vertical asymptotes at x=-1 and x=1.">
+                     <hr>
+
+                       <h4 class="m1830-pagebreak">Notes</h4>
+
+                     <p><strong>Find each indicated quantity, if it exists.</strong></p>
+
+   <ol>
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x \to 4} \;{x^2} - 5x + 1 =$</p>
+
+                     <p class="m1830-solution">${4^2} - 5\left( 4 \right) + 1 =$
+                        <p class="m1830-answer">$- 3$</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x \to - 5} \;2{x^2} + 10x + 7 =$</p>
+
+                     <p class="m1830-solution">$2{\left( { - 5} \right)^2} + 10\left( { - 5} \right) + 7 =$
+                        <p class="m1830-answer">$7$</p>
+
+                  </li>
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $f\left( x \right) = \;\frac{{3{x^2}\; + 2x - 1}}{{x{\;^2} + 3x + 2}}$</p>
+                     <ol>
+
+                        <li>$\underset{x\rightarrow -3}{lim}f(x)=$
+                           <p class="m1830-solution">$\underset{x\rightarrow -3}{lim}f(x)=\frac{3{{\left( -3 \right)}^{2}}~+2\left( -3 \right)-1}{\left( -3 \right){{~}^{2}}+3\left( -3 \right)+2}=\frac{20}{2}$
+                              <p class="m1830-answer">$10$</p>
+                        </li>
+
+                        <li>$\underset{x\rightarrow -1}{lim}f(x)=$
+                           <p class="m1830-solution">$\frac{3{{\left( -1 \right)}^{2}}~+2\left( -1 \right)-1}{\left( -1 \right){{~}^{2}}+3\left( -1 \right)+2}=\frac{0}{0}$</p>
+                           <p class="m1830-solution">Indeterminate form. Factor, reduce, try again.</p>
+                           <p class="m1830-solution">$\underset{x\rightarrow -1}{lim}f(x)=\underset{x\rightarrow -1}{lim}\frac{\left( 3x-1 \right)\left( x+1 \right)}{\left( x+1 \right)\left( x+2 \right)}=\underset{x\rightarrow -1}{lim}\frac{\left( 3x-1 \right)}{\left( x+2 \right)}=\frac{-4}{1}$
+                              <p class="m1830-answer">$-4$</p>
+                        </li>
+
+                        <li>$\mathop {\lim }\limits_{x\; \to \;2} f\left( x \right)$
+                           <span class="m1830-answer">$=\frac{5}{4}=1.25$</span>
+                           <br> </li>
+
+                        <li>$\mathop {\lim }\limits_{x\; \to \; - 2} f\left( x \right)$
+                           <span class="m1830-answer">$=\frac{7}{0}\,$ Does not exist</span>
+                           <br> </li>
+
+                     </ol>
+                  </li>
+
+
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x \to - 5} \;\frac{{x^2\; + 7x + 10}}{{x{\;^2} + 2x -15}}$</p>
+
+
+
+
+                           <p class="m1830-solution">$=\frac{(-5)^2+7(-5)+10}{(-5)^2+2(-5)-15}=\frac{0}{0}$</p>
+                           <p class="m1830-solution">Indeterminate form. Factor, reduce, try again.</p>
+                           <p class="m1830-solution">$\underset{x\rightarrow -5}{lim}f(x)=\underset{x\rightarrow -5}{lim}\frac{\left( x+5 \right)\left( x+2 \right)}{\left( x+5 \right)\left( x-3 \right)}=\underset{x\rightarrow -5}{lim}\frac{\left( x+2 \right)}{\left( x-3 \right)}=\frac{-3}{-8}$
+                              <p class="m1830-answer">$=\frac{3}{8}$</p>
+                        </li>
+
+
+                        <li class="m1830-problem">
+                           <p class="m1830-problem-text">
+                              $\mathop {\lim }\limits_{x \to 4} \;\frac{{x^2\; -16}}{{3x{\;^2} -13x +4}}$</p>
+
+
+                                 <p class="m1830-solution">$=\frac{(4)^2-16}{3(4)^2-13(4)+4}=\frac{0}{0}$</p>
+                                 <p class="m1830-solution">Indeterminate form. Factor, reduce, try again.</p>
+                                 <p class="m1830-solution">$\underset{x\rightarrow 4}{lim}f(x)=\underset{x\rightarrow 4}{lim}\frac{\left( x+4 \right)\left( x-4 \right)}{\left( 3x-1 \right)\left( x-4 \right)}=\underset{x\rightarrow 4}{lim}\frac{\left( x+4 \right)}{\left( 3x-1 \right)}=\frac{8}{11}$
+                                    <p class="m1830-answer">$=\frac{8}{11}$</p>
+                              </li>
+
+
+
+
+
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $\underset{x\rightarrow 10}{lim} \frac{{{x^2}\; - 15x + 50}}{{{{\left( {x - 10} \right)}^2}}}$</p>
+                     <p class="m1830-solution">$=\frac{0}{0}$</p>
+
+                     <p class="m1830-solution">Indeterminate form. Factor, reduce, try again.</p>
+                     <p class="m1830-solution">$\underset{x\rightarrow 10}{lim}\,\frac{\left( x-5 \right)\left( x-10 \right)}{{{\left( x-10 \right)}^{2}}}=\underset{x\rightarrow 10}{lim}\,\frac{\left( x-5 \right)}{\left( x-10 \right)}=\frac{5}{0}$</p>
+                     <p class="m1830-answer">The limit does not exist.  On inspection of the graph, the limit as x approaches 10 from the left and the limit as x approaches 10 from the right are not equal. There is a vertical asymptote at x=10.</p>
+
+                  </li>
+
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        A taxi service charges \$3.00 per mile for the first 10 miles. If the trip is over 10 miles, they charge \$5.00 per mile for every mile. Write a piecewise definition of the charge G(x) for taxi fares of x miles.</p>
+                     <p>Graph G(x) for $0 &lt; x\; \le 25.$
+                        <p><img src="images/notes/u1spp1.png" alt="Blank Cartesian Graph">
+                           <p class="m1830-answer">
+
+                              $f(x)= \begin{cases} 3x & 0\leq x\leq 10 \\ 5x & x > 10\\ \end{cases} $
+
+
+
+
+
+                           </p>
+
+                           <p>Find:</p>
+                           <p>$\underset{x\rightarrow10^-}{lim}G(x)=$
+                              <span class="m1830-answer">$30$</span></p>
+                           <p>$\underset{x\rightarrow10^+}{lim}G(x)=$
+                              <span class="m1830-answer">$50$</span></p>
+                           <p>$\underset{x\rightarrow10}{lim}G(x)=$
+                              <span class="m1830-answer">Does not exist</span></p>
+
+                           <p class="m1830-solution"><img src="images/notes/u1s1p27aa.png" alt="Graph of f(x) on domain (0,25]. f(x)=3x for domain (0,10]. f(x)=5x for domain (10,25]"></p>
+
+
+
+
+
+
+
+                  </li>
+
+    <div class="m1830-pagebreak"></div>
+
+                  <p><strong>Identify the horizontal asymptotes of the following rational expression (if the horizontal asymptote exists)</strong></p>
+
+
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $\underset{x\rightarrow\infty}{lim} \;\frac{{7{x^3}\; - {x^2}\; + 1}}{{5{x^3}\; + 6x\; - 7}} =$</p>
+
+                  <p class="m1830-solution">$\underset{x\rightarrow\infty}{lim} \;\frac{{7{x^3}\;}}{{5{x^3}\;}} = \mathop {\lim }\limits_{x \to \infty } \;\frac{{7\;}}{{5\;}} = \frac{7}{5}$</p>
+                  <p class="m1830-answer">Horizontal Asymptote at $y=\frac{7}{5}$</p>
+
+               </li>
+
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $\underset{x\rightarrow\infty}{lim} \;\frac{{6{x^4}\;-{x^2}\; + 1}}{{2{x^6}\;\; - 8x}} =$</p>
+
+                  <p class="m1830-solution">$\underset{x\rightarrow\infty}{lim} \;\frac{{6{x^4}\;}}{{2{x^6}}} = \underset{x\rightarrow\infty}{lim} \;\frac{{3\;}}{{{x^2}}} = 0$</p>
+                  <p class="m1830-answer">Horizontal Asymptote at $y=0$</p>
+
+               </li>
+
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $\underset{x\rightarrow\infty}{lim} \;\frac{{4{x^5}\;-\;9{x^3} - \;1}}{{5{x^3}\; + 3{x^2}\; - 7}} =$</p>
+
+                  <p class="m1830-solution">$\underset{x\rightarrow\infty}{lim}\;\frac{{4{x^5}\;}}{{5{x^3}\;}} = \underset{x\rightarrow\infty}{lim} \;\frac{{4{x^2}\;}}{{5\;}} = \infty $</p>
+                  <p class="m1830-answer">Because the function does not approach a specific y value as x approaches infinity, there is no horizontal asymptote.</p>
+
+                  <div class="m1830-pagebreak"></div>
+
+                  <p><strong>Vertical and Horizontal Asymptotes:  A summary</strong></p>
+                  <p><strong>Find all vertical asymptotes, horizontal asymptotes, and holes of the function, showing all your work:</strong></p>
+               </li>
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $f\left( x \right) = \;\frac{{2{x^2}\;\; - \;\;32}}{{{x^2}\; + \;5x\; + \;4}}$</p>
+
+                  <p class="m1830-solution">$f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}$</p>
+                  <p class="m1830-answer">Vertical Asymptote: x=-1</p>
+                  <p class="m1830-answer"> Hole: x=-4</p>
+                  <p class="m1830-answer"> Horizontal Asymptote: y=2</p>
+               </li>
+
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $f\left( x \right)\; = \frac{{{x^2}\;\; - \;\;9}}{{{x^2}\;\; - \;\;4}}$</p>
+
+                  <p class="m1830-solution">$f\left( x \right) = \;\frac{{\left( {x + 3} \right)\left( {x - 3} \right)}}{{\left( {x + 2} \right)\left( {x - 2} \right)}}$</p>
+                  <p class="m1830-answer">Vertical Asymptote: x=2 and x=-2</p>
+                  <p class="m1830-answer"> Hole: none</p>
+                  <p class="m1830-answer">Horizontal Asymptote: y=1</p>
+
+                  <p><strong>Find all vertical asymptotes, horizontal asymptotes, and holes of the function by a quick analysis:</strong> </p>
+               </li>
+
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $f\left( x \right)\; = \frac{{x\;\; + 2}}{{{x^2}\; + \;3}}$</p>
+
+                  <p class="m1830-answer">Vertical Asymptote: none</p>
+                  <p class="m1830-answer">Hole: none</p>
+                  <p class="m1830-answer">Horizontal Asymptote: y=0</p>
+               </li>
+
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $f\left( x \right)\; = \frac{{{x^2}\; - 3x - \;10}}{{{x^2}\; - \;4x - 5}}$</p>
+
+                  <p class="m1830-solution">$f(x) = \frac{{\left( {x - 5} \right)\left( {x + 2} \right)}}{{\left( {x - 5} \right)\left( {x + 1} \right)}}$</p>
+                  <p class="m1830-answer">Vertical Asymptote: x=-1</p>
+                  <p class="m1830-answer">Hole: x=5</p>
+                  <p class="m1830-answer">Horizontal Asymptote: y=1</p>
+               </li>
+
+               <li class="m1830-problem">
+                  <p class="m1830-problem-text">
+                     $f(x) = \frac{{{x^2} + 5x - 14}}{{x - 2}}$</p>
+                     <p class="m1830-answer">$=\frac{(x+7)(x-2)}{x-2}$</p>
+                  <p class="m1830-answer">Vertical Asymptote: There are no vertical asymptotes.</p>
+                  <p class="m1830-answer">Hole: x=2</p>
+                  <p class="m1830-answer">Horizontal Asymptote: There are no horizontal asymptotes.</p>
+
+
+               </li>
+
+               </ol>
+
+</article>
+
+<article class="hw">
+
+               <h3>1.2 Finding Limits Algebraically/Infinite Limits</h3>
+
+               <h4>Homework</h4>
+               <strong>Compute the limits.  If the limit does not exist, explain why.</strong>
+               <ol>
+                  <!-- Begin section problem list  -->
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow3}{lim}\,\ \frac{{{x}^{2}}+x-12}{x-3}\ = $</p>
+                     <p class="m1830-hw-solution">$\frac{{{3}^{2}}+3-12}{3-3}=\frac{0}{0}$</p>
+                     <p class="m1830-hw-solution">Indeterminate form: Factor, reduce, take the limit again.</p>
+                     <p class="m1830-hw-solution">$\underset{x\rightarrow3}{lim}\,\ \frac{(x+4)(x-3)}{x-3}$</p>
+                     <p class="m1830-hw-solution">$=\underset{x\rightarrow3}{lim}\,\ \left( x+4 \right)$</p>
+                     <p class="m1830-hw-solution">$=3+4=$</p>
+                     <p class="m1830-hw-answer">$7$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow1}{lim}\,\ \frac{{{x}^{2}}+x-12}{x-3}\ = $ </p>
+                     <p class="m1830-hw-solution">$\frac{{{1}^{2}}+1-12}{1-3}=\frac{-10}{-2}=$</p>
+                     <p class="m1830-hw-answer">$5$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow10}{lim}\,\ 10 =$ </p>
+                     <p class="m1830-hw-answer">$10$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow4}{lim}\,\ 3{{x}^{2}}-5x = $ </p>
+                     <p class="m1830-hw-solution">$3{{(4)}^{2}}-5(4)$</p>
+                     <p class="m1830-hw-solution">$=3(16)-20$</p>
+                     <p class="m1830-hw-solution">$=48-20=$</p>
+                     <p class="m1830-hw-answer">$28$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow0}{lim}\,\ \frac{4x-5{{x}^{2}}}{x-1} = $ </p>
+                     <p class="m1830-hw-solution">$\frac{4(0)-5{{(0)}^{2}}}{0-1}=\frac{0}{-1}=$</p>
+                     <p class="m1830-hw-answer">$0$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow1}{lim}\,\ \frac{{{x}^{2}}-1}{x-1} = $ </p>
+                     <p class="m1830-hw-solution">$\frac{{{1}^{2}}-1}{1-1}=\frac{0}{0}$</p>
+
+                     <p class="m1830-hw-solution">Indeterminate form: Factor, reduce, take the limit again.</p>
+                     <p class="m1830-hw-solution">$\underset{x\rightarrow1}{lim}\frac{\left(x+1\right)\left(x-1\right)}{x-1}$</p>
+                     <p class="m1830-hw-solution">$=\,\underset{x\rightarrow1}{lim}\,\left( x+1 \right)$</p>
+                     <p class="m1830-hw-solution">$=1+1$</p>
+                     <p class="m1830-hw-answer">$2$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow0^{+}}{lim}\,\ \frac{\sqrt{2-{{x}^{2}}}}{x} = $ </p>
+                     <p class="m1830-hw-solution">$\frac{\sqrt{2-{{0}^{2}}}}{0}=$</p>
+                     <p class="m1830-hw-answer">$\frac{\sqrt{2}}{0}$ , which is undefined</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow0^{+}}{lim}\,\ \frac{\sqrt{2-{{x}^{2}}}}{x+1} =$ </p>
+                     <p class="m1830-hw-solution">$\frac{\sqrt{2-{{0}^{2}}}}{0+1}=\frac{\sqrt{2}}{1}=$</p>
+                     <p class="m1830-hw-answer">$\sqrt{2}$
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow2}{lim}\,\ {{({{x}^{2}}+4)}^{3}} =$ </p>
+                     <p class="m1830-hw-solution">${{({{2}^{2}}+4)}^{3}}={{(4+4)}^{3}}={{(8)}^{3}}=$</p>
+                     <p class="m1830-hw-answer">$512$</p>
+                     <p><cite> Problems 1-9 from <a href="http://www.whitman.edu/mathematics/california_calculus/calculus.pdf">http://www.whitman.edu/mathematics/california_calculus/calculus.pdf</a> </cite></p>
+       <p><strong>Find the vertical and horizontal asymptotes and holes, if they exist.</strong></p>
+                  </li>
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{2x-7}{x-4}\ $</p>
+                     <p class="m1830-hw-answer">VA: $x=4$</p>
+                     <p class="m1830-hw-answer">HA: $y=2$</p>
+                     <p class="m1830-hw-answer">Holes: There are no holes.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\ \frac{{{x}^{2}}-5}{{{x}^{3}}+{{x}^{2}}+1}\ $</p>
+                     <p class="m1830-hw-answer">VA: $x=-1.47$</p>
+                     <p class="m1830-hw-answer">HA: $y=0$</p>
+                     <p class="m1830-hw-answer">Holes: There are no holes.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{{{x}^{3}}+6{{x}^{2}}+8x}{{{x}^{2}}-16}\ $</p>
+                     <p class="m1830-hw-answer">VA: $x=4$</p>
+                     <p class="m1830-hw-answer">HA: There are no horizontal asymptotes.</p>
+                     <p class="m1830-hw-answer">Holes: $x=-4$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{x-5}{\sqrt{4{{x}^{2}}+8}}\ $</p>
+                     <p class="m1830-hw-answer">VA: There are no vertical asymptotes.</p>
+                     <p class="m1830-hw-answer">HA: $y=0.5$</p>
+                     <p class="m1830-hw-answer">Holes: There are no holes.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\ \frac{{{x}^{2}}-1}{{{x}^{2}}-x-2}$</p>
+                     <p class="m1830-hw-answer">VA: $x=2$</p>
+                     <p class="m1830-hw-answer">HA: $y=1$</p>
+                     <p class="m1830-hw-answer">Holes: $x=-1$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> DIRECTV offers the following packages:</p>
+                     <ul>
+
+                        <li>Select Package: 145 channels (0-145) for \$19.99 per month</li>
+
+                        <li> Choice Package: Add 30 additional channels (146-175) for \$29.99 per month</li>
+                     </ul>
+                     <ol>
+
+                        <li>Write a piecewise definition of the charge G(x) for service with x channels.</li>
+                     </ol>
+
+                     <p class="m1830-hw-answer">$G(x)=\begin{cases} 19.99 & 0\lt x\leq 145 \\ 29.99 & 145\lt x\leq 175 \\ \end{cases}$​
+                     </p>
+
+
+                     <ol>
+
+                        <li>Graph G(x) for $0&lt;x~\le 175.$
+                           <p class="m1830-hw-answer"><img src="images/hw/u1s1p10b.png" alt="Piecewise graph of G(x) Horizontal line at y=19.99 on domain (0,145] Horizontal line at y=29.99 on domain (145,175]"></p>
+                        </li>
+
+                        <li>Find: $\underset{x\rightarrow145^{-}}{lim}\,G\left( x \right)$ =
+                           <span class="m1830-hw-answer">$19.99$</span>
+                        </li>
+
+                        <li>Find: $\underset{x\rightarrow145^{+}}{lim}\,G\left( x \right)$ =
+                           <span class="m1830-hw-answer">$29.99$</span>
+                        </li>
+
+                        <li>Find: $\underset{x\rightarrow145}{lim}\,G\left( x \right)$
+                           <span class="m1830-hw-answer">Does Not Exist</span>
+                        </li>
+                     </ol>
+                     <p><cite>  Source: <a href="https://www.directv.com/DTVAPP/pepod/configure.jsp?CMP=&amp;keninvocaid=#package-section">https://www.directv.com/DTVAPP/pepod/configure.jsp?CMP=&amp;keninvocaid=#package-section</a>  </cite></p>
+
+                  </li>
+               </ol>
+               <!-- End section problem list  -->
+       <div class="m1830-pagebreak"></div>
+
+               <h3>Extra Practice for Limits and Asymptotes</h3>
+
+               <p><strong>Find the limits.</strong></p>
+               <p><img src="images/hw/u1s2cp1.png" alt="Coordinate Plane:  -10 to 10 on x- and y-axes.  Vertical Asymptotes at x =-4 and x=2.  Three curves graphed on the plane.  Left curve begins at top left of graph, crosses the x-axis at approximately -7.75, continues down until approximately (-6,-4), is horizontal until x=-4.5, then increases very close to the vertical asymptote at x=-4. The middle curve rises from the bottom of the graph along the vertical asymptote at x=-4 until the point (-2,-1).  The curve then decreases until its endpoint at (2,-3).  This endpoint is a solid dot.  The curve on the right third of the graph is decreasing from the top of the coordinate plane along the right side of the vertical asymptote at x=2.  It crosses the x-axis at approximately x=2.25 and continues decreasing.  This curve decreases more slowly (level out) beginning at x=3 to almost a horizontal line at y=-5."></p>
+               <!-- Begin section problem list  -->
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-4^{-}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$\infty $</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-4^{+}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$-\infty $</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-4}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">Does Not Exist</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(-4)=$
+                        <span class="m1830-hw-answer">undefined</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow2^{-}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$-3$</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow2^{+}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$\infty $</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow2}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">Does Not Exist</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(2)=$
+                        <span class="m1830-hw-answer">$-3$</span></p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-5^{-}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$-4$</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-5^{+}}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$\-4 $</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-5}{lim}\,f(x)=$
+                        <span class="m1830-hw-answer">$-4$</span></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(-5)=$
+                        <span class="m1830-hw-answer">$-4$</span></p>
+                     <p><strong>Find the limit.</strong></p>
+                  </li>
+
+
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow1}{lim}\,\frac{10x}{x-1}=$</p>
+                     <p class="m1830-hw-solution">$\frac{10(1)}{1-1}=\frac{10}{0}$</p>
+                     <p class="m1830-hw-answer">Does Not Exist</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $\underset{x\rightarrow-12}{lim}\,\frac{{{x}^{2}}+11x-12}{x+12}=$</p>
+                     <p class="m1830-hw-solution">$\underset{x\rightarrow-12}{lim}\,\frac{(x+12)(x-1)}{(x+12)}=\underset{x\rightarrow-12}{lim}\,(x-1)=$</p>
+                     <p class="m1830-hw-answer">$-13$</p>
+                     <p><strong>Find the vertical and horizontal asymptotes and holes, if they exist.</strong></p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{9x}{x+7}$</p>
+                     <p class="m1830-hw-answer">VA: $x=-7$</p>
+                     <p class="m1830-hw-answer">HA: $y=9$</p>
+                     <p class="m1830-hw-answer">Holes: There are no holes.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=9{{x}^{8}}+7{{x}^{6}}+21$</p>
+                     <p class="m1830-hw-answer">VA: There are no vertical asymptotes.</p>
+                     <p class="m1830-hw-answer">HA: There are no holes.</p>
+                     <p class="m1830-hw-answer">Holes: There are no horizontal asymptotes.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{10{{x}^{2}}+49}{{{x}^{2}}-49}$</p>
+                     <p class="m1830-hw-answer">VA: $x=7$ and $x=-7$</p>
+                     <p class="m1830-hw-answer">HA: $y=10$</p>
+                     <p class="m1830-hw-answer">Holes: There are no holes.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{6x+7}{7{{x}^{2}}+4}$</p>
+                     <p class="m1830-hw-answer">VA: There are no vertical asymptotes.</p>
+                     <p class="m1830-hw-answer">HA: $y=0$</p>
+                     <p class="m1830-hw-answer">Holes: There are no holes.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> $f(x)=\frac{2{{x}^{2}}-7x-15}{{{x}^{2}}+3x-40}$</p>
+                     <p class="m1830-hw-solution">$f(x)=\frac{(2x+3)(x-5)}{(x+8)(x-5)}$</p>
+                     <p class="m1830-hw-answer">VA: $x=-8$</p>
+                     <p class="m1830-hw-answer">HA: $y=2$</p>
+                     <p class="m1830-hw-answer">Hole: $x=5$</p>
+                  </li>
+               </ol>
+
+
+</article>
+
+         </div>
+
+ <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<li>
+  <a href="http://www.youtube.com/watch?v=EAa3J_nDkoI" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Algebraic Limits with Factoring</a>  (5:43)
+</li>
+
+<li><a href="https://www.khanacademy.org/math/calculus-home/limits-and-continuity-calc/limits-from-equations-review-calc/e/limits-from-equations-challenge" target="_blank"><i class="fa fa-calculator" aria-hidden="true"></i> Practice Limits:</a>  Indeterminate Form Requiring Factoring 
+</li>
+
+<li>
+  <a href="http://www.youtube.com/watch?v=a2Ia_ZlUCaQ" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Unbounded Limits: Limits and Infinity</a>  (7:40)
+</li>
+
+<li>
+  <a href="http://www.youtube.com/watch?v=gv9ogppphso" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Limits at Positive and Negative Infinity</a>  (4:06)
+</li>
+
+<li>
+  <a href="http://www.youtube.com/watch?v=KcqO1fX9b_I" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> More Limits at Infinity</a>  (4:32)
+</li>
+
+
+<li>
+  <a href="pdfs/u1limitsatinfinityws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Limits at Infinity Worksheet</a> 
+</li>
+</ul>
+
+        
+</div>
+
+
+      </div>
+      <!-- ending of body container -->
+
+   </body>
+
+</html>

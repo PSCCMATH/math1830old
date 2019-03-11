@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u2toc">MATH 1830</h1>
+
+
+          <h2 >Unit 2 Derivatives</h2>
+
+        <div id="u2" class="m1830-unit">
+
+
+
+<article class="notes">
+
+                <h3 id="2-1-exponential-and-logarithmic-function-applications">2.1 Exponential and Logarithmic Function Applications</h3>
+
+                              <h4> Pre-Class:</h4>
+<ul>
+         
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+              <li>Work and check problem #1 in the 2.1 NOTES section. </li>
+              <li> Complete the 2.1 Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+
+
+       <div class="col-sm-2">
+          <a href="./pdfs/unit2.pdf">
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div>
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:TjgBKRr3@5/Exponential-and-Logarithmic-Fu" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=BKGx8GMVu88" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>2.1 Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>
+          
+
+                     <h4 class="m1830-pagebreak">Introduction</h4>
+
+
+                <p>Exponential functions occur frequently in science and business and are commonly used in compound interest applications.</p>
+                <ul>
+
+                    <li>The value of a \$1000 investment returning 8% interest compounded monthly after 12 years would be calculated using the formula $$A=P\left(1+\frac rn\right)^{nt},$$
+                    <p> where:</p>  </li>
+                    <ul>
+                    <li>A is the final amount in the account.</li>
+                        <li> P is the principal. </li>
+                            <li>r is the interest rate.</li>
+                                <li> n is the number of compounding periods per year.</li>
+                                    <li>t is the number of years.</li>
+                    </ul><br>
+                    <li>The compounding frequency has a significant impact on the final amount of money (either saved or owed).
+                        <img src="images/notes/u2s1p1i.png" alt="Graph of Amount of Money in an account when compounded at various compounding frequencies.  4 graphs--one each for compounding yearly, quarterly, monthly, and continuously"></li>
+                </ul>
+      <p class="m1830-pagebreak">Notes</p>
+<p><strong> Compounding Frequency</strong></p>
+
+                <ul>
+                  <li> Yearly:  $$A=1000(1+\frac{.08}1)^1=1080$$
+                  </li>
+                  <li> Quarterly:  $$A=1000(1+\frac{.08}4)^4=1082.43$$
+                  </li>
+                  <li> Monthly: $$A=1000(1+\frac{.08}{12})^{12}=1083$$
+                  </li>
+                  <li> Daily:  $$A=1000(1+\frac{.08}{365})^{365}=1083.28$$
+                  </li>
+                  <li> Continuously (at every instant): $$A=1000 \cdot~\underset{n\to \infty }{\mathop{\lim }}\,{{\left( 1+\frac{.08}{n} \right)}^{n}} =1083.29$$
+                  </li>
+</ul>
+                <p>Our focus will be on continuous compounding: </p>
+                <ul>
+
+                    <li>What is e?</li>
+
+                    <li>Irrational number (similar to $\pi $ )</li>
+
+                    <li>2.718281828459…..</li>
+
+                    <li>Like $\pi $, e occurs frequently in natural phenomena
+                        <ul>
+
+                            <li>Growth of bacterial cultures</li>
+
+                            <li>Decay of a radioactive substance</li>
+                        </ul>
+                    </li>
+
+                    <li>Formal definition of e: $$e=~\underset{n\to \infty }{\mathop{\lim }}\,{{\left( 1+\frac{1}{n} \right)}^{n}}$$ $$\approx ~~2.718281829$$</li>
+                </ul>
+                <hr>
+
+
+
+
+
+
+                <h4 class="m1830-pagebreak">Notes</h4>
+                <p>Continuous Compounding Formula (appreciation and depreciation): $$A = P{e^{rt}}$$ </p>
+                <p><strong>CONTINUOUS COMPOUND INTEREST:</strong> Round all answers to two decimal places.</p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Hometown Bank offers a CD that earns 1.58% compounded continuously. If \$10,000 is invested in this CD, how much will it be worth in 3 years?</p>
+
+                        <p class="m1830-solution">$A = 10,000{e^{.0158(3)}}$</p>
+                        <p class="m1830-solution">$A = \$ 10,485.41$</p>
+                        <p class="m1830-answer">The account will be worth approximately \$$10,485.41$ in three years.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Hometown Bank offers a CD that earns 1.58% compounded continuously. If \$10,000 is invested in this CD, how long will it take the account to be worth $11,000?</p>
+
+                        <p class="m1830-solution">$11,000 = 10,000{e^{.0158t}}$</p>
+                        <p class="m1830-solution">$\frac{{11,000}}{{10,000}} = \frac{{10,000{e^{.0158t}}}}{{10,000}}$</p>
+                        <p class="m1830-solution">$\frac{{11}}{{10}} = {e^{.0158t}}$</p>
+                        <p class="m1830-solution">$\ln \frac{{11}}{{10}} = \ln {e^{.0158t}}$</p>
+                        <p class="m1830-solution">$\ln  \frac{{11}}{{10}} = .0158t$</p>
+                        <p class="m1830-solution">$\frac{{\ln \frac{{11}}{{10}}}}{{.0158}} = \frac{{.0158t}}{{.0158}}$</p>
+                        <p class="m1830-solution">$6.03 = t$</p>
+                        <p class="m1830-answer">It will take approximately 6.03 years for the account to be worth $11,000.</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Doubling Time: How long will it take money to double if it is invested at 5% compounded continuously?</p>
+
+                        <p class="m1830-solution">$A = P{e^{rt}}$</p>
+                        <p class="m1830-solution">$2 = 1{e^{.05t}}$</p>
+                        <p class="m1830-solution">$2 = {e^{0.05t}}$</p>
+                        <p class="m1830-solution">$\ln 2 = \ln {e^{0.05t}}$</p>
+                        <p class="m1830-solution">$\ln 2 = 0.05t$</p>
+                        <p class="m1830-solution">$\frac{{\ln 2}}{{0.05}} = t$</p>
+                        <p class="m1830-solution">$t = 13.86$</p>
+                        <p class="m1830-answer">It will take approximately 13.86 years for the initial investment to double.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Doubling Rate: At what nominal rate compounded continuously must money be invested to double in 8 years?</p>
+
+                        <p class="m1830-solution">$A = P{e^{rt}}$</p>
+                        <p class="m1830-solution">$2 = 1{e^{r(8)}}$</p>
+                        <p class="m1830-solution">$2 = {e^{8r}}$</p>
+                        <p class="m1830-solution">$\ln 2 = \ln {e^{8r}}$</p>
+                        <p class="m1830-solution">$\ln 2 = 8r$</p>
+                        <p class="m1830-solution">$\frac{{\ln 2}}{8} = r$</p>
+                        <p class="m1830-solution">$0.0866 = r$</p>
+                        <p class="m1830-answer">In order for the initial investment to double in 8 years, the money must be invested in an account with a nominal rate of approximately 8.7% compounded continuously.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            How long will it take money to triple if it is invested at 10.5% compounded continuously?</p>
+
+                        <p class="m1830-solution">$A = P{e^{rt}}$</p>
+                        <p class="m1830-solution">$3 = 1{e^{.105t}}$</p>
+                        <p class="m1830-solution">$\ln 3 = \ln {e^{.105t}}$</p>
+                        <p class="m1830-solution">$\ln 3 = .105t$</p>
+                        <p class="m1830-solution">$\frac{{\ln 3}}{{.105}} = t$</p>
+                        <p class="m1830-solution">$10.46=t$</p>
+                        <p class="m1830-answer">It will take approximately 10.46 years for the initial investment to triple.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Radioactive Decay: A mathematical model for the decay of radioactive substances is given by $$Q = {Q_0}\;{e^{rt}}.$$ The continuous compound rate of decay of carbon-14 per year is $r = -0.0001238.$ How long will it take a certain amount of carbon-14 to
+                            decay to half the original amount?</p>
+
+                        <p class="m1830-solution">$\frac{1}{2} = 1{e^{ - 0.0001238t}}$</p>
+                        <p class="m1830-solution">$\ln .5 = \ln {e^{ - 0.0001238t}}$</p>
+                        <p class="m1830-solution">$\ln .5 = - 0.0001238t$</p>
+                        <p class="m1830-solution">$\frac{{\ln .5}}{{ - 0.000128}} = t$</p>
+                        <p class="m1830-solution">$t = 5598.93$</p>
+                        <p class="m1830-answer">It will take approximately 5598.93 years for the carbon-14 to decay to half the original amount.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            The estimated resale value R (in dollars) of a company car after t years is given by: $$R(t) = 20000{(0.86)^t}.$$ What will be the resale value of the car after 2 years? How long will it take the car to depreciate to half the original value?</p>
+
+                        <p class="m1830-solution">$R(2) = 20,000{(0.86)^2} = \$ 14,792$</p>
+<p class="m1830-answer">The resale value of the car after two years will be $14.792.</p>
+
+                        <p class="m1830-solution">$\frac{{10,000}}{{20,000}} = \frac{{20,000{{(0.86)}^t}}}{{20,000}}$</p>
+                        <p class="m1830-solution">$.5 = {0.86^t}$</p>
+                        <p class="m1830-solution">$\ln .5 = \ln {0.86^t}$</p>
+                        <p class="m1830-solution">$\ln .5 = t\ln 0.86$</p>
+                        <p class="m1830-solution">$\frac{{\ln .5}}{{\ln 0.86}} = \frac{{t\ln 0.86}}{{\ln 0.86}}$</p>
+                        <p class="m1830-solution">$\frac{{\ln .5}}{{\ln 0.86}} = t$</p>
+                        <p class="m1830-solution">$t = 4.5957$</p>
+                        <p class="m1830-answer">It will take approximately 4.6 years for the car to depreciate to half its original value.</p>
+
+
+
+
+                    </li>
+                </ol>
+
+          </article>
+
+      <article class="hw">
+
+            <h3>2.1 The Constant <var class="fontnormal">e</var> and Natural Log Applications</h3>
+
+            <h4>Homework</h4>
+            <p><strong>Answer the following questions.  Show all of your work.  Round to two decimal places.</strong></p>
+
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> If you invested $1,000 in an account paying an annual percentage rate (quoted rate) of 2%, compounded continuously, how much would you have in your account at the end of</p>
+                    <ol>
+
+                        <li>1 year
+                            <p class="m1830-hw-solution">$A = 1000{e^{.02(1)}} = 1020.20$</p>
+                            <p class="m1830-hw-answer">At the end of one year, there will be $1020.20 in the account.</p>
+                        </li>
+
+                        <li>10 years
+                            <p class="m1830-hw-solution">$A = 1000{e^{.02(10)}} = 1221.40$</p>
+                            <p class="m1830-hw-answer">At the end of ten years, there will be $1221.40 in the account.</p>
+                        </li>
+
+                        <li>20 years
+                            <p class="m1830-hw-solution">$A = 1000{e^{.02(20)}} = 1491.82$</p>
+                            <p class="m1830-hw-answer">At the end of twenty years, there will be $1491.82 in the account.</p>
+                        </li>
+
+                        <li>50 years
+                            <p class="m1830-hw-solution">$A = 1000{e^{.02(50)}} = 2718.28$</p>
+                            <p class="m1830-hw-answer">At the end of fifty years, there will be $2718.28 in the account.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> A $1,000 investment is made in a trust fund at an annual percentage rate of 12%, compounded continuously. How long will it take the investment to</p>
+                    <ol>
+
+                        <li>Double
+                            <p class="m1830-hw-solution">$2000 = 1000{e^{0.12t}}$</p>
+                            <p class="m1830-hw-solution">$2 = {e^{0.12t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 2 = \ln {e^{0.12t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 2 = 0.12t$</p>
+                            <p class="m1830-hw-solution">$\frac{{\ln 2}}{{0.12}} = t$</p>
+                            <p class="m1830-hw-solution">$t = 5.78$</p>
+                            <p class="m1830-hw-answer">The investment will double in approximately 5.78 years.</p>
+                        </li>
+
+                        <li>Triple
+                            <p class="m1830-hw-solution">$3000 = 1000{e^{0.12t}}\quad$</p>
+                            <p class="m1830-hw-solution">$3 = {e^{0.12t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 3 = \ln {e^{0.12t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 3 = 0.12t$</p>
+                            <p class="m1830-hw-solution">$\frac{{\ln 3}}{{0.12}} = t$</p>
+                            <p class="m1830-hw-solution">$t = 9.16$</p>
+                            <p class="m1830-hw-answer">The investment will triple in approximately 9.16 years.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> If $500 is invested in an account which offers 0.75%, compounded continuously find:</p>
+                    <ol>
+
+                        <li>The amount A in the account after t years.
+                            <p class="m1830-hw-answer">$A = 500{e^{.0075t}}$</p>
+                        </li>
+
+                        <li>Determine how much is in the account after 5 years, 10 years, 30 years, and 35 years.
+                            <p class="m1830-hw-solution">$A(5) = 500{e^{.0075(5)}}=519.11$</p>
+                            <p class="m1830-hw-answer">After 5 years, $519.11 will be in the account.</p>
+
+                            <p class="m1830-hw-solution">$A(10) = 500{e^{.0075(10)}}=538.94$</p>
+                            <p class="m1830-hw-answer">After 10 years, $538.94 will be in the account.</p>
+
+                            <p class="m1830-hw-solution">$A(30) = 500{e^{.0075(30)}}=626.16$</p>
+                            <p class="m1830-hw-answer">After 30 years, $626.16 will be in the account.</p>
+
+                            <p class="m1830-hw-solution">$A(35) = 500{e^{.0075(35)}}=650.09$</p>
+                            <p class="m1830-hw-answer">After 35 years, $650.09 will be in the account.</p>
+                        </li>
+
+                        <li>Determine how long it will take for the initial investment to double.
+                            <p class="m1830-hw-solution">$1000 = 500{e^{.0075t}}$</p>
+                            <p class="m1830-hw-solution">$2 = {e^{.0075t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 2 = \ln {e^{.0075t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 2 = .0075t$</p>
+                            <p class="m1830-hw-solution">$\frac{{\ln 2}}{{.0075}} = t$</p>
+                            <p class="m1830-hw-answer">It will take approximately 92.42 years for the initial investment to double.</p>
+                        </li>
+
+                        <li>Find and interpret the average rate of change of the amount in the account from the end of the fourth year (t=4) to the end of the fifth year (t=5).
+                            <p class="m1830-hw-solution">4th year $A(4) = 500{e^{.0075(4)}} = \$515.23$</p>
+                            <p class="m1830-hw-solution">5th year $A(5) = 500{e^{.0075(5)}} = \$519.11$</p>
+                            <p class="m1830-hw-solution">$\frac{A(5)-A(4)}{5-4}=\frac{519.11-515.23}{1}=3.88$</p>
+                            <p class="m1830-hw-answer">The balance in the account is increasing by an average of $3.88 per year.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> If $5000 is invested in an account which offers 2.125%, compounded continuously, find:</p>
+                    <ol>
+
+                        <li>The amount A in the account after t years.
+                            <p class="m1830-hw-answer">$A(t) = 5000{e^{.02125t}}$</p>
+                        </li>
+
+                        <li>Determine how much is in the account after 5 years, 10 years, 30 years, and 35 years.
+                            <p class="m1830-hw-solution">$A(5) = 5000{e^{.02125(5)}} = 5560.50$ </p>
+                            <p class="m1830-hw-answer">After 5 years, $5560.50 will be in the account.</p>
+                            <p class="m1830-hw-solution">$A(10) = 5000{e^{.02125(10)}} = 6183.83$</p>
+                            <p class="m1830-hw-answer">After 10 years, $6183.83 will be in the account.</p>
+                            <p class="m1830-hw-solution">$A(30) = 5000{e^{.02125(30)}} = 9458.73$</p>
+                            <p class="m1830-hw-answer">After 30 years, $9458.73 will be in the account.</p>
+                            <p class="m1830-hw-solution">$A(35) = 5000{e^{.02125(35)}} =10519.05$</p>
+                            <p class="m1830-hw-answer">After 35 years, $10519.05 will be in the account.</p>
+                        </li>
+
+                        <li>Determine how long it will take for the initial investment to double.
+                            <p class="m1830-hw-solution">$10,000 = 5000{e^{.02125t}}$</p>
+                            <p class="m1830-hw-solution">$2 = {e^{.02125t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 2 = \ln {e^{.02125t}}$</p>
+                            <p class="m1830-hw-solution">$\ln 2 = .02125t$</p>
+                            <p class="m1830-hw-solution">$\frac{{\ln 2}}{{.02125}} = t$</p>
+                            <p class="m1830-hw-answer">It will take approximately 32.62 years for the initial investment to double.</p>
+                        </li>
+
+                        <li>Find and interpret the average rate of change of the amount in the account from the end of the fourth year (t=4) to the end of the fifth year (t=5).
+
+                            <p class="m1830-hw-solution">$A(4) = 5000{e^{.02125(4)}}$</p>
+                            <p class="m1830-hw-solution m1830-step">$A(4) = \$ 5443.59$</p>
+
+
+                            <p class="m1830-hw-solution">$A(5) = 5000{e^{.02125(5)}}$</p>
+                            <p class="m1830-hw-solution m1830-step">$A(5) = \$ 5560.50$</p>
+                            <p class="m1830-hw-solution">$\frac{A(5)-A(4)}{5-4}=\frac{\displaystyle5560.50-5443.59}{5-4}=\frac{\displaystyle116.91}1=116.91$</p>
+                            <p class="m1830-hw-answer">The balance in the account is increasing by an average of $116.91 per year.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> How much money needs to be invested now to obtain \$5000 in 10 years if the interest rate in a CD is 2.25%, compounded continuously?</p>
+                    <p class="m1830-hw-solution">$A = P{e^{rt}}$</p>
+                    <p class="m1830-hw-solution">$5000 = P{e^{0.0225(10)}}$</p>
+                    <p class="m1830-hw-solution">$5000 = P{e^{0.225}}$</p>
+                    <p class="m1830-hw-solution">$\frac{{5000}}{{{e^{0.225}}}} = \frac{{P{e^{0.225}}}}{{{e^{0.225}}}}$</p>
+                    <p class="m1830-hw-solution">$\$ 3992.58 = P$</p>
+                    <p class="m1830-hw-answer">\$3992.58 needs to be invested now, in order to have $5000 in 10 years.</p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> A mathematical model for depreciation of a car is given by $A = P{(1-r)^t}$, where A is defined as the value of the car after t years, P is defined as the original value of the car, and r is the rate of depreciation per year.  The cost of a new car is $32,000. It depreciates at a rate of 15% per year. This means that it loses 15% of its value each year.</p>
+                    <ol>
+
+                        <li>Find the formula that gives the value of the car in terms of time.
+                          <p class="m1830-hw-solution">$A = 32,000{\left( {1-0.15} \right)^t}$</p>
+                            <p class="m1830-hw-answer">$A = 32,000{\left( {0.85} \right)^t}$</p>
+                        </li>
+
+                        <li>Find the value of the car when it is four years old.
+                            <p class="m1830-hw-solution">$A = 32,000{\left( {.85} \right)^4}$</p>
+                            <p class="m1830-hw-solution">$A = 16,704.20$</p>
+                            <p class="m1830-hw-answer">The car is worth approximately $16,704.20 when it is 4 years old.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> A mathematical model for depreciation of an ATV (all-terrain vehicle) is given by $A = P{(1-r)^t}$, where A is defined as the value of the vehicle after t years, P is defined as the original value of the vehicle, and r is the rate of depreciation per year. The cost of a new ATV (all-terrain vehicle) is \$7200. It depreciates at 18% per year.</p>
+                    <ol>
+
+                        <li>Find the formula that gives the value of the ATV in terms of time.
+                          <p class="m1830-hw-solution">$A = 7200{\left( {1-0.18} \right)^t}$</p>
+                            <p class="m1830-hw-answer">$A = 7200{\left( {.82} \right)^t}$</p>
+                        </li>
+
+                        <li>Find the value of the ATV when it is ten years old.
+                            <p class="m1830-hw-solution">$A = 7200{\left( {.82} \right)^{10}}$</p>
+                            <p class="m1830-hw-solution">$A = 989.63$</p>
+                            <p class="m1830-hw-answer">The value of the ATV when it is 10 years old will be $989.63.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> Michigan’s population is declining at a rate of 0.5% per year. In 2004, the state had a population of 10,112,620.</p>
+                    <ol>
+
+                        <li>Write a function to express this situation.
+                            <p class="m1830-hw-answer">$y = 10,112,620{\left( {.995} \right)^t}$</p>
+                        </li>
+
+                        <li>If this rate continues, what will the population be in 2012?
+                            <p class="m1830-hw-solution">$y = 10,112,620{\left( {.995} \right)^8}$</p>
+                            <p class="m1830-hw-answer">In 2012 the population of Michigan will be approximately 9,715,124 people.</p>
+                        </li>
+
+                        <li>When will the population of Michigan reach 9,900,000?
+                            <p class="m1830-hw-solution">$9,900,000 = 10,112,620{\left( {.995} \right)^t}$</p>
+                            <p class="m1830-hw-solution">$\frac{{9,900,000}}{{10,112,620}} = {.995^t}$</p>
+                            <p class="m1830-hw-solution">$\ln (\frac{{9,900,000}}{{10,112,620}}) = \ln {.995^t}$</p>
+                            <p class="m1830-hw-solution">$\ln (\frac{{9,900,000}}{{10,112,620}}) = t\;\ln .995$</p>
+                            <p class="m1830-hw-solution">$\frac{{\ln (\frac{{9,900,000}}{{10,112,60}})}}{{\ln .995}} = t$</p>
+                            <p class="m1830-hw-solution">$t = 4.24$ years</p>
+                            <p class="m1830-hw-answer">The population of Michigan will be 9,900,000 people in March of 2008.</p>
+                        </li>
+
+                        <li>What was the population in the year 2000, according to this model?
+                            <p class="m1830-hw-solution">$y = 10,112,620{\left( {.995} \right)^{ - 4}}$</p>
+                            <p class="m1830-hw-solution">$y = 10,317,426.06$</p>
+                            <p class="m1830-hw-answer">According to this model, the population of Michigan in 2000 was 10,317,426 people.</p>
+                        </li>
+                    </ol>
+                    <p><cite><a href="https://sccmath.files.wordpress.com/2012/01/scc_open_source_intermediate_algebra.pdf">https://sccmath.files.wordpress.com/2012/01/scc_open_source_intermediate_algebra.pdf</a></cite></p>
+
+                </li>
+            </ol>
+            <!-- End section problem list  -->
+
+
+
+
+      </article>
+        </div>
+      <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<li>
+  <a href="http://www.youtube.com/watch?v=m5Tf6vgoJtQ" target="_blank"><i class="fa fa-play"></i> Exponential Growth and Decay Word Problems</a>  (7:21)
+</li>
+
+<li>
+  <a href="http://www.youtube.com/watch?v=HnHCQ2X_meg" target="_blank"><i class="fa fa-play"></i> Exponential Model Word Problems</a> (4:04) 
+</li>
+
+
+
+</ul>
+
+        </div>
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>
