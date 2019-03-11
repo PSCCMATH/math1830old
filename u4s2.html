@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u4toc">MATH 1830</h1>
+
+          <h2>Unit 4: Integration</h2>
+
+
+        <div class="pagebreak"></div>
+
+
+
+<article class="notes">
+
+
+                <h3>4.2 Fundamental Theorem of Calculus</h3>
+
+             
+                
+
+
+
+
+    <h4> Pre-Class 4.2A:</h4>
+<ul>
+             <li>Complete 4.1 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+              <li>Work and check problems #1-2 in the 4.2 NOTES section. </li>
+              <li> Complete the 4.2A Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u4s1.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>4.1 HW</p>
+          </div>
+        </a>
+       </div>
+
+
+       <!-- <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:4_81Z6lJ@2/The-Definite-Integral" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:rn4DsBBU@2/The-Fundamental-Theorem-of-Cal" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=C7ducZoLKgw" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+ 
+
+
+
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>4.2A Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>      
+
+  
+
+   <h4> Pre-Class 4.2B:</h4>
+<ul>
+             <li>Complete 4.2A Homework assignment: check and correct. </li>
+
+            
+              
+              <li> Complete the 4.2B Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u4s2.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>4.2A HW</p>
+          </div>
+        </a>
+       </div>
+
+
+
+ 
+
+
+
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>4.2B Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>               
+          
+
+                     <h4 class="m1830-pagebreak">Introduction</h4>
+
+
+
+
+                <p>From 4.1 homework problem #2:</p>
+                <p>Given the function $f(x)=4-0.16{{x}^{2}},$ </p>
+                <p>approximate the area under the curve on the interval [0, 6] using 6 right rectangles. </p>
+                <p><a href="http://webspace.ship.edu/msrenault/GeoGebraCalculus/integration_riemann_sum.html">Riemann Sum Exploration: http://webspace.ship.edu/msrenault/GeoGebraCalculus/integration_riemann_sum.html</a></p>
+                <!-- TODO needs to open in new tab and print URL when printing -->
+
+
+
+
+
+                <p class="m1830-pagebreak"><h4>Notes</h4>
+
+
+
+                                <div class="panel panel-primary">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">Antiderivatives</h3>
+                                  </div>
+                                  <div class="panel-body">
+<p><strong>General Antiderivative Formulas</strong></p>
+<p>$\begin{align}&amp;\int u^n\;du\end{align}\;=\;\frac{u^{n+1}}{n+1}+C\;\;n\neq-1$</p>
+  <p>$\begin{align}&amp;\int e^u\;du\end{align}\;=\;e^u+C$</p>
+  <p>$\begin{align}&amp;\int\frac1u\;du\end{align}\;=\;\ln\left|u\right|+C$</p>
+
+<br>
+        <p>$\begin{align}&amp;\int E&#39;\left[I(x)\right]I&#39;(x)\;dx\end{align}=E\left[I(x)\right]+C$</p>
+        <p>$\begin{align}&amp;\int\left[f(x)\right]^nf&#39;(x)\;dx\end{align}=\frac{\left[f(x)\right]^{n+1}}{n+1}+C\;\;\;n\neq-1$</p>
+        <p>$\begin{align}&amp;\int e^{f(x)}\cdot f&#39;(x)\;dx\end{align}=e^{f(x)}+C$</p>
+        <p>$\begin{align}&amp;\int{\frac{1}{f\left( x \right)}~{f}&#39;\left( x \right)~dx~}\end{align}=~\ln \left[ f\left( x \right) \right]+C$</p>
+
+                                  </div>
+                                </div>
+
+
+
+
+                                  <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                      <!-- <h3 class="panel-title">The Fundamental Theorem of Calculus </h3> -->
+                                    </div>
+                                    <div class="panel-body">
+                                      <p><strong>The Fundamental Theorem of Calculus</strong></p>
+<strong>Let $f$ be continuous on [a, b]. If $F$ is any antiderivative for $f$ on [a,b], then
+$$\begin{align}&amp;\int_a^bf\left(x\right)\operatorname dx\end{align}\;=F(b)-F(a).$$ </strong>
+                                    </div>
+                                  </div>
+
+                <p><strong>Evaluate the Definite Integral:  Compare your answer to the area you calculated in 4.1 notes.</strong></p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $S(x)=\begin{align}&amp;\int_0^4x^2dx\end{align}$</p>
+
+                        <p class="m1830-solution">$ = (\frac{{{x^3}}}{3} + C)│_0^4$</p>
+                        <p class="m1830-solution">$=[\frac{{{4^3}}}{3} + C] - [\frac{{{0^3}}}{3} + C]$</p>
+                        <p class="m1830-solution">$=21.33 + C - 0 - C$</p>
+                        <p class="m1830-answer">$=21.33$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $S(x) =\begin{align}&amp;\int_1^4 {2xdx}\end{align}$</p>
+
+                        <p class="m1830-solution">$=(\frac{{2{x^2}}}{2} + C)│_1^4$</p>
+                        <p class="m1830-solution">$= ({x^2} + C)|_1^4$</p>
+                        <p class="m1830-solution">$=({4^2} + C) - ({1^2} + C)]$</p>
+                        <p class="m1830-solution">$=16 + C - 1 - C$</p>
+                        <p class="m1830-answer">$=15$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $S(x) = \begin{align}&amp;\int_1^4 {{x^3}} dx\end{align}$
+                            <p>
+
+                                <p class="m1830-solution">$=( \frac{{{x^4}}}{4} + C)│_1^4$</p>
+                                <p class="m1830-solution">$=(\frac{{{4^4}}}{4} + C) - (\frac{{{1^4}}}{4} + C)$</p>
+                                <p class="m1830-solution">$=64 + C - \frac{1}{4} - C$</p>
+                                <p class="m1830-answer">$=63.75$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $S(x) = \begin{align}&amp;\int_{0.5}^2 {\frac{1}{x}} \,dx\end{align} $
+                            <p>
+
+                                <p class="m1830-solution">$=(ln \left| x \right| + C)│_{0.5}^2$</p>
+                                <p class="m1830-solution">$= (\ln (2) + C) - (\ln (0.5) + C)$</p>
+                                <p class="m1830-solution">$= \ln (2) + C - \ln (0.5) - C$</p>
+
+                                <p class="m1830-solution">$= \ln (2) - \ln (0.5)$</p>
+                                <p class="m1830-solution">$=\ln (\frac{2}{{0.5}}) = \ln (4)$</p>
+                                <p class="m1830-answer">$\approx1.39$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_0^7 8x\;dx\end{align} $</p>
+
+                        <p class="m1830-solution">$= (\frac{{8{x^2}}}{2}+C)│_0^7$</p>
+                        <p class="m1830-solution">$= (4{x^2}+C)│_0^7$</p>
+                        <p class="m1830-solution">$(4{\left( 7 \right)^2} + C) - (4{\left( 0 \right)^2} + C)$</p>
+                        <p class="m1830-solution">$= 196 + C - 0 - C$</p>
+                        <p class="m1830-answer">$= 196$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_2^3 4{x^3}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= (\frac{{4{x^4}}}{4} + C)│_2^3$</p>
+                        <p class="m1830-solution">$= {x^4} + C│_2^3$</p>
+                        <p class="m1830-solution">$= ({3^4} + C) - ({2^4} + C)$</p>
+                        <p class="m1830-solution">$= 81 + C - 16 - C$</p>
+                        <p class="m1830-answer">$= 65$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_0^3 5{e^x}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= (5{e^x}+C)│_0^3$</p>
+                        <p class="m1830-solution">$= (5{e^3} + C) - (5{e^0} + C)$</p>
+                        <p class="m1830-solution">$= 5{e^3} + C - 5(1) - C$</p>
+                        <p class="m1830-solution">$= 5{e^3} - 5$</p>
+                        <p class="m1830-solution">$= 5({e^3} - 1)$</p>
+                        <p class="m1830-answer">$ \approx 95.43$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_1^{4\;} \frac{7}{x}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= (7\ln| x|+C)│_1^4$</p>
+                        <p class="m1830-solution">$= 7(\ln 4 + C) - 7(\ln 1 + C)$</p>
+                        <p class="m1830-solution">$= 7\ln 4 + C - 7\ln 1 - C$</p>
+                        <p class="m1830-solution">$= 7\ln 4 - 7\ln 1$</p>
+                        <p class="m1830-answer">$\approx 9.70$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_3^7 \;\left( {2 - 4{x^2}} \right)\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$= (2x - \frac{{4{x^3}}}{3} + C)│_3^7$</p>
+                        <p class="m1830-solution">$= [2(7) - \frac{{4{{\left( 7 \right)}^3}}}{3} + C] - [2(3) - \frac{{4{{\left( 3 \right)}^3}}}{3} + C]$</p>
+                        <p class="m1830-solution">$= (14 - 457.33 + C) - (6 - 36 + C)$</p>
+                        <p class="m1830-solution">$= - 443.33 + 30$</p>
+                        <p class="m1830-answer">$= - 413.33$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int_4^{25} \frac{5}{{\sqrt x }}\;dx\end{align}$</p>
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int_{4}^{25}{5{{x}^{-1/2}}dx}\end{align}$</p>
+                        <p class="m1830-solution">$= \left(\frac{{5{x^{1/2}}}}{({1/2})} + C \right)│_4^{25}$</p>
+                        <p class="m1830-solution">$= (10{x^{1/2}}+C)|_4^{25}$</p>
+                        <p class="m1830-solution">$= (10\sqrt {25} + C) - (10\sqrt 4 + C)$</p>
+                        <p class="m1830-solution">$= 10(5) - 10(2)$</p>
+                        <p class="m1830-solution">$= 50 - 20$</p>
+                        <p class="m1830-answer">$= 30$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Cost: A company manufactures mountaineering 75-liter backpacks. The research department produced the marginal cost function $$B&#39;\left( x \right) = 400 - \;\frac{x}{5}\quad\quad 0\; \le x\; \le 1000$$ where $B’(x)$ is in dollars and x is the number of
+                            backpacks produced per week. Compute the increase in cost when production level increases from 0 backpacks per week to 600 backpacks per week. Set up a definite integral and evaluate it.</p>
+
+                        <p class="m1830-solution">$B=\begin{align}&amp;\int_0^{600} {400 - \frac{x}{5}dx}\end{align}$</p>
+                        <p class="m1830-solution">$B= (400x - \frac{{{x^2}}}{{5 \cdot 2}} + C)│_0^{600}$</p>
+                        <p class="m1830-solution">$B=[400(600) - \frac{{{{600}^2}}}{{10}} + C] - [400(0) - \frac{{{0^2}}}{{10}} + C]$</p>
+                        <p class="m1830-solution">$B= 240,000 - 36,000 + C - 0 - C$</p>
+                        <p class="m1830-solution">$B= \$ 204,000$</p>
+                        <p class="m1830-answer">The cost increased by \$204,000 when production increased from 0 to 600 backpacks per week.</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Costs of Upkeep of a Marina: Maintenance costs for a marina generally increase as the structures at the marina age. The rate of increase in maintenance costs (in dollars per year) for a particular marina is given approximately by $$M&#39;\left( x \right)
+                            = 30{x^2} + 2000$$ where x is the age of marina, in years, and M(x) is the total accumulated costs of maintenance for x years. Write a definite integral that  gives the total maintenance costs from the third through the
+                            seventh year, and evaluate the integral.</p>
+
+                        <p class="m1830-solution">$M=\begin{align}&amp;\int_3^7 {30{x^2} + 2000 dx}\end{align}$</p>
+                        <p class="m1830-solution">$M=(\frac{{30{x^3}}}{3} + 2000x + C)│_3^7$</p>
+                        <p class="m1830-solution">$M= 10{x^3} + 2000x + C│_3^7$</p>
+                        <p class="m1830-solution">$M= [10{\left( 7 \right)^3} + 2000(7) + C] - [10{\left( 3 \right)^3} + 2000(3) + C]$</p>
+                        <p class="m1830-solution">$M= 3430 + 14000 + C - 270 - 6000 - C$</p>
+                        <p class="m1830-solution">$M = \$ 11,160$</p>
+                        <p class="m1830-answer">The total maintenance costs for the marina for years three through seven will be $\$11,160.$</p>
+
+
+
+
+                    </li>
+                </ol>
+
+</article>
+
+<article class="hw">
+
+      <h3>4.2A Fundamental Theorem of Calculus</h3>
+
+      <h4>Homework</h4>
+      <p><strong>Use the Fundamental Theorem of Calculus to evaluate each of the following integrals.</strong></p>
+
+      <!-- Begin section problem list  -->
+      <ol>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_{ - 1}^5 {(1 - 2x)dx}\end{align}$</p>
+
+              <p class="m1830-hw-solution">$=(x -\frac{{2{x^2}}}{2} + C)|_{ - 1}^5$</p>
+              <p class="m1830-hw-solution">$=(x - {x^2} + C)|_{ - 1}^5$</p>
+              <p class="m1830-hw-solution">$=(5 - 25 + C) - ( - 1 - {\left( { - 1} \right)^2} + C)$</p>
+              <p class="m1830-hw-solution">$= (- 20 + C) - ( - 1 - 1 + C)$</p>
+              <p class="m1830-hw-solution">$= - 20 + C + 2 - C$</p>
+              <p class="m1830-hw-answer">$= - 18$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_0^3 {({x^3} + 2{x^2} - {e^x})dx}\end{align}$</p>
+
+              <p class="m1830-hw-solution">$=(\frac{{{x^4}}}{4} - \frac{{2{x^3}}}{3} - {e^x} + C)|_0^3$</p>
+              <p class="m1830-hw-solution">$= \left( {\frac{{{3^4}}}{4} - \frac{{2{{\left( 3 \right)}^3}}}{3} - {e^3} + C} \right) - \left( {\frac{{{0^4}}}{4} - \frac{{2{{\left( 0 \right)}^3}}}{3} - {e^0} + C} \right)$</p>
+              <p class="m1830-hw-solution">$= \left( {20.25 + 18 - {e^3} + C} \right) - \left( { - 1 + C} \right)$</p>
+              <p class="m1830-hw-solution">$= \left(18.164 \right) - (-1)$</p>
+              <p class="m1830-hw-answer">$= 19.164$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_1^3 {\frac{1}{x}dx}\end{align}$</p>
+
+              <p class="m1830-hw-solution">$=( \ln \left| x \right| + C)|_1^3$</p>
+              <p class="m1830-hw-solution">$= (\ln 3 + C) - (\ln 1 + C)$</p>
+              <p class="m1830-hw-solution">$= \ln 3 + C - \ln 1 - C$</p>
+              <p class="m1830-hw-solution">$= \ln 3 - \ln 1$</p>
+              <p class="m1830-hw-answer">$\approx 1.1$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_0^1\left(\sqrt x+\sqrt[3]{x^2}\right)\operatorname dx\end{align}$</p>
+
+              <p class="m1830-hw-solution">$=\begin{align}&amp;\int_0^1\left(x^{1/2}+x^{2/3}\right)\;\operatorname dx\end{align}$</p>
+              <p class="m1830-hw-solution">$=( \frac{x^{3/2}}{3/2} + \frac{{{x^{5/3}}}}{{5/3}} + C)|_0^1$</p>
+              <p class="m1830-hw-solution">$=(\frac{2}{3}{x^{3/2}} + \frac{3}{5}{x^{5/3}} + C)|_0^1$</p>
+              <p class="m1830-hw-solution">$= \left[ {\frac{2}{3}{{\left( 1 \right)}^{3/2}} + \frac{3}{5}{{\left( 1 \right)}^{5/3}} + C} \right] - \left[ {\frac{2}{3}{{\left( 0 \right)}^{3/2}} + \frac{3}{5}{{\left( 0 \right)}^{5/3}} + C} \right]$</p>
+              <p class="m1830-hw-solution">$= \frac{2}{3} + \frac{3}{5} + C - C$</p>
+              <p class="m1830-hw-answer">$= \frac{{19}}{15} \approx 1.27$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_0^9 {(3\sqrt x + 2x + 1)dx}\end{align}$</p>
+
+              <p class="m1830-hw-solution">$= \begin{align}&amp;\int_0^9 {(3{x^{1/2}} + 2x + 1)dx}\end{align}$</p>
+              <p class="m1830-hw-solution">$= (\frac{{3{x^{3/2}}}}{{3/2}} + \frac{{2{x^2}}}{2} + 1x + C)|_0^9$</p>
+              <p class="m1830-hw-solution">$= (2{x^{3/2}} + {x^2} + x + C)|_0^9$</p>
+              <p class="m1830-hw-solution">$= [2{\left( 9 \right)^{3/2}} + {9^2} + 9 + C] - [2{\left( 0 \right)^{3/2}} + {0^2} + 0 + C]$</p>
+              <p class="m1830-hw-solution">$= [54 + 81 + 9 + C] - [C]$</p>
+              <p class="m1830-hw-solution">$= 144 + C - C$</p>
+              <p class="m1830-hw-answer">$= 144$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_1^e {\frac{2}{x}} dx\end{align}$</p>
+
+              <p class="m1830-hw-solution">$= (2\ln \left| x \right| + C)|_1^e$</p>
+              <p class="m1830-hw-solution">$= (2\ln e  + C) - (2\ln 1  + C)$</p>
+              <p class="m1830-hw-solution">$= (2\ln e + C) - (2(0) + C)$</p>
+              <p class="m1830-hw-solution">$= 2\ln e + C - 0 - C$</p>
+              <p class="m1830-hw-solution">$=2\ln e$ </p>
+              <p class="m1830-hw-answer">$= 2(1) = 2$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_1^3\left(\frac{4x^3-8x^2+2x-3}x\right)\operatorname dx\end{align}$</p>
+
+              <p class="m1830-hw-solution">$=\begin{align}&amp;\int_1^3\left(4x^2-8x+2-\frac3x\right)\;\operatorname dx\end{align}$</p>
+              <p class="m1830-hw-solution">$=(\frac{{4{x^3}}}{3} - \frac{{8{x^2}}}{2} + 2x - 3\ln \left| x \right|+C)|_1^3$</p>
+              <p class="m1830-hw-solution">$= [\frac{{4{{\left( 3 \right)}^3}}}{3} - 4{\left( 3 \right)^2} + 2(3) - 3\ln3+C] - [\frac{{4{{\left( 1 \right)}^3}}}{3} - 4{\left( 1 \right)^2} + 2(1) - 3\ln 1+C]$</p>
+              <p class="m1830-hw-solution">$= (36 - 36 + 6 - 3\ln 3+C) - (\frac{4}{3} - 4 + 2 - 0+C)$</p>
+              <p class="m1830-hw-solution">$= 2.70 +C - ( - 0.67+C)$</p>
+              <p class="m1830-hw-solution">$= 2.70+C + 0.67-C$</p>
+              <p class="m1830-hw-answer">$= 3.37$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> $\begin{align}&amp;\int_2^8\left(5x^{1/5}-2x^{2/3}-2x^{-2}+\frac7x-6\right)\operatorname dx\end{align}$</p>
+
+              <p class="m1830-hw-solution">$=(\frac{{5{x^{6/5}}}}{{6/5}} - \frac{{2{x^{5/3}}}}{{5/3}} - \frac{{2{x^{ - 1}}}}{{ - 1}} + 7\ln \left| x \right| - 6x+C)|_2^8$</p>
+              <p class="m1830-hw-solution">$=(\frac{{25}}{6}{x^{6/5}} - \frac{6}{5}{x^{5/3}} + 2{x^{ - 1}} + 7\ln \left| x \right| - 6x+C)|_2^8$</p>
+              <p class="m1830-hw-solution">$=\left[ {\frac{{25}}{6}{{\left( 8 \right)}^{6/5}} - \frac{6}{5}{{\left( 8 \right)}^{5/3}} + \frac{2}{8} + 7\ln 8 - 6(8)+C} \right] - \left[ {\frac{{25}}{6}{{\left( 2 \right)}^{6/5}} - \frac{6}{5}{{\left( 2 \right)}^{5/3}} + \frac{2}{2}
+                  + 7\ln 2 - 6(2)+C} \right]$</p>
+              <p class="m1830-hw-solution">$= - 21.07+C - ( - 0.39+C)$</p>
+              <p class="m1830-hw-solution">$= - 21.07+C + 0.39-C$</p>
+              <p class="m1830-hw-answer">$= - 20.68$</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> The rate of change of annual U. S. factory sales of electronics from 1990 through 1996 can be modeled by the equation $$s\left( t \right) = - 0.23{t^3} + 2.257{t^2} - 1.51t + 42.8$$ in billions of dollars per year where t is the number
+                  of years since 1990. Evaluate $\begin{align}&amp;\int_0^6 s\left( t \right)\end{align}$ and interpret your answer.</p>
+
+              <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^6 {( - 0.23{t^3} + 2.257{t^2} - 1.51t + 42.8)dt}\end{align}$</p>
+              <p class="m1830-hw-solution">$=(\frac{{ - 0.23{t^4}}}{4} + \frac{{2.257{t^3}}}{3} - \frac{{1.51{t^2}}}{2} + 42.8t + C)|_0^6$</p>
+              <p class="m1830-hw-solution">$=(\frac{{ - 0.23{{\left( 6 \right)}^4}}}{4} + \frac{{2.257{{\left( 6 \right)}^3}}}{3} - \frac{{1.51{{\left( 6 \right)}^2}}}{2} + 42.8(6) + C) - (0 + C)$</p>
+              <p class="m1830-hw-solution">$= 317.604 + C - C$</p>
+              <p class="m1830-hw-solution">$= 317.604$</p>
+              <p class="m1830-hw-answer">U.S. factory sales of electronics from 1990 through 1996 were \$317.604 billion.</p>
+
+          </li>
+
+          <li class="m1830-problem">
+              <p class="m1830-problem-text"> The rate of change of the length of the average hospital stay between 1980 and 1996 can be modeled by the equations below where t is the number of years since 1980. Determine the value of the following definite integrals and interpret
+                  your answers.  Note: $s(t)$ is in days per year. </p>
+                  <p>$s(t)=\begin{cases}
+                    0.028t-0.23 & 0\leq t\leq 10 \\
+                    -0.0408t+0.30883 & 10\lt t\leq 16 \\
+                    \end{cases}$​</p>
+
+
+              <ol>
+
+                  <li>$\begin{align}&amp;S(t)=\int_0^{10}s(t)\;dt\end{align}$
+                      <p class="m1830-hw-solution">$=\begin{align}&amp;\int_0^{10} {(0.028t - 0.23)dt}\end{align}$</p>
+                      <p class="m1830-hw-solution">$= (\frac{{0.028{t^2}}}{2} - 0.23t + C)|_0^{10}$</p>
+                      <p class="m1830-hw-solution">$=[\frac{{0.028{{\left( {10} \right)}^2}}}{2} - 0.23(10) + C] - [0 - 0 + C]$</p>
+                      <p class="m1830-hw-solution">$= - 0.9 + C - C$</p>
+                      <p class="m1830-hw-solution">$= - 0.9$</p>
+                      <p class="m1830-hw-answer">The length of the average hospital stay decreased by 0.9 days from 1980-1990.</p>
+                  </li>
+
+                  <li>$\begin{align}&amp;\int_{10}^{16}s(t)\;dt\end{align}$</li>
+              </ol>
+
+              <p class="m1830-hw-solution">$=\begin{align}&amp;\int_{10}^{16} {(-0.0408t+0.30883)dt}\end{align}$</p>
+              <p class="m1830-hw-solution">$= (\frac{{-0.0408{t^2}}}{2} + 0.30883t + C)|_{10}^{16}$</p>
+              <p class="m1830-hw-solution">$=(\left.-0.0204t^2+0.30883t+C\right)|_{10}^{16}$</p>
+              <p class="m1830-hw-solution">$= [ - 0.0204{\left( {16} \right)^2} + 0.30883(16) + C] - [ - 0.0204{\left( {10} \right)^2} + 0.30883(10) + C]$</p>
+              <p class="m1830-hw-solution">$= - 0.28112 + C - 1.0483 - C$</p>
+              <p class="m1830-hw-solution">$ = - 1.33$</p>
+              <p class="m1830-hw-answer">The length of the average hospital stay decreased by 1.33 days from 1990 to 1996.</p>
+              c. $\begin{align}&amp;\int_0^{16} s\left( t \right)\;dt\end{align}$
+              <p class="m1830-hw-solution">From the answers to a &amp; b: $\quad - 0.9 + - 1.33 = - 2.23$</p>
+              <p class="m1830-hw-answer">The length of the average hospital stay decreased by 2.23 days from 1980 to 1996.</p>
+
+
+          </li>
+          <!-- End section problem list  -->
+      </ol>
+
+<p class="m1830-pagebreak"></p>
+          <h3>4.2B Fundamental Theorem of Calculus</h3>
+
+          <h4>Homework</h4>
+          <p><strong>Use the Fundamental Theorem of Calculus to evaluate each of the following integrals.</strong></p>
+
+          <!-- Begin section problem list  -->
+          <ol>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_{ - 1}^2 {(3{x^2} - 2x + 5)\;dx}\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$=(\frac{{3{x^3}}}{3} - \frac{{2{x^2}}}{2} + 5x + C)|_{ - 1}^2$</p>
+                  <p class="m1830-hw-solution">$=( {x^3} - {x^2} + 5x + C)|_{ - 1}^2$</p>
+                  <p class="m1830-hw-solution">$= ({2^3} - {2^2} + 5(2) + C) - ({\left( { - 1} \right)^3} - {\left( { - 1} \right)^2} + 5( - 1) + C)$</p>
+                  <p class="m1830-hw-solution">$= (8 - 4 + 10 + C) - ( - 1 - 1 - 5 + C)$</p>
+                  <p class="m1830-hw-solution">$= 14 + C + 7 - C$</p>
+                  <p class="m1830-hw-answer">$= 21$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_0^4 {(3{e^x} - {x^2} + 3\;)dx}\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$= (3{e^x} - \frac{{{x^3}}}{3} + 3x + C)|_0^4$</p>
+                  <p class="m1830-hw-solution">$= [3{e^4} - \frac{{{4^3}}}{3} + 3(4) + C] - [3{e^0} - 0 + 0 + C]$</p>
+                  <p class="m1830-hw-solution">$= (3{e^4} - \frac{{64}}{3} + 12 + C) - (3(1) + C)$</p>
+                  <p class="m1830-hw-solution">$= 3{e^4} - \frac{{28}}{3} + C - 3 - C$</p>
+                  <p class="m1830-hw-solution">$= 3{e^4} + \frac{{ - 37}}{3}$</p>
+                  <p class="m1830-hw-answer">$\approx 151.46$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_2^6 {\frac{{ - 4}}{x}\;dx}\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$= ( - 4\ln \left| x \right| + C)|_2^6$</p>
+                  <p class="m1830-hw-solution">$= ( - 4\ln 6 + C) - ( - 4\ln 2 + C)$</p>
+                  <p class="m1830-hw-solution">$= - 4\ln 6 + C + 4\ln 2 - C$</p>
+                  <p class="m1830-hw-solution">$= - 4\ln 6 + 4\ln 2$</p>
+                  <p class="m1830-hw-answer">$\approx - 4.39$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_{ - 1}^1 {(\sqrt[3]{x} + \sqrt[5]{{{x^2}}})\;dx}\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$\begin{align}&amp;\int_{ - 1}^1( {{x^{1/3} + {x^{2/5}}} } )\;dx\end{align}$</p>
+                  <p class="m1830-hw-solution">$= \left(\frac{{{x^{4/3}}}}{{4/3}} + \frac{{{x^{7/5}}}}{{7/5}} + C\right)|_{ - 1}^1$</p>
+                  <p class="m1830-hw-solution">$=\left( \frac{3}{4}{x^{4/3}} + \frac{5}{7}{x^{7/5}} + C\right)|_{ - 1}^1$</p>
+                  <p class="m1830-hw-solution">$= \left(\frac{3}{4} + \frac{5}{7} + C\right) - \left(\frac{3}{4} - \frac{5}{7} + C\right)$</p>
+                  <p class="m1830-hw-answer">$= \frac{{10}}{7} \approx 1.43$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_{ - 1}^8 {(3\sqrt[3]{x} + x - 3)\;dx}\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$\begin{align}&amp;\int_{ - 1}^8 {(3{x^{1/3}} + x - 3)\;dx}\end{align}$</p>
+                  <p class="m1830-hw-solution">$= \left(\frac{{3{x^{4/3}}}}{{4/3}} + \frac{{{x^2}}}{2} - 3x + C\right)|_{ - 1}^8$</p>
+                  <p class="m1830-hw-solution">$= \left(\frac{9}{4}{x^{4/3}} + \frac{{{x^2}}}{2} - 3x + C\right)|_{ - 1}^8$</p>
+                  <p class="m1830-hw-solution">$= (36 + 32 - 24 + C) - (\frac{9}{4} + \frac{1}{2} + 3 + C)$</p>
+                  <p class="m1830-hw-solution">$= 44 + C - 5.75 - C$</p>
+                  <p class="m1830-hw-answer">$= 38.25$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_1^{2e} {\frac{{ - 5}}{x}\;dx}\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$= (- 5\ln \left| x \right| + C)|_1^{2e}$</p>
+                  <p class="m1830-hw-solution">$= ( - 5\ln 2e + C) - ( - 5\ln 1 + C)$</p>
+                  <p class="m1830-hw-solution">$= (- 5\ln 2e + C) - (0 + C)$</p>
+                  <p class="m1830-hw-solution">$= - 5\ln 2e + C - 0 - C$</p>
+                  <p class="m1830-hw-solution">$= - 5\ln 2e$</p>
+                  <p class="m1830-hw-answer">$= - 8.466$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_1^4\left(\frac{4x^3-8x^2+2x-3}{2x^2}\right)\operatorname dx\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$\begin{align}&amp;\int_1^4 \left(2x - 4 + \frac{1}{x} - \frac{3}{2}{x^{ - 2}}\right)\;dx\end{align}$</p>
+                  <p class="m1830-hw-solution">$\left({x^2} - 4x + \ln \left| x \right| + \frac{3}{{2x}}+C\right)|_1^4$</p>
+                  <p class="m1830-hw-solution">$\left[ {{{\left( 4 \right)}^2} - 4(4) + \ln 4 + \frac{3}{8}}+C \right] - \left[ {{{\left( 1 \right)}^2} - 4(1) + \ln 1 + \frac{3}{{2(1)}}}+C \right]$</p>
+                  <p class="m1830-hw-solution">$\left( {16 - 16 + \ln 4 + \frac{3}{8}}+C \right) - \left( {1 - 4 + 0 + \frac{3}{2}}+C \right)$</p>
+                  <p class="m1830-hw-solution">$\approx (1.76+C )- ( - 1.5+C)$</p>
+                  <p class="m1830-hw-solution">$\approx 1.76+C + 1.5-C$</p>
+                  <p class="m1830-hw-answer">$\approx 3.26$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> $\begin{align}&amp;\int_1^4 {(\frac{5}{{{x^3}}} - \frac{2}{x} + \frac{3}{{\sqrt x }} + x + 1)\;dx}\end{align}$</p>
+
+                  <p class="m1830-hw-solution">$\begin{align}&amp;\int_1^4 {(5{x^{ - 3}} - \frac{2}{x} + 3{x^{-1/2}} + x + 1)\;dx}\end{align}$</p>
+                  <p class="m1830-hw-solution">$= \left(\frac{{5{x^{ - 2}}}}{{ - 2}} - 2\ln \left| x \right| + \frac{{3{x^{1/2}}}}{{1/2}} + \frac{{{x^2}}}{2} + x + C\right)|_1^4$</p>
+                  <p class="m1830-hw-solution">$= \left(\frac{{ - 5}}{{2{x^2}}} - 2\ln \left| x \right| + 6\sqrt x + \frac{{{x^2}}}{2} + x + C\right)|_1^4$</p>
+                  <p class="m1830-hw-solution">$= \left( {\frac{{ - 5}}{{2(16)}} - 2\ln 4 + 6\sqrt 4 + \frac{{16}}{2} + 4 + C} \right) - \left( {\frac{{ - 5}}{2} + 0 + 6 + \frac{1}{2} + 1 + C} \right)$</p>
+                  <p class="m1830-hw-solution">$\approx (23.84375 - 2\ln 4 + C) - (5 + C)$</p>
+                  <p class="m1830-hw-solution">$\approx 21.071 + C - 5 - C$</p>
+                  <p class="m1830-hw-answer">$\approx 16.071$</p>
+
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> The rate of change in the number of consumer complaints to the U. S. Department of Transportation about baggage on U. S. airlines between 1989 and 2000 can be modeled by the function $$B&#39;\left( x \right) = 55.15{x^2} - 524.09x + 1768.65$$ in complaints per year where x is the number of years after 1989. (Source: Based on data from Statistical Abstract, 2001)</p>
+                  <ol>
+
+                      <li>Find the average number of baggage complaints during the period from 1990 and 1996.
+                          <p class="m1830-hw-solution">$1989:x = 0$</p>
+                          <p class="m1830-hw-solution">$1990:x = 1$</p>
+                          <p class="m1830-hw-solution">$1996:x = 7$</p>
+                          <p class="m1830-hw-solution">$\frac{1}{{7 - 1}}\begin{align}&amp;\int_1^7 {(55.15{x^2} - 524.09x + 1768.65)\;dx}\end{align}$</p>
+                          <p class="m1830-hw-solution">$= \frac{1}{6}[\frac{{55.15{x^3}}}{3} - \frac{{524.09{x^2}}}{2} + 1768.65x+C]|_1^7$</p>
+                          <p class="m1830-hw-solution">$\approx \frac{1}{6}[5845.83 - 1524.99]$</p>
+                          <p class="m1830-hw-solution">$\approx \frac{1}{6}(4320.84)$</p>
+                          <p class="m1830-hw-solution">$\approx 720.14$</p>
+                          <p class="m1830-hw-answer">On average there were 720.14 bag complaints per year from 1990 to 1996.</p>
+                      </li>
+
+                      <li>Sketch a graph of $B\left( x \right)$ from 1990 to 1996 and draw the horizontal line representing the average value. When were the number of complaints closest to the average value found in part a?
+                          <p class="m1830-hw-solution"><img src="images/hw/u4s2p9b.png" alt="Graph of average bag complaints function and y=720.14 on the interval from 1990 to 1996"></p>
+                          <p class="m1830-hw-answer">The number of complaints was closest to the average of 720.14 in the following two years: Year 2.9 (end of 1991) and Year 6.64 (mid 1995). </p>
+                      </li>
+                  </ol>
+              </li>
+
+              <li class="m1830-problem">
+                  <p class="m1830-problem-text"> Square Pharmaceuticals Limited, the flagship company of Square Group, is a pharmaceutical company in Bangladesh. Taka is the Bangladeshi currency (\$1=77.88 taka).</p>
+                  <p>Monthly revenue is given by the function $R(t)=400-20t^\frac12.$ </p>
+                  <p> Monthly cost is given by the function $C(t)=40-40t^\frac12.$ </p>
+                  <p> Find the net profit for Square Pharmaceuticals from January 2011 through December 2013. </p><cite>Source: <a href="https://www.academia.edu/7825243/Application_of_Mathematics_in_Real_Life_Business">https://www.academia.edu/7825243/Application_of_Mathematics_in_Real_Life_Business</a></cite>
+                  <p class="m1830-hw-solution">$P(t) = R(t) - C(t)$</p>
+                  <p class="m1830-hw-solution">$P(t) = (400 - 20{t^{1/2}}) - (40 - 40{t^{1/2}})$</p>
+                  <p class="m1830-hw-solution">$\begin{align}&amp;\int_0^{36} \left(360 +20{t^{1/2}}\right)\;dt\end{align}$</p>
+                  <p class="m1830-hw-solution">$=\left(360t + \frac{{20{t^{3/2}}}}{{3/2}} + C\right)|_0^{36}$</p>
+                  <p class="m1830-hw-solution">$=\left(360t +\frac{40}{3}{t^{3/2}} + C\right)|_0^{36}$</p>
+                  <p class="m1830-hw-solution">$=15840 - 0$</p>
+                  <p class="m1830-hw-answer">The total profit for 2011-2013 is $15,840$ taka. </p>
+
+
+
+
+
+              </li>
+              <!-- End section problem list  -->
+          </ol>
+
+
+
+
+
+
+</article>
+
+
+<div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<li>
+  <a href="http://www.youtube.com/watch?v=YWv5v8PppzU" target="_blank"><i class="fa fa-play"></i> First Fundamental Theorem of Calculus</a>  (29:10)
+</li>
+<li>
+    <a href="pdfs/u4integrationpowerrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Integration Using the Power Rule Worksheet</a> 
+  </li>
+<li>
+    <a href="pdfs/u4integrationlogexponentialsws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Integration of Logarithms and Exponentials Worksheet</a> 
+  </li>
+<li>
+    <a href="pdfs/u4fundamentaltheoremws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Fundamental Theorem of Calculus Worksheet</a> 
+  </li>
+
+
+
+
+</ul>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

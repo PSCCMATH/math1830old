@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+     <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+
+        <h2>Unit 3 Applications of Derivatives</h2>
+
+
+
+
+
+
+        <article class="notes">
+
+            <h3>3.2 First Derivative Test</h3>
+
+<h4> Pre-Class:</h4>
+<ul>
+             <li>Complete 3.1 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+              
+              <li> Complete the 3.2 Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u3s1.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>3.1 HW</p>
+          </div>
+        </a>
+       </div>
+
+<!-- 
+       <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:84SZANHN@3/Maxima-and-Minima" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+   <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:zjNlU1zg@3/Derivatives-and-the-Shape-of-a" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=KxOp3s9ottg" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=lDY9JcFaRd4" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>3.2 Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>
+
+
+            <div class="m1830-pagebreak" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">First Derivative Test</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Analyze $f&#39;(x)$ to Identify Intervals of Increase/Decrease and Extrema on the Graph of $f(x).$ </p>
+                    <ol>
+                        <li>Find $f&#39;(x)$ </li>
+                        <li> Identify all critical numbers and partitions for the function.
+                            <ol>
+
+                                <li>Values of $x$ where$f&#39;(x)=0$ are critical numbers.</li>
+
+                                <li>Values of $x$ where $f&#39;(x)$ is undefined are partitions.</li>
+
+                                <li>Values of $x$ where $f(x)$ is undefined are partitions.</li>
+                            </ol>
+                        </li>
+                        <li>Graph the critical numbers and partitions on a number line, separating the number line into intervals.
+
+                        </li>
+
+                        <li>Determine the intervals on which $f(x)$ is increasing /decreasing
+                            <ol>
+
+                                <li>Test one point contained in the interval (do not use the end points of the interval).</li>
+
+                                <li>$f&#39;(x)&lt;0$ then the function $f(x)$ is DECREASING on the interval</li>
+
+                                <li>$f&#39;(x)&gt;0$ then the function $f(x)$ is INCREASING on the interval</li>
+                            </ol>
+                        </li>
+
+                        <li>Identify local maxima and minima of $f(x)$ using the First Derivative Test.
+                            <ol>
+
+                                <li>On the interval $(a,c)$, a local maximum occurs at $f(b)$ when $f(x)$ is increasing for all $x$ in the interval $(a,b]$ and $f(x)$ is decreasing for all $x$ in the interval $[b,c)$.</li>
+
+                                <li>On the interval $(a,c)$, a local minimum occurs at $f(b)$ when $f(x)$ is decreasing for all $x$ in the interval $(a,b]$ and $f(x)$ is increasing for all $x$ in the interval $[b,c)$.</li>
+                            </ol>
+                        </li>
+                    </ol>
+
+
+                </div>
+            </div>
+
+<p class="m1830-pagebreak"></p>
+            <p class="m1830-problem-text"><strong>Use the First Derivative Test to analyze the function. Identify intervals of increase/decrease and extrema on the graph of the function.</strong> </p>
+            <ol>
+
+
+
+
+
+
+
+                <li >
+                    <p class="m1830-problem-text"> $f(x)={{x}^{3}}+6{{x}^{2}}+9x$</p>
+
+                    <ol>
+                        <li>
+                            <p >Increasing and Decreasing</p>
+                            <p class="m1830-solution">${f}&#39;(x)=3{{x}^{2}}+12x+9$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;(x)=0: \quad 3{{x}^{2}}+12x+9=0$</p>
+                            <p class="m1830-solution">$3\left( x+3 \right)\left( x+1 \right)=0$</p>
+
+
+                                                        <div class="row">
+                                                            <div class="col-sm-4">
+                                                                <p class="m1830-solution">$3 \neq 0$</p>
+
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <p class="m1830-solution">$x=-3$</p>
+
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <p class="m1830-solution">$x=-1$</p>
+
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;\left( x \right)$ is undefined.</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)$ is undefined.</p>
+
+                            <p class="m1830-solution" >Separate into intervals using: $x=-3$ and $x=-1$.</p>
+
+                            <figure class="m1830-solution"><img src="images/notes/u3s3p4a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative.">
+                            <figcaption class="m1830-solution"><em>Sign graph of ${f}&#39;(x)$ reading left to right: positive, ${f}&#39;\left( -3 \right)=0$, negative, ${f}&#39;\left( -1 \right)=0$, positive</em></figcaption></figure>
+                                <p class="m1830-pagebreak"></p>
+                            <p>Increasing:</p>
+                            <p class="m1830-answer">The graph of $f(x)$ is increasing on the intervals $\left( -\infty ,-3 \right)\cup \left( -1,\infty \right)$.</p>
+                            <p>Decreasing:</p>
+                            <p class="m1830-answer">The graph of $f(x)$ is decreasing on the interval $\left( -3,-1 \right)$.</p>
+                        </li>
+                        <li>
+                            <p>Local Maxima:</p>
+                            <p class="m1830-solution">$f\left( -3 \right)={{\left( -3 \right)}^{3}}+6{{\left( -3 \right)}^{2}}+9\left( -3 \right)=0$</p>
+                            <p class="m1830-answer">There is a local maximum at the point $\left( -3,0 \right)$.</p>
+                            <p>Local Minima:</p>
+                            <p class="m1830-solution">$f\left( -1 \right)={{\left( -1 \right)}^{3}}+6{{\left( -1 \right)}^{2}}+9\left( -1 \right)=-4$</p>
+                            <p class="m1830-answer">There is a local minimum at the point $\left( -1,-4 \right)$.</p>
+
+                            <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+                            <p class="m1830-answer"><img src="images/notes/u3s3p4c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+                        </li>
+                    </ol>
+                </li>
+
+
+
+                <li class="m1830-problem m1830-pagebreak">
+                    <p class="m1830-problem-text"> $f(x)=\frac{3x+4}{2x-5}$</p>
+
+                    <ol>
+                        <li>
+                            <p >Increasing and Decreasing</p>
+
+                            <p class="m1830-solution">${f}&#39;\left( x \right)=\frac{3\left( 2x-5 \right)-2\left( 3x+4 \right)}{{{\left( 2x-5 \right)}^{2}}}=\frac{6x-15-6x-8}{{{\left( 2x-5 \right)}^{2}}}=\frac{-23}{{{\left( 2x-5 \right)}^{2}}}$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$</p>
+                            <p class="m1830-solution">$\frac{0}{1}=\frac{-23}{{{\left( 2x-5 \right)}^{2}}}$</p>
+                            <p class="m1830-solution">$-23 \neq 0$. There are no values of x where ${f}&#39;\left( x \right)=0.$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$2x-5=0$, $ x=\frac{5}{2}$</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$2x-5=0$, $x=\frac{5}{2}$</p>
+                            <p class="m1830-solution">Separate into intervals using: $x=\frac{5}{2}$.</p>
+
+                            <figure class="m1830-solution"> <img src="images/notes/u3s3p1a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative.">
+                            <figcaption class="m1830-solution"><em>Sign graph of ${f}&#39;(x)$ reading left to right: negative, ${f}&#39;\left( \frac{5}{2} \right)\text{= undefined}$, negative</em></figcaption></figure>
+                            <p>Increasing: </p>
+                            <p class="m1830-answer">The graph of the first derivative is never above the x axis. Therfore, there are no intervals where $f(x)$ is increasing.</p>
+
+                            <p>Decreasing: </p>
+                            <p class="m1830-answer">$\left( -\infty ,\frac{5}{2} \right)\cup \left( \frac{5}{2},\infty \right)$ The graph of the first derivative is always below the x axis. Therefore, the function is decreasing over the entire domain.</p>
+                        </li>
+                        <li>
+                            <p>Local Maxima: </p>
+                            <p class="m1830-answer">The first derivative never changes from positive to negative. There are no local maxima.</p>
+
+                            <p>Local Minima:</p>
+                            <p class="m1830-answer">The first derivative never changes from negative to positive. There are no local minima.</p>
+
+
+                            <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+                            <p class="m1830-answer"><img src="images/notes/u3s3p1c.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
+                        </li>
+                    </ol>
+
+                </li>
+
+                <li>
+                    <p class="m1830-problem-text m1830-pagebreak">
+          The annual first quarter change in revenue for Apple, Inc. is given by the regression model: $$f(x)=-0.005x^4+0.113x^3-0.889x^2+7.946x-5.346$$ where x is Years Since 1998. </p>
+                    <p> <strong>Use the First Derivative Test to analyze $f&#39;(x)$ and identify intervals of increase/decrease and extrema on the graph of $f(x)$.</strong> </p>
+                    <p class="m1830-answer">$f&#39;(x)=-0.02x^3+0.339x^2-1.778x+7.946$</p>
+
+                    <ol>
+
+
+
+
+
+                        <li>
+                            <p>Create the sign chart for $f&#39;(x)$:</p>
+                            <p>Identify the values of x where $f&#39;(x)=0$:</p>
+                            <p class="m1830-answer">$f&#39;(x)=0$ at $x=12.358$</p>
+                            <p>Values of x where $f&#39;(x)$ is undefined:</p>
+                            <p class="m1830-answer">There are no values of x where $f&#39;(x)$ is undefined.</p>
+                            <p>Values of x where $f(x)$ is undefined:</p>
+                            <p class="m1830-answer">There are no values of x where $f(x)$ is undefined.</p>
+                            <p class="m1830-answer">Separate the graph of $f&#39;(x)$ into intervals using: $x=12.358$.</p>
+                            <figure class="m1830-answer"> <img src="images/notes/u3s1p1a.png" alt="graph of first derivative">
+                            <figcaption class="m1830-answer"><em>Sign graph of ${f}&#39;(x)$ reading left to right: positive, ${f}&#39;\left( 12.358 \right)=0$, negative</em></figcaption></figure>
+                            <p> Intervals of Increase and Intervals of Decrease
+                                <p>Increasing:</p>
+                                <p class="m1830-answer">$[0,12.358)$</p>
+                                <p class="m1830-answer">The percent change in revenue was increasing from 1998 into 2010.</p>
+                                Decreasing:
+                                <p class="m1830-answer">$(12.358,18]$</p>
+                                <p class="m1830-answer">The percent change in revenue was decreasing in 2010 through 2016.</p>
+                        </li>
+
+                        <li> Extrema
+                            <p>Local maximum: </p>
+                            <p class="m1830-answer">$(12.358, 53.732)$</p>
+                            <p class="m1830-answer">From the model, the maximum percent change in revenue occurs in 2010 (at x=12.358 years after 1998).</p>
+                            Local minimum:
+                            <p class="m1830-answer">There are no local minima.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <p class="m1830-problem-text m1830-pagebreak">Using data from the Federal Reserve, the Dow S&amp;P 500 annual percent return on investments for the years 2008-2014 can be modeled by the following equation: $$A(t) = - 1.64{t^4} + 20.85{t^3} - 86.05{t^2} + 127.87t - 36.24$$ where t
+              is in years since 2008 and A(t) is in percent.</p>
+                    <p><cite> Source: <a href="http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html">http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html</a> </cite></p>
+
+                    <p> <strong>Use the First Derivative Test to analyze $A&#39;(t)$ and identify intervals of increase/decrease and extrema on the graph of $A(t)$.</strong> </p>
+
+
+                    <p class="m1830-hw-answer">${A}&#39;\left( t \right)=-6.56{{t}^{3}}+62.55{{t}^{2}}-172.10t+127.87$</p>
+                    <ol>
+
+                        <li>
+                            <p> Graph the critical numbers on a number line and determine the sign for each interval.</p>
+
+                            <p>Values of t where ${A}&#39;\left( t \right)=0$:</p>
+                            <p class="m1830-hw-solution">$0=-6.56{{t}^{3}}+62.55{{t}^{2}}-172.10t+127.87$</p>
+                            <p class="m1830-hw-answer">${A}&#39;\left( t \right)=0$ when $t\approx 1.20$, $t\approx 3.10$, $t\approx 5.23$</p>
+                            <p>Values of t where ${A}&#39;\left( t \right)$ is undefined:</p>
+                            <p class="m1830-hw-answer">There are no values of t where ${A}&#39;\left( t \right)$ is undefined.</p>
+                            <p>Values of t where ${A}\left( t \right)$ is undefined:</p>
+                            <p class="m1830-hw-answer">There are no values of t where ${A}\left( t \right)$ is undefined.</p>
+                            <p class="m1830-hw-answer">Separate into intervals using: $t=1.20$, $t=3.10$ and $t=5.23$.</p>
+                            <figure class="m1830-hw-answer"><img src="images/hw/u3s1p1a.png" alt="Graph of the first derivative of the function A of t ">
+                            <figcaption class="m1830-hw-answer"><em>Sign graph of ${A}&#39;(x)$ from left:
+                          positive, ${A}&#39;\left( 1.20 \right)\approx 0$, negative, ${A}&#39;\left( 3.10 \right)\approx 0$, positive, ${A}&#39;\left( 5.23 \right)\approx 0$, negative</em></figcaption></figure>
+
+                            <p> Determine the intervals on which $A(t)$ is increasing/decreasing.
+                                <p>
+                                    <p class="m1830-hw-answer">The function is increasing on the intervals: $\left( 0,1.20 \right)\cup \left( 3.10,5.23 \right).$ </p>
+                                    <p class="m1830-hw-answer">APR increased from 2008 into 2009 and from 2011 into 2013.</p>
+                                    <p class="m1830-hw-answer m1830-step">The function is decreasing on the intervals: $\left( 1.20,3.10 \right)\cup \left( 5.23,6 \right).$ </p>
+                                    <p class="m1830-hw-answer">APR decreased from 2009 into 2011 and in 2013.</p>
+                        </li>
+                        <li>
+                            <p>Identify local maxima and minima for $A(t)$.</p>
+                            <p class="m1830-hw-answer">There are two Local Maxima at the points: $\left( 1.20,25.92 \right)$ and $\left( 5.23,34.50 \right).$</p>
+                            <p class="m1830-hw-answer">There is a Local Minimum at the point: $\left( 3.10,2.90 \right).$</p>
+                        </li>
+
+                    </ol>
+                </li>
+
+
+            </ol>
+
+
+
+        </article>
+
+        <article class="hw">
+            <h3>3.2 First Derivative Test Homework</h3>
+<p><strong>Use the First Derivative Test to analyze the function. Identify intervals of increase/decrease and extrema on the graph of the function.</strong> </p>
+            <ol>
+                <li>
+                    <p class="m1830-problem">
+                        <p class="m1830-problem-text"> $f(x)=3{{x}^{2}}+5x-2$</p>
+
+
+                        <ol>
+
+                            <li>
+                                <p>Increasing and Decreasing</p>
+                                <p class="m1830-solution">${f}&#39;(x)=6x+5$</p>
+                                <p class="m1830-solution">Values of x where ${f}&#39;(x)=0:$</p>
+                                <p class="m1830-solution">$6x+5=0$</p>
+                                <p class="m1830-solution">$6x=-5$</p>
+                                <p class="m1830-solution">$x=-\frac{5}{6}$</p>
+                                <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined:</p>
+                                <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined.</p>
+                                <p class="m1830-solution">Values of x where $f\left( x \right)\;$is undefined:</p>
+                                <p class="m1830-solution">There are no values of x where $f\left( x \right)\;$is undefined.</p>
+                                <p class="m1830-solution">Separate into intervals using: $x=-\frac{5}{6}$.</p>
+                                <figure class="m1830-solution"><img src="images/notes/u3s3p3a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative.">
+                                <figcaption class="m1830-solution"><em>Sign graph of ${f}&#39;(x)$ reading left to right: negative, ${f}&#39;\left( -\frac{5}{6} \right)=0$ , positive</em></figcaption></figure>
+                                <p>Increasing:</p>
+                                <p class="m1830-answer">The graph of $f(x)$ is increasing on the interval $\left( -\frac{5}{6},\infty \right)$.</p>
+
+                                <p>Decreasing:</p>
+                                <p class="m1830-answer">The graph of $f(x)$ is decreasing on the interval $\left( -\infty ,-\frac{5}{6} \right)$.</p>
+                            </li>
+                            <li>
+                                <p>local max: </p>
+                                <p class="m1830-answer">There are no local maxima.</p>
+
+                                <p>local min:</p>
+                                <p class="m1830-solution">$f\left( -\frac{5}{6} \right)=3{{\left( -\frac{5}{6} \right)}^{2}}+5\left( -\frac{5}{6} \right)-2\approx 4.08$</p>
+                                <p class="m1830-answer">There is a local minimum at the point $\left( -\frac{5}{6},-4.08 \right)$.</p>
+
+
+
+                                <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+                                <p class="m1830-answer"><img src="images/notes/u3s3p3c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+                            </li>
+                        </ol>
+                </li>
+
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $f(x)=\frac{4x-7}{5x+1}$</p>
+
+                    <ol>
+                        <li>
+                            <p>Increasing and Decreasing</p>
+
+                            <p class="m1830-solution">${f}&#39;\left( x \right)=\frac{4\left( 5x+1 \right)-5\left( 4x-7 \right)}{{{\left( 5x+1 \right)}^{2}}}=\frac{20x+4-20x+35}{{{\left(5x+1 \right)}^{2}}}=\frac{39}{{{\left(5x+1 \right)}^{2}}}$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$</p>
+                            <p class="m1830-solution">$\frac{0}{1}=\frac{39}{{{\left( 5x+1 \right)}^{2}}}$</p>
+                            <p class="m1830-solution">$39 \neq 0$. There are no values of x where ${f}&#39;\left( x \right)=0.$</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$5x+1=0$, $ x=-\frac{1}{5}$</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution">$5x+1=0$, $ x=-\frac{1}{5}$</p>
+                            <p class="m1830-solution">Separate into intervals using: $x=-\frac{1}{5}$.</p>
+
+                            <figure class="m1830-solution"> <img src="images/notes/u3s2p2fa.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative.">
+                            <figcaption class="m1830-solution"><em>Sign graph of ${f}&#39;(x)$ reading left to right: positive, ${f}&#39;\left( -\frac{1}{5} \right)\text{= undefined}$, positive</em></figcaption></figure>
+                            <p>Increasing: </p>
+                            <p class="m1830-answer">$\left( -\infty ,-\frac{1}{5} \right)\cup \left( -\frac{1}{5},\infty \right)$ The graph of the first derivative is always above the x axis. Therefore, the function is increasing over the entire domain.</p>
+
+
+                            <p>Decreasing: </p>
+                            <p class="m1830-answer">The graph of the first derivative is always above the x axis. Therfore, there are no intervals where $f(x)$ is decreasing.</p>
+                        </li>
+                        <li>
+                            <p>Local Maxima: </p>
+                            <p class="m1830-answer">The first derivative never changes from positive to negative. There are no local maxima.</p>
+
+                            <p>Local Minima:</p>
+                            <p class="m1830-answer">The first derivative never changes from negative to positive. There are no local minima.</p>
+
+
+                            <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+                            <p class="m1830-answer"><img src="images/notes/u3s2p2fc.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
+                        </li>
+                    </ol>
+
+                </li>
+
+
+
+
+
+
+
+
+                <li>
+                    <p class="m1830-problem-text">Using data from Statista, the total annual amount spent on the purchase of golf equipment in the United States for the years 2008-2014 can be modeled by the following equation:</p>
+                    <p>$$A(t)=-31.94{{t}^{3}}+301.16{{t}^{2}}-665.61t+3454.63$$ where t is in years since 2008 and A(t) is in millions of dollars.</p>
+                    <p><cite> Source: <a> href="https://www.statista.com/statistics/201038/purchases-of-golf-equipment-in-the-us-since-2007/">http://www.statista.com/statistics/201038/purchases-of-golf-equipment-in-the-us-since-2007/</a> </cite></p>
+                    <p><strong>Use the First Derivative Test to analyze the function. Identify intervals of increase/decrease and extrema on the graph of the function.</strong> </p>
+                    <p class="m1830-hw-answer">${A}&#39;\left( t \right)=-95.82{{t}^{2}}+602.32t-665.61$</p>
+
+                    <ol>
+
+                        <li>
+                            <p> Graph the critical numbers on a number line and determine the sign for each interval.</p>
+
+                            <p>Values of t where ${A}&#39;\left( t \right)=0:$</p>
+                            <p class="m1830-hw-answer">$t=1.43$ and $t=4.86$</p>
+                            <p>Values of t where ${A}&#39;\left( t \right)$ is undefined:</p>
+                            <p class="m1830-hw-answer">There are no values of t where ${A}&#39;\left( t \right)$is undefined.</p>
+                            <p>Values of t where ${A}\left( t \right)$ is undefined:</p>
+                            <p class="m1830-hw-answer">There are no values of t where $A\left( t \right)$ is undefined.</p>
+                            <p class="m1830-hw-answer">Separate into intervals using: $t=1.43$ and $t=4.86$.</p>
+                            <figure class="m1830-hw-answer"><img src="images/hw/u3s2p1a.png" alt="Graph of the first derivative of the function A of t">
+                            <figcaption><em>Sign chart for ${A}&#39;\left( t \right)$ reading left to right:
+                           negative, ${A}&#39;\left( 1.43 \right)\approx 0$, positive, ${A}&#39;\left( 4.86 \right)\approx 0$, negative</em></figcaption></figure>
+
+
+                            <p> Determine the intervals on which $A(t)$ is increasing/decreasing.
+                                <p>
+                                    <p class="m1830-hw-answer">The function is increasing on the interval: $\left( 1.43,4.86 \right).$</p>
+                                    <p class="m1830-hw-answer">From 2009 to 2012, purchase amounts of golf equipment in the US increased each year.</p>
+                                    <p class="m1830-hw-answer">The function is decreasing on the intervals: $\left( 0,1.43 \right)\cup \left( 4.86,6 \right).$</p>
+                                    <p class=" m1830-hw-answer">In 2008 into 2009 and in 2013 and 2014, purchase amounts of golf equipment decreased.</p>
+                              <li>      <p>Identify local maxima and minima for $A(t)$.</p>
+
+                                    <p class="m1830-hw-answer">There is a Local Maximum at the point: $\left( 4.86,3666.61 \right).$</p>
+
+                                    <p class="m1830-hw-answer">There is a Local Minimum at the point: $\left( 1.43,3025.25 \right).$</p>
+                        </li>
+
+                    </ol>
+                </li>
+
+            </ol>
+
+
+
+
+
+
+
+        </article>
+
+
+ <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+ <li>
+  <a href="pdfs/u3increaseanddecreasews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Increasing/Decreasing Worksheet</a> 
+</li> 
+<li>
+    <a href="pdfs/u3relativeextremaws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Local Max/Min Worksheet</a> 
+  </li>
+<li>
+          <a href="http://www.youtube.com/watch?v=Hoyv3-BMAGc" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Introduction to Min and Max Points</a>  (5:29)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=KblYjo1Ijws" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Finding Decreasing Interval with Derivative</a>  (4:32)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=lFQ4kMcODzU" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Critical Points for Local Extrema</a>  (5:24)
+        </li>
+
+</ul>
+
+        </div> 
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

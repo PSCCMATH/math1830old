@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+
+</head>
+
+<body>
+<nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830</h1>
+
+        <h2 id="unit-3-applications-of-derivatives">Unit 3 Applications of Derivatives</h2>
+
+<article class="notes">
+
+                <h3>3.7 Optimization in Packaging: Cans and Other Right Cylinders</h3>
+
+                <h4> Pre-Class:</h4>
+<ul>
+             <li>Complete 3.6 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+              <!-- <li>Work and check problem #1 in the 2.4 NOTES section. </li> -->
+              <li> Complete the 3.7 Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u3s6.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>3.6 HW</p>
+          </div>
+        </a>
+       </div>
+
+
+       <!-- <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <!-- <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:8aJUEzry@3/Differentiation-Rules" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div> -->
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=gL3HxBQyeg0" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>3.7 Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>
+
+<h4 class="m1830-pagebreak">Write a mathematical function for each of the following and then find the requested information.</h4>
+                <p><strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
+
+<ol>
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text"> A cylindrical soup can has a volume of 355 $cm^3.$ Find the dimensions (radius and height) that minimize the surface area of the can.</p>
+
+                      <p class="m1830-solution">$ V=355$ $c{{m}^{3}} $</p>
+                      <p class="m1830-solution">$ V=355=\pi {{r}^{2}}h $</p>
+                      <p class="m1830-solution m1830-step">$ h=\frac{355}{\pi {{r}^{2}}} $</p>
+                      <p class="m1830-solution">$ SA=2\pi {{r}^{2}}+2\pi rh$</p>
+                      <p class="m1830-solution">$ SA=2\pi {{r}^{2}}+2\pi r\left( \frac{355}{\pi {{r}^{2}}} \right)$</p>
+                      <p class="m1830-solution">$ SA=2\pi {{r}^{2}}+\frac{710}{r}$</p>
+                      <p class="m1830-solution m1830-step">$ SA=2\pi {{r}^{2}}+710{{r}^{-1}}$</p>
+                        <p class="m1830-solution m1830-step">$SA&#39;=4\pi r-710r^{-2}$</p>
+                      <p class="m1830-solution m1830-step">$SA&#39;=4\pi r-\frac{710}{{{r}^{2}}}$</p>
+                      <p class="m1830-solution m1830-pagebreak">Set $SA&#39;=0.$</p>
+                      <p class="m1830-solution">$4\pi r-\frac{710}{{{r}^{2}}}=0$</p>
+                      <p class="m1830-solution">$4\pi r=\frac{710}{{{r}^{2}}}$</p>
+                      <p class="m1830-solution">$\frac{4\pi r}{1}=\frac{710}{{{r}^{2}}}$</p>
+                      <p class="m1830-solution">$4\pi {{r}^{3}}=710$</p>
+                      <p class="m1830-solution">${{r}^{3}}=\frac{710}{4\pi }$</p>
+                      <p class="m1830-solution">${{r}^{3}}=56.5$</p>
+                      <p class="m1830-solution m1830-step">$r=3.84$</p>
+                      <p class="m1830-solution">$h=\frac{355}{\pi {{\left( 3.84 \right)}^{2}}}=7.66$</p>
+                      <p class="m1830-answer">The surface area of the can will be minimized when the radius is 3.84 cm and the height is 7.66 cm.</p>
+
+                  </li>
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text"> You have 320 $cm^2$ of aluminum to make a cylinder shaped coke can.  Find the dimensions that would produce a maximum volume.</p>
+
+                      <p class="m1830-solution">$ SA=2πr^2+2πrh$</p>
+                      <p class="m1830-solution">$ 320=2πr^2+2πrh$</p>
+                      <p class="m1830-solution m1830-step">$ 320-2πr^2=2πrh$</p>
+                      <p class="m1830-solution">$ \frac{320-2πr^2}{2πr}=h$</p>
+                      <p class="m1830-solution">$ V=πr^2h$</p>
+                      <p class="m1830-solution">$ V=πr^2(\frac{320-2πr^2}{2πr})$</p>
+                      <p class="m1830-solution m1830-step">$ V=r(\frac{320-2πr^2}{2})$</p>
+                      <p class="m1830-solution m1830-step">$V=160r-πr^3$</p>
+                      <p class="m1830-solution">$V&#39;=160-3πr^2$</p>
+                      <p class="m1830-solution">Set $V&#39;=0.$</p>
+                      <p class="m1830-solution">$160-3πr^2=0$</p>
+                      <p class="m1830-solution">$160=3πr^2$</p>
+                      <p class="m1830-solution">$r^2=\frac{160}{3π}$</p>
+                      <p class="m1830-solution">$r=\sqrt{\frac{160}{3π}}$</p>
+                      <p class="m1830-solution">$r=\pm4.12$</p>
+
+                      <p class="m1830-solution">$h= \frac{320-2πr^2}{2πr}$</p>
+                        <p class="m1830-solution">$h= \frac{320-2π(4.12)^2}{2π(4.12)}$</p>
+                          <p class="m1830-solution">$h= 8.24$</p>
+                      <p class="m1830-answer">The volume of the can will be maximized when the radius is 4.12 cm and the height is 8.24 cm.</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text"> What are the dimensions of the lightest open-top right cylindrical container that can hold a volume of 1000 $cm^3$?</p>
+
+                      <p class="m1830-solution">$ V=1000$ $c{{m}^{3}} $</p>
+                      <p class="m1830-solution">$ V=1000=\pi {{r}^{2}}h $</p>
+                      <p class="m1830-solution">$ h=\frac{1000}{\pi {{r}^{2}}} $</p>
+                      <p class="m1830-solution">$ SA=\pi {{r}^{2}}+2\pi rh$</p>
+                      <p class="m1830-solution">$ SA=\pi {{r}^{2}}+2\pi r(\frac{1000}{\pi {{r}^{2}}} )$</p>
+                      <p class="m1830-solution">$ SA=\pi {{r}^{2}}+\frac{2000}{r}$</p>
+                      <p class="m1830-solution m1830-step">$ SA=\pi {{r}^{2}}+2000{{r}^{-1}}$</p>
+                      <p class="m1830-solution m1830-step">$SA&#39;=2\pi r-{2000}{{{r}^{-2}}}$</p>
+                      <p class="m1830-solution m1830-step">$SA&#39;=2\pi r-\frac{2000}{{{r}^{2}}}$</p>
+                      <p class="m1830-solution">Set $SA&#39;=0.$</p>
+                      <p class="m1830-solution">$2\pi r-\frac{2000}{{{r}^{2}}}=0$</p>
+                      <p class="m1830-solution">$2\pi r=\frac{2000}{{{r}^{2}}}$</p>
+                      <p class="m1830-solution">$\frac{2\pi r}{1}=\frac{2000}{{{r}^{2}}}$</p>
+                      <p class="m1830-solution">$2\pi {{r}^{3}}=2000$</p>
+                      <p class="m1830-solution">${{r}^{3}}=\frac{2000}{2\pi }$</p>
+                      <p class="m1830-solution">${{r}^{3}}=\frac{1000}{\pi }$</p>
+                      <p class="m1830-solution">$\sqrt[3]{\frac{1000}{\pi}}$</p>
+                      <p class="m1830-solution m1830-step">$r=6.83$</p>
+                      <p class="m1830-solution">$h=\frac{1000}{\pi (6.83)^{2}} =6.82$</p>
+                      <p class="m1830-answer">The surface area of the can will be minimized when the radius is 6.83 cm and the height is 6.82 cm.</p>
+
+                  </li>
+
+
+
+
+
+
+
+
+</ol>
+
+
+
+</article>
+
+
+<article class="hw">
+
+    <h3>3.7 Optimization in Packaging: Cans and Other Right Cylinders Homework</h3>
+  <p><strong>Write a mathematical function for each of the following and then find the requested information.</strong></p>
+  <p><strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
+
+<ol>
+
+
+  <li class="m1830-problem">
+      <p class="m1830-problem-text"> A cylinderical container is to be made with 3000 $cm^2$ of sheet metal.  What dimensions would result in the maximum volume?  Assume a lid.</p>
+
+      <p class="m1830-hw-solution">$SA=2πr^2+2πrh$</p>
+      <p class="m1830-hw-solution">$3000=2πr^2+2πrh$</p>
+      <p class="m1830-hw-solution m1830-step">$ 3000-2πr^2=2πrh$</p>
+      <p class="m1830-hw-solution">$ \frac{3000-2\mathrm{πr}^2}{2πr}=h$</p>
+      <p class="m1830-hw-solution">$ V=πr^2h$</p>
+      <p class="m1830-hw-solution">$ V=πr^2(\frac{3000-2\mathrm{πr}^2}{2πr})$</p>
+      <p class="m1830-hw-solution">$ V=r(\frac{3000-2\mathrm{πr}^2}{2})$</p>
+          <p class="m1830-hw-solution">$ V=1500r-πr^3$</p>
+      <p class="m1830-hw-solution">$ V&#39;=1500-3πr^2$</p>
+      <p class="m1830-hw-solution">$ 0=1500-3πr^2$</p>
+      <p class="m1830-hw-solution">$ 1500=3πr^2$</p>
+      <p class="m1830-hw-solution">$ 500=πr^2$</p>
+      <p class="m1830-hw-solution">$ \frac{500}π=r^2$</p>
+      <p class="m1830-hw-solution">$ \sqrt{\frac{500}{π}}=r$</p>
+      <p class="m1830-hw-solution">$ r=\pm12.62$</p>
+      <p class="m1830-hw-solution">$ h=\frac{3000-2π(12.62)^2}{2π(12.62)}=25.21$</p>
+
+      <p class="m1830-hw-answer">The maximum volume occurs when the radius is 12.62 cm and the height is 25.21 cm.</p>
+
+
+  </li>
+
+
+
+
+
+
+
+
+  <li class="m1830-problem">
+      <p class="m1830-problem-text"> A cylindrical can has a volume of 900 cm³. The metal costs $15.50/cm². What dimensions produce a can with minimized cost? What is the cost of making the can?</p>
+
+      <p class="m1830-hw-solution">$V=\pi {{r}^{2}}h$</p>
+      <p class="m1830-hw-solution">$ 900=\pi {{r}^{2}}h$</p>
+      <p class="m1830-hw-solution m1830-step">$ h=\frac{900}{\pi {{r}^{2}}}$</p>
+      <p class="m1830-hw-solution">$ SA=2\pi {{r}^{2}}+2\pi rh$</p>
+      <p class="m1830-hw-solution">$ S(r)=2\pi {{r}^{2}}+2\pi r\left( \frac{900}{\pi {{r}^{2}}} \right)$</p>
+      <p class="m1830-hw-solution">$ S(r)=2\pi {{r}^{2}}+\frac{1800}{r}$</p>
+      <p class="m1830-hw-solution m1830-step">$ S(r)=2\pi {{r}^{2}}+1800{{r}^{-1}}$</p>
+      <p class="m1830-hw-solution">$ S&#39;(r)=4\pi r-\frac{1800}{{{r}^{2}}}$</p>
+      <p class="m1830-hw-solution">$ 0=4\pi r-\frac{1800}{{{r}^{2}}}$</p>
+      <p class="m1830-hw-solution">$ \frac{1800}{{{r}^{2}}}=4\pi r$</p>
+      <p class="m1830-hw-solution">$ 4\pi {{r}^{3}}=1800$</p>
+      <p class="m1830-hw-solution">$ {{r}^{3}}=\frac{1800}{4\pi }$</p>
+      <p class="m1830-hw-solution">$ {{r}^{3}} \approx 143.239448$</p>
+      <p class="m1830-hw-solution">$ r\approx 5.23\text{ cm}$</p>
+      <p class="m1830-hw-solution m1830-step">$ h=\frac{900}{\pi {{(5.23)}^{2}}}=10.47\text{ cm}$</p>
+      <p class="m1830-hw-solution">Minimum Surface Area</p>
+      <p class="m1830-hw-solution">$ SA=2\pi {{r}^{2}}+2\pi rh$</p>
+      <p class="m1830-hw-solution">$ SA=2\pi {{\left( 5.23 \right)}^{2}}+2\pi \left( 5.23 \right)\left( 10.47 \right)$</p>
+      <p class="m1830-hw-solution m1830-step">$ SA=515.92\text{ }c{{m}^{2}}$</p>
+      <p class="m1830-hw-solution">Cost of the can</p>
+      <p class="m1830-hw-solution">$ =\$15.50(SA)$</p>
+      <p class="m1830-hw-solution">$=\$15.50(515.92)$</p>
+      <p class="m1830-hw-solution">$=7996.76$</p>
+      <p class="m1830-hw-answer">The minimum surface area occurs when the radius is 5.23 cm and the height is 10.47 cm.</p>
+      <p class="m1830-hw-answer">The cost of making the can is \$7996.76.</p>
+
+  </li>
+
+
+
+</ol>
+
+</article>
+
+
+ <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<!-- <li>
+  <a href="pdfs/u2chainrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Chain Rule Worksheet</a> 
+</li> -->
+
+<li>
+          <a href="http://www.youtube.com/watch?v=hUhisi2FBuw" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> The Ingenious Design of the Aluminum Beverage Can</a>  (11:39)
+        </li>
+
+
+</ul>
+
+        </div> 
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

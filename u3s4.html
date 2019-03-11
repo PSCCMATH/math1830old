@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MATH 1830 Notes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/notes.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/togglebuttons.js"></script>
+  <script src="js/loadmathjax.js"></script>
+  <script src="js/googlestats.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/togglepass.js"></script>
+</head>
+
+<body>
+
+  <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button>        <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>
+      <div class="collapse navbar-collapse"
+        id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+              title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group"> <input id="input" type="password" class="form-control" placeholder="pin-code"> </div> <button id="submit" type="submit"
+              class="btn btn-default">Show Solutions</button> </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 id="u3toc">MATH 1830</h1>
+    <h2>Unit 3 Applications of Derivatives</h2>
+    <h3>3.4 A Summary of Curve Sketching</h3>
+
+    <h4> Pre-Class:</h4>
+    <ul>
+      <li>Complete 3.3 Homework assignment: check and correct. </li>
+
+
+      <li>Print Handouts for 3.4 In-Class Activity</li>
+
+    </ul>
+    <div class="row text-center m-buttons">
+
+
+      <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u3s3.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>3.3 HW</p>
+          </div>
+        </a>
+      </div>
+
+
+      <!-- <div class="col-sm-2">
+        <a onclick="window.print()" href=#>
+          <div class="box " tabindex="0">
+            <i class="fa fa-print fa-3x "></i>
+            <p>Print</p>
+          </div>
+        </a>
+      </div> -->
+
+
+
+
+
+    </div>
+
+
+    <article class="nearpod">
+
+      <h4> NearPod: Derivative Rules</h4>
+      <ol>
+        <li> Which rule would you use to find the rate of change for the function $f(x)=x^3\left(2x^2+3x-7\right)$?
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li>Which rule would you use to find the derivative of the function $f(x)=\left(2x+7\right)^2$?
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li>
+          Which rule would you use to find the rate of change for the function $f(x)=4e^x$?
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+
+        <li class="m1830-pagebreak"> Which rule would you use to find the derivative of the function $y=\frac{x^2+3x-7}{x}$?
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li>Which rule would you use to find the rate of change for the function $g(x)=\frac{x^3}{\left(x+1\right)\left(x-3\right)}$?
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+        <li> Which rule would you use to find the derivative of the function $y=e^x \sqrt x$?
+          <ul>
+            <li>Power Rule</li>
+            <li> e Rule</li>
+            <li>ln Rule</li>
+            <li> Product Rule</li>
+            <li> Quotient Rule</li>
+            <li>Chain Rule</li>
+          </ul>
+        </li>
+      </ol>
+    </article>
+
+
+
+    <article class="nearpod">
+      <h3 class="m1830-pagebreak">Nearpod Activity: First Derivative Test</h3>
+      <p><img src="images/notes/u3s4npfdt1.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5."></p>
+      <ol>
+        <li>
+          <p> Draw and label 3 lines tangent to the function. </p>
+          <ol>
+            <li> a tangent line with a positive slope </li>
+            <li> tangent line with a negative slope </li>
+            <li> a tangent line with a slope of zero </li>
+          </ol>
+        </li>
+
+        <img src="images/notes/u3s4npfdt2.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5 with points marked at (-1.656, -4.248), (0, 1), and (0.906, -0.045).">
+        <li> Use different colors to mark the intervals where the function is increasing and decreasing. Include a color legend.
+          </li>
+        <li> State the intervals where the function is:
+          <ol>
+            <li> Increasing</li>
+            <li> Decreasing </li>
+          </ol>
+        </li>
+      </ol>
+    </article>
+
+
+    <article class="nearpod">
+      <h3 class="m1830-pagebreak">Nearpod Activity: Second Derivative Test</h3>
+
+      <img src="images/notes/u3s4npsdt1.png" alt="graph of f(x) = x^4+x^3-3x^2+1 on the domaim from -5 to 5 with points marked at (-1, -2), and (0.5, 0.438).">
+
+
+      <ol>
+        <li> Use different colors to mark the intervals where the function is concave up and concave down. Include a color legend.</li>
+        <li> State the intervals where the function is:
+          <ol>
+            <li> Concave Up</li>
+            <li> Concave Down</li>
+          </ol>
+        </li>
+        <img src="images/notes/u3s4npsdt2.png" alt="Verixon Wireless connections in millions versus revenue in billions of dollars for the years 2006-2011.  Will require a tactile graph.  Please see your instructor.">
+        <li>
+          <ol>
+            <li>Describe what is happening to the revenue from 2006 until mid-2008.</li>
+            <li> Describe what is happening to the revenue from mid-2008 until 2011.</li>
+          </ol>
+        </li>
+      </ol>
+
+
+
+
+
+    </article>
+
+
+
+    <article class="nearpod">
+      <h3 class="m1830-pagebreak">Nearpod Activity: Derivative Analysis</h3>
+      <p><img src="images/notes/u3s4npda.png" alt="graph of f(x) = -2x^5+6x^4+x^3-10x^2+6 with marked points A-E.  Point A is at x=-1.014.  Point B is at x=1.151.  Point C is at x=0.  Point D is at x=1.65.  Point E is at x=2.28."></p>
+      <h4 id="first-derivative-test-">FIRST DERIVATIVE TEST:</h4>
+      <p>In the first blank of each statement, choose one: <strong>positive</strong>, <strong>negative</strong>, <strong>equal to zero.</strong></p>
+      <p> In the second blank of each statement, choose one: <strong>increasing</strong>, <strong>decreasing</strong>, <strong>has a horizontal tangent.</strong></p>
+      <ol>
+        <li>At Point A, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.
+          </li>
+        <li>At Point B, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.</li>
+        <li>At Point C, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.
+          </li>
+        <li>At Point D, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.
+          </li>
+        <li>At Point E, $f&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <strong><input type="text" class="form-control"></strong>.</li>
+      </ol>
+      <p class="m1830-pagebreak"><img src="images/notes/u3s4npda.png" alt="graph of f(x) = -2x^5+6x^4+x^3-10x^2+6 with marked points A-E.  Point A is at x=-1.014.  Point B is at x=1.151.  Point C is at x=0.  Point D is at x=1.65.  Point E is at x=2.28."></p>
+      <h4>SECOND DERIVATIVE TEST:</h4>
+      <p>In the first blank of each statement, choose one: <strong>positive</strong>, <strong>negative</strong>, <strong>equal to zero.</strong></p>
+      <p>In the second blank of each statement, choose one: <strong>concave up</strong>, <strong>concave down</strong>, <strong>has a possible point of inflection.</strong></p>
+      <ol>
+        <li>At Point A, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point B, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point C, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point D, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+        <li>At Point E, $f&#39;&#39;(x)$ is <input type="text" class="form-control">, therefore the graph (is) <input type="text"
+            class="form-control">.</li>
+      </ol>
+    </article>
+
+<article class="hw">
+  <h3>3.4 Curve Sketching Homework</h3>
+  <ol>
+ <li class="m1830-problem">
+
+                        <p class="m1830-problem-text"> $f(x)={{e}^{x}}(5x-7)$</p>
+
+                        <p>Domain:</p>
+
+                            <p class="m1830-answer">$\left( -\infty ,\infty \right)$</p>
+
+                            <p>x int(s):</p>
+
+                            <p class="m1830-solution">$0={{e}^{x}}(5x-7)$</p>
+
+                            <p class="m1830-solution">$5x-7=0$</p>
+
+                            <p class="m1830-solution">$x=\frac{7}{5}$</p>
+
+                            <p class="m1830-solution">${{e}^{x}}=0$</p>
+
+                            <p class="m1830-solution">no solution</p>
+
+                            <p class="m1830-answer">$\left( \frac{7}{5},0 \right)$</p>
+
+                            <p>y int:</p>
+
+                            <p class="m1830-solution">$f\left( 0 \right)={{e}^{0}}\left( 5\left( 0 \right)-7 \right)=-7$</p>
+
+                            <p class="m1830-answer">$\left( 0,-7 \right)$</p>
+
+
+
+                            <p>Asymptotes:</p>
+
+                            <p>Vertical: </p>
+
+                            <p class="m1830-answer">There are no vertical asymptotes. The function is continuous for all x.</p>
+
+
+
+                            <p>Horizontal:</p>
+
+                            <p class="m1830-solution">$\mathop {\lim }\limits_{x \to \infty }\left( {{e}^{x}}(5x-7) \right)=\infty $</p>
+
+                            <p class="m1830-solution">$\mathop {\lim }\limits_{x \to -\infty }\left( {{e}^{x}}(5x-7) \right)=0$</p>
+
+                            <p class="m1830-answer">There is a horizontal asymptote at $y=0$ on the left end of the graph.</p>
+
+
+
+                            <p class="m1830-pagebreak">Increasing and Decreasing</p>
+
+                            <p class="m1830-solution">${f}&#39;\left( x \right)={{e}^{x}}\left( 5x-7 \right)+5{{e}^{x}} $</p>
+
+                            <p class="m1830-solution">$f’(x) ={{e}^{x}}\left( 5x-7+5 \right)$</p>
+
+                            <p class="m1830-solution">$f’(x) ={{e}^{x}}\left( 5x-2 \right)$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)=0:$</p>
+
+                            <p class="m1830-solution">${{e}^{x}}\left( 5x-2 \right)=0$</p>
+
+                            <p class="m1830-solution">$e^x \ne 0$ and $x=\frac{2}{5}$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;\left( x \right)\;$ is undefined: There are no values of x where ${f}&#39;\left( x \right)\;$ is undefined.</p>
+
+                            <p class="m1830-solution">Values of x where $f\left( x \right)\;$ is undefined: There are no values of x where $f\left( x \right)\;$ is undefined.</p>
+
+                            <p class="m1830-solution">Separate into intervals using:  $x=\frac{2}{5}$.</p>
+
+                            <p class="m1830-solution"><img src="images/notes/u3s3p2a.png" alt="Image of graph of F prime of x as it relates to the x axis. Separates graph into intervals divided by partitions where F prime equals zero, or is undefined.  Also indicates intervals where derivative is positive and intervals where derivative is negative."></p>
+
+                            <p class="m1830-solution">Sign graph of ${f}&#39;(x)$ reading left to right: negative, ${f}&#39;\left( \frac{2}{5} \right)=0$, positive</p>
+
+                            <p>Increasing: </p>
+
+                            <p class="m1830-answer">The graph of $f(x)$ is increasing on the interval $\left( \frac{2}{5},\infty \right).$</p>
+
+
+
+                            <p>Decreasing: </p>
+
+                            <p class="m1830-answer">The graph of $f(x)$ is decreasing on the interval $\left( -\infty ,\frac{2}{5} \right).$</p>
+
+
+
+                            <p>Local Maxima:</p>
+
+                            <p class="m1830-answer">There are no local maxima.</p>
+
+
+
+                            <p>Local Minima:</p>
+
+                            <p class="m1830-solution">$f\left( \frac{2}{5} \right)={{e}^{2/5}}\left( 5\left( \frac{2}{5} \right)-7 \right)\approx -7.46$</p>
+
+                            <p class="m1830-answer">There is a local minimum at the point $\left( \frac{2}{5},-7.46 \right).$</p>
+
+                            <p class="m1830-pagebreak">Concave Up and Concave Down</p>
+
+                            <p class="m1830-solution">${f}&#39;&#39;\left( x \right)={{e}^{x}}\left( 5x-2 \right)+{{e}^{x}}\left( 5 \right)$</p>
+
+                            <p class="m1830-solution">${f}&#39;&#39;\left( x \right)={{e}^{x}}\left( 5x-2+5 \right)$</p>
+
+                            <p class="m1830-solution">${f}&#39;&#39;\left( x \right)={{e}^{x}}\left( 5x+3 \right)$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0:$</p>
+
+                            <p class="m1830-solution">${{e}^{x}}\left( 5x+3 \right)=0$</p>
+
+                            <p class="m1830-solution">$x=-\frac{3}{5}$</p>
+
+                            <p class="m1830-solution">${{e}^{x}}\ne 0$</p>
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined:</p>
+
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)\;$is undefined.</p>
+
+                            <p class="m1830-solution">Values of x where $f\left( x \right)\;$is undefined:</p>
+
+                            <p class="m1830-solution">There are no values of x where $f\left( x \right)\;$is undefined.</p>
+
+                            <p class="m1830-solution">Separate into intervals using:  $x=-\frac{3}{5}$. </p>
+
+                            <p class="m1830-solution"><img src="images/notes/u3s3p2b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative."></p>
+
+                            <p class="m1830-solution">Sign chart for ${f}&#39;&#39;\left( x \right)$: negative, ${f}&#39;&#39;\left( -\frac{3}{5} \right)=0$, positive</p>
+
+                            <p>Concave up: </p>
+
+                            <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $\left( -\frac{3}{5},\infty \right)$.</p>
+
+
+
+                            <p>Concave down: </p>
+
+                            <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $\left( -\infty ,-\frac{3}{5} \right)$.</p>
+
+
+
+                            <p>Inflection Points:</p>
+
+                            <p class="m1830-solution">$f\left( -\frac{3}{5} \right)={{e}^{-3/5}}\left( 5\left( -\frac{3}{5} \right)-7 \right)\approx -5.488$.</p>
+
+
+
+                            <p class="m1830-answer">There is a point of inflection at $\left( -\frac{3}{5},-5.488 \right)$</p>
+
+                        <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+
+                            <p class="m1830-answer"><img src="images/notes/u3s3p2c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+
+                    </li>
+
+
+
+
+
+
+</ol>
+  </article>
+
+
+
+  </div>
+  <!-- ending of body container -->
+</body>
+
+</html>

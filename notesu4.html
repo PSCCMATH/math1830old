@@ -10,134 +10,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="js/togglebuttons.js"></script>
     <script src="js/loadmathjax.js"></script>
-    <script src="js/googlestats.js"></script>
-    <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-    <script src="js/desmosgraphs.js"></script>
-    <script>
-      unit1();
-    </script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
 
 </head>
 
 <body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="https://psccmath.github.io/math1830/">MATH 1830</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-           <ul class="nav navbar-nav">
-
-              <!--         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-  <li><a href="#">Link</a></li> -->
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 1<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu1.html">Notes</a></li>
-                    <li><a href="homeworku1.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 2<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu2.html">Notes</a></li>
-                    <li><a href="homeworku2.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 3<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu3.html">Notes</a></li>
-                    <li><a href="homeworku3.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 4<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu4.html">Notes</a></li>
-                    <li><a href="homeworku4.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Toggle<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="togglesolutions();return false;">Solutions</a></li>
-                    <li><a href="#" onclick="toggleanswers();return false;">Answers</a></li>
-
-
-
-                 </ul>
-              </li>
-           </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
-     </div>
-     <!-- /.container-fluid -->
-  </nav>
 
     <div class="container">
-        <h1 id="u4toc">MATH 1830 Notes</h1>
-        <p>Mary Monroe-Ellis</p>
-        <p>Susan Mosteller</p>
+        <h1 id="u4toc">MATH 1830</h1>
+
           <h2>Unit 4: Integration</h2>
 
 
         <div class="pagebreak"></div>
 
-        <div class="m1830-toc">
 
 
 
-
-
-
-                    <ul>
-
-                        <li><a href="notesu4.html#u4s1">4.1 Area by Sums</a></li>
-
-                        <li><a href="notesu4.html#u4s2">4.2 Fundamental Theorem of Calculus</a></li>
-
-                        <li><a href="notesu4.html#u4s3">4.3 Indefinite Integrals</a></li>
-
-                        <li><a href="notesu4.html#u4s4">4.4 Integration by Substitution</a></li>
-
-                        <li><a href="notesu4.html#u4s5">4.5 Area Between Curves</a></li>
-                    </ul>
-
-
-
-        </div>
-
-
-
-
-        <div id="u4" class="m1830-unit">
-
-
-
-
-
-
-            <div id="u4s1" class="m1830-section m1830-pagebreak">
+                <div id="u4s1" class="m1830-section m1830-pagebreak">
                 <h3>4.1 Area by Sums</h3>
 
                 <h4>Introduction</h4>
@@ -1356,8 +1251,8 @@ $$\begin{align}&amp;\int_a^bf\left(x\right)\operatorname dx\end{align}\;=F(b)-F(
                 <!-- ending of last ordered list -->
             </div>
             <!-- ending of last section -->
-        </div>
-        <!--ending of unit 4 div -->
+
+
     </div>
     <!-- ending of body container -->
 </body>

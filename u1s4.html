@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MATH 1830 Notes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/notes.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/togglebuttons.js"></script>
+  <script src="js/loadmathjax.js"></script>
+  <script src="js/googlestats.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/togglepass.js"></script>
+  <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+      <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+
+  <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button>        <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>
+      <div class="collapse navbar-collapse"
+        id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+              title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group"> <input id="input" type="password" class="form-control" placeholder="pin-code"> </div> <button id="submit" type="submit"
+              class="btn btn-default">Show Solutions</button> </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 id="u1toc">MATH 1830</h1>
+
+    <h2>Unit 1 Limits</h2>
+
+
+
+    <div id="u1" class="m1830-unit">
+
+      <article class="notes">
+        <h3>1.4 Definition of the Derivative</h3>
+        <h4> Pre-Class:</h4>
+        <ul>
+          <li>Complete 1.3 Homework assignment: check and correct. </li>
+
+          <li> Take notes on the videos and readings (use the space below). </li>
+          <li>Work and check problem #1 in the 1.4 NOTES section. </li>
+          <li> Complete the 1.4 Pre-Class Quiz.</li>
+        </ul>
+        <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+            <a href="https://psccmath.github.io/math1830/u1s3.html" target="_blank">
+              <div class="box " tabindex="0">
+                <i class="fa fa-check fa-3x "></i>
+                <p>1.3 HW</p>
+              </div>
+            </a>
+          </div>
+
+
+          <!-- <div class="col-sm-2">
+            <a onclick="window.print()" href=#>
+              <div class="box " tabindex="0">
+                <i class="fa fa-print fa-3x "></i>
+                <p>Print</p>
+              </div>
+            </a>
+          </div> -->
+          <div class="col-sm-2">
+            <a href="https://cnx.org/contents/i4nRcikn@2.50:h08mP8gb@2/Defining-the-Derivative" target="_blank">
+              <div class="box " tabindex="0">
+                <i class="fa fa-book fa-3x "></i>
+                <p>Read1</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-2">
+            <a href="https://cnx.org/contents/i4nRcikn@2.50:Jy0aWV6Z@5/The-Derivative-as-a-Function" target="_blank">
+              <div class="box " tabindex="0">
+                <i class="fa fa-book fa-3x "></i>
+                <p>Read2</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-2">
+            <a href="http://www.youtube.com/watch?v=HEH_oKNLgUU" target="_blank">
+              <div class="box " tabindex="0">
+                <i class="fa fa-play fa-3x "></i>
+                <p>Watch</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-2">
+            <a href="https://www.myopenmath.com/" target="_blank">
+              <div class="box " tabindex="0">
+                <i class="fa fa-line-chart fa-3x "></i>
+                <p>1.4 Quiz</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-2">
+            <a href="#ar" target="_blank">
+              <div class="box " tabindex="0">
+                <i class="fa fa-pencil-square fa-3x "></i>
+                <p>Resources</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <h4 class="m1830-pagebreak">Introduction</h4>
+        <p>A decorative birthday balloon is being filled with helium. The table shows the volume of the helium in the balloon
+          at 3 second intervals for 30 seconds.</p>
+
+        <table>
+          <tr>
+            <th>t(seconds)</th>
+            <th>V (cubic centimeters)</th>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>4.2</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>33.5</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>113.0</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>267.9</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>523.3</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>904.3</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>1436.0</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>2143.6</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>3052.1</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>4186.7</td>
+          </tr>
+        </table>
+
+
+        <p>This function can be approximated by the equation $f(x) = 0.16{x^3} + 0.0003{x^2} - 0.007x + 0.0161$ (graphed below).
+          <img src="images/notes/u1s4p1i.png" alt="First Quadrant Graph.x-axis:  -3 to 33  measuring time in seconds ; y-axis:  0 to 4000  measuring volume in cubic centimeters. Cubic curve increasing up and to the right.">
+          <ol>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                What are the dependent and independent variables for this problem? In what units is the rate of changed expressed?</p>
+
+              <p class="m1830-answer">The dependent variable is volume, in $cm^3.$</p>
+              <p class="m1830-answer">The independent variable is time, in seconds.</p>
+              <p class="m1830-answer">The rate of change is measured in $cm^3$ per second $({}^{c{{m}^{3}}}/{}_{\sec }).$</p>
+
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                A secant line is a line that intersects two points on a curve. Draw a secant line on the graph for each of the following.
+                Calculate the slope of the secant line for each of the following intervals.</p>
+              <ol>
+
+                <li>21 s to 30 s
+                  <p class="m1830-answer">$\left(21,1436\right)\;\left(30,4186.7\right)\;\;{m_{secant}}\approx306\;cm^3/sec$</p>
+                </li>
+
+                <li>21 s to 27 s
+                  <p class="m1830-answer">$\left(21,1436\right)\;\left(27,3052.1\right)\;\;{m_{secant}}\approx269\;cm^3/sec$</p>
+                </li>
+
+                <li>21 s to 24 s
+                  <p class="m1830-answer">$\left(21,1436\right)\;\left(24,2143.6\right)\;\;{m_{secant}}\approx236\;cm^3/sec$</p>
+                </li>
+              </ol>
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                What does the slope of the secant line represent?</p>
+
+              <p class="m1830-answer">The slope of the secant represents the average rate of change in the volume of helium in the balloon over the
+                time interval.</p>
+
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                A tangent line is a line that intersects a curve at only one point. Draw a tangent line at the point on the graph corresponding
+                to 21 s and estimate the slope of this line.</p>
+
+              <p class="m1830-answer">Answers will vary. At 21 seconds, the volume of the helium balloon is increasing at a rate of approximately
+                $208 \;cm^3/sec.$</p>
+
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                What does the slope of the tangent line represent?</p>
+
+              <p class="m1830-answer">The slope of the tangent line represents the instantaneous rate of change of the volume at a given time. At
+                21 seconds, the volume of the helium balloon is increasing at a rate of approximately $208 \;cm^3/sec.$</p>
+
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                Compare the secant slopes to the slope of the tangent line. What do you notice?</p>
+
+              <p class="m1830-answer">As the time interval becomes smaller between 21 sec and the end of the interval, the slope of the secant line
+                gets closer in value to the slope of the tangent line, which is the rate of change at exactly 21 seconds.</p>
+            </li>
+          </ol>
+          <p><cite> Source <a href="http://mysite.science.uottawa.ca/iabde083/ch01.pdf">http://mysite.science.uottawa.ca/iabde083/ch01.pdf</a> </cite></p>
+          <hr>
+
+          <div class="m1830-pagebreak"></div>
+
+
+          <h4>Notes</h4>
+          <strong>Limit Definition of the Derivative of a Function: 4 Step Process</strong>
+          <p> Given $f(x)$,</p>
+          <p> $f'(x)=\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}$</p>
+          <p>Step 1: Find $f\left( {x + h} \right)$</p>
+          <p>Step 2: Find $f\left( {x + h} \right) - f\left( x \right)$</p>
+          <p>Step 3: Find $\frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}$</p>
+          <p>Step 4: Find $\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}$</p>
+
+          <ol>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                Use the limit definition of the derivative to find $f&#39;\left( x \right)$, given $f\left( x \right) = \;{x^2}\; - 3x -
+                2.$</p>
+
+              <p class="m1830-solution">Step 1</p>
+              <p class="m1830-solution">$f(x + h) = {(x + h)^2} - 3(x + h) - 2$</p>
+              <p class="m1830-answer">$f(x + h) = {x^2} + 2xh + {h^2} - 3x - 3h - 2$</p>
+              <p class="m1830-solution">Step 2</p>
+              <p class="m1830-solution">$f(x + h) - f(x) = \left( {{x^2} + 2xh + {h^2} - 3x - 3h - 2} \right) - \left( {{x^2}\; - 3x - 2} \right)$</p>
+              <p class="m1830-answer">$f(x+h)-f(x)= 2xh + {h^2} - 3h$</p>
+              <p class="m1830-solution">Step 3</p>
+              <p class="m1830-solution">$\frac{{f(x + h) - f(x)}}{h} = \frac{{2xh + {h^2} - 3h}}{h}$</p>
+              <p class="m1830-solution">$ \frac{{f(x + h) - f(x)}}{h} = \frac{{2xh}}{h} + \frac{{{h^2}}}{h} - \frac{{3h}}{h}$</p>
+              <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 2x + h - 3$</p>
+              <p class="m1830-solution">Step 4</p>
+              <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} 2x + h - 3 = 2x + (0) - 3 = 2x - 3$</p>
+              <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is $f&#39;(x) = 2x - 3.$</p>
+
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                Use the limit definition of the derivative to find $f&#39;\left( x \right)$, given $f\left( x \right) = \;5{x^2} + 2x - 8.$</p>
+
+              <p class="m1830-solution">Step 1</p>
+              <p class="m1830-solution">$f(x + h) = 5{(x + h)^2} + 2(x + h) - 8$</p>
+              <p class="m1830-solution">$f(x+h)= 5({x^2} + 2xh + {h^2}) + 2x + 2h - 8$</p>
+              <p class="m1830-answer">$f(x+h)=5{x^2} + 10xh + 5{h^2} + 2x + 2h - 8$</p>
+              <p class="m1830-solution">Step 2</p>
+              <p class="m1830-solution">$f(x + h) - f(x) = \left( {5{x^2} + 10xh + 5{h^2} + 2x + 2h - 8} \right) - \left( {5{x^2} + 2x - 8} \right)$</p>
+              <p class="m1830-answer">$f(x+h)-f(x)= 10xh + 5{h^2} + 2h$</p>
+              <p class="m1830-solution">Step 3</p>
+              <p class="m1830-solution">$\frac{{f(x + h) - f(x)}}{h} = \frac{{10xh + 5{h^2} + 2h}}{h}$</p>
+              <p class="m1830-solution">$ \frac{{f(x + h) - f(x)}}{h} = \frac{{10xh}}{h} + \frac{{5{h^2}}}{h} + \frac{{2h}}{h}$</p>
+              <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 10x + 5h + 2$</p>
+              <p class="m1830-solution">Step 4</p>
+              <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} (10x + 5h + 2) = 10x + 5(0) + 2 = 10x + 2$</p>
+              <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is $f&#39;(x) = 10x + 2.$</p>
+
+              <strong>Write the equation of the tangent line at x=2.</strong>
+              <p class="m1830-answer">Point $\quad f(2)=16\quad \quad (2,16)$ </p>
+              <p class="m1830-answer">Slope $\quad {m_{tan}} = f&#39;(2) = 10(2) + 2 = 20 + 2 = 22$</p>
+
+
+              <p class="m1830-solution">$y-y_1=m\left(x-x_1\right)\\ $</p>
+              <p class="m1830-solution">$y - 16 = 22(x - 2)$</p>
+              <p class="m1830-solution">$y - 16 = 22x - 44$</p>
+              <p class="m1830-answer">$y = 22x - 28$</p>
+
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                Use the limit definition of the derivative to find $f&#39;\left( x \right)$, given $f(x) = - 4{x^2} + x + 2.$</p>
+              <p class="m1830-solution">Step 1</p>
+              <p class="m1830-solution">$f(x+h)=-4{{(x+h)}^{2}}+(x+h)+2$</p>
+              <p class="m1830-solution">$f(x+h)=-4({{x}^{2}}+2xh+{{h}^{2}})+x+h+2$</p>
+              <p class="m1830-answer">$f(x+h)=-4{{x}^{2}}-8xh-4{{h}^{2}}+x+h+2$</p>
+              <p class="m1830-solution">Step 2</p>
+              <p class="m1830-solution">$f(x+h)-f(x)=\left( -4{{x}^{2}}-8xh-4{{h}^{2}}+x+h+2 \right)-\left( -4{{x}^{2}}+x+2 \right)$</p>
+              <p class="m1830-answer">$f(x+h)-f(x)=-8xh-4{{h}^{2}}+h$</p>
+              <p class="m1830-solution">Step 3</p>
+              <p class="m1830-solution">$\frac{f(x+h)-f(x)}{h}=\frac{-8xh-4{{h}^{2}}+h}{h}$</p>
+              <p class="m1830-solution">$\frac{f(x+h)-f(x)}{h}=\frac{-8xh}{h}-\frac{4{{h}^{2}}}{h}+\frac{h}{h}$</p>
+              <p class="m1830-answer">$\frac{f(x+h)-f(x)}{h}=-8x-4h+1$</p>
+              <p class="m1830-solution">Step 4</p>
+              <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} (-8x-4h+1)=-8x-4(0)+1=-8x+1$</p>
+              <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is ${f}&#39;(x)=-8x+1.$ </p>
+              <p><strong>Write the equation of the tangent line at x = 1.</strong></p>
+              <p class="m1830-answer">Point $\quad f(1)=-1\quad \quad (1, - 1)$</p>
+              <p class="m1830-answer">Slope $\quad {m_{\tan}}= f&#39;(1) =- 8(1) + 1 = - 8 + 1 = - 7$</p>
+              <p class="m1830-solution">$y-y_1=m\left(x-x_1\right)\\ $</p>
+              <p class="m1830-solution">$y +1 = -7(x - 1)$</p>
+              <p class="m1830-solution">$y +1 = -7x +7$</p>
+              <p class="m1830-answer">$y = -7x +6$</p>
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                Use the limit definition of the derivative to find $f&#39;\left( x \right)$, given $f\left( x \right) = \;\frac{6}{x} - 2.$</p>
+
+              <p class="m1830-solution">Step 1</p>
+              <p class="m1830-answer">$f(x + h) = \frac{6}{{x + h}} - 2$</p>
+              <p class="m1830-solution">Step 2</p>
+              <p class="m1830-solution">$f(x + h) - f(x) = \frac{6}{{x + h}} - \frac{6}{x}$</p>
+              <p class="m1830-solution">$f(x + h) - f(x) = \frac6{x+h}\left(\frac xx\right)-\frac6x\left(\frac{x+h}{x+h}\right)$</p>
+              <p class="m1830-solution">$f(x + h) - f(x) = \frac{{6x}}{{x(x + h)}} - \frac{{6x + 6h}}{{x(x + h)}}$</p>
+              <p class="m1830-answer">$f(x + h) - f(x) = \frac{{ - 6h}}{{x(x + h)}}$</p>
+              <p class="m1830-solution">Step 3</p>
+              <p class="m1830-solution">$\frac{{f(x + h) - f(x)}}{h} = \frac{{\left( {\frac{{ - 6h}}{{x(x + h)}}} \right)}}{h}$</p>
+              <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = \frac{-6h}{x(x+h)}\cdot\frac1h = \frac{{ - 6}}{{x(x + h)}}$</p>
+              <p class="m1830-solution">Step 4</p>
+              <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} \frac{{ - 6}}{{x(x + h)}} = \frac{{ - 6}}{{x(x + 0)}} = \frac{{ - 6}}{{x(x)}}
+                = \frac{{ - 6}}{{{x^2}}}$</p>
+              <p class="m1830-answer">Therefore, the slope of the tangent line for any given $x$ is $f&#39;\left( x \right) = -\frac{{ 6}}{{{x^2}}}.$</p>
+
+              <strong>Find the equation of the tangent line at $x = 3.$</strong>
+              <p class="m1830-answer">Point $\quad f(3)=0\quad (3,0)$</p>
+              <p class="m1830-answer">Slope $\quad {m_{\tan}} = f&#39;(3) = \frac{{ - 6}}{9} = - \frac{2}{3}$</p>
+
+
+              <p class="m1830-solution">$y-y_1=m\left(x-x_1\right)\\ $</p>
+              <p class="m1830-solution">$y -0 = - \frac{2}{3}(x - 3)$</p>
+              <p class="m1830-answer">$y = - \frac{2}{3}x + 2$</p>
+
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                Friedman Academy is a charter school in South Texas. The school is not at capacity, and enrollment increases monthly. The
+                charter school’s enrollment is modeled by $$f\left( x \right) = {x^2}\; + x + 100$$ where y is in students
+                and x is in years since 2008.</p>
+              <ol>
+
+                <li>Estimate the average change in enrollment (the average rate of change of y with respect to x) from the year
+                  2010 to the year 2012.
+                  <p class="m1830-solution">Use points $(2,106)$ and $(4,120)$</p>
+                  <p class="m1830-solution">Avg change: $\frac{120-106}{4-2}=\frac{14}{2}=7$ </p>
+                  <p class="m1830-answer">Enrollment increases by 7 students per year.</p>
+                </li>
+
+                <li>Find the function for the instantaneous rate of change in enrollment using the limit definition of the derivative.
+                  <p class="m1830-solution">Step 1</p>
+                  <p class="m1830-solution">$f(x + h) = {(x + h)^2} + (x + h) + 100=$</p>
+                  <p class="m1830-answer">${x^2} + 2xh + {h^2} + x + h + 100$</p>
+                  <p class="m1830-solution">Step 2</p>
+                  <p class="m1830-solution">$f(x + h) - f(x) =( {{x^2} + 2xh + {h^2} + x + h + 100}) - ({{x^2} + x + 100})$</p>
+                  <p class="m1830-answer">$f(x + h) - f(x)= 2xh + {h^2} + h$</p>
+                  <p class="m1830-solution">Step 3</p>
+                  <p class="m1830-solution">$\frac{{f(x + h) - f(x)}}{h} = \frac{{2xh + {h^2} + h}}{h}$</p>
+                  <p class="m1830-solution">$\frac{{f(x + h) - f(x)}}{h} = \frac{{2xh}}{h} + \frac{{{h^2}}}{h} + \frac{h}{h}$</p>
+                  <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 2x + h + 1$</p>
+                  <p class="m1830-solution">Step 4</p>
+                  <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0}\,\left( 2x+h+1 \right)=2x+(0)+1=2x+1$</p>
+                  <p class="m1830-answer">Therefore, the function for the instanteous rate of change for any year is${f}&#39;(x)=2x+1.$</p>
+                </li>
+
+                <li>Use the equation to calculate the instantaneous change in enrollment in 2010, 2011, and 2012.
+                  <p class="m1830-solution">$f&#39;(2) = 2(2) + 1 = 4 + 1 = 5$
+                    <span class="m1830-answer">In 2010, enrollment is increasing by 5 students per year.</span></p>
+                  <p class="m1830-solution">$f&#39;(3) = 2(3) + 1 = 6 + 1 = 7$
+                    <span class="m1830-answer">In 2011, enrollment is increasing by 7 students per year.</span></p>
+                  <p class="m1830-solution">$f&#39;(4) = 2(4) + 1 = 8 + 1 = 9$
+                    <span class="m1830-answer">In 2012, enrollment is increasing by 9 students per year.</span></p>
+                </li>
+              </ol>
+            </li>
+
+            <li class="m1830-problem">
+              <p class="m1830-problem-text">
+                Suppose an object moves along the y axis so that its location is $f\left( x \right)=2{{x}^{2}}~+3x$ at time x. $f(x)$ is
+                in meters and x is in seconds.</p>
+              <ol>
+
+                <li>Find the average velocity (the average rate of change of y with respect to x) for x changing from 2 to 4
+                  sec.
+                  <p class="m1830-solution">Use the points $(2,14)$ and $(4,44)$</p>
+                  <p class="m1830-solution">$avg\ rate\ of\ change=\frac{44-14}{4-2}=\frac{30}{2}=$</p>
+                  <p class="m1830-answer">The average velocity from 2 to 4 seconds is $15m/s.$</p>
+                </li>
+
+                <li> Use the limit definition of the derivative to find the instantaneous velocity.
+                  <p class="m1830-solution">Step 1</p>
+                  <p class="m1830-solution">$f(x + h) = 2{(x + h)^2} + 3(x + h)$</p>
+                  <p class="m1830-solution">$f(x + h)= 2({x^2} + 2xh + {h^2}) + 3x + 3h$</p>
+                  <p class="m1830-answer">$f(x + h)= 2{x^2} + 4xh + 2{h^2} + 3x + 3h$</p>
+                  <p class="m1830-solution">Step 2</p>
+                  <p class="m1830-solution">$f(x + h) - f(x) = \left( {2{x^2} + 4xh + 2{h^2} + 3x + 3h} \right) - \left( {2{x^2} + 3x} \right)$</p>
+                  <p class="m1830-answer">$f(x + h) - f(x)= 4xh + 2{h^2} + 3h$</p>
+                  <p class="m1830-solution">Step 3</p>
+                  <p class="m1830-solution">$\frac{{f(x + h) - f(x)}}{h} = \frac{{4xh + 2{h^2} + 3h}}{h}$</p>
+                  <p class="m1830-solution">$\frac{{f(x + h) - f(x)}}{h} = \frac{{4xh}}{h} + \frac{{2{h^2}}}{h} + \frac{{3h}}{h}$</p>
+                  <p class="m1830-answer">$\frac{{f(x + h) - f(x)}}{h} = 4x + 2h + 3$</p>
+                  <p class="m1830-solution">Step 4</p>
+                  <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} \left( {4x + 2h + 3} \right) = 4x + 2\left( 0 \right) + 3 = 4x + 3$</p>
+                  <p class="m1830-answer">Therefore, the instantaneous velocity at a given $x$ is $f&#39;(x) = 4x + 3.$</p>
+                </li>
+
+                <li>The instantaneous velocity at x = 2 seconds, 3 seconds, and 4 seconds.
+                  <p class="m1830-solution">$f&#39;(2) = 4(2) + 3 = 8 + 3 = 11 $
+                    <span class="m1830-answer">The instantaneous velocity at 2 seconds is $11\;m/s.$</span></p>
+                  <p class="m1830-solution">$f&#39;(3) = 4(3) + 3 = 12 + 3 = 15 $
+                    <span class="m1830-answer">The instantaneous velocity at 3 seconds is $15\;m/s.$</span></p>
+                  <p class="m1830-solution">$f&#39;(4) = 4(4) + 3 = 16 + 3 = 19 $
+                    <span class="m1830-answer">The instantaneous velocity at 4 seconds is $19\;m/s.$</span></p>
+                </li>
+              </ol>
+
+
+
+
+            </li>
+          </ol>
+
+      </article>
+
+      <div class="m1830-pagebreak"></div>
+      <article class="hw">
+
+        <h3>1.4A Definition of the Derivative</h3>
+
+        <h4>Homework</h4>
+
+        <p>ABC Company purchases a machine for \$100,000. It has an estimated salvage value of \$10,000 and has a useful life
+          of five years. The double declining balance depreciation calculation is:</p>
+        <table>
+          <tr>
+            <th>Year</th>
+            <th>Net book value, beginning of year</th>
+            <th>Net book value, end of year</th>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>$100000</td>
+            <td>$100000</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>$100000</td>
+            <td>$67600</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>$67600</td>
+            <td>$42400</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>$42400</td>
+            <td>$24400</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>$24400</td>
+            <td>$13600</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>$13600</td>
+            <td>$10000</td>
+          </tr>
+        </table>
+
+        <p><cite>Source <a href="http://www.accountingtools.com/double-declining-balance-depre">http://www.accountingtools.com/double-declining-balance-depre</a></cite></p>
+        <p>This depreciation can be modeled by the function $y=3600{{x}^{2}}-36000x+100000$, which is graphed below.</p>
+        <p><img src="images/hw/u1s4ap1.png" alt="Equipment Depreciation Graph  First quadrant graph of the quadratic depreciation graph for a piece of equipment.  x-axis:  -0.2 to 5.1 marked in intervals of 0.1 years  y-axis:  0 to $100,000 marked in intervals of $5000.  y-intercept at (0, 100,000)  Vertex at (5, 10,000)  Graph is decreasing between these two points."></p>
+
+        <!-- Begin section problem list  -->
+        <ol>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Draw the secant line that intersects the two points on the curve and calculate the slope of the secant line for
+              each of the following intervals.</p>
+            <ol>
+
+              <li>2 years to 3 years
+                <p class="m1830-hw-solution">$(2,42400)$ and $(3,24400)$</p>
+                <p class="m1830-hw-solution">${m_{secant }}=\frac{24400-42400}{3-2}=\frac{-18000}{1}=-18000$</p>
+                <p class="m1830-hw-answer">From year 2 to year 3, the average depreciation per year is $18,000.</p>
+              </li>
+
+              <li>2 years to 2.5 years
+                <p class="m1830-hw-solution">$(2,42400)$ and $(2.5,32500)$</p>
+                <p class="m1830-hw-solution">${m_{secant }}=\frac{32500-42400}{2.5-2}=\frac{-9900}{0.5}=-19800$</p>
+                <p class="m1830-hw-answer">From year 2 to year 2.5 the average depreciation per year is $19,800.</p>
+              </li>
+
+              <li>2 years to 2.1 years
+                <p class="m1830-hw-solution">$(2,42400)$ and $(2.1,40276)$</p>
+                <p class="m1830-hw-solution">${m_{secant }}=\frac{40276-42400}{2.1-2}=\frac{-2124}{0.1}=-21240$</p>
+                <p class="m1830-hw-answer">From year 2 to year 2.1 the average depreciation per year is $21,240.</p>
+              </li>
+            </ol>
+          </li>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> What does the slope of each of these secant lines represent?</p>
+            <p class="m1830-hw-answer">The average rate of depreciation for the machine over the given time interval</p>
+          </li>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Draw the tangent line on the graph that goes through the given points (2, 42400) and (4, 400). Calculate the
+              slope of this line that goes through (2, 42400) and (4, 400).</p>
+            <p class="m1830-hw-solution">${m_{tangent }}=\frac{400-42400}{4-2}=\frac{-42000}{2}=$</p>
+            <p class="m1830-hw-solution">${m_{tangent }}=-21000$</p>
+            <P class="m1830-hw-answer">At the end of year two, the value of the machine is depreciating at the rate of $21,000 per year. </p>
+          </li>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> What does the slope of the tangent line represent?</p>
+            <p class="m1830-hw-answer">The instantaneous rate of change (depreciation) of the machine at the end of year 2</p>
+          </li>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Compare the secant slopes to the slope of the tangent line. What do you notice?</p>
+            <p class="m1830-hw-answer">As the time intervals between 2 years and the end of the interval get smaller, the average depreciation rate
+              (secant) gets closer to the depreciation rate at exactly 2 years (tangent).</p>
+          </li>
+        </ol>
+        <!-- End section problem list  -->
+
+
+        <div class="m1830-pagebreak"></div>
+        <h3>1.4B Definition of the Derivative</h3>
+
+        <h4>Homework</h4>
+        <p>Functions of the form $f(x)={{x}^{n}}$, where n = 1,2,3, . . ., are often called power functions. </p>
+        <!-- Begin section problem list  -->
+        <ol>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Use the limit definition of the derivative to find $f&#39;(x)$ for$f(x)={{x}^{2}}$.</p>
+            <p class="m1830-hw-solution">$f\left( x+h \right)={{(x+h)}^{2}}={{x}^{2}}+2xh+{{h}^{2}}$</p>
+            <p class="m1830-hw-solution">${f}&#39;(x)=\underset{h\rightarrow0}{lim}\frac{f(x+h)-f(x)}{h}$</p>
+            <p class="m1830-hw-solution">$=\underset{h\rightarrow0}{lim}\frac{\left( {{x}^{2}}+2xh+{{h}^{2}} \right)-\left( {{x}^{2}} \right)}{h}$</p>
+            <p class="m1830-hw-solution">$=\underset{h\rightarrow0}{lim}\left( \frac{2xh+{{h}^{2}}}{h} \right)$</p>
+            <p class="m1830-hw-solution">$=\underset{h\rightarrow0}{lim}\,\left( 2x+h \right)=2x $</p>
+            <p class="m1830-hw-answer">${f}&#39;(x)=2x$</p>
+          </li>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Use the limit definition of the derivative to find$f&#39;(x)$ for $f(x)={{x}^{3}}$.</p>
+            <p class="m1830-hw-solution">$f(x+h)=(x+h)({{x}^{2}}+2xh+{{h}^{2}}) $</p>
+            <p class="m1830-hw-solution">$=\left( {{x}^{3}}+2{{x}^{2}}h+x{{h}^{2}} \right)+\left( {{x}^{2}}h+2x{{h}^{2}}+{{h}^{3}} \right)$</p>
+            <p class="m1830-hw-solution m1830-step">$={{x}^{3}}+3{{x}^{2}}h+3x{{h}^{2}}+{{h}^{3}}$</p>
+
+            <p class="m1830-hw-solution">$\underset{h\rightarrow0}{lim}\frac{f(x+h)-f(x)}{h}$</p>
+            <p class="m1830-hw-solution">$=\underset{h\rightarrow0}{lim}\frac{\left( {{x}^{3}}+3{{x}^{2}}h+3x{{h}^{2}}+{{h}^{3}} \right)-\left( {{x}^{3}}
+              \right)}{h}$</p>
+            <p class="m1830-hw-solution m1830-step">$=\underset{h\rightarrow0}{lim}\left( \frac{3{{x}^{2}}h+3x{{h}^{2}}+{{h}^{3}}}{h} \right) $</p>
+            <p class="m1830-hw-solution">$ =\underset{h\rightarrow0}{lim}\left( 3{{x}^{2}}+3xh+{{h}^{2}} \right)$</p>
+            <p class="m1830-hw-solution m1830-step">$=3{{x}^{2}}+3x(0)+{{(0)}^{2}}=3{{x}^{2}}$</p>
+            <p class="m1830-hw-answer">${f}&#39;(x)=3{{x}^{2}}$</p>
+          </li>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Use the limit definition of the derivative to find $f&#39;(x)$ for $f(x)={{x}^{4}}$.</p>
+            <p>(Hint:${{\left( x+h \right)}^{4}}=\ {{x}^{4}}+4{{x}^{3}}h+6{{x}^{2}}{{h}^{2}}+4x{{h}^{3}}+{{h}^{4}}$)</p>
+            <p class="m1830-hw-solution m1830-step">$f\left( x+h \right)={{\left( x+h \right)}^{4}}=\ {{x}^{4}}+4{{x}^{3}}h+6{{x}^{2}}{{h}^{2}}+4x{{h}^{3}}+{{h}^{4}}$</p>
+            <p class="m1830-hw-solution">$\underset{h\rightarrow0}{lim} \frac{f(x+h)-f(x)}{h}$</p>
+            <p class="m1830-hw-solution">$=\underset{h\rightarrow0}{lim}\frac{\left( {{x}^{4}}+4{{x}^{3}}h+6{{x}^{2}}{{h}^{2}}+4x{{h}^{3}}+{{h}^{4}} \right)-\left(
+              {{x}^{4}} \right)}{h}$</p>
+            <p class="m1830-hw-solution m1830-step">$=\underset{h\rightarrow0}{lim} \frac{4{{x}^{3}}h+6{{x}^{2}}{{h}^{2}}+4x{{h}^{3}}+{{h}^{4}}}{h}$</p>
+            <p class="m1830-hw-solution">$=\underset{h\rightarrow0}{lim} \left( 4{{x}^{3}}+6{{x}^{2}}h+4x{{h}^{2}}+{{h}^{3}} \right)$</p>
+            <p class="m1830-hw-solution">$=4{{x}^{3}}+6{{x}^{2}}(0)+4x{{(0)}^{2}}+{{(0)}^{3}}$</p>
+            <p class="m1830-hw-solution m1830-step">$=4{{x}^{3}}$</p>
+            <p class="m1830-hw-answer">${f}&#39;(x)=4{{x}^{3}}$</p>
+          </li>
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Complete the table.</p>
+
+            <p class="m1830-problem-text">
+              <table>
+                <tr>
+                  <th>$f(x)$</th>
+                  <th>$f'(x)$</th>
+                </tr>
+                <tr>
+                  <td>$x^2$</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>$x^3$</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>$x^4$</td>
+                  <td></td>
+                </tr>
+              </table>
+            </p>
+          </li>
+
+
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Based on your work in (a), (b), and (c), what do you conjecture is the derivative of $f(x)={{x}^{5}}\quad$? of
+              $f(x)={{x}^{13}}$?</p>
+            <p class="m1830-hw-answer">${f}&#39;(x)=5{{x}^{4}}$</p>
+            <p class="m1830-hw-answer">${f}&#39;(x)=13{{x}^{12}}$</p>
+          </li>
+
+          <li class="m1830-problem">
+            <p class="m1830-problem-text"> Conjecture a formula for the derivative of $f(x)={{x}^{n}}$ that holds for any positive integer n. That is, given
+              $f(x)={{x}^{n}}$ where n is a positive integer, what do you think the formula for $f&#39;(x)$ is?</p>
+            <p class="m1830-hw-answer">$f&#39;(x)=nx^{n-1}$</p>
+            <p><cite class="cc"> Active Calculus by Matthew Boelkins is licensed under a Creative Commons Attribution- NonCommercial-ShareAlike 4.0 International License.  Based on a work at <a href="http://scholarworks.gvsu.edu/books/10/">http://scholarworks.gvsu.edu/books/10/</a>. </cite></p>
+          </li>
+        </ol>
+        <!-- End section problem list  -->
+
+      </article>
+    </div>
+
+    <div id="ar" class="add-resources">
+      <hr>
+      <h4> Additional Resources</h4>
+      <ul>
+        <li>
+          <a href="http://www.youtube.com/watch?v=ANyVpMS3HL4" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Derivative as a Slope of a Tangent Line</a>          (15:42)
+        </li>
+
+<li>
+  <a href="pdfs/u1instantaneousratesofchangews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Instantaneous Rates of Change Worksheet</a> 
+</li>
+
+
+
+      </ul>
+
+    </div>
+
+  </div>
+  <!-- ending of body container -->
+
+</body>
+
+</html>

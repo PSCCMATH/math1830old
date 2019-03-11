@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     
+   <script src="js/nav.js"></script>    
+    <script src="js/togglepass.js"></script>
+
+</head>
+
+<body>
+<nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830</h1>
+
+        <h2>Unit 3 Applications of Derivatives</h2>
+
+<article class="notes">
+
+                <h3>3.8 Optimization in Packaging: Boxes and Other Right Rectangular Prisms</h3>
+
+                <h4> Pre-Class:</h4>
+<ul>
+             <li>Complete 3.7 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+              
+              <li> Complete the 3.8 Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u3s7.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>3.7 HW</p>
+          </div>
+        </a>
+       </div>
+
+<!-- 
+       <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <!-- <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:8aJUEzry@3/Differentiation-Rules" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div> -->
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=vmxnfYXADXY" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>3.8 Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>
+
+
+                <h4 class="m1830-pagebreak">Write a mathematical function for each of the following and then find the requested information.</h4>
+                
+                <p><strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
+<ol>
+
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text"> A rectangular package to be sent by a postal service can have a maximum combined length and girth (distance around the package) of 108 inches.  Find the dimensions of the package that contains a maximum volume.  Assume that the package has square ends.</p>
+
+                      <p class="m1830-solution">$Girth + Length = 108$</p>
+                      <p class="m1830-solution">$4x+l=108$</p>
+                      <p class="m1830-solution m1830-step">$l=108-4x$</p>
+                      <p class="m1830-solution">$V=lwh$</p>
+                      <p class="m1830-solution">$V=l*x*x$</p>
+                      <p class="m1830-solution">$V=(108-4x)(x^2)$</p>
+                      <p class="m1830-solution m1830-step">$V=108x^2-4x^3$</p>
+                      <p class="m1830-solution m1830-step">$V&#39;=216x-12x^2$</p>
+                      <p class="m1830-solution m1830-pagebreak">Set $V&#39;=0.$</p>
+                      <p class="m1830-solution">$216x-12x^2=0$</p>
+                      <p class="m1830-solution">$12x(18-x)=0$</p>
+                      <p class="m1830-solution">$12x=0$ and $18-x=0$</p>
+                      <p class="m1830-solution m1830-step">$x=0$ and $x=18$</p>
+                      <p class="m1830-solution">Use $x=18$ to solve for $l.$</p>
+                      <p class="m1830-solution">$ l=108-4x$</p>
+                      <p class="m1830-solution">$ l=108-4*18$</p>
+                      <p class="m1830-solution">$ l=36$</p>
+                      <p class="m1830-answer">The dimensions of the box with the maximum volume are 18 in x 18 in x 36 in.</p>
+
+                  </li>
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text"> Your iron works company has been contracted to build a $500 ft^3$ holding tank for a paper company.  The square-based, open-top tank is to be made by welding thin stainless steel plates together along their edges.  As the production engineer, your job is to find dimensions for the base and height that will make the tank weigh as little as possible.  What dimensions do you tell the shop to use?</p>
+
+                      <p class="m1830-solution">$V=lwh$</p>
+                      <p class="m1830-solution">$V=x*x*h$</p>
+                      <p class="m1830-solution m1830-step">$500=x^2h$</p>
+                      <p class="m1830-solution">$\frac{500}{x^2}=h$</p>
+                      <p class="m1830-solution">$SA=lw+2lh+2wh$</p>
+                      <p class="m1830-solution">$SA=x^2+2xh+2xh$</p>
+                      <p class="m1830-solution">$SA=x^2+4xh$</p>
+                      <p class="m1830-solution">$SA=x^2+4x(\frac{500}{x^2})$</p>
+                      <p class="m1830-solution">$SA=x^2+\frac{2000x}{x^2}$</p>
+                      <p class="m1830-solution">$SA=x^2+\frac{2000}{x}$</p>
+                      <p class="m1830-solution">$SA=x^2+2000x^{-1}$</p>
+                      <p class="m1830-solution">$SA&#39;=2x-2000x^{-2}$</p>
+                      <p class="m1830-solution">Set $SA&#39;=0.$</p>
+                      <p class="m1830-solution">$2x-2000x^{-2}=0$</p>
+                      <p class="m1830-solution">$2x-\frac{2000}{x^2}=0$</p>
+                        <p class="m1830-solution">$\frac{\displaystyle2x}1=\frac{2000}{x^2}$</p>
+                      <p class="m1830-solution">$2x^3=2000$</p>
+                        <p class="m1830-solution">$x^3=1000$</p>
+                      <p class="m1830-solution m1830-step">$x=10$</p>
+                      <p class="m1830-solution">Use $x=10$ to solve for $h.$</p>
+                      <p class="m1830-solution">$ \frac{500}{x^2}=h$</p>
+                      <p class="m1830-solution">$ \frac{500}{10^2}=h$</p>
+                      <p class="m1830-solution">$ \frac{500}{100}=h$</p>
+                      <p class="m1830-solution">$ h=5$</p>
+                      <p class="m1830-answer">The dimensions of the box with the minimum surface area are 10 ft x 10 ft x 5 ft.</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                      <p class="m1830-problem-text">A manufacturer wants to design an open box having a square base and a surface area of 108 $in^2.$  What dimensions will produces a box with a maximum volume?</p>
+
+                      <p class="m1830-solution">$SA=lw+2lh+2wh$</p>
+                      <p class="m1830-solution">$108=x^2+2xh+2xh$</p>
+                        <p class="m1830-solution">$108=x^2+4xh$</p>
+                      <p class="m1830-solution m1830-step">$108-x^2=4xh$</p>
+                      <p class="m1830-solution">$\frac{108-x^2}{4x}=h$</p>
+                      <p class="m1830-solution">$V=lwh$</p>
+                      <p class="m1830-solution">$V=x*x*h$</p>
+                      <p class="m1830-solution">$V=x^2(\frac{108-x^2}{4x})$</p>
+                        <p class="m1830-solution">$V=x(\frac{108-x^2}{4})$</p>
+                          <p class="m1830-solution">$V=(\frac{108x-x^3}{4})$</p>
+                      <p class="m1830-solution m1830-step">$V=\frac14(108x-x^3)$</p>
+                        <p class="m1830-solution m1830-step">$V=27x-\frac14x^3$</p>
+                      <p class="m1830-solution m1830-step">$V&#39;=27-\frac34x^2$</p>
+                      <p class="m1830-solution">Set $V&#39;=0.$</p>
+                      <p class="m1830-solution">$27-\frac34x^2=0$</p>
+                      <p class="m1830-solution">$\frac{27}{1}=\frac{3x^2}4$</p>
+                          <p class="m1830-solution">$3x^2=108$</p>
+                              <p class="m1830-solution">$x^2=36$</p>
+
+                      <p class="m1830-solution">$x=6$ and $x=-6$</p>
+                      <p class="m1830-solution">Use $x=6$ to solve for $h.$</p>
+                      <p class="m1830-solution">$ h=\frac{108-x^2}{4x}$</p>
+                      <p class="m1830-solution">$ h=\frac{108-(6^2)}{4*6}$</p>
+                      <p class="m1830-solution">$ h=\frac{72}{24}=3$</p>
+                      <p class="m1830-answer">The dimensions of the box with the maximum volume are 6 in x 6 in x 3 in.</p>
+                      </li>
+</ol>
+
+
+</article>
+
+
+<article class="hw">
+
+      <h3>3.8 Optimization in Packaging: Boxes and Other Right Rectangular Prisms Homework</h3>
+
+  <p><strong>Write a mathematical function for each of the following and then find the requested information.</strong></p>
+  <p><strong>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</strong></p>
+
+<ol>
+  <li class="m1830-problem">
+      <p class="m1830-problem-text"> A container company is designing an open-top, square-based, rectangular box that will have a volume of 62.5 $cm^3$. Find the dimensions of the box that will minimize the surface area.</p>
+
+      <p class="m1830-hw-solution">$V=lwh={{w}^{2}}h$</p>
+      <p class="m1830-hw-solution">$62.5={{w}^{2}}h$</p>
+      <p class="m1830-hw-solution m1830-step">$h=\frac{62.5}{{{w}^{2}}}$</p>
+      <p class="m1830-hw-solution">$SA={{w}^{2}}+2wh+2wh$</p>
+      <p class="m1830-hw-solution">$SA={{w}^{2}}+4wh$</p>
+      <p class="m1830-hw-solution">$S(w)={{w}^{2}}+4w\left( \frac{62.5}{{{w}^{2}}} \right)$</p>
+      <p class="m1830-hw-solution m1830-step">$S(w)={{w}^{2}}+\frac{250}{w}$</p>
+        <p class="m1830-hw-solution m1830-step">$S(w)={{w}^{2}}+250w^{-1}$</p>
+      <p class="m1830-hw-solution m1830-step">$S&#39;(w)=2w-\frac{250}{{{w}^{2}}}$</p>
+      <p class="m1830-hw-solution">Set $S&#39;(w)=0.$</p>
+      <p class="m1830-hw-solution">$0=2w-\frac{250}{{{w}^{2}}}$</p>
+          <p class="m1830-hw-solution">$\frac{250}{{{w}^{2}}}=\frac{2w}1$</p>
+      <p class="m1830-hw-solution">$2{{w}^{3}}=250$</p>
+      <p class="m1830-hw-solution">${{w}^{3}}=125$</p>
+      <p class="m1830-hw-solution m1830-step">$w=5$</p>
+      <p class="m1830-hw-solution">Use $w$ to solve for $h.$</p>
+      <p class="m1830-hw-solution">$ 62.5={{5}^{2}}h$</p>
+      <p class="m1830-hw-solution">$ 62.5=25h$</p>
+      <p class="m1830-hw-solution">$ h=2.5$</p>
+      <p class="m1830-hw-answer">The dimensions of the box with the minimum surface area are 5 cm x 5 cm x 2.5 cm.</p>
+
+  </li>
+
+  <li class="m1830-problem">
+      <p class="m1830-problem-text">Find the maximum volume of a box with a square base that has a surface area of 96 $cm^2$.</p>
+
+      <p class="m1830-hw-solution">Assume a lid.</p>
+      <p class="m1830-hw-solution">$SA=2lw+2lh+2wh$</p>
+      <p class="m1830-hw-solution">$ SA=2({{x}^{2}}+xh+xh) $</p>
+      <p class="m1830-hw-solution">$ 96=2({{x}^{2}}+2xh) $</p>
+      <p class="m1830-hw-solution">$ 48={{x}^{2}}+2xh $</p>
+      <p class="m1830-hw-solution">$ 48-{{x}^{2}}=2xh $</p>
+      <p class="m1830-hw-solution m1830-step">$ \frac{48-{{x}^{2}}}{2x}=h $</p>
+      <p class="m1830-hw-solution">$V=l\cdot w\cdot h$</p>
+      <p class="m1830-hw-solution">$ V(x)=x(x)\left( \frac{48-{{x}^{2}}}{2x} \right) $</p>
+      <p class="m1830-hw-solution">$ V(x)=\frac{x(48-{{x}^{2}})}{2} $</p>
+      <p class="m1830-hw-solution">$ V(x)=\frac{48x-{{x}^{3}}}{2}$</p>
+      <p class="m1830-hw-solution">$ V(x)=\frac{48x}{2}-\frac{{{x}^{3}}}{2} $</p>
+      <p class="m1830-hw-solution m1830-step">$V(x)=24x-0.5{{x}^{3}}$</p>
+      <p class="m1830-hw-solution ">$V&#39;(x)=24-1.5{{x}^{2}}$</p>
+      <p class="m1830-hw-solution">$0=24-1.5{{x}^{2}}$</p>
+      <p class="m1830-hw-solution">$1.5{{x}^{2}}=24$</p>
+      <p class="m1830-hw-solution">${{x}^{2}}=\frac{24}{1.5}$</p>
+      <p class="m1830-hw-solution">${{x}^{2}}=16$</p>
+      <p class="m1830-hw-solution">$x=4$</p>
+      <p class="m1830-hw-solution">$h=\frac{48-16}{2(4)}=4$</p>
+      <p class="m1830-hw-answer">The dimensions of the box that maximize the volume are 4 cm x 4 cm x 4 cm.</p>
+      <p class="m1830-hw-answer">The maximum volume is 64 $cm^3$</p>
+
+  </li>
+
+
+</ol>
+
+</article>
+
+
+ <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<!-- <li>
+  <a href="pdfs/u2chainrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Chain Rule Worksheet</a> 
+</li> -->
+
+<li>
+          <a href="http://www.youtube.com/watch?v=8i3riKvCYkM" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> How It's Made: Cardboard Boxes</a>  (5:00)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=MC0tq6fNRwU" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Optimizing Box Volume Graphically</a>  (9:49)
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=cRboY08YG8g" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Optimizing Box Volume Analytically</a>  (8:58)
+        </li>
+
+</ul>
+
+        </div> 
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

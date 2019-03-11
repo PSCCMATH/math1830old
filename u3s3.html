@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 >MATH 1830 Notes</h1>
+
+        <h2 >Unit 3 Applications of Derivatives</h2>
+
+
+
+
+
+
+<article class="notes">
+
+<h3 >3.3 Second Derivative Test</h3>
+
+<h4> Pre-Class:</h4>
+<ul>
+             <li>Complete 3.2 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+             
+              <li> Complete the 3.3 Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u3s2.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>3.2 HW</p>
+          </div>
+        </a>
+       </div>
+
+
+       <!-- <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:zjNlU1zg@3/Derivatives-and-the-Shape-of-a" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=LcEqOzNov4E" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>3.3 Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>
+
+<div  class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Second Derivative Test </h3>
+  </div>
+  <div class="panel-body">
+    <p>Analyze $f&#39;&#39;(x)$ to Identify Intervals of Concavity and Points of Inflection on the Graph of $f(x).$ </p>
+    <ol>
+
+<li> Find $f&#39;&#39;(x).$</li>
+<li> Find the critical numbers for the function.
+<ol>
+
+<li>Values of $x$ where $f&#39;&#39;(x)=0$ are critical numbers.</li>
+
+<li>Values of $x$ where $f&#39;&#39;(x)$ is undefined are partitions. </li>
+
+<li>Values of $x$ where $f(x)$ is undefined are partitions.</li>
+</ol>
+</li>
+        <li>Graph the critical numbers and partitions on a number line, separating the number line into intervals.
+
+        </li>
+
+
+        <li>Determine the intervals on which $f(x)$ is concave up or concave down.
+            <ol>
+
+                <li>Test one point contained in the interval (do not use the end points of the interval).</li>
+
+                <li>$f(x)$ is concave down on the interval if $f&#39;&#39;(x)&lt;0$. </li>
+
+                <li> $f(x)$ is concave up on the interval if $f&#39;&#39;(x)&gt;0$.</li>
+            </ol>
+        </li>
+
+        <li>Identify inflection points of $f(x)$. A point of inflection occurs at $x=a$ when $f&#39;&#39;(a)=0$ and $f&#39;&#39;(x)$ changes concavity across $a$.
+
+        </li>
+
+    </ol>
+
+
+
+  </div>
+</div>
+
+
+
+  <p class="m1830-problem-text m1830-pagebreak"><strong>Use the Second Derivative Test to analyze the function. Identify intervals of concavity and points of inflection on the graph of the function.</strong> </p>
+
+
+<ol>
+
+
+
+
+
+
+    <li class="m1830-problem">
+        <p class="m1830-problem-text"> $f(x)={{x}^{3}}+6{{x}^{2}}+9x$</p>
+
+
+<ol>
+        <li>    <p>Concave Up and Concave Down</p>
+            <p class="m1830-solution">${f}&#39;&#39;(x)=6x+12$</p>
+            <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0:$</p>
+            <p class="m1830-solution">$6x+12=0$</p>
+            <p class="m1830-solution">$6x=-12$</p>
+            <p class="m1830-solution">$x=-2$</p>
+            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)$ is undefined.</p>
+            <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+            <p class="m1830-solution">There are no values of x where $f\left( x \right)$ is undefined.</p>
+            <p class="m1830-solution">Separate into intervals using:  $x=-2$.</p>
+            <figure class="m1830-solution"><img src="images/notes/u3s3p4b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative.">
+            <figcaption class="m1830-solution"><em>Sign chart for ${f}&#39;&#39;\left( x \right)$: negative, ${f}&#39;&#39;\left( -2 \right)=0$, positive</em></figcaption></figure>
+            <p class="m1830-pagebreak">Concave up:</p>
+            <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $\left( -2,\infty \right)$.</p>
+
+            <p>Concave down: </p>
+            <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $\left( -\infty ,-2 \right)$.</p>
+</li>
+<li>
+            <p>Inflection Points: </p>
+            <p class="m1830-solution">$f\left( -2 \right)={{\left( -2 \right)}^{3}}+6{{\left( -2 \right)}^{2}}+9\left( -2 \right)=-2$.</p>
+
+            <p class="m1830-answer">The graph of $f(x)$ has a point of inflection at $\left( -2,-2 \right)$</p>
+            <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+            <p class="m1830-answer"><img src="images/notes/u3s3p4c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+          </li>
+        </ol>
+    </li>
+
+
+
+    <li class="m1830-problem">
+        <p class="m1830-problem-text"> $f(x)=\frac{3x+4}{2x-5}$</p>
+
+
+<ol>
+                <li>            <p>Concave Up and Concave Down</p>
+                            <p class="m1830-solution">${f}&#39;&#39;\left( x \right)=-23\left( -2 \right){{\left( 2x-5 \right)}^{-3}}\left( 2 \right)=\frac{92}{{{\left( 2x-5 \right)}^{3}}}$</p>
+
+
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0$:</p>
+                            <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)=0$.</p>
+                            <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+                            <p class="m1830-solution"> $ 2x-5=0$</p>
+                            <p class="m1830-solution">$ x=\frac{5}{2}$</p>
+                            <p class="m1830-solution">Values of x where $f\left( x \right)$is undefined:</p>
+                            <p class="m1830-solution"> $2x-5=0$</p>
+                            <p class="m1830-solution">$x=\frac{5}{2}$</p>
+                            <p class="m1830-solution">Separate into intervals using:  $x=\frac{5}{2}$.</p>
+
+                            <figure class="m1830-solution" ><img src="images/notes/u3s3p1b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative.">
+                            <figcaption class="m1830-solution"><em>Sign chart for ${f}&#39;&#39;\left( x \right)$: negative, ${f}&#39;&#39;\left( \frac{5}{2} \right)=$ undefined, positive</em></figcaption></figure>
+                            <p class="m1830-pagebreak">Concave up:</p>
+                            <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $\left( \frac{5}{2},\infty \right).$</p>
+
+                            <p>Concave down:</p>
+                            <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $\left( -\infty ,\frac{5}{2} \right).$</p>
+</li>
+                        <li>    <p>Inflection Points:</p>
+                            <p class="m1830-answer">Even though the function changes from concave down to concave up at $x=\frac{5}{2}$, there are no points of inflection because the function is undefined at $x=\frac{5}{2}.$</p>
+  <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+                            <p class="m1830-answer"><img src="images/notes/u3s3p1c.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
+    </li>
+</ol>
+</li>
+
+    <li>  <p class="m1830-problem-text m1830-pagebreak">
+The annual first quarter change in revenue for Apple, Inc. is given by the regression model: $$f(x)=-0.005x^4+0.113x^3-0.889x^2+7.946x-5.346$$ where x is Years Since 1998.</p>
+  <p class="m1830-problem-text"><strong>Use the Second Derivative Test to analyze the function. Identify intervals of concavity and points of inflection on the graph of the function.</strong> </p>
+        <p class="m1830-answer">$f&#39;&#39;(x)=-0.06x^2+0.678x-1.778$</p>
+
+
+
+        <ol>
+
+            <li> Identify Critical Values and Partitions for the Sign Chart.
+                <p>Values of x where $f&#39;&#39;(x)=0:$</p>
+                    <p class="m1830-answer">$f&#39;&#39;(x)=0$ at $x= 4.137$ and $x= 7.163$</p>
+                    Values of x where $f&#39;&#39;(x)$ is undefined:
+                    <p class="m1830-answer">There are no values of x where $f&#39;&#39;(x)$ is undefined.</p>
+                    Values of x where $f(x)$ is undefined:
+                    <p class="m1830-answer">There are no values of x where $f(x)$ is undefined.</p>
+                    <p class="m1830-answer">Separate into intervals using:  $x=4.137$ and $x=7.163$.</p>
+                    <figure class="m1830-answer"><img src="images/notes/u3s1p1b.png" alt="graph of second derivative">
+                    <figcaption class="m1830-answer"><em>Sign graph of $f&#39;&#39;(x)$ reading left to right: negative, ${f}&#39;\left(4.137\right)=0,$ positive, ${f}&#39;\left(7.163\right)=0,$ negative</em></figcaption></figure>
+ Intervals of Concavity
+                    <p>Concave Up:</p>
+                    <p class="m1830-answer">$(4.137, 7.163)$</p>
+                    <p class="m1830-answer">The percent change in revenue is increasing at an increasing rate from $x=4.137$ to $x=7.163$.</p>
+                    Concave down:
+                    <p class="m1830-answer">$\lbrack0,\;4.137)\;\cup\;(7.163,\;18\rbrack$</p>
+                    <p class="m1830-answer">The percent change in revenue is increasing at a decreasing rate from $x=0$ to $x=4.137$.</p>
+                    <p class="m1830-answer">The percent change in revenue is increasing at a decreasing rate from $x=7.163$ to $x=12.358$ (the maximum) and decreasing at an increasing rate from $x=12.358$ to $x=18$.</p>
+</li>
+
+            <li> Inflection points:
+                <p class="m1830-answer">$(4.137, 18.848)$ and $(7.163, 34.325)$</p>
+                <p class="m1830-answer">According to the model, the percent change in revenue is changing most rapidly at $x=4.137$ and $x=7.163$.</p>
+
+            </li>
+
+
+        <li> Graph $f(x).$
+        <p>  <img src="images/notes/u1spp3i.png" alt="blank coordinate plane" /></p>
+            <p class="m1830-answer"><img src="images/notes/u3s1p1c.png" alt="graph of revenue function"></p>
+        </li>
+
+  </ol>
+    </li>
+        <li>
+            <p class="m1830-problem-text m1830-pagebreak"> Using data from the Federal Reserve, the Dow S&amp;P 500 annual percent return on investments for the years 2008-2014 can be modeled by the following equation: $$A(t) = - 1.64{t^4} + 20.85{t^3} - 86.05{t^2} + 127.87t - 36.24$$ where t
+      is in years since 2008 and A(t) is in percent.</p>
+            <p><cite> Source: <a href="http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html">http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html</a> </cite></p>
+  <p class="m1830-problem-text"><strong>Use the Second Derivative Test to analyze the function. Identify intervals of concavity and points of inflection on the graph of the function.</strong></p>
+
+
+  
+
+          <p class="m1830-hw-answer">${A}&#39;&#39;\left( t \right)=-19.68{{t}^{2}}+125.1t-172.10$</p>
+          <ol>
+
+              <li>
+                  <p> Graph the critical numbers on a number line and determine the sign for each interval.</p>
+
+
+                  <p>Values of t where ${A}&#39;&#39;(t)=0.$</p>
+                  <p class="m1830-hw-answer"> $t \approx 2.013$ and $t \approx 4.343$ </p>
+                      <p>Values of t where ${A}&#39;&#39;\left( t \right)$ is undefined.</p>
+                      <p class="m1830-hw-answer">There are no values of t where ${A}&#39;&#39;(t)$ is undefined.</p>
+                      <p>Values of t where $A\left( t \right)$ is undefined.</p>
+                      <p class="m1830-hw-answer"> There are no values of t where $A\left( t \right)$ is undefined.</p>
+                      <p class="m1830-hw-answer">Separate into intervals using:  $t=2.013$ and $t=4.343$.</p>
+                      <figure class="m1830-hw-answer"><img src="images/hw/u3s1p1b.png" alt="Graph of the second derivative of the function A of t">
+                        <figcaption class="m1830-hw-answer"><em>Sign chart for ${A}&#39;&#39;\left( t \right)$ reading left to right:
+                  negative, ${A}&#39;&#39;\left( 2.013 \right)\approx 0$ , positive, ${A}&#39;&#39;\left( 4.343 \right)\approx 0$, negative</em></figcaption></figure>
+                  </li>
+            <li>
+                <p> Determine the intervals on which $A(t)$ is concave up / concave down. </p>
+
+                <p>On what intervals is A(t) concave up? Interpret these results.</p>
+                <p class="m1830-hw-answer">The function is concave up on the interval: $\left( 2.013,4.343 \right).$</p>
+                <p class="m1830-hw-answer">On the interval $\left( 2.01,3.10 \right),$ the annual percent return on investments is decreasing at a decreasing rate each year.</p>
+                <p class="m1830-hw-answer">On the interval $\left( 3.10,4.34 \right),$ the annual percent return on investments is increasing at an increasing rate each year.</p>
+
+
+                <p>On what intervals is $A(t)$ concave down? Interpret these results.</p>
+                <p class="m1830-hw-answer">The function is concave down on the intervals: $\left( 0,2.013 \right)\cup \left( 4.343,6 \right).$</p>
+                <p class="m1830-hw-answer">On the intervals from $\left( 0,1.2 \right)\,\text{and}\,\left( 4.34,5.23 \right),$ the annual percent return on investments is increasing at a decreasing rate each year.</p>
+                <p class="m1830-hw-answer">On the interval $\left( 3.10,4.34 \right),$ the annual percent return on investments is decreasing at an increasing rate each year.</p>
+</li>
+
+              <li>  <p>Identify points of inflection for $A(t)$. Interpret these results.</p>
+                <p class="m1830-hw-answer">There are two points of inflection:</p>
+                <p class="m1830-hw-answer">$\left( 2.013,15.618 \right)$ and $\left( 4.343,20.557 \right)$</p>
+                <p class="m1830-hw-answer">According to the model, the annual percent return on investments was changing most rapidly at $t \approx 2.01$ and $t \approx 4.34$ (in years after 2008).</p>
+            </li>
+
+
+            <li>  Graph $A(t).$
+            <p>  <img src="images/notes/u1spp3i.png" alt="blank coordinate plane" /></p>
+            <p class="m1830-hw-answer"><img src="images/hw/u3s1p1c.png" alt="Graph of A of t indicating intervals of increase, intervals of decrease, local maxima and local minima, x axis:  0 to 6 years after 2008, y axis:  -40 to 40 percent "></p>
+            </li>
+
+</ol>
+</li>
+
+</ol>
+
+
+
+</article>
+
+<article class="hw">
+  <h3>3.3 Second Derivative Test Homework</h3>
+<p><strong>Use the Second Derivative Test to analyze the function. Identify intervals of concavity and points of inflection on the graph of the function.</strong> </p>
+<ol>
+      <li class="m1830-problem">
+          <p class="m1830-problem-text"> $f(x)=3{{x}^{2}}+5x-2$</p>
+<ol>
+
+            <li>  <p>Concave Up and Concave Down</p>
+              <p class="m1830-solution">${f}&#39;&#39;\left( x \right)=6$</p>
+              <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0:$</p>
+              <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)=0.$</p>
+              <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+              <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)$ is undefined.</p>
+              <p class="m1830-solution">Values of x where $f\left( x \right)$ is undefined:</p>
+              <p class="m1830-solution">There are no values of x where $f\left( x \right)$ is undefined.</p>
+              <p class="m1830-solution">Because there are no x values that meet the requirements for a partition or critical value, $f(x)$ will maintain the same concavity across the entire domain.</p>
+              <figure class="m1830-solution"><img src="images/notes/u3s3p3b.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative.">
+              <figcaption class="m1830-solution"><em>Sign chart for ${f}&#39;&#39;\left( x \right)$: positive on domain</em></figcaption></figure>
+              <p>Concave up:</p>
+              <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $\left( -\infty ,\infty \right)$.</p>
+
+              <p>Concave down: </p>
+              <p class="m1830-answer">There are no intervals where $f(x)$ is concave down.</p>
+</li>
+          <li>    <p>Inflection Points: </p>
+              <p class="m1830-answer">There are no points of inflection.</p>
+  <img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+              <p class="m1830-answer"><img src="images/notes/u3s3p3c.png" alt="Graph of F of x indicating intervals of increase, intervals of decrease, local maxima and local minima "></p>
+      </li>
+</ol>
+</li>
+
+<li class="m1830-problem">
+    <p class="m1830-problem-text"> $f(x)=\frac{4x-7}{5x+1}$</p>
+
+
+<ol>
+            <li>            <p>Concave Up and Concave Down</p>
+                        <p class="m1830-solution">${f}&#39;&#39;\left( x \right)=39\left( -2 \right){{\left( 5x+1 \right)}^{-3}}\left( 5 \right)=-\frac{390}{{{\left( 5x+1 \right)}^{3}}}$</p>
+
+
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;(x)=0$:</p>
+                        <p class="m1830-solution">There are no values of x where ${f}&#39;&#39;\left( x \right)=0$.</p>
+                        <p class="m1830-solution">Values of x where ${f}&#39;&#39;\left( x \right)$ is undefined:</p>
+                        <p class="m1830-solution"> $ 5x+1=0$</p>
+                        <p class="m1830-solution">$ x=-\frac{1}{5}$</p>
+                        <p class="m1830-solution">Values of x where $f\left( x \right)$is undefined:</p>
+                        <p class="m1830-solution"> $5x+1=0$</p>
+                        <p class="m1830-solution">$x=-\frac15$</p>
+                        <p class="m1830-solution">Separate into intervals using:  $x=-\frac{1}{5}$. </p>
+
+                        <figure class="m1830-solution"><img src="images/notes/u3s2p2fb.png" alt="Graph of Second Derivative of f of x  and how it relates to the x axis.  Intervals are separated by values of x where the second derivative equals 0 or is undefined.  Values where f of x is undefined also serve to segment intervals.  The graph indicates intervals where the second derivative of f of x  is positive and where the second derivative is negative.">
+                        <figcaption class="m1830-solution"><em>Sign chart for ${f}&#39;&#39;\left( x \right)$: positive, ${f}&#39;&#39;\left( -\frac{1}{5} \right)=$ undefined, negative</em></figcaption></figure>
+                        <p>Concave up:</p>
+                        <p class="m1830-answer">The graph of $f(x)$ is concave up on the interval $\left( -\infty ,-\frac{1}{5} \right).$</p>
+
+
+                        <p>Concave down:</p>
+                      <p class="m1830-answer">The graph of $f(x)$ is concave down on the interval $\left( -\frac{1}{5},\infty \right).$</p>
+</li>
+                    <li>    <p>Inflection Points:</p>
+                        <p class="m1830-answer">Even though the function changes from concave up to concave down at $x=-\frac{1}{5}$, there are no points of inflection because the function is undefined at $x=-\frac{1}{5}.$</p>
+<img src="images/notes/u1s3p2i.png" alt="blank 4 quadrant coordinate plane" />
+                        <p class="m1830-answer"><img src="images/notes/u3s2p2fc.png" alt="Graph of f of x indicating intervals of increase, intervals of decrease, local maxima and local minima"></p>
+</li>
+</ol>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li>  <p class="m1830-problem-text">Using data from Statista, the total annual amount spent on the purchase of golf equipment in the United States for the years 2008-2014 can be modeled by the following equation:</p>
+        <p><strong>$$A(t)=-31.94{{t}^{3}}+301.16{{t}^{2}}-665.61t+3454.63$$ where t is in years since 2008 and A(t) is in millions of dollars.</strong></p>
+        <p><cite> Source: <a> href="https://www.statista.com/statistics/201038/purchases-of-golf-equipment-in-the-us-since-2007/"</a> </cite></p>
+<p><strong>Use the Second Derivative Test to analyze the function. Identify intervals of concavity and points of inflection on the graph of the function.</strong> </p>
+
+             Analyze ${A}&#39;&#39;\left( t \right)$
+
+
+
+                            <p class="m1830-answer">${A}&#39;&#39;\left( t \right)=-191.64t+602.32$</p>
+
+                            <ol>
+
+
+
+                                <li>
+
+                                    <p> Graph the critical numbers on a number line and determine the sign for each interval.</p>
+
+                                    <p>Values of t where ${A}&#39;&#39;(t)=0$</p>
+
+                                    <p class="m1830-answer">$t\approx 3.14$ years since 2008</p>
+
+                                    <p>Values of t where ${A}&#39;&#39;\left( t \right)$ is undefined.</p>
+
+                                    <p class="m1830-answer">There are no values of t where ${A}&#39;&#39;(t)$ is undefined</p>
+
+                                    <p>Values of t where $A\left( t \right)$ is undefined.</p>
+
+                                    <p class="m1830-answer">There are no values of t where $A\left( t \right)$ is undefined</p>
+
+                                    <p class="m1830-answer">Separate into intervals using:  $t=3.14$.</p>
+
+                                    <p class="m1830-answer"><img src="images/hw/u3s2p1b.png" alt="Graph of the second derivative of the function A of t"></p>
+
+                                    <p class="m1830-answer">Sign chart for ${A}&#39;&#39;\left( t \right)$ reading left to right: positive, ${A}&#39;&#39;\left( 3.14 \right)\approx 0$, negative</p>
+
+
+
+                                </li>
+
+
+
+                                <li>
+
+                                    <p> Determine the intervals on which $A(t)$ is concave up / concave down </p>
+
+
+
+                                    <p>On what intervals is $A(t)$ concave up? Interpret these results.</p>
+
+                                    <p class="m1830-answer">The function is concave up on the interval: $\left( 0,3.14 \right)$</p>
+
+                                    <p class="m1830-answer">When interpreting concavity results, we will segment the interval $\left( 0,3.14 \right)$ into sections based on increasing/decreasing behavior of $f(x)$.</p>
+
+                                    <p class="m1830-answer">On the interval from $\left( 0,1.43 \right)$ the amount spent annually was decreasing at a decreasing rate. On the interval from $\left( 1.43,3.14 \right)$, the amount spent each year was increasing at an increasing
+
+                                        rate.</p>
+
+                                    <p>On what intervals is $A(t)$ concave down? Interpret these results.</p>
+
+                                    <p class="m1830-answer">The function is concave down on the intervals: $\left( 3.14,6 \right)$</p>
+
+                                        <p class="m1830-answer">On the interval from $\left( 3.14,4.86 \right)$ the amount spent annually is increasing at a decreasing rate. From $\left( 4.86,6 \right)$ the amount spent each year was decreasing at an increasing rate.</p>
+
+
+
+
+
+                                        <p>Identify points of inflection for A(t). Interpret these results.</p>
+
+                                        <p class="m1830-answer">There is a point of inflection at $t=3.14$ years since 2008.</p>
+
+                                        <p class="m1830-answer">$A\left( 3.14 \right)=-31.94{{\left( 3.14 \right)}^{3}}+301.16{{\left( 3.14 \right)}^{2}}-665.61\left( 3.14 \right)+3454.63\approx 3345.1$</p>
+
+                                        <p class="m1830-answer">The actual rate of change on spending at $t=3.14$ years since 2008 is:</p>
+
+                                        <p class="m1830-answer">${A}&#39;\left( 3.14 \right)=-95.82{{\left( 3.14 \right)}^{2}}+602.32\left( 3.14 \right)-665.61\approx 280.93$</p>
+
+                                        <p class="m1830-answer">According to the model, the amount of money spent on golf equipment was changing most rapidly at x=3.14 (in years after 2008). At that time, the annual amount spent was increasing at a rate of \$280.93 million per
+
+                                            year and the total amount spent was $3345.1 million.</p>
+
+                                </li>
+
+                  
+
+                            <li> Graph $A(t)$
+
+                                <p> Clearly marking the characteristics identified above. Use graphing paper and colored pencils. Your graph should cover an entire piece of graph paper. </p>
+
+                                <p class="m1830-answer"><img src="images/hw/u3s2p1c.png" alt="x axis: Years Since 2008 on interval 0 to 6, inclusive. y axis: Purchase of Golf Equipment in Millions of Dollars with range 0 to 5000."></p>
+
+                            </li>
+
+
+
+                            <li>
+
+                                <p>In order to accurately use the model, t values should be interpreted discretely, since the data used was given in discrete values (2008, 2009, etc) Using only discrete values for years, identify the relative maximums and
+
+                                    minimums from the function:
+
+                                </p>
+
+                                <img src="images/hw/u3s2p1d.png" alt="Bar graph showing total amount spent in the United States on golf equipment from 2007 to 2015. x-axis: years 2007-2015. y-axis: total purchases in millions of dollars from 0 to 5000">
+
+                            </li>
+
+                    </ol>
+
+</li>
+</ol>
+
+
+</article>
+
+ <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+  <li>
+    <a href="pdfs/u3concavityws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Concavity Worksheet</a> 
+  </li>
+
+
+ <li>
+          <a href="http://www.youtube.com/watch?v=UK2shgCXALo" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Inflection Points</a>  (2:33)
+        </li>
+</ul>
+
+        </div> 
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

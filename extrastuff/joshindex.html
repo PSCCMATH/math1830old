@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <!-- <script src="js/togglebuttons.js"></script> -->
+    <!-- <script src="js/loadmathjax.js"></script> -->
+    <!-- <script src="js/googlestats.js"></script> -->
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script> -->
+    <!-- <script src="js/desmosgraphs.js"></script> -->
+    <!-- <script>
+      unit1();
+
+
+    </script> -->
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=configured&dummy=.js">
+
+</script>
+  </head>
+
+  <body>
+
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+        <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+              </button> <a class="navbar-brand" href="https://psccmath.github.io/math1830/">MATH 1830</a> </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!--         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+     <li><a href="#">Link</a></li> -->
+            <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 1<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#s1">Section 1</a></li>
+                <li><a href="#testang">testang</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 2<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="notesu2.html">Notes</a></li>
+                <li><a href="homeworku2.html">Homework</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 3<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="notesu3.html">Notes</a></li>
+                <li><a href="homeworku3.html">Homework</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 4<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="notesu4.html">Notes</a></li>
+                <li><a href="homeworku4.html">Homework</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+<div ng-app="myApp">
+    <div class="container">
+      <h1 id="u1toc">MATH 1830 Notes</h1>
+      <p>Mary Monroe-Ellis</p>
+      <p>Susan Mosteller</p>
+<p>math: $$a=b^2-4$$</p>
+
+<div ng-model="expression">
+
+
+    <div ng-view></div>
+<div ng-include="'testang.html'"></div>
+</div>
+
+<div mathjax-bind="expression"></div>
+<!-- end of angular view -->
+
+    <!-- ending of body container -->
+    </div>
+<!-- end of angular app -->
+</div>
+
+    <script>
+    MathJax.Hub.Configured();
+    var app = angular.module("myApp", ["ngRoute"]);
+  //  $scope.something="pizza";
+    app.config(function($routeProvider) {
+        $routeProvider
+        .when("/s1", {
+            templateUrl : "u1s1josh.html",
+            controller: [function math(){MathJax.Hub.Queue(["Typeset",MathJax.Hub]);}]
+
+        })
+        .when("/testang", {
+            templateUrl : "testang.html",
+            controller: [function math(){MathJax.Hub.Queue(["Typeset",MathJax.Hub]);}]
+          })
+        .when("/blue", {
+            templateUrl : "blue.htm"
+        });
+        // MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        //  alert("Hello! I am in the controllercontrol!");
+    });
+
+    // app.directive("mathjaxBind", function() {
+    //     return {
+    //         restrict: "A",
+    //         controller: ["$scope", "$element", "$attrs", function($scope, $element, $attrs) {
+    //             $scope.$watch($attrs.mathjaxBind, function(value) {
+    //                 var $script = angular.element("<script type='math/tex'>")
+    //                     .html(value == undefined ? "" : value);
+    //                 $element.html("");
+    //                 $element.append($script);
+    //                 MathJax.Hub.Queue(["Reprocess", MathJax.Hub, $element[0]]);
+    //             });
+    //         }]
+    //     };
+    // });
+
+    </script>
+
+    <!-- <script>
+    (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+    </script> -->
+
+  </body>
+
+</html>

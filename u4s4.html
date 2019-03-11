@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u4toc">MATH 1830</h1>
+
+          <h2>Unit 4: Integration</h2>
+
+
+        <div class="pagebreak"></div>
+
+
+
+<article class="notes">
+
+
+                <h3>4.4 Integration by Substitution</h3>
+
+                      <h4> Pre-Class 4.4A:</h4>
+<ul>
+             <li>Complete 4.3 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the videos and readings (use the space below). </li>
+             
+              <li> Complete the 4.4A Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u4s3.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>4.3 HW</p>
+          </div>
+        </a>
+       </div>
+<!-- 
+
+       <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:wxH1chTc@2/Substitution" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=b76wePnIBdU" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div>
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>4.4A Quiz</p>
+  </div>
+  </a>
+  </div>
+<div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div>
+
+
+  </div>
+          
+
+                <h4> Pre-Class 4.4B:</h4>
+<ul>
+             <li>Complete 4.4A Homework assignment: check and correct. </li>
+
+         
+             
+              <li> Complete the 4.4B Pre-Class Quiz.</li>
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u4s4.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>4.4A HW</p>
+          </div>
+        </a>
+       </div>
+
+
+
+  <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>4.4B Quiz</p>
+  </div>
+  </a>
+  </div>
+<!-- <div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div> -->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+                     <h4 class="m1830-pagebreak">Introduction</h4>
+
+  <p><strong>Chain Rule Review.</strong></p>
+                <p><strong>Find the derivative.</strong></p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\left(3x^5+5x\right)^4$</p>
+
+                        <p class="m1830-solution">$f&#39;(x)=4\left(3x^5+5x\right)^3\left(15x^4+5\right)$</p>
+                        <p class="m1830-answer">$f&#39;(x)=\left(60x^4+20\right)\left(3x^5+5x\right)^3$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=\sqrt[5]{\left(3x^2+7\right)^4}$</p>
+
+                        <p class="m1830-solution">$f(x)=\left(3x^2+7\right)^{4/5}$</p>
+                        <p class="m1830-solution">$f&#39;(x)=\frac45\left(3x^2+7\right)^{-1/5}\cdot\left(6x\right)$</p>
+                        <p class="m1830-answer">$f&#39;(x)=\frac{24x}{5\sqrt[5]{\left(3x^2+7\right)}}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $y=\ln\left(3x^2+5x\right)$</p>
+
+                        <p class="m1830-solution">$y&#39;=\frac1{3x^2+5x}\cdot\left(6x+5\right)$</p>
+                        <p class="m1830-answer">$y&#39;=\frac{6x+5}{3x^2+5x}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $f(x)=e^{5x^3-6x+1}$</p>
+
+                        <p class="m1830-answer">$f&#39;(x)=e^{5x^3-6x+1}\left(15x^2-6\right)$</p>
+                    </li>
+                </ol>
+                <hr>
+
+
+
+
+                <p class="m1830-pagebreak"><h4>Notes</h4>
+                <p><strong>General Indefinite Integral Formulas</strong></p>
+
+
+
+      <div class="panel panel-primary">
+              <div class="panel-heading">
+  <!-- <h3 class="panel-title">Antiderivatives</h3> -->
+                                                  </div>
+    <div class="panel-body">
+      <p><strong>General Antiderivative Formulas</strong></p>
+
+      <p>$\begin{align}&amp;\int u^n\;du\end{align}\;=\;\frac{u^{n+1}}{n+1}+C\;\;n\neq-1$</p>
+      <p>$\begin{align}&amp;\int e^u\;du\end{align}\;=\;e^u+C$</p>
+      <p>$\begin{align}&amp;\int\frac1u\;du\end{align}\;=\;\ln\left|u\right|+C$</p>
+      <br>
+                <p>$\begin{align}&amp;\int E&#39;\left[I(x)\right]I&#39;(x)\;dx\end{align}=E\left[I(x)\right]+C$</p>
+                <p>$\begin{align}&amp;\int\left[f(x)\right]^nf&#39;(x)\;dx\end{align}=\frac{\left[f(x)\right]^{n+1}}{n+1}+C\;\;\;n\neq-1$</p>
+                <p>$\begin{align}&amp;\int e^{f(x)}\cdot f&#39;(x)\;dx\end{align}=e^{f(x)}+C$</p>
+                <p>$\begin{align}&amp;\int{\frac{1}{f\left( x \right)}~{f}&#39;\left( x \right)~dx~}\end{align}=~\ln \left[ f\left( x \right) \right]+C$</p>
+
+</div>
+</div>
+                <p class="m1830-pagebreak"><p><strong>Find each indefinite integral and check the result by differentiating.</strong> </p>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{{\left( {{x^9}\; + 1} \right)}^4}\;\left( {9{x^8}} \right)dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = {x^9} + 1$</p>
+                        <p class="m1830-solution m1830-step">$du = 9{x^8}\;dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {{u^4}\;du}\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{u^5}{5} + C$</p>
+                        <p class="m1830-answer">$=\frac{( {{x^9} + 1})^5}{5} + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{{\left( {6{x^3} - 7} \right)}^{ - 6}}\;\left( {18{x^2}} \right)\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 6{x^3} - 7$</p>
+                        <p class="m1830-solution m1830-step">$du = 18{x^2}\;dx$</p>
+
+
+                        <p class="m1830-solution">$\begin{align}&amp;\int {{u^{ - 6}}} du\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{u^{ - 5}}{ - 5} + C$</p>
+                        <p class="m1830-answer">$=\frac{{{\left( 6{{x}^{3}}-7 \right)}^{-5}}}{-5}+C$</p>
+                          <p class="m1830-answer">$=-\frac1{5(6x^3-7)^5}$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{2}{{9x - 4}}\;\left( 9 \right)\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 9x - 4$</p>
+                        <p class="m1830-solution m1830-step">$du = 9\;dx$</p>
+
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int {\frac{2}{u}\;du}\end{align}$</p>
+                        <p class="m1830-solution">$=2\ln|u| + C$</p>
+                        <p class="m1830-answer">$=2\ln| {9x - 4}| + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{{\left( {3t + 5} \right)}^4}\;dt}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 3t + 5$</p>
+                        <p class="m1830-solution m1830-step">$du = 3\;dt$</p>
+
+
+                        <p class="m1830-solution">$=\frac{1}{3}\begin{align}&amp;\int {{{\left( {3t + 5} \right)}^4}3dt}\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{3}\begin{align}&amp;\int {{u^4}} du\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{3}\frac{{{u^5}}}{5} + C$</p>
+                        <p class="m1830-answer">$=\frac{1}{15}\left(3t+5\right)^5+C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {{e^{ - 2x}}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = - 2x$</p>
+                        <p class="m1830-solution m1830-step">$du = - 2\;dx$</p>
+
+
+                        <p class="m1830-solution">$= - \frac{1}{2}\begin{align}&amp;\int {{e^{ - 2x}}( - 2)dx}\end{align}$</p>
+                        <p class="m1830-solution">$=- \frac{1}{2}\begin{align}&amp;\int {{e^u}du}\end{align}$</p>
+                        <p class="m1830-solution">$=- \frac{1}{2}{e^u} + C$</p>
+                        <p class="m1830-answer">$= - \frac{1}{2}{e^{ - 2x}} + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{x}{{5 + {x^2}}}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = 5 + {x^2}$</p>
+                        <p class="m1830-solution m1830-step">$du = 2x\;dx$</p>
+
+
+                        <p class="m1830-solution">$=\frac{1}{2}\begin{align}&amp;\int {\frac{1}{{5 + {x^2}}}} 2xdx\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{2}\int {\frac{1}{u}} du$</p>
+                        <p class="m1830-solution">$=\frac{1}{2}\ln \left| u \right| + C$</p>
+                        <p class="m1830-answer">$=\frac{1}{2}\ln| {5 + {x^2}}| + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{{{t^2}}}{{{{\left( {{t^3}\; - 1} \right)}^4}}}\;dt}\end{align} $</p>
+
+                        <p class="m1830-solution">$u = {t^3} - 1$</p>
+                        <p class="m1830-solution m1830-step">$du = 3{t^2}\;dt$</p>
+
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int {\frac{1}{{{{\left( {{t^3} - 1} \right)}^4}}}{t^2}} dt\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{3}\begin{align}&amp;\int {\frac{1}{{{{\left( {{t^3} - 1} \right)}^4}}}} 3{t^2}dt\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{3}\begin{align}&amp;\int {\frac{1}{{{u^4}}}} du\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{3}\begin{align}&amp;\int {{u^{ - 4}}} du\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{3}\frac{{{u^{ - 3}}}}{{ - 3}} + C$</p>
+                        <p class="m1830-answer">$= - \frac{1}{{9{{\left( {{t^3} - 1} \right)}^3}}} + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{{x\; - 1}}{{{x^2}\; - 2x + 5}}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = {x^2} - 2x + 5$</p>
+                        <p class="m1830-solution">$du = (2x - 2)dx$</p>
+                        <p class="m1830-solution m1830-step">$du = 2(x - 1)\;dx$</p>
+
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int {\frac{1}{{{x^2} - 2x + 5}}} (x - 1)dx\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{2}\begin{align}&amp;\int {\frac{1}{{{x^2} - 2x + 5}}} 2(x - 1)dx\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{2}\begin{align}&amp;\int {\frac{1}{u}} du\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{1}{2}\ln \left| u \right| + C$</p>
+                        <p class="m1830-answer">$=\frac{1}{2}\ln \left| {{x^2} - 2x + 5} \right| + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{1}{{x\ln x}}\;\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = \ln x$</p>
+                        <p class="m1830-solution m1830-step">$du = \frac{1}{x}\;dx$</p>
+
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int {\frac{1}{{\ln x}}} \cdot \frac{1}{x}dx\end{align}$</p>
+                            <p class="m1830-solution">$=\begin{align}&amp;\int {\frac{1}{{u}}} du\end{align}$</p>
+                        <p class="m1830-solution">$=\ln| u| + C$</p>
+                        <p class="m1830-answer">$=\ln \left| {\ln x} \right| + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {\frac{x}{{\sqrt {x + 3} }}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">There is an extra x in the problems 10 and 11.</p>
+                        <p class="m1830-solution">$u = x + 3$</p>
+                        <p class="m1830-solution">$x = u - 3$</p>
+                        <p class="m1830-solution m1830-step">$du = dx$</p>
+
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int {\frac{{u - 3}}{{\sqrt u }}} du\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int\left(u-3\right)u^{1/2}\;du\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int{\left({{u}^{1/2}}-3{{u}^{1/2}}\right)du}\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{{{u}^{3/2}}}{3/2}-\frac{3{{u}^{1/2}}}{1/2}+C$</p>
+                        <p class="m1830-solution">$=\frac{2}{3}{{u}^{3/2}}-6{{u}^{1/2}}+C$</p>
+                        <p class="m1830-answer">$=\frac{2}{3}{{\left( x+3 \right)}^{3/2}}-6{{\left( x+3 \right)}^{1/2}}+C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            $\begin{align}&amp;\int {x{{\left( {x + 2} \right)}^5}\;dx}\end{align}$</p>
+
+                        <p class="m1830-solution">$u = x + 2$</p>
+                        <p class="m1830-solution">$x = u - 2$</p>
+                        <p class="m1830-solution m1830-step">$du = dx$</p>
+
+
+                        <p class="m1830-solution">$=\begin{align}&amp;\int {(u - 2){u^5}du}\end{align}$</p>
+                        <p class="m1830-solution">$=\begin{align}&amp;\int {\left({u^6} - 2{u^5}\right)} du\end{align}$</p>
+                        <p class="m1830-solution">$=\frac{{{u^7}}}{7} - \frac{{2{u^6}}}{6} + C$</p>
+                        <p class="m1830-answer">$=\frac{{{{\left( {x + 2} \right)}^7}}}{7} - \frac{{{{\left( {x + 2} \right)}^6}}}{3} + C$</p>
+
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Continuous Money Flow: Suppose money is flowing continuously into a savings account at a rate of \$1000 per year at interest rate of 2%, compounded continuously. The amount that is paid over time, dt, is $$A&#39;(t)=1000e^{0.02t}.$$ What is the accumulation
+                            of the amount over the first 5 years?</p>
+
+                        <p class="m1830-solution">$A=\begin{align}&amp;\int_0^5 {1000{e^{0.02t}}\;dt}\end{align}$</p>
+                        <p class="m1830-solution">$u = 0.02t$</p>
+                        <p class="m1830-solution m1830-step">$du = 0.02\;dt$</p>
+
+                        <p class="m1830-solution">$A=1000\frac{1}{{0.02}}\begin{align}&amp;\int_0^5 {{e^{0.02t}}0.02\;dt}\end{align}$</p>
+                        <p class="m1830-solution">$A=50000\begin{align}&amp;\int_0^5 {{e^u}\;du}\end{align}$</p>
+                        <p class="m1830-solution m1830-step">$A=(50000{e^u}+C)│{_{t=0}^{t=5}}$</p>
+
+                        <p class="m1830-solution">$A=(50000{e^{0.02t}}+C)\left| {_0^5} \right.$</p>
+                        <p class="m1830-solution">$A=50000({e^{0.02(5)}} - {e^{0.02(0)}})$</p>
+                        <p class="m1830-solution">$A=5258.55$</p>
+                        <p class="m1830-answer">The accumulation in the savings account over the first 5 years is approximately $\$5258.55.$</p>
+
+
+
+
+                    </li>
+                </ol>
+            </article>
+
+      <article class="hw">
+
+            <h3>4.4A Integration by Substitution</h3>
+
+            <h4>Homework</h4>
+            <p><strong>Integrate the following.</strong></p>
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {{{\left( {5x + 4} \right)}^2}\;dx}\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = 5x + 4$</p>
+                    <p class="m1830-hw-solution">$du = 5 \;dx$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{5}\begin{align}&amp;\int {{{\left( {5x + 4} \right)}^2}\cdot5\;dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{5}\begin{align}&amp;\int {{u^2}\;du}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{5}\cdot\frac{{{u^3}}}{3} + C$</p>
+                    <p class="m1830-hw-answer">$=\frac{1}{{15}}{\left( {5x + 4} \right)^3} + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int{{{\left( 4x-5 \right)}^{1/2}}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=4x-5$</p>
+                    <p class="m1830-hw-solution">$du=4\;dx$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{4}\begin{align}&amp;\int{{{\left( 4x-5 \right)}^{1/2}}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac14\begin{align}&amp;\int {u^{1/2}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{4}\cdot\frac{{{u}^{3/2}}}{3/2}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{4}\cdot\frac{2}{3}{{u}^{3/2}}+C$</p>
+                    <p class="m1830-hw-answer">$=\frac{1}{6}{{\left( 4x-5 \right)}^{3/2}}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {{{\left( {{x^3} + {x^2}} \right)}^{1/2}}} (3{x^2} + 2x)\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = {x^3} + {x^2}$</p>
+                    <p class="m1830-hw-solution">$du = \left(3{x^2} + 2x\right)\;dx$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int u^{1/2}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{u^{3/2}}{3/2}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac23u^{3/2}+C$</p>
+                    <p class="m1830-hw-answer">$=\frac23\left(x^3+x^2\right)^{3/2}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;{{\int{\left( 1+\frac{1}{t} \right)}}^{3}}\frac{1}{{{t}^{2}}}\;dt\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = 1 + \frac{1}{t}=1+t^{-1}$</p>
+                    <p class="m1830-hw-solution">$du = -\frac{1}{{{t^2}}}\;dt$</p>
+                    <p class="m1830-hw-solution">$ = \begin{align}&amp;-\int\left(1+\frac1t\right)^3\cdot\left(-\frac1{t^2}\right)\;dt\end{align}$</p>
+                    <p class="m1830-hw-solution">$= - \begin{align}&amp;\int {{u^3}\;du}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{{ - {u^4}}}{4} + C$</p>
+                    <p class="m1830-hw-answer">$=- \frac{1}{4}{\left( {1 + \frac{1}{t}} \right)^4} + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {\frac{{2x + 2}}{{{x^2} + 2x + 1}}} \;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = {x^2} + 2x + 1$</p>
+                    <p class="m1830-hw-solution">$du = \left(2x + 2\right)\;dx$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int {\frac{1}{u}} \;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\ln \left| u \right| + C$</p>
+                    <p class="m1830-hw-answer">$=\ln \left| {{x^2} + 2x + 1} \right| + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {x{e^{{x^2}}}\;dx}\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = {x^2}$</p>
+                    <p class="m1830-hw-solution">$du = 2x\;dx$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int {{e^{{x^2}}}x\;dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{2}\begin{align}&amp;\int {{e^{{x^2}}}2x\;dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{2}\begin{align}&amp;\int {{e^u}\;du}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{2}{e^u} + C$</p>
+                    <p class="m1830-hw-answer">$=\frac{1}{2}{e^{{x^2}}} + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {\frac{{{e^{\sqrt x }}}}{{\sqrt x }}} \;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=\sqrt x=x^{1/2}$</p>
+                    <p class="m1830-hw-solution">$du=\frac12x^{-1/2}\;dx$</p>
+                    <p class="m1830-hw-solution">$du = \frac{1}{{2\sqrt x }}\;dx$</p>
+                    <p class="m1830-hw-solution">$=2\begin{align}&amp;\int\left(e^\sqrt x\right)\cdot\left(\frac1{2\sqrt x}\right)\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=2\begin{align}&amp;\int {{e^u}\;du}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=2{e^u} + C$</p>
+                    <p class="m1830-hw-answer">$=2{e^{\sqrt x }} + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {\frac{{{e^x}}}{{4 - {e^x}}}\;} dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = 4 - {e^x}$</p>
+                    <p class="m1830-hw-solution">$du = - {e^x}\;dx$</p>
+                    <p class="m1830-hw-solution">$= - \begin{align}&amp;\int {\frac{{ - {e^x}}}{{4 - {e^x}}}\;dx}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=- \begin{align}&amp;\int {\frac{1}{u}\;du}\end{align}$</p>
+                    <p class="m1830-hw-solution">$= - \ln \left| u \right| + C$</p>
+                    <p class="m1830-hw-answer">$=- \ln \left| {4 - {e^x}} \right| + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int{\frac{1}{2x\ln x}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=\ln x$</p>
+                    <p class="m1830-hw-solution">$du=\frac{1}{x}\;dx$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int{\frac{1}{2x\ln x}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{2}\begin{align}&amp;\int{\frac{1}{u}}\; du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac12\ln\left|u\right|+C$</p>
+                    <p class="m1830-hw-answer">$= \frac{1}{2}\ln \left| \ln x \right|+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {\frac{{{{\left( {\ln x} \right)}^5}}}{x}}\; dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = \ln x$</p>
+                    <p class="m1830-hw-solution">$du = \frac{1}{x}\;dx$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int {{{\left( {\ln x} \right)}^5}} \frac{1}{x}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int {{u^5}\;du}\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{{{u^6}}}{6} + C$</p>
+                    <p class="m1830-hw-answer">$={\frac{{\left( {\ln x} \right)}}{6}^6} + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> The population growth rate of a certain bacteria can be modeled by $$\frac{dP}{dt}=1000{{e}^{{}^{t}/{}_{3}}}$$ where $t$ is measured in hours. What is the population after 3 hours?</p>
+
+                    <p class="m1830-hw-solution">$\frac{dP}{dt}=1000{{e}^{t/3}}$</p>
+                    <p class="m1830-hw-solution">$P(t)=\begin{align}&amp;\int_{0}^{3}{1000{{e}^{t/3}}}\;dt\end{align}$</p>
+                    <p class="m1830-hw-solution">$u=\frac{t}{3}$</p>
+                    <p class="m1830-hw-solution">$du=\frac{1}{3}dt$</p>
+                    <p class="m1830-hw-solution">$P(t)=3\begin{align}&amp;\int_{0}^{3}{1000{{e}^{t/3}}}\cdot\frac{1}{3}\;dt\end{align}$</p>
+                    <p class="m1830-hw-solution">$=3\begin{align}&amp;\int_{t=0}^{t=3}{1000{{e}^{u}}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=3000{{e}^{u}}│_{t=0}^{t=3}$</p>
+                    <p class="m1830-hw-solution">$=3000{{e}^{t/3}}│ _{0}^{3}$</p>
+                    <p class="m1830-hw-solution">$=3000{{e}^{3/3}}-3000{{e}^{0/3}}$</p>
+                    <p class="m1830-hw-solution">$=3000e-3000(1)$</p>
+                      <p class="m1830-hw-solution">$\approx 5155$</p>
+                    <p class="m1830-hw-answer">The population will be $5155$ bacteria at the end of 3 hours.</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> The annual marginal revenue for the sale of $x$ iPhones can be modeled by $$R&#39;(x)=20x+700+\frac{200}{x+5}\quad \quad R(0)=0,$$ where $R(x)$ is revenue in dollars and x is number of iPhones in thousands.</p>
+                    <ol>
+
+                        <li>Find the revenue function.
+                          <p class="m1830-hw-solution">$R(x)=\begin{align}&amp;\int R'(x)\;dx\end{align}$</p>
+
+                            <p class="m1830-hw-solution">$R(x)=\begin{align}&amp;\int\left(20x+700+\frac{200}{x+5}\right)\;dx\end{align}$</p>
+                            <p class="m1830-hw-solution">$R(x)=\begin{align}&amp;\int\left(20x+700\right)\;dx\;+\int\frac{200}{x+5}\;dx\end{align}$</p>
+                            <p class="m1830-hw-solution">$u=x+5$</p>
+                            <p class="m1830-hw-solution">$du=1\;dx$</p>
+                            <p class="m1830-hw-solution">$R(x)=\begin{align}&amp;\int\left(20x+700\right)\;dx\;+\;200\int\frac1u\;du\end{align}$</p>
+                            <p class="m1830-hw-solution">$R(x)=\frac{20x^2}2+700x+200\ln\left|x+5\right|+C$</p>
+                            <p class="m1830-hw-solution">$R(x)=10x^2+700x+200\ln\left|x+5\right|+C$</p>
+                            <p class="m1830-hw-solution">Use $R(0)=0$ to calculate the value of C.</p>
+                            <p class="m1830-hw-solution">$10(0)^2+700(0)+200\ln\left|0+5\right|+C=0$</p>
+                            <p class="m1830-hw-solution">$200\ln\left|5\right|+C=0$</p>
+                            <p class="m1830-hw-solution">$321.89+C=0$ </p>
+                            <p class="m1830-hw-solution"> $C=-321.89$</p>
+                            <p class="m1830-hw-answer">$R(x)=10x^2+700x+200ln\left|x+5\right|-321.89$</p>
+                        </li>
+
+                        <li>Find the revenue from the sale of 5 million iPhones.
+                            <p class="m1830-hw-solution">5,000,000 iPhones =5000 thousand iPhones</p>
+                            <p class="m1830-hw-solution">$x=5000$</p>
+                            <p class="m1830-hw-solution">$R(500)=10(5000)^2+700(5000)+200\ln(5005)-321.89$</p>
+                            <p class="m1830-hw-solution">$R(5000)=253,501,381.70$</p>
+                            <p class="m1830-hw-answer">The revenue from the sale of 5 million iPhones is \$253,501,381.70.</p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> A city’s population is expected to grow at the rate $$P&#39;(t)=\frac{126{{e}^{16t}}}{1+{{e}^{16t}}},$$  where $t$ is the number of months from now when the population is 30,000.</p>
+                    <ol>
+
+                        <li>Find the function for the city’s population.
+                            <p class="m1830-hw-solution">$P(t)=\begin{align}&amp;\int\frac{126e^{16t}}{1+e^{16t}}\;dt\end{align}$</p>
+                            <p class="m1830-hw-solution">$u=1+e^{16t}$</p>
+                            <p class="m1830-hw-solution">$du=16e^{16t}\;dt$</p>
+                            <p class="m1830-hw-solution">$P(t)=\left(\frac{126}{16}\right)\begin{align}&amp;\int\frac{16e^{16t}}{1+e^{16t}}\;dt\end{align}\\$</p>
+                            <p class="m1830-hw-solution">$=7.875\begin{align}&amp;\int\frac1u\;du\end{align}$</p>
+                            <p class="m1830-hw-solution">$P(t)=7.875\ln\left|1+e^{16t}\right|+C$</p>
+                              <p class="m1830-hw-solution">Use (0, 30,000) to solve for C.</p>
+
+                            <p class="m1830-hw-solution">$7.875\ln\left|1+e^0\right|+C=30,000$</p>
+                            <p class="m1830-hw-solution">$7.875\ln(2)+C=30,000$</p>
+                            <p class="m1830-hw-solution">$5.46+C=30,000$</p>
+                            <p class="m1830-hw-solution">$C=29,994.54$</p>
+                            <p class="m1830-hw-answer">$P(t)=7.875\ln\left|1+e^{16t}\right|+29,994.54$</p>
+                        </li>
+
+                        <li>Find the population 12 months from now.
+                            <p class="m1830-hw-solution">$P(t)=7.875\ln\left|1+e^{16t}\right|+29,994.54$</p>
+                            <p class="m1830-hw-solution">$P(12)=7.875\ln\left|1+e^{16(12)}\right|+29,994.54$</p>
+                            <p class="m1830-hw-solution">$P(12)=31,506.54$</p>
+                            <p class="m1830-hw-answer">The population 12 months from now will be approximately 31,506.54 people.</p>
+                        </li>
+
+                        <li>Approximate the increase in the population from month 6 to month 12.
+                            <p class="m1830-hw-solution">$\begin{align}&amp;\int_6^{12}\frac{126}{1+e^{16t}}\;dt\end{align}$</p>
+                            <p class="m1830-hw-solution">$=7.875\ln\left|1+e^{16t}\right|_6^{12}$</p>
+                            <p class="m1830-hw-solution">$=1512-756=756$</p>
+                            <p class="m1830-hw-answer">The population increased by approximately 756 people from month 6 to month 12.</p>
+                        </li>
+                    </ol>
+
+                </li>
+            </ol>
+            <!-- End section problem list  -->
+
+
+
+            <h3 class="m1830-pagebreak">4.4B Integration by Substitution</h3>
+
+            <h4>Homework</h4>
+            <p><strong>Integrate the following.</strong></p>
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {3{t^2}} {\left( {{t^3} + 4} \right)^5}\;dt\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = {t^3} + 4$</p>
+                    <p class="m1830-hw-solution">$du = 3{t^2}\;dt$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int {{{\left( {{t^3} + 4} \right)}^5}} 3{t^2}\;dt\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int {{u^5}}\; du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{{{u^6}}}{6} + C$</p>
+                    <p class="m1830-hw-answer">$=\frac{\left(t^3+4\right)^6}6+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int{{{x}^{2}}}{{\left( {{x}^{3}}+4 \right)}^{-1/2}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u={{x}^{3}}+4$</p>
+                    <p class="m1830-hw-solution">$du=3{{x}^{2}}\; dx$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;{{\int{\left( {{x}^{3}}+4 \right)}}^{-1/2}}\cdot{{x}^{2}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{3}\begin{align}&amp;\int{{{\left( {{x}^{3}}+4 \right)}^{-1/2}}\cdot}\;3{{x}^{2}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{3}\begin{align}&amp;\int{{{u}^{-1/2}}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{3}\cdot\frac{{{u}^{1/2}}}{1/2}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{3}\cdot \frac{2}{1}{{u}^{1/2}}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac{2}{3}{{u}^{1/2}}+C$</p>
+                    <p class="m1830-hw-answer">$=\frac{2}{3}{{\left( {{x}^{3}}+4 \right)}^{1/2}}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int{\frac{{{\left( \sqrt{x}-1 \right)}^{2}}}{\sqrt{x}}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=\sqrt x-1=x^{1/2}-1$</p>
+                    <p class="m1830-hw-solution">$du=\frac12x^{-1/2}\;dx$</p>
+                    <p class="m1830-hw-solution">$du=\frac12\cdot\frac1{\sqrt x}\;dx$</p>
+
+
+                    <p class="m1830-hw-solution">$=2\begin{align}&amp;\int{{{\left( \sqrt{x}-1 \right)}^{2}}}\frac{1}{2\sqrt{x}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=2\begin{align}&amp;\int{{{u}^{2}}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=2\frac{{{u}^{3}}}{3}+C$</p>
+                    <p class="m1830-hw-answer">$=\frac{2}{3}{{\left( \sqrt{x}-1 \right)}^{3}}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int{\frac{x+1}{{{\left( {{x}^{2}}+2x+2 \right)}^{3}}}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u={{x}^{2}}+2x+2$</p>
+                    <p class="m1830-hw-solution">$du=\left(2x+2\right)\;dx=2(x+1)\;dx$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int{\frac{1}{{{\left( {{x}^{2}}+2x+2 \right)}^{3}}}}\cdot (x+1)\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\frac{1}{2}\begin{align}&amp;\int\frac1{\left(x^2+2x+2\right)^3}\cdot2\left(x+1\right)\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\frac12\begin{align}&amp;\int{\frac{1}{{{u}^{3}}}\ }du\end{align}$</p>
+                    <p class="m1830-hw-solution">$\frac{1}{2}\begin{align}&amp;\int{{{u}^{-3}}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac12\cdot\frac{u^{-2}}{-2}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac12\cdot\frac{\left(x^2+2x+2\right)^{-2}}{-2}+C$</p>
+                    <p class="m1830-hw-answer">$=\frac{-1}{4{{\left( {{x}^{2}}+2x+2 \right)}^{2}}}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">$\begin{align}&amp;\int{{{x}^{2}}}{{e}^{-4{{x}^{3}}}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=-4{{x}^{3}}$</p>
+                    <p class="m1830-hw-solution">$du=-12{{x}^{2}}\;dx$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int{{{e}^{-4{{x}^{3}}}}\cdot }{{x}^{2}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=-\frac1{12}\begin{align}&amp;\int\left(e^{-4x^3}\right)\cdot\left(-12x^2\right)\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=-\frac{1}{12}\begin{align}&amp;\int{{{e}^{u}}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=-\frac{1}{12}{{e}^{u}}+C$</p>
+                    <p class="m1830-hw-answer">$=-\frac{1}{12}{{e}^{-4{{x}^{3}}}}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {\frac{{1 + {e^{3x}}}}{{{e^{3x}} + 3x}}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = {e^{3x}} + 3x$</p>
+                    <p class="m1830-hw-solution">$du = \left(3{e^{3x}} + 3\right)dx = 3({e^{3x}} + 1)\;dx$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int {\frac{1}{{{e^{3x}} + 3x}}(1 + {e^{3x}}} )\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{3}\begin{align}&amp;\int {\frac{1}{u}} \;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{1}{3}\ln \left| u \right| + C$</p>
+                    <p class="m1830-hw-answer">$=\frac{1}{3}\ln \left| {{e^{3x}} + 3x} \right| + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int{{{e}^{-x}}{{\left( 2{{e}^{-x}}+3 \right)}^{9}}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=2{{e}^{-x}}+3$</p>
+                    <p class="m1830-hw-solution">$du=-2{{e}^{-x}}\;dx$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int{{{\left( 2{{e}^{-x}}+3 \right)}^{9}}\cdot {{e}^{-x}}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{-1}{2}\begin{align}&amp;\int{{{\left( 2{{e}^{-x}}+3 \right)}^{9}}\cdot -2{{e}^{-x}}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=-\frac{1}{2}\begin{align}&amp;\int{{{u}^{9}}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=-\frac{1}{2}\frac{{{u}^{10}}}{10}+C$</p>
+                    <p class="m1830-hw-answer">$=-\frac{1}{20}{{\left( 2{{e}^{-x}}+3 \right)}^{10}}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int{\frac{2\ln x}{x}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=\ln x$</p>
+                    <p class="m1830-hw-solution">$du=\frac{1}{x}\;dx$</p>
+                    <p class="m1830-hw-solution">$2\begin{align}&amp;\int{\ln x\cdot\frac{1}{x}}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=2\begin{align}&amp;\int{u}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=2\frac{{{u}^{2}}}{2}+C$</p>
+                    <p class="m1830-hw-solution">$={{u}^{2}}+C$</p>
+                    <p class="m1830-hw-answer">$={{\left( \ln x \right)}^{2}}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int {\frac{{{{\left( {5 + \ln x} \right)}^5}}}{x}}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u = 5 + \ln x$</p>
+                    <p class="m1830-hw-solution">$du = \frac{1}{x}\;dx$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int {{{\left( {5 + \ln x} \right)}^5}} \frac{1}{x}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\begin{align}&amp;\int {{u^5}}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{{{u^6}}}{6} + C$</p>
+                    <p class="m1830-hw-answer">$=\frac{{{{\left( {5 + \ln x} \right)}^6}}}{6} + C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> The proportion of disposable income which individuals spend on consumption is known as the marginal propensity to consume (MPC). MPC is the proportion of additional income that an individual consumes. For example, if a household
+                        earns one extra dollar of disposable income, and the marginal propensity to consume is 0.65, then of that dollar, the household will spend 65 cents and save 35 cents. For a family of four in 2012, the MPC can be modeled by
+                        $$\frac{dQ}{dx}=\frac{0.98}{{{(x-23,049)}^{0.02}}}$$ where x is the family income and Q is the income consumed. Given that the poverty level, in 2012, for a family of four was \$23,050 and all \$23,050 were consumed, use the model to
+                        estimate the amount consumed by a family of four whose 2012 income was \$35,000.</p>
+
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int {\frac{{0.98}}{{{{(x - 23049)}^{0.02}}}}}\; dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$u = x - 23049$</p>
+                    <p class="m1830-hw-solution">$du = 1\;dx$</p>
+                    <p class="m1830-hw-solution">$0.98\begin{align}&amp;\int {{u^{ - 0.02}}} \;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int {0.98{{\left( {x - 23049} \right)}^{ - 0.02}}}\; dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$0.98\frac{{{u^{0.98}}}}{{0.98}} + C$</p>
+                    <p class="m1830-hw-solution">${u^{0.98}} + C$</p>
+                    <p class="m1830-hw-solution">${\left( {x - 23049} \right)^{0.98}} + C$</p>
+                    <p class="m1830-hw-solution">$23050 = {\left( {23050 - 23049} \right)^{0.98}} + C$</p>
+                    <p class="m1830-hw-solution">$23050 = {1^{0.98}} + C$</p>
+                    <p class="m1830-hw-solution">$C = 23049$</p>
+                    <p class="m1830-hw-solution">$Q(x) = {\left( {x - 23049} \right)^{0.98}} + 23049$</p>
+                    <p class="m1830-hw-solution">$Q(35000) = {\left( {35000 - 23049} \right)^{0.98}} + 23049$</p>
+                    <p class="m1830-hw-solution">$Q(35000) = {\left( {11951} \right)^{0.98}} + 23049$</p>
+                    <p class="m1830-hw-solution">$Q(35000)= 9905.04 + 23049$</p>
+                    <p class="m1830-hw-solution">$Q(35000)= 32954$</p>
+                    <p class="m1830-hw-answer">The estimated amount consumed by a family of four making \$35,000 in 2012 was $32,954.</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> Target’s market research department has determined that the marginal price for a particular brand of deodorant can be modeled by the function $$p&#39;(x)=-0.016{{e}^{-0.02x}},$$ where $x$ is the number deodorant sticks sold per week
+                        in thousands.</p>
+                    <ol>
+
+                        <li>Find the price-demand equation if the weekly demand is 40,000 deodorant sticks when the price is \$3.99.
+                            <p class="m1830-hw-solution">$p(x)=\begin{align}&amp;\int-0.016e^{-0.02x}\;dx\end{align}$</p>
+                            <p class="m1830-hw-solution">$u=-0.02x$</p>
+                            <p class="m1830-hw-solution">$du=-0.02\;dx$</p>
+                            <p class="m1830-hw-solution">$p(x)=\left(\frac{-0.016}{-0.02}\right)\begin{align}&amp;\int-0.02e^{-0.02x}\;dx\end{align}$</p>
+                            <p class="m1830-hw-solution">$= (.8)\begin{align}&amp;\int e^u\;du\end{align}$</p>
+                            <p class="m1830-hw-solution">$p(x)=.8e^{-0.02x}+C$</p>
+                            <p class="m1830-hw-solution">$p(40)=3.99$</p>
+                            <p class="m1830-hw-solution">$.8e^{-0.02(40)}+C=3.99$</p>
+                            <p class="m1830-hw-solution">$.8e^{-0.8}+C=3.99$</p>
+                            <p class="m1830-hw-solution">$0.36+C=3.99$</p>
+                            <p class="m1830-hw-solution">$C=3.63$</p>
+                            <p class="m1830-hw-answer">$p(x)=.8e^{-0.02x}+3.63$</p>
+                        </li>
+
+                        <li>Find the demand when the price of the deodorant is \$3.79 per stick.
+                            <p class="m1830-hw-solution">$p(x)=.8e^{-0.02x}+3.63$</p>
+                            <p class="m1830-hw-solution">$.8e^{-0.02x}+3.63=3.79$</p>
+                            <p class="m1830-hw-solution">$.8e^{-0.02x}=0.16$</p>
+                            <p class="m1830-hw-solution">$e^{-0.02x}=0.2$</p>
+                            <p class="m1830-hw-solution">$ln e^{-0.02x}=ln0.2$</p>
+                            <p class="m1830-hw-solution">$-0.02x=ln0.2$</p>
+                            <p class="m1830-hw-solution">$x=\frac{\ln0.2}{-0.02}$</p>
+                            <p class="m1830-hw-solution">$x=80.47$</p>
+                            <p class="m1830-hw-answer">When the price is \$3.79 the demand for the deodorant is 80,470 deodorant sticks per week.</p>
+                        </li>
+                    </ol>
+
+                </li>
+            </ol>
+            <!-- End section problem list  -->
+
+
+
+            <h3 class="m1830-pagebreak"> 4.4c In-class Homework</h3>
+            <p><strong>Evaluate each indefinite integral.</strong></p>
+
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int-12x^2\left(-4x^3+2\right)^{-3}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=-4x^3+2$</p>
+                    <p class="m1830-hw-solution">$du=-12x^2\;dx$</p>
+                    <p class="m1830-hw-solution">$\begin{align}&amp;\int u^{-3}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=\frac{u^{-2}}{-2}+C$</p>
+                    <p class="m1830-hw-answer">$=\frac{-1}{2\left(-4x^3+2\right)^2}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac{\left(-4x^3+2\right)^{-2}}{-2}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int\left(e^{4x}-4\right)^{1/3}\cdot8e^{4x}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=e^{4x}-4$</p>
+                    <p class="m1830-hw-solution">$du=4e^{4x}\;dx$</p>
+                    <p class="m1830-hw-solution">$\frac84\int\left(e^{4x}-4\right)^{1/3}\cdot4e^{4x}\;dx$</p>
+                    <p class="m1830-hw-solution">$2\begin{align}&amp;\int u^{1/3}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=2\cdot\frac{u^{4/3}}{4/3}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac{6}4u^{4/3}+C$</p>
+                    <p class="m1830-hw-solution">$=\frac{3}2\left(e^{4x}-4\right)^{4/3}+C$</p>
+                    <p class="m1830-hw-answer">$=\frac32\left(e^{4x}-4\right)^{4/3}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int5\sqrt{2x+3}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=2x+3$</p>
+                    <p class="m1830-hw-solution">$du=2\; dx$</p>
+
+
+                    <p class="m1830-hw-solution">$\frac52\begin{align}&amp;\int\sqrt{2x+3}\cdot2\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$\frac52\begin{align}&amp;\int u^{1/2}\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$\frac52\frac{u^{3/2}}{3/2}+C$</p>
+                    <p class="m1830-hw-solution">$\frac52\cdot\frac23\cdot u^{3/2}+C$</p>
+                    <p class="m1830-hw-answer">$\frac53\left(2x+3\right)^{3/2}+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int\frac{12x^2}{x^3+2}\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=x^3+2$</p>
+                    <p class="m1830-hw-solution">$du=3x^2\;dx$</p>
+
+
+                    <p class="m1830-hw-solution">$\frac{12}3\begin{align}&amp;\int\frac{3x^2}{x^3+2}\;dx\end{align}$</p>
+                    <p class="m1830-hw-solution">$4\begin{align}&amp;\int\frac1u\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$4\ln\left|u\right|+C$</p>
+                    <p class="m1830-hw-answer">$4\ln\left|x^3+2\right|+C$</p>
+
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\begin{align}&amp;\int\frac{5e^{-3+\ln3x}}x\;dx\end{align}$</p>
+
+                    <p class="m1830-hw-solution">$u=-3+\ln\left(3x\right)$</p>
+                    <p class="m1830-hw-solution">$du=\frac1{3x}\cdot3\;dx$</p>
+                    <p class="m1830-hw-solution">$du=\frac1x\;dx$</p>
+
+
+                    <p class="m1830-hw-solution">$5\begin{align}&amp;\int e^u\;du\end{align}$</p>
+                    <p class="m1830-hw-solution">$=5e^u+C$</p>
+                    <p class="m1830-hw-answer">$=5e^{-3+\ln3x}+C$</p>
+
+
+                </li>
+            </ol>
+            <!-- End section problem list  -->
+
+
+      </article>
+
+<div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+    <li>
+        <a href="pdfs/u4integrationsubstitutionpowerrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Integration: u Substitution</a> 
+      </li>
+
+      <li>
+        <a href="pdfs/u4integrationsubstitutionlogexpws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Integration: u Substitution: Logarithms and Exponentials</a> 
+      </li>
+
+
+
+</ul>
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

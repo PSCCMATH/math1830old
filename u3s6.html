@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MATH 1830 Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/notes.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/togglebuttons.js"></script>
+    <script src="js/loadmathjax.js"></script>
+   <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+    <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script src="js/desmosgraphs.js"></script> -->
+
+
+</head>
+
+<body>
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+
+    <div class="container">
+        <h1 id="u3toc">MATH 1830 Notes</h1>
+
+        <h2>Unit 3 Applications of Derivatives</h2>
+
+
+
+
+
+
+<article class="notes">
+
+
+
+
+
+
+                <h3>3.6 Introduction to Optimization</h3>
+
+
+                <h4> Pre-Class:</h4>
+<ul>
+             <li>Complete 3.5 Homework assignment: check and correct. </li>
+
+              <li> Take notes on the readings (use the space below). </li>
+              
+              <!-- <li> Complete the 2.4 Pre-Class Quiz.</li> -->
+              </ul>
+              <div class="row text-center m-buttons">
+
+
+          <div class="col-sm-2">
+        <a href="https://psccmath.github.io/math1830/u3s5.html" target="_blank">
+          <div class="box " tabindex="0">
+            <i class="fa fa-check fa-3x "></i>
+            <p>3.5 HW</p>
+          </div>
+        </a>
+       </div>
+
+
+       <!-- <div class="col-sm-2">
+         <a onclick="window.print()" href=#>
+           <div class="box " tabindex="0">
+             <i class="fa fa-print fa-3x "></i>
+             <p>Print</p>
+           </div>
+         </a>
+       </div> -->
+      <div class="col-sm-2">
+    <a href="https://cnx.org/contents/i4nRcikn@2.50:svyieFe9@2/Applied-Optimization-Problems" target="_blank">
+      <div class="box " tabindex="0">
+        <i class="fa fa-book fa-3x "></i>
+        <p>Read</p>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- <div class="col-sm-2">
+  <a href="http://www.youtube.com/watch?v=PkdYCDA0CWU" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-play fa-3x "></i>
+    <p>Watch</p>
+  </div>
+  </a>
+  </div> -->
+
+  <!-- <div class="col-sm-2">
+  <a href="https://www.myopenmath.com/" target="_blank">
+  <div class="box " tabindex="0">
+  <i class="fa fa-line-chart fa-3x "></i>
+  <p>2.4 Quiz</p>
+  </div>
+  </a>
+  </div> -->
+<!-- <div class="col-sm-2">
+  <a href="#ar" target="_blank">
+  <div class="box " tabindex="0">
+    <i class="fa fa-pencil-square fa-3x "></i>
+    <p>Resources</p>
+  </div>
+  </a>
+  </div> -->
+
+
+  </div>
+
+                <h4 class="m1830-pagebreak">Introduction</h4>
+                <ol>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Construct a 20 cm by 20 cm square on the white piece of paper.</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Draw four congruent squares in each corner of your original square (see diagram below), the size of the four squares you draw will be assigned for your group.</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Using the scissors and tape, cut out your square and its corners to create an open-topped box.</p>
+                        <p><img src="images/notes/u3s4p1i.png" alt="20 cm by 20 cm Square with small squares made with dotted lines in each corner"></p>
+                    </li>
+
+                    <li class="m1830-problem m1830-pagebreak">
+                        <p class="m1830-problem-text">
+                            Complete the following questions:</p>
+                        <ol>
+
+                            <li>The width of our box is:</li>
+
+                            <li>The length of our box is:</li>
+
+                            <li>The height of our box is:</li>
+
+                            <li>Calculate the volume of your box.</li>
+                        </ol>
+                        <p>A summary of the data collected from the class is on the board. Copy this data into the chart below.</p>
+                        <table>
+                            <tr>
+                                <th>Height (cm)</th>
+                                <th>Volume (cubic cm)</th>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+
+                    </li>
+
+                    <li class="m1830-problem m1830pagebreak">
+                        <p class="m1830-problem-text">
+                            Using the graph paper, construct a graph of height vs volume by plotting the above ordered pairs. Join the points with a smooth curve. Answer the following questions based on your graph.</p>
+                        <p><img src="images/notes/u3s4p5i.png" alt="1st Quadrant Graph with height on the x-axis and volume on the y-axis"></p>
+                        <p> <img src="images/notes/u3s4p10i.png" alt="Blank 20 by 20 coordinate plane"> </p>
+                    </li>
+
+                    <li class="m1830-problem m1830-pagebreak">
+                        <p class="m1830-problem-text">
+                            What is the maximum volume? (According to your graph.)</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            What size of square cut out of the corner would result in the maximum volume?</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            What type of function models your graph?</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            Could we write a mathematical function representing the graph?</p>
+                    </li>
+
+                    <li class="m1830-problem">
+                        <p class="m1830-problem-text">
+                            How could our knowledge of derivatives be used to find the maximum volume?</p>
+
+
+
+
+                    </li>
+                </ol>
+
+
+
+
+
+
+
+</article>
+
+
+
+<article class="hw">
+
+    <h3>3.6 Optimization Homework</h3>
+
+
+     <p>Write a mathematical function for each of the following and then find the requested information.</p>
+
+                <p>Be sure to include a properly labeled diagram (if applicable) and variable statements. State the restrictions on the independent variable.</p>
+ 
+ <ol>
+                <li class="m1830-problem">
+
+                        <p class="m1830-problem-text">
+
+                            When a theater owner charges \$3 for admission, there is an average attendance of 100 people. For every \$0.10 increase in admission, there is a loss of 1 customer from the average number. How much should the theater owner charge to maximize revenue and
+
+                            what is the maximum revenue?</p>
+
+
+
+                        <p class="m1830-solution">x=number of .10 cent increases in admission costs</p>
+
+                        <p class="m1830-solution">$R(x)=$(price per ticket)(number of tickets sold)</p>
+
+                        <p class="m1830-solution">$R(x)=(3+0.10x)(100-1x)$</p>
+
+                        <p class="m1830-solution">$R(x)=300-3x+10x-0.1{{x}^{2}}$</p>
+
+                        <p class="m1830-solution">$R(x)=300+7x-0.1{{x}^{2}}$</p>
+
+                        <p class="m1830-solution">$R&#39;(x)=7-0.2x$</p>
+
+                        <p class="m1830-solution">$7-0.2x=0$</p>
+
+                        <p class="m1830-solution">$7=0.2x$</p>
+
+                        <p class="m1830-solution">$35=x$</p>
+
+                        <p class="m1830-solution">Ticket Price= $3+.1x=3+.1(35)=6.50$</p>
+
+                        <p class="m1830-solution">Revenue= $(3+.1(35))(100-35)=422.50$</p>
+
+                        <p class="m1830-answer">The theatre owner should charge \$6.50 per ticket to have the maximum revenue of $422.50.</p>
+
+
+
+                    </li>
+
+
+
+                    <li class="m1830-problem">
+
+                        <p class="m1830-problem-text">
+
+                            A Norman window is a rectangle with a semi-circle on top. Find the maximum area if the perimeter is 24 feet, express the area as a function of the radius (r).</p>
+
+                        <img style="width:15%;" src="images/notes/u3s5p4.png" alt="Diagram of a Norman window with a rectangle on the bottom and a half circle on the top.  The radius of the circle is r, the vertical sides of the rectangle each measure y and the bottom of the rectangle measures 2r.">
+
+                        <p class="m1830-solution">$P=2y+2r+\frac{1}{2}\left( 2\pi r \right)$</p>
+
+                        <p class="m1830-solution">$24=2y+2r+\frac{1}{2}(2\pi r)$</p>
+
+                        <p class="m1830-solution">$24=2y+2r+\pi r$</p>
+
+                        <p class="m1830-solution">$\frac{24-2r-\pi r}{2}=y$</p>
+
+                        <p class="m1830-solution">$A=l\cdot w+\frac{1}{2}\pi {{r}^{2}}$</p>
+
+                        <p class="m1830-solution">$A=\left( \frac{24-2r-\pi r}{2} \right)2r+\frac{1}{2}\pi {{r}^{2}}$</p>
+
+                        <p class="m1830-solution">$A=\left( 24-2r-\pi r \right)r+\frac{1}{2}\pi {{r}^{2}}$</p>
+
+                        <p class="m1830-solution">$A=24r-2{{r}^{2}}-\pi {{r}^{2}}+\frac{1}{2}\pi {{r}^{2}}$</p>
+
+                        <p class="m1830-solution">$A=24r-2{{r}^{2}}-\frac{1}{2}\pi {{r}^{2}}$</p>
+
+                        <p class="m1830-solution">$ A&#39;(r)=24-4r-\pi r$</p>
+
+                        <p class="m1830-solution">$ 24-4r-\pi r=0$</p>
+
+                        <p class="m1830-solution">$ 24=4r+\pi r$</p>
+
+                        <p class="m1830-solution">$ 24=r(4+\pi)$</p>
+
+                        <p class="m1830-solution">$ r=\frac{24}{4+\pi }\approx 3.36ft$</p>
+
+                        <p class="m1830-answer">The area is maximized when the radius is $3.36$ feet and the height of the window is $3.36$ feet.</p>
+
+                        <p class="m1830-answer">The maximum area is $40.33$ $ft^2.$</p>
+
+
+
+                    </li>
+
+
+
+                    <li class="m1830-problem">
+
+                        <p class="m1830-problem-text">
+
+                            A lifeguard has 200 m of rope and some buoys with which she intends to enclose a rectangular area at a lake for swimming. The beach will form one side of the rectangle, with the rope forming the other three sides. Find the dimensions that will produce
+
+                            the maximum area.  </p>
+
+
+
+                        <p class="m1830-solution">$A=lw$</p>
+
+                        <p class="m1830-solution">$A(x)=x(200-2x)$</p>
+
+                        <p class="m1830-solution">$A(x)=200x-2x^2$</p>
+
+                        <p class="m1830-solution">$A(x)=-2x^2+200x$</p>
+
+                        <p class="m1830-solution">$ A&#39;(x)=-4x+200$</p>
+
+                        <p class="m1830-solution">$ -4x+200=0$</p>
+
+                        <p class="m1830-solution">$ -4x=-200$</p>
+
+                        <p class="m1830-solution">$ x=50$</p>
+
+                        <p class="m1830-solution">$ A(50)=-2{{\left( 50 \right)}^{2}}+200(50)=5000$ ${{m}^{2}}$</p>
+
+                        <p class="m1830-answer">The maximum area possible is $5000$ $m^2.$</p>
+
+                        <p class="m1830-answer">This can be achieved by building the swim area with the dimensions $50$ meters x $100$ meters.</p>
+
+                    </li>
+   <li class="m1830-problem">
+
+                        <p class="m1830-problem-text"> A rancher wants to enclose two rectangular areas near a river, one for sheep and one for cattle. There is 240 meters of fencing available. If the area of the pens is to be maximized, what are their dimensions?</p>
+
+
+
+                        <p class="m1830-solution">$A(x)=\left( \frac{240-3x}{2} \right)x$</p>
+
+                        <p class="m1830-solution m1830-step">$ A(x)=\left( 120-\frac{3}{2}x \right)x$</p>
+
+                        <p class="m1830-solution m1830-step">$ A(x)=120x-\frac{3}{2}{{x}^{2}}$</p>
+
+                        <p class="m1830-solution">$ A&#39;(x)=120-3x$</p>
+
+                        <p class="m1830-solution">set $ A&#39;=0$ to find the value of x that maximizes the area.</p>
+
+                        <p class="m1830-solution">$ 0=120-3x$</p>
+
+                        <p class="m1830-solution">$ 3x=120$</p>
+
+                        <p class="m1830-solution m1830-step">$ x=40$</p>
+
+                        <p class="m1830-solution">$\text{Width=}\frac{240-3\left( 40 \right)}{2}=\frac{120}{2}=60$</p>
+
+                        <p class="m1830-answer">The dimensions of the pens that maximize the area are 60 m x 40 m.</p>
+
+
+
+                    </li>
+
+            <li class="m1830-problem">
+
+                        <p class="m1830-problem-text"> An apple farm yields an average of 30 bushels of apples per tree when 20 trees are planted on an acre of ground. Each time 1 more tree is planted per acre, the yield decreases 1 bushel per tree due to the extra congestion. How
+
+                            many trees should be planted to maximize the yield?</p>
+
+
+
+                        <p class="m1830-solution">Yield= (bushels of apples per tree) ( number of trees planted per acre)</p>
+
+                        <p class="m1830-solution">$x$= number of trees planted ABOVE 20 trees</p>
+
+                        <p class="m1830-solution">Yield$=(30-1x)(20+x)$</p>
+
+                        <p class="m1830-solution">$Y(x)=600+30x-20x-{{x}^{2}}$</p>
+
+                        <p class="m1830-solution m1830-step">$Y(x)=-{{x}^{2}}+10x+600 $</p>
+
+                        <p class="m1830-solution">$Y&#39;(x)=-2x+10$</p>
+
+                        <p class="m1830-solution">$-2x=-10$</p>
+
+                        <p class="m1830-solution">$x=5$</p>
+
+                        <p class="m1830-solution">Total trees $= 20+5=25$</p>
+
+                        <p class="m1830-solution m1830-step">Max Yield$=(30-1.5)(20+5)=625$</p>
+
+                        <p class="m1830-answer">The yield is maximized to 625 bushels when 25 trees are planted per acre.</p>
+
+
+
+                    </li>
+                             <li class="m1830-problem">
+
+                        <p class="m1830-problem-text"> A rectangular pen is to be built with 1200 meters of fencing. The pen is to be divided into three parts using parallel partitions. Find the dimensions that will maximize the enclosed area.</p>
+
+
+
+                        <p class="m1830-solution">$A=lw$</p>
+
+                        <p class="m1830-solution">$ A(x)=\left( \frac{1200-4x}{2} \right)(x) $</p>
+
+                        <p class="m1830-solution">$ A(x)=(600-2x)(x) $</p>
+
+                        <p class="m1830-solution m1830-step">$ A(x)=600x-2{{x}^{2}}$</p>
+
+                        <p class="m1830-solution">$A&#39;(x)=600-4x$</p>
+
+                        <p class="m1830-solution">$0=600-4x$</p>
+
+                        <p class="m1830-solution">$4x=600$</p>
+
+                        <p class="m1830-solution m1830-step">$x=150$</p>
+
+                        <p class="m1830-solution">$ l=\frac{1200-4x}{2} $</p>
+
+                        <p class="m1830-solution">$l = 600-2x$</p>
+
+                        <p class="m1830-solution">$ l=600-2\left( 150 \right)$</p>
+
+                        <p class="m1830-solution">$ l=600-300$</p>
+
+                        <p class="m1830-solution">$ l=300$</p>
+
+                        <p class="m1830-answer">The maximum area occurs when the overall dimensions of the pen are 150 m x 300 m.</p>
+
+
+
+                    </li>
+                       <li class="m1830-problem">
+
+                        <p class="m1830-problem-text"> There are 50 apple trees in an orchard, and each tree produces an average of 200 apples each year. For each additional tree planted within the orchard, the average number of apples produced drops by 5. What is the optimal number
+
+                            of trees to plant in the orchard?</p>
+
+
+
+<p class="m1830-solution">Yield=(number of trees)(apples produced per tree)</p>
+
+                        <p class="m1830-solution">$ Y(t)=(50+t)(200-5t)$</p>
+
+                        <p class="m1830-solution">$ Y(t)=10,000-250t+200t-5{{t}^{2}}$</p>
+
+                        <p class="m1830-solution m1830-step">$ Y(t)=-5{{t}^{2}}-50t+10,000$</p>
+
+                        <p class="m1830-solution">$ Y&#39;(t)=-10t-50$</p>
+
+                        <p class="m1830-solution">Set $Y&#39;(t)=0$</p>
+
+                        <p class="m1830-solution">$ 0=-10t-50$</p>
+
+                        <p class="m1830-solution">$ 10t=-50$</p>
+
+                        <p class="m1830-solution">$ t=\frac{-50}{10}=-5$</p>
+
+                        <p class="m1830-solution m1830-step">Max Yield when $t=-5$</p>
+
+                        <p class="m1830-solution">Number of trees for max yield</p>
+
+                        <p class="m1830-solution">$50+1t$</p>
+
+                        <p class="m1830-solution">$=50+1(-5)$</p>
+
+                        <p class="m1830-solution m1830-step">$=50-5=45$</p>
+
+                        <p class="m1830-solution">Maximum yield</p>
+
+                        <p class="m1830-solution">$Y(-5)=10125$</p>
+
+                        <p class="m1830-answer">The maximum yield of $10,125$ apples occurs when $45$ trees are planted in the orchard.</p>
+
+
+
+                    </li>
+                        <li class="m1830-problem">
+
+                        <p class="m1830-problem-text"> For an outdoor concert, a ticket price of \$30 typically attracts 5000 people. For each $1 increase in the ticket price, 100 fewer people will attend.</p>
+
+                        <ol>
+
+
+
+                            <li>Find the ticket price that maximizes revenue.
+
+                                <p class="m1830-solution">Revenue = (price)(# of people)</p>
+
+                                <p class="m1830-solution">$ R(p)=(30+1p)(5000-100p)$</p>
+
+                                <p class="m1830-solution">$ R(p)=150,000-3000p+5000p-100{{p}^{2}}$</p>
+
+                                <p class="m1830-solution m1830-step">$ R(p)=-100{{p}^{2}}+2000p+150,000$</p>
+
+                                <p class="m1830-solution">$ R&#39;(p)=-200p+2000$</p>
+
+                                <p class="m1830-solution">$ 0=-200p+2000$</p>
+
+                                <p class="m1830-solution">$ 200p=2000$</p>
+
+                                <p class="m1830-solution m1830-step">$ p=\frac{2000}{200}=10$</p>
+
+                                <p class="m1830-solution">Ticket price to maximize revenue $=30+1p$</p>
+
+
+
+                                <p class="m1830-solution">$=30+1(10)$</p>
+
+                                <p class="m1830-solution m1830-step">$=40$</p>
+
+                                <p class="m1830-solution">Maximum Revenue</p>
+
+                                <p class="m1830-solution">$R(10)=160000$</p>
+
+                                <p class="m1830-answer">The revenue is maximized at $\$160,000$ with a $\$40$ ticket price.</p>
+
+                            </li>
+
+
+
+                            <li>Will your answer change if the concert area holds a maximum of 1200 people? Explain.
+
+                              <p class="m1830-solution">$p$ is defined as the number of $1.00 changes in ticket price.</p>
+
+                                <p class="m1830-solution">$R(p)=\left( 30+1p \right)\left( 1200-100p \right)$</p>
+
+                                <p class="m1830-solution">$ R(p)=36000-3000p+1200p-100{{p}^{2}}$</p>
+
+                                <p class="m1830-solution m1830-step">$ R(p)=36000-1800p-100{{p}^{2}}$</p>
+
+                                <p class="m1830-solution">$ R&#39;(p)=-1800-200p$</p>
+
+                                <p class="m1830-solution">$ -1800-200p=0$</p>
+
+                                <p class="m1830-solution">$ -1800=200p$</p>
+
+                                <p class="m1830-solution m1830-step">$ -9=p$</p>
+
+
+
+                                <p class="m1830-solution">Ticket price that maximizes revenue $=30+1p$</p>
+
+                                <p class="m1830-solution">$ =30+1\left( -9 \right)$</p>
+
+                                <p class="m1830-solution">$ =30-9$</p>
+
+                                <p class="m1830-solution m1830-step">$ =21$</p>
+
+                                <p class="m1830-solution">Maximum Revenue</p>
+
+                                <p class="m1830-solution m1830-step">$R(-9)=44100$</p>
+
+                                <p class="m1830-answer">With a maximum of 1200 people, the revenue is maximized at $\$44,100$ with a ticket price of $\$21.$</p>
+
+                            </li>
+</ol>
+                        </li>
+                    </ol>
+
+    </article>
+
+
+ <!-- <div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<li>
+  <a href="pdfs/u2chainrulews.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Chain Rule Worksheet</a> 
+</li>
+
+
+
+</ul>
+
+        </div>  -->
+
+
+
+    </div>
+    <!-- ending of body container -->
+</body>
+
+</html>

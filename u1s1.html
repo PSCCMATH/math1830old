@@ -8,617 +8,478 @@
     <link rel="stylesheet" href="css/notes.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/togglebuttons.js"></script>
     <script src="js/loadmathjax.js"></script>
     <script src="js/googlestats.js"></script>
-    <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-    <script src="js/desmosgraphs.js"></script>
-    <!-- <script>
-      unit1section1();
-    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/togglepass.js"></script>
+
+
+
 
 </head>
 
 <body>
+    <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="https://psccmath.github.io/math1830/">MATH 1830</a>
+        <div class="container-fluid">
+
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                            title="{{u.title}}">{{u.title}}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>
+
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input id="input" type="password" class="form-control" placeholder="pin-code">
+                        </div>
+                        <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>
+                    </form>
+
+
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-           <ul class="nav navbar-nav">
-
-              <!--         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-  <li><a href="#">Link</a></li> -->
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 1<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu1.html">Notes</a></li>
-                    <li><a href="homeworku1.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 2<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu2.html">Notes</a></li>
-                    <li><a href="homeworku2.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 3<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu3.html">Notes</a></li>
-                    <li><a href="homeworku3.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unit 4<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="notesu4.html">Notes</a></li>
-                    <li><a href="homeworku4.html">Homework</a></li>
-
-
-                 </ul>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Toggle<span class="caret"></span></a>
-                 <ul class="dropdown-menu">
-                    <li><a href="#" onclick="togglesolutions();return false;">Solutions</a></li>
-                    <li><a href="#" onclick="toggleanswers();return false;">Answers</a></li>
-
-
-
-                 </ul>
-              </li>
-           </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
-     </div>
-     <!-- /.container-fluid -->
-  </nav>
 
     <div class="container">
-        <h1 id="u1toc">MATH 1830 Notes</h1>
-        <p>Mary Monroe-Ellis</p>
-        <p>Susan Mosteller</p>
-        <h2 >Unit 1 Limits</h2>
 
 
+        <h1 id="u1toc">MATH 1830</h1>
+        <h2>Unit 1 Limits</h2>
 
 
-        <div class="m1830-toc">
 
 
 
 
 
-                    <ul>
+        <article class="notes">
 
-                        <li><a href="notesu1.html#u1sp">1.P Writing Equations of Lines</a></li>
+            <h3>1.1 Finding Limits Graphically</h3>
 
-                        <li><a href="notesu1.html#u1s1">1.1 Limits Graphically and Algebraically</a></li>
+            <h4> Pre-Class:</h4>
 
-                        <li><a href="notesu1.html#u1s2">1.2 Infinite Limits and Asymptotes</a></li>
+            <ul>
 
-                        <li><a href="notesu1.html#u1s3">1.3 Continuity</a></li>
 
-                        <li><a href="notesu1.html#u1s4">1.4 Definition of Derivatives</a></li>
+                <li> Take notes on the videos and readings (use the space below). </li>
+                <li>Work and check problems #1-7 in the 1.1 NOTES section. </li>
+                <li> Complete the 1.1 Pre-Class Quiz.</li>
+            </ul>
+            <div class="row text-center m-buttons">
 
-                        <li><a href="notesu1.html#u1s5">1.5 Derivatives: The Power Rule</a></li>
 
-                        <li><a href="notesu1.html#u1s6">1.6 Marginal Analysis</a></li>
-                    </ul>
 
 
 
+                <div class="col-sm-2">
+                    <a href="./pdfs/unit1.pdf">
+                        <div class="box " tabindex="0">
+                            <i class="fa fa-print fa-3x "></i>
+                            <p>Print</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="https://cnx.org/contents/i4nRcikn@2.50:dKCfyV9u@3/The-Limit-of-a-Function" target="_blank">
+                        <div class="box " tabindex="0">
+                            <i class="fa fa-book fa-3x "></i>
+                            <p>Read</p>
+                        </div>
+                    </a>
+                </div>
 
-        </div>
 
+                <div class="col-sm-2">
+                    <a href="http://www.youtube.com/watch?v=nOnd3SiYZqM" target="_blank">
+                        <div class="box " tabindex="0">
+                            <i class="fa fa-play fa-3x "></i>
+                            <p>Watch</p>
+                        </div>
+                    </a>
+                </div>
 
+                <div class="col-sm-2">
+                    <a href="https://www.myopenmath.com/" target="_blank">
+                        <div class="box " tabindex="0">
+                            <i class="fa fa-line-chart fa-3x "></i>
+                            <p>1.1 Quiz</p>
+                        </div>
+                    </a>
+                </div>
 
+                <div class="col-sm-2">
+                    <a href="#ar" target="_blank">
+                        <div class="box " tabindex="0">
+                            <i class="fa fa-pencil-square fa-3x "></i>
+                            <p>Resources</p>
+                        </div>
+                    </a>
+                </div>
 
-
-
-
-
-
-
-            <div id="u1s1" class="m1830-section">
-                <h3>1.1 Limits Graphically and Algebraically</h3>
-
-                <h4>Introduction</h4>
-<!-- <p>
-  sample desmos graph insert
-</p>
-
-<div class="graph" id="desu1s1">
-</div>
-<a href="https://www.desmos.com"><img class="desmosicon" alt="desmos logo" src="https://s3.amazonaws.com/desmos/img/calc_thumb.png"></a> -->
-
-                <ol>
-                  <li class="m1830-problem">
-                  <p>Box Office Receipts</p>
-
-                        <p class="m1830-problem-text">
-                            The total worldwide box-office receipts for a long running indie film are approximated by the function $$T(x) = \frac{{120{x^2}}}{{{x^2} + 4}}$$ where T(x) is measured in millions of dollars and x is the number of months since the movie’s release.
-                            What are the total box-office receipts after:</p>
-                        <ol>
-
-                            <li>The first month?
-                                <p class="m1830-solution">$T\left( 1 \right) = \frac{{120{{\left( 1 \right)}^2}}}{{{1^2} + 4}} = 24$</p>
-                                <p class="m1830-answer">The total box-office receipts after 1 month are \$24 million.</p>
-                            </li>
-
-                            <li>The second?
-                                <p class="m1830-solution">$T\left( 2 \right) = \frac{{120{{\left( 2 \right)}^2}}}{{{2^2} + 4}} = 60$ </p>
-                                <p class="m1830-answer">The total box-office receipts after 2 months are \$60 million.</p>
-                            </li>
-
-                            <li>The third?
-                                <p class="m1830-solution">$T\left( 3 \right) = \frac{{120{{\left( 3 \right)}^2}}}{{{3^2} + 4}} = 83$</p>
-                                <p class="m1830-answer">The total box-office receipts after 3 months are \$83 million.</p>
-                            </li>
-
-                            <li>The hundredth?
-                                <p class="m1830-solution">$T\left( {100} \right) = \frac{{120{{\left( {100} \right)}^2}}}{{{{100}^2} + 4}} = 119.95$</p>
-                                <p class="m1830-answer">The total box-office receipts after 100 months are \$119.95 million.</p>
-                            </li>
-                            <li>Graph $T(x)$
-
-
-<div class="intrinsic-container">
-<iframe id="myIframe"  src="https://www.desmos.com/calculator/0ruefdia8u" allowfullscreen>
-  <p>Your browser does not support iframes.</p>
-
-</iframe>
-</div>
-
-<!-- <a title="View with the Desmos Graphing Calculator" href="https://www.desmos.com/calculator/x0b2cgwueu"  target="_blank">  <img src="https://s3.amazonaws.com/calc_thumbs/production/x0b2cgwueu.png" width="200" height="200"     style="border:1px solid #ccc; border-radius:5px"  />Link to Graph of Total Box-office Receipts</a> -->
-</li>
-
-                            <li>What will the movie gross in the long run? (When x is very large.)
-                                <p class="m1830-answer">In the long run, the movie will gross approximately \$120 million.</p>
-
-                            </li>
-                        </ol>
-
-  </li>
-  <li class="m1830-problem">
-                        <p>Driving Costs</p>
-
-
-
-                        <p class="m1830-problem-text">
-                            A study of driving costs of 1992 model subcompact cars found that the average cost (car payments, gas, insurance, upkeep, and depreciation), measured in cents/mile, is approximated by $$C(x) = \frac{{2010}}{{{x^{2.2}}}} + 17.80$$ where x denotes the number
-                            of miles (in thousands of miles) the car is driven in a year. What is the average cost of driving a subcompact car:</p>
-                        <ol>
-
-                            <li>5,000 miles per year?
-                                <p class="m1830-solution">$C\left( 5 \right) = \frac{{2010}}{{{5^{2.2}}}} + 17.80 = 76.10$</p>
-                                <p class="m1830-answer">The average cost when driving 5,000 miles per year is 76.1 cents per mile.</p>
-                            </li>
-
-                            <li>10,000 miles per year?
-                                <p class="m1830-solution">$C\left( {10} \right) = \frac{{2010}}{{{{10}^{2.2}}}} + 17.80 = 30.50$</p>
-                                <p class="m1830-answer">The average cost when driving 10,000 miles per year is 30.5 cents per mile.</p>
-                            </li>
-
-                            <li>25,000 miles per year?
-                                <p class="m1830-solution">$C\left( {25} \right) = \frac{{2010}}{{{{25}^{2.2}}}} + 17.80 = 19.50$</p>
-                                <p class="m1830-answer">The average cost when driving 25,000 miles per year is 19.5 cents per mile.</p>
-                            </li>
-
-                            <li>50,000 miles per year?
-                                <p class="m1830-solution">$C\left( {50} \right) = \frac{{2010}}{{{{50}^{2.2}}}} + 17.80 = 18.17$</p>
-                                <p class="m1830-answer">The average cost when driving 50,000 miles per year is 18.2 cents per mile.</p>
-                            </li>
-                            <li>Graph $C(x)$ </li>
-<!-- TODO embed desmos graph -->
-
-<a title="View with the Desmos Graphing Calculator" href="https://www.desmos.com/calculator/mxmu0narn6" target="_blank">  <img src="https://s3.amazonaws.com/calc_thumbs/production/mxmu0narn6.png" width="200px" height="200px"     style="border:1px solid #ccc; border-radius:5px"  />Link to Graph of Driving Costs.</a>
-
-                            <li>What happens to the average cost as the number of miles driven increases without bound?
-                                <p class="m1830-answer">The average cost approaches 17.8 cents per mile when the car is driven “infinite” miles in a year.</p>
-                            </li>
-
-                            <li>Verify by evaluating the cost when the number of miles is 1,000,000 (or any large number)
-                                <p class="m1830-solution">$C\left( {1000} \right) = \frac{{2010}}{{{{1000}^{2.2}}}} + 17.80$</p>
-                                <p class="m1830-answer">The average cost per mile is approximately 17.80 cents per mile when the car is driven 1,000,000 miles per year.</p>
-                            </li>
-                        </ol>
-                        <p><cite>Source  <a href="https://domoremath.files.wordpress.com/2013/09/limits-word-prob-with-solns.pdf">https://domoremath.files.wordpress.com/2013/09/limits-word-prob-with-solns.pdf</a> </cite></p>
-                    </li>
-                </ol>
-                <hr>
-
-                <div class="pagebreak"></div>
-
-
-                <h4>Notes</h4>
-
-  <p> <strong> Read It: </strong> <a href="http://cnx.org/contents/i4nRcikn@2.37:dKCfyV9u@3/The-Limit-of-a-Function" target="_blank" class="btn btn-primary">The Limit of a Function</a> </p>
-  <p> <strong> Watch It: </strong> <a href="https://www.khanacademy.org/math/calculus-home/ap-calculus-ab/limits-basics-ab#limits-from-graphs-ab" target="_blank" class="btn btn-primary">The Limit of a Function</a> </p> -->
-
-
-
-<p> <strong> Try It: </strong><a href="http://curvebank.calstatela.edu/limit/limit.htm" target="_blank" class="btn btn-primary">Limits Graphically</a></p>
-<p> <strong> Try It: </strong><a href="https://www.math.ucdavis.edu/~kouba/CalcOneDIRECTORY/limcondirectory/LimitConstant.html" target="_blank" class="btn btn-primary">Limits Algebraically</a></p>
-
-
-  </div>
-</div>
-
-
-                <!-- TODO Watch It -->
-                <!-- TODO Check It -->
-                <p><strong>Limits:  A Graphical Approach</strong> </p>
-                <img src="images/notes/u1s1p1.png" alt="Piece 1: y=-x+1 from negative infinity to (1,0) Hole at (1,0). Piece 2: y=3 on (1,2) domain. Defined point at (1,3). Hole at (2,3). Piece 3: y=-(x-3)^2+4 on domain (2,4). Hole in graph at x=2. No additional point at x=2. Hole in piece 3 x=4. Piece 4: y=-1 from 4 to infinity, including 4.">
-
-<!-- TODO re-create graph in desmos -->
-
-
-              <p>  $f(x)=
-              \begin{cases}
-
-
-                    -x+1 & x \lt 1 \\
-                    3 & 1\leq x\lt 2 \\
-                    -\left(x-3\right)^2+4 & 2 \lt x \lt 4\\
-                    -1 & x\geq 4\\
-
-              \end{cases}
-
-              $
-</p>
-
-
-                <p>Use the piecewise function to answer the questions below.</p>
-                <p>Evaluate the limits graphically. If the limit does not exist, explain why.</p>
-                <ol>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to {0^ - }} f\left( x \right) =$
-                            <span class="m1830-answer">$1$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to {0^ + }} f\left( x \right) =$
-                            <span class="m1830-answer">$1$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to 0} f\left( x \right) =$
-                            <span class="m1830-answer">$1$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $f\left( 0 \right) = $
-                            <span class="m1830-answer">$1$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to {1^ - }} f\left( x \right) =$
-                            <span class="m1830-answer">$0$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to {1^ + }} f\left( x \right) =$
-                            <span class="m1830-answer">$3$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to 1} f\left( x \right)=$
-                            <span class="m1830-answer">Does not exist</span></p>
-                        <p class="m1830-answer">The limits from the left and right are not equal, so the limit does not exist. </p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $f\left( 1 \right) =$
-                            <span class="m1830-answer">$3$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to {2^ - }} f\left( x \right) =$
-                            <span class="m1830-answer">$3$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to {2^ + }} f\left( x \right) =$
-                            <span class="m1830-answer">$3$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to 2} f\left( x \right) =$
-                            <span class="m1830-answer">$3$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $f\left( 2 \right) =$
-                            <span class="m1830-answer">undefined</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            Is it possible to define $f\left( 1 \right)$ so that $\mathop {\lim }\limits_{x\; \to 1} f\left( x \right) = f\left( 1 \right)$? Explain.</p>
-                        <p class="m1830-answer">No. The limit does not exist. There is a jump in the graph.</p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            Is it possible to redefine $f\left( 2 \right)$ so that $\mathop {\lim }\limits_{x\; \to 2} f\left( x \right) = f\left( 2 \right)$? Explain.</p>
-
-                        <p class="m1830-answer">Yes. Let $f\left( 2 \right) = \;3$ </p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to - 1} f\left( x \right) =$
-                            <span class="m1830-answer">$2$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to 4} f\left( x \right) =$
-                            <span class="m1830-answer">Does not exist</span></p>
-                        <p class="m1830-answer">The limits from the left and right are not equal, so the limit does not exist. </p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to 2} f\left( x \right) =$
-                            <span class="m1830-answer">$3$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to 3} f\left( x \right) =$
-                            <span class="m1830-answer">$4$</span></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x\; \to - 2} f\left( x \right) =$
-                            <span class="m1830-answer">$3$</span></p>
-                        <p><strong>Limits: An Algebraic Approach</strong></p>
-                        <!-- TODO Read It -->
-                        <!-- TODO Watch It -->
-                        <!-- TODO Check It -->
-                        <p><strong>Find each indicated quantity, if it exists.</strong></p>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x \to 4} \;{x^2} - 5x + 1 =$</p>
-
-                        <p class="m1830-solution">${4^2} - 5\left( 4 \right) + 1 =$
-                            <p class="m1830-answer">$- 3$</p>
-
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\mathop {\lim }\limits_{x \to - 5} \;2{x^2} + 10x + 7 =$</p>
-
-                        <p class="m1830-solution">$2{\left( { - 5} \right)^2} + 10\left( { - 5} \right) + 7 =$
-                            <p class="m1830-answer">$7$</p>
-
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-
-                          <p>  $f(x)=
-                          \begin{cases}
-
-
-                              x+5 & x \lt -4 \\
-
-                                \sqrt{x+4} & x\gt -4\\
-
-                          \end{cases}
-
-                          $
-                      </p>
-
-
-
-
-
-                        <ol>
-
-                            <li>$\mathop {\lim }\limits_{x \to {-4^ + }} {\mkern 1mu} f(x)=$
-                                <p class="m1830-solution">$\sqrt{-4+4}=\sqrt0$
-                                    <p class="m1830-answer">$=0$</p>
-                            </li>
-
-                            <li>$\mathop {\lim }\limits_{x \to {-4^ - }} {\mkern 1mu} f(x)$
-                                <p class="m1830-solution">$=-4+5=$
-                                    <p class="m1830-answer">$1$</p>
-                            </li>
-
-                            <li>$\mathop {\lim }\limits_{x \to {-4}} {\mkern 1mu} f(x)=$
-                                <span class="m1830-answer">Does not exist</span>
-                            </li>
-
-                            <li>$f(-4)=$
-                                <span class="m1830-answer">undefined</span>
-                            </li>
-                        </ol>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $g\left( x \right) = \;\frac{{x - 2}}{{\left| {x - 2} \right|}}$</p>
-                        <ol>
-
-                            <li>$\mathop {\lim }\limits_{x\; \to {2^ + }} g\left( x \right) = \;$
-                                <span class="m1830-answer">1</span>
-                            </li>
-
-                            <li>$\mathop {\lim }\limits_{x\; \to {2^ - }} g\left( x \right) = \;$
-                                <span class="m1830-answer">-1</span>
-                            </li>
-
-                            <li>$\mathop {\lim }\limits_{x\; \to {2^{}}} g\left( x \right) = \;$
-                                <span class="m1830-answer">Does not exist</span>
-                            </li>
-
-                            <li>$g\left( 2 \right) = $
-                                <span class="m1830-answer">undefined</span>
-                            </li>
-                        </ol>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $f\left( x \right) = \;\frac{{3{x^2}\; + 2x - 1}}{{x{\;^2} + 3x + 2}}$</p>
-                        <ol>
-
-                            <li>$\underset{x\rightarrow -3}{lim}f(x)=$
-                                <p class="m1830-solution">$\underset{x\rightarrow -3}{lim}f(x)=\frac{3{{\left( -3 \right)}^{2}}~+2\left( -3 \right)-1}{\left( -3 \right){{~}^{2}}+3\left( -3 \right)+2}=\frac{20}{2}$
-                                    <p class="m1830-answer">$10$</p>
-                            </li>
-
-                            <li>$\underset{x\rightarrow -1}{lim}f(x)=$
-                                <p class="m1830-solution">$\frac{3{{\left( -1 \right)}^{2}}~+2\left( -1 \right)-1}{\left( -1 \right){{~}^{2}}+3\left( -1 \right)+2}=\frac{0}{0}$</p>
-                                <p class="m1830-solution">Indeterminate form. Factor, Reduce, Try Again.</p>
-                                <p class="m1830-solution">$\underset{x\rightarrow -1}{lim}f(x)=\underset{x\rightarrow -1}{lim}\frac{\left( 3x-1 \right)\left( x+1 \right)}{\left( x+1 \right)\left( x+2 \right)}=\underset{x\rightarrow -1}{lim}\frac{\left( 3x-1 \right)}{\left( x+2
-                                    \right)}=\frac{-4}{1}$
-                                    <p class="m1830-answer">$-4$</p>
-                            </li>
-
-                            <li>$\mathop {\lim }\limits_{x\; \to \;2} f\left( x \right)$
-                                <span class="m1830-answer">$=\frac{5}{4}=1.25$</span>
-                          <br>  </li>
-
-                            <li>$\mathop {\lim }\limits_{x\; \to \; - 2} f\left( x \right)$
-                                <span class="m1830-answer">$=\frac{7}{0}\,$ Does not exist</span>
-                            <br>    </li>
-
-                        </ol>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            $\underset{x\rightarrow 10}{lim} \frac{{{x^2}\; - 15x + 50}}{{{{\left( {x - 10} \right)}^2}}}$</p>
-                        <p class="m1830-solution">$=\frac{0}{0}$</p>
-
-                        <p class="m1830-solution">Indeterminate form. Factor, reduce, try again.</p>
-                        <p class="m1830-solution">$\underset{x\rightarrow 10}{lim}\,\frac{\left( x-5 \right)\left( x-10 \right)}{{{\left( x-10 \right)}^{2}}}=\underset{x\rightarrow 10}{lim}\,\frac{\left( x-5 \right)}{\left( x-10 \right)}=\frac{5}{0}$</p>
-                        <p class="m1830-answer">The limit does not exist. Vertical asymptote at x=10. On inspection of the graph, the limit as x approaches 10 from the left and the limit as x approaches 10 from the right are not equal.</p>
-
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            Compute the following limit for the function: $\mathop {\lim }\limits_{h \to 0} \frac{{f\left( {x + h} \right) - f\left( x \right)}}{h}$ $$f\left( x \right) = {x^2}\; + 5x - 1$$</p>
-                        <ol>
-
-                            <li>Define $f\left( {x + h} \right)$ and $f\left( x \right)$
-                                <p class="m1830-solution">$f\left( x+h \right)={{\left( x+h \right)}^{2}}+5\left( x+h \right)-1$</p>
-                                <p class="m1830-solution">$f\left( x+h \right)={{x}^{2}}+2xh+{{h}^{2}}+5x+5h-1$</p>
-                                <p class="m1830-answer">$f\left( x \right)={{x}^{2}}+5x-1$</p>
-                            </li>
-
-                            <li>Calculate $f\left( {x + h} \right) - f\left( x \right)$
-                                <p class="m1830-solution">$ = \left( {{x^2} + 2xh + {h^2} + 5x + 5h - 1} \right) - \left( {{x^2} + 5x - 1} \right)$</p>
-                                <p class="m1830-answer">$ = 2xh + {h^2} + 5h$</p>
-                            </li>
-
-                            <li>Divide by h
-                                <p class="m1830-solution">$\frac{{2xh + {h^2} + 5h}}{h} =$</p>
-                                <p class="m1830-answer">$ 2x + h + 5$</p>
-                            </li>
-
-                            <li>Evaluate the limit
-                                <p class="m1830-solution">$\mathop {\lim }\limits_{h \to 0} \left ( { 2x + h + 5} \right) = 2x + 0 + 5 =$</p>
-                                <p class="m1830-answer">$ 2x + 5$</p>
-                            </li>
-                        </ol>
-                    </li>
-
-                    <li class="m1830-problem">
-                        <p class="m1830-problem-text">
-                            A taxi service charges \$3.00 per mile for the first 10 miles. If the trip is over 10 miles, they charge \$5.00 per mile for every mile. Write a piecewise definition of the charge G(x) for taxi fares of x miles.</p>
-                        <p>Graph G(x) for $0 &lt; x\; \le 25.$
-                            <p><img src="images/notes/u1spp1.png" alt="Blank Cartesian Graph">
-                                <p class="m1830-answer">
-
-                                   $f(x)=
-                                  \begin{cases}
-
-
-
-                                        3x & 0\leq x\leq 10 \\
-
-                                        5x & x > 10\\
-
-                                  \end{cases}
-
-                                  $
-
-
-
-
-
-                                  </p>
-
-                                <p>Find:</p>
-                                <p>$\underset{x\rightarrow10^-}{lim}G(x)=$
-                                    <span class="m1830-answer">$30$</span></p>
-                                <p>$\underset{x\rightarrow10^+}{lim}G(x)=$
-                                    <span class="m1830-answer">$50$</span></p>
-                                <p>$\underset{x\rightarrow10}{lim}G(x)=$
-                                    <span class="m1830-answer">Does not exist.</span></p>
-
-                                <p class="m1830-solution"><img src="images/notes/u1s1p27aa.png" alt="Graph of f(x) on domain (0,25]. f(x)=3x for domain (0,10]. f(x)=5x for domain (10,25]"></p>
-
-
-
-
-
-
-
-                    </li>
-                </ol>
             </div>
 
 
 
 
+            <h4 class="m1830-pagebreak">Introduction</h4>
+
+            <ol>
+                <li class="m1830-problem">
+                    <p>Box Office Receipts</p>
+
+                    <p class="m1830-problem-text">
+                        The total worldwide box-office receipts for a long running indie film are approximated by the function $$T(x) = \frac{{120{x^2}}}{{{x^2}
+                        + 4}}$$ where T(x) is measured in millions of dollars and x is the number of months since the movie’s
+                        release. What are the total box-office receipts after:</p>
+                    <ol>
+
+                        <li>The first month?
+                            <p class="m1830-solution">$T\left( 1 \right) = \frac{{120{{\left( 1 \right)}^2}}}{{{1^2} + 4}} = 24$
+                                <span class="m1830-answer">The total box-office receipts after 1 month are \$24 million.</span></p>
+                        </li>
+
+                        <li>The second month?
+                            <p class="m1830-solution">$T\left( 2 \right) = \frac{{120{{\left( 2 \right)}^2}}}{{{2^2} + 4}} = 60$
+                                <span class="m1830-answer">The total box-office receipts after 2 months are \$60 million.</span></p>
+                        </li>
+
+                        <li>The third month?
+                            <p class="m1830-solution">$T\left( 3 \right) = \frac{{120{{\left( 3 \right)}^2}}}{{{3^2} + 4}} = 83$
+                                <span class="m1830-answer">The total box-office receipts after 3 months are \$83 million.</span></p>
+                        </li>
+
+                        <li>The hundredth month?
+                            <p class="m1830-solution">$T\left( {100} \right) = \frac{{120{{\left( {100} \right)}^2}}}{{{{100}^2} + 4}} = 119.95$
+                                <span class="m1830-answer">The total box-office receipts after 100 months are \$119.95 million.</span></p>
+                        </li>
+
+                        <li>What will the movie gross in the long run? (When x is very large.)
+                            <p class="m1830-answer">In the long run, the movie will gross approximately \$120 million.</p>
+
+                        </li>
+                    </ol>
+
+                </li>
+                <li class="m1830-problem">
+                    <p>Driving Costs</p>
 
 
+
+                    <p class="m1830-problem-text">
+                        A study of driving costs of 1992 model subcompact cars found that the average cost (car payments, gas, insurance, upkeep,
+                        and depreciation), measured in cents/mile, is approximated by $$C(x) = \frac{{2010}}{{{x^{2.2}}}}
+                        + 17.80$$ where x denotes the number of miles (in thousands of miles) the car is driven in a year.
+                        What is the average cost of driving a subcompact car:</p>
+                    <ol>
+
+                        <li>5,000 miles per year?
+                            <p class="m1830-solution">$C\left( 5 \right) = \frac{{2010}}{{{5^{2.2}}}} + 17.80 = 76.10$</p>
+                            <p class="m1830-answer">The average cost when driving 5,000 miles per year is 76.1 cents per mile.</p>
+                        </li>
+
+                        <li>10,000 miles per year?
+                            <p class="m1830-solution">$C\left( {10} \right) = \frac{{2010}}{{{{10}^{2.2}}}} + 17.80 = 30.50$</p>
+                            <p class="m1830-answer">The average cost when driving 10,000 miles per year is 30.5 cents per mile.</p>
+                        </li>
+
+                        <li>25,000 miles per year?
+                            <p class="m1830-solution">$C\left( {25} \right) = \frac{{2010}}{{{{25}^{2.2}}}} + 17.80 = 19.50$</p>
+                            <p class="m1830-answer">The average cost when driving 25,000 miles per year is 19.5 cents per mile.</p>
+                        </li>
+
+                        <li>50,000 miles per year?
+                            <p class="m1830-solution">$C\left( {50} \right) = \frac{{2010}}{{{{50}^{2.2}}}} + 17.80 = 18.17$</p>
+                            <p class="m1830-answer">The average cost when driving 50,000 miles per year is 18.2 cents per mile.</p>
+                        </li>
+
+                        <li>What happens to the average cost as the number of miles driven increases without bound?
+                            <p class="m1830-answer">The average cost approaches 17.8 cents per mile when the car is driven “infinite” miles in a
+                                year.
+                            </p>
+                        </li>
+
+                        <li>Verify by evaluating the cost when the number of miles is 1,000,000 (or any large number).
+                            <p class="m1830-solution">$C\left( {1000} \right) = \frac{{2010}}{{{{1000}^{2.2}}}} + 17.80$</p>
+                            <p class="m1830-answer">The average cost per mile is approximately 17.80 cents per mile when the car is driven 1,000,000
+                                miles per year.</p>
+                        </li>
+                    </ol>
+                    <p><cite>Source  <a href="https://domoremath.files.wordpress.com/2013/09/limits-word-prob-with-solns.pdf">https://domoremath.files.wordpress.com/2013/09/limits-word-prob-with-solns.pdf</a> </cite></p>
+                </li>
+            </ol>
+            <hr>
+
+            <div class="m1830-pagebreak"></div>
+
+
+            <h4>Notes</h4>
+            <p><strong>Limits:  A Graphical Approach</strong> </p>
+            <img src="images/notes/u1s1p1.png" alt="Piece 1: y=-x+1 from negative infinity to (1,0) Hole at (1,0). Piece 2: y=3 on (1,2) domain. Defined point at (1,3). Hole at (2,3). Piece 3: y=-(x-3)^2+4 on domain (2,4). Hole in graph at x=2. No additional point at x=2. Hole in piece 3 x=4. Piece 4: y=-1 from 4 to infinity, including 4.">
+
+
+
+
+            <p> $f(x)= \begin{cases} -x+1 & x \lt 1 \\ 3 & 1\leq x\lt 2 \\ -\left(x-3\right)^2+4 & 2 \lt x \lt 4\\ -1 & x\geq
+                4\\ \end{cases} $
+            </p>
+
+
+            <p>Use the piecewise function to answer the questions below.</p>
+            <p>Evaluate the limits graphically. If the limit does not exist, explain why.</p>
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to {0^ - }} f\left( x \right) =$
+                        <span class="m1830-answer">$1$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to {0^ + }} f\left( x \right) =$
+                        <span class="m1830-answer">$1$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to 0} f\left( x \right) =$
+                        <span class="m1830-answer">$1$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $f\left( 0 \right) = $
+                        <span class="m1830-answer">$1$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to {1^ - }} f\left( x \right) =$
+                        <span class="m1830-answer">$0$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to {1^ + }} f\left( x \right) =$
+                        <span class="m1830-answer">$3$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to 1} f\left( x \right)=$
+                        <span class="m1830-answer">Does not exist</span></p>
+                    <p class="m1830-answer">The limits from the left and right are not equal, so the limit does not exist. </p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $f\left( 1 \right) =$
+                        <span class="m1830-answer">$3$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to {2^ - }} f\left( x \right) =$
+                        <span class="m1830-answer">$3$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to {2^ + }} f\left( x \right) =$
+                        <span class="m1830-answer">$3$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to 2} f\left( x \right) =$
+                        <span class="m1830-answer">$3$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $f\left( 2 \right) =$
+                        <span class="m1830-answer">undefined</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        Is it possible to define $f\left( 1 \right)$ so that $\mathop {\lim }\limits_{x\; \to 1} f\left( x \right) = f\left( 1 \right)$?
+                        Explain.
+                    </p>
+                    <p class="m1830-answer">No. The limit does not exist. There is a jump in the graph.</p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        Is it possible to redefine $f\left( 2 \right)$ so that $\mathop {\lim }\limits_{x\; \to 2} f\left( x \right) = f\left( 2
+                        \right)$? Explain.</p>
+
+                    <p class="m1830-answer">Yes. Let $f\left( 2 \right) = \;3$ </p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to - 1} f\left( x \right) =$
+                        <span class="m1830-answer">$2$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to 4} f\left( x \right) =$
+                        <span class="m1830-answer">Does not exist</span></p>
+                    <p class="m1830-answer">The limits from the left and right are not equal, so the limit does not exist. </p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to 6} f\left( x \right) =$
+                        <span class="m1830-answer">$-1$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to 3} f\left( x \right) =$
+                        <span class="m1830-answer">$4$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text">
+                        $\mathop {\lim }\limits_{x\; \to - 2} f\left( x \right) =$
+                        <span class="m1830-answer">$3$</span></p>
+                </li>
+            </ol>
+        </article>
+        <article class="hw">
+
+            <h3> 1.1 Finding Limits Graphically</h3>
+
+            <h4>Homework</h4>
+            <strong>Find the limits or evaluate the function. If the limit does not exist, explain why.</strong>
+            <img src="images/hw/u1s1p1.png" alt="Coordinate plane graph with a discontinuous, piece-wise function.  The x-axis ranges from -4 to 6, and the y-axis from -2 to 10.  On the interval from -4 to -2, the graph is a horizontal line at y=6.  There is an open circle at the point (-2,6) and a closed circle at the point (-2,8). There is an open circle at (-2,2) and another at (0,-2).  These two open circles are connected with the function y=x squared minus 2. There is a closed circle at (0,-1.5). There is an open circle at (0,-1) and a closed circle at (2,7).  These are connected with a curve.  There is an open circle at (2,0).  On the interval from 2 to infinity, the graph is a continuous cubic.">
+            <!-- Begin section problem list  -->
+            <ol>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow-2}{lim}f(x)=$
+                        <span class="m1830-hw-answer">Does Not Exist. There are different limits from the left and right.</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow-3}{lim}f(x)=$
+                        <span class="m1830-hw-answer">$6$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow0^{-}}{lim}f(x)=$
+                        <span class="m1830-hw-answer">$-2$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow0^{+}}{lim}f(x) =$
+                        <span class="m1830-hw-answer">$-1$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow0}{lim}f(x) =$
+                        <span class="m1830-hw-answer">Does Not Exist. There are different limits from the left and right.</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $f(0) =$
+                        <span class="m1830-hw-answer">$-1.5$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow2^{-}}{lim}f(x) =$
+                        <span class="m1830-hw-answer">$7$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow2^{+}}{lim}f(x) =$
+                        <span class="m1830-hw-answer">$0$</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $\underset{x\rightarrow2}{lim}f(x) = $
+                        <span class="m1830-hw-answer">Does Not Exist. There are different limits from the left and right.</span></p>
+                </li>
+
+                <li class="m1830-problem">
+                    <p class="m1830-problem-text"> $f(2) = $
+                        <span class="m1830-hw-answer">$7$</span></p>
+                    <p><cite> Problems from <a href="https://www.whitman.edu/mathematics/california_calculus/calculus.pdf">https://www.whitman.edu/mathematics/california_calculus/calculus.pdf</a> </cite></p>
+                </li>
+            </ol>
+            <!-- End section problem list  -->
+
+        </article>
+
+
+        <div id="ar" class="add-resources">
+            <hr>
+            <h4> Additional Resources</h4>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=Y9sP4V3bKh0" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Limits from Graphs: Function is Undefined</a>                    (2:20)
+                </li>
+
+                <li><a href="https://www.youtube.com/watch?v=hWJLd6bRthI" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Limits from Graphs: Point of Discontinuity</a>                    (2:38)
+                </li>
+
+<li>
+  <a href="pdfs/u1factoringws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Factoring Worksheet</a> 
+</li>
+
+
+<li>
+  <a href="pdfs/u1limits1ws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Limit Worksheet 1</a> 
+</li>
+
+
+
+<li>
+  <a href="pdfs/u1limits2ws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Limit Worksheet 2</a> 
+</li>
+
+<li>
+  <a href="pdfs/u1limitsgraphically.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Finding Limits Graphically Worksheet</a> 
+</li>
+</ul>
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
 
     <!-- ending of body container -->
+
 </body>
 
 </html>

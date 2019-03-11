@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>MATH 1830 Notes</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/notes.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/togglebuttons.js"></script>
+      <script src="js/loadmathjax.js"></script>
+     <script src="js/googlestats.js"></script>     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>     <script src="js/nav.js"></script>     <script src="js/togglepass.js"></script>
+      <!-- <script src="https://www.desmos.com/api/v0.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+      <script src="js/desmosgraphs.js"></script> -->
+
+
+   </head>
+
+   <body>
+
+ <nav ng-app="myApp" ng-controller="myCtrl" class="navbar navbar-default navbar-fixed-top">          <div class="container-fluid">              <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"                     aria-expanded="false">              <span class="sr-only">Toggle navigation</span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>              <span class="icon-bar"></span>           </button> <a class="navbar-brand" ng-href="{{nav.titleUrl}}">{{nav.title}}</a> </div>              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 <ul class="nav navbar-nav">                      <li ng-repeat="u in nav.unit" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"                             title="{{u.title}}">{{u.title}}<span class="caret"></span></a>                         <ul class="dropdown-menu">                             <li ng-repeat="n in u.nav"><a ng-href="{{n.url}}">{{n.urlText}}</a></li>                           </ul>                     </li>                  </ul>                 <ul class="nav navbar-nav navbar-right">                     <form class="navbar-form navbar-left">                         <div class="form-group">                             <input id="input" type="password" class="form-control" placeholder="pin-code">                         </div>                         <button id="submit" type="submit" class="btn btn-default">Show Solutions</button>                     </form>                   </ul>             </div>         </div>     </nav>
+
+      <div class="container">
+         <h1 id="u1toc">MATH 1830</h1>
+
+         <h2>Unit 1 Limits</h2>
+
+
+
+
+
+<article class="notes">
+
+               <h3>1.3 Continuity</h3>
+ <h4> Pre-Class:</h4>
+<ul>
+              <li>Complete 1.2 Homework assignment: check and correct. </li>
+
+               <li> Take notes on the videos and readings (use the space below). </li> 
+               <li>Work and check problem #1 in the 1.3 NOTES section. </li> 
+               <li> Complete the 1.3 Pre-Class Quiz.</li>
+               </ul>
+               <div class="row text-center m-buttons">
+
+
+           <div class="col-sm-2">
+         <a href="https://psccmath.github.io/math1830/u1s2.html" target="_blank">
+           <div class="box " tabindex="0">
+             <i class="fa fa-check fa-3x "></i>
+             <p>1.2 HW</p>
+           </div>
+         </a>
+        </div>
+
+
+        <!-- <div class="col-sm-2">
+          <a onclick="window.print()" href=#>
+            <div class="box " tabindex="0">
+              <i class="fa fa-print fa-3x "></i>
+              <p>Print</p>
+            </div>
+          </a>
+        </div> -->
+       <div class="col-sm-2">
+     <a href="https://cnx.org/contents/8b89d172-2927-466f-8661-01abc7ccdba4:12/Continuity" target="_blank">
+       <div class="box " tabindex="0">
+         <i class="fa fa-book fa-3x "></i>
+         <p>Read</p>
+       </div>
+     </a>
+   </div>
+
+
+   <div class="col-sm-2">
+   <a href="https://www.youtube.com/watch?v=jzn4rTPajT0" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-play fa-3x "></i>
+     <p>Watch</p>
+   </div>
+   </a>
+   </div>
+
+   <div class="col-sm-2">
+   <a href="https://www.myopenmath.com/" target="_blank">
+   <div class="box " tabindex="0">
+   <i class="fa fa-line-chart fa-3x "></i>
+   <p>1.3 Quiz</p>
+   </div>
+   </a>
+   </div>
+
+<div class="col-sm-2">
+   <a href="#ar" target="_blank">
+   <div class="box " tabindex="0">
+     <i class="fa fa-pencil-square fa-3x "></i>
+     <p>Resources</p>
+   </div>
+   </a>
+   </div>
+   </div>
+            
+                <h4 class="m1830-pagebreak">Introduction</h4>
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        The table below shows the cost of mailing a letter that weighs x ounces.</p>
+                     <table>
+
+                        <tr>
+
+
+
+
+
+
+
+
+
+
+                           <th>Weight</th>
+
+                           <th>Cost</th>
+                        </tr>
+
+                        <tr>
+
+                           <td>0 &lt; x ≤ 1</td>
+
+                           <td>49¢</td>
+                        </tr>
+
+                        <tr>
+
+                           <td>1 &lt; x ≤ 2</td>
+
+                           <td>70¢</td>
+                        </tr>
+
+                        <tr>
+
+                           <td>2 &lt; x ≤ 3</td>
+
+                           <td>91¢</td>
+                        </tr>
+
+                        <tr>
+
+                           <td>3 &lt; x ≤ 4</td>
+
+                           <td>112¢</td>
+                        </tr>
+
+                        <tr>
+
+                           <td>4 &lt; x ≤ 5</td>
+
+                           <td>133¢</td>
+                        </tr>
+
+                     </table>
+
+                     <ol>
+  <div class="m1830-pagebreak"></div>
+                        <li>Complete the table of letters with the following weights.
+
+                           <table>
+
+                              <tr>
+
+                                 <th>Weight</th>
+
+                                 <th>Cost</th>
+
+                              </tr>
+
+                              <tr>
+
+                                 <td>.98</td>
+
+                                 <td>
+                                    <p class="m1830-solution">49</p>
+                                 </td>
+
+                              </tr>
+
+                              <tr>
+
+                                 <td>1.26</td>
+
+                                 <td>
+                                    <p class="m1830-solution">70</p>
+                                 </td>
+
+                              </tr>
+
+                              <tr>
+
+                                 <td>2.55</td>
+
+                                 <td>
+                                    <p class="m1830-solution">91</p>
+                                 </td>
+
+                              </tr>
+
+                              <tr>
+
+                                 <td>3.01</td>
+
+                                 <td>
+                                    <p class="m1830-solution">112</p>
+                                 </td>
+
+                              </tr>
+
+                              <tr>
+
+                                 <td>4.29</td>
+
+                                 <td>
+                                    <p class="m1830-solution">133</p>
+                                 </td>
+
+                              </tr>
+
+                           </table>
+                        </li>
+
+
+                        <li>Graph the function.
+                           <img src="images/notes/u1s3p1i.png" alt="1st quadrant coordinate plane with wieght on the x-axis and cost on the y-axis. Weight is measured in ounces and marked in intervals of one. Cost is measured in cents and marked in intervals of 20 cents.">
+                           <p class="m1830-answer"><img src="images/notes/u1s3p1ia.png" alt="enter image description here"></p>
+                        </li>
+                     </ol>
+                     <p><cite>Source <a href="http://www.stamps.com/usps/postage-rate-increase/">http://www.stamps.com/usps/postage-rate-increase/</a> </cite></p>
+
+                     <div class="pagebreak"></div>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        Given: $f(x) = \frac{{3{x^2} - 12x - 15}}{{{x^2} - 3x - 10}}$</p>
+                     <ol>
+
+                        <li>From looking at the given function (and NOT graphing), where would you expect to see vertical asymptote(s)?
+                           <p class="m1830-solution">$f(x) = \frac{{3{x^2} - 12x - 15}}{{{x^2} - 3x - 10}} = \frac{{3{x^2} - 12x - 15}}{{\left( {x - 5} \right)\left( {x + 2} \right)}}$</p>
+                           <p class="m1830-answer">Expect the vertical asymptotes to be located at x value where the denominator is equal 0, and the numerator is equal some number other than zero. There are possibly vertical asymptotes at $x = 5$ and $x = -2$.</p>
+                        </li>
+
+                        <li>Graph the function. Where are the vertical asymptote(s)?
+                           <p><img src="images/notes/u1s3p2i.png" alt="Blank coordinate plane. Origin in the middle of the graph. Ten lines each to the left, right, above and below the origin.">
+                              <p class="m1830-answer"><img src="images/notes/u1s3p2ia.png" alt="Graph of (3x squared-12x-15) divided by (x squared-3x-10). Asymptote at x=-2. Hole at x=5. Horizontal asymptote at y=3."></p>
+                              <p class="m1830-answer">Vertical Asymptote at x = - 2 and a hole at x = 5.</p>
+                        </li>
+
+                        <li>Do you get the same answer for a &amp; b? Why or why not?
+                           <p class="m1830-answer">There was a hole at $x = 5$. If you factor the numerator AND the denominator, they both contain $(x - 5)$.</p>
+                        </li>
+
+
+                     </ol>
+                  </li>
+               </ol>
+
+               <div class="m1830-pagebreak"></div>
+
+
+               <h4>Notes</h4>
+
+               <p><strong>Informal Definition:  Continuity</strong></p>
+               <p>A function is continuous over an interval if the graph over the interval can be drawn without removing the pencil from the paper.</p>
+               <p><strong>Formal Definition:  Continuity</strong></p>
+               <p>A function, f(x), is continuous at the point $x = c$ if all three of the following requirements are met:</p>
+               <ol>
+
+                  <li>$\underset{x\rightarrow\ c}{lim} f\left( x \right)$ exists </li>
+
+                  <li>$f\left( c \right)$ exists </li>
+
+                  <li>$\underset{x\rightarrow\ c}{lim} f\left( x \right) = \;\;f\left( c \right)$</li>
+               </ol>
+               <p><strong>Examples of Continuous and Discontinuous Functions:</strong></p>
+               <img src="images/notes/u1s3p1a.png" alt="Graph of f(x)=-(1/2)(x-1)^2 + 3. Hole in graph of f(x) at x=1.  With equation f(x) should be 3.  Point at (1,2). Domain of graph [-1,4]">
+<p class="m1830-answer">This function is discontinuous because the $\underset{x\rightarrow\ 1}{lim} f\left( x \right)$ and the point $f\left( 1 \right)$ are not equal.</p>
+               <img src="images/notes/u1s3p1b.png" alt="Graph of f(x)=-(1/2)(x-1)^2 + 3. Point at (1,3) defined and all other poings in dpmain [-1,4] defined as (x, f(x0) ">
+<p class="m1830-answer">This function is continuous since the limit and the value at $x=1$ are equal.</p>
+               <img src="images/notes/u1s3p1c.png" alt="Graph of f(x)=-(1/2)(x-1)^2 + 3. Hole in graph of f(x) at x=1.  With equation f(x) should be 3.  No other point for x=1 defined.  Domain of graph [-1,4]">
+<p class="m1830-answer">The function is discontinuous because the point $f\left( 1 \right)$ does not exist.</p>
+               <p><cite class="cc"> Active Calculus <a href="https://open.umn.edu/opentextbooks/">https://open.umn.edu/opentextbooks/</a> </cite></p>
+
+
+    <div class="m1830-pagebreak"></div>
+               <strong>In Groups:</strong> Use the formal definition of continuity to discuss the continuity of the function whose graph is shown below.
+               <p><img src="images/notes/u1s3p2.png" alt="First Piece:  y equals negative x plus 1. Domain: x is less than 1. Hole at point negative 3, four.  Point at negative 3, one. Second Piece: y equals 3 on domain x is greater than or equal to 1 to x is less than 2. Third Piece:  y is equal to negative (x -3) squared plus 4 on domain x is greater than 2 and less than 4. Fourth Piece:  y equals negative 1 on domain x is greater than or equal to 4."></p>
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">Continuity at $x = - 3$</p>
+                     <p class="m1830-answer">Discontinuous @ $x = - 3.$  The $\underset{x\rightarrow-3}{lim} f(x)$ exists and the point $f( - 3)$ exists, but they are not equal.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">Continuity at $x = - 2$</p>
+                     <p class="m1830-answer">Continuous @ $x = - 2 \quad\ $ Satisfies all 3 requirements.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">Continuity at $x = 1$</p>
+                     <p class="m1830-answer">Discontinuous @ $x = 1 \quad\ \underset{x\rightarrow\ 1}{lim} f(x) \:\ $ DNE</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">Continuity at $x = 2$</p>
+                     <p class="m1830-answer">Discontinuous @ $x = 2.$ The point $f(2)$ does not exist.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">Continuity at $x = 3$</p>
+                     <p class="m1830-answer">Continuous @ $x = 3 \quad\ $ Satisfies all 3 requirements.</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">Continuity at $x = 4$</p>
+                     <p class="m1830-answer">Discontinuous @ $x = 4 \quad\ \underset{x\rightarrow\ 4}{lim} f(x) \:\ $ DNE</p>
+
+
+    <div class="m1830-pagebreak"></div>
+                     <p><strong>Rules for Continuity</strong></p>
+                  </li>
+               </ol>
+               <ul>
+
+                  <li>Constant functions $f(x) = k$ are continuous for all x.
+
+                     <p>Example: $f(x) = - 2$ </p>
+                  </li>
+
+                  <li>Power functions $f(x) = {x^n}$ are continuous for all x, where n is a positive integer.
+
+                     <p>Example: $f(x) = {x^5} $</p>
+                  </li>
+
+                  <li>Polynomial Functions are continuous for all x.
+
+                     <p> Example: $f(x) = 2{x^3} - 5x + 1$ </p>
+                  </li>
+
+                  <li>Rational Function s are continuous for all x except where the denominator = 0.
+
+                     <p>Example: $f(x) = \frac{{{x^2} + 5}}{{x - 3}},$ where numerator and denominator are polynomials.</p>
+                  </li>
+
+                  <li>$\sqrt[n]{{f(x)}}$ functions are continuous for all x where n is an odd positive integer &gt; 1.
+
+                     <p>Example: $\sqrt[3]{x}$ </p>
+                  </li>
+
+                  <li>$\sqrt[n]{{f(x)}}$ functions are continuous for all x where n is an even positive integer and f(x) is positive.
+
+                     <p>Example: $\sqrt[4]{x}$ </p>
+
+
+
+                     <p><strong>Assessing Continuity</strong></p>
+                     <p>Are the functions continuous? Use the Rules for Continuity to explain your answers.</p>
+                  </li>
+               </ul>
+               <ol start="7">
+                  <!-- NOTE starting ordered list at number other than 1 -->
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $h\left( x \right) = 5 - 3x$</p>
+
+                     <p class="m1830-answer">Yes, because it is a polynomial function.</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $n\left( x \right) = \;\frac{{x - 3}}{{{x^2}\; + \;2x - 15}}$</p>
+
+                     <p class="m1830-solution">$n\left( x \right) = \;\frac{{x - 3}}{{(x + 5)(x - 3)}}$</p>
+                     <p class="m1830-answer">No, it is discontinuous at x=- 5 and x = 3.</p>
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $f\left( x \right) = \;\sqrt {25 - {x^2}} $</p>
+
+                     <p class="m1830-answer">Continuous for $x: - 5 \le x \le 5$</p>
+
+
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text">
+                        $g\left( x \right) = \;\sqrt[3]{{{x^2} - 4}}$</p>
+
+                     <p class="m1830-answer">Yes, continuous for all x because it is a function with an odd root.</p>
+
+
+
+                  </li>
+               </ol>
+
+          </article>
+
+          <article class="hw">
+
+               <h3>1.3 Continuity</h3>
+
+               <h4>Homework</h4>
+               <em>Below is a graph of $y=f(x)$.</em>
+               <em>Use the graph to answer the following questions.</em>
+               <p><img src="images/hw/u1s3p1.png" alt="4 Quadrant coordinate plane.  -4 to 4 on x- and y-axes.  Graph description from left to right.  At (-4,1) curve increases until (-3,3) where there is a sharp point and the graph decreases linearly until an open circle at (-2,2) where that part of the graph ends.  The graph then begins again at a closed circle at (-2,-1) with a quadratic curve that goes until (1,-3.5)  In that quadratic there is a hole at (-1,-3.5) and it has a y-intercept of (0,-4).  In addition, there is a solid dot at the point (-1,1).  The quadratic graph changes to linear at (1,-3.5) and increases until the point (2,-2.5).  The graph then oscillates from x=2 to approximately x=2.5 in the range of y=-3.5 to y=-1.5.  At x=2.5 the oscillation of the graph slows and the graph continues and increases until a hole at (3.-2.5).  The graph then continues to increase and levels off at (4,-1.5) "></p>
+
+               <!-- Begin section problem list  -->
+               <ol>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> State all values of $x$ for which f is not continuous at $x=a$.</p>
+                     <p>(In other words, at what x values is the graph not continuous?)</p>
+                     <p class="m1830-hw-answer">Discontinuous at $x=-2$ and $x=-1$ and $x=3.$</p>
+                  </li>
+
+
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> At which values of $a$ does $\underset{x\rightarrow{a}}{lim}\,\ f(x)$ not exist?</p>
+                     <p>(In other words, where on this graph does the limit not exist?)</p>
+                     <p class="m1830-hw-answer">The limit does not exist at $x=-2$ and $x=2.$</p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> At which values of $a$ does f have a limit, but $\underset{x\rightarrow{a}}{lim}\,\ f(x)\ne \ f(a)$?</p>
+                     <p>(In other words, where on the graph are the limit and the point not the same?)</p>
+
+                      <p class="m1830-hw-answer">At $x=-1, f(-1)$ exists but $\underset{x\rightarrow{-1}}{lim}\,\ f(x)\ne \ f(-1).$</p>
+                      <p class="m1830-hw-answer">At $x=3, f(3)$ does not exist. </p>
+                  </li>
+
+                  <li class="m1830-problem">
+                     <p class="m1830-problem-text"> Which condition is stronger, and hence implies the other: <strong>f has a limit at $x = a$</strong> or <strong>f is continuous at $x = a$</strong>? Explain.</p>
+                     <p class="m1830-hw-answer">The statement f is continuous at $x = a$ is stronger.</p>
+                     Based on your answer, choose the correct statement below :
+                     <ol>
+
+                        <li>If f is continuous at $x = a$, then f has a limit at $x = a$ </li>
+
+                        <li>If f has a limit at $x = a$, then f is continuous at $x = a$
+                           <p class="m1830-hw-answer">The correct statement is statement a: If f is continuous at $x = a$, then f has a limit at $x = a.$</p>
+                           <p class="m1830-hw-answer">Because having a limit at $x = a$ is a requirement for continuity at $x = a$, but continuity at $x = a$ is not an requirement for having a limit at $x = a$.</p>
+                        </li>
+                     </ol>
+                     <p><cite class="cc">Active Calculus by Matthew Boelkins is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.  Based on a work at <a href="http://scholarworks.gvsu.edu/books/10/">http://scholarworks.gvsu.edu/books/10/</a>.</cite></p>
+
+                  </li>
+               </ol>
+               <!-- End section problem list  -->
+            </article>
+
+<div id="ar" class="add-resources">
+          <hr>
+          <h4> Additional Resources</h4>
+<ul>
+<li>
+  <a href="http://www.youtube.com/watch?v=DCWeH62w-NA" target="_blank"><i class="fa fa-play" aria-hidden="true"></i> Continuous Functions</a>  (3:16)
+</li>
+
+<li>
+  <a href="pdfs/u1continuityws.pdf" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Continuity Worksheet</a> 
+</li>
+
+
+</ul>
+
+        </div>
+
+
+
+      </div>
+      <!-- ending of body container -->
+
+   </body>
+
+</html>
